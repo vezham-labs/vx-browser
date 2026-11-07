@@ -1,0 +1,103 @@
+{
+  "destinationArtifacts": [
+    {
+      "bytes": 27,
+      "name": "complete.txt"
+    },
+    {
+      "bytes": 21,
+      "name": "existing.txt"
+    }
+  ],
+  "failureCount": 0,
+  "failures": [],
+  "mode": "download-staging-regression-review",
+  "nativeEvents": [
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "",
+      "path": "/phase3",
+      "profile": "Private \u2022 8B5C552E",
+      "store": "ObjectIdentifier(0x0000007619783980)"
+    },
+    {
+      "currentPath": "/phase3",
+      "event": "navigation-blocked",
+      "mainFrame": false,
+      "scheme": "vezham-ui"
+    },
+    {
+      "downloadID": "DF486AEA-E4DA-48AA-A060-EC9776FC6658",
+      "event": "download-selected",
+      "selectedBasename": "interrupted.bin",
+      "suggestedName": "interrupted.bin"
+    },
+    {
+      "code": -1005,
+      "domain": "NSURLErrorDomain",
+      "downloadID": "DF486AEA-E4DA-48AA-A060-EC9776FC6658",
+      "event": "download-error"
+    },
+    {
+      "downloadID": "DF486AEA-E4DA-48AA-A060-EC9776FC6658",
+      "event": "download-cleanup",
+      "removed": true
+    },
+    {
+      "downloadID": "9B23C457-7792-4520-89E0-D1B7CEAF3AAD",
+      "event": "download-selected",
+      "selectedBasename": "complete.txt",
+      "suggestedName": "complete.txt"
+    },
+    {
+      "downloadID": "9B23C457-7792-4520-89E0-D1B7CEAF3AAD",
+      "event": "download-finished"
+    },
+    {
+      "downloadID": "9B23C457-7792-4520-89E0-D1B7CEAF3AAD",
+      "event": "download-cleanup",
+      "removed": true
+    }
+  ],
+  "scope": "Nine executed checks selected from the retained 30-check report. Seventeen unrelated interactive checks were not executed during this slow-attachment retry; no claim that the whole 30-check run passed.",
+  "sourceReport": "phase3-local-results-20261107T092722Z-18980.json",
+  "status": "passed",
+  "tests": [
+    {
+      "label": "original duplicate-name file was unchanged",
+      "passed": true
+    },
+    {
+      "label": "interrupted download used selected test filename",
+      "passed": true
+    },
+    {
+      "label": "interrupted download surfaced a network error",
+      "passed": true
+    },
+    {
+      "label": "interrupted download was not reported as finished",
+      "passed": true
+    },
+    {
+      "label": "incomplete download left no completed artifact",
+      "passed": true
+    },
+    {
+      "label": "interrupted download staging directory was removed",
+      "passed": true
+    },
+    {
+      "label": "completed download was moved to selected final destination",
+      "passed": true
+    },
+    {
+      "label": "completed download reported success only after saving",
+      "passed": true
+    },
+    {
+      "label": "completed download staging directory was removed",
+      "passed": true
+    }
+  ]
+}

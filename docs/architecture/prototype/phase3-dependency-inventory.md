@@ -1,0 +1,7 @@
+# Prototype dependency and distribution inventory
+
+The audited app contains its generated Info.plist, native executable and signature resources. No third-party engine framework, JavaScript UI bundle, CEF/Chromium helper suite, Aura package or production cloud client is bundled. It links system AppKit/WebKit/Foundation/Security and platform Swift/system libraries; the exact list is retained in [linked libraries](../../../prototype/wkwebview/Evidence/measurements-20261107T094114Z-22381/linked-libraries.txt) and the file list in [bundle audit](../../../prototype/wkwebview/Evidence/measurements-20261107T094114Z-22381/bundle-audit.json).
+
+Python fixtures/runners use the installed Python standard library and are not inside the app bundle. This inventory describes the current feasibility artifact only. It does not clear future React/HeroUI, updater, installer, CEF codec/patent/trademark, package-license or redistribution obligations. Accepted ADR 0002 governs future signed/notarized internal release artifacts.
+
+No Developer ID identity, notarized artifact, installer, signed-update metadata, rollback/revocation or MDM validation was available. Developer code signing/notarization and macOS 26 validation are scheduled for the final release-validation stage by user direction, rather than blocking current Phase 3 work. These remain required release-owner work; no production distribution was attempted.

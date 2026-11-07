@@ -1,0 +1,37 @@
+{
+  "bundleIdentifier": "internal.vezham.WKPrototype.Diagnostics.1794057881.13174",
+  "completedCrashSamples": 30,
+  "crashRecovery": {
+    "approvedTargetMs": 2000,
+    "callbackToDOMReadyMs": {
+      "maximum": 512.2887500001525,
+      "median": 230.32537499966566,
+      "p95": 502.09179166631657
+    },
+    "checksPerSample": 7,
+    "limitations": "Single hidden private fixture, automatic reload. Does not validate visible recovery UI, multi-view/stale callbacks, user recovery choice, host/GPU/network-process crashes, or durable product state.",
+    "numericThresholdMet": true,
+    "samples": 30,
+    "signalToResultObservedUpperBoundMs": {
+      "maximum": 647.113458,
+      "median": 247.02977099999998,
+      "p95": 600.711917
+    },
+    "status": "passed for bounded single-view harness"
+  },
+  "error": "",
+  "method": "Host-specific private Darwin coalition/unique-ID diagnostics outside app source; exact path, owner and identity checks. Active desktop; hidden AppKit windows; OS caches untouched.",
+  "runID": "20261107T132441Z-13174",
+  "security": "Normal App Sandbox/network-client/user-selected-file entitlements and Hardened Runtime; no debug/media entitlements. No root or security relaxation.",
+  "sourceSHA256": {
+    "LocalInteractionProbe.swift": "8a2fae9505b0105dba696cc3d366ee75f243046086ff22ef8a6127bdc00620a0",
+    "NavigationPolicy.swift": "f0eda048dc9b305210a3a28bf3e10ad8c90e1fa2f3d91b70ba1762b267666149",
+    "Phase3Measurements.swift": "0adf7a80fe2a744bd45af1b00301b83988356995b72d9986e7c60bd43c8c6e7f",
+    "main.swift": "170dfe1e122923a245441c488996295d49e04450bd918245aea828396607a043"
+  },
+  "sources": [
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/sys/proc_info_private.h",
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/mach/coalition.h"
+  ],
+  "status": "failed or blocked"
+}

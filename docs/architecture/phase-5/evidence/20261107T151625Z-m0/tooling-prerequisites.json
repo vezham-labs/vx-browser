@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "command": "gh api repos/vezham-labs/vx-browser --jq <lineage fields>",
+      "initialOutcome": "Failed connecting to api.github.com under restricted network; succeeded after network permission.",
+      "scope": "Read-only fork/default-branch verification."
+    },
+    {
+      "command": "pnpm nx list; pnpm nx show projects --json",
+      "initialOutcome": "Pinned pnpm bootstrap could not create its temporary package-manager install directory under restricted cache access.",
+      "correction": "Bootstrapped repo-pinned pnpm 12.14.0 with approved local cache access; installed frozen dependencies with scripts disabled; subsequent discovery succeeded.",
+      "notCodeFailure": true
+    },
+    {
+      "command": "xcodebuild -list -project apps/browser-macos/VezhamBrowser.xcodeproj -json",
+      "exitCode": 0,
+      "outcome": "Target/scheme/configurations listed; sandbox emitted simulator/log-store warnings. Native build uses an app-local derived-data path; this introspection is not a runtime or build pass."
+    }
+  ],
+  "unchangedDependencyPins": true,
+  "noGlobalConfigurationChanges": true,
+  "nxCloudDisabledForTaskCommands": true,
+  "skillsFollowed": [
+    "nx-generate",
+    "nx-workspace",
+    "nx-run-tasks",
+    "vx-workspace"
+  ]
+}

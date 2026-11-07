@@ -1,0 +1,654 @@
+> python3 apps/browser-macos/Tools/native_host.py build
+
+2026-11-07 20:59:14.006 xcodebuild[20840:333138]  DVTFilePathFSEvents: Failed to start fs event stream.
+2026-11-07 20:59:14.940 xcodebuild[20840:333139] CoreSimulatorService connection became invalid.  Simulator services will no longer be available.
+2026-11-07 20:59:14.942 xcodebuild[20840:333177] Logging connecton invalid: <OS_xpc_error: <dictionary: 0x1e72de600> { count = 1, transaction: 0, voucher = 0x0, contents =
+	"XPCErrorDescription" => <string: 0x1e72de740> { string cache = 0x0, length = 18, contents = "Connection invalid" }
+}>
+2026-11-07 20:59:14.943 xcodebuild[20840:333177] Error opening log file (/Users/vigneshwaranbhoj/Library/Logs/CoreSimulator/CoreSimulator.com.apple.dt.xcodebuild.log): Operation not permitted
+[-[SimServiceContext sendRequest:]:2131] ERROR : Unable to deliver request ({
+    "developer_dir" = "/Applications/Xcode.app/Contents/Developer";
+    request = "set_developer_dir";
+}) because we are not connected to CoreSimulatorService.
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj -scheme VezhamBrowser -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData build
+
+2026-11-07 20:59:15.144 xcodebuild[20840:333137] [MT] DVTAssertions: Warning in DVTFrameworks/DVTFoundation/FileTypes/DVTFileDataTypeDetection.m:80
+Details:  detectedTypeIdentifier (com.apple.binary-property-list) does not conform to matchedTypeIdentifier in MagicFileDataTypeDetector extenson com.apple.property-list. When both are specified, this conformance is required unless overridden by setting allowNonInheritance. extension.identifier:Xcode.MagicFileDataTypeDetector.BinaryPlist
+Object:   <DVTFileDataTypeDetectionMagicCache: 0x79ba7ae220>
+Method:   -initWithExtension:
+Thread:   <_NSMainThread: 0x1047ed490>{number = 1, name = main}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+2026-11-07 20:59:15.144 xcodebuild[20840:333137] [MT] DVTAssertions: Warning in DVTFrameworks/DVTFoundation/FileTypes/DVTFileDataTypeDetection.m:80
+Details:  detectedTypeIdentifier (com.apple.xml-property-list) does not conform to matchedTypeIdentifier in MagicFileDataTypeDetector extenson com.apple.property-list. When both are specified, this conformance is required unless overridden by setting allowNonInheritance. extension.identifier:Xcode.MagicFileDataTypeDetector.XMLPlist
+Object:   <DVTFileDataTypeDetectionMagicCache: 0x79ba7ae220>
+Method:   -initWithExtension:
+Thread:   <_NSMainThread: 0x1047ed490>{number = 1, name = main}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+[-[SimServiceContext initWithDeveloperDir:connectionType:error:]:504] WARN  : Unable to discover any Simulator runtimes. Developer Directory is /Applications/Xcode.app/Contents/Developer.
+[-[SimDiskImageManager init]:226] ERROR : Could not kickstart simdiskimaged; SimDiskImageManager services will not be available: Error Domain=NSPOSIXErrorDomain Code=53 "Software caused connection abort" UserInfo={NSLocalizedDescription=Error returned in reply from CoreSimulatorService: Connection invalid}
+[-[SimServiceContext initWithDeveloperDir:connectionType:error:]_block_invoke:561] ERROR : Could not get list of trusted mount directories: Error Domain=com.apple.CoreSimulator.SimError Code=409 "Cannot talk to the service used to manage runtime disk images (simdiskimaged) because its launchd job is not registered or was unloaded" UserInfo={NSLocalizedDescription=Cannot talk to the service used to manage runtime disk images (simdiskimaged) because its launchd job is not registered or was unloaded}
+[-[SimDiskImageManager _onQueue_checkConnection:]:290] ERROR : simdiskimaged returned error (invalid), marking disconnected.
+[-[SimDiskImageManager _onQueue_checkConnection:]:270] ERROR : simdiskimaged connection is currently unavailable because connection became invalid
+[-[SimServiceContext sendRequest:reply:error:]:2152] ERROR : Unable to deliver request ({
+    request = "notification_subscription";
+    "set_path" = "/Users/vigneshwaranbhoj/Library/Developer/CoreSimulator/Devices";
+}) because we are not connected to CoreSimulatorService.
+2026-11-07 20:59:15.154 xcodebuild[20840:333138] Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}
+[-[SimServiceContext sendRequest:reply:error:]:2152] ERROR : Unable to deliver request ({
+    request = "notification_subscription";
+    "set_path" = "/Users/vigneshwaranbhoj/Library/Developer/CoreSimulator/Devices";
+}) because we are not connected to CoreSimulatorService.
+2026-11-07 20:59:15.155 xcodebuild[20840:333177] Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}
+2026-11-07 20:59:15.155 xcodebuild[20840:333138]  IDESimulatorAvailability: startObservingSimulatorUpdates() FAILED to register SimDeviceSet observer
+2026-11-07 20:59:15.155 xcodebuild[20840:333177]  iOSSimulator: [SimServiceContext defaultDeviceSetWithError:] returned nil (Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedFailureReason=Failed to subscribe to notifications from CoreSimulatorService., NSLocalizedDescription=Failed to initialize simulator device set., NSUnderlyingError=0x79ba7b8990 {Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}}}). Simulator device support disabled.
+2026-11-07 20:59:15.514 xcodebuild[20840:333137] [MT] IDESchemeActionsInvocationRecord: Device <DVTLocalComputer: 0x79ba61b100 (My Mac | arm64e)> is missing modelName.
+2026-11-07 20:59:15.517 xcodebuild[20840:333137] [MT] IDESchemeActionsInvocationRecord: Device <DVTLocalComputer: 0x79ba61b100 (My Mac | arm64e)> is missing modelName.
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'VezhamBrowser' in project 'VezhamBrowser' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: e5ff6c8f6b3e447230e4c4e6a9649cb1
+Build description path: /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/XCBuildData/e5ff6c8f6b3e447230e4c4e6a9649cb1.xcbuilddata
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/CompilationCache.noindex
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/CompilationCache.noindex
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -o /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser-59dd96fca2f3d562c876cb73ed0a9978-VFS/all-product-headers.yaml
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser-59dd96fca2f3d562c876cb73ed0a9978-VFS/all-product-headers.yaml
+
+CreateBuildDirectory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-create-build-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyStaticMetadataFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.hmap (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.hmap
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyMetadataFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-non-framework-target-headers.hmap (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_const_extract_protocols.json (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftConstValuesFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.LinkFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.LinkFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-OutputFileMap.json (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftConstValuesFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.LinkFileList (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.LinkFileList
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/Entitlements.plist (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    write-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/Entitlements.plist
+
+MkDir /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /bin/mkdir -p /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS
+
+MkDir /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /bin/mkdir -p /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents
+
+MkDir /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /bin/mkdir -p /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+ProcessProductPackaging /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Config/VezhamBrowser.entitlements /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    
+    Entitlements:
+    
+    {
+    "com.apple.security.app-sandbox" = 1;
+}
+    
+    builtin-productPackagingUtility /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Config/VezhamBrowser.entitlements -entitlements -format xml -o /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent
+
+ProcessProductPackagingDER /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent.der (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /usr/bin/derq query -f xml -i /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent -o /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent.der --raw
+
+ProcessInfoPlistFile /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Info.plist /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Config/Info.plist (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-infoPlistUtility /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Config/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Info.plist
+
+SwiftDriver VezhamBrowser normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target x86_64-apple-macos26.0 -g -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/include -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/x86_64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/x86_64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver VezhamBrowser normal arm64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/include -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/arm64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/arm64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdarg-D5JUIVTSW1A4SBOKE98ITDDBX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-A0GXK42J2OG715I0IMH24EONO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ptrauth-95723MXJD8VE5CO44JRB9EFJY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/SwiftShims-1CWLZGKCSYK4FVZK95V3R13B4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ptrcheck-47HCDXQIQDZQA4H4I7DSJ3S0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stddef-AM5M212MHED08JFKYUAV24VJB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stddef-4L3PCOC9SFWJLSCAN5DBKFM5X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdbool-AMOFIMTGW6QU3ZEV41995USM1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_AvailabilityInternal-7MTUFQN6IEW37VMF5AIDMCMO8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/DeveloperToolsSupport-9JNG5XGATZZ5I05OBNCN2OS31.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_AvailabilityInternal-6QC315KQG28PRNKUGUYW8H91P.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdbool-852LZWC7C76H2R0BVXKXR6OVI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ptrcheck-9EC1X8HUOUCCNA8KQU39HT81S.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdarg-CW453M5TB7KS04T4HEMZMVTIR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/DeveloperToolsSupport-5ZNPTAL0N0KI8NK1C3DS4BI6T.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-CKRULV1BD0EHRW7PYAZB5W99T.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ptrauth-73HT3KS5A52SFAQN4J1I0FGJ9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_float-46CWPMIA2M4IN22L44339460S.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/SwiftShims-530YLKYA2HM1E1UG6WYNKCZPV.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_float-44PFC54VWM86A1SJ3SFT5ML0Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation1-DJ6SHIEIRQR6H668CM46EBJEB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation1-4BSXYCXAP176094KKRDF9PWKR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_limits-BS48WPERYBPHJF4QHSV8FHAO4.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation2-6R0DY8GJ4B7P8ZIHBQFK2DMY2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation2-9F9FZM5P2C2SCDQ182M08TSWT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_limits-F2L0IIJDINXSYIL3WZ91BRZLT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdint-215LDR9PT2GUO2KD95XPL9PGD.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/string_h-DFZJY4536A9MPR969E1S3NL49.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/sys_types-DF4SGRX4FN4XN82PS4DCCU87M.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_tgmath-BFM50ZNYKXHRD6P22XS6D0CYY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_tgmath-AVN2944A436FUP4ZHNJH6R1NQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/string_h-B0HZJ00OS9JNF3O3GWMOUCFY0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/sys_types-TKS3DOKMAD9TR8QK3TF6EF3O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdint-BHZR0E7PBUIAJEP5GFUPF98XR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/libDER-DZ20QQMK9NA5A4V5MID17RCL6.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation3-23G8OTU9HEYDBJPDM83Q1D32E.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdatomic-9RKL49ZGPZUFDZVPIDJOMTHFJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_stdatomic-8T16DX50XC8KTMJDLRVVVQC2M.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/libDER-22VI4G04JVDH7KYC8LIY1USL4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_DarwinFoundation3-7VIKH8UVDPS824TW03M7VGFUJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_intrinsics-283U22H75QAY0C6JJWHGRQHP3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_inttypes-37YVS0V8MVOSDOKB5HDRRJSEY.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_intrinsics-3ZL7E6BJ8RLGDBVD22LJLZL1S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/_Builtin_inttypes-ETIZGUHW0GZ3CQC8IJ2T2UMXG.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Darwin-2ZNWUX332FE6MJ495PX7SWL9K.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Darwin-7M3VNZVMJPBA7EQGBNU857K5E.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/simd-23N5MITVFHH2UTBVS91NBM9JG.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/simd-W2PREG37PKMAX0UYUUHYOEFH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/launch-CBMTBDPIOSGT3105QY9JRBZL9.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/libkern-4K3Q7VEIP8GX1DPB0RFBPLCCY.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CUPS-EG66J0M2EKQJW225ZFUJ50BC3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/MachO-24G1FACU9AJSREIOREDBU4DBD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/MachO-7VNO1W3F6APPYF96KSPVOAAVA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CUPS-5BC5IR9NNU3UQ4F2XDUX3YNMX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/libkern-8KLPU86891TRW7QMJQRRF6LO1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/launch-59YMCT14ZRJXW344VQIWMO5SR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ObjectiveC-AG46AVZEK87WZ0K8XG0ORPRST.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ObjectiveC-E4EYT3X7VI5F2O6GWB694GE5A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Spatial-9C73NO9OMX8JZN2ZRC3PIWQG9.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/os_object-7PIBK5JSHK7V0NAB1DF9KOUIZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/os_object-1GOQ6BKZLRCLA2HRET72RD905.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/os_workgroup-6UOL26BIWU4SLNV1CAM8SRQZC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/os_workgroup-VODSRXWBHJH2SB1GF3EW3ZG9.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Dispatch-F43FTZN3E1XYDQ7O1CY4M4D4C.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Dispatch-2MA8VP8EL1J6UP8CWHGQP0TA8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Spatial-5MEKX7TKKJI2WBFE567E2RMS9.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/XPC-7G015RE2BPWGQ1G7QWQGFFHPG.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreFoundation-D00SZLUX55JDROXMN4ZDH9Z02.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreFoundation-5DSHZ6C5Y5XXVFDPNWKT13JJO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/XPC-29H5UJX4AXC4CCTO5YADYUHJS.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/os-5IEOAD67FHH5JY4MAOX349TV6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/os-7RPCIMVQVHDIPG7CB6DD7CY83.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ColorSync-8ZRU8PVAV36C2SYRJJLKB3R8R.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Security-CSL83CK5LSRJ4VE3OB2Q0UMH2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/IOKit-1784VPX7S0O4UCU9ST5FHWOK5.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CFNetwork-7SWRLW46ETO66VPNWUVO3H253.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CFNetwork-BQBL3MKHDLPRR2FCIRJRJXAME.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ColorSync-1SCC8DIB03GWNL4YY0V54RWAF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/IOKit-37JCP81BQSX8GA08TLUB89XS5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Security-F2A4O9NS1BM1SMIJO9ULZ3NGB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/DiskArbitration-1Z9MMFSMRL3WYCNMLXE1THQEV.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreGraphics-7PK1Q7PMYGE1ZFAT66ALOPHVA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreGraphics-3PJMLC5MV1WC8U4VLIMBJWNOR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/DiskArbitration-BVJR5WNRQHNKKOMZB6MRQ97VB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreServices-845IM5UEAA49HDX8VLVKLFGOO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreServices-B83W3R1J5FI41ZD66UN14EYI2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ImageIO-C3Y4UWKXSQTUFSX6EGO4Y79J0.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreText-B4SL80KYKRWTX8XNJHTN6T8FP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreText-7OX7HTJB7AH70NHS06B4KWTX2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ImageIO-2PY8UVZH5JO0KMXMZ9PSZRZQP.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Foundation-72U0LUOS5YLL0OW5GW2WXK27R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Foundation-1MXREQQ4VQSZVKY9M7QMMZ3EH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/IOSurface-1K4JLFCKU19CRQM38XAFBXOYS.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreTransferable-CEY7USMW3AP2WZBINUBEMH33B.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-3J8O6FAKP836ZPRF3Y45PE9TF.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Accessibility-19LYZZOEVH5V4CCZLU6HUPJEL.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ApplicationServices-E8ZVMQ5Y68HAAQJQXTJNT98B8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Symbols-9DVZJZ8R3SQYX8MAKFY84YL77.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/DataDetection-22R99TWNKVZN28UG5RSNY3AC2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/OSLog-1KTV55OUW178D06SY70ZPWACG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-FXHERLZFMBC6DF7VBM94PWTN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreTransferable-4KJKGBW71FPH7MLJ3TI5IHCJ8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/OSLog-3MXUKPZJHWSBF9IG101YVFV2I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreData-E4BB8CA1SN0TODTG1PDRHDXZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/IOSurface-AW7JLDWEAOXMA1CKY8JQNA80Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/ApplicationServices-1Y6TC82O6VGZ7OPOR00KY1QLU.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Metal-5NYP6NWZ10ZC51WL5W5XMZ84.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Symbols-DAEL95KYVNP5JM92XJB5K9GLM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Accessibility-BEEFYQBENVE77FOLNQ3UMA3HI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/OpenGL-3ILG5QDY1HDEYCNEPZJ7D85XB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreData-4FAZCHO04CX90E58P755PSS0Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/DataDetection-85U3I6AD5ODA8O0P913JJ8LO6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/Metal-6UM6KP23VMXU5DJSVTIVCHV1X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/OpenGL-1PR6YOSGOTOJ3V6O4FZ0D8823.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreVideo-201NAYBBE1FNJKSC7QWITU34E.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreVideo-F2K2NVETN6ZNVVVYVAHTBL6DB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/QuartzCore-6PNTNFEZN88QG9DASJHBR9OBJ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreImage-DIR7FJX151EQNAQEPIP1A93KT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/QuartzCore-21KPZR0ZIY7RFHEGCGTT7YYY1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/CoreImage-DQ6TXHFPITSHCEWXYQL0I41R.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/SwiftUICore-N5E4QF81VPAVSBPRLNKMWAEG.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/AppKit-C7ED566CIYTJF6X9CCR34B0QY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/SwiftUICore-BG0RP2XIBNLUWOZY8VUPLOA1G.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules/AppKit-17BLQZ6UJJD76PRG97UDBH8SR.pcm
+
+SwiftCompile normal x86_64 Compiling\ ApplicationMain.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/App/ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/App/ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile ApplicationMain.swift
+
+SwiftCompile normal x86_64 Compiling\ MainWindowController.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile MainWindowController.swift
+
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ VezhamBrowser (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal x86_64 (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    
+
+SwiftCompile normal x86_64 Compiling\ ApplicationDelegate.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile ApplicationDelegate.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ VezhamBrowser (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    
+
+SwiftCompile normal arm64 Compiling\ MainWindowController.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile MainWindowController.swift
+
+SwiftCompile normal arm64 Compiling\ ApplicationMain.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/App/ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/App/ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile ApplicationMain.swift
+
+SwiftCompile normal arm64 Compiling\ ApplicationDelegate.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile ApplicationDelegate.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for VezhamBrowser (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal x86_64 Emitting module for VezhamBrowser (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriver\ Compilation\ Requirements VezhamBrowser normal arm64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/include -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/arm64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/arm64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver\ Compilation\ Requirements VezhamBrowser normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target x86_64-apple-macos26.0 -g -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/include -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/x86_64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/x86_64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/VezhamBrowser-Swift.h /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-Swift.h (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-swiftHeaderTool -arch arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -arch x86_64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-Swift.h -o /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/VezhamBrowser-Swift.h
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/x86_64-apple-macos.swiftmodule /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftmodule (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftmodule /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/x86_64-apple-macos.swiftmodule
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/x86_64-apple-macos.swiftdoc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftdoc (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftdoc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/x86_64-apple-macos.swiftdoc
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/x86_64-apple-macos.abi.json /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.abi.json (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.abi.json /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/x86_64-apple-macos.abi.json
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftmodule /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftdoc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftdoc (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftdoc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftdoc
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.abi.json /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.abi.json (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.abi.json /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/Project/x86_64-apple-macos.swiftsourceinfo /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftsourceinfo (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftsourceinfo /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/Project/x86_64-apple-macos.swiftsourceinfo
+
+Copy /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftsourceinfo (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftsourceinfo /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal x86_64 Compiling MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal arm64 Compiling MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriver\ Compilation VezhamBrowser normal arm64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/include -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/arm64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/arm64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver\ Compilation VezhamBrowser normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftFileList -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target x86_64-apple-macos26.0 -g -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-target-headers.hmap -Xcc -iquote -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/include -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/x86_64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/x86_64 -Xcc -I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/Binary/VezhamBrowser normal arm64 (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos26.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -filelist /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_lto.o -Xlinker -dependency_info -Xlinker /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -Xlinker -no_adhoc_codesign -o /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/Binary/VezhamBrowser
+
+Ld /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/Binary/VezhamBrowser normal x86_64 (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-macos26.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -F/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug -filelist /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_lto.o -Xlinker -dependency_info -Xlinker /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.swiftmodule -Xlinker -no_adhoc_codesign -o /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/Binary/VezhamBrowser
+
+CreateUniversalBinary /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser normal arm64\ x86_64 (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/Binary/VezhamBrowser /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/Binary/VezhamBrowser -output /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser
+
+CopySwiftLibs /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser --scan-folder /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Frameworks --scan-folder /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/PlugIns --scan-folder /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Library/SystemExtensions --scan-folder /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name VezhamBrowser --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk --xcode-version 27B52 --platform-family macOS --deployment-target 26.0 --bundle-identifier internal.vezham.browser.foundation --output /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Resources --target-triple arm64-apple-macos26.0 --target-triple x86_64-apple-macos26.0 --binary-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser --dependency-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_dependency_info.dat --dependency-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser_dependency_info.dat --stringsdata-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --stringsdata-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList --source-file-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftFileList --metadata-file-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyMetadataFileList --static-metadata-file-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyStaticMetadataFileList --swift-const-vals-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftConstValuesFileList --swift-const-vals-list /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/x86_64/VezhamBrowser.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-11-07 20:59:59.705 appintentsmetadataprocessor[21044:334691] Starting App Intents metadata extraction
+2026-11-07 20:59:59.726 appintentsmetadataprocessor[21044:334691] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CodeSign /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --entitlements /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent --timestamp\=none --generate-entitlement-der --strip-disallowed-xattrs /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+RegisterExecutionPolicyException /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-RegisterExecutionPolicyException /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+Validate /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-validationUtility /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+Touch /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /usr/bin/touch -c /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+RegisterWithLaunchServices /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-lsregisterurl --record-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+PruneExplicitPrecompiledModules /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+note: Disabling hardened runtime with ad-hoc codesigning. (in target 'VezhamBrowser' from project 'VezhamBrowser')
+** BUILD SUCCEEDED **
+

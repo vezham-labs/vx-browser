@@ -1,0 +1,79 @@
+{
+  "failureCount" : 0,
+  "failures" : [
+
+  ],
+  "mode" : "seed",
+  "status" : "passed",
+  "tests" : [
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-a",
+      "label" : "persistent A seed",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-a",
+      "label" : "persistent A concurrent view",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "label" : "persistent profile A reuses its HTTP cache",
+      "passed" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-b",
+      "label" : "persistent B seed",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "label" : "persistent profiles A\/B cross-isolation including HTTP cache",
+      "passed" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-private",
+      "label" : "private session seed",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "label" : "private windows share manager store",
+      "passed" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-private",
+      "label" : "private concurrent view",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "label" : "private session remains while a window is retained",
+      "passed" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-private",
+      "label" : "private data survives one window close",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "label" : "private manager replaces session after last release",
+      "passed" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "absent",
+      "label" : "new private store starts empty",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : false
+    }
+  ]
+}

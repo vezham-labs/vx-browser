@@ -1,0 +1,33 @@
+{
+  "failureCount" : 0,
+  "failures" : [
+
+  ],
+  "hostOSVersion" : "Version 27.2 (Build 26B123)",
+  "mode" : "download",
+  "status" : "passed",
+  "tests" : [
+    {
+      "label" : "attachment response requests WebKit download policy",
+      "passed" : true
+    },
+    {
+      "destinationName" : "_.._synthetic-download.bin",
+      "label" : "path-like suggested filename reduced to a safe basename",
+      "observedSuggestedFilename" : "_.._synthetic-download.bin",
+      "passed" : true
+    },
+    {
+      "label" : "download destination remains inside isolated directory",
+      "passed" : true
+    },
+    {
+      "label" : "navigation handed off to WKDownload",
+      "passed" : true
+    },
+    {
+      "label" : "downloaded bytes match loopback fixture",
+      "passed" : true
+    }
+  ]
+}

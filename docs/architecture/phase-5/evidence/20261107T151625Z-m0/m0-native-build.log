@@ -1,0 +1,14 @@
+
+ NX   1 task: 1 succeeded
+
+
+Re-run with --output-style=static to inline logs.
+
+  Run duration:      48.5s
+  Cache:             0/1 hit (0%)
+  Critical path:     48.5s (1 task)
+  Recoverable time:  <1ms
+
+  Recommendations:
+    - Speed up or split the longest tasks on the critical path:
+        browser-macos:build    48.5s

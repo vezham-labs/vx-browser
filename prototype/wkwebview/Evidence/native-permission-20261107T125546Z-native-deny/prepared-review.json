@@ -1,0 +1,19 @@
+{
+  "appPath": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/referenced-chatgpt-conversation-this-is-an/work/native-permission-review.cBWPn4/build/VezhamWKPrototype.app",
+  "bundleIdentifier": "internal.vezham.WKPrototype.NativePermission.1794056100.8423",
+  "cleanupPlan": "Close app, reset Camera and Microphone permissions for this exact bundle identifier, then remove this disposable build. No other permission entries are reset.",
+  "denialOnlyMode": "--test-permission-deny",
+  "deploymentTarget": "macOS 26.0",
+  "newAuthorizationNeeded": "Temporary OS camera and microphone access for this one test identity. Earlier approval covered temporary entitlements and OS denial only.",
+  "preparedDirectory": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/referenced-chatgpt-conversation-this-is-an/work/native-permission-review.cBWPn4",
+  "signedEntitlements": {
+    "com.apple.security.app-sandbox": true,
+    "com.apple.security.device.audio-input": true,
+    "com.apple.security.device.camera": true,
+    "com.apple.security.files.user-selected.read-write": true,
+    "com.apple.security.network.client": true
+  },
+  "sourceSHA256": "66b73cbe523b963638c915f210146ffd6d9e692c6ea05ab607ba737123b80986",
+  "status": "prepared; not launched; OS access approval pending",
+  "websiteGrantGuard": "In denial-only mode, every button choice returns WKPermissionDecision.deny; evidence additionally requires an explicit Deny choice."
+}

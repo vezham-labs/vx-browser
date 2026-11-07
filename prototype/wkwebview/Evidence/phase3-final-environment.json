@@ -1,0 +1,11 @@
+{
+  "Swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0",
+  "WebKit": {
+    "CFBundleShortVersionString": "22625",
+    "CFBundleVersion": "22625.2.8.11.9",
+    "source": "/System/Library/Frameworks/WebKit.framework/Resources/Info.plist"
+  },
+  "host": "macOS 27.2 (26B123)",
+  "minimumTarget": "macOS 26.0",
+  "powerAfterUserConnected": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=25624675)\t22%; charging; 2:52 remaining present: true"
+}

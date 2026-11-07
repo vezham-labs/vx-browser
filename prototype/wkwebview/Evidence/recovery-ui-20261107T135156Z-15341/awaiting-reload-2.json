@@ -1,0 +1,54 @@
+{
+  "affectedRole": "B",
+  "hostPID": 15413,
+  "phase": "awaitingUserReload",
+  "round": 2,
+  "runID": "20261107T135156Z-15341",
+  "seenRoles": [
+    "A"
+  ],
+  "snapshots": {
+    "A": {
+      "address": "http://127.0.0.1:18765/recovery-ui?role=A",
+      "document": {
+        "cookie": "fixture_recovery=20261107T135156Z-15341-A",
+        "documentID": "552c8b3e-9309-4723-b5f4-ffb424e6ccec",
+        "marker": "20261107T135156Z-15341-A",
+        "ready": "complete",
+        "url": "http://127.0.0.1:18765/recovery-ui?role=A"
+      },
+      "isRecovering": false,
+      "lastCommittedURL": "http://127.0.0.1:18765/recovery-ui?role=A",
+      "profile": "Profile A",
+      "reloadCommandCount": 1,
+      "status": "Loaded \u2014 Profile A",
+      "visible": true
+    },
+    "B": {
+      "address": "http://127.0.0.1:18765/recovery-ui?role=B",
+      "isRecovering": true,
+      "lastCommittedURL": "http://127.0.0.1:18765/recovery-ui?role=B",
+      "profile": "Profile B",
+      "reloadCommandCount": 0,
+      "status": "Web content stopped \u2014 use Reload to recover",
+      "visible": true
+    },
+    "Private": {
+      "address": "http://127.0.0.1:18765/recovery-ui?role=Private",
+      "document": {
+        "cookie": "fixture_recovery=20261107T135156Z-15341-Private",
+        "documentID": "7a794ed6-9e43-43a0-b525-5c70dfa2420f",
+        "marker": "20261107T135156Z-15341-Private",
+        "ready": "complete",
+        "url": "http://127.0.0.1:18765/recovery-ui?role=Private"
+      },
+      "isRecovering": false,
+      "lastCommittedURL": "http://127.0.0.1:18765/recovery-ui?role=Private",
+      "profile": "Private \u2022 CA01C7D3",
+      "reloadCommandCount": 0,
+      "status": "Loaded \u2014 Private \u2022 CA01C7D3",
+      "visible": true
+    }
+  },
+  "windowTitle": "Vezham Recovery Test \u2014 B"
+}

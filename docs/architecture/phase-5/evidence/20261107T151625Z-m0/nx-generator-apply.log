@@ -1,0 +1,5 @@
+
+ NX  Generating @nx/workspace:run-commands
+
+Both an oxfmt and a prettier config were found. Nx is formatting with oxfmt. Delete the config you are not using to make the choice explicit: https://nx.dev/docs/reference/code-formatting
+UPDATE apps/browser-macos/project.json

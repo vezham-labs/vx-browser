@@ -1,0 +1,67 @@
+{
+  "failureCount" : 0,
+  "failures" : [
+
+  ],
+  "hostOSVersion" : "Version 27.2 (Build 26B123)",
+  "mode" : "find-zoom",
+  "status" : "passed",
+  "tests" : [
+    {
+      "label" : "zoom set and read back",
+      "passed" : true
+    },
+    {
+      "label" : "zoom change stays scoped to its view",
+      "passed" : true
+    },
+    {
+      "label" : "zoom resets to 1.0",
+      "passed" : true
+    },
+    {
+      "label" : "second view zoom set and read back",
+      "passed" : true
+    },
+    {
+      "label" : "second view zoom does not change first view",
+      "passed" : true
+    },
+    {
+      "label" : "find next first match",
+      "passed" : true
+    },
+    {
+      "label" : "case-insensitive find",
+      "passed" : true
+    },
+    {
+      "label" : "case-sensitive find rejects different case",
+      "passed" : true
+    },
+    {
+      "label" : "find next advances to another match",
+      "passed" : true
+    },
+    {
+      "label" : "find previous moves backward",
+      "passed" : true
+    },
+    {
+      "label" : "find previous stops at document start",
+      "passed" : true
+    },
+    {
+      "label" : "case-sensitive find matches exact case",
+      "passed" : true
+    },
+    {
+      "label" : "find reports zero results",
+      "passed" : true
+    },
+    {
+      "label" : "find wraps when enabled",
+      "passed" : true
+    }
+  ]
+}

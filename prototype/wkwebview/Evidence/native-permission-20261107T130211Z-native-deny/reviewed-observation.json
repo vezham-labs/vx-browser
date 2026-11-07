@@ -1,0 +1,18 @@
+{
+  "OSPermissionsAtFinalRequest": "camera authorized; microphone authorized",
+  "cleanup": {
+    "bundleIdentifier": "internal.vezham.WKPrototype.NativePermission.1794056489.9266",
+    "cameraResetExitCode": 0,
+    "microphoneResetExitCode": 0,
+    "scope": "Only the approved disposable identity; app launch wait has ended."
+  },
+  "finalRequest": "After reload, native prompt visibly identified localhost origin and camera/microphone. Assistant explicitly selected Deny, and the page showed Request denied. Scoped native events and fresh fixture response confirm 4/4 checks.",
+  "firstRequest": "OS allowed; user chose Allow in the app prompt; test guard denied website access. Original 3/4 report retained.",
+  "firstRequestResult": "native-permission-results.json",
+  "fullGate": "Partially Verified: actual website grants, grant persistence/revocation, independent device cases and unsupported permission types are not established.",
+  "normalEntitlementsUnchanged": true,
+  "result": "native-permission-retry-results.json",
+  "runID": "20261107T130211Z-native-deny",
+  "status": "native denial verified; full permission lifecycle remains partial",
+  "temporaryBuildRemoved": true
+}

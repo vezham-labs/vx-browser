@@ -1,0 +1,12 @@
+{
+  "filesScanned": 52,
+  "filesSkipped": [],
+  "persistentStoreDirectories": [
+    "a12a0000-0000-4000-8000-000000000001",
+    "b12b0000-0000-4000-8000-000000000002"
+  ],
+  "privateMarkerHits": [],
+  "runID": "20261107T095741Z-23704",
+  "scope": "Latest isolated app Library/WebKit/WebsiteDataStore after process exit only. OS-managed transient data outside this directory is excluded.",
+  "status": "bounded-scan-clear"
+}

@@ -1,0 +1,30 @@
+{
+  "OS": {
+    "error": "",
+    "exitCode": 0,
+    "output": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123"
+  },
+  "hostModel": {
+    "error": "",
+    "exitCode": 0,
+    "output": "MacBookAir10,1"
+  },
+  "memoryBytes": {
+    "error": "",
+    "exitCode": 0,
+    "output": "8589934592"
+  },
+  "method": "Existing interactive work session; other user apps remain running; hidden test host windows; no OS cache flush. Synthetic timing results require a controlled release baseline before a full performance-gate pass.",
+  "power": {
+    "error": "",
+    "exitCode": 0,
+    "output": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=25624675)\t21%; discharging; 1:32 remaining present: true"
+  },
+  "targetsRatifiedByUser": true,
+  "toolchain": {
+    "error": "",
+    "exitCode": 0,
+    "output": "Xcode 27.2\nBuild version 27B52"
+  },
+  "validSigningIdentityCount": 0
+}

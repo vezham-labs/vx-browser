@@ -1,0 +1,54 @@
+{
+  "bundleIdentifier": "internal.vezham.WKPrototype.Diagnostics.1794058231.14262",
+  "crashEvidenceProvenance": "Copied without changing raw sample run IDs after the first idle observation was interrupted to allow timer coalescing. Native source hashes match.",
+  "crashRecovery": {
+    "approvedTargetMs": 2000,
+    "callbackToDOMReadyMs": {
+      "maximum": 512.2887500001525,
+      "median": 230.32537499966566,
+      "p95": 502.09179166631657
+    },
+    "checksPerSample": 7,
+    "limitations": "Single hidden private fixture, automatic reload. Does not validate visible recovery UI, multi-view/stale callbacks, user recovery choice, host/GPU/network-process crashes, or durable product state.",
+    "numericThresholdMet": true,
+    "samples": 30,
+    "signalToResultObservedUpperBoundMs": {
+      "maximum": 647.113458,
+      "median": 247.02977099999998,
+      "p95": 600.711917
+    },
+    "status": "passed for bounded single-view harness"
+  },
+  "crashSourceRunID": "20261107T132441Z-13174",
+  "method": "Host-specific private Darwin coalition/unique-ID diagnostics outside app source; exact path, owner and identity checks. Active desktop; hidden AppKit windows; OS caches untouched.",
+  "runID": "20261107T133031Z-14262",
+  "security": "Normal App Sandbox/network-client/user-selected-file entitlements and Hardened Runtime; no debug/media entitlements. No root or security relaxation.",
+  "sourceSHA256": {
+    "LocalInteractionProbe.swift": "8a2fae9505b0105dba696cc3d366ee75f243046086ff22ef8a6127bdc00620a0",
+    "NavigationPolicy.swift": "f0eda048dc9b305210a3a28bf3e10ad8c90e1fa2f3d91b70ba1762b267666149",
+    "Phase3Measurements.swift": "0adf7a80fe2a744bd45af1b00301b83988356995b72d9986e7c60bd43c8c6e7f",
+    "main.swift": "170dfe1e122923a245441c488996295d49e04450bd918245aea828396607a043"
+  },
+  "sources": [
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/sys/proc_info_private.h",
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/mach/coalition.h"
+  ],
+  "status": "completed bounded diagnostics",
+  "tenIdleViewsMemory": {
+    "ACPowerConfirmedAtStartAndEnd": true,
+    "RSSBytes": {
+      "maximum": 24920064,
+      "median": 21708800.0,
+      "p95": 24920064
+    },
+    "approvedTargetBytes": 1500000000,
+    "engineProcessCount": 12,
+    "limitations": "RSS only, not physical footprint/compressed-memory accounting. Hidden windows and active desktop; no true cold-cache, energy or conferencing acceptance. One 10-minute run; 30 sequential samples are not 30 independent runs.",
+    "loadedViewCount": 10,
+    "nativeIdleSeconds": 630.0058475833339,
+    "numericThresholdMet": true,
+    "sampleCount": 30,
+    "sampleIntervalSeconds": 1,
+    "status": "observed"
+  }
+}

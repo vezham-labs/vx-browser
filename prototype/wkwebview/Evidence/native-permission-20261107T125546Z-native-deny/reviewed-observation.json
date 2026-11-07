@@ -1,0 +1,26 @@
+{
+  "automatedOSStatus": [
+    "OS media status: camera=notDetermined; microphone=notDetermined",
+    "OS media status: camera=notDetermined; microphone=denied",
+    "OS media status: camera=denied; microphone=denied"
+  ],
+  "cleanup": {
+    "bundleIdentifier": "internal.vezham.WKPrototype.NativePermission.1794056100.8423",
+    "cameraResetExitCode": 0,
+    "microphoneResetExitCode": 0,
+    "scope": "Only the approved disposable identity; app launch wait has ended."
+  },
+  "meaning": "The user denied OS access; the request stopped before the Vezham prompt. This does not verify the Vezham prompt and is not a failure of its Deny decision.",
+  "nativePromptReached": false,
+  "normalEntitlementsUnchanged": true,
+  "pageResult": {
+    "errorName": "NotAllowedError",
+    "status": "denied"
+  },
+  "priorAttempt": "native-permission-20261107T103412Z-native-deny/native-permission-results.json",
+  "runID": "20261107T125546Z-native-deny",
+  "sourceSHA256": "66b73cbe523b963638c915f210146ffd6d9e692c6ea05ab607ba737123b80986",
+  "status": "OS-denial-confirmed; app-prompt-unverified",
+  "temporaryBuildRemoved": true,
+  "userReportedAction": "i denialed it"
+}

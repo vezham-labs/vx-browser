@@ -1,0 +1,3 @@
+Both an oxfmt and a prettier config were found. Nx is formatting with oxfmt. Delete the config you are not using to make the choice explicit: https://nx.dev/docs/reference/code-formatting
+Finished in 25ms on 34 files using 8 threads.
+Finished in 1ms on 2 files using 8 threads.

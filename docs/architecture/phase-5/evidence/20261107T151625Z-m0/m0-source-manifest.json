@@ -1,0 +1,41 @@
+{
+  "auditedExecutableSHA256": "6e6b003f87914b46941bc27026a6077d6cacb7c6990afedc3e0388b66f49510a",
+  "baseCommit": "1171ceb410eca30e7d3ed339a24c11d4e1e642ce",
+  "branch": "timeline",
+  "buildEvidence": [
+    "m0-native-build-runtime-fix-result.json",
+    "m0-native-build-runtime-fix.log",
+    "m0-bundle-audit.json"
+  ],
+  "milestone": "M0",
+  "nativeSourceAndConfigurationSHA256": {
+    "apps/browser-macos/.gitignore": "b4cd64176cedfaf8a5632d1a0f4966bce764b7a75f0c34cd050b4eebab11496f",
+    "apps/browser-macos/Config/Base.xcconfig": "5fcbd66ec5347d763a495273f8d048fbbc055f52aa788499b99c111ce6460d97",
+    "apps/browser-macos/Config/Debug.xcconfig": "02ebb09cd34fa18b15d332f4d29f0dd49c48621a13cacd159a4ff56515e4d14c",
+    "apps/browser-macos/Config/Info.plist": "897ce7396abd11a6af0db816ec413b328ce01a6abc63700c5602e61f9cc13929",
+    "apps/browser-macos/Config/Release.xcconfig": "7d5b7c73740224ef6e957f9bd493e410aa73d9b5843f8628c114b4afb43af432",
+    "apps/browser-macos/Config/VezhamBrowser.entitlements": "baa050bc06d89900bed3bb4954acdf2f17c4f47e259b1870f889d4a301fbcaf4",
+    "apps/browser-macos/README.md": "7fd7f79d029cde11f94a4a14e17cfea26c82a2d0536f855bfb295ff04bd85cd2",
+    "apps/browser-macos/Sources/App/ApplicationMain.swift": "fa6487c530fb0d47e57ee921c0c212c26cf563fc11db9e537b38d018c56e173d",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift": "ad30d63933810fa259b7b85303bcf520eebaada8e069f450e800c8a6b61e60b6",
+    "apps/browser-macos/Sources/Host/MainWindowController.swift": "9ecf5c6ba614f9de2886967bb2e901e8d92bf48e09fa6414cea1a566d796baa4",
+    "apps/browser-macos/Tools/native_host.py": "5516c646d2f2dc987fbbfbfb4fba0c23f2556a5d03fa062d66ccbe773dd7590b",
+    "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj": "85ec1cf986e5c42367ef63189b50daf0177a5bfe29a3830c9192223bb424abb9",
+    "apps/browser-macos/VezhamBrowser.xcodeproj/xcshareddata/xcschemes/VezhamBrowser.xcscheme": "ead0ae739cd9394b1b8c81b9e543f240a99e7d1cd2c43288813d53d5aff886b1",
+    "apps/browser-macos/project.json": "0e2eb4de9591cff71ea4046c0be6bdca23777fbe406097648f26aa2adaecc491"
+  },
+  "recordedAtUTC": "2026-11-07T15:52:42.445774+00:00",
+  "scope": "Swift/AppKit lifecycle/window host, minimum 26.0 configuration. No browser engine/core/chrome or release qualification.",
+  "sourceState": "Uncommitted task changes; these hashes identify reviewed source beyond the base commit.",
+  "toolRevisionNote": "The audit driver was strengthened after the corrected build to inspect minimum OS values across all binary slices; Swift sources and build configuration were not changed after that build.",
+  "unchangedDependencyPinsSHA256": {
+    "package.json": "ac8bc244efc440025111bdb9c499d6ee1579a64a390532c70a08b9f8db6a97b7",
+    "pnpm-lock.yaml": "da3062ac9e3e337c3d7e00892d8fcd65faf4b0a9f13cd3b9a3e227301278574f",
+    "pnpm-workspace.yaml": "87101aa9488b6f7ad367f4c30960ad29db57ff05bea3958609e617709e65530e"
+  },
+  "workspaceIntegrationSHA256": {
+    ".gitignore": "16bfe85d2f447b01d1180acc816d11dd0d8ea1c784ca45e2519e199c5575de4b",
+    "README.md": "e90ef07711cb481fd5b28d10c5a4fc769161fea2cfad82dac3252064a31ea316",
+    "vx/README.md": "c2c4f38ec2dd858ae9964cd772344cd94e57766774cdecf6810cb3bed00bba59"
+  }
+}

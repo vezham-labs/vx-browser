@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "runID": "20261107T135604Z-15653",
+  "suites": [
+    {
+      "mode": "--test-seed",
+      "passedChecks": 12,
+      "result": "isolation-results-20261107T135604Z-15653-seed.json"
+    },
+    {
+      "mode": "--test-verify",
+      "passedChecks": 6,
+      "result": "isolation-results-20261107T135604Z-15653-verify.json"
+    },
+    {
+      "mode": "--test-private-windows",
+      "passedChecks": 3,
+      "result": "window-lifecycle-results-20261107T135604Z-15653.json"
+    },
+    {
+      "mode": "--test-find-zoom",
+      "passedChecks": 14,
+      "result": "find-zoom-results-20261107T135604Z-15653.json"
+    },
+    {
+      "mode": "URL policy",
+      "passedChecks": 13,
+      "result": "url-policy-results.json"
+    }
+  ],
+  "totalPassedChecks": 48,
+  "method": "One isolated normal-entitlement build; sequential fresh LaunchServices processes; loopback only. Foundation URL policy is a separate executable.",
+  "sourceHashes": "source-hashes.json"
+}

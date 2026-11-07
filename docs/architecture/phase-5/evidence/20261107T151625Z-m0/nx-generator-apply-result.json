@@ -1,0 +1,22 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "g",
+    "@nx/workspace:run-commands",
+    "build",
+    "--project=browser-macos",
+    "--command=python3 apps/browser-macos/Tools/native_host.py build",
+    "--outputs=apps/browser-macos/build",
+    "--no-interactive"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "exitCode": 0,
+  "startedAtUTC": "2026-11-07T15:26:08.427505+00:00",
+  "elapsedSeconds": 4.351762294769287,
+  "outputFile": "nx-generator-apply.log",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

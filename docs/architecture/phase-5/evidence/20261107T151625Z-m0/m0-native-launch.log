@@ -1,0 +1,34 @@
+
+> nx run browser-macos:launch
+
+> python3 apps/browser-macos/Tools/native_host.py launch
+
+The application /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app cannot be opened for an unexpected reason, error=Error Domain=NSOSStatusErrorDomain Code=-10827 "kLSNoExecutableErr: The executable is missing" UserInfo={_LSLine=4357, _LSFunction=_LSOpenStuffCallLocal, _LSFile=LSOpenCore.mm, _LSErrorMessage=kLSNoExecutableErr}
+Traceback (most recent call last):
+  File "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Tools/native_host.py", line 86, in <module>
+    main()
+    ~~~~^^
+  File "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Tools/native_host.py", line 82, in main
+    run(["open", "-n", "-W", "-a", str(APP)])
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Tools/native_host.py", line 18, in run
+    subprocess.run(command, cwd=APP_ROOT, check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['open', '-n', '-W', '-a', '/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app']' returned non-zero exit status 1.
+Warning: command "python3 apps/browser-macos/Tools/native_host.py launch" exited with non-zero status code
+
+
+ NX   Running target launch for project browser-macos failed
+
+Failed tasks:
+
+- browser-macos:launch
+
+Hint: run the command with --verbose for more details.
+
+  Run duration:      335ms
+  Critical path:     319ms (1 task)
+  Recoverable time:  <1ms

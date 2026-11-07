@@ -1,0 +1,43 @@
+{
+  "callbackToDOMReadyMs": {
+    "maximum": 512.2887500001525,
+    "median": 230.32537499966566,
+    "p95NearestRank": 502.09179166631657,
+    "sampleCount": 30,
+    "sampleVarianceNMinus1": 11343.512584198286
+  },
+  "currentSourceMatchesMeasuredRevision": false,
+  "helperCount": 12,
+  "hostPlusEngineRSSBytes": {
+    "maximum": 24920064,
+    "median": 21708800.0,
+    "p95NearestRank": 24920064,
+    "sampleCount": 30,
+    "sampleVarianceNMinus1": 1029727357064.5333
+  },
+  "hostPlusEngineRSSMiB": {
+    "maximum": 23.765625,
+    "median": 20.703125,
+    "p95NearestRank": 23.765625,
+    "sampleCount": 30,
+    "sampleVarianceNMinus1": 0.9365315755208333
+  },
+  "measuredSourceSHA256": {
+    "LocalInteractionProbe.swift": "8a2fae9505b0105dba696cc3d366ee75f243046086ff22ef8a6127bdc00620a0",
+    "NavigationPolicy.swift": "f0eda048dc9b305210a3a28bf3e10ad8c90e1fa2f3d91b70ba1762b267666149",
+    "Phase3Measurements.swift": "0adf7a80fe2a744bd45af1b00301b83988356995b72d9986e7c60bd43c8c6e7f",
+    "main.swift": "170dfe1e122923a245441c488996295d49e04450bd918245aea828396607a043"
+  },
+  "membershipAndIdentityStableAcrossMemorySamples": true,
+  "method": "Recomputed from raw native results, per-signal guards and per-process RSS snapshots. Sample variance uses n-1. Sequential idle samples are not independent idle runs.",
+  "rawChecksPassed": 210,
+  "revisionScope": "Metrics describe the recorded measured source. Later prototype changes require separate validation; no current performance qualification is inferred.",
+  "signalToResultObservedUpperBoundMs": {
+    "maximum": 647.113458,
+    "median": 247.02977099999998,
+    "p95NearestRank": 600.711917,
+    "sampleCount": 30,
+    "sampleVarianceNMinus1": 18274.252572864367
+  },
+  "status": "raw evidence cross-checked"
+}

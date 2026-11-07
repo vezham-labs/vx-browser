@@ -1,0 +1,17 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "run",
+    "browser-macos:build"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "exitCode": 0,
+  "startedAtUTC": "2026-11-07T15:29:07.059314+00:00",
+  "elapsedSeconds": 53.90424704551697,
+  "outputFile": "m0-native-build.log",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

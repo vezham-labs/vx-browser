@@ -1,0 +1,130 @@
+{
+  "guardPassed": true,
+  "host": {
+    "coalitionQuery": {
+      "bytesReturned": 40,
+      "errno": 0,
+      "expectedBytes": 40
+    },
+    "executablePath": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/referenced-chatgpt-conversation-this-is-an/work/attributed-checks.60zwc5pj/build/VezhamWKPrototype.app/Contents/MacOS/VezhamWKPrototype",
+    "jetsamCoalitionID": 4264,
+    "parentUniqueID": 1,
+    "pid": 13577,
+    "resourceCoalitionID": 4263,
+    "uniqueID": 13577,
+    "uniqueQuery": {
+      "bytesReturned": 56,
+      "errno": 0,
+      "expectedBytes": 56
+    }
+  },
+  "sample": 23,
+  "selectedGroup": [
+    {
+      "coalitionQuery": {
+        "bytesReturned": 40,
+        "errno": 0,
+        "expectedBytes": 40
+      },
+      "command": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/referenced-chatgpt-conversation-this-is-an/work/attributed-checks.60zwc5pj/build/VezhamWKPrototype.app/Contents/MacOS/VezhamWKPrototype",
+      "executablePath": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/referenced-chatgpt-conversation-this-is-an/work/attributed-checks.60zwc5pj/build/VezhamWKPrototype.app/Contents/MacOS/VezhamWKPrototype",
+      "jetsamCoalitionID": 4264,
+      "parentUniqueID": 1,
+      "pid": 13577,
+      "ppid": 1,
+      "resourceCoalitionID": 4263,
+      "rssKiB": 85920,
+      "uid": 501,
+      "uniqueID": 13577,
+      "uniqueQuery": {
+        "bytesReturned": 56,
+        "errno": 0,
+        "expectedBytes": 56
+      }
+    },
+    {
+      "coalitionQuery": {
+        "bytesReturned": 40,
+        "errno": 0,
+        "expectedBytes": 40
+      },
+      "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+      "executablePath": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+      "jetsamCoalitionID": 4264,
+      "parentUniqueID": 1,
+      "pid": 13595,
+      "ppid": 1,
+      "resourceCoalitionID": 4263,
+      "rssKiB": 19184,
+      "uid": 501,
+      "uniqueID": 13595,
+      "uniqueQuery": {
+        "bytesReturned": 56,
+        "errno": 0,
+        "expectedBytes": 56
+      }
+    },
+    {
+      "coalitionQuery": {
+        "bytesReturned": 40,
+        "errno": 0,
+        "expectedBytes": 40
+      },
+      "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+      "executablePath": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+      "jetsamCoalitionID": 4264,
+      "parentUniqueID": 1,
+      "pid": 13599,
+      "ppid": 1,
+      "resourceCoalitionID": 4263,
+      "rssKiB": 29744,
+      "uid": 501,
+      "uniqueID": 13599,
+      "uniqueQuery": {
+        "bytesReturned": 56,
+        "errno": 0,
+        "expectedBytes": 56
+      }
+    },
+    {
+      "coalitionQuery": {
+        "bytesReturned": 40,
+        "errno": 0,
+        "expectedBytes": 40
+      },
+      "command": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+      "executablePath": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+      "jetsamCoalitionID": 4264,
+      "parentUniqueID": 1,
+      "pid": 13602,
+      "ppid": 1,
+      "resourceCoalitionID": 4263,
+      "rssKiB": 10624,
+      "uid": 501,
+      "uniqueID": 13602,
+      "uniqueQuery": {
+        "bytesReturned": 56,
+        "errno": 0,
+        "expectedBytes": 56
+      }
+    }
+  ],
+  "target": {
+    "coalitionQuery": {
+      "bytesReturned": 40,
+      "errno": 0,
+      "expectedBytes": 40
+    },
+    "executablePath": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+    "jetsamCoalitionID": 4264,
+    "parentUniqueID": 1,
+    "pid": 13599,
+    "resourceCoalitionID": 4263,
+    "uniqueID": 13599,
+    "uniqueQuery": {
+      "bytesReturned": 56,
+      "errno": 0,
+      "expectedBytes": 56
+    }
+  }
+}

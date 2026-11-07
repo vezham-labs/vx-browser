@@ -1,0 +1,145 @@
+{
+  "deploymentTarget": "macOS 26.0",
+  "failureCount": 0,
+  "failures": [],
+  "fixtureObservations": {
+    "downloadResponses": 1,
+    "events": [
+      {
+        "fileCount": 0,
+        "kind": "upload-check"
+      },
+      {
+        "bridgeAbsent": true,
+        "cookiePresent": true,
+        "kind": "redirect",
+        "marker": "synthetic-private-marker"
+      },
+      {
+        "bridgeAbsent": true,
+        "cookiePresent": true,
+        "kind": "popup",
+        "marker": "synthetic-private-marker"
+      }
+    ],
+    "uploadBytes": 0,
+    "uploadRequests": 0
+  },
+  "hostOSVersion": "27.2",
+  "mode": "local-interactions",
+  "nativeEvents": [
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "",
+      "path": "/interaction-fixture",
+      "profile": "Private \u2022 6EC90D63",
+      "store": "ObjectIdentifier(0x000000764b303c00)"
+    },
+    {
+      "event": "upload-cancelled",
+      "fileCount": 0
+    },
+    {
+      "event": "download-cancelled"
+    },
+    {
+      "code": -999,
+      "domain": "NSURLErrorDomain",
+      "event": "download-error"
+    },
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "redirect",
+      "path": "/interaction-result",
+      "profile": "Private \u2022 6EC90D63",
+      "store": "ObjectIdentifier(0x000000764b303c00)"
+    },
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "",
+      "path": "/interaction-fixture",
+      "profile": "Private \u2022 6EC90D63",
+      "store": "ObjectIdentifier(0x000000764b303c00)"
+    },
+    {
+      "event": "popup-opened",
+      "profile": "Private \u2022 6EC90D63",
+      "store": "ObjectIdentifier(0x000000764b303c00)"
+    },
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "popup",
+      "path": "/interaction-result",
+      "profile": "Private \u2022 6EC90D63",
+      "store": "ObjectIdentifier(0x000000764b303c00)"
+    },
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "",
+      "path": "/interaction-fixture",
+      "profile": "Private \u2022 6EC90D63",
+      "store": "ObjectIdentifier(0x000000764b303c00)"
+    },
+    {
+      "currentPath": "/interaction-fixture",
+      "event": "navigation-blocked",
+      "scheme": "vezham-unsupported"
+    }
+  ],
+  "runID": "20261107T090509Z-15825",
+  "status": "passed",
+  "tests": [
+    {
+      "label": "upload picker cancellation returned zero file URLs",
+      "passed": true
+    },
+    {
+      "label": "page FileList stayed empty after cancellation",
+      "passed": true
+    },
+    {
+      "label": "fixture received zero upload requests and bytes",
+      "passed": true
+    },
+    {
+      "label": "download save panel cancellation returned no destination",
+      "passed": true
+    },
+    {
+      "label": "attachment response reached the save-panel path once",
+      "passed": true
+    },
+    {
+      "label": "isolated download destination stayed empty",
+      "passed": true
+    },
+    {
+      "label": "redirect page retained the private localStorage marker and cookie",
+      "passed": true
+    },
+    {
+      "label": "popup page retained the private localStorage marker and cookie",
+      "passed": true
+    },
+    {
+      "label": "popup used the originating native data store",
+      "passed": true
+    },
+    {
+      "label": "popup used the originating private-session label",
+      "passed": true
+    },
+    {
+      "label": "unsupported scheme cancelled while fixture remained current",
+      "passed": true
+    },
+    {
+      "label": "redirect and popup pages had no vezham native bridge",
+      "passed": true
+    },
+    {
+      "label": "no file selection or successful download followed cancellation",
+      "passed": true
+    }
+  ]
+}

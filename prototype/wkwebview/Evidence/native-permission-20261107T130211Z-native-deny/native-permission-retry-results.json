@@ -1,0 +1,55 @@
+{
+  "OSPermissionStatuses": [
+    "OS media status: camera=notDetermined; microphone=notDetermined",
+    "OS media status: camera=notDetermined; microphone=authorized",
+    "OS media status: camera=authorized; microphone=authorized"
+  ],
+  "UIObservation": "Native alert visibly showed localhost origin and camera/microphone; assistant clicked Deny and observed Request denied on the page.",
+  "bundleIdentifier": "internal.vezham.WKPrototype.NativePermission.1794056489.9266",
+  "failureCount": 0,
+  "failures": [],
+  "hostOSVersion": "27.2",
+  "mode": "OS-authorized-Vezham-explicit-denial",
+  "nativeEvents": [
+    "OS media status: camera=notDetermined; microphone=notDetermined",
+    "OS media status: camera=notDetermined; microphone=authorized",
+    "native permission prompt shown: camera and microphone from http://localhost:18765",
+    "native permission prompt choice: allow",
+    "native permission prompt decision: deny",
+    "OS media status: camera=authorized; microphone=authorized",
+    "native permission prompt shown: camera and microphone from http://localhost:18765",
+    "native permission prompt choice: deny",
+    "native permission prompt decision: deny"
+  ],
+  "observedPageResult": {
+    "errorName": "NotAllowedError",
+    "status": "denied"
+  },
+  "previousRequest": "User first chose Allow in the Vezham prompt. The denial-only guard returned Deny; that earlier request remains in native-permission-results.json as partial evidence. Page reloaded, a new request reached the prompt, and this final request explicitly chose Deny.",
+  "runID": "20261107T130211Z-native-deny",
+  "scope": "Combined camera/microphone native denial only. Website Allow Once, grant persistence, revoke/reload and independent device cases remain unverified.",
+  "scopedFinalRequestEvents": [
+    "native permission prompt shown: camera and microphone from http://localhost:18765",
+    "native permission prompt choice: deny",
+    "native permission prompt decision: deny"
+  ],
+  "status": "passed",
+  "tests": [
+    {
+      "label": "website received NotAllowedError after the retry",
+      "passed": true
+    },
+    {
+      "label": "website received no media stream after the retry",
+      "passed": true
+    },
+    {
+      "label": "origin-labelled Vezham native prompt was reached",
+      "passed": true
+    },
+    {
+      "label": "Vezham prompt explicitly answered Deny",
+      "passed": true
+    }
+  ]
+}

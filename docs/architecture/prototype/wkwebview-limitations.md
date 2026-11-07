@@ -1,0 +1,62 @@
+# WKWebView Prototype Limitations
+
+**Status:** Authorized local/public investigation completed with explicit limitations; full product acceptance and engine approval remain open.  
+**Decision:** WKWebView remains Proposed pending the tests in [the feasibility report](wkwebview-feasibility-report.md).
+
+## Prototype scope limitations
+
+- This is a small native AppKit test shell, not the selected React + TypeScript + HeroUI v3 browser UI architecture. It has no React-to-Swift IPC implementation. The typed `BrowserCommand` is an in-process native command envelope.
+- Browser chrome is native AppKit rather than a web UI. Therefore a browser-UI CSP, app UI origin, app-view navigation policy, and browser-UI frame validation are not exercised. The website view is separate and has no script message handlers; the loopback fixture observed `bridgeAbsent=true` in the tested views. This does not validate a future React bridge or adversarial origin/frame behavior.
+- No arbitrary page-script API is exposed. The test harness uses a private, test-only `callAsyncJavaScript` call to read its synthetic fixture; this helper is not part of the shared command type or UI.
+- No history, bookmarks, tabs/spaces, extensions, account, cloud, Tamizhi, updater, production profile-management UI, or production app-state database exists.
+- The prototype does not package a private browser engine; it links system WebKit. Results may change with macOS/WebKit updates.
+
+## Isolation guarantees and unknowns
+
+| Isolation area | Prototype approach | Demonstrated guarantee? |
+|---|---|---|
+| Website storage | Separate `WKWebsiteDataStore(forIdentifier:)` instances for persistent A/B; one nonpersistent store per private session | **Partially.** On macOS 27.2, synthetic cookies, localStorage, IndexedDB, Cache Storage/service-worker markers, and a cacheable same-URL HTTP response were isolated for A/B; same-profile cache reuse, fresh-process persistence, and website-data deletion were observed. macOS 26 remains untested. |
+| Application state | Profile registry in memory; no history, bookmarks, sync, or durable app profile store | **No product-state isolation claim.** Prototype has little app-owned state to isolate. |
+| Credentials | No real or synthetic Keychain credential inserted or exposed to page JavaScript | **Not tested.** No Vezham ID token or Keychain bridge is present. |
+| Renderer/process | WebKit owns process management | **No per-profile renderer guarantee.** The app cannot establish separate WebKit content processes per Vezham profile from this implementation. |
+| Private teardown | A reference count is intended to keep shared private storage while at least one associated view remains, then release the store after the last view closes | **Partially.** A headless AppKit test exercised actual `NSWindow` close callbacks: closing one window retained the shared session; closing the last caused the registry to create a new session. The latest isolated run's post-exit scan found only persistent A/B UUID directories and no `marker-private` value in that app's WebKit store; OS-managed transient artifacts outside the app container were not inspected. |
+
+Persistent store UUIDs are application data-store identifiers, not OS-user boundaries. They must not be described as protection against a compromised app process, same-user malware, or a WebKit exploit. Do not claim cross-profile renderer isolation unless independently measured and supported by documented platform guarantees.
+
+## WebKit/API capability limitations
+
+- **Find and zoom:** Fourteen local checks verified `WKFindConfiguration` case sensitivity, forward/backward search, wrapping, zero-result reporting, and `WKWebView.pageZoom` set/read/reset and per-view behavior on macOS 27.2. The prototype UI exposes only forward, case-insensitive, wrapping search and plus/minus zoom; it has no previous, case-toggle, clear/stop, or explicit reset control. History and crash behavior were not part of this run.
+- **Permissions:** With both OS permissions authorized for the disposable app, the origin-labelled Vezham prompt appeared and explicit Deny returned NotAllowedError/no stream: 4/4 final-request checks passed. An earlier request chose Allow in the app prompt but the denial-only guard returned Deny; its original 3/4 result is retained separately. Targeted OS resets succeeded after app closure and the build was removed. Real website grants, persistence/revocation and separate device cases remain unverified. OS-level access was temporary and explicitly authorized; the test never returned a website grant. Other permission-management APIs remain unsupported.
+- **HTTP cache:** A cacheable same-URL response with a changing generation was reused by a second Profile A view; Profile B returned its own response. This is a narrow macOS 27.2 observation, not a complete cache-partition guarantee across sites or OS versions.
+- **Authentication:** A synthetic persistent cookie was observed in the local fixture. It cannot establish OAuth redirect, MFA, passkey/WebAuthn, SSO, third-party cookie, session-cookie, or anti-automation compatibility.
+- **Downloads/uploads:** Selections, cancellation, multiple files including an unusual basename, selected folder contents, duplicate cancellation and interrupted/completed behavior have bounded evidence. An initial interrupted download left a 29-byte final file; app-owned staging fixed it and 9 focused checks passed. Overwrite completion, cross-volume saves, symlinks, metadata/quarantine, long-lived access and abrupt-host-death cleanup remain unverified.
+- **Crash recovery:** 30/30 uniquely attributed single-view content-process terminations recovered; 7 checks per run. Signal-to-result observed p95 upper bound 600.71 ms; callback-to-DOM p95 502.09 ms. Those timings used a hidden automatic-reload fixture before the recovery-state fix. The final revision passed 49/49 checks in actual AppKit windows across Profile A, Profile B and Private: recovery status, no automatic reload, real toolbar Reload, last committed URL, new document identity and unchanged synthetic storage/documents in unaffected windows. Five injected stale navigation callbacks were rejected before and after reload; foreign-view callbacks were also rejected. This tests native callback injection, not arbitrary event scheduling or stale process notifications. A stale-callback defect was fixed with retired-navigation/active-navigation identity checks, view ownership checks, retained committed URL and explicit user reload. Remaining gaps include durable product state, termination during navigation/download/profile switching and broader crash scheduling. Helper attribution used read-only private Darwin coalition/unique-ID diagnostics, validated against two simultaneous isolated apps with disjoint helper groups. Exact executable paths, process owner and both coalition IDs were checked; unique IDs were rechecked immediately before each targeted signal. The diagnostic stays outside browser source and is not a stable public product API.
+- **Navigation interception:** Foundation policy cases, same/cross-origin redirects and popups, a hostile frame and 100 unreachable native-channel attempts were exercised. Privileged-shaped schemes were cancelled. No production React/native transport exists to validate. A callback URL was transient/empty during a blocked redirect, so the test was corrected to check the actual native cancel decision. This is not comprehensive network, anti-phishing or certificate-negative coverage.
+- **Extensions:** No Safari or Chrome extension runtime is implemented. WKWebView must not be advertised as a Chrome-extension host.
+- **Profile migration:** Cookie/data-store import/export and migration between WebKit and Chromium are not implemented or promised.
+
+## Security and distribution limitations
+
+- The app compiled, passed ad-hoc signature verification, launched, and ran the local fixture harness with App Sandbox and Hardened Runtime enabled on macOS 27.2. The initial `kLSNoExecutableErr` was not reproduced after Xcode 27.2 was installed; its cause remains unknown. The host has no valid signing identity; Developer ID signing and notarization were not performed.
+- Runtime evidence now covers storage, lifecycle, find/zoom, synthetic transfer cases, bounded cross-origin/frame behavior, OS media-prompt denial, 21 public landing-page visits, timing proxies and a ten-view idle observation. The app-owned media grant/revocation path, full account workflows, product state/bridge, durable recovery state, broader in-flight crash cases and release distribution remain unverified. Bounded crash and aggregate RSS tests now have host-specific attributed evidence.
+- The normal prototype entitlements are limited to App Sandbox, outbound networking, and user-selected read/write file access. Temporary camera/audio-input entitlements and purpose strings were used only in the isolated denial-test build. OS prompt appearance and combined denial have evidence; allow, revocation, and per-device cases remain unverified.
+- The app was not notarized. Gatekeeper behavior, direct internal distribution, update metadata signatures, replay/rollback protection, key rotation, revocation, channel separation, and staged rollout were not tested. Accepted ADR 0002 remains the governing distribution decision; installer/updater specifics remain open.
+- App logs redact URL path/query and content at the call sites implemented, but OS WebKit logs, crash reports, permission diagnostics, and full system telemetry have not been audited.
+
+## Compatibility and performance limitations
+
+- Public pages loaded in 21/21 fresh-store observations across seven destinations. User direction restricts testing to public pages. Authentication, MFA, passkeys/SSO, document/edit/save, payment and conference-room workflows remain blocked.
+- The loopback fixture uses HTTP on `127.0.0.1`; local loopback is treated as a secure context for service-worker testing by WebKit, but this does not establish TLS/certificate or HTTPS authentication behavior.
+- Timing targets were approved and 30 AC samples met three measured proxy thresholds; 30 battery samples remain separate. Ten views were observed for over 600 seconds. Hidden windows, active desktop workload, host-specific private diagnostic attribution limits, cold-launch/energy/conferencing and durable recovery-state/in-flight crash gaps prevent a full performance acceptance claim. macOS 26 remains deferred and unverified.
+- The authorized runner captured MacBookAir10,1 and 8 GiB RAM. It confirmed external power for the timing repeat and zero valid signing identities. Developer ID/notarization and macOS 26 validation are scheduled for final release validation; they do not block current Phase 3 work. Method-controlled performance validation remains a separate dependency.
+
+## Current follow-up and final release validation
+
+1. Final release-validation stage: run the persistent/private harness on macOS 26.0 and latest supported 26.x, including cookies, localStorage, IndexedDB, Cache Storage/service workers, HTTP cache, session/auth state, concurrent views, relaunch, and deletion. This is user-deferred final validation rather than a current Phase 3 blocker. macOS 27.2 evidence does not validate the declared minimum OS.
+2. Determine whether OS-managed transient-data cleanup after the last private window closes can be observed; the app-container scan found no private marker in its persistent WebKit store directory.
+3. Retain JSON evidence for each OS run and repeat the same-URL HTTP-cache test.
+4. Validate the app-owned camera/microphone prompt, grants/revocation, remaining transfer metadata/destination/lifetime cases, find clear/stop/product UI, history, process recovery and future production transport; retain unsupported capabilities explicitly.
+5. Run the named target-site workflows with controlled test accounts and no live payment transactions.
+6. Complete controlled cold-launch, durable recovery-state/in-flight crashes, energy and approved account/conference measurements against the now-approved targets.
+7. Final release-validation stage: validate Developer ID code signing, notarization, Gatekeeper, selected entitlements, and distribution requirements per ADR 0002. Signing/notarization is deferred by user direction rather than a current Phase 3 blocker; release requirements still apply.
+8. Leave ADR 0001 Proposed until results are reviewed and the product owner explicitly approves the engine.

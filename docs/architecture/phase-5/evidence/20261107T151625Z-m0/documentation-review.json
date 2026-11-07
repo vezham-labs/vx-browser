@@ -1,0 +1,42 @@
+{
+  "currentHeadingWarnings": [],
+  "currentMissingTargets": [],
+  "documentsInventoried": 94,
+  "existingExceptionDisposition": "Pre-existing application-categories handbook reference is unchanged and outside Browser scope. Reported, not silently fixed.",
+  "formatCommandResult": {
+    "command": [
+      "pnpm",
+      "nx",
+      "format:check",
+      "--files=README.md,apps/browser-macos/README.md,apps/browser-macos/project.json,docs/README.md,docs/architecture/browser-distribution.md,docs/architecture/browser-engine-comparison.md,docs/architecture/browser-engine-contract.md,docs/architecture/browser-mvp-acceptance-criteria.md,docs/architecture/browser-platform-architecture.md,docs/architecture/browser-roadmap.md,docs/architecture/phase-3/archives/README.md,docs/architecture/phase-5/README.md,docs/architecture/phase-5/evidence/README.md,docs/architecture/phase-5/phase-5-implementation-plan.md,docs/architecture/phase-5/phase-5-scope-and-milestones.md,docs/architecture/phase-5/reports/M0/README.md,docs/architecture/phase-5/reports/M0/documentation-mapping-and-cleanup.md,docs/architecture/phase-5/reports/M0/m0-foundation-decisions.md,docs/architecture/phase-5/reports/README.md,docs/decisions/0002-browser-distribution-and-platform.md,docs/security/browser-security-acceptance-criteria.md,docs/security/browser-security-architecture.md,docs/security/browser-threat-model.md,vx/README.md,vx/handbooks/browser/README.md,vx/handbooks/browser/architecture/index.md,vx/handbooks/browser/decisions/index.md,vx/handbooks/browser/development/index.md,vx/handbooks/browser/distribution/index.md,vx/handbooks/browser/engineering/index.md,vx/handbooks/browser/operations/index.md,vx/handbooks/browser/overview/index.md,vx/handbooks/browser/security/index.md,vx/handbooks/browser/testing/index.md"
+    ],
+    "elapsedSeconds": 9.80593490600586,
+    "environmentOverrides": {
+      "NX_DAEMON": "false",
+      "NX_NO_CLOUD": "true"
+    },
+    "exitCode": 0,
+    "outputFile": "m0-scoped-format-check.log",
+    "startedAtUTC": "2026-11-07T15:49:28.796273+00:00",
+    "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser"
+  },
+  "formatter": "Repository Nx format with existing oxfmt config. Both oxfmt and Prettier configs exist; Nx warning retained. No config deleted or global repository format.",
+  "limitations": [
+    "Historical report statuses and prototype evidence were preserved, not reformatted or rerun.",
+    "A documentation-link pass is not product behavior, security, engine or release acceptance."
+  ],
+  "method": "Focused local Markdown relative-file/heading-link audit; ignores external URLs and fenced code. No external link/network validation.",
+  "provenanceVerification": "preservation-and-state-verification.json",
+  "recordedAtUTC": "2026-11-07T15:52:42.445774+00:00",
+  "relativeLinksChecked": 782,
+  "reproduce": "python3 docs/architecture/phase-5/evidence/20261107T151625Z-m0/verify-m0-review.py",
+  "retainedExistingHeadingWarnings": [],
+  "retainedExistingMissingTargets": [
+    {
+      "source": "vx/handbooks/application-categories.md",
+      "target": "../../packages/cli/react/src/utils/application-category.ts"
+    }
+  ],
+  "scopedFiles": "scoped-format-files.json",
+  "status": "passed for current scoped documentation"
+}

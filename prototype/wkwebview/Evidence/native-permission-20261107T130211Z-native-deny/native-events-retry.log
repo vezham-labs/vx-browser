@@ -1,0 +1,9 @@
+OS media status: camera=notDetermined; microphone=notDetermined
+OS media status: camera=notDetermined; microphone=authorized
+native permission prompt shown: camera and microphone from http://localhost:18765
+native permission prompt choice: allow
+native permission prompt decision: deny
+OS media status: camera=authorized; microphone=authorized
+native permission prompt shown: camera and microphone from http://localhost:18765
+native permission prompt choice: deny
+native permission prompt decision: deny

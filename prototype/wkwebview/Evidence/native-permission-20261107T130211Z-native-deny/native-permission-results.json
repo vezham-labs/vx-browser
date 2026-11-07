@@ -1,0 +1,46 @@
+{
+  "OSPermissionStatuses": [
+    "OS media status: camera=notDetermined; microphone=notDetermined",
+    "OS media status: camera=notDetermined; microphone=authorized",
+    "OS media status: camera=authorized; microphone=authorized"
+  ],
+  "authorization": "User explicitly approved temporary OS camera/microphone access for this disposable identity. Website grant path guarded to Deny; any unexpected stream is stopped without recording/upload.",
+  "bundleIdentifier": "internal.vezham.WKPrototype.NativePermission.1794056489.9266",
+  "failureCount": 1,
+  "failures": [
+    "Vezham prompt explicitly answered Deny"
+  ],
+  "hostOSVersion": "27.2",
+  "mode": "OS-allowed-native-denial",
+  "nativeEvents": [
+    "OS media status: camera=notDetermined; microphone=notDetermined",
+    "OS media status: camera=notDetermined; microphone=authorized",
+    "native permission prompt shown: camera and microphone from http://localhost:18765",
+    "native permission prompt choice: allow",
+    "native permission prompt decision: deny",
+    "OS media status: camera=authorized; microphone=authorized"
+  ],
+  "observedPageResult": {
+    "errorName": "NotAllowedError",
+    "status": "denied"
+  },
+  "status": "partially_verified",
+  "tests": [
+    {
+      "label": "website received NotAllowedError",
+      "passed": true
+    },
+    {
+      "label": "website received no media stream",
+      "passed": true
+    },
+    {
+      "label": "Vezham native permission prompt was reached",
+      "passed": true
+    },
+    {
+      "label": "Vezham prompt explicitly answered Deny",
+      "passed": false
+    }
+  ]
+}

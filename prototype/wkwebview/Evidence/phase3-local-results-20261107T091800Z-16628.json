@@ -1,0 +1,289 @@
+{
+  "deploymentTarget": "macOS 26.0",
+  "destinationArtifacts": [
+    {
+      "bytes": 29,
+      "name": "interrupted.bin"
+    },
+    {
+      "bytes": 21,
+      "name": "existing.txt"
+    }
+  ],
+  "failureCount": 2,
+  "failures": [
+    "redirect to privileged app scheme was blocked",
+    "incomplete download left no completed artifact"
+  ],
+  "fixtureObservations": {
+    "downloadRequests": [
+      "/duplicate",
+      "/interrupted"
+    ],
+    "events": [
+      {
+        "attemptCount": 100,
+        "bridgeAbsent": true,
+        "kind": "frame-result",
+        "parentReadDenied": true,
+        "reachable": 0,
+        "receivedMessages": 100,
+        "throws": 100
+      },
+      {
+        "AStorageAbsent": true,
+        "bridgeAbsent": true,
+        "kind": "redirect",
+        "origin": "http://127.0.0.1:18766"
+      },
+      {
+        "attemptCount": 100,
+        "bridgeAbsent": true,
+        "kind": "frame-result",
+        "parentReadDenied": true,
+        "reachable": 0,
+        "receivedMessages": 100,
+        "throws": 100
+      },
+      {
+        "AStorageAbsent": true,
+        "bridgeAbsent": true,
+        "kind": "popup",
+        "origin": "http://127.0.0.1:18766"
+      }
+    ],
+    "uploads": [
+      {
+        "files": [
+          {
+            "content": "odd synthetic\n",
+            "name": "..odd name;.txt",
+            "relativePath": "",
+            "size": 14
+          },
+          {
+            "content": "alpha synthetic\n",
+            "name": "alpha.txt",
+            "relativePath": "",
+            "size": 16
+          }
+        ],
+        "kind": "multiple"
+      },
+      {
+        "files": [
+          {
+            "content": "folder synthetic\n",
+            "name": "child.txt",
+            "relativePath": "fixture-folder/child.txt",
+            "size": 17
+          },
+          {
+            "content": "nested synthetic\n",
+            "name": "leaf.txt",
+            "relativePath": "fixture-folder/nested/leaf.txt",
+            "size": 17
+          }
+        ],
+        "kind": "directory"
+      }
+    ]
+  },
+  "hostOSVersion": "27.2",
+  "mode": "phase3-local",
+  "nativeEvents": [
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "",
+      "path": "/phase3",
+      "profile": "Private \u2022 E073E6D2",
+      "store": "ObjectIdentifier(0x0000007a734a0780)"
+    },
+    {
+      "currentPath": "/phase3",
+      "event": "navigation-blocked",
+      "mainFrame": false,
+      "scheme": "vezham-ui"
+    },
+    {
+      "directoriesAllowed": false,
+      "event": "upload-selected",
+      "fileCount": 2
+    },
+    {
+      "directoriesAllowed": true,
+      "event": "upload-selected",
+      "fileCount": 1
+    },
+    {
+      "downloadID": "ObjectIdentifier(0x0000007a7247f480)",
+      "event": "download-cancelled",
+      "suggestedName": "existing.txt"
+    },
+    {
+      "code": -999,
+      "domain": "NSURLErrorDomain",
+      "downloadID": "ObjectIdentifier(0x0000007a7247f480)",
+      "event": "download-error"
+    },
+    {
+      "downloadID": "ObjectIdentifier(0x0000007a7247f480)",
+      "event": "download-selected",
+      "selectedBasename": "interrupted.bin",
+      "suggestedName": "interrupted.bin"
+    },
+    {
+      "code": -1005,
+      "domain": "NSURLErrorDomain",
+      "downloadID": "ObjectIdentifier(0x0000007a7247f480)",
+      "event": "download-error"
+    },
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "redirect",
+      "path": "/cross-result",
+      "profile": "Private \u2022 E073E6D2",
+      "store": "ObjectIdentifier(0x0000007a734a0780)"
+    },
+    {
+      "currentPath": "",
+      "event": "navigation-blocked",
+      "mainFrame": true,
+      "scheme": "vezham-ui"
+    },
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "",
+      "path": "/phase3",
+      "profile": "Private \u2022 E073E6D2",
+      "store": "ObjectIdentifier(0x0000007a734a0780)"
+    },
+    {
+      "currentPath": "/phase3",
+      "event": "navigation-blocked",
+      "mainFrame": false,
+      "scheme": "vezham-ui"
+    },
+    {
+      "event": "popup-opened",
+      "profile": "Private \u2022 E073E6D2",
+      "store": "ObjectIdentifier(0x0000007a734a0780)"
+    },
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "popup",
+      "path": "/cross-result",
+      "profile": "Private \u2022 E073E6D2",
+      "store": "ObjectIdentifier(0x0000007a734a0780)"
+    }
+  ],
+  "runID": "20261107T091800Z-16628",
+  "scope": "Two loopback HTTP origins; no production UI/native transport exists. No actual validator-rejection claim for unreachable bridge attempts.",
+  "status": "failed",
+  "tests": [
+    {
+      "label": "cross-origin frame could not read parent DOM",
+      "passed": true
+    },
+    {
+      "label": "100 malformed and forged native-channel attempts executed",
+      "passed": true
+    },
+    {
+      "label": "no native channel was reachable in 100 attempts",
+      "passed": true
+    },
+    {
+      "label": "100 untrusted frame messages arrived without native dispatch",
+      "passed": true
+    },
+    {
+      "label": "privileged-scheme frame navigation was blocked",
+      "passed": true
+    },
+    {
+      "label": "cross-origin redirect loaded second origin",
+      "passed": true
+    },
+    {
+      "label": "cross-origin redirect could not read origin A localStorage",
+      "passed": true
+    },
+    {
+      "label": "cross-origin redirect had no native page bridge",
+      "passed": true
+    },
+    {
+      "label": "cross-origin popup loaded second origin",
+      "passed": true
+    },
+    {
+      "label": "cross-origin popup could not read origin A localStorage",
+      "passed": true
+    },
+    {
+      "label": "cross-origin popup had no native page bridge",
+      "passed": true
+    },
+    {
+      "label": "cross-origin popup retained native private data store",
+      "passed": true
+    },
+    {
+      "label": "cross-origin popup retained private-session label",
+      "passed": true
+    },
+    {
+      "label": "redirect to privileged app scheme was blocked",
+      "passed": false
+    },
+    {
+      "label": "multiple upload disclosed exactly the two chosen basenames",
+      "passed": true
+    },
+    {
+      "label": "multiple upload contents matched the synthetic files",
+      "passed": true
+    },
+    {
+      "label": "directory upload enumerated exactly the selected tree",
+      "passed": true
+    },
+    {
+      "label": "directory upload contents matched selected tree",
+      "passed": true
+    },
+    {
+      "label": "native picker reported both multi-file and directory selections",
+      "passed": true
+    },
+    {
+      "label": "no extra upload payloads were received",
+      "passed": true
+    },
+    {
+      "label": "duplicate-name save was cancelled",
+      "passed": true
+    },
+    {
+      "label": "original duplicate-name file was unchanged",
+      "passed": true
+    },
+    {
+      "label": "interrupted download used selected test filename",
+      "passed": true
+    },
+    {
+      "label": "interrupted download surfaced a network error",
+      "passed": true
+    },
+    {
+      "label": "interrupted download was not reported as finished",
+      "passed": true
+    },
+    {
+      "label": "incomplete download left no completed artifact",
+      "passed": false
+    }
+  ]
+}

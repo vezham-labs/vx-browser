@@ -1,0 +1,202 @@
+Scope: all 2 workspace projects
+✓ Lockfile passes supply-chain policies (verified 3d ago)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/vigneshwaranbhoj/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 188, reused 188, downloaded 0, added 173
+Progress: resolved 310, reused 310, downloaded 0, added 295
+Progress: resolved 425, reused 425, downloaded 0, added 410
+Progress: resolved 502, reused 502, downloaded 0, added 487
+Progress: resolved 581, reused 581, downloaded 0, added 566
+Progress: resolved 679, reused 679, downloaded 0, added 664
+Progress: resolved 793, reused 793, downloaded 0, added 778
+Progress: resolved 904, reused 904, downloaded 0, added 889
+Progress: resolved 939, reused 939, downloaded 0, added 924
+Progress: resolved 941, reused 941, downloaded 0, added 926
+Progress: resolved 953, reused 953, downloaded 0, added 938
+Progress: resolved 959, reused 959, downloaded 0, added 944
+Progress: resolved 965, reused 965, downloaded 0, added 950
+Progress: resolved 982, reused 982, downloaded 0, added 967
+Progress: resolved 1020, reused 1020, downloaded 0, added 1005
+Progress: resolved 1109, reused 1109, downloaded 0, added 1094
+Progress: resolved 1148, reused 1148, downloaded 0, added 1134
+Progress: resolved 1229, reused 1229, downloaded 0, added 1214
+Progress: resolved 1313, reused 1313, downloaded 0, added 1299
+Progress: resolved 1402, reused 1402, downloaded 0, added 1389
+Progress: resolved 1483, reused 1483, downloaded 0, added 1470
+Progress: resolved 1579, reused 1579, downloaded 0, added 1567
+Progress: resolved 1653, reused 1653, downloaded 0, added 1642
+Progress: resolved 1704, reused 1704, downloaded 0, added 1692
+Progress: resolved 1757, reused 1757, downloaded 0, added 1741
+Progress: resolved 1864, reused 1864, downloaded 0, added 1847
+Progress: resolved 1949, reused 1949, downloaded 0, added 1935
+Progress: resolved 2037, reused 2037, downloaded 0, added 2021
+Progress: resolved 2101, reused 2101, downloaded 0, added 2086
+Progress: resolved 2117, reused 2117, downloaded 0, added 2108
+Progress: resolved 2118, reused 2118, downloaded 0, added 2110
+Progress: resolved 2118, reused 2118, downloaded 0, added 2111
+Progress: resolved 2119, reused 2119, downloaded 0, added 2114
+Progress: resolved 2119, reused 2119, downloaded 0, added 2118
+Downloading maplibre-gl@6.15.0: 0.00 B/6.16 MB
+Downloading @oxlint/binding-darwin-arm64@1.89.0: 0.00 B/5.54 MB
+Downloading maplibre-gl@6.15.0: 4.96 MB/6.16 MB
+Progress: resolved 2197, reused 2119, downloaded 47, added 2151
+Progress: resolved 2197, reused 2119, downloaded 64, added 2176
+Progress: resolved 2197, reused 2119, downloaded 64, added 2183
+Progress: resolved 2197, reused 2119, downloaded 78, added 2188
+Progress: resolved 2197, reused 2119, downloaded 78, added 2197
+Packages: +2197
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 2197, reused 2119, downloaded 78, added 2197, done
+Agent skills awaiting approval: @tanstack/react-start, @tanstack/router-plugin, fallow.
+Run "pnpm approve" to review them.
+
+dependencies:
++ @fontsource/inter 5.3.0
++ @fontsource/jura 5.3.0
++ @heroui/react 3.2.6
++ @heroui/styles 3.2.6
++ @internationalized/date 3.12.4
++ @number-flow/react 0.6.2
++ @react-aria/utils 3.34.1
++ @tiptap/core 3.32.0
++ @tiptap/extension-link 3.32.0
++ @tiptap/extension-underline 3.32.0
++ @tiptap/extensions 3.32.0
++ @tiptap/pm 3.32.0
++ @tiptap/react 3.32.0
++ @tiptap/starter-kit 3.32.0
++ @tiptap/suggestion 3.32.0
++ @vercel/og 0.8.6
++ @vezham/devtools 26.0.2
++ @vezham/docs-core <- @vx-oss/docs-core 1.0.17
++ @vezham/docs-mdx <- @vx-oss/docs-mdx 1.0.17
++ @vezham/docs-openapi <- @vx-oss/docs-openapi 1.0.17
++ @vezham/docs-react <- @vx-oss/docs-base-ui 1.0.17
++ @vezham/docs-story <- @vx-oss/docs-story 1.0.17
++ @vezham/env 26.0.2
++ @vezham/react 26.0.2
++ @vezham/react-pro-v3 <- @heroui-pro/react 1.0.0-beta.10
++ @vezham/react-v3 <- @heroui/react 3.2.6
++ @vezham/start 26.0.2
++ @vezham/styles-v3 <- @heroui/styles 3.2.6
++ @vezham/template 26.0.2
++ @vezham/utils 26.0.2
++ embla-carousel 8.6.0
++ embla-carousel-react 8.6.0
++ framer-motion 12.43.0
++ maplibre-gl 6.15.0
++ marked 18.1.1
++ motion 12.43.0
++ react 19.2.7
++ react-aria 3.52.1
++ react-aria-components 1.21.1
++ react-dom 19.2.7
++ react-markdown 10.1.0
++ react-resizable-panels 4.14.8
++ react-stately 3.51.0
++ recharts 3.10.1
++ remark-breaks 4.0.0
++ remark-gfm 4.0.1
++ shiki 4.5.0
++ streamdown 2.7.1
++ tailwind-merge 3.7.0
++ yaml 2.9.1
+
+devDependencies:
++ @commitlint/cli 21.2.4
++ @commitlint/config-conventional 21.2.4
++ @eslint/js 9.39.5
++ @next/eslint-plugin-next 16.4.1
++ @nx/devkit 24.0.2
++ @nx/eslint 24.0.2
++ @nx/eslint-plugin 24.0.2
++ @nx/js 24.0.2
++ @nx/next 24.0.2
++ @nx/oxlint 24.0.2
++ @nx/playwright 24.0.2
++ @nx/plugin 24.0.2
++ @nx/react 24.0.2
++ @nx/vite 24.0.2
++ @nx/vitest 24.0.2
++ @nx/web 24.0.2
++ @nx/workspace 24.0.2
++ @playwright/test 1.64.1
++ @swc-node/register 1.11.1
++ @swc/cli 0.8.1
++ @swc/core 1.15.41
++ @swc/helpers 0.5.23
++ @tailwindcss/postcss 4.3.0
++ @tailwindcss/vite 4.3.3
++ @tanstack/eslint-plugin-query 5.104.5
++ @tanstack/react-devtools 0.10.13
++ @tanstack/react-query 5.104.5
++ @tanstack/react-query-devtools 5.104.5
++ @tanstack/react-router 1.170.41
++ @tanstack/react-router-devtools 1.167.2
++ @tanstack/react-start 1.168.60
++ @tanstack/router-cli 1.167.25
++ @tanstack/router-plugin 1.168.34
++ @testing-library/dom 10.4.1
++ @testing-library/jest-dom 6.9.1
++ @testing-library/react 16.3.2
++ @trivago/prettier-plugin-sort-imports 6.0.2
++ @types/node 25.9.3
++ @types/react 19.2.17
++ @types/react-dom 19.2.3
++ @types/yargs 17.0.35
++ @vezham/config 26.0.2
++ @vezham/icons-react 1.0.7
++ @vezham/react-v2 <- @vx-oss/heroui-v2-react 2.9.0-beta.1
++ @vezham/use-logger 0.3.3
++ @vitejs/plugin-react 6.1.2
++ @vitest/coverage-v8 5.0.5
++ @vitest/ui 5.0.5
++ @vx-cli/react 26.0.3
++ axios 1.20.0
++ c8 12.0.0
++ commitlint-plugin-function-rules 5.0.1
++ eslint 9.39.5
++ eslint-config-prettier 10.1.8
++ eslint-plugin-import 2.32.0
++ eslint-plugin-jsx-a11y 6.10.2
++ eslint-plugin-playwright 2.12.1
++ eslint-plugin-react 7.37.5
++ eslint-plugin-react-hooks 7.1.1
++ eslint-plugin-unused-imports 4.4.1
++ fallow 3.37.0
++ hostile 1.4.0
++ husky 9.1.7
++ jiti 2.7.0
++ jsdom 29.1.1
++ jsonc-eslint-parser 3.3.0
++ lint-staged 17.6.0
++ next 16.4.2
++ nitro <- nitro-nightly 3.0.1-20261023-052727-7e9a0481
++ nx 24.0.2
++ oxfmt 0.72.0
++ oxlint 1.89.0
++ prettier 3.9.10
++ prettier-plugin-tailwindcss 0.8.1
++ react-doctor 0.9.14
++ sort-package-json 4.1.0
++ stylelint 17.16.0
++ stylelint-config-recommended 18.0.0
++ stylelint-config-standard 40.0.0
++ stylelint-prettier 5.0.3
++ tailwind-variants 3.3.1
++ tailwindcss 4.3.0
++ tslib 2.8.1
++ tsx 4.23.15
++ typescript 6.0.3
++ typescript-eslint 8.72.0
++ verdaccio 6.7.2
++ vite 8.1.6
++ vite-plugin-dts 4.5.4
++ vitest 5.0.5
++ yaml-eslint-parser 2.1.0
++ yargs 17.7.3
+
+Done in 54.7s using pnpm v12.14.0

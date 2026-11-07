@@ -1,0 +1,19 @@
+
+> nx run browser-macos:launch
+
+> python3 apps/browser-macos/Tools/native_host.py launch
+
+
+
+
+ NX   Successfully ran target launch for project browser-macos
+
+
+  Run duration:      1m 49s
+  Cache:             0/1 hit (0%)
+  Critical path:     1m 49s (1 task)
+  Recoverable time:  <1ms
+
+  Recommendations:
+    - Speed up or split the longest tasks on the critical path:
+        browser-macos:launch    1m 49s

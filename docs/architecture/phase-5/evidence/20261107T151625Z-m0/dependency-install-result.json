@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pnpm",
+    "install",
+    "--frozen-lockfile",
+    "--ignore-scripts",
+    "--reporter=append-only"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 55.801472187042236,
+  "method": "Frozen lockfile; lifecycle scripts disabled. No root dependency/version changes requested."
+}

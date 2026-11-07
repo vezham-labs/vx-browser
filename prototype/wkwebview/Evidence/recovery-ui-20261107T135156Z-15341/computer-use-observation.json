@@ -1,0 +1,34 @@
+{
+  "actions": [
+    {
+      "AXIndexAtAction": 3,
+      "control": "native toolbar Reload",
+      "role": "A"
+    },
+    {
+      "AXIndexAtAction": 3,
+      "control": "native toolbar Reload",
+      "role": "B"
+    },
+    {
+      "AXIndexAtAction": 3,
+      "control": "native toolbar Reload",
+      "role": "Private"
+    }
+  ],
+  "finalAppInventory": "Disposable test app absent after normal harness shutdown",
+  "method": "Codex native computer-use accessibility observations; actual Reload buttons clicked.",
+  "normalSignedEntitlementsVerified": {
+    "com.apple.security.app-sandbox": true,
+    "com.apple.security.files.user-selected.read-write": true,
+    "com.apple.security.network.client": true
+  },
+  "postActionVerification": "Native harness verified Loaded state, new document IDs, last committed URLs and per-profile synthetic storage after each click. AX state immediately after clicks was stale; restored DOM claims come from native harness evidence.",
+  "recoveryMessageObserved": "Web content stopped \u2014 use Reload to recover",
+  "runID": "20261107T135156Z-15341",
+  "windowsObserved": [
+    "Vezham Recovery Test \u2014 A",
+    "Vezham Recovery Test \u2014 B",
+    "Vezham Recovery Test \u2014 Private"
+  ]
+}

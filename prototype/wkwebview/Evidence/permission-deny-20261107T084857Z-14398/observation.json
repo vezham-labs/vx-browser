@@ -1,0 +1,40 @@
+{
+  "runID": "20261107T084857Z-14398",
+  "hostOSVersion": "27.2",
+  "request": "combined audio:true,video:true on http://localhost:18765/permission-fixture",
+  "visualEvidence": [
+    {
+      "file": "microphone-prompt.png",
+      "source": "user-supplied screenshot",
+      "observed": "macOS microphone access prompt for VezhamWKPrototype with temporary Phase 3 purpose text and Don’t Allow/Allow buttons"
+    },
+    {
+      "file": "camera-prompt.png",
+      "source": "user-supplied screenshot",
+      "observed": "macOS camera access prompt for VezhamWKPrototype with temporary Phase 3 purpose text and Don’t Allow/Allow buttons"
+    }
+  ],
+  "userReportedObservation": "User confirmed choosing Don’t Allow in the preceding run and supplied both prompt screenshots after the capture retry.",
+  "automatedObservation": {
+    "pageResult": {
+      "errorName": "NotAllowedError",
+      "status": "denied"
+    },
+    "appPromptEvents": [],
+    "passedChecks": 2,
+    "totalChecks": 4
+  },
+  "conclusion": "Both macOS system permission prompts surfaced. The combined media request was denied and returned no stream. The app-owned WKUIDelegate prompt was not recorded.",
+  "remaining": [
+    "app-owned prompt and explicit Deny decision",
+    "allow-once and revocation",
+    "independent camera-only and microphone-only requests",
+    "macOS 26 runtime coverage"
+  ],
+  "normalAppEntitlementsChanged": false,
+  "filesSHA256": {
+    "result.json": "1820929a56fbc4b59a988bf4d2471dd7f502da761fa378908e680827df0e6492",
+    "microphone-prompt.png": "ccf0f6e0913269b5b7bc647382e3f04f8f943ba5160687fa2de353a088d23cba",
+    "camera-prompt.png": "b2efcedf1195b458fedd8c10a27db33f2f90ba82eea0edcee5874f4ef6541a6c"
+  }
+}

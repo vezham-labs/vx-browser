@@ -1,0 +1,16 @@
+{
+  "error" : null,
+  "hostOSVersion" : "Version 27.2 (Build 26B123)",
+  "method" : "Fresh app process, hidden AppKit host window; WebKit plus first view to ready; warm view constructor; same-origin Navigation Timing for exact 1 MB HTTP fixture. OS caches are not flushed.",
+  "metrics" : {
+    "encodedBodyBytes" : 1048576,
+    "engineFirstViewReadyMs" : 219.69729167176411,
+    "localPageDOMReadyMs" : 15,
+    "localPageNativeLoadMs" : 421.42112499277573,
+    "processEntryToReadyMs" : 388.19399999920279,
+    "warmEmptyViewConstructorMs" : 7.4849999946309254
+  },
+  "mode" : "performance-sample",
+  "runID" : "20261107T094114Z-22381-sample-12",
+  "status" : "observed"
+}

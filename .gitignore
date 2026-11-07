@@ -209,3 +209,7 @@ firebase-debug.*.log*
 .claude/worktrees
 .claude/settings.local.json
 .vitest
+
+# Browser review evidence is versioned; build/cache output stays ignored.
+!prototype/wkwebview/Evidence/**/*.log
+!docs/architecture/phase-5/evidence/**/*.log

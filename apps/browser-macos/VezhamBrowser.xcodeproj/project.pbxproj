@@ -1,0 +1,34 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+        A00000000000000000000001 = {isa = PBXBuildFile; fileRef = B00000000000000000000001; };
+        A00000000000000000000002 = {isa = PBXBuildFile; fileRef = B00000000000000000000002; };
+        A00000000000000000000003 = {isa = PBXBuildFile; fileRef = B00000000000000000000003; };
+        B00000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/ApplicationMain.swift; sourceTree = "<group>"; };
+        B00000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Host/ApplicationDelegate.swift; sourceTree = "<group>"; };
+        B00000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Host/MainWindowController.swift; sourceTree = "<group>"; };
+        B00000000000000000000004 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VezhamBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        B00000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config/Debug.xcconfig; sourceTree = "<group>"; };
+        B00000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config/Release.xcconfig; sourceTree = "<group>"; };
+        B00000000000000000000007 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config/Base.xcconfig; sourceTree = "<group>"; };
+        B00000000000000000000008 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config/Info.plist; sourceTree = "<group>"; };
+        B00000000000000000000009 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Config/VezhamBrowser.entitlements; sourceTree = "<group>"; };
+        C00000000000000000000001 = {isa = PBXGroup; children = (B00000000000000000000001,B00000000000000000000002,B00000000000000000000003,B00000000000000000000005,B00000000000000000000006,B00000000000000000000007,B00000000000000000000008,B00000000000000000000009,C00000000000000000000002,); sourceTree = "<group>"; };
+        C00000000000000000000002 = {isa = PBXGroup; children = (B00000000000000000000004,); name = Products; sourceTree = "<group>"; };
+        D00000000000000000000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000001,A00000000000000000000002,A00000000000000000000003,); runOnlyForDeploymentPostprocessing = 0; };
+        D00000000000000000000002 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+        D00000000000000000000003 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+        E00000000000000000000001 = {isa = PBXNativeTarget; buildConfigurationList = F00000000000000000000002; buildPhases = (D00000000000000000000001,D00000000000000000000002,D00000000000000000000003,); buildRules = (); dependencies = (); name = VezhamBrowser; productName = VezhamBrowser; productReference = B00000000000000000000004; productType = "com.apple.product-type.application"; };
+        E00000000000000000000002 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 2700; }; buildConfigurationList = F00000000000000000000001; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base,); mainGroup = C00000000000000000000001; productRefGroup = C00000000000000000000002; projectDirPath = ""; projectRoot = ""; targets = (E00000000000000000000001,); };
+        F00000000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (F00000000000000000000003,F00000000000000000000004,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        F00000000000000000000002 = {isa = XCConfigurationList; buildConfigurations = (F00000000000000000000005,F00000000000000000000006,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        F00000000000000000000003 = {isa = XCBuildConfiguration; buildSettings = {}; name = Debug; };
+        F00000000000000000000004 = {isa = XCBuildConfiguration; buildSettings = {}; name = Release; };
+        F00000000000000000000005 = {isa = XCBuildConfiguration; baseConfigurationReference = B00000000000000000000005; buildSettings = {}; name = Debug; };
+        F00000000000000000000006 = {isa = XCBuildConfiguration; baseConfigurationReference = B00000000000000000000006; buildSettings = {}; name = Release; };
+    };
+    rootObject = E00000000000000000000002;
+}

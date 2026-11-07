@@ -1,0 +1,15 @@
+{
+  "filesScanned": 40,
+  "positiveControlMarkerHits": {
+    "A": [
+      "a12a0000-0000-4000-8000-000000000001/Origins/8GIHNXVBqUag3sL3E-5heDPIdZfMxRwDphNdwC7UX5c/8GIHNXVBqUag3sL3E-5heDPIdZfMxRwDphNdwC7UX5c/LocalStorage/localstorage.sqlite3"
+    ],
+    "B": [
+      "b12b0000-0000-4000-8000-000000000002/Origins/alwXSy5wFv2JMBzUal3fyGqvpqfTNsARFiE4aUqNiPM/alwXSy5wFv2JMBzUal3fyGqvpqfTNsARFiE4aUqNiPM/LocalStorage/localstorage.sqlite3"
+    ]
+  },
+  "privateMarkerHits": [],
+  "runID": "20261107T135156Z-15341",
+  "scope": "Only this disposable app Library/WebKit/WebsiteDataStore after exit. Checks UTF-8/UTF-16 synthetic markers; excludes app-owned test evidence, OS-managed data and other directories.",
+  "status": "bounded-scan-clear"
+}

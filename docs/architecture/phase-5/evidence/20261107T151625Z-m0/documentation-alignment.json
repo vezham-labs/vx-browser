@@ -1,0 +1,20 @@
+{
+  "alignedFiles": [
+    "docs/architecture/browser-platform-architecture.md",
+    "docs/architecture/browser-mvp-acceptance-criteria.md",
+    "docs/architecture/browser-engine-contract.md",
+    "docs/architecture/browser-engine-comparison.md",
+    "docs/architecture/browser-distribution.md",
+    "docs/architecture/browser-roadmap.md",
+    "docs/security/browser-security-architecture.md",
+    "docs/security/browser-threat-model.md",
+    "docs/security/browser-security-acceptance-criteria.md",
+    "docs/decisions/0002-browser-distribution-and-platform.md",
+    "docs/architecture/phase-5/README.md",
+    "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+    "docs/architecture/phase-5/phase-5-implementation-plan.md"
+  ],
+  "authority": "docs/architecture/phase-3/owner-approval-decision.md and ADR 0001 Stage A/B/C",
+  "statusChanges": "No ADR lifecycle or acceptance checklist status changed. ADR 0001 unchanged; ADR 0002 retains Accepted with a current-context clarification. Phase 3 files/source/evidence kept byte-identical.",
+  "canonicalRepository": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser"
+}

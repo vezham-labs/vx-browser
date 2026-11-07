@@ -1,0 +1,10 @@
+{
+  "engineProcessAttribution" : "unavailable; RSS target requires host plus attributable engine processes",
+  "error" : null,
+  "hostPID" : 10925,
+  "idleSeconds" : 630.01239033333241,
+  "loadedViewCount" : 10,
+  "mode" : "ten-idle-views",
+  "runID" : "20261107T131200Z-10810",
+  "status" : "observed"
+}

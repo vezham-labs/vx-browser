@@ -1,0 +1,229 @@
+{
+  "samples": [
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 672256,
+      "elapsedSeconds": 0.3375941659905948,
+      "hostPSAverageCPUPercent": 9.3,
+      "hostRSSKiB": 92320
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 188864,
+      "elapsedSeconds": 20.415804125004797,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 65504
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 86128,
+      "elapsedSeconds": 40.49680983299913,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 57392
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 70096,
+      "elapsedSeconds": 60.5707610410027,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 53936
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 68912,
+      "elapsedSeconds": 80.64805974999035,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 53936
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 68912,
+      "elapsedSeconds": 100.71752433299844,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 53936
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58592,
+      "elapsedSeconds": 120.78626129099575,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52048
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58576,
+      "elapsedSeconds": 140.8574186659971,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52048
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58368,
+      "elapsedSeconds": 160.92896770799416,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 51984
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58400,
+      "elapsedSeconds": 181.00789954100037,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52000
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58592,
+      "elapsedSeconds": 201.08088433300145,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52000
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58416,
+      "elapsedSeconds": 221.1474557909969,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52000
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58592,
+      "elapsedSeconds": 241.21600445799413,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52000
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58592,
+      "elapsedSeconds": 261.28858179099916,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52000
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 58384,
+      "elapsedSeconds": 281.37255674999324,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 52000
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 27120,
+      "elapsedSeconds": 301.8188672499964,
+      "hostPSAverageCPUPercent": 3.7,
+      "hostRSSKiB": 28400
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 22160,
+      "elapsedSeconds": 321.89357924999786,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 19632
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 25216,
+      "elapsedSeconds": 341.96777204099635,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 23472
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 22128,
+      "elapsedSeconds": 362.0360992499918,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 19792
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 22000,
+      "elapsedSeconds": 382.10220445800223,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 18560
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21792,
+      "elapsedSeconds": 402.1768264580023,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 18336
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21984,
+      "elapsedSeconds": 422.2490664999932,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 18352
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21888,
+      "elapsedSeconds": 442.30836891599756,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 18352
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21584,
+      "elapsedSeconds": 462.3801101249992,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 18336
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21872,
+      "elapsedSeconds": 482.45351174999087,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 17904
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21568,
+      "elapsedSeconds": 502.51210866599286,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 20608
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21952,
+      "elapsedSeconds": 522.5837154579931,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 20400
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21744,
+      "elapsedSeconds": 542.6668600410048,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 19504
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21952,
+      "elapsedSeconds": 562.7340198750026,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 19504
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21760,
+      "elapsedSeconds": 582.789869500004,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 17824
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 22960,
+      "elapsedSeconds": 602.8599679579929,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 17728
+    },
+    {
+      "allWebKitProcessCount": 12,
+      "allWebKitProcessesRSSKiBUpperBound": 21760,
+      "elapsedSeconds": 622.9226349579985,
+      "hostPSAverageCPUPercent": 0.0,
+      "hostRSSKiB": 21264
+    }
+  ],
+  "scope": "Host RSS plus an upper-bound sum of every running WebKit process. Engine ownership cannot be established. ps CPU is a cumulative process average, not a full energy measurement."
+}

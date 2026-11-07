@@ -1,0 +1,22 @@
+{
+  "byteCount": 34,
+  "failureCount": 0,
+  "failures": [],
+  "filename": "_.._synthetic-download.bin",
+  "mode": "download-panel",
+  "status": "passed",
+  "tests": [
+    {
+      "label": "native save panel selected a destination inside the isolated folder",
+      "passed": true
+    },
+    {
+      "label": "download filename remained a safe basename",
+      "passed": true
+    },
+    {
+      "label": "downloaded bytes match the loopback fixture",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "failureCount" : 0,
+  "failures" : [
+
+  ],
+  "mode" : "private-windows",
+  "status" : "passed",
+  "tests" : [
+    {
+      "label" : "private windows initially share the manager store",
+      "passed" : true
+    },
+    {
+      "label" : "closing one window retains the shared session",
+      "passed" : true
+    },
+    {
+      "label" : "closing the last window replaces the private session",
+      "passed" : true
+    }
+  ]
+}

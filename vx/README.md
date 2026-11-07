@@ -33,6 +33,8 @@ See [Code Review](./handbooks/coding-standards/review.md) for review and fix com
 
 ## Handbooks
 
+- [Vezham Browser](./handbooks/browser/README.md)
+
 - [Local Development](./handbooks/local-development.md)
 - [Vx Config](./handbooks/vx-config.md)
 - [Application Categories](./handbooks/application-categories.md)

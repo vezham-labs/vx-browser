@@ -1,0 +1,12 @@
+{
+  "resultSHA256": "8d72ecad9455f1e503dde7e8085b5be641ededb2e2da7e216e15199d95c979d7",
+  "runID": "20261107T090509Z-15825",
+  "sourceSHA256": {
+    "Fixtures/interaction_server.py": "6b646e0f0e463b9722a70493a0ae0e8f330d03d6be9b8fd589f03db4ed56df35",
+    "Sources/LocalInteractionProbe.swift": "21ae4ae39925fad7f0c2b7a4c790c7cfa049f114a4270f24fa614f76f1e6f0b9",
+    "Sources/NavigationPolicy.swift": "f0eda048dc9b305210a3a28bf3e10ad8c90e1fa2f3d91b70ba1762b267666149",
+    "Sources/main.swift": "340741cc9cd6337d807faa07f1a63f65b61ca232b28ba65612d106c701679e4e",
+    "build.sh": "7b59215a2045a37a698c11a684427b62343d56c460ce5002eede812db2e9a024",
+    "run-local-interactions.sh": "e4e07187ab6b9376f527c27ad33bfd2dff9f6f7dd25b3846fa722ff5b7940f99"
+  }
+}

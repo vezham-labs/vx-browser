@@ -1,0 +1,25 @@
+Executable=/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser
+Identifier=internal.vezham.browser.foundation
+Format=app bundle with Mach-O universal (x86_64 arm64)
+CodeDirectory v=20400 size=603 flags=0x2(adhoc) hashes=8+7 location=embedded
+VersionPlatform=1
+VersionMin=1703936
+VersionSDK=1769984
+Hash type=sha256 size=32
+CandidateCDHash sha256=530e98f438763068e0b22b2718244d1b9b294834
+CandidateCDHashFull sha256=530e98f438763068e0b22b2718244d1b9b29483401b9e9de54b34616e5520ac9
+Hash choices=sha256
+CMSDigest=530e98f438763068e0b22b2718244d1b9b29483401b9e9de54b34616e5520ac9
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=49152
+Executable Segment flags=0x1
+Page size=16384
+CDHash=530e98f438763068e0b22b2718244d1b9b294834
+Signature=adhoc
+Info.plist entries=21
+TeamIdentifier=not set
+Sealed Resources version=2 rules=13 files=0
+Internal requirements count=0 size=12
+Total signatures=1
+Chosen signature=1

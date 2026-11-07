@@ -1,0 +1,211 @@
+{
+  "failureCount": 0,
+  "failures": [],
+  "hostOSVersion": "Version 27.2 (Build 26B123)",
+  "recoveredRoles": [
+    "A",
+    "B",
+    "Private"
+  ],
+  "runID": "20261107T135156Z-15341",
+  "scope": "Actual prototype windows/toolbar; three targeted content terminations; native test-only callback injection. Synthetic storage only; no durable product history or host-crash restoration claim.",
+  "status": "passed",
+  "tests": [
+    {
+      "label": "A: test marker seeded",
+      "passed": true
+    },
+    {
+      "label": "B: test marker seeded",
+      "passed": true
+    },
+    {
+      "label": "Private: test marker seeded",
+      "passed": true
+    },
+    {
+      "label": "A: initial synthetic storage is profile-scoped",
+      "passed": true
+    },
+    {
+      "label": "B: initial synthetic storage is profile-scoped",
+      "passed": true
+    },
+    {
+      "label": "Private: initial synthetic storage is profile-scoped",
+      "passed": true
+    },
+    {
+      "label": "A: host alive and actual window visible",
+      "passed": true
+    },
+    {
+      "label": "A: native recovery message appears",
+      "passed": true
+    },
+    {
+      "label": "A: stale start/commit/finish/failure callbacks cannot clear recovery",
+      "passed": true
+    },
+    {
+      "label": "B: unaffected after crash, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "Private: unaffected after crash, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "A: no automatic reload before toolbar action",
+      "passed": true
+    },
+    {
+      "label": "A: toolbar Reload command observed",
+      "passed": true
+    },
+    {
+      "label": "A: last committed URL restored",
+      "passed": true
+    },
+    {
+      "label": "A: reloaded document has a new identity",
+      "passed": true
+    },
+    {
+      "label": "A: own storage survives, other profile markers absent",
+      "passed": true
+    },
+    {
+      "label": "A: retired callbacks stay rejected after reload",
+      "passed": true
+    },
+    {
+      "label": "B: unaffected after reload, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "Private: unaffected after reload, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "A: foreign view callbacks cannot mutate this window",
+      "passed": true
+    },
+    {
+      "label": "B: host alive and actual window visible",
+      "passed": true
+    },
+    {
+      "label": "B: native recovery message appears",
+      "passed": true
+    },
+    {
+      "label": "B: stale start/commit/finish/failure callbacks cannot clear recovery",
+      "passed": true
+    },
+    {
+      "label": "A: unaffected after crash, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "Private: unaffected after crash, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "B: no automatic reload before toolbar action",
+      "passed": true
+    },
+    {
+      "label": "B: toolbar Reload command observed",
+      "passed": true
+    },
+    {
+      "label": "B: last committed URL restored",
+      "passed": true
+    },
+    {
+      "label": "B: reloaded document has a new identity",
+      "passed": true
+    },
+    {
+      "label": "B: own storage survives, other profile markers absent",
+      "passed": true
+    },
+    {
+      "label": "B: retired callbacks stay rejected after reload",
+      "passed": true
+    },
+    {
+      "label": "A: unaffected after reload, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "Private: unaffected after reload, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "B: foreign view callbacks cannot mutate this window",
+      "passed": true
+    },
+    {
+      "label": "Private: host alive and actual window visible",
+      "passed": true
+    },
+    {
+      "label": "Private: native recovery message appears",
+      "passed": true
+    },
+    {
+      "label": "Private: stale start/commit/finish/failure callbacks cannot clear recovery",
+      "passed": true
+    },
+    {
+      "label": "A: unaffected after crash, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "B: unaffected after crash, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "Private: no automatic reload before toolbar action",
+      "passed": true
+    },
+    {
+      "label": "Private: toolbar Reload command observed",
+      "passed": true
+    },
+    {
+      "label": "Private: last committed URL restored",
+      "passed": true
+    },
+    {
+      "label": "Private: reloaded document has a new identity",
+      "passed": true
+    },
+    {
+      "label": "Private: own storage survives, other profile markers absent",
+      "passed": true
+    },
+    {
+      "label": "Private: retired callbacks stay rejected after reload",
+      "passed": true
+    },
+    {
+      "label": "A: unaffected after reload, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "B: unaffected after reload, own marker and document unchanged",
+      "passed": true
+    },
+    {
+      "label": "Private: foreign view callbacks cannot mutate this window",
+      "passed": true
+    },
+    {
+      "label": "all three profile kinds recovered",
+      "passed": true
+    }
+  ]
+}

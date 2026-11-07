@@ -1,0 +1,54 @@
+{
+  "recordedAtUTC": "2026-11-07T15:49:26.070Z",
+  "commands": [
+    {
+      "command": "sw_vers",
+      "i": 0,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "5f971d",
+        "wall_time_seconds": 0.000024708,
+        "exit_code": 0,
+        "original_token_count": 16,
+        "output": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n"
+      }
+    },
+    {
+      "command": "xcodebuild -version",
+      "i": 1,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "bb984e",
+        "wall_time_seconds": 1.027753792,
+        "exit_code": 0,
+        "original_token_count": 8,
+        "output": "Xcode 27.2\nBuild version 27B52\n"
+      }
+    },
+    {
+      "command": "xcrun swift --version",
+      "i": 2,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "67013c",
+        "wall_time_seconds": 5.052395333,
+        "exit_code": 0,
+        "original_token_count": 32,
+        "output": "swift-driver version: 1.168.6 Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n"
+      }
+    },
+    {
+      "command": "node --version",
+      "i": 3,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "ee4c86",
+        "wall_time_seconds": 0.461235834,
+        "exit_code": 0,
+        "original_token_count": 3,
+        "output": "v24.20.0\n"
+      }
+    }
+  ],
+  "scope": "Read-only M0 toolchain identification; not a build, runtime matrix, or release qualification."
+}

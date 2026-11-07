@@ -1,0 +1,18 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "run",
+    "browser-macos:audit",
+    "--output-style=static"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "exitCode": 1,
+  "startedAtUTC": "2026-11-07T15:30:36.091154+00:00",
+  "elapsedSeconds": 6.0363383293151855,
+  "outputFile": "m0-native-audit.log",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

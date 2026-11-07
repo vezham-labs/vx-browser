@@ -1,0 +1,66 @@
+{
+  "accountWorkflows": "blocked by user direction: public pages only",
+  "aggregateRSSGate": "blocked: no reliable app-to-WebKit-process attribution; host-only and all-WebKit upper-bound values retained separately",
+  "coldLaunch": "Not measured from OS launch request; process-main-entry timing is reported separately.",
+  "crashRecoveryTiming": "blocked: safe WebContent process attribution unavailable",
+  "exactOneMBResponseConfirmed": true,
+  "limitations": [
+    "Existing interactive session, other apps active; hidden windows; no OS cache flush",
+    "First-view ready includes WebKit initialization and first view; warm constructor excludes asynchronous renderer readiness",
+    "No conferencing room, peak conference memory, 30-minute authenticated workflow, or full energy observation",
+    "No aggregate host-plus-attributed-engine RSS acceptance claim"
+  ],
+  "metrics": {
+    "engineFirstViewReadyMs": {
+      "approvedTargetMs": 2000,
+      "medianMs": 216.66941666626371,
+      "numericThresholdMet": true,
+      "p95Ms": 390.3740833338816,
+      "sampleCount": 30,
+      "varianceMsSquared": 57080.215968635246
+    },
+    "localPageDOMReadyMs": {
+      "approvedTargetMs": 1500,
+      "medianMs": 16.5,
+      "numericThresholdMet": true,
+      "p95Ms": 50.0,
+      "sampleCount": 30,
+      "varianceMsSquared": 152.65402298850574
+    },
+    "localPageNativeLoadMs": {
+      "medianMs": 430.33320833637845,
+      "p95Ms": 645.0424583454151,
+      "sampleCount": 30,
+      "varianceMsSquared": 4742.96433036301
+    },
+    "processEntryToReadyMs": {
+      "medianMs": 390.21985416911775,
+      "p95Ms": 615.730125005939,
+      "sampleCount": 30,
+      "varianceMsSquared": 101849.94429279788
+    },
+    "warmEmptyViewConstructorMs": {
+      "approvedTargetMs": 500,
+      "medianMs": 5.077437497675419,
+      "numericThresholdMet": true,
+      "p95Ms": 9.617125004297122,
+      "sampleCount": 30,
+      "varianceMsSquared": 5.286963736495901
+    }
+  },
+  "mode": "phase3-measurements",
+  "publicSiteAttemptCount": 21,
+  "publicSiteLoadedCount": 21,
+  "runID": "20261107T094114Z-22381",
+  "status": "partially_verified",
+  "tenIdleViews": {
+    "engineProcessAttribution": "unavailable; RSS target requires host plus attributable engine processes",
+    "error": null,
+    "hostPID": 22810,
+    "idleSeconds": 621.1847340833338,
+    "loadedViewCount": 10,
+    "mode": "ten-idle-views",
+    "runID": "20261107T094114Z-22381-idle",
+    "status": "observed"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "InfoMinimumOS": "26.0",
+  "SDK": "27.2",
+  "binarySHA256": "b408429d75ae84f1a5dc1a5231ad03c04f1c5fab0888a0e5bdfa51b18f2608c9",
+  "developerIDNotarization": "Not performed; deferred to final release validation",
+  "hardenedRuntime": true,
+  "mediaPurposeStringsAbsent": true,
+  "minimumOS": "26.0",
+  "scope": "Disposable app used for the final attributed memory observation; exact native source hashes match the reused crash samples.",
+  "signature": "ad hoc",
+  "signedEntitlements": {
+    "com.apple.security.app-sandbox": true,
+    "com.apple.security.files.user-selected.read-write": true,
+    "com.apple.security.network.client": true
+  }
+}

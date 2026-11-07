@@ -1,0 +1,30 @@
+{
+  "recordedAtUTC": "2026-11-07T15:45:39.878560+00:00",
+  "method": "Actual native app control accessibility tree, screenshot observation and running-app inventory; narrative record, not an exported screenshot or automated assertion suite.",
+  "bundleID": "internal.vezham.browser.foundation",
+  "observations": [
+    {
+      "action": "Initial native app control launch after sandboxed Nx launch failed",
+      "observed": "Window titled Vezham Browser with Vezham Browser and Ready labels. Native screenshot showed the centered labels."
+    },
+    {
+      "action": "Initial close / keyboard Quit / menu Quit attempts followed by AX inspection",
+      "observed": "Window or running inventory still present; shutdown was not claimed from those immediate observations. Later menu Quit followed by inventory showed app not running. No force termination."
+    },
+    {
+      "action": "Authorized, unsandboxed retry of the unchanged Nx launch target",
+      "observed": "Ready window visible; native menu contained Quit Vezham Browser (terminate:). Chose that item; subsequent inventory reported this bundle ID isRunning=false. Nx open -W target then exited 0."
+    }
+  ],
+  "limitations": [
+    "Normal menu Quit verified; close-last-window and reopen policies exist in source but are not separately qualified by this observation.",
+    "App-local ad-hoc development launch on macOS 27.2 only.",
+    "No websites, engine, bridge, account, media, performance, macOS 26 runtime or release validation."
+  ],
+  "applicationLeftRunning": false,
+  "evidence": [
+    "m0-native-launch-result.json",
+    "m0-native-launch-authorized-result.json",
+    "m0-bundle-audit.json"
+  ]
+}

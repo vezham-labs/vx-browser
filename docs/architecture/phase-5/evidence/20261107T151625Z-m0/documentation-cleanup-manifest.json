@@ -1,0 +1,1091 @@
+{
+  "canonicalDeveloperEntry": "vx/handbooks/browser/README.md",
+  "counts": {
+    "Changed": 2,
+    "Imported and aligned": 13,
+    "Imported and retained": 13,
+    "New": 19,
+    "Retained": 47
+  },
+  "deletions": [],
+  "documents": [
+    {
+      "action": "Retained",
+      "baselineSHA256": "9e9ee6179ae917b538aa687c7afab2eceabb022cc97745abd1f447d9094f77b2",
+      "canonicalLocation": ".agents/skills/heroui-pro-design-taste/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/heroui-pro-design-taste/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "9e9ee6179ae917b538aa687c7afab2eceabb022cc97745abd1f447d9094f77b2",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "2f40ea4505208304901d2030119d58951403d7ee147e9595c73a571e3151eae7",
+      "canonicalLocation": ".agents/skills/heroui-react-pro/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/heroui-react-pro/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "2f40ea4505208304901d2030119d58951403d7ee147e9595c73a571e3151eae7",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "f1f4a8dfc3e6392fe834807587f86de69109738b2b75ae4d2c21ddaec84fe454",
+      "canonicalLocation": ".agents/skills/link-workspace-packages/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/link-workspace-packages/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "f1f4a8dfc3e6392fe834807587f86de69109738b2b75ae4d2c21ddaec84fe454",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "ac51c1fc32bd958059ac97c55d6e6b83b93d680bb34d420aa7e6114d38018a8a",
+      "canonicalLocation": ".agents/skills/monitor-ci/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/monitor-ci/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "ac51c1fc32bd958059ac97c55d6e6b83b93d680bb34d420aa7e6114d38018a8a",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "0a27384919a7ddd0a88bdb105b170155b9fa9a3da81ba3837305dc14826b59ac",
+      "canonicalLocation": ".agents/skills/monitor-ci/references/fix-flows.md",
+      "movedFrom": null,
+      "path": ".agents/skills/monitor-ci/references/fix-flows.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "0a27384919a7ddd0a88bdb105b170155b9fa9a3da81ba3837305dc14826b59ac",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "152bfeae5403bed16fcd0933a460b67cb05d00ca5dcaeb008a51ae9fab20d3c2",
+      "canonicalLocation": ".agents/skills/nx-generate/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-generate/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "152bfeae5403bed16fcd0933a460b67cb05d00ca5dcaeb008a51ae9fab20d3c2",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "bc9a0fdfcf92fd51d3b8ce70bf57f26c91594a77f9646bd50e283772d746b669",
+      "canonicalLocation": ".agents/skills/nx-import/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-import/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "bc9a0fdfcf92fd51d3b8ce70bf57f26c91594a77f9646bd50e283772d746b669",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "caef8b3a46931654c77ab0cbc93cf492bbd02924f1b6fa0406a038e23ac1677c",
+      "canonicalLocation": ".agents/skills/nx-import/references/ESLINT.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-import/references/ESLINT.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "caef8b3a46931654c77ab0cbc93cf492bbd02924f1b6fa0406a038e23ac1677c",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "26ed7000fc8ed410e5de8a03e57fb749e2e17133592921cf79eab3b791a9880c",
+      "canonicalLocation": ".agents/skills/nx-import/references/GRADLE.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-import/references/GRADLE.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "26ed7000fc8ed410e5de8a03e57fb749e2e17133592921cf79eab3b791a9880c",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "cbbdb5043851d587b885f6ca876ee035034b7dc60eec9833ea57ce6c0b925038",
+      "canonicalLocation": ".agents/skills/nx-import/references/JEST.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-import/references/JEST.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "cbbdb5043851d587b885f6ca876ee035034b7dc60eec9833ea57ce6c0b925038",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "ce1a79c7269bf82ae4b533ada63f0e54666017be9aec6ef28f17cfa7067a35d7",
+      "canonicalLocation": ".agents/skills/nx-import/references/NEXT.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-import/references/NEXT.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "ce1a79c7269bf82ae4b533ada63f0e54666017be9aec6ef28f17cfa7067a35d7",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "baab687323bb19ddba3c0632754fa64b68c1a43e7bb55fab6b32e4f34bfdf267",
+      "canonicalLocation": ".agents/skills/nx-import/references/TURBOREPO.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-import/references/TURBOREPO.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "baab687323bb19ddba3c0632754fa64b68c1a43e7bb55fab6b32e4f34bfdf267",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "5b045a0971e663ed89593e0f0f6d88ee6309d613cb30bfeba6303bdd94ee6356",
+      "canonicalLocation": ".agents/skills/nx-import/references/VITE.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-import/references/VITE.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "5b045a0971e663ed89593e0f0f6d88ee6309d613cb30bfeba6303bdd94ee6356",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "96659fc0ea92b133445cf5d356f4ee710396fc4da22aaa515ad7a6f7ef39a5dd",
+      "canonicalLocation": ".agents/skills/nx-plugins/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-plugins/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "96659fc0ea92b133445cf5d356f4ee710396fc4da22aaa515ad7a6f7ef39a5dd",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "544e773afd7eb6d22b7768f8932a150f6767becb61b34608060d0f11bcb722f3",
+      "canonicalLocation": ".agents/skills/nx-run-tasks/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-run-tasks/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "544e773afd7eb6d22b7768f8932a150f6767becb61b34608060d0f11bcb722f3",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "e1a0c99a3f4528c2e5cc371ba24d6acc1d03af1c342b2beff62966712cc626df",
+      "canonicalLocation": ".agents/skills/nx-workspace/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-workspace/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "e1a0c99a3f4528c2e5cc371ba24d6acc1d03af1c342b2beff62966712cc626df",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "5c3243ced18c3cd7b3f330accbfd87df55e076c689f12ea0e4191a9604d6a8b9",
+      "canonicalLocation": ".agents/skills/nx-workspace/references/AFFECTED.md",
+      "movedFrom": null,
+      "path": ".agents/skills/nx-workspace/references/AFFECTED.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "5c3243ced18c3cd7b3f330accbfd87df55e076c689f12ea0e4191a9604d6a8b9",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "b847d78c0fa78f0f03d2ef360e5f61281260857d1f5bbba009af7226fa9a31a0",
+      "canonicalLocation": ".agents/skills/vx-workspace/SKILL.md",
+      "movedFrom": null,
+      "path": ".agents/skills/vx-workspace/SKILL.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "b847d78c0fa78f0f03d2ef360e5f61281260857d1f5bbba009af7226fa9a31a0",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "6676e86c90f8fe1651fd2dba4f9da62384f7f3f2bed5453bd8b823a1f0ba6799",
+      "canonicalLocation": ".github/copilot-instructions.md",
+      "movedFrom": null,
+      "path": ".github/copilot-instructions.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "6676e86c90f8fe1651fd2dba4f9da62384f7f3f2bed5453bd8b823a1f0ba6799",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "ee3aacd5002ec6d2cfc6930fcd7299a69238905c31355ff7b9f1a4e55b5a0872",
+      "canonicalLocation": "AGENTS.md",
+      "movedFrom": null,
+      "path": "AGENTS.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "ee3aacd5002ec6d2cfc6930fcd7299a69238905c31355ff7b9f1a4e55b5a0872",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "2815417a4e2ddcaa5dd4587652d9d49eed89b005628203fac6b130bd75131609",
+      "canonicalLocation": "CHANGELOG.md",
+      "movedFrom": null,
+      "path": "CHANGELOG.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "2815417a4e2ddcaa5dd4587652d9d49eed89b005628203fac6b130bd75131609",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Changed",
+      "baselineSHA256": "10865cc3694be4455d557497e5912b726f8f7953f4f8b111dfb70a5e462920e6",
+      "canonicalLocation": "README.md",
+      "movedFrom": null,
+      "path": "README.md",
+      "reason": "Retain existing entry point; add canonical Browser handbook/documentation and M0 navigation.",
+      "renamedFrom": null,
+      "sha256": "e90ef07711cb481fd5b28d10c5a4fc769161fea2cfad82dac3252064a31ea316",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "apps/browser-macos/README.md",
+      "movedFrom": null,
+      "path": "apps/browser-macos/README.md",
+      "reason": "Bounded native M0 setup, commands, ownership and protection/qualification limitations.",
+      "renamedFrom": null,
+      "sha256": "7fd7f79d029cde11f94a4a14e17cfea26c82a2d0536f855bfb295ff04bd85cd2",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "arc-macos-architecture-report.md",
+      "movedFrom": null,
+      "path": "arc-macos-architecture-report.md",
+      "reason": "Canonical documentation/report/evidence navigation; separates maintained guidance from historical evidence.",
+      "renamedFrom": null,
+      "sha256": "4b95ad6c630b39cb3ac9dc28e28681eb7a6a8136e77b8ae04778f9f1c43fadf8",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "docs/README.md",
+      "movedFrom": null,
+      "path": "docs/README.md",
+      "reason": "Canonical documentation/report/evidence navigation; separates maintained guidance from historical evidence.",
+      "renamedFrom": null,
+      "sha256": "fd7ec53bb13658ee9085482cb022c937789f5bfc2a5848d9cfaed11d72e54192",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/browser-distribution.md",
+      "movedFrom": null,
+      "originalImportSHA256": "6431567a1c2807cd2f904efccb5d17c91917165bc0ac9094260ac77d0664f82e",
+      "path": "docs/architecture/browser-distribution.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "b355030494749cf74013e9a07d14674160df7eeeff3a900291e3751bc9a42540",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/browser-engine-comparison.md",
+      "movedFrom": null,
+      "originalImportSHA256": "a75af7f185e8144d38ff2b386932b0ee9165a153ba7ad32390d6b8d8c88ce0b2",
+      "path": "docs/architecture/browser-engine-comparison.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "d2d90d4cb30e74cfc24ebc05f8c08c4444ca47788600f294a9b678e464acfcc5",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/browser-engine-contract.md",
+      "movedFrom": null,
+      "originalImportSHA256": "52ab5a9dd7855911708962177c57ca540c12fcccfcb7b280cf119c2a43a8242a",
+      "path": "docs/architecture/browser-engine-contract.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "6a3068791d5e58ef77dadbe66613dca1be9e20bcc18634619ef4eb62952461dc",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/browser-mvp-acceptance-criteria.md",
+      "movedFrom": null,
+      "originalImportSHA256": "310b23d5e2d89f94ee8eb8dc9e8f3392fe6b01f5177bbe6f8c63e4f90c212003",
+      "path": "docs/architecture/browser-mvp-acceptance-criteria.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "690fb1f0bb30395caf4253961b259e774ad769aad7b8b1c1a5671abdba3765e3",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/browser-platform-architecture.md",
+      "movedFrom": null,
+      "originalImportSHA256": "6ffc139e85f39b7bb16fa97f2d72c2449ddaf27bedf68720264773619b514b06",
+      "path": "docs/architecture/browser-platform-architecture.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "bde90b1a09aac91524cf1e90bc4dc230668f4f3a14b5c4eb701fdfc4a14668b7",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/browser-roadmap.md",
+      "movedFrom": null,
+      "originalImportSHA256": "fff2249122956985e0c39d3eaf6394a32e2f8af8c0d3fbd85c2def61f1de6f79",
+      "path": "docs/architecture/browser-roadmap.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "1c2624b91efb5548e7193987919d523a4a85fb44b8def175a924969aadf5a75d",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/phase-3/README.md",
+      "movedFrom": null,
+      "originalImportSHA256": "584ea92d4bd3434d5accfacac7f0366166faae92695dd21e7f840d391a412fd8",
+      "path": "docs/architecture/phase-3/README.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "584ea92d4bd3434d5accfacac7f0366166faae92695dd21e7f840d391a412fd8",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "docs/architecture/phase-3/archives/README.md",
+      "movedFrom": null,
+      "path": "docs/architecture/phase-3/archives/README.md",
+      "reason": "Archive provenance/index only; immutable bundles retain their original bytes and source copies.",
+      "renamedFrom": null,
+      "sha256": "041ae466b712932b06bc50920e540f05d6d15a16a72475db36c1a87ce2fafce3",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/phase-3/browser-acceptance-gate-ledger.md",
+      "movedFrom": null,
+      "originalImportSHA256": "1602bc3c72d6c199344a2ba0b3fb1cdba5c2e6d9ebf496e1cd4022dccc10c62a",
+      "path": "docs/architecture/phase-3/browser-acceptance-gate-ledger.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "1602bc3c72d6c199344a2ba0b3fb1cdba5c2e6d9ebf496e1cd4022dccc10c62a",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/phase-3/browser-engine-decision-assessment.md",
+      "movedFrom": null,
+      "originalImportSHA256": "c7f951e2234f136b320be5c980b18189872e80883c9156e2c0920b86627b0230",
+      "path": "docs/architecture/phase-3/browser-engine-decision-assessment.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "c7f951e2234f136b320be5c980b18189872e80883c9156e2c0920b86627b0230",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/phase-3/browser-mvp-architecture-baseline.md",
+      "movedFrom": null,
+      "originalImportSHA256": "bae3009809679225f66e206b881b0ca1fbda2fe5e2ff4d6f31bffbb8d540718c",
+      "path": "docs/architecture/phase-3/browser-mvp-architecture-baseline.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "bae3009809679225f66e206b881b0ca1fbda2fe5e2ff4d6f31bffbb8d540718c",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/phase-3/owner-approval-decision.md",
+      "movedFrom": null,
+      "originalImportSHA256": "20f33c8a693dd14844b3f94c2c60a04390ef7c486776f83185c468f6964d0e75",
+      "path": "docs/architecture/phase-3/owner-approval-decision.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "20f33c8a693dd14844b3f94c2c60a04390ef7c486776f83185c468f6964d0e75",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/phase-3/phase-3-exit-review.md",
+      "movedFrom": null,
+      "originalImportSHA256": "47e0a55519b466078374b6fb7fe2298fbf63c24e5ef5f17810cd7ff9e0695326",
+      "path": "docs/architecture/phase-3/phase-3-exit-review.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "47e0a55519b466078374b6fb7fe2298fbf63c24e5ef5f17810cd7ff9e0695326",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/phase-5/README.md",
+      "movedFrom": null,
+      "originalImportSHA256": "80a7c72c922798ae809095b0e44cf3c9d29bc11dd09a333ede9edb04b86e24ae",
+      "path": "docs/architecture/phase-5/README.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "a1bdd3204a493dacc91903b1b26634b75a0c71b473637d2f80e7ebb22a2afd54",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "docs/architecture/phase-5/evidence/README.md",
+      "movedFrom": null,
+      "path": "docs/architecture/phase-5/evidence/README.md",
+      "reason": "Canonical documentation/report/evidence navigation; separates maintained guidance from historical evidence.",
+      "renamedFrom": null,
+      "sha256": "553347abbaf43bf7e7d717426ef6904f1d4356cd327288e44ece66a7f682cac7",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/phase-5/phase-5-implementation-plan.md",
+      "movedFrom": null,
+      "originalImportSHA256": "e0b505fe73006ea041973018859f4ec165305c74335f8ebdd6bdc30414af6dda",
+      "path": "docs/architecture/phase-5/phase-5-implementation-plan.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "c008b31e2b6f7c4fdba0202efed485369005a2d8bfd861d57260ead439d372c3",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+      "movedFrom": null,
+      "originalImportSHA256": "dd8918807ac90ff498ac40e9851e6f7e233de05cfea780c6b53ccdbddc5229e7",
+      "path": "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "7caf24feab575bb7cc85e3cca9faaa53fd583b2e44207f192294313e005ae08d",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "docs/architecture/phase-5/reports/M0/README.md",
+      "movedFrom": null,
+      "path": "docs/architecture/phase-5/reports/M0/README.md",
+      "reason": "Actual M0 decisions, mapping or exit assessment; no future milestone implementation.",
+      "renamedFrom": null,
+      "sha256": "fdb55f7768aae9bcd1a8a4aaf0c25fb0a34e0cb8d4a5a67dfccafe98da05595d",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "docs/architecture/phase-5/reports/M0/documentation-mapping-and-cleanup.md",
+      "movedFrom": null,
+      "path": "docs/architecture/phase-5/reports/M0/documentation-mapping-and-cleanup.md",
+      "reason": "Actual M0 decisions, mapping or exit assessment; no future milestone implementation.",
+      "renamedFrom": null,
+      "sha256": "1f3c6f231a84709160ee42adef9368c8e13b7b00e00e2d2e8d4198aa72817bd5",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "docs/architecture/phase-5/reports/M0/m0-foundation-decisions.md",
+      "movedFrom": null,
+      "path": "docs/architecture/phase-5/reports/M0/m0-foundation-decisions.md",
+      "reason": "Actual M0 decisions, mapping or exit assessment; no future milestone implementation.",
+      "renamedFrom": null,
+      "sha256": "56a8e5ec0060f3b796e09f534f9ad861cf3fbbe6c31643e5bba74cf0b2167baa",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "docs/architecture/phase-5/reports/README.md",
+      "movedFrom": null,
+      "path": "docs/architecture/phase-5/reports/README.md",
+      "reason": "Canonical documentation/report/evidence navigation; separates maintained guidance from historical evidence.",
+      "renamedFrom": null,
+      "sha256": "61fbcbdc80b7721c42bd7b7319ca7e3925540b95a6d329312a0df94d8a45fcd2",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/prototype/phase3-dependency-inventory.md",
+      "movedFrom": null,
+      "originalImportSHA256": "66e4530a4083639ff7ea747116e8f5017bd484ce96f077abcf2194c5ca9b2990",
+      "path": "docs/architecture/prototype/phase3-dependency-inventory.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "66e4530a4083639ff7ea747116e8f5017bd484ce96f077abcf2194c5ca9b2990",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/prototype/phase3-final-review.md",
+      "movedFrom": null,
+      "originalImportSHA256": "30590719030d8131339e89ea97d8a6c1b2e69d5969649f5d3bdca32e2f961e97",
+      "path": "docs/architecture/prototype/phase3-final-review.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "30590719030d8131339e89ea97d8a6c1b2e69d5969649f5d3bdca32e2f961e97",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/prototype/wkwebview-feasibility-report.md",
+      "movedFrom": null,
+      "originalImportSHA256": "93d010e8aef4d51103d050e097f97b0d54ea6d0bec5ab1783668de25e79a2901",
+      "path": "docs/architecture/prototype/wkwebview-feasibility-report.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "93d010e8aef4d51103d050e097f97b0d54ea6d0bec5ab1783668de25e79a2901",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/prototype/wkwebview-limitations.md",
+      "movedFrom": null,
+      "originalImportSHA256": "35262c8a31e5b6b141f5ec7af47dad69e7c615d944a03bf20d131e99828625ff",
+      "path": "docs/architecture/prototype/wkwebview-limitations.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "35262c8a31e5b6b141f5ec7af47dad69e7c615d944a03bf20d131e99828625ff",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/architecture/prototype/wkwebview-test-results.md",
+      "movedFrom": null,
+      "originalImportSHA256": "42ead4565198c71db04fee29d09e9cfc57fdae050bcd7fea7a0756d72bce8da1",
+      "path": "docs/architecture/prototype/wkwebview-test-results.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "42ead4565198c71db04fee29d09e9cfc57fdae050bcd7fea7a0756d72bce8da1",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "docs/decisions/0001-browser-engine-strategy.md",
+      "movedFrom": null,
+      "originalImportSHA256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5",
+      "path": "docs/decisions/0001-browser-engine-strategy.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "movedFrom": null,
+      "originalImportSHA256": "fb03d2a1a1c4555cca6a06f34659510911765d37149d01037835eea0c9467af9",
+      "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/security/browser-security-acceptance-criteria.md",
+      "movedFrom": null,
+      "originalImportSHA256": "4d8076819c962dc20ecfb0264f32bbadc194648ac43302f7eb326ed7d8d8fd78",
+      "path": "docs/security/browser-security-acceptance-criteria.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "60b537d67f223f42bb1d8efcb5b9b68feb476ee90ecd188eab5f6d5a3191c68d",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/security/browser-security-architecture.md",
+      "movedFrom": null,
+      "originalImportSHA256": "af568980aa653edbd7b4317838c4ec81e59621be9d69aa10d1f3b540eaf3c5a7",
+      "path": "docs/security/browser-security-architecture.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "47aec398547c568bcc365dbd7210f3bebb301fd805a76e8e45af0d980a864665",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and aligned",
+      "canonicalLocation": "docs/security/browser-threat-model.md",
+      "movedFrom": null,
+      "originalImportSHA256": "5de2c664b41af6f4fc3b5bd989b26cfa5ef157fa6ee14e2a9594039a766f58d2",
+      "path": "docs/security/browser-threat-model.md",
+      "reason": "Current maintained document: reconcile owner conditional acceptance and staged gates; record M0-only authorization/outcome. No mandatory criterion waived.",
+      "renamedFrom": null,
+      "sha256": "aaa190ef8192db214ff2ed20f6a1339406609faa7f43abb6137e44ac5518366e",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "983026a949e5acecbc17d782a028f3c7890563591f0f5f3a14dee70cb2966359",
+      "canonicalLocation": "packages/vx/react/README.md",
+      "movedFrom": null,
+      "path": "packages/vx/react/README.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "983026a949e5acecbc17d782a028f3c7890563591f0f5f3a14dee70cb2966359",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Imported and retained",
+      "canonicalLocation": "prototype/wkwebview/README.md",
+      "movedFrom": null,
+      "originalImportSHA256": "8ec46f8471dd0c5fcb9197b7d16a8531f28ec0a5b44b508684a7cbf80b1857cf",
+      "path": "prototype/wkwebview/README.md",
+      "reason": "Byte-identical historical/decision/source reference preserved; later authority and M0 results are linked separately.",
+      "renamedFrom": null,
+      "sha256": "8ec46f8471dd0c5fcb9197b7d16a8531f28ec0a5b44b508684a7cbf80b1857cf",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Changed",
+      "baselineSHA256": "056dbbdb3d3ad76413a40bc6b86299c9df2a424fe5bc2d1ad362c7f19d4c9676",
+      "canonicalLocation": "vx/README.md",
+      "movedFrom": null,
+      "path": "vx/README.md",
+      "reason": "Retain existing entry point; add canonical Browser handbook/documentation and M0 navigation.",
+      "renamedFrom": null,
+      "sha256": "c2c4f38ec2dd858ae9964cd772344cd94e57766774cdecf6810cb3bed00bba59",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "a7a514437e7b599947ce66f5c3b954b9a72548892afe7c97c76e2e987b6c070f",
+      "canonicalLocation": "vx/handbooks/-TODO.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/-TODO.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "a7a514437e7b599947ce66f5c3b954b9a72548892afe7c97c76e2e987b6c070f",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "aa74ca5656f030631ae00939a4081133f984d8251ccfc35405f0fe9b730642aa",
+      "canonicalLocation": "vx/handbooks/application-categories.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/application-categories.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "aa74ca5656f030631ae00939a4081133f984d8251ccfc35405f0fe9b730642aa",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "8848dd98e26025e7d5ace5ae2028b0bebcce1e6d6d63f2a8cf35958123689991",
+      "canonicalLocation": "vx/handbooks/audits.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/audits.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "8848dd98e26025e7d5ace5ae2028b0bebcce1e6d6d63f2a8cf35958123689991",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "2be64e64765d43005bcef364bec9e884139cfd58661626fa3a1d1f9fdfa9c958",
+      "canonicalLocation": "vx/handbooks/brand.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/brand.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "2be64e64765d43005bcef364bec9e884139cfd58661626fa3a1d1f9fdfa9c958",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/README.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/README.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "3b0157b90ed873488e03b40db5d68a0662ada8b9c93653917fefc585a95c8780",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/architecture/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/architecture/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "f1cf60eddb649ed49a2172c7bb1ec8dd440c5d7a327d9249cb763460c51a0235",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/decisions/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/decisions/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "13a58c25144cc9e6649c133a9ecfb5022d951a0caf5792587f5e471dd8bdecc9",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/development/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/development/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "bc177f904dba1d019f9e86d8ec4ed5a8a1d5dc3995f969d107e44b4b12602434",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/distribution/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/distribution/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "2a22e7d5a906fea14e194581eae2317e0219eb86bf7b632093b27133e6957fe1",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/engineering/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/engineering/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "2290c35e89273f43965826793b84aab5dd4774582e1beaffd62c636984cc39eb",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/operations/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/operations/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "bcc456034bb9791815a4a655dc67d66d8fecb28302c58311df0d80e0e350db5d",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/overview/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/overview/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "56f37d803923d41fd6b8a241fe52908f7c569b0e41b7ad160408f5d90c97ad3e",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/security/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/security/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "258ccb604a9ef9714f1ba97651cf5e1f21b96c4bffb390e0bead75abf976bd84",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "New",
+      "canonicalLocation": "vx/handbooks/browser/testing/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/browser/testing/index.md",
+      "reason": "Meaningful developer summary/navigation; links authoritative detailed sources rather than copying them.",
+      "renamedFrom": null,
+      "sha256": "0ef6676c6faedc9e84acc1738b6060eeeb456a4e6d628992dfe90603b21c6e73",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "602a2633a059a002530c27a6a07732a70acfae3897e1d3a0f94e5158937dcb3c",
+      "canonicalLocation": "vx/handbooks/ci.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/ci.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "602a2633a059a002530c27a6a07732a70acfae3897e1d3a0f94e5158937dcb3c",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "ab05719c6c1331c56b0edeb981bc439cca1c012c5a886055c444116c0faebbcf",
+      "canonicalLocation": "vx/handbooks/cli-template-baseline.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/cli-template-baseline.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "ab05719c6c1331c56b0edeb981bc439cca1c012c5a886055c444116c0faebbcf",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "91948127993b15966f23fb799087a2aee06525419e738b7d73507f25ea1549c4",
+      "canonicalLocation": "vx/handbooks/coding-standards/index.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/coding-standards/index.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "91948127993b15966f23fb799087a2aee06525419e738b7d73507f25ea1549c4",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "aecf06bedc720fcd59187061b97c7d8494d18560eeb80acc9077c02f82cf16da",
+      "canonicalLocation": "vx/handbooks/coding-standards/review.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/coding-standards/review.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "aecf06bedc720fcd59187061b97c7d8494d18560eeb80acc9077c02f82cf16da",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "56f20d6c55a561e4b650fddf90c8ad67fe3e29e802fbdd9c3c0e2703243cffa2",
+      "canonicalLocation": "vx/handbooks/coding-standards/rules/comments.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/coding-standards/rules/comments.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "56f20d6c55a561e4b650fddf90c8ad67fe3e29e802fbdd9c3c0e2703243cffa2",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "309421e274c1fb13dc9484bd7915efa558bd6d7aadc5b7b495f0e2fa92fb92cc",
+      "canonicalLocation": "vx/handbooks/coding-standards/rules/general.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/coding-standards/rules/general.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "309421e274c1fb13dc9484bd7915efa558bd6d7aadc5b7b495f0e2fa92fb92cc",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "0313a2990e0fdfc45aff09d5bc20f5c60ecdaa678a66d4f3a2f3ca8569758938",
+      "canonicalLocation": "vx/handbooks/coding-standards/rules/naming.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/coding-standards/rules/naming.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "0313a2990e0fdfc45aff09d5bc20f5c60ecdaa678a66d4f3a2f3ca8569758938",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "afbb66bd29bf1c8081fc34eb51fdcd0b35a146acd1b8bf2b6d0565e3208a38cd",
+      "canonicalLocation": "vx/handbooks/coding-standards/rules/quality.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/coding-standards/rules/quality.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "afbb66bd29bf1c8081fc34eb51fdcd0b35a146acd1b8bf2b6d0565e3208a38cd",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "bab68841717bac26b666cb0c21fd06cd322ab3ad39cbc852f2ddbcc60dcb88c4",
+      "canonicalLocation": "vx/handbooks/coding-standards/rules/ui.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/coding-standards/rules/ui.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "bab68841717bac26b666cb0c21fd06cd322ab3ad39cbc852f2ddbcc60dcb88c4",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "2c86e12b36df6ebe521edb8f600c6a702822e816c3469f8013cee67c550e1b4e",
+      "canonicalLocation": "vx/handbooks/deploy.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/deploy.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "2c86e12b36df6ebe521edb8f600c6a702822e816c3469f8013cee67c550e1b4e",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "345804a3bb260dd6a7abe5f2bc4d1d13e3ebbf40d304d7946aacc96128481df2",
+      "canonicalLocation": "vx/handbooks/local-development.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/local-development.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "345804a3bb260dd6a7abe5f2bc4d1d13e3ebbf40d304d7946aacc96128481df2",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "9a1ec44dc25a98fdbc81d26a9a18677763d0f9a23565a00e738851c837171ea5",
+      "canonicalLocation": "vx/handbooks/navigation.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/navigation.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "9a1ec44dc25a98fdbc81d26a9a18677763d0f9a23565a00e738851c837171ea5",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "f5961744bcf623e718beb601206e88963475694d580f5706ccd64eb25075bbd8",
+      "canonicalLocation": "vx/handbooks/release.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/release.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "f5961744bcf623e718beb601206e88963475694d580f5706ccd64eb25075bbd8",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "3124d1883108e540fcedf3d3e8f2f38697b6707773b2f7daf5b124269895f198",
+      "canonicalLocation": "vx/handbooks/system-utils.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/system-utils.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "3124d1883108e540fcedf3d3e8f2f38697b6707773b2f7daf5b124269895f198",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "05547cd4d65e64c5ccffd3794084feb1294ce8714025b97894c452adf2117b24",
+      "canonicalLocation": "vx/handbooks/ui/app-layout.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/ui/app-layout.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "05547cd4d65e64c5ccffd3794084feb1294ce8714025b97894c452adf2117b24",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "99d6f93130b2714606084dd8d097950793fff96528dc35c809eaa8ef6392adb4",
+      "canonicalLocation": "vx/handbooks/ui/bookmarks.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/ui/bookmarks.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "99d6f93130b2714606084dd8d097950793fff96528dc35c809eaa8ef6392adb4",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "6a95324ea71564b78dde8edef39f8566f9ab474fa1a76b7c1ec54b73c5cf32e0",
+      "canonicalLocation": "vx/handbooks/ui/control-center.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/ui/control-center.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "6a95324ea71564b78dde8edef39f8566f9ab474fa1a76b7c1ec54b73c5cf32e0",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "f328ce6674dfb594b7753c61134e4685e7e6e18dd00295b9fdfd4390b4de2c59",
+      "canonicalLocation": "vx/handbooks/ui/navigation-menus.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/ui/navigation-menus.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "f328ce6674dfb594b7753c61134e4685e7e6e18dd00295b9fdfd4390b4de2c59",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "cebc898dfb411044c70e89779d3f573145741240f80a1264b6d7026c833ea0ec",
+      "canonicalLocation": "vx/handbooks/vx-config.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/vx-config.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "cebc898dfb411044c70e89779d3f573145741240f80a1264b6d7026c833ea0ec",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "2a3caa2e1630b1b2052d3f1f9141559ccdddbe9db84757758034c6c15c6fec46",
+      "canonicalLocation": "vx/handbooks/yaml.md",
+      "movedFrom": null,
+      "path": "vx/handbooks/yaml.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "2a3caa2e1630b1b2052d3f1f9141559ccdddbe9db84757758034c6c15c6fec46",
+      "supersededWholeDocument": null
+    },
+    {
+      "action": "Retained",
+      "baselineSHA256": "3a36e45107f777deffd8485fa8c20aaa05731a963cf978914f55dbe498a98567",
+      "canonicalLocation": "vx/schemas/README.md",
+      "movedFrom": null,
+      "path": "vx/schemas/README.md",
+      "reason": "Existing workspace/handbook/skill guidance unchanged; outside Browser-specific editing scope.",
+      "renamedFrom": null,
+      "sha256": "3a36e45107f777deffd8485fa8c20aaa05731a963cf978914f55dbe498a98567",
+      "supersededWholeDocument": null
+    }
+  ],
+  "inventoryScope": "Every existing tracked repository Markdown document, imported Browser Markdown record and new Browser/native setup/report/handbook Markdown document. Raw evidence and source use separate import/source/preservation manifests.",
+  "moves": [],
+  "recordedAtUTC": "2026-11-07T15:52:42.445774+00:00",
+  "renames": [],
+  "sourceSnapshot": {
+    "path": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/https-chatgpt-com-share-6aee2c10-10e8",
+    "treatment": "Preserved read-only provenance; maintained canonical Browser documents now reside in this existing fork."
+  },
+  "supersededMaintainedStatements": [
+    {
+      "path": "docs/architecture/browser-distribution.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/browser-engine-comparison.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/browser-engine-contract.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/browser-mvp-acceptance-criteria.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/browser-platform-architecture.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/browser-roadmap.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/phase-5/README.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/phase-5/phase-5-implementation-plan.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/security/browser-security-acceptance-criteria.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/security/browser-security-architecture.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    },
+    {
+      "path": "docs/security/browser-threat-model.md",
+      "treatment": "Replaced stale initial-approval/all-release-gates-before-implementation or planning-only-current-state wording with recorded conditional acceptance, unchanged Stage A/B/C outcomes and separately authorized M0 scope; original source snapshot retained."
+    }
+  ],
+  "supersededWholeDocuments": []
+}

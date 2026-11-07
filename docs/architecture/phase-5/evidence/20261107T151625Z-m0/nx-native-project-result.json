@@ -1,0 +1,19 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "show",
+    "project",
+    "browser-macos",
+    "--json"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "exitCode": 0,
+  "startedAtUTC": "2026-11-07T15:28:32.071289+00:00",
+  "elapsedSeconds": 7.131933927536011,
+  "outputFile": "nx-native-project.log",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

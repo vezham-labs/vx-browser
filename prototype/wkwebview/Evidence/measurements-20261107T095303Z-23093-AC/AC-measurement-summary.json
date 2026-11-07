@@ -1,0 +1,50 @@
+{
+  "exactOneMBResponseConfirmed": true,
+  "externalPowerConfirmedAtStartAndEnd": true,
+  "limitations": [
+    "Hidden-window timing proxies; warm empty-view measurement is constructor time, not asynchronous renderer-ready time",
+    "Existing interactive host with other apps active; caches not flushed",
+    "No aggregate attributable-engine RSS, true OS cold-launch, full energy, or crash-recovery timing acceptance claim"
+  ],
+  "metrics": {
+    "engineFirstViewReadyMs": {
+      "approvedTargetMs": 2000,
+      "medianMs": 216.32122917071683,
+      "numericThresholdMet": true,
+      "p95Ms": 678.6967083316995,
+      "sampleCount": 30,
+      "varianceMsSquared": 33048.3445745261
+    },
+    "localPageDOMReadyMs": {
+      "approvedTargetMs": 1500,
+      "medianMs": 18.0,
+      "numericThresholdMet": true,
+      "p95Ms": 43.0,
+      "sampleCount": 30,
+      "varianceMsSquared": 107.70574712643678
+    },
+    "localPageNativeLoadMs": {
+      "medianMs": 438.1514166670968,
+      "p95Ms": 784.3203750089742,
+      "sampleCount": 30,
+      "varianceMsSquared": 12231.87684895725
+    },
+    "processEntryToReadyMs": {
+      "medianMs": 385.56722916837316,
+      "p95Ms": 1263.0497083300725,
+      "sampleCount": 30,
+      "varianceMsSquared": 64671.56573741932
+    },
+    "warmEmptyViewConstructorMs": {
+      "approvedTargetMs": 500,
+      "medianMs": 4.89560416463064,
+      "numericThresholdMet": true,
+      "p95Ms": 11.25891666742973,
+      "sampleCount": 30,
+      "varianceMsSquared": 7.335674578381768
+    }
+  },
+  "mode": "AC-timing-repeat",
+  "runID": "20261107T095303Z-23093-AC",
+  "status": "observed"
+}

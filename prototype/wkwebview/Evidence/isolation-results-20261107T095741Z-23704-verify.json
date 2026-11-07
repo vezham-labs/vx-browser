@@ -1,0 +1,49 @@
+{
+  "failureCount" : 0,
+  "failures" : [
+
+  ],
+  "mode" : "verify",
+  "status" : "passed",
+  "tests" : [
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-a",
+      "label" : "persistent A after relaunch",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "marker-b",
+      "label" : "persistent B after relaunch",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : true
+    },
+    {
+      "label" : "persistent profiles A\/B cross-isolation including HTTP cache",
+      "passed" : true
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "absent",
+      "label" : "private does not survive app relaunch",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : false
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "absent",
+      "label" : "profile A data deletion",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : false
+    },
+    {
+      "bridgeAbsent" : true,
+      "expectedMarker" : "absent",
+      "label" : "profile B data deletion",
+      "observedFieldsMatch" : true,
+      "serviceWorkerPresent" : false
+    }
+  ]
+}

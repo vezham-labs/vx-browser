@@ -1,0 +1,6 @@
+{
+  "defect": "Initial development bundle compiled and verified its signature but lacked the runtime code-directory flag.",
+  "failedCheck": "hardenedRuntimeEnabled",
+  "change": "Retain ENABLE_HARDENED_RUNTIME=YES and explicitly pass --options runtime through OTHER_CODE_SIGN_FLAGS; base entitlement injection remains disabled so no debug grant is added.",
+  "retryReason": "Concrete signing configuration change; preserve first audit as failed. No OS security protection relaxed."
+}

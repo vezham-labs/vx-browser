@@ -1,0 +1,62 @@
+{
+  "deploymentTarget": "macOS 26.0",
+  "failureCount": 0,
+  "failures": [],
+  "hostOSVersion": "Version 27.2 (Build 26B123)",
+  "mode": "url-policy",
+  "status": "passed",
+  "tests": [
+    {
+      "label": "trim surrounding whitespace",
+      "passed": true
+    },
+    {
+      "label": "add HTTPS to a bare hostname",
+      "passed": true
+    },
+    {
+      "label": "allow HTTP loopback with an explicit port",
+      "passed": true
+    },
+    {
+      "label": "preserve HTTPS path and query",
+      "passed": true
+    },
+    {
+      "label": "reject file URLs",
+      "passed": true
+    },
+    {
+      "label": "reject JavaScript URLs",
+      "passed": true
+    },
+    {
+      "label": "reject data URLs",
+      "passed": true
+    },
+    {
+      "label": "reject mail URLs",
+      "passed": true
+    },
+    {
+      "label": "reject FTP URLs",
+      "passed": true
+    },
+    {
+      "label": "reject embedded credentials",
+      "passed": true
+    },
+    {
+      "label": "reject missing host",
+      "passed": true
+    },
+    {
+      "label": "reject empty input",
+      "passed": true
+    },
+    {
+      "label": "reject whitespace-only input",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "failureCount": 2,
+  "failures": [
+    "native allow/deny prompt was displayed",
+    "native prompt was answered Deny"
+  ],
+  "hostOSVersion": "27.2",
+  "mode": "permission-deny",
+  "nativeEvents": [],
+  "observedPageResult": {
+    "errorName": "NotAllowedError",
+    "status": "denied"
+  },
+  "status": "partially_verified",
+  "tests": [
+    {
+      "label": "website received NotAllowedError",
+      "passed": true
+    },
+    {
+      "label": "website received no media stream",
+      "passed": true
+    },
+    {
+      "label": "native allow/deny prompt was displayed",
+      "passed": false
+    },
+    {
+      "label": "native prompt was answered Deny",
+      "passed": false
+    }
+  ]
+}

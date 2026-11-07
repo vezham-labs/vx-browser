@@ -1,0 +1,19 @@
+{
+  "bundleIdentifier": "internal.vezham.WKPrototype.Diagnostics.1794057813.12795",
+  "completedCrashSamples": 1,
+  "error": "Recovery fixture failed",
+  "method": "Host-specific private Darwin coalition/unique-ID diagnostics outside app source; exact path, owner and identity checks. Active desktop; hidden AppKit windows; OS caches untouched.",
+  "runID": "20261107T132333Z-12795",
+  "security": "Normal App Sandbox/network-client/user-selected-file entitlements and Hardened Runtime; no debug/media entitlements. No root or security relaxation.",
+  "sourceSHA256": {
+    "LocalInteractionProbe.swift": "8a2fae9505b0105dba696cc3d366ee75f243046086ff22ef8a6127bdc00620a0",
+    "NavigationPolicy.swift": "f0eda048dc9b305210a3a28bf3e10ad8c90e1fa2f3d91b70ba1762b267666149",
+    "Phase3Measurements.swift": "0adf7a80fe2a744bd45af1b00301b83988356995b72d9986e7c60bd43c8c6e7f",
+    "main.swift": "2623eab17ba5e4ca3b33b2389ad3b2ee91e08080c513354f42c9a31720116a5c"
+  },
+  "sources": [
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/sys/proc_info_private.h",
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/mach/coalition.h"
+  ],
+  "status": "failed or blocked"
+}

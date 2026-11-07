@@ -1,0 +1,17 @@
+{
+  "bundleIdentifier": "internal.vezham.WKPrototype.Measurements.1794044474.22381",
+  "bundledFiles": [
+    "Contents/Info.plist",
+    "Contents/_CodeSignature/CodeResources",
+    "Contents/MacOS/VezhamWKPrototype"
+  ],
+  "hardenedRuntimeFlagObserved": true,
+  "minimumSystemVersion": "26.0",
+  "note": "The normal benchmark bundle has no camera/microphone entitlement or purpose string. Developer ID and notarization remain blocked by zero valid signing identities.",
+  "signatureKind": "ad-hoc",
+  "signedEntitlements": {
+    "com.apple.security.app-sandbox": true,
+    "com.apple.security.files.user-selected.read-write": true,
+    "com.apple.security.network.client": true
+  }
+}

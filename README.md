@@ -9,9 +9,15 @@
 </p>
 <hr>
 
-# @vx/fe-kit
+# Vezham Browser
 
-### Getting Started
+The existing `vezham-labs/vx-browser` fork retains the Vx FE starter/tooling.
+Browser-specific developer guidance starts in the
+[Browser Handbook](vx/handbooks/browser/README.md). See [documentation](docs/README.md)
+and the [Phase 5 M0 report](docs/architecture/phase-5/reports/M0/README.md) for current
+scope, repository baseline and actual verification. No public distribution.
+
+### Starter Getting Started
 
 See [guidelines](https://storybook.vezham.com/?path=/docs/guidelines-get-started--overview) to get started.
 

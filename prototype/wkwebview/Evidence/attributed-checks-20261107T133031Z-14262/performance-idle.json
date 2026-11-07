@@ -1,0 +1,11 @@
+{
+  "engineProcessAttribution": "External runner required; the app does not query WebKit helper PIDs.",
+  "error": null,
+  "hostPID": 14307,
+  "idleSeconds": 630.0058475833339,
+  "loadedViewCount": 10,
+  "mode": "ten-idle-views",
+  "reportingGraceSeconds": 60,
+  "runID": "20261107T133031Z-14262-idle",
+  "status": "observed"
+}

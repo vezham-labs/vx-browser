@@ -1,0 +1,239 @@
+{
+  "mode" : "public-site-smoke",
+  "observations" : [
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "workspace.google.com",
+      "httpStatus" : 200,
+      "repetition" : 1,
+      "requestedURL" : "https:\/\/workspace.google.com\/",
+      "site" : "Google Workspace",
+      "status" : "loaded",
+      "title" : "Google Workspace | Business apps and collaboration tools"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "m365.cloud.microsoft",
+      "httpStatus" : 200,
+      "repetition" : 1,
+      "requestedURL" : "https:\/\/www.microsoft365.com\/",
+      "site" : "Microsoft 365",
+      "status" : "loaded",
+      "title" : "Microsoft 365 - Sign into Copilot"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "github.com",
+      "httpStatus" : 200,
+      "repetition" : 1,
+      "requestedURL" : "https:\/\/github.com\/",
+      "site" : "GitHub",
+      "status" : "loaded",
+      "title" : "GitHub · Change is constant. GitHub keeps you ahead. · GitHub · GitHub"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "www.figma.com",
+      "httpStatus" : 200,
+      "repetition" : 1,
+      "requestedURL" : "https:\/\/www.figma.com\/",
+      "site" : "Figma",
+      "status" : "loaded",
+      "title" : "Figma: The collaborative canvas for design, code, and AI"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "www.notion.com",
+      "httpStatus" : 200,
+      "repetition" : 1,
+      "requestedURL" : "https:\/\/www.notion.com\/",
+      "site" : "Notion",
+      "status" : "loaded",
+      "title" : "The AI workspace that works for you. | Notion"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "docs.stripe.com",
+      "httpStatus" : 200,
+      "repetition" : 1,
+      "requestedURL" : "https:\/\/docs.stripe.com\/testing",
+      "site" : "Payment documentation",
+      "status" : "loaded",
+      "title" : "Test card numbers | Stripe Documentation"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "meet.jit.si",
+      "httpStatus" : 200,
+      "repetition" : 1,
+      "requestedURL" : "https:\/\/meet.jit.si\/",
+      "site" : "Conferencing landing",
+      "status" : "loaded",
+      "title" : "Jitsi Meet"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "workspace.google.com",
+      "httpStatus" : 200,
+      "repetition" : 2,
+      "requestedURL" : "https:\/\/workspace.google.com\/",
+      "site" : "Google Workspace",
+      "status" : "loaded",
+      "title" : "Google Workspace | Business apps and collaboration tools"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "m365.cloud.microsoft",
+      "httpStatus" : 200,
+      "repetition" : 2,
+      "requestedURL" : "https:\/\/www.microsoft365.com\/",
+      "site" : "Microsoft 365",
+      "status" : "loaded",
+      "title" : "Microsoft 365 - Sign into Copilot"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "github.com",
+      "httpStatus" : 200,
+      "repetition" : 2,
+      "requestedURL" : "https:\/\/github.com\/",
+      "site" : "GitHub",
+      "status" : "loaded",
+      "title" : "GitHub · Change is constant. GitHub keeps you ahead. · GitHub · GitHub"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "www.figma.com",
+      "httpStatus" : 200,
+      "repetition" : 2,
+      "requestedURL" : "https:\/\/www.figma.com\/",
+      "site" : "Figma",
+      "status" : "loaded",
+      "title" : "Figma: The collaborative canvas for design, code, and AI"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "www.notion.com",
+      "httpStatus" : 200,
+      "repetition" : 2,
+      "requestedURL" : "https:\/\/www.notion.com\/",
+      "site" : "Notion",
+      "status" : "loaded",
+      "title" : "The AI workspace that works for you. | Notion"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "docs.stripe.com",
+      "httpStatus" : 200,
+      "repetition" : 2,
+      "requestedURL" : "https:\/\/docs.stripe.com\/testing",
+      "site" : "Payment documentation",
+      "status" : "loaded",
+      "title" : "Test card numbers | Stripe Documentation"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "meet.jit.si",
+      "httpStatus" : 200,
+      "repetition" : 2,
+      "requestedURL" : "https:\/\/meet.jit.si\/",
+      "site" : "Conferencing landing",
+      "status" : "loaded",
+      "title" : "Jitsi Meet"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "workspace.google.com",
+      "httpStatus" : 200,
+      "repetition" : 3,
+      "requestedURL" : "https:\/\/workspace.google.com\/",
+      "site" : "Google Workspace",
+      "status" : "loaded",
+      "title" : "Google Workspace | Business apps and collaboration tools"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "m365.cloud.microsoft",
+      "httpStatus" : 200,
+      "repetition" : 3,
+      "requestedURL" : "https:\/\/www.microsoft365.com\/",
+      "site" : "Microsoft 365",
+      "status" : "loaded",
+      "title" : "Microsoft 365 - Sign into Copilot"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "github.com",
+      "httpStatus" : 200,
+      "repetition" : 3,
+      "requestedURL" : "https:\/\/github.com\/",
+      "site" : "GitHub",
+      "status" : "loaded",
+      "title" : "GitHub · Change is constant. GitHub keeps you ahead. · GitHub · GitHub"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "www.figma.com",
+      "httpStatus" : 200,
+      "repetition" : 3,
+      "requestedURL" : "https:\/\/www.figma.com\/",
+      "site" : "Figma",
+      "status" : "loaded",
+      "title" : "Figma: The collaborative canvas for design, code, and AI"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "www.notion.com",
+      "httpStatus" : 200,
+      "repetition" : 3,
+      "requestedURL" : "https:\/\/www.notion.com\/",
+      "site" : "Notion",
+      "status" : "loaded",
+      "title" : "The AI workspace that works for you. | Notion"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "docs.stripe.com",
+      "httpStatus" : 200,
+      "repetition" : 3,
+      "requestedURL" : "https:\/\/docs.stripe.com\/testing",
+      "site" : "Payment documentation",
+      "status" : "loaded",
+      "title" : "Test card numbers | Stripe Documentation"
+    },
+    {
+      "bridgeAbsent" : true,
+      "error" : null,
+      "finalHost" : "meet.jit.si",
+      "httpStatus" : 200,
+      "repetition" : 3,
+      "requestedURL" : "https:\/\/meet.jit.si\/",
+      "site" : "Conferencing landing",
+      "status" : "loaded",
+      "title" : "Jitsi Meet"
+    }
+  ],
+  "runID" : "20261107T094114Z-22381-sites",
+  "scope" : "Three fresh nonpersistent stores per public landing page; no sign-in, test tenant, payment, conference room, or account workflow. Not full compatibility acceptance.",
+  "status" : "observed"
+}

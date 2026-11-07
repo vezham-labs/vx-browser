@@ -1,0 +1,225 @@
+{
+  "deploymentTarget": "macOS 26.0",
+  "destinationArtifacts": [
+    {
+      "bytes": 27,
+      "name": "complete.txt"
+    },
+    {
+      "bytes": 21,
+      "name": "existing.txt"
+    }
+  ],
+  "failureCount": 17,
+  "failures": [
+    "100 untrusted frame messages arrived without native dispatch",
+    "cross-origin redirect loaded second origin",
+    "cross-origin redirect could not read origin A localStorage",
+    "cross-origin redirect had no native page bridge",
+    "cross-origin popup loaded second origin",
+    "cross-origin popup could not read origin A localStorage",
+    "cross-origin popup had no native page bridge",
+    "cross-origin popup retained native private data store",
+    "cross-origin popup retained private-session label",
+    "redirect to privileged app scheme received native cancel decision",
+    "multiple upload disclosed exactly the two chosen basenames",
+    "multiple upload contents matched the synthetic files",
+    "directory upload enumerated exactly the selected tree",
+    "directory upload contents matched selected tree",
+    "native picker reported both multi-file and directory selections",
+    "no extra upload payloads were received",
+    "duplicate-name save was cancelled"
+  ],
+  "fixtureObservations": {
+    "downloadRequests": [
+      "/interrupted",
+      "/complete"
+    ],
+    "events": [
+      {
+        "attemptCount": 100,
+        "bridgeAbsent": true,
+        "kind": "frame-result",
+        "parentReadDenied": true,
+        "reachable": 0,
+        "receivedMessages": 100,
+        "throws": 100
+      }
+    ],
+    "uploads": []
+  },
+  "hostOSVersion": "27.2",
+  "mode": "phase3-local",
+  "nativeEvents": [
+    {
+      "event": "navigation-finished",
+      "fixtureCase": "",
+      "path": "/phase3",
+      "profile": "Private \u2022 8B5C552E",
+      "store": "ObjectIdentifier(0x0000007619783980)"
+    },
+    {
+      "currentPath": "/phase3",
+      "event": "navigation-blocked",
+      "mainFrame": false,
+      "scheme": "vezham-ui"
+    },
+    {
+      "downloadID": "DF486AEA-E4DA-48AA-A060-EC9776FC6658",
+      "event": "download-selected",
+      "selectedBasename": "interrupted.bin",
+      "suggestedName": "interrupted.bin"
+    },
+    {
+      "code": -1005,
+      "domain": "NSURLErrorDomain",
+      "downloadID": "DF486AEA-E4DA-48AA-A060-EC9776FC6658",
+      "event": "download-error"
+    },
+    {
+      "downloadID": "DF486AEA-E4DA-48AA-A060-EC9776FC6658",
+      "event": "download-cleanup",
+      "removed": true
+    },
+    {
+      "downloadID": "9B23C457-7792-4520-89E0-D1B7CEAF3AAD",
+      "event": "download-selected",
+      "selectedBasename": "complete.txt",
+      "suggestedName": "complete.txt"
+    },
+    {
+      "downloadID": "9B23C457-7792-4520-89E0-D1B7CEAF3AAD",
+      "event": "download-finished"
+    },
+    {
+      "downloadID": "9B23C457-7792-4520-89E0-D1B7CEAF3AAD",
+      "event": "download-cleanup",
+      "removed": true
+    }
+  ],
+  "runID": "20261107T092722Z-18980",
+  "scope": "Two loopback HTTP origins; no production UI/native transport exists. No actual validator-rejection claim for unreachable bridge attempts.",
+  "status": "failed",
+  "tests": [
+    {
+      "label": "cross-origin frame could not read parent DOM",
+      "passed": true
+    },
+    {
+      "label": "100 malformed and forged native-channel attempts executed",
+      "passed": true
+    },
+    {
+      "label": "no native channel was reachable in 100 attempts",
+      "passed": true
+    },
+    {
+      "label": "100 untrusted frame messages arrived without native dispatch",
+      "passed": false
+    },
+    {
+      "label": "privileged-scheme frame navigation was blocked",
+      "passed": true
+    },
+    {
+      "label": "cross-origin redirect loaded second origin",
+      "passed": false
+    },
+    {
+      "label": "cross-origin redirect could not read origin A localStorage",
+      "passed": false
+    },
+    {
+      "label": "cross-origin redirect had no native page bridge",
+      "passed": false
+    },
+    {
+      "label": "cross-origin popup loaded second origin",
+      "passed": false
+    },
+    {
+      "label": "cross-origin popup could not read origin A localStorage",
+      "passed": false
+    },
+    {
+      "label": "cross-origin popup had no native page bridge",
+      "passed": false
+    },
+    {
+      "label": "cross-origin popup retained native private data store",
+      "passed": false
+    },
+    {
+      "label": "cross-origin popup retained private-session label",
+      "passed": false
+    },
+    {
+      "label": "redirect to privileged app scheme received native cancel decision",
+      "passed": false
+    },
+    {
+      "label": "multiple upload disclosed exactly the two chosen basenames",
+      "passed": false
+    },
+    {
+      "label": "multiple upload contents matched the synthetic files",
+      "passed": false
+    },
+    {
+      "label": "directory upload enumerated exactly the selected tree",
+      "passed": false
+    },
+    {
+      "label": "directory upload contents matched selected tree",
+      "passed": false
+    },
+    {
+      "label": "native picker reported both multi-file and directory selections",
+      "passed": false
+    },
+    {
+      "label": "no extra upload payloads were received",
+      "passed": false
+    },
+    {
+      "label": "duplicate-name save was cancelled",
+      "passed": false
+    },
+    {
+      "label": "original duplicate-name file was unchanged",
+      "passed": true
+    },
+    {
+      "label": "interrupted download used selected test filename",
+      "passed": true
+    },
+    {
+      "label": "interrupted download surfaced a network error",
+      "passed": true
+    },
+    {
+      "label": "interrupted download was not reported as finished",
+      "passed": true
+    },
+    {
+      "label": "incomplete download left no completed artifact",
+      "passed": true
+    },
+    {
+      "label": "interrupted download staging directory was removed",
+      "passed": true
+    },
+    {
+      "label": "completed download was moved to selected final destination",
+      "passed": true
+    },
+    {
+      "label": "completed download reported success only after saving",
+      "passed": true
+    },
+    {
+      "label": "completed download staging directory was removed",
+      "passed": true
+    }
+  ]
+}

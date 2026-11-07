@@ -1,0 +1,331 @@
+{
+  "ACProxyTimingMetrics": {
+    "engineFirstViewReadyMs": {
+      "approvedTargetMs": 2000,
+      "medianMs": 216.32122917071683,
+      "numericThresholdMet": true,
+      "p95Ms": 678.6967083316995,
+      "sampleCount": 30,
+      "varianceMsSquared": 33048.3445745261
+    },
+    "localPageDOMReadyMs": {
+      "approvedTargetMs": 1500,
+      "medianMs": 18.0,
+      "numericThresholdMet": true,
+      "p95Ms": 43.0,
+      "sampleCount": 30,
+      "varianceMsSquared": 107.70574712643678
+    },
+    "localPageNativeLoadMs": {
+      "medianMs": 438.1514166670968,
+      "p95Ms": 784.3203750089742,
+      "sampleCount": 30,
+      "varianceMsSquared": 12231.87684895725
+    },
+    "processEntryToReadyMs": {
+      "medianMs": 385.56722916837316,
+      "p95Ms": 1263.0497083300725,
+      "sampleCount": 30,
+      "varianceMsSquared": 64671.56573741932
+    },
+    "warmEmptyViewConstructorMs": {
+      "approvedTargetMs": 500,
+      "medianMs": 4.89560416463064,
+      "numericThresholdMet": true,
+      "p95Ms": 11.25891666742973,
+      "sampleCount": 30,
+      "varianceMsSquared": 7.335674578381768
+    }
+  },
+  "authorizedScope": "Local synthetic and public-page feasibility; macOS 26 deferred; authenticated workflows blocked by user direction; performance thresholds approved",
+  "date": "2026-11-07",
+  "engineDecision": "ADR 0001 Proposed",
+  "finalReleaseValidation": {
+    "criteria": [
+      "Developer ID code signing and Apple notarization",
+      "macOS 26.0 and latest supported 26.x runtime validation"
+    ],
+    "currentPhase3Blockers": false,
+    "evidencePassed": false,
+    "minimumDeploymentTarget": "macOS 26.0",
+    "schedule": "docs/architecture/browser-roadmap.md",
+    "status": "Deferred by user to final release-validation stage"
+  },
+  "gates": [
+    {
+      "evidenceAndLimitations": "Local fixtures and 21 public-page visits loaded with no account/cloud/Tamizhi client in the prototype. Product history/bookmarks and a complete outage/network inventory are not implemented.",
+      "name": "Local browsing without cloud connectivity",
+      "nextDependency": "Implement and validate app-owned local state after engine approval.",
+      "number": 1,
+      "owner": "Product/core engineering",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "Final integrated-source seed/verify runs passed 12+6 checks for synthetic A/B storage, HTTP-cache reuse/separation, persistence, and deletion on macOS 27.2. macOS 26 validation is deferred to the final release-validation stage.",
+      "name": "Persistent profile isolation",
+      "nextDependency": "Run the macOS 26.0/latest supported 26.x matrix at final release validation; continue current work on macOS 27.2 with a 26.0 build target.",
+      "number": 2,
+      "owner": "QA / platform engineering",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "Private-window lifecycle passed 3 checks. The earlier bounded WebKit-store scan inspected 52 files; the recovery UI follow-up scanned 40 files with A/B positive controls and no private marker. Failed/completed download staging cleanup passed. OS-managed transient data, host-crash leftovers, and product private-history exclusion are not established.",
+      "name": "Private-session isolation and cleanup",
+      "nextDependency": "Validate the remaining cleanup scope and future app-owned private state.",
+      "number": 3,
+      "owner": "Core/security engineering",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "User explicitly limited testing to public pages. No test-account, MFA, passkey, SSO, payment, or authenticated workflow was executed.",
+      "name": "Authentication and MFA compatibility",
+      "nextDependency": "Provide approved test tenants and critical workflows if this restriction is changed.",
+      "number": 4,
+      "owner": "Product owner / test-account owners",
+      "status": "Blocked"
+    },
+    {
+      "evidenceAndLimitations": "Cross-origin frame parent-DOM access failed; 100 forged/oversized message attempts found no native channel. Frame and top-level privileged-shaped schemes received native cancel decisions. Redirect/popup pages lacked the vezham handler; popup data-store/session ownership was retained. There is no production React/native transport to validate.",
+      "name": "Browser UI/native bridge isolation",
+      "nextDependency": "Validate legitimate and adversarial transport commands when the production bridge exists; absence is not validator acceptance.",
+      "number": 5,
+      "owner": "Native/UI security engineering",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "With both OS permissions authorized for the disposable app, the origin-labelled Vezham prompt appeared and explicit Deny returned NotAllowedError/no stream: 4/4 final-request checks passed. An earlier request chose Allow in the app prompt but the denial-only guard returned Deny; its original 3/4 result is retained separately. Targeted OS resets succeeded after app closure and the build was removed. Real website grants, persistence/revocation and separate device cases remain unverified.",
+      "name": "Native permissions and revocation",
+      "nextDependency": "Native denial is verified. Complete actual website grants, persistence/revocation and independent device cases only within separately authorized scope.",
+      "number": 6,
+      "owner": "Product/security owner",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "Selections, cancellation, multiple files including an unusual basename, selected directory contents, duplicate-name cancellation, and interrupted/completed transfers have bounded evidence. A 29-byte incomplete final-file defect was fixed with app-owned staging; 9 focused checks passed. Cross-volume saves, overwrite completion, symlinks, metadata/quarantine, and abrupt-host-death cleanup still need validation.",
+      "name": "File upload/download security",
+      "nextDependency": "Validate remaining destination/metadata/lifetime cases before production transfer acceptance.",
+      "number": 7,
+      "owner": "Native/core security engineering",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "The current 14-check find/zoom API regression passed. The AppKit prototype does not expose every find option or clear/stop/reset UI; durable browser history and crash behavior are not implemented/verified.",
+      "name": "Find and zoom behavior",
+      "nextDependency": "Validate the complete product UI/history behavior after engine approval.",
+      "number": 8,
+      "owner": "Native/UI and core engineering",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "30/30 uniquely attributed single-view content-process terminations recovered; 7 checks per run. Signal-to-result observed p95 upper bound 600.71 ms; callback-to-DOM p95 502.09 ms. Those timings used a hidden automatic-reload fixture before the recovery-state fix. The final revision passed 49/49 checks in actual AppKit windows across Profile A, Profile B and Private: recovery status, no automatic reload, real toolbar Reload, last committed URL, new document identity and unchanged synthetic storage/documents in unaffected windows. Five injected stale navigation callbacks were rejected before and after reload; foreign-view callbacks were also rejected. This tests native callback injection, not arbitrary event scheduling or stale process notifications. A stale-callback defect was fixed with retired-navigation/active-navigation identity checks, view ownership checks, retained committed URL and explicit user reload. Remaining gaps include durable product state, termination during navigation/download/profile switching and broader crash scheduling. Helper attribution used read-only private Darwin coalition/unique-ID diagnostics, validated against two simultaneous isolated apps with disjoint helper groups. Exact executable paths, process owner and both coalition IDs were checked; unique IDs were rechecked immediately before each targeted signal. The diagnostic stays outside browser source and is not a stable public product API.",
+      "name": "Crash and content-process recovery",
+      "nextDependency": "Validate in-flight navigation/download/profile-switch crashes, durable state and broader process-callback scheduling; retain host-specific diagnostic limits.",
+      "number": 9,
+      "owner": "Platform QA / diagnostics owner",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "Compilation, ad-hoc signature verification, signed normal entitlements, launch, and executed local/public tests succeeded with App Sandbox and Hardened Runtime. The normal bundle has no media entitlement/purpose string. Developer ID, distribution enforcement, and macOS 26 runtime remain unverified and scheduled for final release validation.",
+      "name": "Sandbox and Hardened Runtime compatibility",
+      "nextDependency": "Complete signing/notarization and minimum-OS validation in the final release-validation stage.",
+      "number": 10,
+      "owner": "Platform/security engineering",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "All 7 public destinations loaded in 3 fresh-store repetitions: 21/21 HTTP landing-page observations. No login, editing/save workflow, payment, conference room, or service account was used.",
+      "name": "Representative website compatibility",
+      "nextDependency": "Run approved critical account workflows if the public-only scope changes.",
+      "number": 11,
+      "owner": "Product owner / compatibility QA",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "Targets were approved. 30 AC-powered timing samples met the 3 measured proxy thresholds; an earlier 30-sample battery run was retained separately. The prior host-specific diagnostic measured bounded recovery and aggregate RSS before the recovery-state fix; those values were not requalified for the changed revision. True OS cold launch, energy/conference and controlled clean-state validation remain open. A separate AC-powered ten-view run idled 630.01 s, then collected 30 one-second host+12-helper RSS samples. Peak 23.77 MiB against the 1.5 GB target; numeric threshold met. RSS excludes compressed-memory/physical-footprint accounting. This is one idle run with sequential samples, hidden windows and an active desktop.",
+      "name": "Performance targets",
+      "nextDependency": "Complete the remaining method-controlled cold-launch, energy, conferencing and product-performance measurements.",
+      "number": 12,
+      "owner": "Performance / platform QA",
+      "status": "Partially Verified"
+    },
+    {
+      "evidenceAndLimitations": "The user scheduled developer code signing/notarization for the final stage. The prior inspection reported 0 valid signing identities; that remains an unverified release dependency rather than a current Phase 3 blocker. The prototype is ad hoc. No notarized distribution, installer/updater, or signed metadata run occurred.",
+      "name": "Internal distribution feasibility",
+      "nextDependency": "At final release validation, configure Developer ID signing/notarization and validate ADR 0002 distribution requirements.",
+      "number": 13,
+      "owner": "Release/security engineering",
+      "status": "Deferred \u2014 final release validation"
+    }
+  ],
+  "latestAttributedChecks": {
+    "bundleIdentifier": "internal.vezham.WKPrototype.Diagnostics.1794058231.14262",
+    "crashEvidenceProvenance": "Copied without changing raw sample run IDs after the first idle observation was interrupted to allow timer coalescing. Native source hashes match.",
+    "crashRecovery": {
+      "approvedTargetMs": 2000,
+      "callbackToDOMReadyMs": {
+        "maximum": 512.2887500001525,
+        "median": 230.32537499966566,
+        "p95": 502.09179166631657
+      },
+      "checksPerSample": 7,
+      "limitations": "Single hidden private fixture, automatic reload. Does not validate visible recovery UI, multi-view/stale callbacks, user recovery choice, host/GPU/network-process crashes, or durable product state.",
+      "numericThresholdMet": true,
+      "samples": 30,
+      "signalToResultObservedUpperBoundMs": {
+        "maximum": 647.113458,
+        "median": 247.02977099999998,
+        "p95": 600.711917
+      },
+      "status": "passed for bounded single-view harness"
+    },
+    "crashSourceRunID": "20261107T132441Z-13174",
+    "method": "Host-specific private Darwin coalition/unique-ID diagnostics outside app source; exact path, owner and identity checks. Active desktop; hidden AppKit windows; OS caches untouched.",
+    "runID": "20261107T133031Z-14262",
+    "security": "Normal App Sandbox/network-client/user-selected-file entitlements and Hardened Runtime; no debug/media entitlements. No root or security relaxation.",
+    "sourceSHA256": {
+      "LocalInteractionProbe.swift": "8a2fae9505b0105dba696cc3d366ee75f243046086ff22ef8a6127bdc00620a0",
+      "NavigationPolicy.swift": "f0eda048dc9b305210a3a28bf3e10ad8c90e1fa2f3d91b70ba1762b267666149",
+      "Phase3Measurements.swift": "0adf7a80fe2a744bd45af1b00301b83988356995b72d9986e7c60bd43c8c6e7f",
+      "main.swift": "170dfe1e122923a245441c488996295d49e04450bd918245aea828396607a043"
+    },
+    "sources": [
+      "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/sys/proc_info_private.h",
+      "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/mach/coalition.h"
+    ],
+    "status": "completed bounded diagnostics",
+    "tenIdleViewsMemory": {
+      "ACPowerConfirmedAtStartAndEnd": true,
+      "RSSBytes": {
+        "maximum": 24920064,
+        "median": 21708800.0,
+        "p95": 24920064
+      },
+      "approvedTargetBytes": 1500000000,
+      "engineProcessCount": 12,
+      "limitations": "RSS only, not physical footprint/compressed-memory accounting. Hidden windows and active desktop; no true cold-cache, energy or conferencing acceptance. One 10-minute run; 30 sequential samples are not 30 independent runs.",
+      "loadedViewCount": 10,
+      "nativeIdleSeconds": 630.0058475833339,
+      "numericThresholdMet": true,
+      "sampleCount": 30,
+      "sampleIntervalSeconds": 1,
+      "status": "observed"
+    }
+  },
+  "latestAttributedDerivedStatistics": {
+    "callbackToDOMReadyMs": {
+      "maximum": 512.2887500001525,
+      "median": 230.32537499966566,
+      "p95NearestRank": 502.09179166631657,
+      "sampleCount": 30,
+      "sampleVarianceNMinus1": 11343.512584198286
+    },
+    "currentSourceMatchesMeasuredRevision": false,
+    "helperCount": 12,
+    "hostPlusEngineRSSBytes": {
+      "maximum": 24920064,
+      "median": 21708800.0,
+      "p95NearestRank": 24920064,
+      "sampleCount": 30,
+      "sampleVarianceNMinus1": 1029727357064.5333
+    },
+    "hostPlusEngineRSSMiB": {
+      "maximum": 23.765625,
+      "median": 20.703125,
+      "p95NearestRank": 23.765625,
+      "sampleCount": 30,
+      "sampleVarianceNMinus1": 0.9365315755208333
+    },
+    "measuredSourceSHA256": {
+      "LocalInteractionProbe.swift": "8a2fae9505b0105dba696cc3d366ee75f243046086ff22ef8a6127bdc00620a0",
+      "NavigationPolicy.swift": "f0eda048dc9b305210a3a28bf3e10ad8c90e1fa2f3d91b70ba1762b267666149",
+      "Phase3Measurements.swift": "0adf7a80fe2a744bd45af1b00301b83988356995b72d9986e7c60bd43c8c6e7f",
+      "main.swift": "170dfe1e122923a245441c488996295d49e04450bd918245aea828396607a043"
+    },
+    "membershipAndIdentityStableAcrossMemorySamples": true,
+    "method": "Recomputed from raw native results, per-signal guards and per-process RSS snapshots. Sample variance uses n-1. Sequential idle samples are not independent idle runs.",
+    "rawChecksPassed": 210,
+    "revisionScope": "Metrics describe the recorded measured source. Later prototype changes require separate validation; no current performance qualification is inferred.",
+    "signalToResultObservedUpperBoundMs": {
+      "maximum": 647.113458,
+      "median": 247.02977099999998,
+      "p95NearestRank": 600.711917,
+      "sampleCount": 30,
+      "sampleVarianceNMinus1": 18274.252572864367
+    },
+    "status": "raw evidence cross-checked"
+  },
+  "latestNativePermissionRetry": {
+    "OSAccess": "Both devices authorized temporarily",
+    "VezhamPromptChoice": "deny",
+    "VezhamPromptReached": true,
+    "fullPermissionGate": "Partially Verified",
+    "passedChecks": 4,
+    "result": "native-permission-20261107T130211Z-native-deny/native-permission-retry-results.json",
+    "status": "passed",
+    "targetedPermissionResetsSucceeded": true,
+    "temporaryBuildRemoved": true
+  },
+  "latestRecoveryRegression": {
+    "evidenceDirectory": "recovery-regression-20261107T135604Z-15653/",
+    "method": "One isolated normal-entitlement build; sequential fresh LaunchServices processes; loopback only. Foundation URL policy is a separate executable.",
+    "runID": "20261107T135604Z-15653",
+    "sourceHashes": "source-hashes.json",
+    "status": "passed",
+    "suites": [
+      {
+        "mode": "--test-seed",
+        "passedChecks": 12,
+        "result": "isolation-results-20261107T135604Z-15653-seed.json"
+      },
+      {
+        "mode": "--test-verify",
+        "passedChecks": 6,
+        "result": "isolation-results-20261107T135604Z-15653-verify.json"
+      },
+      {
+        "mode": "--test-private-windows",
+        "passedChecks": 3,
+        "result": "window-lifecycle-results-20261107T135604Z-15653.json"
+      },
+      {
+        "mode": "--test-find-zoom",
+        "passedChecks": 14,
+        "result": "find-zoom-results-20261107T135604Z-15653.json"
+      },
+      {
+        "mode": "URL policy",
+        "passedChecks": 13,
+        "result": "url-policy-results.json"
+      }
+    ],
+    "totalPassedChecks": 48
+  },
+  "latestRecoveryUI": {
+    "evidenceDirectory": "recovery-ui-20261107T135156Z-15341/",
+    "limitations": "Actual prototype windows/toolbar; three targeted content terminations; native test-only callback injection. Synthetic storage only; no durable product history or host-crash restoration claim.",
+    "passedChecks": 49,
+    "roles": [
+      "A",
+      "B",
+      "Private"
+    ],
+    "status": "passed"
+  },
+  "localInvestigation": "complete for listed executed scope",
+  "performanceRevisionScope": "The 30-sample timing and ten-view RSS observations predate this recovery-state fix and remain historical feasibility evidence. They were not rerun to qualify the changed revision. The final revision has 49 recovery UI checks and 48 existing regression checks, with matching native source hashes.",
+  "phase3Acceptance": "open / blocked",
+  "publicPages": {
+    "attempts": 21,
+    "loaded": 21
+  },
+  "tenIdleViews": {
+    "engineProcessAttribution": "unavailable; RSS target requires host plus attributable engine processes",
+    "error": null,
+    "hostPID": 22810,
+    "idleSeconds": 621.1847340833338,
+    "loadedViewCount": 10,
+    "mode": "ten-idle-views",
+    "runID": "20261107T094114Z-22381-idle",
+    "status": "observed"
+  }
+}

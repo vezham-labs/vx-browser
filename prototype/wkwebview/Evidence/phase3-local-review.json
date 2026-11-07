@@ -1,0 +1,32 @@
+{
+  "dispositions": [
+    {
+      "criterion": "redirect to privileged app scheme",
+      "evidence": [
+        {
+          "currentPath": "",
+          "event": "navigation-blocked",
+          "mainFrame": true,
+          "scheme": "vezham-ui"
+        }
+      ],
+      "note": "The original check incorrectly required currentPath=/cross-result. WebKit provided an empty/transient URL during the callback. The native policy recorded a cancel decision for the main-frame privileged scheme. The runner assertion was corrected; the original failed report remains unchanged.",
+      "status": "native-cancel-observed"
+    },
+    {
+      "criterion": "incomplete download leaves final artifact",
+      "note": "Initial run left a 29-byte interrupted.bin. App-owned staging now keeps incomplete bytes out of the final selected path and removes its staging directory on error. Completed payload persistence was verified separately.",
+      "regressionReport": "download-staging-regression-20261107T092722Z-18980.json",
+      "status": "fixed-and-regression-verified"
+    }
+  ],
+  "engineDecision": "ADR 0001 Proposed",
+  "macOS26": "deferred by user direction",
+  "mode": "phase3-local-review",
+  "publicAccounts": "blocked by user direction: public pages only",
+  "rawInitialRun": {
+    "checks": 26,
+    "file": "phase3-local-results-20261107T091800Z-16628.json",
+    "passed": 24
+  }
+}

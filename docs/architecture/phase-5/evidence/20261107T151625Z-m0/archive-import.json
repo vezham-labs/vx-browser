@@ -1,0 +1,14 @@
+[
+  {
+    "sourcePath": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/https-chatgpt-com-share-6aee2c10-10e8/docs.zip",
+    "repositoryPath": "docs/architecture/phase-3/archives/pre-phase-4-docs.zip",
+    "sha256": "ff047117c68ec9254d209928937894295dfb908d6e61b7d0db9b3055034b1fac",
+    "treatment": "Immutable historical copy; original retained; not current architecture authority"
+  },
+  {
+    "sourcePath": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-07/referenced-chatgpt-conversation-this-is-an/outputs/phase-3-review-bundle-2026-11-07.zip",
+    "repositoryPath": "docs/architecture/phase-3/archives/phase-3-review-bundle-2026-11-07.zip",
+    "sha256": "ba67130ddd8dbbc1e5823f16f3535d46aac027a6c94bb31b69641aabca7ea4cb",
+    "treatment": "Immutable historical copy; original retained; not current architecture authority"
+  }
+]

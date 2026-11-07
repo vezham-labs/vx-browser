@@ -1,0 +1,1 @@
+{"mode": "upload", "status": "passed", "tests": [{"label": "selected fixture filename received", "passed": true}, {"label": "uploaded bytes match synthetic fixture", "passed": true}, {"label": "upload stayed within the loopback fixture", "passed": true}], "failureCount": 0, "failures": [], "filename": "upload-fixture.txt", "byteCount": 32}

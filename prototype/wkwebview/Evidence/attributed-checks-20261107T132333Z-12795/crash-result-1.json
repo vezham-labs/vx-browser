@@ -1,0 +1,46 @@
+{
+  "callbackToDOMReadyMs": 306.2728333334235,
+  "failureCount": 2,
+  "failures": [
+    "local recovery fixture loaded",
+    "last committed URL reloads successfully"
+  ],
+  "guardEvidence": "crash-guard-1.json",
+  "hostOSVersion": "Version 27.2 (Build 26B123)",
+  "mode": "crash-recovery",
+  "pollIntervalMs": 20,
+  "runID": "20261107T132333Z-12795-crash-1",
+  "signalToResultObservedUpperBoundMs": 333.597417,
+  "status": "failed",
+  "tests": [
+    {
+      "label": "local recovery fixture loaded",
+      "passed": false
+    },
+    {
+      "label": "WebKit reports content-process termination",
+      "passed": true
+    },
+    {
+      "label": "host process remains alive for recovery",
+      "passed": true
+    },
+    {
+      "label": "last committed URL remains available",
+      "passed": true
+    },
+    {
+      "label": "host remains alive after content termination",
+      "passed": true
+    },
+    {
+      "label": "last committed URL reloads successfully",
+      "passed": false
+    },
+    {
+      "label": "reloaded fixture responds to a DOM readiness query",
+      "passed": true
+    }
+  ],
+  "timingScope": "Native termination callback through last-URL reload and a successful DOM readiness query; excludes signal-to-callback delay. External runner separately bounds signal-to-result time."
+}

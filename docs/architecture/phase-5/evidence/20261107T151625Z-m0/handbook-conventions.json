@@ -1,0 +1,100 @@
+{
+  "auditedExistingPages": 24,
+  "frontmatterPages": 0,
+  "convention": "Plain Markdown; descriptive H1 and H2 headings; relative links; vx/README.md handbook index; nested subject indexes like coding-standards/index.md. No separate docs framework.",
+  "chosenEntry": "vx/handbooks/browser/README.md",
+  "mapping": [
+    {
+      "subject": "overview",
+      "handbookPage": "vx/handbooks/browser/overview/index.md",
+      "authoritativeSources": [
+        "docs/architecture/phase-3/owner-approval-decision.md",
+        "docs/architecture/phase-5/phase-5-scope-and-milestones.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "architecture",
+      "handbookPage": "vx/handbooks/browser/architecture/index.md",
+      "authoritativeSources": [
+        "docs/architecture/browser-platform-architecture.md",
+        "docs/architecture/browser-engine-contract.md",
+        "docs/architecture/phase-3/browser-mvp-architecture-baseline.md",
+        "docs/architecture/phase-5/reports/M0/m0-foundation-decisions.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "engineering",
+      "handbookPage": "vx/handbooks/browser/engineering/index.md",
+      "authoritativeSources": [
+        "vx/handbooks/coding-standards/index.md",
+        "vx/handbooks/brand.md",
+        "docs/architecture/phase-5/reports/M0/m0-foundation-decisions.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "security",
+      "handbookPage": "vx/handbooks/browser/security/index.md",
+      "authoritativeSources": [
+        "docs/security/browser-threat-model.md",
+        "docs/security/browser-security-architecture.md",
+        "docs/security/browser-security-acceptance-criteria.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "development",
+      "handbookPage": "vx/handbooks/browser/development/index.md",
+      "authoritativeSources": [
+        "apps/browser-macos/README.md",
+        "docs/architecture/phase-5/reports/M0/README.md",
+        "vx/handbooks/local-development.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "testing",
+      "handbookPage": "vx/handbooks/browser/testing/index.md",
+      "authoritativeSources": [
+        "docs/architecture/browser-mvp-acceptance-criteria.md",
+        "docs/architecture/phase-3/browser-acceptance-gate-ledger.md",
+        "docs/architecture/phase-5/evidence/README.md",
+        "docs/architecture/phase-5/reports/README.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "distribution",
+      "handbookPage": "vx/handbooks/browser/distribution/index.md",
+      "authoritativeSources": [
+        "docs/decisions/0002-browser-distribution-and-platform.md",
+        "docs/architecture/browser-distribution.md",
+        "docs/architecture/phase-5/phase-5-scope-and-milestones.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "operations",
+      "handbookPage": "vx/handbooks/browser/operations/index.md",
+      "authoritativeSources": [
+        "docs/security/browser-security-architecture.md",
+        "docs/architecture/browser-distribution.md",
+        "docs/architecture/phase-5/reports/M0/README.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    },
+    {
+      "subject": "decisions",
+      "handbookPage": "vx/handbooks/browser/decisions/index.md",
+      "authoritativeSources": [
+        "docs/decisions/0001-browser-engine-strategy.md",
+        "docs/decisions/0002-browser-distribution-and-platform.md",
+        "docs/architecture/phase-3/owner-approval-decision.md",
+        "docs/architecture/phase-5/reports/M0/m0-foundation-decisions.md"
+      ],
+      "treatment": "New summary/navigation; detailed sources retained in docs, not duplicated or moved"
+    }
+  ]
+}

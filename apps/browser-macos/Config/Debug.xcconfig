@@ -1,0 +1,5 @@
+#include "Base.xcconfig"
+// vx-bot/NOTE: Local development signing is not a distributable release identity.
+CODE_SIGN_IDENTITY = -
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+DEBUG_INFORMATION_FORMAT = dwarf
