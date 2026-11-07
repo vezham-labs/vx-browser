@@ -1,0 +1,29 @@
+{
+  "algorithm": "SHA-256",
+  "documents": {
+    "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md": "0e5d60819f5074c2e34d1f0b8bec018368fa10584a7e2d230ee635628ac2232f",
+    "docs/architecture/phase-5/reports/M1/m1-implementation-authorization-proposal.md": "fcedbaa60a13d690c56bb1764c7618050df767986555d5c77cf61b15895ea809",
+    "docs/architecture/phase-5/reports/M1/m1-launch-feature-matrix.md": "5a07610bec16b1e055cdcc006b094156859856efb06882f0700a2219c0d68c68",
+    "docs/architecture/phase-5/reports/M1/m1-owner-decision-packet.md": "8b26e69f72ff2b8bcc6784d8ef8013f1dd86720e02408a78935eb3a12a839e04"
+  },
+  "evidence": {
+    "authored-document-files.json": "9aa71e38b4b600c03f5fc60a115cec1462e196286f09810e9f4ead8afb9aa725",
+    "documentation-format-check-final-result.json": "eef181135add8fd7d4595fed0834e0c783a91f82261f3b1a71228f175da46182",
+    "documentation-format-check-final.log": "e2d27964565b70dc639c0eb6e1e1d72b0bb14e84650133095928ecd36ca8eeb0",
+    "documentation-format-check-result.json": "f3965a58ffe58e53f26535890298c102cab8112cda1773c58d03a1004aa3d5c1",
+    "documentation-format-check.log": "e2d27964565b70dc639c0eb6e1e1d72b0bb14e84650133095928ecd36ca8eeb0",
+    "documentation-format-policy-coverage-result.json": "9b6883c1542db00d09ad6d91e4bb64cdb859d48dd40253f00528f40d1d69c5b3",
+    "documentation-format-policy-coverage.log": "0ed38aed493ae1eb78b68582b9c240860d6a9214afe324c56821781a935a8e62",
+    "documentation-format-result.json": "f59a2f51bc335be1e4c4114001c25eb220ae3e275d43334d953770b7dd65eaff",
+    "documentation-format.log": "a57cebd6f76394f58409eac57f5ab0d94dc8ed9bde16fc1be4996b04ee93c2b9",
+    "documentation-review.json": "47347849fe6fb0570894f63a75d48bab602aa898eccaf01ac28e87762fda19d7",
+    "launch-feature-index.json": "88df98c6f5485e5abe7e9d54a02ffb1fa627882d9c3186a3df33c4b7562c1a51",
+    "owner-decision-index.json": "22485014b5b9b329b2737df7c4605c87d7c8726e7ffc91b3d38b321e78704ca7",
+    "preservation-and-change-review.json": "9aa628f82af5829c51171028632c620404ad5bf293dd4ee3b6680e924e1441be",
+    "proposed-slice-test-index.json": "193d8b03d7288d23fc6351fc6475e0e2d6ea53d545713a28bfcd600297bdd437",
+    "repository-baseline.json": "fc8cd220779e4d62c6c736e501e1b8d5a6f1aae64da5a17e9366f9e9cc432459",
+    "reviewed-source-files.json": "fb47a61c9b3ec49adc0a28944aac90af713cff87a2e19f89b3475e7c271bf880"
+  },
+  "recordedAtUTC": "2026-11-07T18:41:01.958185+00:00",
+  "scope": "All four authored/revised Markdown files and every other existing artifact in this owner-packet review run; excludes this self-referential manifest."
+}

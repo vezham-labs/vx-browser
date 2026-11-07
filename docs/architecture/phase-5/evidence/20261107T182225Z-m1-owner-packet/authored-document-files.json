@@ -1,0 +1,11 @@
+{
+  "modified": [
+    "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md"
+  ],
+  "created": [
+    "docs/architecture/phase-5/reports/M1/m1-owner-decision-packet.md",
+    "docs/architecture/phase-5/reports/M1/m1-launch-feature-matrix.md",
+    "docs/architecture/phase-5/reports/M1/m1-implementation-authorization-proposal.md"
+  ],
+  "scope": "Owner decision preparation and register cross-references only; no approvals, ADR edits or implementation."
+}

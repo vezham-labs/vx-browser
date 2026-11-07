@@ -1,0 +1,18 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "format:write",
+    "--files=docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md,docs/architecture/phase-5/reports/M1/m1-implementation-authorization-proposal.md,docs/architecture/phase-5/reports/M1/m1-launch-feature-matrix.md,docs/architecture/phase-5/reports/M1/m1-owner-decision-packet.md"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "startedAtUTC": "2026-11-07T18:31:30.765999+00:00",
+  "elapsedSeconds": 2.232780933380127,
+  "exitCode": 0,
+  "outputFile": "documentation-format.log",
+  "scope": "M1 owner packet documentation check only; no builds, product tests or database/source implementation.",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

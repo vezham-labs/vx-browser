@@ -1,0 +1,18 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "format:write",
+    "--files=docs/architecture/phase-5/reports/M1/m1-owner-decision-packet.md"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "startedAtUTC": "2026-11-07T18:35:25.428612+00:00",
+  "elapsedSeconds": 1.930927038192749,
+  "exitCode": 0,
+  "outputFile": "documentation-format-policy-coverage.log",
+  "scope": "M1 owner packet documentation check only; no builds, product tests or database/source implementation.",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "recordedAtUTC": "2026-11-07T18:37:37.184520+00:00",
+  "reviewBaseline": "6f5f8400b16bbe78d0aecd430eddfdc8c7aedbab",
+  "documentsCrossChecked": [
+    {
+      "path": "docs/architecture/browser-engine-contract.md",
+      "baselineSHA256": "6a3068791d5e58ef77dadbe66613dca1be9e20bcc18634619ef4eb62952461dc"
+    },
+    {
+      "path": "docs/architecture/browser-mvp-acceptance-criteria.md",
+      "baselineSHA256": "690fb1f0bb30395caf4253961b259e774ad769aad7b8b1c1a5671abdba3765e3"
+    },
+    {
+      "path": "docs/architecture/browser-platform-architecture.md",
+      "baselineSHA256": "bde90b1a09aac91524cf1e90bc4dc230668f4f3a14b5c4eb701fdfc4a14668b7"
+    },
+    {
+      "path": "docs/architecture/phase-3/browser-acceptance-gate-ledger.md",
+      "baselineSHA256": "1602bc3c72d6c199344a2ba0b3fb1cdba5c2e6d9ebf496e1cd4022dccc10c62a"
+    },
+    {
+      "path": "docs/architecture/phase-3/browser-mvp-architecture-baseline.md",
+      "baselineSHA256": "bae3009809679225f66e206b881b0ca1fbda2fe5e2ff4d6f31bffbb8d540718c"
+    },
+    {
+      "path": "docs/architecture/phase-3/owner-approval-decision.md",
+      "baselineSHA256": "20f33c8a693dd14844b3f94c2c60a04390ef7c486776f83185c468f6964d0e75"
+    },
+    {
+      "path": "docs/architecture/phase-3/phase-3-exit-review.md",
+      "baselineSHA256": "47e0a55519b466078374b6fb7fe2298fbf63c24e5ef5f17810cd7ff9e0695326"
+    },
+    {
+      "path": "docs/architecture/phase-5/phase-5-implementation-plan.md",
+      "baselineSHA256": "0217e04c85ad8f40bd99b10181024cc9fe196e1f79d640aee6179ce38358b89f"
+    },
+    {
+      "path": "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+      "baselineSHA256": "de3e2dc4bab97ec4c8f29099456c87598b31b6013bda956974d9974286a3a257"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M0/README.md",
+      "baselineSHA256": "fdb55f7768aae9bcd1a8a4aaf0c25fb0a34e0cb8d4a5a67dfccafe98da05595d"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "baselineSHA256": "3f4574a158b4fbeefe3adaff1b984a39a7f6872e3a11fbab95dc0944ef21940f"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-capability-architecture.md",
+      "baselineSHA256": "fc2c780d05b4341a7ce9a041c12ee385d42e7d0407332aeddeedbb632c5f43ce"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+      "baselineSHA256": "ba9609502a0e8e3e8c999986b7cfb20c7aaf52437660b119c76ee8c0d5eee6e2"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-data-model.md",
+      "baselineSHA256": "afc0dd4fb7a50be5228b1290cec2e6086d2a8880b8d9ec06ac11280713a47902"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+      "baselineSHA256": "44f02f3bdc750b45c77291aa17cf02626306f2d5064b76de0f1b5956c23d85a6"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/dsh-architecture-assessment.md",
+      "baselineSHA256": "6a6d59598632367d8bd2a8603d759c712ba143b1ebf21a7cdbb3984c498aa9c5"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+      "baselineSHA256": "e97e6277cf9c1833d0e0585632e9c64098f2ea9354ae73f996047bd576848c0a"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md",
+      "baselineSHA256": "cda49df7084a73d7a124d8589884f31f2a3d0c281d2e52152ed19759e12d6c4e"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+      "baselineSHA256": "beeba23674c6eb9754ffdb77210611f1e944f290b9b548a21e0f6e30a74c6caa"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/migration-and-recovery-strategy.md",
+      "baselineSHA256": "8f60ccad70121bcb6bd97c845755390a70e2b0e10552f517caf91a19393a16e2"
+    },
+    {
+      "path": "docs/decisions/0001-browser-engine-strategy.md",
+      "baselineSHA256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5"
+    },
+    {
+      "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "baselineSHA256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2"
+    },
+    {
+      "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+      "baselineSHA256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e"
+    },
+    {
+      "path": "docs/decisions/0004-browser-local-persistence.md",
+      "baselineSHA256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3"
+    },
+    {
+      "path": "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md",
+      "baselineSHA256": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17"
+    },
+    {
+      "path": "docs/security/browser-security-acceptance-criteria.md",
+      "baselineSHA256": "60b537d67f223f42bb1d8efcb5b9b68feb476ee90ecd188eab5f6d5a3191c68d"
+    },
+    {
+      "path": "docs/security/browser-security-architecture.md",
+      "baselineSHA256": "47aec398547c568bcc365dbd7210f3bebb301fd805a76e8e45af0d980a864665"
+    },
+    {
+      "path": "docs/security/browser-threat-model.md",
+      "baselineSHA256": "aaa190ef8192db214ff2ed20f6a1339406609faa7f43abb6137e44ac5518366e"
+    }
+  ],
+  "historicalEvidenceReadOnly": [
+    {
+      "path": "prototype/wkwebview/Evidence/recovery-ui-20261107T135156Z-15341/recovery-ui-results.json",
+      "baselineSHA256": "4f132a4e39b84ff3efde149f93835829cab699e7e226ac095f61ad2ccfa86829"
+    },
+    {
+      "path": "prototype/wkwebview/Evidence/recovery-regression-20261107T135604Z-15653/regression-summary.json",
+      "baselineSHA256": "cd49d130bd82152051a5a7f89752fd4339b15c4349f7c0986192228db082eafa"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261107T151625Z-m0/m0-bundle-audit.json",
+      "baselineSHA256": "1cf258fea62b73e46c43d7bc24965ebaa61322b955af5111e7c6ad4913231132"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261107T151625Z-m0/m0-native-launch-authorized-result.json",
+      "baselineSHA256": "d5e3571f3c87968aef9ae78cd54edb891d93d80c9f57d217c6bfdc197ff7f0e9"
+    }
+  ],
+  "method": "Read/cross-check current and unchanged preceding-review documents, existing approval/gate authority and bounded historical evidence. Last DSH review document hashes match at baseline; no source/approval inferred from commits.",
+  "evidenceLimits": [
+    "Historical recovery scope explicitly excludes durable product history/host-crash restoration.",
+    "M0 bundle/launch evidence is not browser qualification; no command was rerun.",
+    "Prior suites/counts/revisions remain separate; no current performance or new-core acceptance inferred."
+  ],
+  "buildsOrProductTestsExecuted": false
+}

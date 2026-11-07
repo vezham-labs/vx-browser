@@ -1,0 +1,79 @@
+{
+  "authorization": "Not Granted",
+  "status": "All future cases Not Run",
+  "caseFamilies": [
+    [
+      "S01",
+      "Layering and standalone build",
+      "Compile the new Swift6 package and tests without AppKit/WebKit/React/cloud; inspect actual target dependencies and minimum26.0 configuration",
+      "Domain/Core use only approved value/port dependencies; SQLite confined to Persistence; record host/SDK, no minimum-OS runtime claim"
+    ],
+    [
+      "S02",
+      "Owned identity/private model",
+      "Fake persistent A/B and private scopes; create/select/close logical windows/tabs; attempt cross-profile rebind/delete while owned",
+      "Immutable assignment and active-owner refusal; private state remains memory-only; IDs never constitute authority"
+    ],
+    [
+      "S03",
+      "Navigation state without an engine",
+      "Fake started/redirected/committed/finished/failed/stopped, duplicate and foreign/stale-generation events with fixed synthetic URLs",
+      "Only current matching commits change memory state; cancelled/disposed state cannot resurrect. No history repository, network or real engine"
+    ],
+    [
+      "S04",
+      "Actor reentrancy and cancellation",
+      "Suspend a fake port, retire owner/generation, deliver late result; race a synthetic store commit with caller cancellation",
+      "No mutation of replacement owner; committed receipt reconciled rather than falsely rolled back; no FIFO-across-await assumption"
+    ],
+    [
+      "S05",
+      "Small fake provider lifecycle",
+      "Explicit fake binding, duplicate/wrong-version/missing-dependency, partial setup failure, slow subscriber, quiesce and repeated disposal",
+      "No readiness-as-permission; provisional resources released; bounded delivery and generation fence; dependencies outlive ordered cleanup; truthful cleanup-required"
+    ],
+    [
+      "S06",
+      "Fixture store ownership and private refusal",
+      "Test-only catalog and profile A/B files beneath one unique controlled root; wrong header/lease and private request including receipt/migration path",
+      "Wrong-owner/private request rejected before file open or receipt write; no user profile/catalog or engine data read"
+    ],
+    [
+      "S07",
+      "Typed preference transaction",
+      "Allowlisted synthetic preferences with wrong type/range, bound values, multi-operation rollback and expected-revision conflict",
+      "Only valid atomic batches commit; no arbitrary SQL/predicate API or partial saved state"
+    ],
+    [
+      "S08",
+      "Bounded commit receipts",
+      "Same MutationId/same payload, same ID/different payload, retained receipt, expiry/stale expected revision and cancellation after commit",
+      "Known outcome reconciles; payload mismatch/stale retry rejects; no unlimited exactly-once claim or private receipt"
+    ],
+    [
+      "S09",
+      "Fixture migration/version refusal",
+      "One checksummed test-only v1\u2192v2 transition on copies, injected failure before version commit, corrupt checksum and unsupported newer-writer fixture",
+      "Rows/schema/version agree after rollback/reopen; unknown/newer/corrupt input is preserved and refused, never silently reset. Test v2 is not a product schema release"
+    ],
+    [
+      "S10",
+      "Bounded storage failures",
+      "Controlled second fixture connection for busy case; injected FULL/I/O outcomes; deliberately corrupt disposable copy and reopen checks",
+      "Bounded errors/no main-actor blocking/no false saved status. Label injected versus actual cases; never exhaust host disk or kill browser/WebKit processes"
+    ],
+    [
+      "S11",
+      "Resource, artifact and data-boundary audit",
+      "Instrument fixture opens/paths/cleanup, logs, fake network/service calls and owned subscriptions",
+      "All DB files stay under test root; no real user data/Keychain/TCC/browser container, external request or persistent private payload. Evidence is synthetic; no product outage/privacy claim"
+    ],
+    [
+      "S12",
+      "Native-value contract fixtures",
+      "Exercise selected draft0.2 request/result/event values, unknown versions/types, scope/generation mismatch and revision/sequence encoding",
+      "Fail closed and preserve exact correlation/owned projection; no JS/native bridge, actual chrome dispatcher or released wire-v1 claim"
+    ]
+  ],
+  "scope": "I1 + I2 + synthetic I3 only; no execution performed"
+}

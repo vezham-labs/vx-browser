@@ -6,6 +6,26 @@
 
 Already approved: bounded Phase3 closure, architecture boundaries, internal macOS26.0+ deployment, Swift/AppKit host, future React/TypeScript/HeroUI v3 chrome, engine-independent core and conditional WKWebView planning/implementation direction. ADR0001 remains Proposed; ADR0002 Accepted. No new engine approval is requested here. The current authorization is M1 design only; it does not approve the new runtime/storage recommendations or implementation.
 
+## Owner decision packet and closure tracking
+
+The [owner decision packet](m1-owner-decision-packet.md) consolidates the outstanding choices into **OD01-OD20**, with recommendations, alternatives, dependencies, reversibility, explicit approval requirements and consequences of deferral. The [launch feature matrix](m1-launch-feature-matrix.md) preserves required MVP outcomes, and the [first implementation authorization proposal](m1-implementation-authorization-proposal.md) bounds I1/I2/synthetic I3 and its future cases.
+
+**Current closure status: preparation complete; owner dispositions Pending; implementation Not Started / authority Not Granted.** No existing decision is silently Accepted. OD IDs belong to the new packet; this register's D IDs and the historical ledger's D IDs are separate namespaces. Settled engine/closure/baseline approvals and mandatory security controls are not requested again.
+
+| Existing M1 decision | Owner-packet cross-reference                    | Review/enablement boundary                                                                                                         |
+| -------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| D01                  | OD01-OD03                                       | Runtime/process/package detail before the selected core proof; approved responsibility boundaries unchanged                        |
+| D02                  | OD04-OD06, OD14                                 | SQLite/topology/private representation and transaction/version mechanism; first proof synthetic only                               |
+| D03                  | OD07; SG01-SG07 as applicable                   | Protection/encryption and named security disposition before real data; never inferred from fixtures                                |
+| D04                  | OD08-OD13; SG01-SG05                            | Separate retention, field inventory, backup and restore choices; no live defaults created                                          |
+| D05                  | OD12-OD13; LF13-LF15 / SG05                     | Required Ledger:D14 durable recovery is distinct from optional/default-off automatic reopen; no forms/POST/old authority replay    |
+| D06                  | OD18; LF19                                      | No spaces/workspace placeholder or feature until separately scoped                                                                 |
+| D07                  | OD03, OD14, OD16                                | Native draft0.2 values/receipts for proof only; actual bridge/resource origin remains M3                                           |
+| D08                  | OD20 and the finite I1/I2/synthetic I3 proposal | Explicit execution instruction required; I4-I7/M2+ and real data excluded                                                          |
+| D09                  | OD15-OD19                                       | Detailed static capability lifecycle, required feature matrix and future trust/service scope; registration never grants permission |
+
+The packet's [enablement gates](m1-owner-decision-packet.md#security-and-privacy-enablement-gates) apply before real history/URL/title/download data, backup/restore, real-engine private mode, Tamizhi and release. Owner policy approval does not pass implementation/security tests. A later explicit instruction may approve choices and authorize the exact slice together; do not request the same scoped authority again after it is granted.
+
 ## Proposed decisions for review
 
 | ID  | Proposed choice / recommendation                                                                                                                                                          | Alternatives and implications                                                                                                                                                                                                           | Authority / needed before                                                                                                                       |
@@ -48,6 +68,19 @@ Actual chrome origin/scheme/transport/CSP and binder tooling belong to M3; actua
 | R16 | Feature/AI event access leaks profiles/private content or records everything durably          | Narrow read-only authorized projections, recheck queued delivery on revocation; core-owned selected persistence only; future explicit Tamizhi consent; security | Not Tested; M3/M5; no production AI or dynamic extension implementation authorized            |
 
 No risk is marked mitigated by documentation alone. A cross-profile/private leak or unauthorized native action is a hard failure, not an acceptably documented implementation defect. macOS26.0/latest26.x runtime, DeveloperID/notarization, Gatekeeper/sandbox/Hardened Runtime/entitlements and internal updater/distribution gates remain mandatory and unpassed.
+
+## Risk-to-decision review cross-references
+
+| Existing risks | Packet/slice follow-through                                                                                                                   | Status retained                                               |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| R01, R13-R15   | OD02/OD15/OD16; future S04/S05/S12 for reentrancy, binding, readiness, bounded events and disposal; same-process fatal fault limits remain    | Not Tested; no new containment guarantee                      |
+| R02-R04, R11   | OD04-OD07 and SG01-SG06 for store ownership/private refusal and real-data protection; actual engine isolation later                           | Not Tested / real-data decision Pending                       |
+| R05-R08        | OD11-OD14; future S07-S10 for transactions/receipts/version/errors; actual backup/delete/native resource integration needs its separate gates | Not Tested; synthetic proof does not qualify the full service |
+| R09            | OD01/OD03/OD16; old TypeScript adapter facade remains illustrative; align concrete bindings/history ownership before dependent implementation | Open contract clarification, not a changed runtime/ADR status |
+| R10, R12       | OD17 and SG08; name critical subflows/permission kinds/authorized environments and accountable operating reviewers                            | Access-blocked/open roles; no invented accounts or owners     |
+| R16            | OD18/OD19 and SG07; narrow future consent/event access, no private/global feed or native model authority                                      | Future feature Not Tested / not authorized                    |
+
+No new risk is marked mitigated. The owner packet clarifies durable host recovery versus automatic reopening without weakening Ledger:D14, and keeps first-slice proof distinct from required first-MVP features. All original risk entries, historical evidence classifications and mandatory gates remain intact.
 
 ## Design completion disposition
 
