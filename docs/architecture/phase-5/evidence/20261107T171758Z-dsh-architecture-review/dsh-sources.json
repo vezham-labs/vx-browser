@@ -1,0 +1,75 @@
+{
+  "reviewedAtUTC": "2026-11-07T17:18:00.445689+00:00",
+  "repository": "https://github.com/deepseek-ai/deepseek-harness",
+  "revision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "revisionDateUTC": "2026-11-04T08:40:00Z",
+  "sources": [
+    {
+      "path": "README.md",
+      "gitBlobSHA": "7941e30f7bdca9391befe39b9115d211157fa42d",
+      "sha256": "0f5516be2acde776f05572cbc8c3093c90549afe04ce118e11157d073d5d15f4",
+      "bytes": 2673,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/README.md"
+    },
+    {
+      "path": "docs/architecture.md",
+      "gitBlobSHA": "446c50e5bd3d0dcd6fc245f60f342d364785adfd",
+      "sha256": "6a04050d8e8af817ee198592b7d1c280a4198252e0948af3bdae4876aebbb591",
+      "bytes": 18853,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/architecture.md"
+    },
+    {
+      "path": "docs/cordis-primer.md",
+      "gitBlobSHA": "2e5a48745cf96068bec9e31b0c6f1bf9d84b0e34",
+      "sha256": "f0cc573cc10b60d1bd76039fb0bd666edfb32c9b18027d4dc301c042a9e65d58",
+      "bytes": 4136,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/cordis-primer.md"
+    },
+    {
+      "path": "docs/cordis-api/service.md",
+      "gitBlobSHA": "d4b0f06da16decf31e0d348a88e0360b46ee9d35",
+      "sha256": "35780164ecfc3b01c7a5b4c4eba3d7eaf9a6d38a4755a93fff54cedb106b7d98",
+      "bytes": 2677,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/cordis-api/service.md"
+    },
+    {
+      "path": "docs/cordis-api/events.md",
+      "gitBlobSHA": "1916532331f51e8314f9bab00a88e79be56f5049",
+      "sha256": "2101878edebd1f86eee066ab3f19fbbf33c05841e091bfba8a38c976fc4368d3",
+      "bytes": 7407,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/cordis-api/events.md"
+    },
+    {
+      "path": "docs/cordis-tutorial/02-lifecycle-and-effects.md",
+      "gitBlobSHA": "8e75708eb0cba1aceb7fa3dae5ae334995eb113f",
+      "sha256": "109dec778aa71245e17beb2df51d12e9a962db4e2ef7f1221ade268ac4b8a019",
+      "bytes": 4159,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/cordis-tutorial/02-lifecycle-and-effects.md"
+    },
+    {
+      "path": "packages/core/scope/src/store.ts",
+      "gitBlobSHA": "3b40693c8282782cbd847a4556aef9affe64a6ae",
+      "sha256": "e2f6c98e271cbae483393ccd1e5212a255def165a8a591d308efbd827af67278",
+      "bytes": 8013,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/packages/core/scope/src/store.ts"
+    },
+    {
+      "path": "docs/agent-lifecycle.md",
+      "gitBlobSHA": "8dea01c10015ee0da3f29d5f0b185cece4f2df8e",
+      "sha256": "c4e6996195e880d6dbb3bcb05e7c4e34651d002db4e2ca05b59cd74d30309617",
+      "bytes": 5766,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/agent-lifecycle.md"
+    },
+    {
+      "path": "SAFETY.md",
+      "gitBlobSHA": "2b76f00e0619ee69553afdc507df361080f4d3ac",
+      "sha256": "62075bb51e0f7790441e7722ff12063107b4866019332e71ef01b63b6f880fee",
+      "bytes": 1673,
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/SAFETY.md"
+    }
+  ],
+  "method": "Read-only public GitHub API at pinned revision; blob identifiers checked against pinned tree. Original text kept only in temporary reference directory, not vendored into Browser.",
+  "sourceExecuted": false,
+  "dependenciesInstalled": false,
+  "scope": "Architectural inspiration; no DSH/Cordis API, security or browser compatibility validation."
+}

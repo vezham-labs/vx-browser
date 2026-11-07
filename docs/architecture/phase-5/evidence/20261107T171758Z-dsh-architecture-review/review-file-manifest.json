@@ -1,0 +1,28 @@
+{
+  "algorithm": "SHA-256",
+  "documents": {
+    "docs/architecture/phase-5/reports/M1/browser-capability-architecture.md": "fc2c780d05b4341a7ce9a041c12ee385d42e7d0407332aeddeedbb632c5f43ce",
+    "docs/architecture/phase-5/reports/M1/browser-core-architecture.md": "ba9609502a0e8e3e8c999986b7cfb20c7aaf52437660b119c76ee8c0d5eee6e2",
+    "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md": "44f02f3bdc750b45c77291aa17cf02626306f2d5064b76de0f1b5956c23d85a6",
+    "docs/architecture/phase-5/reports/M1/dsh-architecture-assessment.md": "6a6d59598632367d8bd2a8603d759c712ba143b1ebf21a7cdbb3984c498aa9c5",
+    "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md": "cda49df7084a73d7a124d8589884f31f2a3d0c281d2e52152ed19759e12d6c4e",
+    "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md": "beeba23674c6eb9754ffdb77210611f1e944f290b9b548a21e0f6e30a74c6caa",
+    "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17"
+  },
+  "evidence": {
+    "authored-document-files.json": "895a2eaa0660ce411ceeb80d30809e7bf1e0d78408d805812f68424c88f3a5e1",
+    "documentation-format-check-result.json": "286b35959d3580311cb2c89e8d5889ff34b634e7b96add7cdfe68e661946309f",
+    "documentation-format-check.log": "e2d27964565b70dc639c0eb6e1e1d72b0bb14e84650133095928ecd36ca8eeb0",
+    "documentation-format-ownership-refinement-result.json": "a6ca90b03f3a4e52b297497606e23038a16acb34d35396a6f491b679c4988884",
+    "documentation-format-ownership-refinement.log": "ec3826207fd16fa0afe7750a2a695cd8273aec30637a61c530f33e0f2291fc75",
+    "documentation-format-result.json": "710389859b97c144c63f790e9072fb8b808b92b13b17854e592c551327d61dc7",
+    "documentation-format.log": "f4cd78994a4646617847a9ccbb36a0ab37731aee390bcb8c486b1e9451083590",
+    "documentation-review.json": "e61c39159af112a62d78911f2a7186ce440324519ef74053024a696c3d9c05b6",
+    "dsh-sources.json": "2bbf192f181727fc53cd7ca06bfc7c3752a38ad15d3ce2bf0d92cd1c3c26ad69",
+    "preservation-and-change-review.json": "95d5b7fe0703a2670bbc74a3df9bead9da7ee2bfea1f3c2f6cfa5721da319fe3",
+    "repository-baseline.json": "f61f7dd861d5a6765fa7af5ead06027cd1807a239fdc3fe4ac1f9a9b0c06b9e2",
+    "reviewed-source-files.json": "cdd5e874a2d53a117e5819e46ef9cb0c54e66b641b8cc75d2e28f7c7cab50e26"
+  },
+  "recordedAtUTC": "2026-11-07T17:28:33.304119+00:00",
+  "scope": "All seven authored/revised Markdown files and every other existing artifact in this unique DSH review run; excludes this self-referential manifest."
+}

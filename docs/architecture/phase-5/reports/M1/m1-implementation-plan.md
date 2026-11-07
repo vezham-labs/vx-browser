@@ -23,6 +23,25 @@ Keep the existing M0 native app and Phase3 prototype/evidence distinct. Before c
 
 I4-I6 are not prerequisites to begin a separately approved I1/I2 proof; their dependencies and feature approvals must be resolved before relying on them. A small first authorization should cover **I1-I2 and a synthetic I3 proof**, rather than a complete browser or all metadata features. Encryption/retention/restore decisions may remain open for fixtures but cannot be bypassed before real data or the relevant feature.
 
+## DSH-inspired refinement within the existing sequence
+
+[Proposed ADR0005](../../../../decisions/0005-browser-capability-boundaries-and-lifecycle.md) and the [capability design](browser-capability-architecture.md) refine the same I1/I2/I6/I7 boundaries; no new milestone or implementation authorization is added. At I0 review the detailed static-composition/lifecycle rules and which independently replaceable built-ins are launch-required. Existing Swift/store/protection decisions remain pending.
+
+If separately authorized, I1 defines only the typed feature/lifecycle values needed by the selected proof, and I2 exercises a fake optional provider's activation/failure/stop alongside core ownership. I6 later specializes permissions/transfers; I7 verifies native composition only within its explicit scope. Use direct compiled bindings, not a dependency-container/plugin manager, generalized tools or empty future provider packages.
+
+Additional finite **future** cases (Not Tested now):
+
+| Concern                                    | Expected behavior                                                                                                                                      | Stage limit                                     |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| Duplicate/wrong-version/missing dependency | Reject invalid binding; publish no ready capability or new privilege; only affected optional features unavailable                                      | Fake I1/I2 proof, not runtime extension support |
+| Partial initialization failure             | Acquired subscription/task/resource is released; no ghost listener/ready event remains                                                                 | Fake I2/I7; actual native resources later       |
+| Revocation and dependent disposal          | Stop fences new calls before await; late result rejected; dependency lives until cleanup; repeated disposal safe; incomplete cleanup reported honestly | I2/I6 model then real M5 lifecycle              |
+| Slow/failing optional consumer             | Bounded event delivery keeps unrelated core/revocation usable; authorized resnapshot handles gaps; no private/global event log                         | I2/M3; no claim of fatal-crash containment      |
+| Missing permission-grant provider          | Mandatory core/native route returns deny/cancel, never implicit allow or bypass prompt                                                                 | Fake policy proof then M2/M5 native mapping     |
+| Required feature unavailable               | UI/state reports unavailable and its feature gate remains unmet even while unrelated navigation policy remains usable                                  | Named MVP matrix and later M6/M8 evidence       |
+
+Same-process fatal traps/blocking/resource exhaustion are residual risks, not solved by these fakes or a timeout. Untrusted runtime code would need a separate approved isolation architecture. The optional/future Tamizhi classification introduces no content extraction, agent loop or provider implementation now.
+
 ## Meaningful future verification
 
 | Concern               | Required finite case / expected behavior                                                                                     | Scope of proof                                                   |

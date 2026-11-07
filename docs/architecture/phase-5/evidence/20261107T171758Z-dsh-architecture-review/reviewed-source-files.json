@@ -1,0 +1,64 @@
+{
+  "repositoryBaseline": "0057d5a0362b02712dd24343a605725f710568f4",
+  "existingFilesReviewed": [
+    {
+      "path": "docs/architecture/phase-3/browser-mvp-architecture-baseline.md",
+      "baselineSHA256": "bae3009809679225f66e206b881b0ca1fbda2fe5e2ff4d6f31bffbb8d540718c"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "baselineSHA256": "3f4574a158b4fbeefe3adaff1b984a39a7f6872e3a11fbab95dc0944ef21940f"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+      "baselineSHA256": "b686eafde812c4477e00978d7ad5706b40f11eb6bc63e1a12c33ad6e026ca7c7"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-data-model.md",
+      "baselineSHA256": "afc0dd4fb7a50be5228b1290cec2e6086d2a8880b8d9ec06ac11280713a47902"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+      "baselineSHA256": "151673dadf144a878f0257b6b5f502e7346b3365aa4a9af380026fc0f33732ca"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+      "baselineSHA256": "e97e6277cf9c1833d0e0585632e9c64098f2ea9354ae73f996047bd576848c0a"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md",
+      "baselineSHA256": "e8ab3760c7656113f8516119a3f48c82fdb10f9f722e3fe50658ef26a3b3ba01"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+      "baselineSHA256": "488a1cb83934f911a7378310bbcd94ce1ab463e9cb59f8466486bca1238f6af1"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/migration-and-recovery-strategy.md",
+      "baselineSHA256": "8f60ccad70121bcb6bd97c845755390a70e2b0e10552f517caf91a19393a16e2"
+    },
+    {
+      "path": "docs/decisions/0001-browser-engine-strategy.md",
+      "baselineSHA256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5"
+    },
+    {
+      "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "baselineSHA256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2"
+    },
+    {
+      "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+      "baselineSHA256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e"
+    },
+    {
+      "path": "docs/decisions/0004-browser-local-persistence.md",
+      "baselineSHA256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3"
+    },
+    {
+      "path": "docs/security/browser-security-architecture.md",
+      "baselineSHA256": "47aec398547c568bcc365dbd7210f3bebb301fd805a76e8e45af0d980a864665"
+    }
+  ],
+  "reviewMethod": "Existing M1 proposal text/ADRs and approved boundaries, plus comparison of all 24 preceding M1 authored-file hashes at baseline: no differences. DSH primary files independently pinned and hashed.",
+  "externalSourceProvenance": "dsh-sources.json",
+  "sourceOrRuntimeExecution": false
+}

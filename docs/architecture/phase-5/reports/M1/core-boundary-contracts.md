@@ -4,7 +4,7 @@
 
 ## Status, version and compatibility
 
-This is a **proposed contract version 0.1** with a planned v1 command/event protocol. It is documentation, not Swift/TypeScript implementation, an installed bridge or an approved ABI. The [existing engine contract](../../../browser-engine-contract.md) remains an illustrative proposed API. Its TypeScript syntax does not select the trusted core runtime; its global-history facade must be split into a core-owned history repository before a future adapter implements it. Cookie/website-data/page-script methods are privileged adapter/native capabilities, never automatically chrome commands. No extraction feature is authorized.
+This is a **proposed contract version 0.2** with a planned v1 command/event protocol. It is documentation, not Swift/TypeScript implementation, an installed bridge or an approved ABI. The [existing engine contract](../../../browser-engine-contract.md) remains an illustrative proposed API. Its TypeScript syntax does not select the trusted core runtime; its global-history facade must be split into a core-owned history repository before a future adapter implements it. Cookie/website-data/page-script methods are privileged adapter/native capabilities, never automatically chrome commands. No extraction feature is authorized.
 
 Internal native interfaces use typed Swift values and async results; the future chrome boundary uses language-neutral versioned data. Propose an exact v1.0 schema and paired conformance fixtures, with explicit negotiation for later additive changes. Unsupported major/minor or unknown command fields/types return unsupported/invalid before effects. Do not rely on JavaScript structural typing, reflection or generated bindings as runtime validation. Schema/binding generation tooling is not selected or installed.
 
@@ -80,6 +80,36 @@ Request envelopes bind AppRun, DataScope, ViewId/generation, trusted requesting/
 File selection/destination results use one-shot native opaque resource tokens, bound to request/scope/view/origin and current epoch. A string from UI cannot fabricate or reuse a valid token. The native broker owns security-scoped access and closes it on cancellation/disposal/expiry. Transfer metadata does not prove byte completion: the broker validates staging/finalization/quarantine before completion is accepted. Native tokens, selected file URLs, file contents and bookmark blobs never enter general UI state or persistent core tables.
 
 Persistent transfer finalization needs later M5 crash reconciliation across files and DB; do not replay a write/overwrite because an operation receipt exists. Private payload output needs explicit user selection/disclosure, with no persistent private history or download metadata. No actual grant, chooser, download, device or Keychain operation is implemented here.
+
+## Boundary F — Selected feature providers and lifecycle events
+
+This draft0.2 refinement follows [Proposed ADR0005](../../../../decisions/0005-browser-capability-boundaries-and-lifecycle.md) and the [capability architecture](browser-capability-architecture.md). It adds semantic requirements to proposed M1 ports, not an installed bridge, new framework or generic plugin interface.
+
+Use per-feature typed interfaces. This **uncompiled illustrative signature** shows the intended boundary, not source added to the repository:
+
+```swift
+protocol FindInPagePort: Sendable {
+    func start(_ intent: FindIntent, context: AuthorizedViewContext) async -> FindOutcome
+    func cancel(_ request: OwnedRequestID, context: AuthorizedViewContext) async -> CancelOutcome
+}
+```
+
+`FindIntent`, outcomes and context are bounded domain values. Context is minted/validated natively, never trusted from UI fields; each side effect still rechecks ownership/generation. Find has explicit success/unsupported/cancelled/unavailable outcomes, not arbitrary operation names. Other services retain their own narrow interfaces. Shared lifetime conventions do not imply a common `invoke(name, payload)` or universal provider base class.
+
+| Proposed contract family    | Required semantics                                                                                                                                                                                                |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Native binding descriptor   | Known feature kind/version, unique provider identity, declared dependencies/lifetime and data/effect inventory. Metadata gives no native permission; duplicates/unknown versions fail before activation           |
+| Provider activation         | Host supplies only reviewed typed inputs; provisional resources/subscriptions are owned; ready is published only after successful setup. Missing optional dependency disables the affected feature                |
+| Provider availability event | Exact typed family, contract version, native provider instance/generation, AppRun, owner scope, per-instance sequence and relevant snapshot revision. No arbitrary name/payload event bus                         |
+| Request/result              | Existing authority context, target/generation and request correlation; no new grant from provider readiness. Error/unavailability cannot silently become allow/saved/completed                                    |
+| Subscription lifetime       | Specific authorized projection, bounded queue, recheck at delivery/revocation, dispose with owner. Slow/failing consumer cannot block core policy/revocation; gaps require resnapshot                             |
+| Stop/cleanup result         | Fence ingress/revoke capabilities first; cancel and reconcile already committed work; stop subscriptions/resources before dependencies. Idempotent exact-instance disposal; report cleanup-required if incomplete |
+
+Events are read-only facts. Optional subscribers cannot rewrite/veto authorization, mutate core-owned state directly, create a durable event log or subscribe across profiles/private sessions. A feature needing an action sends a separately validated typed intent. No global-listener bypass or inherited permission appears in the contract. Core repositories alone persist selected approved facts under existing private/receipt/transaction rules.
+
+Initialization rollback and teardown must specify async dependency order; do not assume an automatic disposer stack serializes all async work. Quiescing keeps required core/storage finalization endpoints alive until dependents reconcile, without allowing new reads/actions. Generation fencing rejects old replies after replacement/stop; a disposed presentation does not erase an already committed store result.
+
+Registration is native composition of reviewed code, not a security sandbox. Future trusted extensions/AI use no ambient core/store/Keychain object or unrestricted command feed. Tamizhi content/intent access requires separate source/profile/view/purpose/destination/lifetime consent; model output has no native authority. No production Tamizhi or runtime plugin installation is authorized.
 
 ## Error, lifecycle and verification policy
 

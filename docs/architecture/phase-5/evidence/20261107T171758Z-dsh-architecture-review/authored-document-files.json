@@ -1,0 +1,15 @@
+{
+  "modified": [
+    "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+    "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+    "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+    "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md"
+  ],
+  "created": [
+    "docs/architecture/phase-5/reports/M1/dsh-architecture-assessment.md",
+    "docs/architecture/phase-5/reports/M1/browser-capability-architecture.md",
+    "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md"
+  ],
+  "unchangedHistoricalM1Report": "docs/architecture/phase-5/reports/M1/README.md",
+  "scope": "Only relevant M1 design proposals and new Proposed ADR; original source, decisions and historical evidence untouched."
+}

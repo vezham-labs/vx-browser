@@ -34,6 +34,16 @@ flowchart LR
 
 Arrows show proposed calls/ownership, not separate processes. The Swift host/core share trusted-process authority; native modules are not security sandboxes. Website content never obtains a chrome command channel.
 
+## Capability-oriented composition refinement
+
+The [DSH-inspired assessment](dsh-architecture-assessment.md) justifies explicit feature contracts, availability and owned cleanup under [Proposed ADR0005](../../../../decisions/0005-browser-capability-boundaries-and-lifecycle.md). Keep Browser Core API as the logical BrowserDomain/BrowserPorts and chrome protocol surface; it is not an additional execution runtime. Preserve the four-target proposal and core-owned state/persistence.
+
+The native host binds selected compiled providers through narrow feature ports. Domain/core depend on those interfaces, not on concrete optional implementations. Registration, runtime engine support, provider readiness, product-required feature support and operation authorization remain distinct. No service locator, dynamic loader, hot swap, agent loop, tool registry or every-subsystem-plugin conversion is proposed.
+
+Permissions policy/default-deny and native OS enforcement remain mandatory even if a grant/prompt feature is unavailable. Download execution/find/search providers may fail independently, while core owns their relevant state, authorization and repository transitions. Optional architecture does not remove required MVP feature gates. A failing required engine/store dependency yields an explicit blocked/degraded operation, not a fabricated working capability.
+
+See [capability architecture](browser-capability-architecture.md) for core/built-in/future-trusted/AI categories, static binding rules, initialization rollback, per-instance epochs, owned subscriptions and dependency-ordered disposal. Recoverable optional failures should not block unrelated core work; same-process Swift modules do not provide fatal-crash or malicious-code isolation. Engine substitution preserves unrelated feature implementations only where the agreed ports and capabilities remain satisfied.
+
 ## Product responsibilities and sequencing
 
 | Area                             | Core owns                                                                                                           | Outside core / sequencing                                                                                                                             |

@@ -1,0 +1,48 @@
+{
+  "assessment": "Documentation/consistency checks passed; detailed architecture/ADR recommendation prepared for owner review, implementation Not Started.",
+  "authoredMarkdownFiles": 7,
+  "behavioralTests": "Not Tested; future fake-provider and actual native/security cases are plans only.",
+  "createdDocuments": 3,
+  "externalLinksNotFetchedByLocalAudit": 10,
+  "formatCheck": {
+    "command": [
+      "pnpm",
+      "nx",
+      "format:check",
+      "--files=docs/architecture/phase-5/reports/M1/browser-capability-architecture.md,docs/architecture/phase-5/reports/M1/browser-core-architecture.md,docs/architecture/phase-5/reports/M1/core-boundary-contracts.md,docs/architecture/phase-5/reports/M1/dsh-architecture-assessment.md,docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md,docs/architecture/phase-5/reports/M1/m1-implementation-plan.md,docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md"
+    ],
+    "elapsedSeconds": 1.3316550254821777,
+    "environmentOverrides": {
+      "NX_DAEMON": "false",
+      "NX_NO_CLOUD": "true"
+    },
+    "exitCode": 0,
+    "outputFile": "documentation-format-check.log",
+    "scope": "DSH-inspired M1 documentation review only; no builds/product tests/source execution.",
+    "startedAtUTC": "2026-11-07T17:26:35.465625+00:00",
+    "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser"
+  },
+  "formatterWarning": "Existing Nx config selects oxfmt when both oxfmt/Prettier configs exist; no config deletion or global repository formatting.",
+  "headingWarnings": [],
+  "method": "Scoped Markdown formatting, focused local relative-file/heading checks excluding fenced code/external schemes, Git whitespace and all protected tracked-file hashes. Three self-referential review metadata targets are materialized before a strict post-write link pass.",
+  "missingRelativeTargets": [],
+  "modifiedExistingDocuments": 4,
+  "outstandingOwnerDecisions": [
+    "Detailed ADR0005 static-composition/lifecycle mechanism and launch-required built-in feature matrix.",
+    "Existing ADR0003/0004, encryption/real-data/retention/restore choices where already pending.",
+    "Future extension trust/isolation and concrete transport/budgets/Tamizhi feature scope before dependent implementation."
+  ],
+  "recordedAtUTC": "2026-11-07T17:28:33.304119+00:00",
+  "relativeFileAndHeadingLinksChecked": 40,
+  "semanticReview": {
+    "authority": "Registration, engine support, readiness, product requirement and per-operation grant distinguished; no implicit privileges.",
+    "compatibility": "Existing targets/SQLite/schema/receipts/private policy unchanged; new proposed contract draft0.2 without released v1 migration.",
+    "composition": "Fixed native bindings and narrow typed ports; no dynamic registration/installer/service locator/agent loop/tool registry.",
+    "coreOwnership": "Mandatory policy/native authorization/profile-private invariants and core-owned storage retained; no every-subsystem-plugin conversion.",
+    "failureLimits": "Recoverable optional failure is scoped; required missing features remain unmet; same-process fatal faults are not sandboxed.",
+    "lifecycle": "Initialization rollback, generation fencing before await, bounded owned subscriptions, dependency-ordered cleanup and truthful partial failure.",
+    "tamizhi": "Future separate consent and minimized source/profile/view/purpose/destination/lifetime-bound data; no unrestricted native access or mandatory cloud."
+  },
+  "sourceStudy": "Nine primary DSH files at pinned fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159; source identities/hashes in dsh-sources.json. No DSH runtime executed.",
+  "stop": "Documentation/refinement review only. Separate implementation authorization required."
+}

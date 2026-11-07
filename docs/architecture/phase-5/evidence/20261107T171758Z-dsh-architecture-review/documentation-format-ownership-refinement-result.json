@@ -1,0 +1,18 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "format:write",
+    "--files=docs/architecture/phase-5/reports/M1/browser-capability-architecture.md"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "startedAtUTC": "2026-11-07T17:26:07.645045+00:00",
+  "elapsedSeconds": 1.9189989566802979,
+  "exitCode": 0,
+  "outputFile": "documentation-format-ownership-refinement.log",
+  "scope": "DSH-inspired M1 documentation review only; no builds/product tests/source execution.",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

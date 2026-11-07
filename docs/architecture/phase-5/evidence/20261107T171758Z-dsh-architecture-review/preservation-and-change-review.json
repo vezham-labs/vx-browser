@@ -1,0 +1,99 @@
+{
+  "baselineCommit": "0057d5a0362b02712dd24343a605725f710568f4",
+  "branch": "timeline",
+  "buildsAppLaunchesProductTestsOrHistoricalRegressionsExecuted": false,
+  "currentCommit": "0057d5a0362b02712dd24343a605725f710568f4",
+  "dependencyLockfilesProjectConfigurationAndNativeSourceUnchanged": true,
+  "dshCordisSourceVendoredOrExecuted": false,
+  "existingADRsUnchanged": {
+    "0001": "Proposed",
+    "0002": "Accepted",
+    "0003": "Proposed",
+    "0004": "Proposed"
+  },
+  "existingM1CompletionReportUnchanged": true,
+  "filesChanged": [
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/browser-capability-architecture.md",
+      "purpose": "New proposed capability classification, static binding, lifecycle/events and security/failure-isolation detail.",
+      "sha256": "fc2c780d05b4341a7ce9a041c12ee385d42e7d0407332aeddeedbb632c5f43ce"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "b686eafde812c4477e00978d7ad5706b40f11eb6bc63e1a12c33ad6e026ca7c7",
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+      "purpose": "Add logical Core API/compiled-provider composition and mandatory policy/persistence ownership; link detailed refinement.",
+      "sha256": "ba9609502a0e8e3e8c999986b7cfb20c7aaf52437660b119c76ee8c0d5eee6e2"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "151673dadf144a878f0257b6b5f502e7346b3365aa4a9af380026fc0f33732ca",
+      "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+      "purpose": "Advance proposed draft0.1 to0.2 and add typed feature/availability/subscription/cleanup recommendations; planned wire v1 remains unreleased.",
+      "sha256": "44f02f3bdc750b45c77291aa17cf02626306f2d5064b76de0f1b5956c23d85a6"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/dsh-architecture-assessment.md",
+      "purpose": "New primary DSH review, adopted/rejected principles, compatibility, source/validation and owner-decision report.",
+      "sha256": "6a6d59598632367d8bd2a8603d759c712ba143b1ebf21a7cdbb3984c498aa9c5"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "e8ab3760c7656113f8516119a3f48c82fdb10f9f722e3fe50658ef26a3b3ba01",
+      "path": "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md",
+      "purpose": "Add D09 and R13-R16 for provider privilege, cleanup, failure and event/private-data risks; prior choices remain pending.",
+      "sha256": "cda49df7084a73d7a124d8589884f31f2a3d0c281d2e52152ed19759e12d6c4e"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "488a1cb83934f911a7378310bbcd94ce1ab463e9cb59f8466486bca1238f6af1",
+      "path": "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+      "purpose": "Add finite future lifecycle/failure/availability cases within existing slices; no execution authorization.",
+      "sha256": "beeba23674c6eb9754ffdb77210611f1e944f290b9b548a21e0f6e30a74c6caa"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md",
+      "purpose": "New Proposed ADR, alternatives/rationale/limits/reversibility/approval conditions. No existing ADR edited.",
+      "sha256": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17"
+    }
+  ],
+  "gitDiffCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "initialStatus": "",
+  "limits": "Byte comparison preserves historical records; it does not revalidate their technical claims or pass product/security/release gates.",
+  "m0ImplementationAndAllHistoricalEvidenceUnchanged": true,
+  "movesRenamesDeletes": [],
+  "newADR": "0005 Proposed",
+  "newDependenciesSourcePackagesDatabaseMigrationsOrRuntimeInstallers": [],
+  "protectedAreaFileCounts": {
+    "ExistingADRs": 4,
+    "HistoricalPrototypeReports": 5,
+    "M0Native": 14,
+    "M0Reports": 3,
+    "Phase3Prototype": 363,
+    "Phase3ReviewsArchives": 9,
+    "PreviousReviewEvidence": 70
+  },
+  "protectedChanges": [],
+  "protectedTrackedFilesVerified": 625,
+  "recordedAtUTC": "2026-11-07T17:28:33.304119+00:00",
+  "remotesUnchanged": true,
+  "stagedFiles": [],
+  "task": "DSH-inspired M1 architecture refinement, documentation only",
+  "trackedFilesAtBaseline": 629,
+  "workingTreeDisposition": "Unstaged task documentation/review records only. No branch switch, commit or push."
+}
