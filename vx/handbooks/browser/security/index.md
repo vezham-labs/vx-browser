@@ -6,6 +6,8 @@ M0 has no web view, script handler, URL-opening API or native transport. Its nat
 
 Cross-profile/private leakage and unauthorized native access are hard failures, never accepted exceptions. Unsupported permissions fail closed. Production Tamizhi integration is excluded; any future extraction needs separately approved opt-in scope/destination and prompt-injection defenses.
 
+The [M1 persistence proposal](../../../../docs/architecture/phase-5/reports/M1/local-persistence-architecture.md) separates durable profiles, memory-only private core state, engine website data and native secrets. [Privacy/encryption decisions and risks](../../../../docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md) remain open before real-data persistence; documentation does not pass private isolation or cleanup tests.
+
 ## Authoritative References
 
 - [Threat Model](../../../../docs/security/browser-threat-model.md)

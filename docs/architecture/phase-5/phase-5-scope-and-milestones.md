@@ -1,6 +1,8 @@
 # Phase 5 scope and milestones
 
-**Date:** 2026-11-07. **Status:** prepared and reviewed plan; **M0 foundation Passed within its bounded scope; M1-M8 are Planned / Not Started**. Criteria describe required outcomes, not passes. Phase 4.2 was documentation only; current M0 evidence is recorded separately in [reports](reports/README.md) and [run locations](evidence/README.md).
+**Date:** 2026-11-07. **Status:** prepared and reviewed plan; **M0 foundation Passed within its bounded scope; M1 design prepared for owner review; M1 implementation and M2-M8 are Planned / Not Started**. Criteria describe required outcomes, not passes. Phase 4.2 was documentation only; current M0 evidence is recorded separately in [reports](reports/README.md) and [run locations](evidence/README.md).
+
+The current [M1 design packet](reports/M1/README.md) is a design-only submilestone. Its proposed ADRs, schema and contracts do not pass the M1 implementation criteria below. Owner review and separate implementation authorization remain required.
 
 ## Approved direction and scope
 

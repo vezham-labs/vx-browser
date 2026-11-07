@@ -1,0 +1,3 @@
+Error:   × create the temporary package manager install directory
+  ╰─▶ Operation not permitted (os error 1)
+

@@ -1,0 +1,214 @@
+{
+  "adrLifecycle": {
+    "0001": "Proposed, unchanged",
+    "0002": "Accepted, unchanged",
+    "0003": "Proposed, new recommendation",
+    "0004": "Proposed, new recommendation"
+  },
+  "authoredMarkdownFiles": [
+    {
+      "action": "Modified",
+      "baselineSHA256": "a1bdd3204a493dacc91903b1b26634b75a0c71b473637d2f80e7ebb22a2afd54",
+      "path": "docs/architecture/phase-5/README.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "fd5e0324996c9681721ed5c719ba1cfa94ea2b100cdd4d9e80fb2b66cd7a83f5"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "553347abbaf43bf7e7d717426ef6904f1d4356cd327288e44ece66a7f682cac7",
+      "path": "docs/architecture/phase-5/evidence/README.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "0f83fec04cbe7a7cae9095b331ef6b80a4cf15ee9137deb541841bbfbb479008"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "c008b31e2b6f7c4fdba0202efed485369005a2d8bfd861d57260ead439d372c3",
+      "path": "docs/architecture/phase-5/phase-5-implementation-plan.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "0217e04c85ad8f40bd99b10181024cc9fe196e1f79d640aee6179ce38358b89f"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "7caf24feab575bb7cc85e3cca9faaa53fd583b2e44207f192294313e005ae08d",
+      "path": "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "de3e2dc4bab97ec4c8f29099456c87598b31b6013bda956974d9974286a3a257"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "3f4574a158b4fbeefe3adaff1b984a39a7f6872e3a11fbab95dc0944ef21940f"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "b686eafde812c4477e00978d7ad5706b40f11eb6bc63e1a12c33ad6e026ca7c7"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-data-model.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "afc0dd4fb7a50be5228b1290cec2e6086d2a8880b8d9ec06ac11280713a47902"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "151673dadf144a878f0257b6b5f502e7346b3365aa4a9af380026fc0f33732ca"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "e97e6277cf9c1833d0e0585632e9c64098f2ea9354ae73f996047bd576848c0a"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "e8ab3760c7656113f8516119a3f48c82fdb10f9f722e3fe50658ef26a3b3ba01"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "488a1cb83934f911a7378310bbcd94ce1ab463e9cb59f8466486bca1238f6af1"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/architecture/phase-5/reports/M1/migration-and-recovery-strategy.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "8f60ccad70121bcb6bd97c845755390a70e2b0e10552f517caf91a19393a16e2"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "61fbcbdc80b7721c42bd7b7319ca7e3925540b95a6d329312a0df94d8a45fcd2",
+      "path": "docs/architecture/phase-5/reports/README.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "faed49b50601723b909e72a0f25278adf4fb78ff56fceab36245a3877bf77f0c"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e"
+    },
+    {
+      "action": "Created",
+      "baselineSHA256": null,
+      "path": "docs/decisions/0004-browser-local-persistence.md",
+      "reason": "New M1 proposal/review document; owner review and implementation authorization pending.",
+      "sha256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "3b0157b90ed873488e03b40db5d68a0662ada8b9c93653917fefc585a95c8780",
+      "path": "vx/handbooks/browser/README.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "843d29506ec64bc62411fdb362a467bcbc1cd0244a67ccd51c25f6c52dfd213a"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "f1cf60eddb649ed49a2172c7bb1ec8dd440c5d7a327d9249cb763460c51a0235",
+      "path": "vx/handbooks/browser/architecture/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "a09d80dd0f0a07466230d3359c753ae87fdbd5a9029d2a8a4b649215bc70883b"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "13a58c25144cc9e6649c133a9ecfb5022d951a0caf5792587f5e471dd8bdecc9",
+      "path": "vx/handbooks/browser/decisions/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "cdabce5a5c93a8fdc4513438298e34674dbf01e6ae9a1b187fd8604d6ced810a"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "bc177f904dba1d019f9e86d8ec4ed5a8a1d5dc3995f969d107e44b4b12602434",
+      "path": "vx/handbooks/browser/development/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "f2e67d98cb926d8f246236a6d45eb3f43a4adc1d301fed41232d9d198e73b654"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "2290c35e89273f43965826793b84aab5dd4774582e1beaffd62c636984cc39eb",
+      "path": "vx/handbooks/browser/engineering/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "b64ea806b1c131bfcd0068317f1391023cdbd1634acbfc6d9e4cb78bbff63766"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "bcc456034bb9791815a4a655dc67d66d8fecb28302c58311df0d80e0e350db5d",
+      "path": "vx/handbooks/browser/operations/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "a07d762aa17554fc5b17d39131950454382bf6497ec90c24753e2516a61f711f"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "56f37d803923d41fd6b8a241fe52908f7c569b0e41b7ad160408f5d90c97ad3e",
+      "path": "vx/handbooks/browser/overview/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "bd61c116181d30affa9f6662427cf3f8002f142d2bc1666ee1a9cdc3dfb2607e"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "258ccb604a9ef9714f1ba97651cf5e1f21b96c4bffb390e0bead75abf976bd84",
+      "path": "vx/handbooks/browser/security/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "cde5255aac1612d156cc6b676afef39ad9536a9b77943c409ba8323a45aa9f67"
+    },
+    {
+      "action": "Modified",
+      "baselineSHA256": "0ef6676c6faedc9e84acc1738b6060eeeb456a4e6d628992dfe90603b21c6e73",
+      "path": "vx/handbooks/browser/testing/index.md",
+      "reason": "Update maintained Phase5/Browser-handbook navigation and current M1 design-only scope; retain existing implementation/release criteria.",
+      "sha256": "aa112f4d36139c86c9e4a80f0732703c8fe61b763a80decb9ae595218fbb675e"
+    }
+  ],
+  "baselineCommit": "fd60d5dda8144b8fedaaaf4f73e439907d8360c1",
+  "branch": "timeline",
+  "buildsAppLaunchesProductTestsOrPhase3RegressionsExecuted": false,
+  "currentCommit": "fd60d5dda8144b8fedaaaf4f73e439907d8360c1",
+  "dependencyPinsAndNativeProjectConfigurationUnchanged": true,
+  "evidenceScope": "Documentation/source inspection and verification records only. No historical results overwritten or product gates passed.",
+  "gitDiffCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "initialStatus": "",
+  "m1Implementation": "Not Started; separate owner review and explicit implementation authorization required",
+  "m2ThroughM8": "Not Started; no report folders created",
+  "movesRenamesDeletes": [],
+  "newSourcePackagesDatabaseFilesOrProductionDependencies": [],
+  "protectedAreaFileCounts": {
+    "HistoricalPrototypeReports": 5,
+    "M0Evidence": 51,
+    "M0NativeSourceAndConfiguration": 14,
+    "M0Reports": 3,
+    "Phase3PrototypeSourceAndEvidence": 363,
+    "Phase3ReviewOwnerBaselineArchives": 9
+  },
+  "protectedChanges": [],
+  "protectedTrackedFilesVerified": 587,
+  "recordedAtUTC": "2026-11-07T16:33:20.031246+00:00",
+  "remotesUnchanged": true,
+  "stagedFiles": [],
+  "task": "M1 Browser Core and Local State design only",
+  "trackedFilesAtBaseline": 601
+}

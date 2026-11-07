@@ -1,0 +1,84 @@
+{
+  "recordedAtUTC": "2026-11-07T16:27:01.813360+00:00",
+  "scope": "M1 design research and read-only M0 review; no implementation, build or product test.",
+  "primaryReferences": [
+    {
+      "title": "Swift Sendable",
+      "url": "https://docs.swift.org/latest/documentation/swift/sendable/"
+    },
+    {
+      "title": "Swift actor reentrancy proposal",
+      "url": "https://github.com/swiftlang/swift-evolution/blob/main/proposals/0306-actors.md#actor-reentrancy"
+    },
+    {
+      "title": "SQLite WAL",
+      "url": "https://sqlite.org/wal.html"
+    },
+    {
+      "title": "SQLite pragma settings",
+      "url": "https://sqlite.org/pragma.html"
+    },
+    {
+      "title": "SQLite foreign keys",
+      "url": "https://sqlite.org/foreignkeys.html"
+    },
+    {
+      "title": "SQLite Backup API",
+      "url": "https://sqlite.org/backup.html"
+    },
+    {
+      "title": "SQLite encryption extension documentation",
+      "url": "https://sqlite.org/see/"
+    },
+    {
+      "title": "Apple Core Data",
+      "url": "https://developer.apple.com/documentation/coredata"
+    },
+    {
+      "title": "Apple SwiftData SchemaMigrationPlan",
+      "url": "https://developer.apple.com/documentation/swiftdata/schemamigrationplan"
+    },
+    {
+      "title": "Apple Keychain Services",
+      "url": "https://developer.apple.com/documentation/security/keychain-services"
+    },
+    {
+      "title": "Apple FileVault security",
+      "url": "https://support.apple.com/guide/security/sec4c6dc1b6e/web"
+    }
+  ],
+  "researchLimitations": [
+    "API facts inform proposals; no approach or performance was experimentally compared.",
+    "Some Apple pages rendered only JavaScript/unsupported Markdown; official indexed documentation supplied API overview facts.",
+    "Non-primary search hits were not used as technical authority."
+  ],
+  "m0Review": {
+    "nativeSourceConfigurationFilesCompared": 14,
+    "differencesFromHistoricalM0Manifest": [],
+    "actualCurrentBaseline": "fd60d5dda8144b8fedaaaf4f73e439907d8360c1",
+    "historicalBuildLaunchTestsRerun": false
+  },
+  "toolingPrerequisites": [
+    {
+      "attempt": "Initial read-only Nx inspection under restricted network",
+      "outcome": "ERR_PNPM_PNPM_ENGINE_IDENTITY_UNVERIFIABLE; registry requests failed. Signature checking was not disabled."
+    },
+    {
+      "attempt": "Network-authorized Nx inspection",
+      "evidence": "nx-native-inspection-result.json",
+      "outcome": "Pinned tool temporary install/cache directory denied; requested normal pnpm cache permission."
+    },
+    {
+      "attempt": "pnpm-cache-authorized Nx inspection",
+      "evidence": "nx-native-inspection-cache-authorized-result.json",
+      "outcome": "Nx workspace cache denied; requested ignored .nx cache write access."
+    },
+    {
+      "attempt": "Nx-workspace-cache-authorized inspection",
+      "evidence": "nx-native-inspection-workspace-cache-result.json",
+      "outcome": "Resolved existing browser-macos build/audit/launch targets; none executed."
+    }
+  ],
+  "pnpmIdentityVerificationDisabled": false,
+  "repositoryDependencyInstallOrUpdatePerformed": false
+}

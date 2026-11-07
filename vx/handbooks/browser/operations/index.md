@@ -6,6 +6,8 @@ Use the M0 report and run-specific evidence to distinguish a build/configuration
 
 Before internal deployment, name owners for OS-driven WebKit regressions, security response, release health/halt, revocation/minimum versions and credential/key rotation. Logs/crash reports must redact tokens, sensitive URLs/content, file paths and private identifiers; OS/engine diagnostics need review rather than assumed safety.
 
+The [M1 migration/recovery proposal](../../../../docs/architecture/phase-5/reports/M1/migration-and-recovery-strategy.md) defines future store/version/key/corruption and privacy-clear behavior. It is not an implemented recovery runbook. Assign storage/security/incident owners and validate the corresponding implementation before operating real browsing data.
+
 ## Authoritative References
 
 - [Security and Incident Requirements](../../../../docs/security/browser-security-architecture.md)

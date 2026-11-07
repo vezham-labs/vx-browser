@@ -1,0 +1,30 @@
+{
+  "modified": [
+    "docs/architecture/phase-5/README.md",
+    "docs/architecture/phase-5/evidence/README.md",
+    "docs/architecture/phase-5/phase-5-implementation-plan.md",
+    "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+    "docs/architecture/phase-5/reports/README.md",
+    "vx/handbooks/browser/README.md",
+    "vx/handbooks/browser/architecture/index.md",
+    "vx/handbooks/browser/decisions/index.md",
+    "vx/handbooks/browser/development/index.md",
+    "vx/handbooks/browser/engineering/index.md",
+    "vx/handbooks/browser/operations/index.md",
+    "vx/handbooks/browser/overview/index.md",
+    "vx/handbooks/browser/security/index.md",
+    "vx/handbooks/browser/testing/index.md"
+  ],
+  "created": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+    "docs/architecture/phase-5/reports/M1/browser-core-data-model.md",
+    "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+    "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+    "docs/architecture/phase-5/reports/M1/m1-decisions-and-risks.md",
+    "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+    "docs/architecture/phase-5/reports/M1/migration-and-recovery-strategy.md",
+    "docs/decisions/0003-browser-core-runtime-and-language.md",
+    "docs/decisions/0004-browser-local-persistence.md"
+  ]
+}

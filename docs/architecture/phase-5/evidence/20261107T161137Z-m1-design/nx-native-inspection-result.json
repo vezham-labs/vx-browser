@@ -1,0 +1,20 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "show",
+    "project",
+    "browser-macos",
+    "--json"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "startedAtUTC": "2026-11-07T16:11:37.524552+00:00",
+  "elapsedSeconds": 1.1182191371917725,
+  "exitCode": 1,
+  "outputFile": "nx-native-inspection.log",
+  "scope": "M1 design/documentation only; no build, app launch or product tests.",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

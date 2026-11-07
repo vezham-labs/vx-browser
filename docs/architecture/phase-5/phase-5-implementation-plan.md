@@ -1,6 +1,6 @@
-# Phase 5 implementation plan — M0 foundation reviewed
+# Phase 5 implementation plan — M0 reviewed, M1 design prepared
 
-**Date:** 2026-11-07. **Status:** M0 native foundation Passed within its bounded scope; M1-M8 remain unstarted. Phase 4.2 was documentation-only preparation. The current M0 report records actual changes/verification separately; remaining work packages below are plans, not authority to implement them.
+**Date:** 2026-11-07. **Status:** M0 native foundation Passed within its bounded scope; M1 design is prepared for owner review; M1 implementation and M2-M8 remain unstarted. Phase 4.2 was documentation-only preparation. The current M0 report records actual changes/verification separately; remaining work packages below are plans, not authority to implement them.
 
 ## Inputs and authority
 
@@ -19,7 +19,7 @@ The completed ADR's **Stage A** concerns the bounded engine decision and explici
 
 ## Preparation before the first execution task
 
-1. The current scoped M0 instruction is confirmed. Do not request the three owner decisions again; only M0 is authorized, with no implicit permission to execute the remaining plan or publish a build.
+1. M0 execution is complete within its bounded scope. The current instruction authorizes [M1 design only](reports/M1/README.md), not implementation. Do not request the three recorded engine/closure/baseline decisions again or infer permission to execute the remaining plan or publish.
 2. The implementation repository is the existing `vezham-labs/vx-browser` checkout on `timeline`, verified in the [M0 baseline](reports/M0/README.md). Prior Codex documents/prototype are imported with provenance; historical copies remain unchanged and the original source location is preserved. The native host is new M0 source, not a transformed Phase 3 prototype.
 3. Assign accountable role owners (native/platform, core/storage, adapter, UI, security, QA, release); this plan invents no individual assignees or deadlines.
 4. Record immediate design choices in the appropriate maintained design/ADR: trusted core runtime/binding, storage interface, module dependency rules and native service ownership. The approved baseline's open choices are real prerequisites, not newly rejected architecture.
@@ -34,6 +34,8 @@ Prepare the production workspace/module graph in the selected checkout only afte
 Future verification: a recorded development build/launch and lifecycle/shutdown check on the named development host, reviewed module dependencies and declared minimum target. This does not run the macOS 26 release matrix or require final Developer ID/notarization early. If launch fails, capture the cause and stop the affected task; never bypass Gatekeeper/sandbox/Hardened Runtime protections.
 
 ### M1 — Core and local state
+
+The [M1 design packet](reports/M1/README.md) and [bounded implementation breakdown](reports/M1/m1-implementation-plan.md) now propose runtime/store/model/contracts. ADR0003/0004 remain Proposed; approve the needed choices and separately authorize an implementation slice before the future work below.
 
 Depends on M0. Implement opaque profile/view/navigation/request/transfer identities, cancellation/generation/sequence semantics and core product policy independent of WK objects. Select the local store and migration model before persistence code; separate engine website data from browser-owned history/bookmarks/settings/permission/download state. Commit-only history, private exclusions and active-owner profile deletion refusal are required. Native authorization remains authoritative regardless of core language/binding.
 
@@ -112,4 +114,4 @@ Future checks should be scoped to changed behavior and mandatory integration con
 
 The approved architecture boundaries and conditional WKWebView direction govern future execution; they are not proof of the code that must be built. Phase 5 is complete only when scoped implementation criteria and applicable final-release gates are evidenced and an internal release candidate receives its separate authorization. No unconditional production-engine acceptance, new service integration, public distribution or security waiver follows from this plan.
 
-**Current stop:** complete only the explicitly scoped M0 foundation and its [exit report](reports/M0/README.md). M1-M8, full adapter/chrome, service integrations, production signing/release infrastructure and distribution remain out of scope. Do not restart Phase 3 or treat its historical results as M0 qualification.
+**Current stop:** M0 foundation is complete; finish only [M1 design and consistency review](reports/M1/README.md). M1 implementation, M2-M8, full adapter/chrome, service integrations, production signing/release infrastructure and distribution remain out of scope. Do not restart Phase 3 or treat its historical results as M0 qualification.

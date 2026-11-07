@@ -6,6 +6,8 @@ The root package manager/toolchain pin is authoritative. Install existing depend
 
 After M0 source is present, use `pnpm nx run browser-macos:build`, then `pnpm nx run browser-macos:audit`. `pnpm nx run browser-macos:launch` opens the local development app and waits for normal quit. Development output stays under the app's ignored `build/` directory. The app is ad-hoc signed, sandboxed and hardened; do not disable Gatekeeper or configure production keys for this workflow.
 
+Current [M1 work](../../../../docs/architecture/phase-5/reports/M1/README.md) is design only: inspect/review documentation and preserve native source/evidence. Do not run the application, build/test suites, package generation or database migrations as part of that design milestone. A later implementation task must explicitly name its slice and prerequisites.
+
 ## Authoritative References
 
 - [Native Host Setup](../../../../apps/browser-macos/README.md)

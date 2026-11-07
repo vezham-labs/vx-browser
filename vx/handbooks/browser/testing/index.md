@@ -6,6 +6,8 @@ The separate Phase 3 49/49 recovery and 48/48 regression suites remain historica
 
 M0 verification covers a native development build, bundle/protection audit, real launch/normal quit and documentation/source preservation. It is not an engine, bridge, account, privacy or release test. Record commands, exit codes, source SHA/dirty tree, OS/SDK/engine where relevant, outputs, limitations and blockers under a unique Phase 5 run. Retries need new information or a documented code/environment change. Account/media workflows remain blocked until separately authorized.
 
+The [M1 design report](../../../../docs/architecture/phase-5/reports/M1/README.md) records documentation/source inspection only. The [planned finite verification matrix](../../../../docs/architecture/phase-5/reports/M1/m1-implementation-plan.md) covers future ownership, reentrancy, store/migration/receipt and private-refusal behavior; those tests are Not Tested until separately authorized implementation exists.
+
 ## Authoritative References
 
 - [Staged Acceptance Requirements](../../../../docs/architecture/browser-mvp-acceptance-criteria.md)

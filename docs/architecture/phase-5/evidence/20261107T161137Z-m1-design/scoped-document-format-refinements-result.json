@@ -1,0 +1,18 @@
+{
+  "command": [
+    "pnpm",
+    "nx",
+    "format:write",
+    "--files=docs/architecture/phase-5/reports/M1/README.md,docs/architecture/phase-5/reports/M1/browser-core-data-model.md"
+  ],
+  "workingDirectory": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "startedAtUTC": "2026-11-07T16:30:01.273528+00:00",
+  "elapsedSeconds": 1.958019733428955,
+  "exitCode": 0,
+  "outputFile": "scoped-document-format-refinements.log",
+  "scope": "M1 design/documentation only; no build, app launch or product tests.",
+  "environmentOverrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true"
+  }
+}

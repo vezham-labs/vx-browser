@@ -6,6 +6,8 @@ The Nx project is `browser-macos`. Native build/audit/launch targets call the ch
 
 Record material choices before implementing them, including alternatives and scope. Open choices stay open. Preserve view/profile ownership, cancellation and capability semantics when later milestones are separately authorized. Do not publish, commit or push from an agent task without explicit authorization.
 
+The [M1 runtime ADR](../../../../docs/decisions/0003-browser-core-runtime-and-language.md) proposes Swift value models and actor coordination; the [implementation breakdown](../../../../docs/architecture/phase-5/reports/M1/m1-implementation-plan.md) separates later domain/store proofs from actual engine/UI work. No package, target, dependency or source change is authorized by the design-only task.
+
 ## Authoritative References
 
 - [Repository Coding Standards](../../coding-standards/index.md)
