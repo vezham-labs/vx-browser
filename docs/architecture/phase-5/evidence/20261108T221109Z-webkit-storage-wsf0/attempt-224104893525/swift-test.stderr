@@ -1,0 +1,49 @@
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 211]
+[Planning deferred tasks]
+[13 / 108] WSF0Qualification-product
+[52 / 108]
+[53 / 109] BrowserDomain
+[55 / 146]
+[60 / 146]
+[63 / 146]
+[65 / 146]
+[67 / 146]
+[70 / 146]
+[72 / 146]
+[75 / 146]
+[76 / 146]
+[78 / 146]
+[79 / 146]
+[81 / 146]
+[84 / 146]
+[86 / 146]
+[87 / 146]
+[90 / 146] BrowserDomain
+[97 / 147]
+[99 / 149] BrowserPorts
+[107 / 150]
+[109 / 154] WSF0Fakes
+[110 / 154] WSF0Fakes
+[112 / 154] WSF0Fakes
+[120 / 155] BrowserPersistence
+[120 / 155] BrowserDomain
+[122 / 156] BrowserDomain
+[124 / 158] BrowserPersistence
+[126 / 161] BrowserCore
+[140 / 161] WSF0Tests-product
+[145 / 161] BrowserCore
+[151 / 162] WSF0Tests-product
+[152 / 173]
+[153 / 173]
+[156 / 173] WSF0Tests-product
+[163 / 173] WSF0Tests-product
+[165 / 173] WSF0Tests-product
+[167 / 173] WSF0Tests-product
+[169 / 173] WSF0Tests-product
+[170 / 173] WSF0Tests-product
+[171 / 173] WSF0Tests-product
+[172 / 173] WSF0Tests-product
+Build complete! (27.23 secs)
+error: Process '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/swift/pm/swiftpm-testing-helper --test-bundle-path /private/tmp/vx-wsf0-bh8klmo2/build/out/Products/Debug/WSF0Tests.xctest/Contents/MacOS/WSF0Tests --package-path /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0 --scratch-path /private/tmp/vx-wsf0-bh8klmo2/build --cache-path /private/tmp/vx-wsf0-bh8klmo2/cache --config-path /private/tmp/vx-wsf0-bh8klmo2/config --security-path /private/tmp/vx-wsf0-bh8klmo2/security --disable-keychain --disable-netrc --manifest-cache local --jobs 2 --disable-xctest --enable-swift-testing --no-parallel /private/tmp/vx-wsf0-bh8klmo2/build/out/Products/Debug/WSF0Tests.xctest/Contents/MacOS/WSF0Tests --testing-library swift-testing' exited with unexpected signal code 6

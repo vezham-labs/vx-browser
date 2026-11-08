@@ -1,0 +1,14 @@
+
+ NX   1 task: 1 succeeded
+
+
+Re-run with --output-style=static to inline logs.
+
+  Run duration:      44.7s
+  Cache:             0/1 hit (0%)
+  Critical path:     44.6s (1 task)
+  Recoverable time:  <1ms
+
+  Recommendations:
+    - Speed up or split the longest tasks on the critical path:
+        webkit-storage-wsf0:verify    44.6s

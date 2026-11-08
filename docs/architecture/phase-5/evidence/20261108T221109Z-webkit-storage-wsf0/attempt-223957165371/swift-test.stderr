@@ -1,0 +1,234 @@
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 211]
+[Planning deferred tasks]
+[43 / 108] BrowserDomain
+[52 / 108]
+[53 / 109] BrowserDomain
+[55 / 146]
+[59 / 146]
+[62 / 146]
+[63 / 146]
+[65 / 146]
+[70 / 146]
+[71 / 146]
+[72 / 146]
+[75 / 146]
+[76 / 146]
+[78 / 146]
+[79 / 146]
+[81 / 146]
+[84 / 146]
+[86 / 146]
+[87 / 146]
+[90 / 146] BrowserDomain
+[97 / 147]
+[99 / 149] BrowserPorts
+[108 / 151] BrowserPersistence
+[108 / 155] BrowserDomain
+[110 / 155] WSF0Fakes
+[112 / 157] BrowserPersistence
+[119 / 157] WSF0Fakes
+[126 / 157] WSF0Fakes
+[131 / 158]
+[134 / 161] BrowserPorts
+[144 / 161] BrowserPersistence
+[145 / 161] BrowserCore
+[151 / 162] WSF0Tests-product
+[152 / 173]
+[153 / 173]
+[156 / 173] WSF0Tests-product
+[163 / 173] WSF0Tests-product
+[165 / 173] WSF0Tests-product
+[166 / 173] WSF0Tests-product
+error: SwiftCompile normal arm64 /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources/test_entry_point.swift failed with a nonzero exit code. Command line:     cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification
+    builtin-SwiftPerFileCompile test_entry_point.swift
+error: SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift failed with a nonzero exit code. Command line:     cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification
+    builtin-SwiftPerFileCompile CatalogTests.swift
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:38:55: error: generic parameter 'T' could not be inferred
+ 36 |     @Test("F0-CAT-004 malformed catalog record is explicit corruption")
+ 37 |     func corruptCatalog() async throws {
+ 38 |         let f = try Fixture(raw: [RawBinding(profile: fixtureID(1).rawValue, store: "broken", namespace: fixtureID(800).rawValue)])
+    |                                                       `- error: generic parameter 'T' could not be inferred
+ 39 |         #expect(await f.catalog.lookup(fixtureID(1)) == .corrupt)
+ 40 |         #expect(await f.catalog.enumerate().issues.first?.failure == .corruptCatalog)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:38:106: error: generic parameter 'T' could not be inferred
+ 36 |     @Test("F0-CAT-004 malformed catalog record is explicit corruption")
+ 37 |     func corruptCatalog() async throws {
+ 38 |         let f = try Fixture(raw: [RawBinding(profile: fixtureID(1).rawValue, store: "broken", namespace: fixtureID(800).rawValue)])
+    |                                                                                                          `- error: generic parameter 'T' could not be inferred
+ 39 |         #expect(await f.catalog.lookup(fixtureID(1)) == .corrupt)
+ 40 |         #expect(await f.catalog.enumerate().issues.first?.failure == .corruptCatalog)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:40:71: error: cannot infer contextual base in reference to member 'corruptCatalog'
+ 38 |         let f = try Fixture(raw: [RawBinding(profile: fixtureID(1).rawValue, store: "broken", namespace: fixtureID(800).rawValue)])
+ 39 |         #expect(await f.catalog.lookup(fixtureID(1)) == .corrupt)
+ 40 |         #expect(await f.catalog.enumerate().issues.first?.failure == .corruptCatalog)
+    |                                                                       `- error: cannot infer contextual base in reference to member 'corruptCatalog'
+ 41 |         let c = await f.context(.persistent(fixtureID(1)))
+ 42 |         #expect(await f.core.reconcile(fixtureID(1), context: c, operation: fixtureID(1000)) == .quarantined(.corruptCatalog))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:47:40: error: generic parameter 'T' could not be inferred
+ 45 |     @Test("F0-CAT-005 duplicate raw profile/store records cannot be adopted")
+ 46 |     func duplicateRaw() async throws {
+ 47 |         let raw = [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue),
+    |                                        `- error: generic parameter 'T' could not be inferred
+ 48 |                    RawBinding(profile: fixtureID(2).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue)]
+ 49 |         let f = try Fixture(raw: raw)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:47:70: error: generic parameter 'T' could not be inferred
+ 45 |     @Test("F0-CAT-005 duplicate raw profile/store records cannot be adopted")
+ 46 |     func duplicateRaw() async throws {
+ 47 |         let raw = [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue),
+    |                                                                      `- error: generic parameter 'T' could not be inferred
+ 48 |                    RawBinding(profile: fixtureID(2).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue)]
+ 49 |         let f = try Fixture(raw: raw)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:47:106: error: generic parameter 'T' could not be inferred
+ 45 |     @Test("F0-CAT-005 duplicate raw profile/store records cannot be adopted")
+ 46 |     func duplicateRaw() async throws {
+ 47 |         let raw = [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue),
+    |                                                                                                          `- error: generic parameter 'T' could not be inferred
+ 48 |                    RawBinding(profile: fixtureID(2).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue)]
+ 49 |         let f = try Fixture(raw: raw)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:48:40: error: generic parameter 'T' could not be inferred
+ 46 |     func duplicateRaw() async throws {
+ 47 |         let raw = [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue),
+ 48 |                    RawBinding(profile: fixtureID(2).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue)]
+    |                                        `- error: generic parameter 'T' could not be inferred
+ 49 |         let f = try Fixture(raw: raw)
+ 50 |         #expect(await f.catalog.lookup(fixtureID(1)) == .conflicting)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:48:70: error: generic parameter 'T' could not be inferred
+ 46 |     func duplicateRaw() async throws {
+ 47 |         let raw = [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue),
+ 48 |                    RawBinding(profile: fixtureID(2).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue)]
+    |                                                                      `- error: generic parameter 'T' could not be inferred
+ 49 |         let f = try Fixture(raw: raw)
+ 50 |         #expect(await f.catalog.lookup(fixtureID(1)) == .conflicting)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:48:106: error: generic parameter 'T' could not be inferred
+ 46 |     func duplicateRaw() async throws {
+ 47 |         let raw = [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue),
+ 48 |                    RawBinding(profile: fixtureID(2).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(800).rawValue)]
+    |                                                                                                          `- error: generic parameter 'T' could not be inferred
+ 49 |         let f = try Fixture(raw: raw)
+ 50 |         #expect(await f.catalog.lookup(fixtureID(1)) == .conflicting)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:62:55: error: generic parameter 'T' could not be inferred
+ 60 |     @Test("F0-CAT-007 namespace mismatch and corrupt catalog block fresh insertion")
+ 61 |     func namespaceConflict() async throws {
+ 62 |         let f = try Fixture(raw: [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(899).rawValue)])
+    |                                                       `- error: generic parameter 'T' could not be inferred
+ 63 |         #expect(await f.catalog.lookup(fixtureID(1)) == .corrupt)
+ 64 |         #expect(await f.catalog.insert(f.binding(2)) == .failed(.corruptCatalog))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:62:85: error: generic parameter 'T' could not be inferred
+ 60 |     @Test("F0-CAT-007 namespace mismatch and corrupt catalog block fresh insertion")
+ 61 |     func namespaceConflict() async throws {
+ 62 |         let f = try Fixture(raw: [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(899).rawValue)])
+    |                                                                                     `- error: generic parameter 'T' could not be inferred
+ 63 |         #expect(await f.catalog.lookup(fixtureID(1)) == .corrupt)
+ 64 |         #expect(await f.catalog.insert(f.binding(2)) == .failed(.corruptCatalog))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift:62:121: error: generic parameter 'T' could not be inferred
+ 60 |     @Test("F0-CAT-007 namespace mismatch and corrupt catalog block fresh insertion")
+ 61 |     func namespaceConflict() async throws {
+ 62 |         let f = try Fixture(raw: [RawBinding(profile: fixtureID(1).rawValue, store: fixtureID(101).rawValue, namespace: fixtureID(899).rawValue)])
+    |                                                                                                                         `- error: generic parameter 'T' could not be inferred
+ 63 |         #expect(await f.catalog.lookup(fixtureID(1)) == .corrupt)
+ 64 |         #expect(await f.catalog.insert(f.binding(2)) == .failed(.corruptCatalog))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift:9:6: note: in call to function 'fixtureID'
+ 7 | import WSF0Fakes
+ 8 | 
+ 9 | func fixtureID<T>(_ value: Int) -> ID<T> {
+   |      `- note: in call to function 'fixtureID'
+10 |     // Public deterministic fixture identifiers only; no random/native service.
+11 |     try! ID<T>(String(format: "00000000-0000-4000-8000-%012llx", UInt64(value)))
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c -primary-file /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources/test_entry_point.swift -primary-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/ConstructionTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/DeletionTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/DiagnosticsTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/IdentityTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/IntegrationTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/LifecycleTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PublicationTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/RecoveryTests.swift -emit-dependencies-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/test_entry_point.d -emit-const-values-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/test_entry_point.swiftconstvalues -emit-reference-dependencies-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/test_entry_point.swiftdeps -serialize-diagnostics-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/test_entry_point.dia -emit-dependencies-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/CatalogTests.d -emit-const-values-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/CatalogTests.swiftconstvalues -emit-reference-dependencies-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/CatalogTests.swiftdeps -serialize-diagnostics-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/CatalogTests.dia -target arm64-apple-macos26.0 -module-can-import-version Testing 2403 0 -module-can-import-version XCTest 25435 0 -disable-cross-import-overlay-search -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/AppKit.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/CoreGraphics.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/CoreImage.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/CoreTransferable.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/Foundation.swiftoverlay -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing/libTestingMacros.dylib\#\#TestingMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/WSF0Tests-dependencies-1.json -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -I /private/tmp/vx-wsf0-_9_7ro10/build/out/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /private/tmp/vx-wsf0-_9_7ro10/build/out/Products/Debug/PackageFrameworks -F /private/tmp/vx-wsf0-_9_7ro10/build/out/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -module-cache-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/SwiftExplicitPrecompiledModules -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=5 -swift-version 6 -Onone -D SWIFT_PACKAGE -D DEBUG -D Xcode -serialize-debugging-options -enable-experimental-feature DebugDescriptionMacro -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /private/tmp/vx-wsf0-_9_7ro10/build/out/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification -enable-anonymous-context-mangled-names -file-compilation-dir /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /private/tmp/vx-wsf0-_9_7ro10/build/out/SDKStatCaches.noindex/macosx27.2-26B118-a0facfad118c1a7a18f0aad9463f6549a7ff82d74745d5ef33555b35c4238456.sdkstatcache -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -Xcc -I/private/tmp/vx-wsf0-_9_7ro10/build/out/Products/Debug/include -Xcc -I/private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources-normal/arm64 -Xcc -I/private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources/arm64 -Xcc -I/private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name WSF0Tests -package-name webkit_storage_f0 -const-gather-protocols-file /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/WSF0Tests_const_extract_protocols.json -disable-clang-spi -clang-target arm64-apple-macos27.2 -target-sdk-version 27.2 -target-sdk-name macosx27.2 -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -parse-as-library -o /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/test_entry_point.o -o /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/CatalogTests.o -debug-module-path /private/tmp/vx-wsf0-_9_7ro10/build/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/WSF0Tests.swiftmodule -index-unit-output-path /WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/test_entry_point.o -index-unit-output-path /WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/CatalogTests.o -index-store-path /private/tmp/vx-wsf0-_9_7ro10/build/out -index-system-modules
+error: Build failed
+error: fatalError

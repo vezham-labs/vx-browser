@@ -1,0 +1,151 @@
+{
+  "source_root": "qualification/webkit-storage-f0",
+  "files": [
+    {
+      "path": "qualification/webkit-storage-f0/Package.swift",
+      "sha256": "fbd381b05b0e982691a990f514e895bff47700420a85f58b7de7b6204f9b4e09",
+      "bytes": 826,
+      "line_count": 17
+    },
+    {
+      "path": "qualification/webkit-storage-f0/README.md",
+      "sha256": "12b4f017dce0aab90564989286ce501e7fd36b949b4c90817508b7df3a0588b3",
+      "bytes": 5380,
+      "line_count": 52
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserCore/LifecycleCoordinator.swift",
+      "sha256": "acbb6bb8bba795e560bdb8493b659f48a26ca8cbe9de3b561d05d75b380a4485",
+      "bytes": 36543,
+      "line_count": 541
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserCore/Policies.swift",
+      "sha256": "3aa10b012012926d1e8e05f84891cb187b1b92d0970d39f9f327a2192e88d396",
+      "bytes": 2972,
+      "line_count": 55
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/Identity.swift",
+      "sha256": "3c1229a9ff17635da6319a32214c1b9f70d2068f64e82e1b25a3c400d6a64578",
+      "bytes": 3250,
+      "line_count": 63
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/Models.swift",
+      "sha256": "07ca2e396af295b1eac01125ead71902e0831b92548fbf1ae01f901ce9118be0",
+      "bytes": 7767,
+      "line_count": 141
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserPersistence/InMemoryAdapters.swift",
+      "sha256": "9ba76460fe1a7f9d5873182ff3ccc247a6e3a30990ea51e17228f9f2afaa44dd",
+      "bytes": 7167,
+      "line_count": 120
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserPorts/StoragePorts.swift",
+      "sha256": "dec1b37c2edcae22926dbe0fe15b6a261044b34217f07adfebfde46ee99733bd",
+      "bytes": 1850,
+      "line_count": 36
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/WSF0Fakes/FakeConstruction.swift",
+      "sha256": "b7eaab3fa0695e5b6745b2ee918e59ef08292806240bf930756d99605f243100",
+      "bytes": 2189,
+      "line_count": 38
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/WSF0Fakes/FakeEngine.swift",
+      "sha256": "51a491497e771160ac9a7ef9fb31f0e21b3c7b38822df01707633d80396aef5b",
+      "bytes": 8286,
+      "line_count": 150
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/WSF0Fakes/FakeInfrastructure.swift",
+      "sha256": "1faf1317d19c0889521ee9d9a3f746d89217af7b90d4472d193a4f65ffe87e65",
+      "bytes": 4720,
+      "line_count": 85
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift",
+      "sha256": "55710af7342f1fb5dda9fbc48a88dacb6026c13d265cb6f4302dc0de99959151",
+      "bytes": 7104,
+      "line_count": 111
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/ConstructionTests.swift",
+      "sha256": "e31a60d45157a5b94556d039fdb5f760bce3f5c72937f2a11934f74cdb8a077a",
+      "bytes": 5479,
+      "line_count": 79
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/DeletionTests.swift",
+      "sha256": "d9d0920ca79d07f353b36e04ea9807859c9aeffea665204c94a499dc8556bdb6",
+      "bytes": 8253,
+      "line_count": 123
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/DiagnosticsTests.swift",
+      "sha256": "73c6eb6c50b5293b453337485c2af35c60e09c6977bd73326e33eee1b58901d9",
+      "bytes": 4015,
+      "line_count": 66
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift",
+      "sha256": "be26ccae6b97a6a06f779e39666395faca74438d707ddbb7efe3e68ec6db59f7",
+      "bytes": 3774,
+      "line_count": 67
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/IdentityTests.swift",
+      "sha256": "9ca5c4bbff90ed424057b5d7414d7c51a8163fac33bd1b87dc9bb0a13c5d133e",
+      "bytes": 408,
+      "line_count": 11
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/IntegrationTests.swift",
+      "sha256": "90d1c17d181d707fc7731b2d66d2a248d8abba6a851e916033c7d29ac64dce39",
+      "bytes": 4967,
+      "line_count": 68
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/LifecycleTests.swift",
+      "sha256": "529a5740618bc40fbfff93f42e300f014a2311150b980fe682bc669b42d0069b",
+      "bytes": 8668,
+      "line_count": 122
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateTests.swift",
+      "sha256": "dbc23aaade7742b999551c98ed10716ce33368895f8bd37b38d881af583e7776",
+      "bytes": 7949,
+      "line_count": 105
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/PublicationTests.swift",
+      "sha256": "fc5c09962089ca4abe96c7fc06f15844c78d6c85ac3ba58b3abfaa6ea941f09c",
+      "bytes": 1987,
+      "line_count": 24
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/RecoveryTests.swift",
+      "sha256": "47c66f0b159c42642100ebe80ff54b28eda498cc8fa9634e1368b416e9d76c9b",
+      "bytes": 12005,
+      "line_count": 159
+    },
+    {
+      "path": "qualification/webkit-storage-f0/project.json",
+      "sha256": "09d6927205d0c78b75d6179c704ff7ff3dc9c02dbbfda905d6bc01c64094bd99",
+      "bytes": 453,
+      "line_count": 19
+    },
+    {
+      "path": "qualification/webkit-storage-f0/run_wsf0.py",
+      "sha256": "e3934c56a264d0c577d200173a2e82e647af6b4284ac75ec3eed30ec40a38caa",
+      "bytes": 5839,
+      "line_count": 85
+    }
+  ],
+  "canonical_test_source_hashes": "docs/architecture/phase-5/evidence/20261108T221109Z-webkit-storage-wsf0/attempt-225006810161/source-hashes.json",
+  "qualification_not_product_integration": true
+}

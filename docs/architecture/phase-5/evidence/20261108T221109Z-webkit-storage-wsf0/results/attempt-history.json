@@ -1,0 +1,71 @@
+{
+  "rule": "Do not combine counts from different revisions/runs. Earlier build failures/aborts/assertion failures remain preserved. Only a complete stable-source PASS attempt qualifies its exact fake revision.",
+  "attempts": [
+    {
+      "path": "attempt-223957165371",
+      "status": "FAIL",
+      "passed": 0,
+      "failed": 0,
+      "expected": 78,
+      "uncompleted": 78,
+      "source_hash_record": "attempt-223957165371/source-hashes.json",
+      "runtime_scope": "fake-only",
+      "final_source_qualification": false
+    },
+    {
+      "path": "attempt-224104893525",
+      "status": "FAIL",
+      "passed": 45,
+      "failed": 0,
+      "expected": 78,
+      "uncompleted": 33,
+      "source_hash_record": "attempt-224104893525/source-hashes.json",
+      "runtime_scope": "fake-only",
+      "final_source_qualification": false
+    },
+    {
+      "path": "attempt-224315998392",
+      "status": "FAIL",
+      "passed": 68,
+      "failed": 0,
+      "expected": 82,
+      "uncompleted": 14,
+      "source_hash_record": "attempt-224315998392/source-hashes.json",
+      "runtime_scope": "fake-only",
+      "final_source_qualification": false
+    },
+    {
+      "path": "attempt-224401624552",
+      "status": "FAIL",
+      "passed": 78,
+      "failed": 4,
+      "expected": 82,
+      "uncompleted": 0,
+      "source_hash_record": "attempt-224401624552/source-hashes.json",
+      "runtime_scope": "fake-only",
+      "final_source_qualification": false
+    },
+    {
+      "path": "attempt-224534481517",
+      "status": "PASS_FAKE_ONLY",
+      "passed": 82,
+      "failed": 0,
+      "expected": 82,
+      "uncompleted": 0,
+      "source_hash_record": "attempt-224534481517/source-hashes.json",
+      "runtime_scope": "fake-only",
+      "final_source_qualification": true
+    },
+    {
+      "path": "attempt-225006810161",
+      "status": "PASS_FAKE_ONLY",
+      "passed": 82,
+      "failed": 0,
+      "expected": 82,
+      "uncompleted": 0,
+      "source_hash_record": "attempt-225006810161/source-hashes.json",
+      "runtime_scope": "fake-only",
+      "final_source_qualification": true
+    }
+  ]
+}

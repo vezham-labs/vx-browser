@@ -1,0 +1,141 @@
+{
+  "scope": "Deterministic in-memory injections only, no native/provider/filesystem error qualification",
+  "canonical_attempt": "docs/architecture/phase-5/evidence/20261108T221109Z-webkit-storage-wsf0/attempt-225006810161",
+  "required_fault_count": 16,
+  "faults": [
+    {
+      "classification": "Provider unavailable",
+      "test_ids": [
+        "F0-CON-003",
+        "F0-CAT-009",
+        "F0-REC-003"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Store missing",
+      "test_ids": [
+        "F0-REC-002",
+        "F0-CAT-006"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Invalid store identity",
+      "test_ids": [
+        "F0-CON-004",
+        "F0-CAT-001",
+        "F0-CAT-011"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Duplicate identity",
+      "test_ids": [
+        "F0-CAT-003",
+        "F0-CAT-005",
+        "F0-CON-004"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Conflicting catalog mapping",
+      "test_ids": [
+        "F0-CAT-005",
+        "F0-CAT-007",
+        "F0-CAT-012"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Construction failure",
+      "test_ids": [
+        "F0-CON-005"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Activation failure",
+      "test_ids": [
+        "F0-CON-006"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Quiescence timeout",
+      "test_ids": [
+        "F0-LIF-003"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Outstanding references",
+      "test_ids": [
+        "F0-LIF-002",
+        "F0-PRI-006",
+        "F0-DEL-005",
+        "F0-DIA-004"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Partial deletion",
+      "test_ids": [
+        "F0-DEL-006",
+        "F0-DEL-009"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Unknown deletion result",
+      "test_ids": [
+        "F0-DEL-007",
+        "F0-DEL-009",
+        "F0-REC-005",
+        "F0-INT-004"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Removal failure",
+      "test_ids": [
+        "F0-DEL-008"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Restart interruption",
+      "test_ids": [
+        "F0-REC-004",
+        "F0-INT-003"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Corrupt recovery metadata",
+      "test_ids": [
+        "F0-REC-006",
+        "F0-REC-007"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Quarantine persistence failure",
+      "test_ids": [
+        "F0-REC-008",
+        "F0-REC-009",
+        "F0-REC-014"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "classification": "Reconciliation mismatch",
+      "test_ids": [
+        "F0-REC-003",
+        "F0-REC-006",
+        "F0-REC-010"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    }
+  ]
+}

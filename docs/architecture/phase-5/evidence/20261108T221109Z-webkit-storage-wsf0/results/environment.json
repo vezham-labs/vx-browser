@@ -1,0 +1,43 @@
+{
+  "client_date": "2026-11-09",
+  "platform_scope": "Current host only;26.0 deployment target is not macOS26 runtime qualification",
+  "commands": [
+    {
+      "argv": [
+        "sw_vers"
+      ],
+      "returncode": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uname",
+        "-m"
+      ],
+      "returncode": 0,
+      "stdout": "arm64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "swift",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+      "stderr": "swift-driver version: 1.168.6 "
+    },
+    {
+      "argv": [
+        "xcrun",
+        "--sdk",
+        "macosx",
+        "--show-sdk-version"
+      ],
+      "returncode": 0,
+      "stdout": "27.2\n",
+      "stderr": ""
+    }
+  ]
+}

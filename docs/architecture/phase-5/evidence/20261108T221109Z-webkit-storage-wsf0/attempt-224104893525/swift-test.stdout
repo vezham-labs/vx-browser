@@ -1,0 +1,122 @@
+◇ Test run started.
+↳ Testing Library Version: 2403
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "F0.1 catalog and identity" started.
+◇ Test "F0-CAT-001 validated identities are canonical and type-separated" started.
+✔ Test "F0-CAT-001 validated identities are canonical and type-separated" passed after 0.004 seconds.
+◇ Test "F0-CAT-002 stable mapping and noncreating deterministic enumeration" started.
+✔ Test "F0-CAT-002 stable mapping and noncreating deterministic enumeration" passed after 0.002 seconds.
+◇ Test "F0-CAT-003 duplicate store insertion preserves original mapping" started.
+✔ Test "F0-CAT-003 duplicate store insertion preserves original mapping" passed after 0.001 seconds.
+◇ Test "F0-CAT-004 malformed catalog record is explicit corruption" started.
+✔ Test "F0-CAT-004 malformed catalog record is explicit corruption" passed after 0.001 seconds.
+◇ Test "F0-CAT-005 duplicate raw profile/store records cannot be adopted" started.
+✔ Test "F0-CAT-005 duplicate raw profile/store records cannot be adopted" passed after 0.001 seconds.
+◇ Test "F0-CAT-006 missing lookup never creates or replaces a store" started.
+✔ Test "F0-CAT-006 missing lookup never creates or replaces a store" passed after 0.001 seconds.
+◇ Test "F0-CAT-007 namespace mismatch and corrupt catalog block fresh insertion" started.
+✔ Test "F0-CAT-007 namespace mismatch and corrupt catalog block fresh insertion" passed after 0.001 seconds.
+◇ Test "F0-CAT-008 revision and capacity are enforced without overwrite" started.
+✔ Test "F0-CAT-008 revision and capacity are enforced without overwrite" passed after 0.003 seconds.
+◇ Test "F0-CAT-009 catalog unavailable and failed write do not invoke engine" started.
+✔ Test "F0-CAT-009 catalog unavailable and failed write do not invoke engine" passed after 0.001 seconds.
+◇ Test "F0-CAT-010 store identity alone never authorizes cross-profile actions" started.
+✔ Test "F0-CAT-010 store identity alone never authorizes cross-profile actions" passed after 0.001 seconds.
+◇ Test "F0-CAT-011 malformed identity shapes never become valid IDs" started.
+✔ Test "F0-CAT-011 malformed identity shapes never become valid IDs" passed after 0.001 seconds.
+✔ Suite "F0.1 catalog and identity" passed after 0.013 seconds.
+◇ Suite "F0.3 construction" started.
+◇ Test "F0-CON-001 resolution and assignment precede construction and activation" started.
+✔ Test "F0-CON-001 resolution and assignment precede construction and activation" passed after 0.001 seconds.
+◇ Test "F0-CON-002 missing assignment and default resolution fail closed" started.
+✔ Test "F0-CON-002 missing assignment and default resolution fail closed" passed after 0.001 seconds.
+◇ Test "F0-CON-003 failed provider resolution cannot construct" started.
+✔ Test "F0-CON-003 failed provider resolution cannot construct" passed after 0.001 seconds.
+◇ Test "F0-CON-004 wrong identity and conflict are rejected before constructor" started.
+✔ Test "F0-CON-004 wrong identity and conflict are rejected before constructor" passed after 0.001 seconds.
+◇ Test "F0-CON-005 construction failure is explicit and has no ghost view" started.
+✔ Test "F0-CON-005 construction failure is explicit and has no ghost view" passed after 0.001 seconds.
+◇ Test "F0-CON-006 activation failure retires the constructed fake view" started.
+✔ Test "F0-CON-006 activation failure retires the constructed fake view" passed after 0.001 seconds.
+◇ Test "F0-CON-007 operation replay does not construct twice; payload mismatch fails" started.
+✔ Test "F0-CON-007 operation replay does not construct twice; payload mismatch fails" passed after 0.001 seconds.
+◇ Test "F0-CON-008 private-to-persistent and persistent-to-private assignments are invalid" started.
+✔ Test "F0-CON-008 private-to-persistent and persistent-to-private assignments are invalid" passed after 0.001 seconds.
+◇ Test "F0-CON-009 duplicate view identity cannot cross profiles" started.
+✔ Test "F0-CON-009 duplicate view identity cannot cross profiles" passed after 0.001 seconds.
+✔ Suite "F0.3 construction" passed after 0.003 seconds.
+◇ Suite "F0.5 deletion state machines" started.
+◇ Test "F0-DEL-001 clear selected types preserves store and unselected data" started.
+✔ Test "F0-DEL-001 clear selected types preserves store and unselected data" passed after 0.001 seconds.
+◇ Test "F0-DEL-002 clear has same-operation idempotency and payload mismatch rejection" started.
+✔ Test "F0-DEL-002 clear has same-operation idempotency and payload mismatch rejection" passed after 0.001 seconds.
+◇ Test "F0-DEL-003 explicit retirement required before whole-store removal" started.
+✔ Test "F0-DEL-003 explicit retirement required before whole-store removal" passed after 0.001 seconds.
+◇ Test "F0-DEL-004 retired store removal retains a deleted catalog tombstone" started.
+✔ Test "F0-DEL-004 retired store removal retains a deleted catalog tombstone" passed after 0.001 seconds.
+◇ Test "F0-DEL-005 resources reappearing after retirement block removal" started.
+✔ Test "F0-DEL-005 resources reappearing after retirement block removal" passed after 0.001 seconds.
+◇ Test "F0-DEL-006 partial removal remains partial and quarantined" started.
+✔ Test "F0-DEL-006 partial removal remains partial and quarantined" passed after 0.001 seconds.
+◇ Test "F0-DEL-007 unknown removal after effects never becomes success" started.
+✔ Test "F0-DEL-007 unknown removal after effects never becomes success" passed after 0.001 seconds.
+◇ Test "F0-DEL-008 failed removal never rolls mapping back to active" started.
+✔ Test "F0-DEL-008 failed removal never rolls mapping back to active" passed after 0.001 seconds.
+◇ Test "F0-DEL-009 clear failure and partial outcomes are not successful clears" started.
+✔ Test "F0-DEL-009 clear failure and partial outcomes are not successful clears" passed after 0.001 seconds.
+◇ Test "F0-DEL-010 catalog commit failure after provider effect remains unknown" started.
+✔ Test "F0-DEL-010 catalog commit failure after provider effect remains unknown" passed after 0.001 seconds.
+◇ Test "F0-DEL-011 zero selected data types is refused without a provider call" started.
+✔ Test "F0-DEL-011 zero selected data types is refused without a provider call" passed after 0.001 seconds.
+◇ Test "F0-DEL-012 successful clear of one profile leaves another profile unchanged" started.
+✔ Test "F0-DEL-012 successful clear of one profile leaves another profile unchanged" passed after 0.001 seconds.
+✔ Suite "F0.5 deletion state machines" passed after 0.006 seconds.
+◇ Suite "F0.7 failure injection and diagnostics" started.
+◇ Test "F0-DIA-001 diagnostic events are bounded with reserved terminal capacity" started.
+✔ Test "F0-DIA-001 diagnostic events are bounded with reserved terminal capacity" passed after 0.001 seconds.
+◇ Test "F0-DIA-002 diagnostics have only typed classifications and opaque operations" started.
+✔ Test "F0-DIA-002 diagnostics have only typed classifications and opaque operations" passed after 0.002 seconds.
+◇ Test "F0-DIA-003 failure scripts are FIFO deterministic and exhaust once" started.
+✔ Test "F0-DIA-003 failure scripts are FIFO deterministic and exhaust once" passed after 0.001 seconds.
+◇ Test "F0-DIA-004 held close references cannot produce successful cleanup" started.
+✔ Test "F0-DIA-004 held close references cannot produce successful cleanup" passed after 0.001 seconds.
+◇ Test "F0-DIA-005 limits reject invalid coordinator configurations" started.
+✔ Test "F0-DIA-005 limits reject invalid coordinator configurations" passed after 0.001 seconds.
+◇ Test "F0-DIA-006 in-flight events reserve space under diagnostic pressure" started.
+✔ Test "F0-DIA-006 in-flight events reserve space under diagnostic pressure" passed after 0.001 seconds.
+✔ Suite "F0.7 failure injection and diagnostics" passed after 0.003 seconds.
+◇ Suite "WS-F0 identity contracts" started.
+◇ Test "F0-ID-001 malformed and zero identifiers are rejected" started.
+✔ Test "F0-ID-001 malformed and zero identifiers are rejected" passed after 0.001 seconds.
+✔ Suite "WS-F0 identity contracts" passed after 0.001 seconds.
+◇ Suite "F0.8 full fake integration scenarios" started.
+◇ Test "F0-INT-001 persistent create activate switch clear retire remove lifecycle" started.
+✔ Test "F0-INT-001 persistent create activate switch clear retire remove lifecycle" passed after 0.003 seconds.
+◇ Test "F0-INT-002 independent private session opens closes and never enters restart state" started.
+✔ Test "F0-INT-002 independent private session opens closes and never enters restart state" passed after 0.001 seconds.
+◇ Test "F0-INT-003 interrupted activation restart cannot replay views or requests" started.
+✔ Test "F0-INT-003 interrupted activation restart cannot replay views or requests" passed after 0.001 seconds.
+◇ Test "F0-INT-004 ambiguity in one profile preserves another active profile" started.
+✔ Test "F0-INT-004 ambiguity in one profile preserves another active profile" passed after 0.001 seconds.
+◇ Test "F0-INT-005 cross-profile and default fallback adversarial attempts have no construction effect" started.
+✔ Test "F0-INT-005 cross-profile and default fallback adversarial attempts have no construction effect" passed after 0.001 seconds.
+✔ Suite "F0.8 full fake integration scenarios" passed after 0.005 seconds.
+◇ Suite "F0.4 lifecycle and races" started.
+◇ Test "F0-LIF-001 illegal activation and removal transitions are deterministic" started.
+✔ Test "F0-LIF-001 illegal activation and removal transitions are deterministic" passed after 0.001 seconds.
+◇ Test "F0-LIF-002 references prevent quiescence and retirement" started.
+Simultaneous accesses to 0x7741148188, but modification requires exclusive access.
+Previous access (a modification) started at WSF0Tests`LifecycleCoordinator.entries.modify + 40 (0x1057693c0).
+Current access (a read) started at:
+0    libswiftCore.dylib                 0x000000019218364c _swift_reportExclusivityConflict + 332
+1    libswiftCore.dylib                 0x000000019211af34 swift_beginAccess + 192
+2    WSF0Tests                          0x000000010579eb14 LifecycleCoordinator.finishUnsuccessful(_:_:_:_:_:) + 436
+3    libswift_Concurrency.dylib         0x0000000196135b08 swift::runJobInEstablishedExecutorContext(swift::Job*, swift::SerialExecutorRef, swift::TaskExecutorRef) + 328
+4    libswift_Concurrency.dylib         0x0000000196137938 swift_job_runImpl(swift::Job*, swift::SerialExecutorRef) + 156
+5    libdispatch.dylib                  0x000000019700e944 _dispatch_root_queue_drain + 360
+6    libdispatch.dylib                  0x000000019700f190 _dispatch_worker_thread2 + 184
+7    libsystem_pthread.dylib            0x0000000192078e5c _pthread_wqthread + 232
+8    libsystem_pthread.dylib            0x0000000192077cbc start_wqthread + 8
+Fatal access conflict detected.
+Note: Some test targets reported failures:
+  - WSF0Tests (Swift Testing)

@@ -1,0 +1,26 @@
+{
+  "status": "PASS \u2014 static review of executable fake-test evidence/documentation only",
+  "checks": {
+    "three_reports_present": true,
+    "40_original_WKS_definitions_exact": true,
+    "40_unique_ordered_overlay_rows": true,
+    "all_trace_rows_present": true,
+    "overlay_statuses_truthful": true,
+    "all_WKS_test_references_executed": true,
+    "all_WKS_runtime_unqualified": true,
+    "82_unique_tests_passed": true,
+    "no_final_failed_skipped_uncompleted": true,
+    "all16_fault_classes_tested": true,
+    "all14_integration_scenarios_mapped": true,
+    "50_PQR_and40_WKS_hashes_preserved": true,
+    "source_boundary_checks_pass": true,
+    "local_links_resolve": true,
+    "tables_rectangular": true,
+    "no_external_package_dependencies": true,
+    "Nx_resolved_target_and_verify_succeeded": true
+  },
+  "relative_links_checked": 50,
+  "missing_links": [],
+  "table_errors": [],
+  "not_native_runtime_qualification": true
+}

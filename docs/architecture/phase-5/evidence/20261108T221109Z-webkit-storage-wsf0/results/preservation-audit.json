@@ -1,0 +1,91 @@
+{
+  "status": "PASS \u2014 fake-only scope and repository preservation",
+  "baseline_HEAD": "0075b524a84712feeaf4f04d34b7b81ef6de8f3b",
+  "parent": "a99da90d4d2ec7fbcb6308689709558641cf2b73",
+  "branch": "timeline",
+  "baseline_tracked_files": 1219,
+  "unchanged_preexisting_files": 1217,
+  "changed_preexisting_paths": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md"
+  ],
+  "missing_preexisting_files": [],
+  "unexpected_new_files": [],
+  "checks": {
+    "baseline_HEAD_parent_unchanged": true,
+    "branch_timeline_unchanged": true,
+    "no_staged_changes": true,
+    "no_preexisting_file_deleted": true,
+    "only_two_expected_existing_files_changed": true,
+    "index_changes_append_only": true,
+    "all_new_paths_within_authorized_scope": true,
+    "prior_historical_manifests_preserved": true,
+    "all_final_tested_Swift_sources_hash_match": true,
+    "complete_implementation_manifest_hash_matches": true,
+    "final_Nx_suite82_passed_no_fail_skip": true,
+    "all_WKS_original_definitions_preserved": true,
+    "all_scope_boundary_checks_pass": true,
+    "all_static_documentation_checks_pass": true,
+    "all_ten_stages_addressed": true,
+    "all16_faults_and14_scenarios": true
+  },
+  "append_only_index_checks": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "HEAD_matches_baseline": true,
+      "original_bytes_preserved_as_prefix": true,
+      "appended_bytes": 752
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "HEAD_matches_baseline": true,
+      "original_bytes_preserved_as_prefix": true,
+      "appended_bytes": 752
+    }
+  ],
+  "protected_baseline_counts": {
+    "ADRs": 5,
+    "owner_records": 3,
+    "historical_evidence": 614,
+    "Phase1_SQLCipher_source": 10,
+    "Phase3_source_and_docs": 377,
+    "native_browser_product_source_config": 14,
+    "prior_WebKit_architecture_reports": 3,
+    "root_dependency_manifests": 4
+  },
+  "historical_manifest_checks": [
+    {
+      "directory": "20261108T202200Z-webkit-website-storage-design",
+      "manifest_entries": 26,
+      "all_match": true
+    },
+    {
+      "directory": "20261108T193319Z-m1-critical-safety-contracts-phase2a",
+      "manifest_entries": 16,
+      "all_match": true
+    },
+    {
+      "directory": "20261108T175705Z-m1-provider-adapter-phase2-design",
+      "manifest_entries": 13,
+      "all_match": true
+    },
+    {
+      "directory": "20261108T165809Z-m1-worker-phase1",
+      "manifest_entries": 107,
+      "all_match": true
+    }
+  ],
+  "canonical_attempt": "docs/architecture/phase-5/evidence/20261108T221109Z-webkit-storage-wsf0/attempt-225006810161",
+  "fake_tests": {
+    "passed": 82,
+    "failed": 0,
+    "skipped": 0,
+    "uncompleted": 0
+  },
+  "WKS_disposition": {
+    "BLOCKED": 36,
+    "PASS_FAKE_ONLY": 4
+  },
+  "test_outcome_boundary": "PASS_FAKE_ONLY, not WebKit/security/provider/platform qualification",
+  "working_tree": "Uncommitted authorized source/tests/docs/evidence; branch and HEAD unchanged; no staging/commit/push"
+}

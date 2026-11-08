@@ -1,0 +1,17 @@
+{
+  "original_WKS": {
+    "path": "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/qualification-cases.json",
+    "case_count": 40,
+    "sha256": "dbce9fd39d01d06c87309fd752ea8a0aef23b03a3f78a83f79b7ed4fd4328729",
+    "baseline_sha256": "dbce9fd39d01d06c87309fd752ea8a0aef23b03a3f78a83f79b7ed4fd4328729"
+  },
+  "original_SQLCipher_PQR": {
+    "path": "docs/architecture/phase-5/evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/synthetic-test-matrix.json",
+    "case_count": 50,
+    "sha256": "6934307144ed869aa88b8c631833a57e677ed10ae067a49ea6ea6f678ba4b0b3",
+    "baseline_sha256": "6934307144ed869aa88b8c631833a57e677ed10ae067a49ea6ea6f678ba4b0b3"
+  },
+  "case_outcomes_modified": false,
+  "PQR_runtime_executed": 0,
+  "full_WebKit_runtime_qualification": false
+}

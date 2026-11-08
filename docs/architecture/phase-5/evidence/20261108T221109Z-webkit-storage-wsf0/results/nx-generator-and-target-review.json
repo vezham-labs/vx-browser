@@ -1,0 +1,140 @@
+{
+  "skills_read": [
+    ".agents/skills/nx-workspace/SKILL.md",
+    ".agents/skills/nx-generate/SKILL.md",
+    ".agents/skills/nx-run-tasks/SKILL.md"
+  ],
+  "installed_catalogs": [
+    {
+      "path": "node_modules/@nx/eslint/generators.json",
+      "generators": [
+        "init",
+        "workspace-rules-project",
+        "workspace-rule",
+        "convert-to-flat-config",
+        "convert-to-inferred"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/js/generators.json",
+      "generators": [
+        "library",
+        "init",
+        "convert-to-swc",
+        "setup-verdaccio",
+        "setup-build",
+        "typescript-sync",
+        "setup-prettier"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/next/generators.json",
+      "generators": [
+        "init",
+        "application",
+        "page",
+        "component",
+        "library",
+        "custom-server",
+        "cypress-component-configuration",
+        "convert-to-inferred"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/oxlint/generators.json",
+      "generators": [
+        "init",
+        "configuration"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/playwright/generators.json",
+      "generators": [
+        "configuration",
+        "init",
+        "convert-to-inferred"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/plugin/generators.json",
+      "generators": [
+        "plugin",
+        "create-package",
+        "e2e-project",
+        "migration",
+        "generator",
+        "executor",
+        "plugin-lint-checks",
+        "preset"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/react/generators.json",
+      "generators": [
+        "init",
+        "application",
+        "library",
+        "component",
+        "redux",
+        "storybook-configuration",
+        "component-story",
+        "stories",
+        "hook",
+        "consumer",
+        "provider",
+        "cypress-component-configuration",
+        "component-test"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/vite/generators.json",
+      "generators": [
+        "init",
+        "configuration",
+        "setup-paths-plugin",
+        "convert-to-inferred"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/vitest/generators.json",
+      "generators": [
+        "init",
+        "configuration",
+        "convert-to-inferred"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/web/generators.json",
+      "generators": [
+        "init",
+        "application",
+        "static-config"
+      ]
+    },
+    {
+      "path": "node_modules/@nx/workspace/generators.json",
+      "generators": [
+        "preset",
+        "move",
+        "remove",
+        "convert-to-monorepo",
+        "new",
+        "run-commands",
+        "fix-configuration",
+        "npm-package",
+        "ci-workflow",
+        "infer-targets"
+      ]
+    }
+  ],
+  "native_generator_available": false,
+  "reviewed_existing_generator": "@nx/workspace:run-commands requires existing project, modifies its target/config and formats files; no Swift package scaffolding",
+  "generator_invoked": false,
+  "implementation_choice": "Explicit isolated Swift package plus matching qualification project.json; no JS generator or global formatting/dependency edits",
+  "pnpm_discovery": "12-second finite timeout, record retained",
+  "resolved_target": "results/nx-direct-inspection.json",
+  "actual_Nx_execution": "results/nx-verify-command.json",
+  "Nx_task_count": 1,
+  "Nx_task_result": "Succeeded, uncached",
+  "all_other_targets_not_run": true
+}

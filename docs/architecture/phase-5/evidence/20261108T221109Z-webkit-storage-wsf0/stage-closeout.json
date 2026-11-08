@@ -1,0 +1,72 @@
+{
+  "verdict": "Complete within authorized fake-only scope",
+  "stages": [
+    {
+      "stage": "F0.1",
+      "implementation": "Tagged IDs, unique stable catalog, deterministic noncreating inventory, explicit corruption/conflict",
+      "verification": "F0-CAT-001\u2013012; F0-ID-001",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.2",
+      "implementation": "Private/persistent types and memory-only private lifecycle/restart exclusion",
+      "verification": "F0-PRI-001\u2013008; F0-CON-008",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.3",
+      "implementation": "Validated assignment before abstract construction, no default or foreign binding",
+      "verification": "F0-CON-001\u2013009",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.4",
+      "implementation": "Actor state machine, operation receipts, resource ownership/generations and switching",
+      "verification": "F0-LIF-001\u2013012",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.5",
+      "implementation": "Separate clear/remove, retired/owner barriers, partial/failed/unknown outcomes",
+      "verification": "F0-DEL-001\u2013012",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.6",
+      "implementation": "Memory snapshot/journal reconciliation, quarantine/interruptions/orphans",
+      "verification": "F0-REC-001\u2013014",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.7",
+      "implementation": "Bounded sanitized events, deterministic fault FIFO/gates and required16 classifications",
+      "verification": "F0-DIA-001\u2013006; failure-injection-results.json",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.8",
+      "implementation": "Five named integration tests covering all14 requested scenarios through normal/adversarial routes",
+      "verification": "F0-INT-001\u2013005 plus focused private/deletion/recovery tests",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.9",
+      "implementation": "All40 original WKS definitions preserved with explicit fake/contributing/blocked dispositions; PQR unchanged",
+      "verification": "wks-dispositions.json; m1-wsf0-wks-traceability.md",
+      "status": "Addressed \u2014 fake-only"
+    },
+    {
+      "stage": "F0.10",
+      "implementation": "Closeout, actual commands/results, source hashes, scope/preservation/non-execution audits",
+      "verification": "This report and timestamped evidence package",
+      "status": "Addressed \u2014 fake-only"
+    }
+  ],
+  "test_count": 82,
+  "fake_tests_failed": 0,
+  "WKS_case_dispositions": {
+    "BLOCKED": 36,
+    "PASS_FAKE_ONLY": 4
+  },
+  "native_qualification_complete": false
+}

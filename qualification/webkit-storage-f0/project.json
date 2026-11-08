@@ -1,0 +1,19 @@
+{
+  "name": "webkit-storage-wsf0",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "qualification/webkit-storage-f0",
+  "projectType": "library",
+  "tags": [
+    "scope:qualification",
+    "type:swift-fake-only"
+  ],
+  "targets": {
+    "verify": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 qualification/webkit-storage-f0/run_wsf0.py"
+      }
+    }
+  }
+}

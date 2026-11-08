@@ -1,0 +1,784 @@
+{
+  "baseline": "0075b524a84712feeaf4f04d34b7b81ef6de8f3b",
+  "inputs": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-architecture.md",
+      "sha256": "62509c0b12f96c9dea97fd6d3326396286e8d77febabcceb3059309e34865f99",
+      "line_count": 127,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Vezham WebKit-managed website storage architecture"
+        },
+        {
+          "line": 9,
+          "heading": "## 1. Evidence classes and API boundary"
+        },
+        {
+          "line": 27,
+          "heading": "## 2. Ownership and trust boundaries"
+        },
+        {
+          "line": 42,
+          "heading": "## 3. Typed binding and catalog contract"
+        },
+        {
+          "line": 54,
+          "heading": "## 4. Construction and immutable store assignment"
+        },
+        {
+          "line": 62,
+          "heading": "## 5. Private-session lifetime and storage classes"
+        },
+        {
+          "line": 79,
+          "heading": "## 6. Profile locking, shutdown and crash recovery"
+        },
+        {
+          "line": 87,
+          "heading": "## 7. Website-data deletion versus removing a store"
+        },
+        {
+          "line": 99,
+          "heading": "## 8. Backup, restore and migration"
+        },
+        {
+          "line": 109,
+          "heading": "## 9. Logging, permissions and at-rest limits"
+        },
+        {
+          "line": 117,
+          "heading": "## 10. Unresolved decisions, assumptions and next milestone"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-qualification-plan.md",
+      "sha256": "402925412033f2ad1bec04c3a1896373e79b52d4894d00f18847a906b002bd8b",
+      "line_count": 103,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# WebKit website-storage qualification plan"
+        },
+        {
+          "line": 7,
+          "heading": "## 1. Scope, authorization and entry prerequisites"
+        },
+        {
+          "line": 17,
+          "heading": "## 2. Fixture definitions (not created)"
+        },
+        {
+          "line": 33,
+          "heading": "## 3. Case execution and outcome rules"
+        },
+        {
+          "line": 84,
+          "heading": "## 4. Platform, process and failure safety"
+        },
+        {
+          "line": 92,
+          "heading": "## 5. Sequence and exit criteria"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-traceability.md",
+      "sha256": "27c0954b5872092cba015839e656bb9fd11e3cf4a636dfe7448161b57858fe3e",
+      "line_count": 111,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# WebKit website-storage traceability and persistence scope"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Source hierarchy and preserved meaning"
+        },
+        {
+          "line": 11,
+          "heading": "## 2. Requirement and contract map"
+        },
+        {
+          "line": 34,
+          "heading": "## 3. Consolidated case-level routes"
+        },
+        {
+          "line": 83,
+          "heading": "## 4. SQLCipher applicability and unchanged gates"
+        },
+        {
+          "line": 98,
+          "heading": "## 5. Historical evidence and milestone integration"
+        },
+        {
+          "line": 105,
+          "heading": "## 6. Review disposition and remaining decisions"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "47278ed0191f64334cc85cb9b61419571919648786166b542221110a33ef8949",
+      "line_count": 69,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Canonical Engineering Baseline"
+        },
+        {
+          "line": 5,
+          "heading": "## Canonical documents"
+        },
+        {
+          "line": 17,
+          "heading": "## Results and limitations"
+        },
+        {
+          "line": 21,
+          "heading": "## Historical sources"
+        },
+        {
+          "line": 27,
+          "heading": "## M1 validation remediation \u2014 2026-11-08"
+        },
+        {
+          "line": 31,
+          "heading": "## Provider and fixture qualification \u2014 2026-11-08"
+        },
+        {
+          "line": 35,
+          "heading": "## Provider trust and runtime gate \u2014 2026-11-08"
+        },
+        {
+          "line": 39,
+          "heading": "## Publisher authenticity acquisition \u2014 2026-11-08"
+        },
+        {
+          "line": 43,
+          "heading": "## Vendor archive cryptographic verification \u2014 2026-11-08 (latest source checkpoint)"
+        },
+        {
+          "line": 47,
+          "heading": "## SQLCipher provider runtime readiness \u2014 2026-11-08"
+        },
+        {
+          "line": 51,
+          "heading": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 55,
+          "heading": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        },
+        {
+          "line": 59,
+          "heading": "## SQLCipher provider adapter \u00b7 Phase 2 design \u2014 2026-11-08"
+        },
+        {
+          "line": 63,
+          "heading": "## SQLCipher critical safety contracts \u00b7 Phase 2A \u2014 2026-11-09"
+        },
+        {
+          "line": 67,
+          "heading": "## WebKit-managed website storage design \u2014 2026-11-09"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "f1b6fb20ceebdb08556cd62a7efe89b82842374800c1cfb375dabf0b69bfb384",
+      "line_count": 69,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Canonical Source Catalog and Supersession Record"
+        },
+        {
+          "line": 5,
+          "heading": "## Canonical maintained set"
+        },
+        {
+          "line": 19,
+          "heading": "## Supplied sources preserved verbatim"
+        },
+        {
+          "line": 25,
+          "heading": "## ADR/platform/source controls"
+        },
+        {
+          "line": 31,
+          "heading": "## Focused remediation sources \u2014 2026-11-08"
+        },
+        {
+          "line": 35,
+          "heading": "## Provider and fixture qualification checkpoint \u2014 2026-11-08"
+        },
+        {
+          "line": 39,
+          "heading": "## Provider trust/runtime gate \u2014 2026-11-08"
+        },
+        {
+          "line": 43,
+          "heading": "## Publisher authenticity evidence acquisition \u2014 2026-11-08"
+        },
+        {
+          "line": 47,
+          "heading": "## Vendor archive verification \u2014 2026-11-08 (latest source checkpoint)"
+        },
+        {
+          "line": 51,
+          "heading": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 55,
+          "heading": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        },
+        {
+          "line": 59,
+          "heading": "## SQLCipher provider adapter \u00b7 Phase 2 design \u2014 2026-11-08"
+        },
+        {
+          "line": 63,
+          "heading": "## SQLCipher critical safety contracts \u00b7 Phase 2A \u2014 2026-11-09"
+        },
+        {
+          "line": 67,
+          "heading": "## WebKit-managed website storage design \u2014 2026-11-09"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+      "sha256": "709b21bc4b9941e545f5cde8e8910deb9fe6a8a1d23a64a61c29dbd991c19182",
+      "line_count": 85,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Browser Core Module Architecture"
+        },
+        {
+          "line": 6,
+          "heading": "## Authority, scope and design basis"
+        },
+        {
+          "line": 10,
+          "heading": "## Proposed module dependencies"
+        },
+        {
+          "line": 38,
+          "heading": "## Capability-oriented composition refinement"
+        },
+        {
+          "line": 48,
+          "heading": "## Product responsibilities and sequencing"
+        },
+        {
+          "line": 65,
+          "heading": "## State, authority and concurrency"
+        },
+        {
+          "line": 73,
+          "heading": "## Lifecycle examples and invariants"
+        },
+        {
+          "line": 81,
+          "heading": "## Open choices and acceptance"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+      "sha256": "21d101f7d3fda53ebe9f89e720dddb7fa47de636d333013f246fa27893382d6a",
+      "line_count": 119,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Native Host, Core, Engine, UI and Storage Contracts"
+        },
+        {
+          "line": 6,
+          "heading": "## Status, version and compatibility"
+        },
+        {
+          "line": 12,
+          "heading": "## Ownership context and common envelope"
+        },
+        {
+          "line": 29,
+          "heading": "## Boundary A \u2014 Host to Browser Core"
+        },
+        {
+          "line": 41,
+          "heading": "## Boundary B \u2014 Core to Engine Adapter"
+        },
+        {
+          "line": 59,
+          "heading": "## Boundary C \u2014 Core and Future React Chrome"
+        },
+        {
+          "line": 69,
+          "heading": "## Boundary D \u2014 Core to Persistence"
+        },
+        {
+          "line": 77,
+          "heading": "## Boundary E \u2014 Future Permission and Transfer Brokers"
+        },
+        {
+          "line": 85,
+          "heading": "## Boundary F \u2014 Selected feature providers and lifecycle events"
+        },
+        {
+          "line": 115,
+          "heading": "## Error, lifecycle and verification policy"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+      "sha256": "5b42269946ba15871e87924f2369081cca936055e1a78a3ee967b902bd1bd11c",
+      "line_count": 57,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Local Persistence Architecture"
+        },
+        {
+          "line": 6,
+          "heading": "## Recommendation and alternatives"
+        },
+        {
+          "line": 10,
+          "heading": "## Data domains and access"
+        },
+        {
+          "line": 23,
+          "heading": "## Connections, transactions and durability"
+        },
+        {
+          "line": 33,
+          "heading": "## Private sessions and profile separation"
+        },
+        {
+          "line": 41,
+          "heading": "## Protection, encryption and credentials"
+        },
+        {
+          "line": 49,
+          "heading": "## Backup, export, deletion and future synchronization"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-register.md",
+      "sha256": "db3b84a90e51e527e0ecb834a4e028d6543b20820527cefdeeef6b28c8683a22",
+      "line_count": 574,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Owner Decision and Scope Register"
+        },
+        {
+          "line": 7,
+          "heading": "## Source provenance"
+        },
+        {
+          "line": 14,
+          "heading": "## Current policy and capability dispositions \u2014 verbatim from current instruction"
+        },
+        {
+          "line": 16,
+          "heading": "## 3.2 OP-01 \u2014 Browsing history"
+        },
+        {
+          "line": 34,
+          "heading": "## 3.3 OP-02 \u2014 Download metadata"
+        },
+        {
+          "line": 50,
+          "heading": "## 3.4 OP-03 \u2014 App-owned snapshots"
+        },
+        {
+          "line": 65,
+          "heading": "## 3.5 OP-04 \u2014 Session restoration and recovery"
+        },
+        {
+          "line": 87,
+          "heading": "## 3.6 Historical OD17 \u2014 M1 launch capability scope"
+        },
+        {
+          "line": 162,
+          "heading": "## 3.7 Historical decision namespace"
+        },
+        {
+          "line": 179,
+          "heading": "## Engineering qualifications"
+        },
+        {
+          "line": 183,
+          "heading": "## Preserved OD-R01\u2013OD-R20"
+        },
+        {
+          "line": 538,
+          "heading": "## WS01.1 historical crosswalk (historical meanings preserved)"
+        },
+        {
+          "line": 540,
+          "heading": "## 26. Historical decision crosswalk"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+      "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af",
+      "line_count": 115,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Persistent-Profile Encryption Specification"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Closure boundary and sources"
+        },
+        {
+          "line": 19,
+          "heading": "## 2. Threat model"
+        },
+        {
+          "line": 29,
+          "heading": "## 3. Location and classification rules"
+        },
+        {
+          "line": 58,
+          "heading": "## 4. Cryptographic construction and provider qualification"
+        },
+        {
+          "line": 78,
+          "heading": "## 5. SQLite artifact and I/O contract"
+        },
+        {
+          "line": 93,
+          "heading": "## 6. Rotation, deletion and OS limitations"
+        },
+        {
+          "line": 99,
+          "heading": "## 7. WebKit protection boundary \u2014 SPEC-08 / REQ-22"
+        },
+        {
+          "line": 109,
+          "heading": "## 8. Validation and remaining gates"
+        },
+        {
+          "line": 113,
+          "heading": "## 9. Existing package and authority boundaries"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+      "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c",
+      "line_count": 156,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Keychain and Independent Recovery Specification"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Key hierarchy and trust limits"
+        },
+        {
+          "line": 26,
+          "heading": "## 2. Key envelope v1 \u2014 exact proposed serialization"
+        },
+        {
+          "line": 59,
+          "heading": "## 3. Keychain item and native authentication contract"
+        },
+        {
+          "line": 69,
+          "heading": "## 4. Independent recovery material and custody"
+        },
+        {
+          "line": 103,
+          "heading": "## 5. Profile lock and key lifecycle"
+        },
+        {
+          "line": 125,
+          "heading": "## 6. Rotation and recovery-version lifecycle"
+        },
+        {
+          "line": 134,
+          "heading": "## 7. Loss and failure matrix"
+        },
+        {
+          "line": 154,
+          "heading": "## 8. Qualification boundary"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-critical-safety-contracts-phase2a.md",
+      "sha256": "b95f29e076137ec309fd3310459ade53197c42737ce51642daffa1a20652d79e",
+      "line_count": 86,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 SQLCipher critical safety contracts \u00b7 Phase 2A"
+        },
+        {
+          "line": 7,
+          "heading": "## 1. Contract package and status"
+        },
+        {
+          "line": 28,
+          "heading": "## 2. Proposed architecture and reason for the refinement"
+        },
+        {
+          "line": 36,
+          "heading": "## 3. Frozen proposed invariants"
+        },
+        {
+          "line": 59,
+          "heading": "## 4. Exact owner decision still required"
+        },
+        {
+          "line": 65,
+          "heading": "## 5. Explicit assumptions and evidence gaps"
+        },
+        {
+          "line": 80,
+          "heading": "## 6. Preservation and authorization"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2a-readiness-matrix.md",
+      "sha256": "e1cb8fc49855a71186a2ece6daf681cd67f352e79ee9b122679bb9b35b6ba467",
+      "line_count": 105,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Phase 2A dependency and implementation-readiness matrix"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Gate assessment"
+        },
+        {
+          "line": 20,
+          "heading": "## 2. Dependency graph"
+        },
+        {
+          "line": 48,
+          "heading": "## 3. Exact freeze and execution prerequisites"
+        },
+        {
+          "line": 63,
+          "heading": "## 4. Smallest safe next milestone: M2A-F0 (proposed)"
+        },
+        {
+          "line": 81,
+          "heading": "## 5. PQR and historical traceability preservation"
+        },
+        {
+          "line": 99,
+          "heading": "## 6. Final readiness verdict"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0001-browser-engine-strategy.md",
+      "sha256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5",
+      "line_count": 164,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0001: Browser engine strategy for Vezham Browser"
+        },
+        {
+          "line": 9,
+          "heading": "## Context"
+        },
+        {
+          "line": 17,
+          "heading": "## Decision drivers"
+        },
+        {
+          "line": 26,
+          "heading": "## Options considered"
+        },
+        {
+          "line": 47,
+          "heading": "## Owner decision and evidence basis \u2014 conditional acceptance"
+        },
+        {
+          "line": 61,
+          "heading": "## Four decision paths reviewed"
+        },
+        {
+          "line": 72,
+          "heading": "## Rationale and remaining risk"
+        },
+        {
+          "line": 82,
+          "heading": "## Staged validation policy and approved bounded closure"
+        },
+        {
+          "line": 130,
+          "heading": "## Recorded approvals, remaining conditions and execution boundary"
+        },
+        {
+          "line": 143,
+          "heading": "## Consequences of the conditional owner decision"
+        },
+        {
+          "line": 149,
+          "heading": "## Revisit triggers"
+        },
+        {
+          "line": 155,
+          "heading": "## Related records"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "sha256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2",
+      "line_count": 63,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0002: Internal distribution and macOS platform baseline"
+        },
+        {
+          "line": 8,
+          "heading": "## Context"
+        },
+        {
+          "line": 12,
+          "heading": "## Decisions"
+        },
+        {
+          "line": 27,
+          "heading": "## Product decisions and implementation assumptions"
+        },
+        {
+          "line": 33,
+          "heading": "## Consequences"
+        },
+        {
+          "line": 49,
+          "heading": "## Open questions"
+        },
+        {
+          "line": 57,
+          "heading": "## Related documents"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+      "sha256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e",
+      "line_count": 44,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0003: Browser Core runtime and language"
+        },
+        {
+          "line": 8,
+          "heading": "## Problem and established boundaries"
+        },
+        {
+          "line": 12,
+          "heading": "## Alternatives"
+        },
+        {
+          "line": 24,
+          "heading": "## Proposed decision"
+        },
+        {
+          "line": 34,
+          "heading": "## Consequences and reversibility"
+        },
+        {
+          "line": 40,
+          "heading": "## Approval and revisit conditions"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0004-browser-local-persistence.md",
+      "sha256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3",
+      "line_count": 39,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0004: Browser-owned local persistence"
+        },
+        {
+          "line": 8,
+          "heading": "## Problem"
+        },
+        {
+          "line": 12,
+          "heading": "## Alternatives and trade-offs"
+        },
+        {
+          "line": 25,
+          "heading": "## Proposed decision and conditions"
+        },
+        {
+          "line": 33,
+          "heading": "## Maintenance, reversibility and approval"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md",
+      "sha256": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17",
+      "line_count": 47,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0005: Browser capability boundaries and lifecycle"
+        },
+        {
+          "line": 8,
+          "heading": "## Problem and preserved decisions"
+        },
+        {
+          "line": 14,
+          "heading": "## Alternatives"
+        },
+        {
+          "line": 23,
+          "heading": "## Proposed decision"
+        },
+        {
+          "line": 33,
+          "heading": "## Source, trade-offs and security limits"
+        },
+        {
+          "line": 41,
+          "heading": "## Compatibility, reversibility and owner decisions"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/qualification-cases.json",
+      "sha256": "dbce9fd39d01d06c87309fd752ea8a0aef23b03a3f78a83f79b7ed4fd4328729",
+      "line_count": 4951,
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/synthetic-test-matrix.json",
+      "sha256": "6934307144ed869aa88b8c631833a57e677ed10ae067a49ea6ea6f678ba4b0b3",
+      "line_count": 3372,
+      "headings": []
+    }
+  ],
+  "existing_implementation": "No Swift package/Core targets exist; only native AppKit host and separate SQLCipherPhase1 qualification sources. Neither is changed or run."
+}

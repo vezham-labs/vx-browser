@@ -1,0 +1,41 @@
+[
+  {
+    "label": "swift-version",
+    "argv": [
+      "swift",
+      "--version"
+    ],
+    "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+    "started_utc": "2026-11-08T22:44:01.639100+00:00",
+    "returncode": 0
+  },
+  {
+    "label": "swift-test",
+    "argv": [
+      "swift",
+      "test",
+      "--package-path",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0",
+      "--scratch-path",
+      "/private/tmp/vx-wsf0-p80ktyoo/build",
+      "--cache-path",
+      "/private/tmp/vx-wsf0-p80ktyoo/cache",
+      "--config-path",
+      "/private/tmp/vx-wsf0-p80ktyoo/config",
+      "--security-path",
+      "/private/tmp/vx-wsf0-p80ktyoo/security",
+      "--disable-keychain",
+      "--disable-netrc",
+      "--manifest-cache",
+      "local",
+      "--jobs",
+      "2",
+      "--disable-xctest",
+      "--enable-swift-testing",
+      "--no-parallel"
+    ],
+    "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+    "started_utc": "2026-11-08T22:44:02.812051+00:00",
+    "returncode": 1
+  }
+]

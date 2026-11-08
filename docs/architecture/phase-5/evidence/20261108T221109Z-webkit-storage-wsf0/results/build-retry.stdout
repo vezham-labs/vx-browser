@@ -1,0 +1,38 @@
+Building for debugging...
+[Provisioning 7 / 7]
+[Pre-planning 1 / 182]
+[Planning deferred tasks]
+[11 / 84]
+[43 / 84]
+[44 / 85] BrowserDomain
+[46 / 122]
+[50 / 122]
+[53 / 122]
+[54 / 122]
+[56 / 122]
+[59 / 122]
+[61 / 122]
+[62 / 122]
+[63 / 122]
+[66 / 122]
+[67 / 122]
+[69 / 122]
+[70 / 122]
+[72 / 122]
+[74 / 122]
+[76 / 122]
+[77 / 122]
+[78 / 122]
+[81 / 122] BrowserDomain
+[88 / 123]
+[90 / 125] BrowserPorts
+[98 / 126]
+[100 / 131] BrowserPersistence
+[101 / 131] WSF0Fakes
+[101 / 131] BrowserPersistence
+[109 / 133] WSF0Fakes
+[110 / 133] WSF0Fakes
+[120 / 133]
+[122 / 134]
+[125 / 134] BrowserCore
+[128 / 137] BrowserCore

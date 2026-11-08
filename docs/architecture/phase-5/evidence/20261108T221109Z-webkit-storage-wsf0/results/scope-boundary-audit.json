@@ -1,0 +1,157 @@
+{
+  "status": "PASS_FAKE_ONLY",
+  "method": "Static imports/manifest/source inspection, generated test-image direct linkage and undefined symbols, command/source hash verification; no runtime engine/provider process launched",
+  "canonical_attempt": "attempt-225006810161",
+  "checks": {
+    "no_forbidden_imports": true,
+    "no_native_database_network_filesystem_website_surface": true,
+    "dependency_free_manifest": true,
+    "typed_inward_graph": true,
+    "all_final_Swift_hashes_match": true,
+    "image_checked_and_no_forbidden_direct_linkage": true,
+    "no_forbidden_undefined_API_symbols": true,
+    "credential_discovery_disabled": true,
+    "SwiftPM_manifest_sandbox_not_disabled": true,
+    "all82_tests_executed": true
+  },
+  "imports": {
+    "Package.swift": [
+      "PackageDescription"
+    ],
+    "Sources/BrowserCore/LifecycleCoordinator.swift": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "Sources/BrowserCore/Policies.swift": [
+      "BrowserDomain"
+    ],
+    "Sources/BrowserDomain/Identity.swift": [
+      "Foundation"
+    ],
+    "Sources/BrowserDomain/Models.swift": [],
+    "Sources/BrowserPersistence/InMemoryAdapters.swift": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "Sources/BrowserPorts/StoragePorts.swift": [
+      "BrowserDomain"
+    ],
+    "Sources/WSF0Fakes/FakeConstruction.swift": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "Sources/WSF0Fakes/FakeEngine.swift": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "Sources/WSF0Fakes/FakeInfrastructure.swift": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "Tests/WSF0Tests/CatalogTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "BrowserPersistence",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/ConstructionTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/DeletionTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/DiagnosticsTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/Fixture.swift": [
+      "Foundation",
+      "Testing",
+      "BrowserDomain",
+      "BrowserPorts",
+      "BrowserCore",
+      "BrowserPersistence",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/IdentityTests.swift": [
+      "Testing",
+      "BrowserDomain"
+    ],
+    "Tests/WSF0Tests/IntegrationTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/LifecycleTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/PrivateTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "WSF0Fakes"
+    ],
+    "Tests/WSF0Tests/PublicationTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore"
+    ],
+    "Tests/WSF0Tests/RecoveryTests.swift": [
+      "Testing",
+      "BrowserDomain",
+      "BrowserCore",
+      "BrowserPersistence",
+      "WSF0Fakes"
+    ]
+  },
+  "source_hits": [],
+  "image_checks": [
+    {
+      "path": "/private/tmp/vx-wsf0-ool9cke2/build/out/Products/Debug/WSF0Tests.xctest/Contents/MacOS/WSF0Tests",
+      "sha256": "773dcd7bc269502cb6bb313378988d5a0425d8e085aa7e91a17507826cc43e62",
+      "linkage_returncode": 0,
+      "forbidden_direct_linkage": false,
+      "undefined_symbol_returncode": 0,
+      "forbidden_undefined_symbols": []
+    }
+  ],
+  "expected_target_dependency_graph": {
+    "BrowserDomain": [],
+    "BrowserPorts": [
+      "BrowserDomain"
+    ],
+    "BrowserCore": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "BrowserPersistence": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "WSF0Fakes": [
+      "BrowserDomain",
+      "BrowserPorts"
+    ],
+    "WSF0Tests": [
+      "BrowserDomain",
+      "BrowserPorts",
+      "BrowserCore",
+      "BrowserPersistence",
+      "WSF0Fakes"
+    ]
+  },
+  "limitations": "Not OS syscall tracing or proof of transitive framework behavior. Foundation UUID values/Swift Testing/toolchain runtime are allowed; no native storage/provider APIs are invoked by package code. Build/cache/evidence files are tool artifacts, not browser databases or website storage."
+}

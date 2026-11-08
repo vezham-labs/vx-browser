@@ -1,0 +1,454 @@
+# WS-F0 — Complete Fake-Only WebKit Storage Lifecycle Implementation
+
+## Mission
+
+Implement the complete WS-F0 milestone in one coordinated execution.
+
+This milestone translates the approved WebKit-managed website-storage architecture into a testable, engine-independent implementation using fake providers and deterministic test infrastructure.
+
+**This is an implementation milestone, not actual WebKit integration or runtime security qualification.**
+
+Do not stop after producing a plan or implementing only the first stage. Complete every permitted stage, run the full permitted test suite, produce the evidence package and prepare a final closeout report.
+
+---
+
+## 1. Repository baseline and authority
+
+Repository: `vezham-labs/vx-browser`
+
+Before making changes:
+
+1. Inspect the current branch, HEAD commit, working tree and repository structure.
+2. Identify the latest committed WebKit architecture baseline.
+3. Read the complete relevant M1 documentation, including:
+   - `m1-webkit-website-storage-architecture.md`
+   - `m1-webkit-website-storage-qualification-plan.md`
+   - `m1-webkit-website-storage-traceability.md`
+   - M1 README and relevant source catalog entries.
+4. Read the existing BrowserDomain, BrowserPorts, BrowserCore and BrowserPersistence contracts.
+5. Review applicable owner decisions, ADRs, historical evidence and SQLCipher constraints.
+6. Identify existing implementation patterns and test conventions. Reuse them where appropriate.
+
+The previously reviewed WebKit architecture commit was:
+
+`0075b524a84712feeaf4f04d34b7b81ef6de8f3b`
+
+Do not assume it is still HEAD. Inspect the current repository state and preserve any subsequent legitimate changes.
+
+### Authority rules
+
+- Approved owner decisions remain authoritative.
+- Existing approved ADRs and architecture contracts remain authoritative.
+- Proposed decisions must remain proposed.
+- Do not silently resolve unresolved owner decisions.
+- Do not modify historical evidence or rewrite previous qualification results.
+- Do not reinterpret SQLCipher requirements as requirements for WebKit-owned website data.
+
+If documentation conflicts with implementation or another approved contract, record the conflict rather than silently choosing a new policy.
+
+---
+
+## 2. Absolute execution boundary
+
+WS-F0 is strictly fake-only.
+
+### Prohibited operations
+
+Do not:
+
+- Instantiate or invoke actual WebKit APIs.
+- Create or use `WKWebView`, `WKWebsiteDataStore` or other WebKit runtime objects.
+- Perform actual website-data operations.
+- Initialize, link or execute SQLCipher for this milestone.
+- Open, create, migrate or modify browser databases.
+- Access macOS Keychain.
+- Create encrypted fixtures or perform cryptographic qualification.
+- Access real browser profiles or user website data.
+- Perform filesystem-backed website storage operations.
+- Implement production WebKit adapters.
+- Implement production persistence integration.
+- Change owner decisions or ADRs.
+- Claim WebKit isolation, deletion, backup, recovery or security qualification.
+- Claim macOS 26 runtime compatibility based on fake tests.
+
+Use deterministic in-memory fake providers and controlled test fixtures.
+
+If an existing test command unexpectedly invokes prohibited functionality, do not execute it. Identify and report the boundary.
+
+### Independence requirement
+
+The fake implementation must not depend on WebKit being installed, initialized or available.
+
+The fake provider must be replaceable by a future WebKit adapter through explicit typed contracts.
+
+---
+
+## 3. Implementation scope
+
+Complete all stages below in one coordinated implementation.
+
+### F0.1 — Profile catalog and storage bindings
+
+Implement or complete the engine-independent profile catalog and mapping contracts.
+
+Requirements:
+
+- Persistent profiles have stable, nonzero store identifiers.
+- A profile maps to exactly one intended persistent store identity.
+- Prevent accidental mapping of multiple independent profiles to the same store.
+- Reject invalid, zero, duplicate or malformed identities.
+- Never treat a store identifier as a capability or authorization token.
+- Profile identity and website-data store identity remain separate concepts.
+- Support deterministic catalog enumeration.
+- Enumeration must not implicitly create missing stores.
+- Missing, corrupt, duplicate or conflicting catalog entries must produce explicit states.
+- Preserve unknown and ambiguous states instead of guessing.
+
+Tests must cover valid mappings, duplicate mappings, invalid identities, missing records, corrupted records and conflicting mappings.
+
+### F0.2 — Persistent and private scope separation
+
+Implement explicit scope models.
+
+Persistent scope:
+
+- Associated with a validated persistent profile.
+- Has a stable store identity.
+- Supports lifecycle coordination through the provider contract.
+
+Private scope:
+
+- Has an ephemeral session identity.
+- Must never be assigned a persistent store identity.
+- Must never appear in the persistent profile catalog.
+- Must not produce persistent website-data records.
+- Must not be restored as a persistent session after process restart.
+
+Enforce scope isolation through types and validation, not only naming conventions.
+
+Test attempts to cross persistent/private boundaries.
+
+### F0.3 — Construction policy and default-store prevention
+
+Implement a fake construction-policy layer.
+
+Requirements:
+
+- A persistent scope requires explicit validated store resolution.
+- A private scope requires explicit ephemeral-store resolution.
+- Construction must fail if resolution is absent, invalid or ambiguous.
+- Never silently fall back to a default store.
+- Store resolution must happen before the abstract web-view construction request.
+- No implicit getter or factory may create a default store.
+- The construction policy must not expose native capabilities to callers.
+
+Use a fake construction recorder to verify call ordering.
+
+Test missing assignment, invalid identity, failed resolution, default-store fallback attempts and incorrect construction order.
+
+### F0.4 — Lifecycle coordinator
+
+Implement a deterministic lifecycle state machine for website-data scopes.
+
+Cover the supported lifecycle operations:
+
+- Register
+- Resolve
+- Activate
+- Quiesce
+- Retire
+- Switch
+- Reconcile
+- Fail
+- Quarantine
+
+Requirements:
+
+- State transitions must be explicit and validated.
+- Illegal transitions must fail deterministically.
+- Concurrent or repeated lifecycle requests must not produce inconsistent states.
+- A scope cannot be retired while dependent fake resources remain active.
+- A scope cannot be activated while quarantined.
+- A failed operation must not be reported as successful.
+- Switching profiles must not transfer authority or website data between scopes.
+- All operations must produce bounded, sanitized diagnostic events.
+
+Use deterministic fake resource references and lifecycle participants.
+
+### F0.5 — Deletion state machine
+
+Keep these operations distinct:
+
+1. Clear selected website data.
+2. Remove an entire persistent website-data store.
+
+Requirements:
+
+- Clearing selected data must not implicitly remove the store.
+- Store removal must require an explicit retirement and dependency check.
+- Active references must block removal.
+- Partial, failed and uncertain outcomes must remain distinguishable.
+- A failed removal must never be reported as successful deletion.
+- Retrying an operation must be idempotent where the contract allows.
+- Unknown deletion results must not be interpreted as success.
+- Do not claim secure erasure or physical data destruction.
+
+Use fake deletion providers with configurable success, partial completion, failure and unknown outcomes.
+
+### F0.6 — Recovery and restart reconciliation
+
+Implement engine-independent recovery coordination.
+
+Requirements:
+
+- Reconcile catalog entries against fake provider observations.
+- Distinguish missing, available, conflicting and unknown stores.
+- Preserve evidence of uncertain or interrupted operations.
+- Quarantine unsafe or ambiguous scopes.
+- Never silently recreate a missing store to make recovery appear successful.
+- Never activate a quarantined scope.
+- Preserve private-session non-persistence.
+- Recovery must not replay website requests, form submissions or POST operations.
+- A restart must not convert an incomplete deletion into a successful deletion.
+- Recovery outcomes must be deterministic and auditable.
+
+Use controlled fake restart snapshots and provider state.
+
+### F0.7 — Failure injection and diagnostics
+
+Build deterministic failure injection into the fake provider infrastructure.
+
+Cover:
+
+- Provider unavailable.
+- Store missing.
+- Invalid store identity.
+- Duplicate identity.
+- Conflicting catalog mapping.
+- Construction failure.
+- Activation failure.
+- Quiescence timeout.
+- Outstanding references.
+- Partial deletion.
+- Unknown deletion result.
+- Removal failure.
+- Restart interruption.
+- Corrupt recovery metadata.
+- Quarantine persistence failure.
+- Reconciliation mismatch.
+
+Diagnostics must:
+
+- Be bounded.
+- Be sanitized.
+- Avoid full URLs and website content.
+- Avoid secrets and key material.
+- Avoid exposing native paths or capabilities.
+- Include stable operation and failure classifications.
+- Preserve enough information to understand test failures.
+
+Do not invent production logging guarantees from fake diagnostics.
+
+### F0.8 — Integration scenarios
+
+Create end-to-end fake-only scenarios covering:
+
+1. Create and activate a persistent profile.
+2. Switch between two persistent profiles.
+3. Open and close a private scope.
+4. Verify private data does not enter the persistent catalog.
+5. Reject default-store fallback.
+6. Reject cross-profile store access.
+7. Clear selected website data.
+8. Retire and remove a persistent store.
+9. Block removal while resources remain active.
+10. Recover after interrupted lifecycle operations.
+11. Quarantine an ambiguous store.
+12. Reconcile after simulated process restart.
+13. Reject activation of a quarantined scope.
+14. Verify failed and uncertain deletions remain unresolved.
+
+Test both successful and adversarial paths.
+
+### F0.9 — WKS qualification and traceability
+
+Use the existing 40 proposed WKS cases as the authoritative qualification inventory.
+
+For each WKS case:
+
+- Preserve its existing identifier and original definition.
+- Identify whether WS-F0 can test it using fake infrastructure.
+- Map it to implementation contracts and test cases.
+- Record actual execution status.
+- Record exact test command and result.
+- Record limitations and remaining runtime dependencies.
+
+Use honest statuses such as:
+
+- `PASS_FAKE_ONLY`
+- `FAIL`
+- `BLOCKED`
+- `NOT_APPLICABLE`
+- `NOT_RUN`
+
+Do not mark a case as fully qualified if it requires actual WebKit, macOS runtime behavior, Keychain, filesystem semantics or other prohibited operations.
+
+Keep fake-only evidence clearly distinguishable from runtime evidence.
+
+Preserve all 50 original SQLCipher PQR definitions and historical results without modification.
+
+Do not mark SQLCipher PQR cases as passed through this implementation.
+
+### F0.10 — Closeout and preservation
+
+Produce a complete closeout package.
+
+Include:
+
+1. Implementation summary.
+2. Architecture and contract changes.
+3. State-machine documentation.
+4. Test inventory.
+5. WKS traceability matrix.
+6. Exact test commands and results.
+7. Failure-injection results.
+8. Evidence references.
+9. Preservation audit.
+10. Non-execution record.
+11. Remaining blockers.
+12. Recommended next milestone.
+
+Record:
+
+- Baseline commit.
+- Final commit or working-tree state.
+- Changed-file inventory.
+- Added, modified and deleted files.
+- Existing files preserved.
+- Test counts and failures.
+- Any skipped or blocked tests.
+- Any deviations from the approved architecture.
+
+Do not overwrite historical evidence. Use a new timestamped evidence directory following existing repository conventions.
+
+---
+
+## 4. Engineering expectations
+
+Follow the repository's existing architecture and language conventions.
+
+Prefer:
+
+- Explicit typed contracts.
+- Small, cohesive modules.
+- Deterministic state machines.
+- Dependency injection.
+- Protocol-based fake providers.
+- Immutable identifiers.
+- Explicit error types.
+- Idempotent operations where appropriate.
+- Testable orchestration independent of native frameworks.
+
+Avoid:
+
+- Global mutable state.
+- Hidden default behavior.
+- Implicit resource creation.
+- Boolean-heavy APIs that obscure lifecycle state.
+- Broad catch-all error handling.
+- Silent recovery.
+- Production abstractions that cannot be tested independently.
+- Unnecessary new dependencies.
+- Duplicate implementations of existing contracts.
+
+Do not create speculative abstractions solely for future WebKit functionality.
+
+If a contract requires clarification, preserve the ambiguity and document it.
+
+---
+
+## 5. Execution strategy
+
+Execute the complete milestone in this order:
+
+1. Repository and architecture inspection.
+2. Contract and dependency analysis.
+3. Profile catalog and scope models.
+4. Construction policy.
+5. Lifecycle coordinator.
+6. Deletion state machine.
+7. Recovery coordinator.
+8. Failure injection.
+9. Integration scenarios.
+10. WKS traceability and qualification.
+11. Preservation and non-execution audit.
+12. Final closeout report.
+
+These are internal implementation stages, not separate authorization requests.
+
+Do not stop after each stage to ask for approval. Continue through all independent work that remains within the authorized WS-F0 boundary.
+
+If a stage is blocked, document the blocker and continue other safe, independent work.
+
+Do not weaken requirements to obtain passing tests.
+
+---
+
+## 6. Acceptance criteria
+
+WS-F0 is complete only when:
+
+- All ten implementation stages have been addressed.
+- The fake implementation is independent of WebKit and native runtime services.
+- Persistent and private scopes are demonstrably isolated in tests.
+- Default-store fallback is explicitly rejected.
+- Lifecycle transitions are validated.
+- Clear and remove operations remain distinct.
+- Uncertain and partial outcomes are preserved.
+- Recovery and quarantine behavior is tested.
+- Failure injection is deterministic.
+- Integration scenarios cover both normal and adversarial behavior.
+- All 40 WKS cases have an explicit traceability disposition.
+- Original PQR definitions and historical evidence remain unchanged.
+- All permitted tests have been run and their results recorded.
+- Preservation and non-execution audits are complete.
+- The closeout report identifies all unresolved issues honestly.
+
+A passing fake-only test suite does not constitute WebKit runtime qualification.
+
+---
+
+## 7. Final response format
+
+When finished, report:
+
+### WS-F0 verdict
+- Complete / Partially complete / Blocked.
+
+### Implementation
+- Main modules and contracts added or changed.
+- Major state machines implemented.
+
+### Verification
+- Exact test commands.
+- Tests passed, failed and skipped.
+- WKS disposition summary.
+
+### Preservation
+- Files added, modified and deleted.
+- Historical evidence integrity.
+- Scope-boundary verification.
+
+### Remaining blockers
+- Actual WebKit runtime qualification.
+- macOS 26 behavior.
+- Website-data lifecycle and deletion semantics.
+- Backup and recovery qualification.
+- Any unresolved owner decisions.
+
+### Next recommendation
+Recommend the next smallest safe milestone based on actual results.
+
+Do not claim that WS-F0 proves WebKit security, privacy, encryption, deletion or runtime correctness.
+
+**Deliver the complete WS-F0 milestone as one coordinated change set, with all implementation, tests, evidence and closeout documentation ready for independent review.**

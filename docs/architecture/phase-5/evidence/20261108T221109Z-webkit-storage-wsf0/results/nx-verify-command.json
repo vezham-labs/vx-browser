@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "node",
+    "node_modules/nx/dist/bin/nx.js",
+    "run",
+    "webkit-storage-wsf0:verify",
+    "--evidence=/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T221109Z-webkit-storage-wsf0"
+  ],
+  "environment_overrides": {
+    "NX_DAEMON": "false",
+    "NX_NO_CLOUD": "true",
+    "NX_ISOLATE_PLUGINS": "false",
+    "NX_CACHE_DIRECTORY": "/private/tmp/vezham-wsf0-nx-verify/cache",
+    "NX_WORKSPACE_DATA_DIRECTORY": "/private/tmp/vezham-wsf0-nx-verify/data"
+  },
+  "returncode": 0,
+  "purpose": "Verify actual registered Nx target once after direct fake suite passed; pnpm shim timed out, local Nx CLI entrypoint is source-verified"
+}

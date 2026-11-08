@@ -1,0 +1,119 @@
+{
+  "requested_scenario_count": 14,
+  "scope": "Fake-only normal and adversarial scenario coverage, composed from named end-to-end and focused lifecycle tests",
+  "scenarios": [
+    {
+      "scenario_number": 1,
+      "test_ids": [
+        "F0-INT-001"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 2,
+      "test_ids": [
+        "F0-LIF-007",
+        "F0-LIF-011"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 3,
+      "test_ids": [
+        "F0-PRI-005",
+        "F0-INT-002"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 4,
+      "test_ids": [
+        "F0-PRI-001",
+        "F0-PRI-008"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 5,
+      "test_ids": [
+        "F0-CON-002",
+        "F0-INT-005"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 6,
+      "test_ids": [
+        "F0-CAT-010",
+        "F0-INT-005"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 7,
+      "test_ids": [
+        "F0-DEL-001",
+        "F0-DEL-012"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 8,
+      "test_ids": [
+        "F0-DEL-004",
+        "F0-INT-001"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 9,
+      "test_ids": [
+        "F0-DEL-003",
+        "F0-DEL-005"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 10,
+      "test_ids": [
+        "F0-INT-003",
+        "F0-REC-004"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 11,
+      "test_ids": [
+        "F0-REC-003",
+        "F0-INT-004"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 12,
+      "test_ids": [
+        "F0-REC-001",
+        "F0-REC-011"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 13,
+      "test_ids": [
+        "F0-LIF-008",
+        "F0-REC-012"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "scenario_number": 14,
+      "test_ids": [
+        "F0-DEL-006",
+        "F0-DEL-007",
+        "F0-DEL-008",
+        "F0-REC-005"
+      ],
+      "status": "PASS_FAKE_ONLY"
+    }
+  ]
+}

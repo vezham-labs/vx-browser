@@ -1,0 +1,52 @@
+[
+  {
+    "label": "swift-version",
+    "argv": [
+      "swift",
+      "--version"
+    ],
+    "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+    "started_utc": "2026-11-08T22:50:06.825019+00:00",
+    "returncode": 0
+  },
+  {
+    "label": "swift-test",
+    "argv": [
+      "swift",
+      "test",
+      "--package-path",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0",
+      "--scratch-path",
+      "/private/tmp/vx-wsf0-ool9cke2/build",
+      "--cache-path",
+      "/private/tmp/vx-wsf0-ool9cke2/cache",
+      "--config-path",
+      "/private/tmp/vx-wsf0-ool9cke2/config",
+      "--security-path",
+      "/private/tmp/vx-wsf0-ool9cke2/security",
+      "--disable-keychain",
+      "--disable-netrc",
+      "--manifest-cache",
+      "local",
+      "--jobs",
+      "2",
+      "--disable-xctest",
+      "--enable-swift-testing",
+      "--no-parallel"
+    ],
+    "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+    "started_utc": "2026-11-08T22:50:08.050005+00:00",
+    "returncode": 0
+  },
+  {
+    "label": "linkage-0",
+    "argv": [
+      "otool",
+      "-L",
+      "/private/tmp/vx-wsf0-ool9cke2/build/out/Products/Debug/WSF0Tests.xctest/Contents/MacOS/WSF0Tests"
+    ],
+    "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+    "started_utc": "2026-11-08T22:50:51.130380+00:00",
+    "returncode": 0
+  }
+]

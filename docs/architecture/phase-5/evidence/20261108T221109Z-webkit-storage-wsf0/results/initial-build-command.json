@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "swift",
+    "build",
+    "--package-path",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0",
+    "--scratch-path",
+    "/private/tmp/vezham-wsf0-20261108T221109Z/build",
+    "--cache-path",
+    "/private/tmp/vezham-wsf0-20261108T221109Z/cache",
+    "--config-path",
+    "/private/tmp/vezham-wsf0-20261108T221109Z/config",
+    "--security-path",
+    "/private/tmp/vezham-wsf0-20261108T221109Z/security",
+    "--disable-keychain",
+    "--disable-netrc",
+    "--manifest-cache",
+    "local",
+    "--jobs",
+    "2"
+  ],
+  "returncode": 1,
+  "scope": "Fake-only package build; no test/provider/database/runtime APIs invoked"
+}

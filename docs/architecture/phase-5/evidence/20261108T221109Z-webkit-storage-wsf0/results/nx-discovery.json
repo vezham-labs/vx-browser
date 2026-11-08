@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "pnpm",
+    "nx",
+    "list",
+    "@nx/workspace"
+  ],
+  "timeout_seconds": 12,
+  "mutations": "No install/configuration; read-only discovery only; Nx cache redirected to owned tmp",
+  "status": "TIMEOUT",
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,28 @@
+{
+  "task": "WS-F0 complete fake-only implementation",
+  "canonical_attempt": "attempt-225006810161",
+  "permitted_fake_tests": {
+    "passed": 82,
+    "failed": 0,
+    "skipped": 0,
+    "uncompleted": 0
+  },
+  "actual_WebKit_calls_or_objects": 0,
+  "website_data_runtime_operations": 0,
+  "SQLCipher_initialized_linked_executed": false,
+  "browser_database_opens_creates_migrations": 0,
+  "Keychain_API_access": 0,
+  "encrypted_fixtures_crypto_qualification": 0,
+  "real_browser_profile_access": 0,
+  "filesystem_backed_website_storage_operations": 0,
+  "production_WebKit_adapter_or_persistence_integration": false,
+  "macOS26_runtime_qualified": false,
+  "SQLCipher_PQR_executed": 0,
+  "EXP03_EXP04_executed": false,
+  "existing_historical_suites_rerun": false,
+  "software_installs_or_host_configuration_changes": 0,
+  "owner_ADR_security_requirement_changes": false,
+  "stage_commit_push_branch_changes": 0,
+  "allowed_artifact_IO": "SwiftPM/Nx build/cache and repository test/evidence/report files only; catalog/engine/journal state remains in memory",
+  "actual_test_entrypoint": "Installed local Nx CLI \u2192 isolated Python runner \u2192 Swift Testing only"
+}
