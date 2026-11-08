@@ -1,0 +1,200 @@
+{
+  "time": "2026-11-08T12:24:28.528720+00:00",
+  "all_audit_checks_satisfied": true,
+  "checks": [
+    {
+      "check": "expected starting/ending HEAD and branch",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "baseline initially clean",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "only three canonical link updates",
+      "satisfied": true,
+      "detail": [
+        "docs/architecture/phase-5/reports/M1/README.md",
+        "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+        "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md"
+      ]
+    },
+    {
+      "check": "no original tracked files deleted",
+      "satisfied": true,
+      "detail": []
+    },
+    {
+      "check": "all prior evidence immutable",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "production dependencies/configuration ADR owner decisions unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "index unstaged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "source version/commit and2325 upstream blob matches",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "verified source files remain unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "source archive SHA256 matches retained record",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "two static archives actually built and equal",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "actual static archive hashes still match",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "CommonCrypto and temp-store compile facts retained",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "runtime provider/temp claims remain false",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "final key-binding syntax source matches and succeeds",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "final29 bounded recovery observations and exact source",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "fixture does not claim EXP04 native or cross-Mac qualification",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "fixture outputs contain no secret fields/key hashes",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "no retained transient capsule names found",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "public structural interoperability observation only",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "prepared plaintext controls honestly labelled",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "prepared control artifact hashes match",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "original store bytes/presence unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "original logical states not silently resolved",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "native/signing/registry boundary preserved",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "existing154 cases11 references and outcomes unchanged",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "original EXP01 FAIL and cleanup crash remain",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "updated local links resolve",
+      "satisfied": true,
+      "detail": []
+    },
+    {
+      "check": "observe_originals_read_only.py syntax",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "prepare_database_controls.py syntax",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "run_recovery_vectors.py syntax",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "public_cbor_interop.py syntax",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "acquire_provider_source.py syntax",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "build_provider_static.py syntax",
+      "satisfied": true,
+      "detail": null
+    },
+    {
+      "check": "tracked whitespace",
+      "satisfied": true,
+      "detail": ""
+    }
+  ],
+  "starting_head": "f5733fabeee1b0eb559d472c6c86f317b74d8108",
+  "ending_head": "f5733fabeee1b0eb559d472c6c86f317b74d8108",
+  "branch": "timeline",
+  "modified_tracked_files": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md"
+  ],
+  "baseline_tracked_count": 775,
+  "working_tree_status": " M docs/architecture/phase-5/reports/M1/README.md\n M docs/architecture/phase-5/reports/M1/m1-source-catalog.md\n M docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md\n?? docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/\n?? docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md\n",
+  "existing_outcomes_unchanged": true,
+  "production_or_dependency_changes": false,
+  "signing_or_native_keychain_registry_execution": false,
+  "full_EXP03_EXP04_or_downstream_campaign_executed": false,
+  "independent_security_signoff": false
+}

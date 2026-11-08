@@ -1,0 +1,70 @@
+{
+  "time": "2026-11-08T12:18:16.430988+00:00",
+  "url": "https://api.github.com/repos/sqlcipher/sqlcipher/issues?state=open&per_page=100",
+  "issues": [
+    {
+      "number": 635,
+      "title": "Intermittent \"database disk image is malformed\" after `ROLLBACK TO` undoes a `DROP TRIGGER` (4.12.0 \u2013 4.19.0)",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/635",
+      "created_at": "2026-11-05T23:11:59Z",
+      "labels": []
+    },
+    {
+      "number": 634,
+      "title": "`cipher_integrity_check` reports HMAC failures on pages a VFS preallocated",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/634",
+      "created_at": "2026-11-05T22:30:24Z",
+      "labels": []
+    },
+    {
+      "number": 617,
+      "title": "One corrupt encrypted page poisons subsequent integrity_check reads on the same connection",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/617",
+      "created_at": "2026-08-18T12:08:10Z",
+      "labels": []
+    },
+    {
+      "number": 607,
+      "title": "Project is insufficiently renamable from \"sqlite\" to \"sqlcipher\"",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/607",
+      "created_at": "2026-08-17T09:21:52Z",
+      "labels": []
+    },
+    {
+      "number": 601,
+      "title": "with upgrade to 4.17.0 cross compile for Mac-x86_64 is failing",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/601",
+      "created_at": "2026-07-17T17:20:58Z",
+      "labels": []
+    },
+    {
+      "number": 488,
+      "title": "Please bump SONAME when removing library symbols.",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/488",
+      "created_at": "2023-11-09T07:30:30Z",
+      "labels": []
+    },
+    {
+      "number": 450,
+      "title": "Would you accept a provider based on native Win32 APIs?",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/450",
+      "created_at": "2022-09-29T07:53:48Z",
+      "labels": []
+    },
+    {
+      "number": 371,
+      "title": "Swift Package Manager Support",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/371",
+      "created_at": "2020-09-03T22:21:56Z",
+      "labels": []
+    },
+    {
+      "number": 358,
+      "title": "Official Docker container on Docker Hub",
+      "url": "https://github.com/sqlcipher/sqlcipher/issues/358",
+      "created_at": "2020-03-11T11:15:06Z",
+      "labels": []
+    }
+  ],
+  "not_a_complete_security_audit": true
+}

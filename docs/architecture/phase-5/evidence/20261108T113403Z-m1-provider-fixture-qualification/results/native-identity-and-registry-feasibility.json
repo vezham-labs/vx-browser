@@ -1,0 +1,44 @@
+{
+  "time": "2026-11-08T12:21:24.040704+00:00",
+  "native_config": {
+    "Base.xcconfig": {
+      "path": "apps/browser-macos/Config/Base.xcconfig",
+      "sha256": "5fcbd66ec5347d763a495273f8d048fbbc055f52aa788499b99c111ce6460d97",
+      "text": "PRODUCT_NAME = VezhamBrowser\nPRODUCT_BUNDLE_IDENTIFIER = internal.vezham.browser.foundation\nMACOSX_DEPLOYMENT_TARGET = 26.0\nSDKROOT = macosx\nSUPPORTED_PLATFORMS = macosx\nSWIFT_VERSION = 6.0\nINFOPLIST_FILE = Config/Info.plist\nGENERATE_INFOPLIST_FILE = NO\nCODE_SIGN_STYLE = Manual\nCODE_SIGN_ENTITLEMENTS = Config/VezhamBrowser.entitlements\nCODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO\nENABLE_APP_SANDBOX = YES\nENABLE_HARDENED_RUNTIME = YES\nENABLE_USER_SCRIPT_SANDBOXING = YES\nENABLE_DEBUG_DYLIB = NO\nCLANG_ENABLE_MODULES = YES\nSWIFT_EMIT_LOC_STRINGS = NO\n// vx-bot/NOTE: Keep runtime in the actual ad-hoc signature when base entitlement injection is disabled.\nOTHER_CODE_SIGN_FLAGS = $(inherited) --options runtime\n"
+    },
+    "Debug.xcconfig": {
+      "path": "apps/browser-macos/Config/Debug.xcconfig",
+      "sha256": "02ebb09cd34fa18b15d332f4d29f0dd49c48621a13cacd159a4ff56515e4d14c",
+      "text": "#include \"Base.xcconfig\"\n// vx-bot/NOTE: Local development signing is not a distributable release identity.\nCODE_SIGN_IDENTITY = -\nSWIFT_OPTIMIZATION_LEVEL = -Onone\nDEBUG_INFORMATION_FORMAT = dwarf\n"
+    },
+    "Release.xcconfig": {
+      "path": "apps/browser-macos/Config/Release.xcconfig",
+      "sha256": "7d5b7c73740224ef6e957f9bd493e410aa73d9b5843f8628c114b4afb43af432",
+      "text": "#include \"Base.xcconfig\"\n// vx-bot/NOTE: Release signing is intentionally unconfigured until final release engineering.\nSWIFT_OPTIMIZATION_LEVEL = -O\nDEBUG_INFORMATION_FORMAT = dwarf-with-dsym\n"
+    },
+    "VezhamBrowser.entitlements": {
+      "path": "apps/browser-macos/Config/VezhamBrowser.entitlements",
+      "sha256": "baa050bc06d89900bed3bb4954acdf2f17c4f47e259b1870f889d4a301fbcaf4",
+      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\"><dict><key>com.apple.security.app-sandbox</key><true/></dict></plist>\n"
+    },
+    "Info.plist": {
+      "path": "apps/browser-macos/Config/Info.plist",
+      "sha256": "897ce7396abd11a6af0db816ec413b328ce01a6abc63700c5602e61f9cc13929",
+      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n    <key>CFBundleDevelopmentRegion</key><string>en</string>\n    <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>\n    <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>\n    <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>\n    <key>CFBundleName</key><string>Vezham Browser</string>\n    <key>CFBundlePackageType</key><string>APPL</string>\n    <key>CFBundleShortVersionString</key><string>0.1.0</string>\n    <key>CFBundleVersion</key><string>1</string>\n    <key>LSMinimumSystemVersion</key><string>$(MACOSX_DEPLOYMENT_TARGET)</string>\n    <key>NSHighResolutionCapable</key><true/>\n    <key>NSPrincipalClass</key><string>NSApplication</string>\n</dict>\n</plist>\n"
+    }
+  },
+  "retained_probe": "docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/harness/NativeProbe.swift",
+  "probe_sha256": "f50e5fa7a634b68c5ec524221f9b256a933f1353cb4146397d7ff7f83824d69e",
+  "available_probe_modes": [
+    "seed",
+    "verify",
+    "cleanup"
+  ],
+  "enumeration_mode_present": false,
+  "production_keychain_integration": false,
+  "new_identity_or_entitlements": false,
+  "signing_performed": false,
+  "keychain_test_executed": false,
+  "registry_enumeration_performed": false,
+  "blocker": "Same-identity enumeration or Keychain ACL app requires a new reviewed executable/signing/native access scope; current instruction forbids signing and unapproved user actions."
+}

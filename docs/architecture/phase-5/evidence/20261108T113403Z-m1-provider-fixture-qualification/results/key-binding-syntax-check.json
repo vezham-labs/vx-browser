@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-08T12:15:56.257583+00:00",
+  "command": [
+    "xcrun",
+    "clang",
+    "-fsyntax-only",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-DSQLITE_HAS_CODEC",
+    "-target",
+    "arm64-apple-macosx26.0",
+    "-I",
+    "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1",
+    "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/key_binding_compile_fixture.c"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_sha256": "8ee2024b3443cdb103457023795e6015a227a12f11f78cd6a806754e1cc5288e",
+  "execution_performed": false,
+  "qualified_binding": false
+}

@@ -67,3 +67,7 @@ PERM-016 remains AC09/AC14; RECOVERY-010 remains OP-04. No new REQ/AC/EXP/SVC/ca
 ## 5. Next bounded engineering checkpoint
 
 First provision a pinned/provider-reviewed isolated SQLCipher candidate and audited crypto/CBOR/key interface fixtures, then review the finite EXP-03/04 prerequisites. Obtain safe noncreating registry/lifecycle observability for the original stores; do not delete them based on absence/no-handle snapshots. Once original states and safe prerequisites are understood, newly minted store IDs may be used for a distinct release-order/completion diagnostic. Do not sign/launch/retry or run downstream campaigns as an automatic consequence of this document. Production implementation and release remain Not Authorized.
+
+## Subsequent provider/fixture checkpoint — 2026-11-08
+
+[Qualification report](m1-provider-and-fixture-qualification.md) supplies pinned source/tree verification, two identical arm64 static archives, compile-setting evidence, plaintext detector controls, syntax-only binary-key binding and bounded synthetic CryptoKit/format observations. No full EXP-03/04 campaign ran; runtime artifact protection/binding, provider trust/security qualification, native Keychain identity/ACL and independent destination remain Blocked. WebKit enumeration remains designed/blocked under the signing boundary. This update adds evidence links without changing existing mappings/outcomes or treating the source Mac as cross-Mac recovery.

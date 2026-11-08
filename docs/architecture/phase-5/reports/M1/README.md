@@ -27,3 +27,7 @@ ADR0001 Proposed;0002 Accepted;0003–0005 Proposed. Conditional WKWebView; CEF 
 ## M1 validation remediation — 2026-11-08
 
 [Current remediation report](m1-validation-remediation-report.md), [EXP-01 cleanup diagnosis](m1-exp-01-cleanup-diagnosis.md), [encryption specification](m1-persistent-profile-encryption-specification.md), [Keychain/independent recovery specification](m1-keychain-and-independent-recovery-specification.md), and [readiness/downstream dependencies](m1-validation-readiness-remediation.md) refine the existing baseline. Original EXP-01 FAIL/crash evidence and165-row outcomes are preserved; fresh cleanup diagnostics and EXP-03/04 remain Blocked. No product implementation, signing or release authorized.
+
+## Provider and fixture qualification — 2026-11-08
+
+[Current qualification-readiness report](m1-provider-and-fixture-qualification.md) records immutable SQLCipher source provenance, two repeatable isolated static builds, synthetic fixture preparation/observations and blocked native Keychain/same-identity WebKit registry work. Source/build/fixture evidence is not EXP-03/04 acceptance. Original165-row outcomes, owner/ADR decisions and original-store state remain unchanged; no signing/product integration or release.

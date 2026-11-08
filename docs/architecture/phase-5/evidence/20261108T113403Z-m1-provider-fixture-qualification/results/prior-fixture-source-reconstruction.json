@@ -1,0 +1,5 @@
+{
+  "matches_retained_source_hash": true,
+  "purpose": "exact preceding fixture revision preserved if and only if its SHA256 matches the recorded execution source",
+  "not_new_execution": true
+}

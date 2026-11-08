@@ -1,0 +1,7 @@
+{
+  "inspected_temp_root": "/var/folders/r2/2twrn5c92xs9rvgtbs5df9p40000gn/T",
+  "matching_fixture_names": [],
+  "deletion_performed_by_inspection": false,
+  "runner_cleanup_contract": "encrypted temporary capsule removed by defer; random R and DEK never written",
+  "not_forensic_memory_erasure_proof": true
+}

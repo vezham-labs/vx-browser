@@ -1,0 +1,140 @@
+{
+  "scope": "fixture preparation and plaintext detector positive control ONLY; not encrypted database qualification",
+  "sqlite_module_version": "3.53.4",
+  "fixture_directory": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls",
+  "artifacts": [
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/catalog/captured-main.fixture",
+      "kind": "main",
+      "scope": "catalog",
+      "bytes": 8192,
+      "sha256": "7258b7db18faa3381fa00d12c9d0619cab9685f08583d344f3987133ef99a738",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/catalog/captured-wal.fixture",
+      "kind": "WAL",
+      "scope": "catalog",
+      "bytes": 4152,
+      "sha256": "f99ad3fe566dedacff9bfecc84460c9be2e14471b54d53739004b35ebfbab944",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/catalog/captured-shm.fixture",
+      "kind": "SHM",
+      "scope": "catalog",
+      "bytes": 32768,
+      "sha256": "dafddefa17bfc3fb906f59a1a60c495b1d8506982e9866cd4a11e5de491c9946",
+      "unencrypted": true,
+      "contains_public_detector_marker": false,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/profile-A/captured-main.fixture",
+      "kind": "main",
+      "scope": "profile-A",
+      "bytes": 8192,
+      "sha256": "309e0c31af0e44d1c4d21723871e25cc9415ed4f4cbee7a7962820c5ab0faead",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/profile-A/captured-wal.fixture",
+      "kind": "WAL",
+      "scope": "profile-A",
+      "bytes": 4152,
+      "sha256": "1c11cb9dd456d3a5f6fceb7e5f7670c88259ac78afc605c5cbae04b635168d1d",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/profile-A/captured-shm.fixture",
+      "kind": "SHM",
+      "scope": "profile-A",
+      "bytes": 32768,
+      "sha256": "c45033f1c2756583c0a45a9fddcdb52234446e60fed80c691ccdbb05ff1d6d20",
+      "unencrypted": true,
+      "contains_public_detector_marker": false,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/profile-B/captured-main.fixture",
+      "kind": "main",
+      "scope": "profile-B",
+      "bytes": 8192,
+      "sha256": "f3dfa5f0ec26eef4e0f8ca37348e2ec1c4248777181a945b0c54981bc156436d",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/profile-B/captured-wal.fixture",
+      "kind": "WAL",
+      "scope": "profile-B",
+      "bytes": 4152,
+      "sha256": "e50dbf7ecdb135a994572cccc84ec575d5e9a05c2e9387d1f20a8b8ec11afc29",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/profile-B/captured-shm.fixture",
+      "kind": "SHM",
+      "scope": "profile-B",
+      "bytes": 32768,
+      "sha256": "a6e74415104c99c91352ad626dfc34a59907cb47ef8e6751a38e1f0f145abbf8",
+      "unencrypted": true,
+      "contains_public_detector_marker": false,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/captured-rollback-journal.fixture",
+      "kind": "rollback-journal",
+      "scope": "control",
+      "bytes": 4616,
+      "sha256": "c904c0279a6fe9dff8ec65381d3d3ab6492be9655701629c52fe96b7276e19c1",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/modified-plaintext-copy.fixture",
+      "kind": "mutation-constructor-control",
+      "scope": "profile-A",
+      "bytes": 8192,
+      "sha256": "ac4df7ccf19c7ca6626067f70ea60d883387da5be3642a0aa61ccb0373572b90",
+      "unencrypted": true,
+      "contains_public_detector_marker": true,
+      "no_key_material": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/database-controls/truncated-plaintext-copy.fixture",
+      "kind": "truncation-constructor-control",
+      "scope": "profile-A",
+      "bytes": 8175,
+      "sha256": "e3528fa28c8526a3ab0af37a6c5e2dcecb7f2446a41ecfbf93f3404940d95d71",
+      "unencrypted": true,
+      "contains_public_detector_marker": false,
+      "no_key_material": true
+    }
+  ],
+  "positive_control_marker_detected_in_main": true,
+  "positive_control_marker_detected_in_wal": true,
+  "encrypted_fixtures_created": false,
+  "key_material_written": false,
+  "runtime_temp_memory_claim": false,
+  "EXP03_executed": false,
+  "rotation_or_interrupt_experiment": false,
+  "limitations": [
+    "Captured files are not qualified recovery snapshots.",
+    "No encrypted/tag-corruption/wrong-key fixture executed.",
+    "SHM bytes are not claimed encrypted or marker-free by assumption.",
+    "No statement-journal/temp-spill/disk-full/kill experiment."
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-remediation-report.md",
+    "sha256": "fb3768c37420768c0204847c48b5c099365231bb420ddea567a38d65dcd539cb",
+    "title": "# M1 Validation Remediation Report v1.0"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+    "sha256": "4a134b926ee011a38e7a5d56f24ef0f29bef903744a6fa58efc7437a23fb8288",
+    "title": "# M1 Validation Readiness and Downstream Remediation"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+    "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af",
+    "title": "# M1 Persistent-Profile Encryption Specification"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+    "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c",
+    "title": "# M1 Keychain and Independent Recovery Specification"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-exp-01-cleanup-diagnosis.md",
+    "sha256": "4bb9bb402fdce6a1a838670bdbaa64237c4434cc6c14f1ef49d105e3b3a7f75e",
+    "title": "# EXP-01 Cleanup Diagnosis \u2014 Remediation 2026-11-08"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+    "sha256": "e846fadee7694ef575a2f45f98bc4e0d280dd70fa7e4cbcd9a61f8fcd173afc3",
+    "title": "# M1 Developer Specification v1.2 \u2014 Proposed"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+    "sha256": "c8fbdd8499152f6f53d0f18405ea1a45530b3eadc0f7eca89abde66879ca7610",
+    "title": "# M1 Validation Plan v1.2 \u2014 Proposed"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-supporting-validation-charters.md",
+    "sha256": "73eaa4f3c3a4a32b3a01d2053559946138d4533644190b9ab6993724bee4d638",
+    "title": "# M1 Supporting Validation Charters v1.2 \u2014 Proposed"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+    "sha256": "3498aeab5fcac840ca08f7f47cf94395a93d30a9a568b5f5c4b9b9c6cdc712ae",
+    "title": "# M1 Case-Level Traceability Matrix v1.3 \u2014 Proposed"
+  }
+]

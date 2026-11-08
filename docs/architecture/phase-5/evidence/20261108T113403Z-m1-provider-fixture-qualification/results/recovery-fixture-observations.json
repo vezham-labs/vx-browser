@@ -1,0 +1,128 @@
+{
+  "all_observations_satisfied": true,
+  "checks": [
+    {
+      "observation": "platform AEAD roundtrip and scope validation",
+      "satisfied": true
+    },
+    {
+      "observation": "canonical codec roundtrip",
+      "satisfied": true
+    },
+    {
+      "observation": "VXKE structural canonical serialization",
+      "satisfied": true
+    },
+    {
+      "observation": "normal and independent recovery slot payload agreement",
+      "satisfied": true
+    },
+    {
+      "observation": "normal wrapping secret cannot open recovery slot",
+      "satisfied": true
+    },
+    {
+      "observation": "wrong recovery secret rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "wrong profile identity rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "catalog/profile kind mismatch rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "modified tag rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "modified ciphertext rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "AAD generation modification rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "HKDF purpose/key identifier modification rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "truncated capsule rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "unsupported format rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "unknown algorithm/critical slot field rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "missing current key version rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "noncanonical integer rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "duplicate CBOR map key rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "indefinite CBOR container rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "oversized input rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "excessive nesting rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "trailing bytes rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "printable 256-bit encoding length",
+      "satisfied": true
+    },
+    {
+      "observation": "printable/file in-memory interoperability",
+      "satisfied": true
+    },
+    {
+      "observation": "printable checksum verifies locally",
+      "satisfied": true
+    },
+    {
+      "observation": "printable invalid alphabet rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "printable nonzero padding bits rejected",
+      "satisfied": true
+    },
+    {
+      "observation": "encrypted recovery-file readback authentication",
+      "satisfied": true
+    },
+    {
+      "observation": "transient encrypted file mode0600",
+      "satisfied": true
+    }
+  ],
+  "cross_mac_recovery": false,
+  "database_restore_test": false,
+  "EXP04_qualified": false,
+  "native_keychain_test": false,
+  "public_structure_cbor_hex": "a4007456582d4d312d5354525543545552452d4f4e4c59010102430102030383171818190100",
+  "scope": "isolated format/AEAD synthetic observations only",
+  "secret_or_key_hash_output": false
+}

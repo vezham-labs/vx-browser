@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-11-08T12:11:51.037365+00:00",
+  "ended_at": "2026-11-08T12:11:51.909280+00:00",
+  "command": [
+    "/usr/bin/lipo",
+    "-info",
+    "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a"
+  ],
+  "cwd": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1",
+  "returncode": 0,
+  "stdout": "Non-fat file: /private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a is architecture: arm64\n",
+  "stderr": ""
+}

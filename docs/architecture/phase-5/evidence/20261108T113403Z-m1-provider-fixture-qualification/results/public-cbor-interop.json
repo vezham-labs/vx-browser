@@ -1,0 +1,8 @@
+{
+  "scope": "public structural codec vector only",
+  "matches_independently_decoded_structure": true,
+  "matches_expected_canonical_hex": true,
+  "public_fixture_hex": "a4007456582d4d312d5354525543545552452d4f4e4c59010102430102030383171818190100",
+  "full_VXKE_VXRF_or_crypto_interoperability_qualified": false,
+  "secret_or_key_material": false
+}

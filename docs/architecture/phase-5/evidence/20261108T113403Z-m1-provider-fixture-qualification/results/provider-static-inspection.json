@@ -1,0 +1,37 @@
+{
+  "time": "2026-11-08T12:17:40.984120+00:00",
+  "static_commoncrypto_symbols": [
+    "U _CCCryptorCreate",
+    "U _CCCryptorFinal",
+    "U _CCCryptorRelease",
+    "U _CCCryptorUpdate",
+    "U _CCHmacFinal",
+    "U _CCHmacInit",
+    "U _CCHmacUpdate",
+    "U _CCKeyDerivationPBKDF",
+    "U _SecRandomCopyBytes",
+    "0000000000014014 T _sqlcipher_cc_setup",
+    "000000000001a94c T _sqlite3_key",
+    "000000000001a9b4 T _sqlite3_key_v2",
+    "000000000001ef84 T _sqlite3_keyword_check",
+    "000000000001ef7c T _sqlite3_keyword_count",
+    "000000000001ef2c T _sqlite3_keyword_name"
+  ],
+  "temp_store_compile_setting_3": true,
+  "compiled_object_public_strings": [
+    "3.54.1",
+    "4.20.0",
+    "OMIT_LOAD_EXTENSION",
+    "TEMP_STORE=3",
+    "THREADSAFE=1"
+  ],
+  "runtime_temp_store_observed": false,
+  "runtime_provider_version_or_settings_observed": false,
+  "architectures_built": [
+    "arm64"
+  ],
+  "other_architectures_qualified": false,
+  "two_archive_hashes_equal": true,
+  "fresh_machine_reproducibility_qualified": false,
+  "product_integration": false
+}

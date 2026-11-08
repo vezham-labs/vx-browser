@@ -1,0 +1,38 @@
+{
+  "source_commit": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "compiler": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+  "sdk": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk",
+  "target": "arm64-apple-macosx26.0",
+  "CFLAGS": "-O2 -target arm64-apple-macosx26.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -DSQLITE_HAS_CODEC -DSQLCIPHER_CRYPTO_CC -DSQLITE_EXTRA_INIT=sqlcipher_extra_init -DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown -DSQLITE_OMIT_LOAD_EXTENSION -ffile-prefix-map=/private/tmp/vx-m1-provider-fixtures-20261108T113403Z=/validation -fdebug-prefix-map=/private/tmp/vx-m1-provider-fixtures-20261108T113403Z=/validation",
+  "environment_subset": {
+    "LDFLAGS": "-framework Security -framework CoreFoundation",
+    "MACOSX_DEPLOYMENT_TARGET": "26.0",
+    "ZERO_AR_DATE": "1",
+    "SOURCE_DATE_EPOCH": "1793028838",
+    "autosetup_tclsh": "/usr/bin/tclsh"
+  },
+  "builds": [
+    {
+      "build": 1,
+      "archive": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a",
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+      "bytes": 1651288,
+      "amalgamation_sha256": "8cd2347d18886fee4651153fabeeeffb7cec008700987dab1c00261febc4220f",
+      "header_sha256": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec",
+      "configure_settings": null
+    },
+    {
+      "build": 2,
+      "archive": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-2/libsqlite3.a",
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+      "bytes": 1651288,
+      "amalgamation_sha256": "8cd2347d18886fee4651153fabeeeffb7cec008700987dab1c00261febc4220f",
+      "header_sha256": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec",
+      "configure_settings": null
+    }
+  ],
+  "two_archive_hashes_equal": true,
+  "signed_or_installed": false,
+  "provider_runtime_or_database_qualification_performed": false,
+  "qualification_status": "PREPARED STATIC BUILD ONLY"
+}

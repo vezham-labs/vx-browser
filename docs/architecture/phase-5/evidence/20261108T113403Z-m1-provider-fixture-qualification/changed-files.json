@@ -1,0 +1,402 @@
+{
+  "time": "2026-11-08T12:24:28.723881+00:00",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "change": "modified",
+      "sha256": "30061ab7bc20487aa04488c804523ec2d2dc5a08a034651ce7d682593e9c578c",
+      "bytes": 4768
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "change": "modified",
+      "sha256": "92d186a88778dc20cc3737c54476a24f4d38bf5c750f5609cc247f5e7652d2a7",
+      "bytes": 6558
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+      "change": "modified",
+      "sha256": "640718b65a807e0f5abf1cea742337b67b29e13852809f9f0fc829ee98b4c466",
+      "bytes": 9495
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/baseline.json",
+      "change": "created",
+      "sha256": "d49709eacabea3a7c588974ccc60519913d11ce976090a3e589362890fa2177d",
+      "bytes": 150318
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/commands-and-artifacts.json",
+      "change": "created",
+      "sha256": "cd89bc4ca5c9a990cb7def7ef744d37e9ba6550730039d3600241b0d8670fa59",
+      "bytes": 9527
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/RecoveryVectors.swift",
+      "change": "created",
+      "sha256": "d5ad0b3d5982c4409e6520d36d50f711277bc554679509d3aa89657788a1f450",
+      "bytes": 13057
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/acquire_provider_source.py",
+      "change": "created",
+      "sha256": "6ad2b752b003fe85f40c7032b23147753f98037e6440cace307a865484aabc51",
+      "bytes": 4276
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/build_provider_static.py",
+      "change": "created",
+      "sha256": "cc82376f3f78eaced8658319042c123d642107446a7e5223aa844de21ba449bd",
+      "bytes": 3450
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/key_binding_compile_fixture.c",
+      "change": "created",
+      "sha256": "8ee2024b3443cdb103457023795e6015a227a12f11f78cd6a806754e1cc5288e",
+      "bytes": 851
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/observe_originals_read_only.py",
+      "change": "created",
+      "sha256": "1718c2a50896ab52e80835e9dd90c08e6e9c3d49410a0ae0eaa3287925dfa653",
+      "bytes": 1386
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/prepare_database_controls.py",
+      "change": "created",
+      "sha256": "8d9bb13ce7d99451f6fd7355489745e32a06f2f085fe1b3b3b69c97c91bbe844",
+      "bytes": 3727
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/public_cbor_interop.py",
+      "change": "created",
+      "sha256": "3f07033a8647db3276c327d4d7a7140f267d401f012549da266a16feac248561",
+      "bytes": 1679
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/run_recovery_vectors.py",
+      "change": "created",
+      "sha256": "114193c2df9d9663d155bda53b5020ec1296df7275e9ad5e24c18729e93614f4",
+      "bytes": 1388
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/qualification-audit.json",
+      "change": "created",
+      "sha256": "a5d93c5695529c545537b7c6aa0becfde2f4ba929e4d848fd9fb0d191313192a",
+      "bytes": 5508
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/attempt-before-fix-provider-build-record.json",
+      "change": "created",
+      "sha256": "271b3e95f7fae0dc5519b6f25152feb43af8d2fc02a445ce16edbaa23fe7c688",
+      "bytes": 1239
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/attempt-before-fix-provider-configure-1.json",
+      "change": "created",
+      "sha256": "78661615d3af2f4135c5bab4ff1f4a7a81a7aa44374c6dd4e4b1299c5f8df36e",
+      "bytes": 3438
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/attempt-before-fix-recovery-fixture-run.json",
+      "change": "created",
+      "sha256": "7a7c9831aebffa474071ea771c50de51ec6c243a9fd134a20e5e3cb00ee5ac90",
+      "bytes": 8395
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/configure-help.json",
+      "change": "created",
+      "sha256": "f0ad5c816a19e16cdc3e6207e6f5fb406981e1d39201cec245afff54deb55e70",
+      "bytes": 12117
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/database-control-fixtures.json",
+      "change": "created",
+      "sha256": "a8177ddbeec15428d4fb18d803887a2a9f647ca65f24ff5a75a42c58384f15a3",
+      "bytes": 5608
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/initial-key-binding-syntax-check.json",
+      "change": "created",
+      "sha256": "cb4a3bbd53d38a75c4a1083ee904aa61bd160cac8ffd57322036ecd839f72cf9",
+      "bytes": 1017
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/initial-tmp-restriction-provider-build-record.json",
+      "change": "created",
+      "sha256": "271b3e95f7fae0dc5519b6f25152feb43af8d2fc02a445ce16edbaa23fe7c688",
+      "bytes": 1239
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/initial-tmp-restriction-provider-configure-1.json",
+      "change": "created",
+      "sha256": "2f185adbf712b82d24e7ba43deae8731c86137d888d767101801af6ea4055d78",
+      "bytes": 3438
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/interpreter-trap-recovery-fixture-run.json",
+      "change": "created",
+      "sha256": "91a2efee631611ff27d198f3fbd82cd91ce052443067c1312c7fe9cefb142f25",
+      "bytes": 5619
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/key-binding-syntax-check.json",
+      "change": "created",
+      "sha256": "14c487cfd93ca21d8dd26f66ec347fcae3e61ddcea6c35dca1410104742afe48",
+      "bytes": 648
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/native-identity-and-registry-feasibility.json",
+      "change": "created",
+      "sha256": "2b43290d000e5007bb5230e49c878b4d629052a347970720d3603e23296236e8",
+      "bytes": 4032
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/original-store-after.json",
+      "change": "created",
+      "sha256": "ca8cf3237e627e2d81054e198e999a46b932b9d301ad6d4a1c081016277f6710",
+      "bytes": 11987
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/original-store-before.json",
+      "change": "created",
+      "sha256": "b8a08a2acc5eacfed542e78033c12078fd1e4b178109a9ea864153094553e706",
+      "bytes": 11988
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/prior-26-observations-recovery-fixture-observations.json",
+      "change": "created",
+      "sha256": "24f805a6840f8d9c2530fb04ff5a7701f974154a056f770c65f04d966c61c475",
+      "bytes": 2876
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/prior-26-observations-recovery-fixture-run.json",
+      "change": "created",
+      "sha256": "0fcc7c167a0cc7415913fb5f42056efc049093997916ded4399f8f718cf8550d",
+      "bytes": 4612
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/prior-fixture-source-reconstruction.json",
+      "change": "created",
+      "sha256": "d8c6ea4823887793350b2f4e4e26b4cc8a1703732045d6cd2144b889f0d30c2a",
+      "bytes": 195
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-archive-architecture-1.json",
+      "change": "created",
+      "sha256": "3a2da6443a85be3a25d683bbff401acda26e74f744b6454d5dd555a34828ac93",
+      "bytes": 505
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-archive-architecture-2.json",
+      "change": "created",
+      "sha256": "4e7c31836e84285b553f9058778861fa32fde6b874250f921f17e0b1cea6a459",
+      "bytes": 505
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-archive-symbols-1.json",
+      "change": "created",
+      "sha256": "08faae1bc81b101785f89f9e46804946f676e1f821991aa4a06035952d82d2ae",
+      "bytes": 17307
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-archive-symbols-2.json",
+      "change": "created",
+      "sha256": "b62f7e89952e3cde89a4629a51f55b93699a867863db0e45717e8ae68c1c9850",
+      "bytes": 17307
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-build-record.json",
+      "change": "created",
+      "sha256": "76266e478dca9c97b002c785c1f49b9691a5e752a00b6682a9c9d3fd66c15b32",
+      "bytes": 2187
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-configure-1.json",
+      "change": "created",
+      "sha256": "168371943f04875bb3e3e1f7ec329194da8aa77d4dd76b242206ebe48be62116",
+      "bytes": 5751
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-configure-2.json",
+      "change": "created",
+      "sha256": "da3196fdd5dcc7a77adf3c8782fe3c128c2ae989d047db33afb3665ea084e9c9",
+      "bytes": 5751
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-make-static-1.json",
+      "change": "created",
+      "sha256": "3ad0949a7dbec6b2f12b1c15a8cf5f95da71d0e9edd21e91be6825d849866b85",
+      "bytes": 22307
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-make-static-2.json",
+      "change": "created",
+      "sha256": "f549331227d97d297ed4b8b1ce5f88bbd151c1e4df855528ae241ad47175c261",
+      "bytes": 22307
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-source-record.json",
+      "change": "created",
+      "sha256": "e6028c2ecbce078491780181dd73e91fcd6048bb488be1ece834c63568ef43a2",
+      "bytes": 2029
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/provider-static-inspection.json",
+      "change": "created",
+      "sha256": "a5e244db6c1ed56be27f85d2261e531195cdf7ba281359a2456926ee5c41aeec",
+      "bytes": 1072
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/public-cbor-interop.json",
+      "change": "created",
+      "sha256": "0736b6ea536b7d86d313d687835afd47bd5ffe76e61a117611a0874a9cfaaa3c",
+      "bytes": 349
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/recovery-fixture-cleanup-check.json",
+      "change": "created",
+      "sha256": "4c3f0c63e8231ce11c25d394a8409ab9d0ee361ce5c4623993789cc195547556",
+      "bytes": 311
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/recovery-fixture-observations.json",
+      "change": "created",
+      "sha256": "4d80e336eaa995b4e93c52c437069717762a4af393578270d84c845c78a91e9f",
+      "bytes": 3203
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/recovery-fixture-run.json",
+      "change": "created",
+      "sha256": "7b043708caffb06dfabc83ac026a890a8adbf7d997e15034a93a6252be320010",
+      "bytes": 5086
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/tag-index-trap-recovery-fixture-run.json",
+      "change": "created",
+      "sha256": "b7cb476c82170836384b044e874201419cfd25cd480385f8bc61004f4a1a1838",
+      "bytes": 6009
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/results/toolchain-and-target.json",
+      "change": "created",
+      "sha256": "cefe69af035839d498ad3f43ae38d7b498236faaa343a3a70e7262b1929138bd",
+      "bytes": 6884
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/RecoveryVectors-26-observation-revision.swift",
+      "change": "created",
+      "sha256": "c90e9a2b7abb5a3541fc81ba03783256a9e7c2c5813cef0f5fe0c11d327da87e",
+      "bytes": 12299
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/RecoveryVectors-before-checkpoint.swift",
+      "change": "created",
+      "sha256": "92614664239fbfe1e64230bb81c5b74cc05ce93b660109bb188adf8a41d11912",
+      "bytes": 12016
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/annotated-tag.json",
+      "change": "created",
+      "sha256": "76d781018c4209cc0e2372c15f2f672273b0b6efc635e82d9e51d6384fa8f8a2",
+      "bytes": 2585
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/canonical-input-inventory.json",
+      "change": "created",
+      "sha256": "2463f6e90b8e988ba71ae38907bd4ced899151492f65bbd61b2a8fe6a51e5380",
+      "bytes": 2212
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/commit.json",
+      "change": "created",
+      "sha256": "2364ea1bae6eb00254dac3fa4bdfb5955c1ad5da24d2093ba2f5efc0405e7c84",
+      "bytes": 5354
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/owner-authorization.txt",
+      "change": "created",
+      "sha256": "145f009586fba9469a4fba40fa742e111e871d8fa3f3ca304fe3ccbcfee69e97",
+      "bytes": 15750
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/release.json",
+      "change": "created",
+      "sha256": "b4d8ec18e1f03a9d3f6f03cc4bf1c4054e069cba0607fa45276a651436f433aa",
+      "bytes": 2924
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/security-advisories.json",
+      "change": "created",
+      "sha256": "940394e25b423554344ef878fd580a671628780bee50020e3b5b0b5b74063fcf",
+      "bytes": 161
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/source-file-manifest.json",
+      "change": "created",
+      "sha256": "3027bfd2ffc64fa9a43b8c9973388c7969c2677e2b96174b77cec964e5df8300",
+      "bytes": 541806
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/tag-ref.json",
+      "change": "created",
+      "sha256": "566fa35a24033e5321c5f6d2375b5559fcf7e05f294469099eb568aae4d4b74c",
+      "bytes": 555
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/tree.json",
+      "change": "created",
+      "sha256": "f86e3c97d2cdd97ce91691358d7839503c52ff1ed2aee491c9c87ce112c62475",
+      "bytes": 728229
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/upstream-CHANGELOG.md",
+      "change": "created",
+      "sha256": "82ce688a97b7e7e95229299a7c9485ac55e20b860c760f1422a6d1fd6623ff86",
+      "bytes": 28955
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/upstream-LICENSE.md",
+      "change": "created",
+      "sha256": "2a2826f6acf46fa650730cf42cbb22a642be33a7ef119c9c4f4bf6daf3bef48e",
+      "bytes": 1463
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/upstream-README.md",
+      "change": "created",
+      "sha256": "7ca58a42f6b143495a7f714b7a615ceb63889e7b16c04f171d1aab033915c40c",
+      "bytes": 30554
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/upstream-SQLITE_LICENSE.md",
+      "change": "created",
+      "sha256": "595e823c2ada6c839679e693bee1f4d7f88e2d34ac99a913ae41e3d43fb10c7d",
+      "bytes": 3760
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/upstream-autosetup-LICENSE",
+      "change": "created",
+      "sha256": "679b9208e67df09977456d1d2ae4d885b9badf02c47b45a28cf95ee27c14cb18",
+      "bytes": 1737
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/sources/upstream-open-issues.json",
+      "change": "created",
+      "sha256": "3fb25d5c9c096220fe76cdb3af0f9b2fbcfdca0415437f7b09816467868834a4",
+      "bytes": 2420
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/verify_qualification.py",
+      "change": "created",
+      "sha256": "a6590b106aa3653c6ee7896197d7e298da994372ac04cd6d35d2cc06bfb0e1df",
+      "bytes": 8888
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+      "change": "created",
+      "sha256": "5d0d29a304b83da9c7a0863076f95207cba151ce9caa47c38d34872414a8755c",
+      "bytes": 29374
+    }
+  ]
+}

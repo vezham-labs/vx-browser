@@ -1,0 +1,401 @@
+# Codex Task — M1 Provider and Fixture Qualification
+
+## Repository and baseline
+
+Repository: `vezham-labs/vx-browser`  
+Branch: `timeline`  
+Expected starting HEAD: `f5733fabeee1b0eb559d472c6c86f317b74d8108`
+
+Before doing anything:
+
+1. Verify the repository, branch, HEAD and working-tree state.
+2. Read the canonical M1 documents listed below.
+3. Check whether the local checkout matches the expected baseline. If it does not, stop and report the discrepancy; do not reset, rebase, clean or overwrite anything.
+4. Preserve all existing uncommitted user changes.
+5. Do not assume that the previously documented environment or evidence is still current.
+
+## Objective
+
+Prepare the next bounded M1 engineering checkpoint:
+
+**M1 Provider and Fixture Qualification**
+
+Establish the evidence and isolated prerequisites needed to qualify:
+
+- The documented SQLCipher/CommonCrypto encryption-provider candidate.
+- Database encryption and key-binding interfaces.
+- Synthetic database and corruption fixtures.
+- Native Keychain access-control behavior and independent recovery-format fixtures.
+- Non-creating WebKit store-registry inspection and per-store lifecycle observability.
+
+This task is about qualification readiness and bounded validation infrastructure. It is not authorization to implement the browser product or to declare EXP-03/04/01 passed.
+
+## Canonical documents to read
+
+Read these first and treat them as the governing technical contracts:
+
+- `docs/architecture/phase-5/reports/M1/m1-validation-remediation-report.md`
+- `docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md`
+- `docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md`
+- `docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md`
+- `docs/architecture/phase-5/reports/M1/m1-exp-01-cleanup-diagnosis.md`
+- Existing M1 Developer Specification, Validation Plan, validation charters, case-level traceability and original EXP-01/03/04 evidence.
+
+Also inspect the existing repository structure, native probes, scripts, build configuration, dependency declarations and validation tooling before proposing or creating anything.
+
+Do not recreate existing documentation or duplicate existing harnesses.
+
+---
+
+# Workstream A — Encryption provider and database fixtures
+
+## A1. Candidate provenance and qualification
+
+The current documented candidate is SQLCipher 4.20.0 with CommonCrypto.
+
+It is a candidate, not an installed or qualified dependency.
+
+Establish an auditable candidate record containing:
+
+- Exact upstream project and source location.
+- Exact version and immutable source revision/tag.
+- Available release artifacts and checksums, where applicable.
+- Build system, compiler/toolchain and supported target architectures.
+- SQLite version and SQLCipher compatibility.
+- Crypto-provider selection and actual build configuration.
+- License and provenance review.
+- Relevant upstream security advisories and known compatibility constraints.
+- Whether the candidate can be built reproducibly for the project's supported macOS target.
+- Any unresolved licensing, binary provenance, API or build concerns.
+
+Do not infer that a dependency is qualified merely because it appears in a package manifest, SDK or local cache.
+
+Do not download or execute unverified binaries.
+
+If network access or upstream verification is unavailable, document the missing evidence and leave the qualification blocked.
+
+## A2. Isolated provider build
+
+Determine whether an isolated validation-only provider build can be prepared without changing product dependencies.
+
+If feasible:
+
+- Keep it outside production application targets.
+- Pin all inputs.
+- Record exact build commands and outputs.
+- Record binary/source hashes and toolchain versions.
+- Keep generated artifacts in a clearly identified validation-only location.
+- Make the build reproducible.
+- Do not add the candidate to production dependency resolution.
+- Do not modify the browser's production architecture or package contracts.
+
+If a safe isolated build cannot be prepared, produce the exact blocker and required next action instead of forcing it.
+
+## A3. Database fixture preparation
+
+Prepare a fixture plan and, where safely possible, isolated synthetic fixtures for:
+
+- Catalog database.
+- Profile database.
+- Main database file.
+- WAL.
+- Journal.
+- SHM.
+- Temporary database artifacts.
+- Independent profile key scopes.
+
+The fixture design must follow the encryption specification.
+
+Use synthetic records only. Do not use personal data, real browser profiles, existing user databases or original WebKit stores.
+
+Define expected observations for:
+
+- Correct key.
+- Missing key.
+- Wrong key.
+- Wrong profile/scope key.
+- Modified ciphertext.
+- Modified authentication tag/page.
+- Truncated database.
+- Missing or corrupted required artifacts.
+- Interrupted writes.
+- Key rotation and interrupted promotion.
+- Plaintext leakage detection, including a functioning positive-control fixture.
+
+Do not claim that encryption is qualified merely because a database opens successfully.
+
+Do not claim memory-only temporary storage without actual build/runtime evidence.
+
+## A4. Key-binding and crypto interface review
+
+Review the specified 32-byte per-scope key-input contract and envelope construction.
+
+Document:
+
+- Exact interface and ownership boundaries.
+- Native key-buffer lifecycle.
+- String/log exposure risks.
+- Provider-specific key binding.
+- Error and failure handling.
+- Zeroization limitations and what can actually be demonstrated.
+- AES-256-GCM/HKDF-SHA256 and CBOR format interoperability requirements.
+- Scope, purpose, nonce, version and authenticated-identity validation.
+- Malformed-input and bounded-parser behavior.
+
+Do not implement a new cryptographic primitive or hand-write crypto.
+
+Any fixture-only implementation must be clearly isolated, testable and reviewed against the canonical specification.
+
+---
+
+# Workstream B — Keychain and independent recovery qualification
+
+## B1. Native Keychain feasibility assessment
+
+Inspect the existing native application identity, entitlements, signing setup and Keychain integration.
+
+Determine what can be tested using the currently authorized local environment.
+
+Review the specified behavior for:
+
+- Device-bound normal Keychain authority.
+- Access-control policy and native user authentication.
+- Cancellation and denial.
+- Missing/unavailable Keychain item.
+- Fresh authentication context.
+- Profile/catalog scope separation.
+- Key version and generation binding.
+- Lock/unlock behavior.
+- No secret logging or persistence in plaintext.
+
+Do not silently change bundle identifiers, signing identities, entitlements, access groups or provisioning.
+
+Do not sign or notarize anything as part of this task.
+
+If native Keychain tests require a new identity, entitlement, signing permission or user action, document that prerequisite and stop before performing it.
+
+## B2. Independent recovery fixtures
+
+Review the proposed VXKE/VXRF and printable recovery-kit contracts.
+
+Prepare a validation-only fixture plan, and implement isolated non-secret test vectors where possible, covering:
+
+- Encoding and decoding.
+- Canonical serialization.
+- Bounded parsing.
+- Version and scope validation.
+- Authentication associated data.
+- AEAD success/failure.
+- Wrong recovery secret.
+- Wrong profile/catalog identity.
+- Truncated or malformed capsule.
+- Modified authentication tag.
+- Unsupported version or algorithm.
+- Missing key version.
+- Recovery-file and printable-kit interoperability.
+
+Use synthetic keys and data only.
+
+Never emit secrets, secret hashes or recoverable key material into logs or committed evidence.
+
+Do not claim independent recovery qualification without verified readback, decryption, identity checks and restored synthetic records.
+
+## B3. Offline recovery readiness
+
+Define the minimum reproducible setup for a future independent recovery test:
+
+- Qualified encrypted profile fixture.
+- Matching recovery capsule and recovery secret.
+- Independent destination environment.
+- Source Keychain absence demonstrable.
+- Network isolation.
+- Expected synthetic records and integrity checks.
+- Destination preservation and conflict behavior.
+- Verification of restored scope and retained key versions.
+
+Do not claim cross-Mac recovery if a second Mac is unavailable.
+
+Do not substitute the source Mac or its Keychain for an independent recovery destination.
+
+Do not execute EXP-04 while its documented prerequisites remain unmet.
+
+---
+
+# Workstream C — EXP-01 non-creating WebKit observability
+
+This workstream is strictly read-only against the original synthetic stores.
+
+Read the cleanup diagnosis and inspect the original evidence before touching any WebKit-related tooling.
+
+Original identifiers:
+
+- Store A: `abb4ca2d-33dc-4d25-9c16-d135202c03e3`
+- Store B: `9ec735a8-b9eb-416c-994b-4b299c5ee5f5`
+
+Their logical cleanup states remain unknown:
+
+- A's expected directory is absent; successful removal is not established.
+- B's directory is present; whole-store integrity/completion is not established.
+
+## C1. Non-creating registry inspection
+
+Investigate whether the supported WebKit API can enumerate or inspect the existing identifiers under the same valid application identity without creating stores.
+
+Requirements:
+
+- Never use `WKWebsiteDataStore.init(forIdentifier:)` to inspect a possibly missing store.
+- Never initialize or recreate Store A.
+- Never delete, move, rename, repair or modify either original store.
+- Never infer successful removal from directory absence.
+- Never infer store integrity from directory presence.
+- Never bypass protected container boundaries.
+- Do not inspect similarly named or unrelated user data.
+
+If a supported non-creating registry inspection cannot be performed safely, document that limitation and the exact prerequisite needed.
+
+## C2. Per-store lifecycle observability design
+
+Prepare an isolated validation-only design for a future new-UUID diagnostic.
+
+It must record distinct checkpoints for each store:
+
+1. Fixture identity and creation evidence.
+2. Store and WebView ownership.
+3. Navigation/service cancellation.
+4. Delegate, handler, continuation and task retirement.
+5. Reference-release evidence.
+6. Removal invocation.
+7. Callback entry.
+8. Callback completion and error.
+9. Registry state after completion.
+10. Scoped physical-state observation.
+11. Final per-store result.
+
+Include explicit run, process, store and operation identifiers.
+
+Do not use arbitrary sleeps as proof of deallocation, quiescence or completion.
+
+A crash must terminate that diagnostic run and preserve all available evidence. No automatic retry or destructive cleanup.
+
+## C3. Original evidence preservation
+
+Before and after any authorized read-only inspection, preserve and compare the existing evidence and hashes.
+
+Do not create new UUID stores merely to work around the unresolved original-state prerequisite.
+
+A future new-UUID diagnostic requires a separate explicit readiness decision after the original-state and environment prerequisites are understood.
+
+---
+
+# Workstream D — Consolidated qualification report
+
+Create or update the canonical M1 qualification-readiness report without changing existing requirement, acceptance, experiment or validation-case IDs.
+
+The report must distinguish:
+
+- Verified.
+- Prepared but not executed.
+- Conditionally ready.
+- Blocked.
+- Inconclusive.
+- Failed.
+
+For each candidate, fixture, interface and test, include:
+
+- Exact source or artifact.
+- Version and hash where applicable.
+- Environment and toolchain.
+- Commands actually executed.
+- Actual results.
+- Evidence paths.
+- Limitations.
+- Remaining prerequisites.
+- Explicit next decision.
+
+Maintain the existing traceability mappings and outcomes.
+
+In particular:
+
+- EXP-01 remains FAIL.
+- Cleanup-only follow-up remains INCONCLUSIVE/crashed.
+- EXP-02 remains INCONCLUSIVE.
+- EXP-03 and EXP-04 remain BLOCKED unless every required prerequisite is genuinely satisfied and separately authorized for execution.
+- EXP-05, EXP-07 and EXP-08 remain BLOCKED.
+- SVC-01–05 retain their existing outcomes.
+- No acceptance criterion is marked PASS without its required evidence.
+- No existing failure is downgraded because a fixture or specification was prepared.
+
+Do not introduce new case IDs merely to make the report look complete.
+
+---
+
+# Strict authorization and safety boundaries
+
+The following are NOT authorized by this task:
+
+- Browser product implementation.
+- Production database or crypto integration.
+- Production dependency changes.
+- Production UI or architecture changes.
+- WebKit production lifecycle fixes.
+- Signing, notarization or distribution.
+- Release or deployment.
+- Running EXP-03 or EXP-04 as full qualification campaigns.
+- Running EXP-05, EXP-07, EXP-08 or downstream service campaigns.
+- Destructive cleanup, deletion or repair of original stores.
+- Recreating missing Store A.
+- Modifying original fixture bytes or historical evidence.
+- Resetting or replacing keys/databases.
+- Changing ADR status or owner decisions.
+- Claiming a PASS from documentation, compilation or partial fixture results.
+
+Validation-only code is acceptable only where it is isolated, non-production, uses synthetic data and does not cross these boundaries.
+
+If a task requires new signing permission, new credentials, a second Mac, destructive operations, network access to an unverified artifact or any other authorization not already established, stop at that boundary and report it.
+
+## Preservation requirements
+
+- Preserve the current branch and existing working-tree changes.
+- Do not reset, rebase, force-push, clean or switch branches.
+- Do not alter original Phase 3 evidence or prior M1 evidence.
+- Do not modify owner decisions or ADRs.
+- Do not silently revise existing case outcomes.
+- Keep validation-only artifacts clearly separated from product sources.
+- Do not commit or push unless separately requested.
+
+## Completion criteria
+
+This task is complete when:
+
+1. The provider candidate has an auditable provenance/build/license assessment, or a precise blocker report.
+2. The isolated fixture plan and available synthetic fixtures are documented.
+3. The key-binding and crypto interface risks are reviewed.
+4. Keychain identity/access prerequisites are verified or precisely identified.
+5. Independent recovery fixture requirements and available test vectors are documented.
+6. The non-creating WebKit inspection feasibility is established or explicitly blocked.
+7. The per-store lifecycle observability design is documented.
+8. The canonical readiness report and evidence inventory are updated.
+9. Existing M1 traceability and all historical outcomes are preserved.
+10. No unauthorized product implementation or experiment has occurred.
+
+## Final response required from Codex
+
+Report:
+
+- Starting and ending HEAD.
+- Branch and working-tree status.
+- Files created or modified.
+- Provider candidate and exact qualification status.
+- Fixtures actually built versus only specified.
+- Keychain tests actually executed versus blocked.
+- Independent recovery tests actually executed versus blocked.
+- WebKit registry inspection actually performed versus only designed.
+- Whether any original store or evidence bytes changed.
+- Whether any production source, dependency, ADR or owner decision changed.
+- Commands executed and evidence locations.
+- Remaining blockers, separated by EXP-01, EXP-03 and EXP-04.
+- Recommended next bounded task.
+
+Be precise. Do not describe a plan as an experiment, a build as qualification, or a prepared fixture as a passing test.
+
+**The goal is trustworthy qualification evidence and a clear readiness decision — not progress measured by the number of files or tests produced.**

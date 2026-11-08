@@ -1,0 +1,321 @@
+{
+  "time": "2026-11-08T12:22:03.503096+00:00",
+  "commands": [
+    {
+      "record": "results/attempt-before-fix-provider-configure-1.json",
+      "command": [
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/configure",
+        "--disable-shared",
+        "--disable-tcl",
+        "--disable-readline",
+        "--disable-load-extension",
+        "--with-tempstore=always"
+      ],
+      "returncode": 1,
+      "error": null
+    },
+    {
+      "record": "results/attempt-before-fix-recovery-fixture-run.json",
+      "command": [
+        "xcrun",
+        "swift",
+        "-swift-version",
+        "6",
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-module-cache-path",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/swift-module-cache",
+        "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/RecoveryVectors.swift"
+      ],
+      "returncode": 1,
+      "error": null
+    },
+    {
+      "record": "results/configure-help.json",
+      "command": [
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/configure",
+        "--help"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/initial-key-binding-syntax-check.json",
+      "command": [
+        "xcrun",
+        "clang",
+        "-fsyntax-only",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DSQLITE_HAS_CODEC",
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-I",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1",
+        "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/key_binding_compile_fixture.c"
+      ],
+      "returncode": 1,
+      "error": null
+    },
+    {
+      "record": "results/initial-tmp-restriction-provider-configure-1.json",
+      "command": [
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/configure",
+        "--disable-shared",
+        "--disable-tcl",
+        "--disable-readline",
+        "--disable-load-extension",
+        "--with-tempstore=always"
+      ],
+      "returncode": 1,
+      "error": null
+    },
+    {
+      "record": "results/interpreter-trap-recovery-fixture-run.json",
+      "command": [
+        "xcrun",
+        "swift",
+        "-swift-version",
+        "6",
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-module-cache-path",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/swift-module-cache",
+        "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/RecoveryVectors.swift"
+      ],
+      "returncode": -5,
+      "error": null
+    },
+    {
+      "record": "results/key-binding-syntax-check.json",
+      "command": [
+        "xcrun",
+        "clang",
+        "-fsyntax-only",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DSQLITE_HAS_CODEC",
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-I",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1",
+        "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/key_binding_compile_fixture.c"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/prior-26-observations-recovery-fixture-run.json",
+      "command": [
+        "xcrun",
+        "swift",
+        "-swift-version",
+        "6",
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-module-cache-path",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/swift-module-cache",
+        "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/RecoveryVectors.swift"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-archive-architecture-1.json",
+      "command": [
+        "/usr/bin/lipo",
+        "-info",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-archive-architecture-2.json",
+      "command": [
+        "/usr/bin/lipo",
+        "-info",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-2/libsqlite3.a"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-archive-symbols-1.json",
+      "command": [
+        "/usr/bin/nm",
+        "-g",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-archive-symbols-2.json",
+      "command": [
+        "/usr/bin/nm",
+        "-g",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-2/libsqlite3.a"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-configure-1.json",
+      "command": [
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/configure",
+        "--disable-shared",
+        "--disable-tcl",
+        "--disable-readline",
+        "--disable-load-extension",
+        "--with-tempstore=always"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-configure-2.json",
+      "command": [
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/configure",
+        "--disable-shared",
+        "--disable-tcl",
+        "--disable-readline",
+        "--disable-load-extension",
+        "--with-tempstore=always"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-make-static-1.json",
+      "command": [
+        "/usr/bin/make",
+        "-j2",
+        "libsqlite3.a"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/provider-make-static-2.json",
+      "command": [
+        "/usr/bin/make",
+        "-j2",
+        "libsqlite3.a"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/recovery-fixture-run.json",
+      "command": [
+        "xcrun",
+        "swift",
+        "-swift-version",
+        "6",
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-module-cache-path",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/swift-module-cache",
+        "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/RecoveryVectors.swift"
+      ],
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "record": "results/tag-index-trap-recovery-fixture-run.json",
+      "command": [
+        "xcrun",
+        "swift",
+        "-swift-version",
+        "6",
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-module-cache-path",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/swift-module-cache",
+        "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/RecoveryVectors.swift"
+      ],
+      "returncode": -5,
+      "error": null
+    },
+    {
+      "record": "results/toolchain-and-target.json#swift-version",
+      "command": [
+        "xcrun",
+        "swift",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "record": "results/toolchain-and-target.json#clang-version",
+      "command": [
+        "xcrun",
+        "clang",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "record": "results/toolchain-and-target.json#sdk-version",
+      "command": [
+        "xcrun",
+        "--sdk",
+        "macosx",
+        "--show-sdk-version"
+      ],
+      "returncode": 0
+    },
+    {
+      "record": "results/toolchain-and-target.json#macos-version",
+      "command": [
+        "sw_vers"
+      ],
+      "returncode": 0
+    },
+    {
+      "record": "results/toolchain-and-target.json#tcl-version",
+      "command": [
+        "/usr/bin/tclsh"
+      ],
+      "returncode": 0
+    },
+    {
+      "record": "results/toolchain-and-target.json#make-version",
+      "command": [
+        "/usr/bin/make",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "record": "results/toolchain-and-target.json#provider-object-load-commands",
+      "command": [
+        "xcrun",
+        "otool",
+        "-l",
+        "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/sqlite3.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "record": "results/database-control-fixtures.json",
+      "command": [
+        "python3",
+        "harness/prepare_database_controls.py"
+      ],
+      "result": "synthetic unencrypted controls prepared; no encryption campaign"
+    },
+    {
+      "record": "results/public-cbor-interop.json",
+      "command": [
+        "python3",
+        "harness/public_cbor_interop.py"
+      ],
+      "result": "public structure only"
+    }
+  ],
+  "limitations": "No signing/Keychain/WebKit registry/database qualification command executed; static compile and fixture observations do not alter historical outcomes."
+}

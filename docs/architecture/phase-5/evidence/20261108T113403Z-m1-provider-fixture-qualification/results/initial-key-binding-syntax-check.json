@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-08T12:14:48.430684+00:00",
+  "command": [
+    "xcrun",
+    "clang",
+    "-fsyntax-only",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-DSQLITE_HAS_CODEC",
+    "-target",
+    "arm64-apple-macosx26.0",
+    "-I",
+    "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1",
+    "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/key_binding_compile_fixture.c"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/harness/key_binding_compile_fixture.c:14:5: error: call to undeclared function 'explicit_bzero'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n   14 |     explicit_bzero(temporary_key, length);\n      |     ^\n1 error generated.\n",
+  "source_sha256": "cb359c0368d2186c2b56cc0dac147e1701b1a3786f42018948673a9e404e67bc",
+  "execution_performed": false,
+  "qualified_binding": false
+}
