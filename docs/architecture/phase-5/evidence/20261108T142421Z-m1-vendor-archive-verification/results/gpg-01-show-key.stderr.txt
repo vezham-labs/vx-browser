@@ -1,0 +1,2 @@
+gpg: keybox '/private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg/pubring.kbx' created
+gpg: /private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg/trustdb.gpg: trustdb created

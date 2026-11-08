@@ -1,0 +1,102 @@
+{
+  "purpose": "Bounded vendor archive signature and complete pinned-source verification; no provider runtime evidence",
+  "current_report": "../../reports/M1/m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint",
+  "artifacts": [
+    "SHA256SUMS",
+    "acquire_vendor_archive.py",
+    "artifact-index.json",
+    "baseline.json",
+    "changed-files.json",
+    "compare_authenticated_source.py",
+    "finalize_archive_evidence.py",
+    "preservation-audit.json",
+    "results/archive-file-manifest.json",
+    "results/archive-to-commit-comparison.json",
+    "results/archive-to-commit-deterministic.json",
+    "results/disposable-keyring-cleanup.json",
+    "results/gpg-01-show-key.stderr.txt",
+    "results/gpg-01-show-key.stdout.txt",
+    "results/gpg-02-key-packets.stderr.txt",
+    "results/gpg-02-key-packets.stdout.txt",
+    "results/gpg-03-import-public-key.stderr.txt",
+    "results/gpg-03-import-public-key.stdout.txt",
+    "results/gpg-04-check-key-signatures.stderr.txt",
+    "results/gpg-04-check-key-signatures.stdout.txt",
+    "results/gpg-05-verify-vendor-archive.stderr.txt",
+    "results/gpg-05-verify-vendor-archive.stdout.txt",
+    "results/gpg-commands.json",
+    "results/key-structure-review.json",
+    "results/pinned-tree-object-verification.json",
+    "results/preflight.json",
+    "results/qualification-decision.json",
+    "results/retained-pinned-source-byte-comparison.json",
+    "results/signature-verification.json",
+    "results/tool-installation-record.json",
+    "results/vendor-acquisition.json",
+    "results/verifier-environment.json",
+    "sources/comparison-pinned-commit.decoded.json",
+    "sources/comparison-pinned-commit.json",
+    "sources/comparison-pinned-commit.raw",
+    "sources/comparison-pinned-tree.decoded.json",
+    "sources/comparison-pinned-tree.json",
+    "sources/comparison-pinned-tree.raw",
+    "sources/gnupg-INSTALL_RECEIPT.json",
+    "sources/gnupg-installed-formula.rb",
+    "sources/owner-authorization.txt",
+    "sources/sqlcipher-4.20.0.zip",
+    "sources/sqlcipher-4.20.0.zip.sig",
+    "sources/support_zetetic_net_public_key.gpg",
+    "sources/tool-install-approval.txt",
+    "sources/vendor-detached-signature.json",
+    "sources/vendor-public-key.json",
+    "sources/vendor-source-zip.json",
+    "sources/vendor-verification-page.html",
+    "sources/vendor-verification-page.html.decoded",
+    "sources/vendor-verification-page.json",
+    "verify_vendor_archive.py"
+  ],
+  "hash_manifest": "SHA256SUMS",
+  "key_records": [
+    "results/verifier-environment.json",
+    "results/gpg-commands.json",
+    "results/key-structure-review.json",
+    "results/signature-verification.json"
+  ],
+  "comparison_records": [
+    "results/archive-file-manifest.json",
+    "results/archive-to-commit-comparison.json",
+    "results/archive-to-commit-deterministic.json",
+    "results/pinned-tree-object-verification.json",
+    "results/retained-pinned-source-byte-comparison.json"
+  ],
+  "execution_commands": [
+    [
+      "python3",
+      "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/acquire_vendor_archive.py"
+    ],
+    [
+      "python3",
+      "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/verify_vendor_archive.py"
+    ],
+    [
+      "python3",
+      "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/compare_authenticated_source.py"
+    ],
+    [
+      "python3",
+      "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/finalize_archive_evidence.py"
+    ]
+  ],
+  "other_executed_actions": [
+    "Read-only Git baseline/canonical/prior manifest/tool-path inspection; exact Git argv/outputs in baseline/preservation records",
+    "Explicitly owner-approved Homebrew installation; exact command, exit and relevant excerpts in results/tool-installation-record.json",
+    "Python preflight/provenance collection captured exact GnuPG/version/dump-options, brew/version and environment command outputs in results/verifier-environment.json",
+    "Python parsed maintained GnuPG public-key/status output into results/key-structure-review.json; no custom signature verification",
+    "Python generated deterministic comparison; supplemental direct equality of authenticated/retained pinned bytes plus retained SHA-256 checks",
+    "Removed only registered task-specific disposable GNUPGHOME; results/disposable-keyring-cleanup.json"
+  ],
+  "source_or_provider_contents_executed": false,
+  "provider_builds_or_runtime_tests": 0,
+  "output_limits": "Full relevant GnuPG stdout/stderr and exact argv/exit codes are retained; installation record labels its excerpts rather than claiming a complete terminal transcript",
+  "reuse": "Scripts write exclusive new evidence. Do not rerun into this completed evidence directory; a future run requires new paths and a new disposable keyring."
+}

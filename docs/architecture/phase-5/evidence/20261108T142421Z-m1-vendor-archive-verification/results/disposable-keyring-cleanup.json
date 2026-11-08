@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-08T14:34:50.742088+00:00",
+  "removed_only_disposable_GNUPGHOME": "/private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg",
+  "removed_children": [
+    "pubring.kbx",
+    "pubring.kbx~",
+    "trustdb.gpg"
+  ],
+  "keyring_absent_after": true,
+  "authenticated_source_retained": "/private/tmp/vx-m1-vendor-auth-t5_e63ng/authenticated-source",
+  "source_directory_present": true,
+  "personal_keyring_accessed": false,
+  "gpg_agent_or_dirmngr_autostart": "disabled for all inspection/import/verification commands",
+  "host_tool_uninstalled": false
+}

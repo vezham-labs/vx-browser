@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-08T14:29:33.508288+00:00",
+  "primary_fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2",
+  "cryptographic_signature_status": "PASS",
+  "signature_command_returncode": 0,
+  "actual_signing_fingerprints": [
+    "A4EA79E649E745B92117A56F0CB99EE267FD0322"
+  ],
+  "VALIDSIG_primary_fingerprints": [
+    "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2"
+  ],
+  "verification_status_lines": [
+    "NEWSIG support@zetetic.net",
+    "KEY_CONSIDERED D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2 0",
+    "SIG_ID +T7UpPyR0P5qxxpxA4+83MHcXcw 2026-10-26 1793036616",
+    "GOODSIG 0CB99EE267FD0322 Zetetic LLC <support@zetetic.net>",
+    "VALIDSIG A4EA79E649E745B92117A56F0CB99EE267FD0322 2026-10-26 1793036616 0 4 0 1 10 00 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2",
+    "KEY_CONSIDERED D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2 0",
+    "TRUST_UNDEFINED 0 pgp support@zetetic.net"
+  ],
+  "disqualifying_status_lines": [],
+  "public_key_check_command_returncode": 0,
+  "packet_inspection_returncode": 0,
+  "key_self_signature_subkey_revocation_review": "See complete gpg-04 and gpg-02 output; review before source comparison",
+  "publisher_identity_limit": "Vendor HTTPS fingerprint/key publication is external identity evidence, not Web-of-Trust ownertrust",
+  "archive_extracted": false,
+  "provider_executed": false,
+  "personal_keyring_used": false
+}

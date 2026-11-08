@@ -1,0 +1,153 @@
+# Codex Task: M1 – Vendor Archive Cryptographic Verification
+
+## Repository
+
+`vezham-labs/vx-browser`
+
+Branch: `timeline`
+
+## Objective
+
+Establish whether the official vendor-published SQLCipher 4.20.0 source archive can be cryptographically authenticated and whether its source contents correspond to our pinned upstream Git commit.
+
+This is a bounded source-authenticity investigation. It is not product implementation or runtime qualification.
+
+## Known baseline
+
+- Previous trust-gate commit: `0139c80a519f1b90c2d06bacea9d2af2620b16cc`
+- Pinned SQLCipher commit: `355d4db92d3404e71faa8088d071a71d767807f4`
+- Git tag object: `52252487a5cada9b430e8d4b20025790c5a6ba20`
+- Git tag's claimed signer fingerprint: `2646E8ECC00DAF4C2F67DBCD19A0457D05EA8350`
+- Vendor-published package-signing key fingerprint: `D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2`
+
+The Git tag currently reports `unknown_key`. Do not treat its signature as verified.
+
+Existing evidence and source URLs are documented in:
+
+`docs/architecture/phase-5/reports/M1/m1-sqlcipher-publisher-authenticity-evidence.md`
+
+Read this report and its referenced evidence before proceeding.
+
+## Workstream A – Verification environment
+
+1. Inspect the available OpenPGP verification tools:
+   - `gpg`
+   - `gpgv`
+   - `sq`
+2. Record tool version, installation source and verification environment.
+3. Prefer an established, maintained OpenPGP implementation.
+4. If none is available, do not silently install system software. Report the recommended isolated provisioning method and request approval before modifying the host.
+5. Do not introduce an OpenPGP dependency into the Vezham Browser product.
+
+## Workstream B – Vendor archive acquisition
+
+1. Use the official Zetetic verification/source page referenced in the existing report.
+2. Acquire the exact SQLCipher 4.20.0 source ZIP and its corresponding detached signature.
+3. Acquire the vendor-published public key.
+4. Record the exact source URLs, acquisition time, filenames, sizes and SHA-256 hashes.
+5. Preserve the original downloaded bytes unchanged.
+6. Do not substitute a GitHub-generated archive or third-party mirror.
+
+If the official archive or corresponding signature cannot be obtained, stop and record the blocker.
+
+## Workstream C – OpenPGP verification
+
+Using the acquired vendor key and detached signature:
+
+1. Inspect the complete public-key structure.
+2. Record the primary-key fingerprint.
+3. Inspect signing subkeys and their binding signatures.
+4. Check key and subkey validity, expiry and revocation information.
+5. Verify the detached signature against the exact acquired archive.
+6. Record the verification tool's complete relevant output.
+7. Identify the actual signing key or subkey.
+8. Establish whether the signing key is bound to the vendor-published primary key.
+
+Expected primary fingerprint for comparison:
+
+`D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2`
+
+Do not assume that a matching key ID alone establishes identity.
+
+A successful cryptographic signature check establishes that the archive was signed by the corresponding key. It does not independently establish that the vendor controls or authorizes that key. Document the limits of the available vendor-key publication evidence.
+
+## Workstream D – Archive-to-commit correspondence
+
+Only after successful signature verification:
+
+1. Extract the authenticated archive into an isolated temporary directory.
+2. Do not execute archive contents.
+3. Compare the extracted source tree with pinned commit:
+
+   `355d4db92d3404e71faa8088d071a71d767807f4`
+
+4. Identify:
+   - Exact file matches.
+   - Files present only in the archive.
+   - Files present only in the Git commit.
+   - Packaging-generated files.
+   - Content differences.
+   - Version and source-layout differences.
+5. Produce a deterministic comparison report with hashes.
+6. Explain whether the archive is equivalent to the pinned source, substantially equivalent with documented packaging differences, or not equivalent.
+
+Do not claim equivalence based only on matching version numbers or a few selected files.
+
+## Workstream E – Evidence and reporting
+
+Create a new timestamped evidence directory under:
+
+`docs/architecture/phase-5/evidence/`
+
+Create or update the dedicated report:
+
+`docs/architecture/phase-5/reports/M1/m1-sqlcipher-publisher-authenticity-evidence.md`
+
+Include:
+
+- Acquisition provenance.
+- Tool and environment provenance.
+- Public-key inspection results.
+- Signature verification results.
+- Archive SHA-256.
+- Archive-to-commit comparison.
+- Unresolved authenticity questions.
+- Exact commands and relevant outputs.
+- Final evidence-based conclusion.
+
+Use explicit outcomes:
+
+- PASS
+- FAIL
+- BLOCKED
+- INCONCLUSIVE
+
+Do not convert missing evidence into PASS.
+
+Update the existing canonical M1 reports append-only. Preserve historical findings and previous evidence.
+
+## Strict boundaries
+
+- No production source-code changes.
+- No dependency changes.
+- No ADR changes.
+- No owner-decision changes.
+- No SQLCipher builds.
+- No encryption or database runtime tests.
+- No Keychain or WebKit experiments.
+- No changes to the existing pinned source.
+- No external vendor emails or messages.
+- No commits or pushes without my instruction.
+
+## Completion response
+
+Return:
+
+1. What was actually executed.
+2. What was cryptographically verified.
+3. Whether the signed archive matches the pinned Git commit.
+4. What remains unresolved.
+5. Updated evidence/report paths.
+6. Whether the trust gate can advance.
+
+If a required prerequisite is missing, stop at that boundary and explain the precise blocker. Do not simulate results or claim tests passed when they were not executed.

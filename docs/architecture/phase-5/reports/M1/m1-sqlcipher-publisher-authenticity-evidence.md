@@ -95,3 +95,101 @@ EXP-01/03/04, native Keychain/WebKit work, provider builds/execution and all run
 
 **Stop disposition: evidence acquisition complete; authenticity remains BLOCKED. No runtime qualification in this task.**
 
+## 8. Vendor archive cryptographic verification — 2026-11-08 (current checkpoint)
+
+**Current bounded source-authenticity outcome: PASS through the signed vendor archive and complete pinned-source correspondence.** Sections 1–7 and the original header describe the preceding BLOCKED acquisition checkpoint and remain historical. This addendum supersedes that source-authenticity blocker only. It does not claim a verified Git tag signature, qualified runtime encryption, EXP-03 acceptance or production/release approval.
+
+### 8.1 Baseline, authority and actual execution
+
+Repository vezham-labs/vx-browser; branch timeline. Starting and ending HEAD **0139c80a519f1b90c2d06bacea9d2af2620b16cc**, parent **9118f89930a738c5e9d4711c7718a1e373e49761**. Working tree clean before this evidence directory was created. All 948 baseline tracked-file hashes and the previous acquisition manifest's 73 entries were recorded/checked.
+
+[Current task](../../evidence/20261108T142421Z-m1-vendor-archive-verification/sources/owner-authorization.txt), [baseline](../../evidence/20261108T142421Z-m1-vendor-archive-verification/baseline.json), [preflight and previous-manifest checks](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/preflight.json), [explicit owner approval to install Homebrew GnuPG and required tool dependencies](../../evidence/20261108T142421Z-m1-vendor-archive-verification/sources/tool-install-approval.txt).
+
+Installed approved Homebrew GnuPG 2.5.24 (formula 2.5.24_1, arm64_golden_gate bottle), using libgcrypt 1.12.4. Exact resolved executable: /opt/homebrew/Cellar/gnupg/2.5.24_1/bin/gpg; SHA-256 **21cb9adcad96b7be404014ff6e9fb837160a2135455c217dec9efe196cf0661a**. Recorded version output, installed receipt/formula and actual command arguments. Homebrew installed ten required tool dependencies and upgraded seven existing required tool dependencies; those host changes were covered by the explicit approval. Browser package manifests, lockfiles and dependencies were not changed. Homebrew's pre-release-macOS warning and ignored unrelated untrusted tap were retained; no tap-trust exception or macOS-security change was made.
+
+[Installation record and dependency changes](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/tool-installation-record.json), [verifier version/environment/binary provenance](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/verifier-environment.json), [installed receipt](../../evidence/20261108T142421Z-m1-vendor-archive-verification/sources/gnupg-INSTALL_RECEIPT.json), [installed formula](../../evidence/20261108T142421Z-m1-vendor-archive-verification/sources/gnupg-installed-formula.rb).
+
+All key operations used a fresh mode 0700 task-specific GNUPGHOME under /private/tmp/vx-m1-vendor-auth-t5_e63ng, --no-options, batch mode, disabled automatic key retrieval/autostart and no personal keyring. No ownertrust override or signing/private-key operation occurred. After verification the disposable keyring was removed; the authenticated extracted source remains in its owned temporary directory for review. GnuPG remains installed.
+
+### 8.2 Exact official acquisition
+
+The current official [verification page](https://www.zetetic.net/sqlcipher/verify/) was fetched with default HTTPS certificate validation. Every exact artifact URL below was confirmed in that captured page. No GitHub-generated archive or mirror was substituted, and the original downloaded bytes remain unchanged.
+
+| Artifact | Official URL | Bytes | SHA-256 |
+|---|---|---:|---|
+| SQLCipher 4.20.0 source ZIP | https://www.zetetic.net/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip | 21,014,800 | a1417a5a672a2342de6ae44e08ccd68487fa3d0a43212331f4226a0d00b51b9c |
+| Corresponding detached signature | https://www.zetetic.net/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip.sig | 459 | c5d13b33ff0bd57baa7cb92c2e835d8620add0f95940024dc72fdccbdd68854b |
+| Vendor-published key | https://www.zetetic.net/security/support_zetetic_net_public_key.gpg | 29,175 | b5fa10e62b50478db1236f3a8c7157074d71450a1f6a245eb77a71802202eefd |
+
+All three returned HTTP 200 without redirects or content encoding. Acquisition times, headers, filenames, sizes and hashes are in [vendor-acquisition.json](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/vendor-acquisition.json), with individual provenance records and original bytes under sources/. The ZIP was not inspected/extracted until signature verification and key-structure review passed.
+
+### 8.3 Key structure, validity and signature verification
+
+| Role | Full fingerprint | GnuPG inspection |
+|---|---|---|
+| Primary RSA4096 certification key | D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2 | Matches owner baseline and explicit vendor package-key publication; current self-certification verified; expires 2027-08-02T21:57:52Z |
+| Actual RSA3072 signing subkey | A4EA79E649E745B92117A56F0CB99EE267FD0322 | Binding signature verified under primary; signing capability; expires 2027-08-02T21:58:05Z |
+| RSA3072 encryption subkey | 466459A718EC371CDD171FC03A7D809DD4DFEDA7 | Primary binding verified; expires 2027-08-02T21:58:33Z |
+| RSA3072 authentication subkey | 5AE773802F16DD3AE688050462AE2C1CB1C49DF6 | Primary binding verified; expires 2027-08-02T21:58:49Z |
+
+GnuPG inspected the full public certificate/packets and checked UID self-signatures and all three subkey bindings. The latest self-certification and binding signatures verified; no revoked/expired/invalid key flags or revocation packets were found in the freshly published certificate at inspection time. Three third-party UID certifications remained unverified because their keys were absent; they were not used as identity evidence or fetched automatically.
+
+**Detached ZIP signature: PASS.** GnuPG exited 0 and emitted GOODSIG and VALIDSIG identifying the complete signing-subkey fingerprint and its vendor primary fingerprint. Verification required cross-certification. The signature uses RSA/SHA-512. The actual signing subkey is therefore bound to the expected vendor-published primary, rather than merely sharing a short key ID.
+
+GnuPG retained TRUST_UNDEFINED and the warning that the UID is not certified by a trusted signature. That is not hidden or overridden: the disposable keyring has no Web-of-Trust ownertrust. External publisher identity rests on the separately recorded official HTTPS publication of the complete primary fingerprint/key, which matches the owner-supplied baseline. Successful cryptography alone would not establish that identity.
+
+[Exact GnuPG commands and exit codes](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-commands.json); complete [signature status output](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-05-verify-vendor-archive.stdout.txt) and [signature stderr/warning](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-05-verify-vendor-archive.stderr.txt); [machine-readable signature result](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/signature-verification.json); [key structure/revocation review](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/key-structure-review.json). The full show-key, packet, import and check-sigs stdout/stderr files are retained beside them.
+
+Revocation/identity limits: checks cover the vendor certificate obtained at this acquisition time, not a guarantee against unpublished revocations or future key compromise. No independent out-of-band vendor identity ceremony or global keyserver refresh occurred. The official HTTPS publication is the documented publisher-controlled trust channel; it does not provide immunity to compromise of that channel. No custom cryptographic signature verifier was written.
+
+### 8.4 Complete archive-to-pinned-commit correspondence
+
+Only after the preceding PASS results, extracted the authenticated ZIP into /private/tmp/vx-m1-vendor-auth-t5_e63ng/authenticated-source. Checked paths, duplicate/case collisions, entry types and size bounds; extracted files are nonexecutable mode 0600 and no archive content was executed. The ZIP's recorded Git-relevant executable bits were compared separately from extraction permissions.
+
+Fresh official Git metadata identifies pinned commit **355d4db92d3404e71faa8088d071a71d767807f4**, tree **b3aa6f0a71413a40df4c968d357bbbbee61b42cb**. The recursive tree was complete, not truncated. Reconstructed all 60 Git tree objects from their full paths, modes and child identities and matched the pinned root. Every signed-archive file's Git blob identity and SHA-256 was calculated and compared with the full pinned-tree inventory.
+
+| Comparison category | Actual result |
+|---|---:|
+| Archive files / pinned Git files | 2,325 / 2,325 |
+| Exact byte matches | **2,325** |
+| Archive-only files | **0** |
+| Git-only files | **0** |
+| Content differences | **0** |
+| Git executable-bit differences | **0** |
+| Packaging-generated/extra source files | **0** |
+| Version/source-layout differences | **0** |
+
+**Correspondence: PASS — exact source-file bytes and Git-tracked executable modes.** The outer ZIP folder sqlcipher-4.20.0 was normalized; ZIP container metadata/directory entries are not Git source files. No packaging exclusion or content exception was needed. VERSION contains 3.54.1, the SQLite baseline; the SQLCipher 4.20.0 release identity comes from the publisher release/verification documentation and full source correspondence, not a version-only assertion. Total uncompressed file bytes: 119,699,518.
+
+[Complete comparison and every exact match](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/archive-to-commit-comparison.json), [sorted archive SHA-256/blob manifest](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/archive-file-manifest.json), [60 reconstructed Git tree objects](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/pinned-tree-object-verification.json), [deterministic comparison without run time/temporary path](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/archive-to-commit-deterministic.json). Deterministic comparison SHA-256: **7cde345937ded908c50d392eb3c72413ae6f08bf3fc0e52d7bde9461adc88c4d**. Original Git metadata, acquisition URLs and source/comparison scripts are retained; no pinned-source record was changed.
+
+A supplemental [direct byte comparison](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/retained-pinned-source-byte-comparison.json) compares every authenticated extracted file with the retained pinned source and checks the latter against its original SHA-256 manifest. All 2,325 byte comparisons and 2,325 retained-manifest checks passed. The retained source was read only; this supplements the fresh Git-object comparison and does not replace its exact commit/tree binding.
+
+### 8.5 Decision and remaining boundaries
+
+| Gate | Current outcome | Meaning |
+|---|---|---|
+| Maintained verification environment | PASS | Explicitly approved host tool; recorded version, binary and package provenance; disposable keyring |
+| Official ZIP/signature/key acquisition | PASS | Exact official artifacts acquired and preserved |
+| Certificate self-signatures/subkey bindings/current published validity | PASS | Bounded to the freshly acquired vendor certificate and stated revocation limits |
+| Exact archive cryptographic signature | PASS | GnuPG valid signature by the expected vendor-primary-bound signing subkey |
+| Complete signed-source-to-pin correspondence | PASS | Every pinned source file/byte and executable bit matches; no missing/extra/content exceptions |
+| **Bounded source-authenticity prerequisite** | **PASS** | Official publisher-key publication + valid vendor-archive signature + exact pinned-source identity |
+| Separate Git tag signature | BLOCKED / not verified here | Earlier unknown_key route is not reclassified as verified; claimed 2646…8350 publisher binding remains unresolved |
+| Runtime provider/security qualification and EXP-03 | BLOCKED / not executed | This source-only task grants no runtime/database/encryption campaign or acceptance pass |
+
+**The source-authenticity prerequisite can advance through this vendor-archive route.** Authenticating the separate tag signature is no longer needed to establish this exact signed-source correspondence, but its historical limitation remains recorded. This does not independently qualify earlier static binaries, provider configuration, security advisories, encrypted storage surfaces, recovery, production dependency integration or release.
+
+Next work requires a separately scoped provider-runtime qualification decision with frozen build/configuration, synthetic data, key-binding/artifact/failure oracles and the remaining readiness prerequisites. No runtime action follows automatically from this PASS.
+
+### 8.6 Evidence, preservation and completion
+
+[Final evidence index](../../evidence/20261108T142421Z-m1-vendor-archive-verification/artifact-index-final.json), [final SHA-256 manifest](../../evidence/20261108T142421Z-m1-vendor-archive-verification/SHA256SUMS-final), [final file-by-file change inventory](../../evidence/20261108T142421Z-m1-vendor-archive-verification/changed-files-final.json), [final preservation audit](../../evidence/20261108T142421Z-m1-vendor-archive-verification/preservation-audit-final.json), [disposable-keyring cleanup](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/disposable-keyring-cleanup.json), [qualification decision](../../evidence/20261108T142421Z-m1-vendor-archive-verification/results/qualification-decision.json).
+
+The [initial preservation audit](../../evidence/20261108T142421Z-m1-vendor-archive-verification/preservation-audit.json) recorded 21 successful checks and one formatting failure: a new blank line at EOF in this addendum. That line was removed. The initial audit/index/inventory/manifest remain immutable; final-named records supersede only their documentation-finalization status. No signature or source comparison was rerun to correct formatting, and no cryptographic failure occurred.
+
+Updated only append-only canonical references/addenda: this dedicated report, M1 README, source catalog, trust/runtime report and readiness report; all other tracked files and earlier evidence/manifests remain unchanged. Host changes are the explicitly approved GnuPG/tool-dependency installation. Personal keyrings and original browser stores were not accessed. No SQLCipher build, provider/database runtime, EXP-01/03/04, Keychain/WebKit qualification, vendor message, signing/notarization/distribution, stage/commit/push or branch switch occurred.
+
+Historical experiment/acceptance outcomes and all 165 matrix rows remain unchanged. No M1 REQ/AC is marked passed by this source check. Owner decisions/WS01.1 and ADR statuses remain unchanged: 0001 Proposed, 0002 Accepted, 0003–0005 Proposed; conditional WKWebView, CEF evaluation-only, Aura excluded, no production Tamizhi/mandatory cloud/public distribution. Mandatory macOS 26/runtime/security/release gates remain.
+
+**Current checkpoint complete: vendor archive signature PASS; exact pinned-source correspondence PASS; bounded source-authenticity prerequisite PASS. Runtime qualification remains unexecuted.**

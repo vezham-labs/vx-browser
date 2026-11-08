@@ -1,0 +1,5 @@
+Owner response to explicit host-tool approval request:
+Question: May I install Homebrew’s GnuPG and its required tool dependencies on this Mac, then use a disposable isolated keyring for this bounded archive verification? Your task explicitly requires approval before modifying the host. No SQLCipher build/runtime work or browser dependency changes are included.
+Answer: Approve Homebrew GnuPG with disposable keyring
+
+Authority applies to the verification tool and required tool dependencies only. No production browser dependency, provider build/runtime, or release authority is inferred.

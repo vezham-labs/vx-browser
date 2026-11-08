@@ -1,0 +1,119 @@
+{
+  "review_time": "2026-11-08T14:30:24.856294+00:00",
+  "status": "PASS",
+  "keys": [
+    {
+      "kind": "pub",
+      "gpg_validity": "-",
+      "bits": 4096,
+      "algorithm": "1",
+      "key_id": "D1FA3A2A97ED25C2",
+      "created_epoch": 1398192947,
+      "expires_epoch": 1817243872,
+      "usage": "cESCA",
+      "bindings": [],
+      "fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2",
+      "expires_utc": "2027-08-02T21:57:52+00:00",
+      "expired_at_inspection": false,
+      "binding_verified_by_primary": true
+    },
+    {
+      "kind": "sub",
+      "gpg_validity": "-",
+      "bits": 3072,
+      "algorithm": "1",
+      "key_id": "0CB99EE267FD0322",
+      "created_epoch": 1398193199,
+      "expires_epoch": 1817243885,
+      "usage": "s",
+      "bindings": [
+        {
+          "gpg_check": "!",
+          "issuer_key_id": "D1FA3A2A97ED25C2",
+          "created_epoch": 1754171885,
+          "signature_class": "18x",
+          "issuer_fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2"
+        }
+      ],
+      "fingerprint": "A4EA79E649E745B92117A56F0CB99EE267FD0322",
+      "expires_utc": "2027-08-02T21:58:05+00:00",
+      "expired_at_inspection": false,
+      "binding_verified_by_primary": true
+    },
+    {
+      "kind": "sub",
+      "gpg_validity": "-",
+      "bits": 3072,
+      "algorithm": "1",
+      "key_id": "3A7D809DD4DFEDA7",
+      "created_epoch": 1398193315,
+      "expires_epoch": 1817243913,
+      "usage": "e",
+      "bindings": [
+        {
+          "gpg_check": "!",
+          "issuer_key_id": "D1FA3A2A97ED25C2",
+          "created_epoch": 1754171913,
+          "signature_class": "18x",
+          "issuer_fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2"
+        }
+      ],
+      "fingerprint": "466459A718EC371CDD171FC03A7D809DD4DFEDA7",
+      "expires_utc": "2027-08-02T21:58:33+00:00",
+      "expired_at_inspection": false,
+      "binding_verified_by_primary": true
+    },
+    {
+      "kind": "sub",
+      "gpg_validity": "-",
+      "bits": 3072,
+      "algorithm": "1",
+      "key_id": "62AE2C1CB1C49DF6",
+      "created_epoch": 1398193339,
+      "expires_epoch": 1817243929,
+      "usage": "a",
+      "bindings": [
+        {
+          "gpg_check": "!",
+          "issuer_key_id": "D1FA3A2A97ED25C2",
+          "created_epoch": 1754171929,
+          "signature_class": "18x",
+          "issuer_fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2"
+        }
+      ],
+      "fingerprint": "5AE773802F16DD3AE688050462AE2C1CB1C49DF6",
+      "expires_utc": "2027-08-02T21:58:49+00:00",
+      "expired_at_inspection": false,
+      "binding_verified_by_primary": true
+    }
+  ],
+  "verified_primary_UID_self_signatures": 6,
+  "unverified_third_party_certifications": [
+    {
+      "gpg_check": "?",
+      "issuer_key_id": "7CA502E93DB91BD9",
+      "created_epoch": 1398265390,
+      "signature_class": "10x",
+      "issuer_fingerprint": ""
+    },
+    {
+      "gpg_check": "?",
+      "issuer_key_id": "2F87304808D40CEC",
+      "created_epoch": 1398202579,
+      "signature_class": "13x",
+      "issuer_fingerprint": ""
+    },
+    {
+      "gpg_check": "?",
+      "issuer_key_id": "6BDF18EB9D6B3CE7",
+      "created_epoch": 1398284461,
+      "signature_class": "13x",
+      "issuer_fingerprint": ""
+    }
+  ],
+  "revocation_records": [],
+  "revocation_packet_classes_found": [],
+  "cross_certification": "Required by successful archive verification command",
+  "revocation_limit": "Checks cover the freshly vendor-published certificate only; no keyserver/global non-revocation guarantee",
+  "ownertrust": "Undefined in disposable keyring; publisher identity relies on separately recorded HTTPS publication"
+}

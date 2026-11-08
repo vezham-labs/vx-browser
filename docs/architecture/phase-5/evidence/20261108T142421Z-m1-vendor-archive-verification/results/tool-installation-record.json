@@ -1,0 +1,22 @@
+{
+  "approval": "sources/tool-install-approval.txt",
+  "command": "HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 HOMEBREW_NO_ANALYTICS=1 HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1 /opt/homebrew/bin/brew install gnupg",
+  "tool_session_id": 75893,
+  "exit_code": 0,
+  "installed_formula": "gnupg 2.5.24_1",
+  "source": "Homebrew core formula and arm64_golden_gate bottle",
+  "installation_receipt": "sources/gnupg-INSTALL_RECEIPT.json",
+  "installed_formula_source": "sources/gnupg-installed-formula.rb",
+  "new_required_tool_dependencies_reported": ["json-c", "libtasn1", "nettle", "p11-kit", "gnutls", "libassuan", "libgcrypt", "libusb", "npth", "pinentry"],
+  "existing_required_tool_dependencies_upgraded_reported": ["ca-certificates", "libunistring", "gettext", "libidn2", "libgpg-error", "libksba", "readline"],
+  "relevant_stdout_excerpts": [
+    "==> Pouring gnupg--2.5.24_1.arm64_golden_gate.bottle.tar.gz",
+    "/opt/homebrew/Cellar/gnupg/2.5.24_1: 149 files, 16.0MB"
+  ],
+  "installation_warnings_observed": [
+    "Homebrew warned that macOS 27 is a pre-release host without support",
+    "Homebrew ignored the unrelated untrusted mongodb/brew tap; no trust exception was added",
+    "HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK suppressed unrelated installed-dependent checks"
+  ],
+  "limits": "This records the actual command, exit and relevant returned excerpts, not a byte-for-byte complete installation-terminal transcript. Full installed-tool version/stdout, binary hash and installed receipt are retained separately. No browser dependency or host tap-trust setting was changed. Old versions of upgraded tool dependencies were not independently inventoried."
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-08",
+  "baseline_HEAD": "0139c80a519f1b90c2d06bacea9d2af2620b16cc",
+  "pin": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "vendor_archive_sha256": "a1417a5a672a2342de6ae44e08ccd68487fa3d0a43212331f4226a0d00b51b9c",
+  "verification_environment": "PASS",
+  "vendor_acquisition": "PASS",
+  "key_structure_and_binding_with_stated_revocation_limits": "PASS",
+  "archive_cryptographic_signature": "PASS",
+  "archive_to_pinned_source": "PASS",
+  "bounded_source_authenticity": "PASS",
+  "actual_signing_subkey_fingerprint": "A4EA79E649E745B92117A56F0CB99EE267FD0322",
+  "vendor_primary_fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2",
+  "identity_evidence": "Official HTTPS package-key/fingerprint publication matching owner-supplied baseline; not a Web-of-Trust or out-of-band identity guarantee",
+  "source_correspondence": {
+    "files": 2325,
+    "exact_matches": 2325,
+    "archive_only": 0,
+    "git_only": 0,
+    "content_differences": 0,
+    "git_executable_bit_differences": 0,
+    "reconstructed_tree_objects": 60
+  },
+  "separate_Git_tag_signature": "Not verified; historical unknown_key route not reclassified",
+  "can_source_authenticity_prerequisite_advance": true,
+  "provider_runtime_qualification": "BLOCKED / NOT EXECUTED",
+  "EXP_03": "BLOCKED",
+  "runtime_provider_tests_executed": 0,
+  "production_implementation_authorized": false,
+  "release_authorized": false,
+  "host_tool_installation_owner_approved": true,
+  "mandatory_gates_waived": false
+}

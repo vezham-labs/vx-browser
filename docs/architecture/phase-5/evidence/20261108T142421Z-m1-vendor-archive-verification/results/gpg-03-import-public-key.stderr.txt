@@ -1,0 +1,6 @@
+gpg: key D1FA3A2A97ED25C2: 3 signatures not checked due to missing keys
+gpg: key D1FA3A2A97ED25C2: public key "Zetetic LLC <support@zetetic.net>" imported
+gpg: no gpg-agent running in this session
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: no ultimately trusted keys found

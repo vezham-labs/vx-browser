@@ -1,0 +1,117 @@
+[
+  {
+    "label": "gpg-01-show-key",
+    "time": "2026-11-08T14:29:33.350666+00:00",
+    "argv": [
+      "/opt/homebrew/Cellar/gnupg/2.5.24_1/bin/gpg",
+      "--no-options",
+      "--homedir",
+      "/private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg",
+      "--batch",
+      "--no-tty",
+      "--no-auto-key-retrieve",
+      "--no-autostart",
+      "--status-fd",
+      "1",
+      "--with-colons",
+      "--with-fingerprint",
+      "--with-subkey-fingerprint",
+      "--show-keys",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/support_zetetic_net_public_key.gpg"
+    ],
+    "returncode": 0,
+    "stdout": "results/gpg-01-show-key.stdout.txt",
+    "stderr": "results/gpg-01-show-key.stderr.txt"
+  },
+  {
+    "label": "gpg-02-key-packets",
+    "time": "2026-11-08T14:29:33.370913+00:00",
+    "argv": [
+      "/opt/homebrew/Cellar/gnupg/2.5.24_1/bin/gpg",
+      "--no-options",
+      "--homedir",
+      "/private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg",
+      "--batch",
+      "--no-tty",
+      "--no-auto-key-retrieve",
+      "--no-autostart",
+      "--status-fd",
+      "1",
+      "--list-packets",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/support_zetetic_net_public_key.gpg"
+    ],
+    "returncode": 0,
+    "stdout": "results/gpg-02-key-packets.stdout.txt",
+    "stderr": "results/gpg-02-key-packets.stderr.txt"
+  },
+  {
+    "label": "gpg-03-import-public-key",
+    "time": "2026-11-08T14:29:33.407906+00:00",
+    "argv": [
+      "/opt/homebrew/Cellar/gnupg/2.5.24_1/bin/gpg",
+      "--no-options",
+      "--homedir",
+      "/private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg",
+      "--batch",
+      "--no-tty",
+      "--no-auto-key-retrieve",
+      "--no-autostart",
+      "--status-fd",
+      "1",
+      "--import",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/support_zetetic_net_public_key.gpg"
+    ],
+    "returncode": 0,
+    "stdout": "results/gpg-03-import-public-key.stdout.txt",
+    "stderr": "results/gpg-03-import-public-key.stderr.txt"
+  },
+  {
+    "label": "gpg-04-check-key-signatures",
+    "time": "2026-11-08T14:29:33.423628+00:00",
+    "argv": [
+      "/opt/homebrew/Cellar/gnupg/2.5.24_1/bin/gpg",
+      "--no-options",
+      "--homedir",
+      "/private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg",
+      "--batch",
+      "--no-tty",
+      "--no-auto-key-retrieve",
+      "--no-autostart",
+      "--status-fd",
+      "1",
+      "--with-colons",
+      "--with-fingerprint",
+      "--with-subkey-fingerprint",
+      "--list-options",
+      "show-unusable-subkeys,show-sig-expire,show-sig-subpackets",
+      "--check-sigs",
+      "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2"
+    ],
+    "returncode": 0,
+    "stdout": "results/gpg-04-check-key-signatures.stdout.txt",
+    "stderr": "results/gpg-04-check-key-signatures.stderr.txt"
+  },
+  {
+    "label": "gpg-05-verify-vendor-archive",
+    "time": "2026-11-08T14:29:33.508060+00:00",
+    "argv": [
+      "/opt/homebrew/Cellar/gnupg/2.5.24_1/bin/gpg",
+      "--no-options",
+      "--homedir",
+      "/private/tmp/vx-m1-vendor-auth-t5_e63ng/gnupg",
+      "--batch",
+      "--no-tty",
+      "--no-auto-key-retrieve",
+      "--no-autostart",
+      "--status-fd",
+      "1",
+      "--require-cross-certification",
+      "--verify",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/sqlcipher-4.20.0.zip.sig",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/sqlcipher-4.20.0.zip"
+    ],
+    "returncode": 0,
+    "stdout": "results/gpg-05-verify-vendor-archive.stdout.txt",
+    "stderr": "results/gpg-05-verify-vendor-archive.stderr.txt"
+  }
+]

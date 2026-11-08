@@ -39,3 +39,7 @@ ADR0001 Proposed;0002 Accepted;0003–0005 Proposed. Conditional WKWebView; CEF 
 ## Publisher authenticity acquisition — 2026-11-08
 
 [Current publisher-evidence report](m1-sqlcipher-publisher-authenticity-evidence.md) locates official Zetetic package-signing instructions and the 4.20.0 source ZIP/detached signature, retaining the published key and signature. The package key differs from the Git tag's claimed signer; no maintained verifier was found and signed-archive-to-pin correspondence is unverified. Authenticity remains BLOCKED. No build/runtime qualification, installation or external communication occurred; an unsent inquiry is preserved.
+
+## Vendor archive cryptographic verification — 2026-11-08 (latest source checkpoint)
+
+[Current verification addendum](m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint) records approved GnuPG provisioning, a valid vendor-primary-bound archive signature and all 2,325 pinned files matching with zero missing/extra/content/executable-bit differences. The bounded source-authenticity prerequisite is now PASS via the vendor archive; earlier BLOCKED entries/header remain historical. The separate Git tag signature is unverified. Runtime/provider qualification and EXP-03 remain BLOCKED; no build, encryption/runtime/native campaign or product/release authorization is inferred.

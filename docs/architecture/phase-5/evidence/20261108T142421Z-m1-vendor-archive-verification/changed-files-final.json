@@ -1,0 +1,91 @@
+{
+  "tracked_modified": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "change": "Append-only current verification/reference addendum",
+      "sha256": "920ba881843dd97cbdc770e3ab713cb2a026ac8c9fd43d13f59b2eb5c5416a15"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-provider-trust-and-runtime-qualification.md",
+      "change": "Append-only current verification/reference addendum",
+      "sha256": "6b14bb69f12570972b9d87ec786ad59590db1828f766bc0258e04487a9213730"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "change": "Append-only current verification/reference addendum",
+      "sha256": "79ee5e1d118cb4ef67bf206ed3393889ee19fba13dc643aac75b8cb08307e6e7"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-publisher-authenticity-evidence.md",
+      "change": "Append-only current verification/reference addendum",
+      "sha256": "e7b53df75ffc3bcafbc5b19bc83fa1702300b300f3535c411c26513fa2017240"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+      "change": "Append-only current verification/reference addendum",
+      "sha256": "04022c8e19831138c085b1e3570a97f3c7f8e7a16291d11ae05f72f7ff970edf"
+    }
+  ],
+  "created_evidence_files": [
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/SHA256SUMS",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/SHA256SUMS-final",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/acquire_vendor_archive.py",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/artifact-index-final.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/artifact-index.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/baseline.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/changed-files-final.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/changed-files.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/compare_authenticated_source.py",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/finalize_archive_evidence.py",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/finalize_archive_evidence_v2.py",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/preservation-audit-final.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/preservation-audit.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/archive-file-manifest.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/archive-to-commit-comparison.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/archive-to-commit-deterministic.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/disposable-keyring-cleanup.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-01-show-key.stderr.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-01-show-key.stdout.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-02-key-packets.stderr.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-02-key-packets.stdout.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-03-import-public-key.stderr.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-03-import-public-key.stdout.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-04-check-key-signatures.stderr.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-04-check-key-signatures.stdout.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-05-verify-vendor-archive.stderr.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-05-verify-vendor-archive.stdout.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/gpg-commands.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/key-structure-review.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/pinned-tree-object-verification.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/preflight.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/qualification-decision.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/retained-pinned-source-byte-comparison.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/signature-verification.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/tool-installation-record.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/vendor-acquisition.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/results/verifier-environment.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/comparison-pinned-commit.decoded.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/comparison-pinned-commit.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/comparison-pinned-commit.raw",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/comparison-pinned-tree.decoded.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/comparison-pinned-tree.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/comparison-pinned-tree.raw",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/gnupg-INSTALL_RECEIPT.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/gnupg-installed-formula.rb",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/owner-authorization.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/sqlcipher-4.20.0.zip",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/sqlcipher-4.20.0.zip.sig",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/support_zetetic_net_public_key.gpg",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/tool-install-approval.txt",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/vendor-detached-signature.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/vendor-public-key.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/vendor-source-zip.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/vendor-verification-page.html",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/vendor-verification-page.html.decoded",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/vendor-verification-page.json",
+    "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/verify_vendor_archive.py"
+  ],
+  "host_changes": "Explicitly approved Homebrew GnuPG and required tool dependencies; see results/tool-installation-record.json",
+  "hash_manifest": "SHA256SUMS-final covers all new evidence except itself; canonical file hashes are above",
+  "no_stage_commit_push_or_branch_change": true
+}

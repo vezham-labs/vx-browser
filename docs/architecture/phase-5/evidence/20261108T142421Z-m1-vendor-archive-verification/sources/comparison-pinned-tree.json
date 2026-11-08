@@ -1,0 +1,12 @@
+{
+  "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/trees/b3aa6f0a71413a40df4c968d357bbbbee61b42cb?recursive=1",
+  "time": "2026-11-08T14:32:41.128788+00:00",
+  "method": "GET",
+  "authentication": "none",
+  "TLS": "default certificate validation",
+  "status": 200,
+  "final_url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/trees/b3aa6f0a71413a40df4c968d357bbbbee61b42cb?recursive=1",
+  "content_encoding": null,
+  "raw_sha256": "db98d91f298273c650b183ad151f86d64dd76f10a69460b1d3ccc0036ca233bd",
+  "raw_bytes": 552169
+}

@@ -1,0 +1,8 @@
+gpg: Signature made Mon Oct 26 23:13:36 2026 IST
+gpg:                using RSA key A4EA79E649E745B92117A56F0CB99EE267FD0322
+gpg:                issuer "support@zetetic.net"
+gpg: Good signature from "Zetetic LLC <support@zetetic.net>" [unknown]
+gpg: WARNING: The key's User ID is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+      D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2
+      A4EA79E649E745B92117A56F0CB99EE267FD0322

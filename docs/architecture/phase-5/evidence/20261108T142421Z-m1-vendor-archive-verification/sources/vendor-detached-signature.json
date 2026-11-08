@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-08T14:27:39.479051+00:00",
+  "requested_url": "https://www.zetetic.net/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip.sig",
+  "method": "GET",
+  "TLS": "default certificate validation",
+  "authentication": "none",
+  "filename": "sqlcipher-4.20.0.zip.sig",
+  "maximum_bytes": 134217728,
+  "status": 200,
+  "final_url": "https://www.zetetic.net/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip.sig",
+  "content_encoding": null,
+  "content_type": "application/pgp-signature",
+  "etag": "\"c808b825462ed0a005e5f629ed753446\"",
+  "last_modified": "Tue, 27 Oct 2026 14:15:16 GMT",
+  "bytes": 459,
+  "sha256": "c5d13b33ff0bd57baa7cb92c2e835d8620add0f95940024dc72fdccbdd68854b",
+  "raw_artifact": "sources/sqlcipher-4.20.0.zip.sig",
+  "redirects": [],
+  "entity_artifact": "sources/sqlcipher-4.20.0.zip.sig",
+  "entity_sha256": "c5d13b33ff0bd57baa7cb92c2e835d8620add0f95940024dc72fdccbdd68854b",
+  "entity_bytes": 459
+}

@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-08T14:27:35.464754+00:00",
+  "requested_url": "https://www.zetetic.net/sqlcipher/verify/",
+  "method": "GET",
+  "TLS": "default certificate validation",
+  "authentication": "none",
+  "filename": "vendor-verification-page.html",
+  "maximum_bytes": 4194304,
+  "status": 200,
+  "final_url": "https://www.zetetic.net/sqlcipher/verify/",
+  "content_encoding": "gzip",
+  "content_type": "text/html; charset=utf-8",
+  "etag": "\"095cd8c413873eee1355d095348783ac\"",
+  "last_modified": "Tue, 27 Oct 2026 14:14:08 GMT",
+  "bytes": 3502,
+  "sha256": "824af4848d9329763d539accb06fe6479ccffa0beaed1e72ff1b25a9b16fbfb1",
+  "raw_artifact": "sources/vendor-verification-page.html",
+  "redirects": [],
+  "entity_artifact": "sources/vendor-verification-page.html.decoded",
+  "entity_sha256": "6cb923fe8283ec70c45d4f343fa95bea3019be31fc43fa511a0db35b4bc3cd32",
+  "entity_bytes": 11371
+}

@@ -1,0 +1,322 @@
+{
+  "verifiers_on_PATH": {
+    "gpg": null,
+    "gpgv": null,
+    "sq": null
+  },
+  "common_paths": {
+    "/opt/homebrew/bin/gpg": false,
+    "/opt/homebrew/bin/gpgv": false,
+    "/opt/homebrew/bin/sq": false,
+    "/usr/local/bin/gpg": false,
+    "/usr/local/bin/gpgv": false,
+    "/usr/local/bin/sq": false,
+    "/usr/local/MacGPG2/bin/gpg": false,
+    "/usr/local/MacGPG2/bin/gpg2": false,
+    "/usr/local/MacGPG2/bin/gpgv": false,
+    "/opt/local/bin/gpg": false,
+    "/opt/local/bin/gpgv": false,
+    "/opt/local/bin/sq": false
+  },
+  "homebrew_executable": "/opt/homebrew/bin/brew",
+  "installed_verifier_formula_directories": [],
+  "prior_manifest_checks": [
+    {
+      "path": "acquire_public_evidence.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "acquire_publisher_artifacts.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifact-index.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "baseline.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "changed-files.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "decode_public_evidence.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "finalize_authenticity_evidence.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "preservation-audit.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/acquisition-summary.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/decoded-body-records.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/decoded-publisher-links.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/followup-acquisitions.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/prior-evidence-and-tools.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/publisher-published-links.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/signature-verification-status.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/source-and-key-provenance.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/additional-discovery-search.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/archive-attestations.body.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/archive-attestations.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/archive-attestations.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/attestation-api-documentation.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/attestation-api-documentation.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/attestation-api-documentation.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/discovery-search.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/github-web-observations.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/official-page-discovery.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/owner-authorization.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/pinned-commit-followup.body",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/pinned-commit-followup.decoded",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/pinned-commit-followup.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/pinned-commit.body.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/pinned-commit.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/pinned-commit.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/publisher-gpg.asc",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/publisher-gpg.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/publisher-gpg.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/publisher-key-api.body.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/publisher-key-api.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/publisher-key-api.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/release-420-followup.body",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/release-420-followup.decoded",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/release-420-followup.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/release-420.body.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/release-420.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/release-420.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/tag-object.body.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/tag-object.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/tag-object.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/tag-reference.body.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/tag-reference.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/tag-reference.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-community.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-community.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-community.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-package-key.asc",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-package-key.decoded",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-package-key.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-release-420.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-release-420.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-release-420.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-security.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-security.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-security.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-source-420-detached-signature.decoded",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-source-420-detached-signature.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-source-420-detached-signature.sig",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-sqlcipher-documentation.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-sqlcipher-documentation.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-sqlcipher-documentation.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-verification-instructions.decoded.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-verification-instructions.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-verification-instructions.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "vendor-inquiry-draft.md",
+      "matches_recorded_sha256": true
+    }
+  ],
+  "all_prior_checks_match": true,
+  "tool_install_approval": "Pending; requested explicitly per owner instruction",
+  "software_installed": false,
+  "cryptographic_verification_executed": false,
+  "archive_extracted": false
+}

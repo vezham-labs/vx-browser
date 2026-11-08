@@ -1,0 +1,242 @@
+[
+  {
+    "path": "ext/jni/src/org/sqlite/jni/wrapper1",
+    "sha1": "5c8969f0bfce10c5c96208b458f2a659913b39a7"
+  },
+  {
+    "path": "ext/jni/src/org/sqlite/jni/fts5",
+    "sha1": "3c7ee289e792bebaf8307727741502a2f315720d"
+  },
+  {
+    "path": "ext/jni/src/org/sqlite/jni/capi",
+    "sha1": "5374b591f827c1ec9746afae0441c2dedf27644f"
+  },
+  {
+    "path": "ext/jni/src/org/sqlite/jni/annotation",
+    "sha1": "945ba7211b9b3b76b034dd5d5fc2e2306cf1f9dc"
+  },
+  {
+    "path": "ext/jni/src/org/sqlite/jni",
+    "sha1": "d715935202422dac176c17e6e0a9af0f2e379850"
+  },
+  {
+    "path": "ext/wasm/tests/opfs/sahpool",
+    "sha1": "5acd65d785a7744602a975af680a9421a2e054bd"
+  },
+  {
+    "path": "ext/wasm/tests/opfs/concurrency",
+    "sha1": "d797a396d57833bf8ae82b34b8c5626dbcb3e483"
+  },
+  {
+    "path": "ext/jni/src/org/sqlite",
+    "sha1": "1a7a237fb8efeddd821ceca1ba9ad0c923115f0a"
+  },
+  {
+    "path": "ext/wasm/tests/opfs",
+    "sha1": "a16050a1e2a88c581b8379350f72d5ea9967dcee"
+  },
+  {
+    "path": "ext/jni/src/tests",
+    "sha1": "f35b570915885b8b18523490002bb62a029dec9f"
+  },
+  {
+    "path": "ext/jni/src/org",
+    "sha1": "31488675a5b5094d8a893a128c31740694344e1b"
+  },
+  {
+    "path": "ext/jni/src/c",
+    "sha1": "f2302fa5fafcb8e3c6537320c499a494041503c6"
+  },
+  {
+    "path": "ext/wasm/tests",
+    "sha1": "3014fca752dc79abf4852ac10fd186b5c31506e7"
+  },
+  {
+    "path": "ext/wasm/sql",
+    "sha1": "fcef6fbb532768a06536258d871bc51b21beb5b6"
+  },
+  {
+    "path": "ext/wasm/jaccwabyt",
+    "sha1": "991784364ccda2ddbe232574a19f77f6081d30af"
+  },
+  {
+    "path": "ext/wasm/fiddle",
+    "sha1": "b2ddb54292a39d44639ee837d8f405595dd816a5"
+  },
+  {
+    "path": "ext/wasm/common",
+    "sha1": "d05b54909162a6d32dfed8d0f5109f90f3f2247b"
+  },
+  {
+    "path": "ext/wasm/api",
+    "sha1": "0982f13dac773f2749623905f1eb8d05601ca0c6"
+  },
+  {
+    "path": "ext/wasm/SQLTester",
+    "sha1": "430343fdb28b9153497b931defe5512eaac8d16a"
+  },
+  {
+    "path": "ext/vec1/tool",
+    "sha1": "386c0a5e7151aba49d0f31364ead6b802487f743"
+  },
+  {
+    "path": "ext/vec1/test",
+    "sha1": "dc32cc5089d9e9d60e5f8286bd80893f56bf53b5"
+  },
+  {
+    "path": "ext/rtree/util",
+    "sha1": "697fa9697151b367948aed0cc3d757b2d13c4a88"
+  },
+  {
+    "path": "ext/jni/src",
+    "sha1": "3e283a2ee2b92bbd8813b1cf8d49c69ad6f2d71d"
+  },
+  {
+    "path": "ext/fts5/tool",
+    "sha1": "954dea230bcfd1992ddbcd8aa96063f007441c6c"
+  },
+  {
+    "path": "ext/fts5/test",
+    "sha1": "5134c47da8cf81505145c04b3fa80d43101372da"
+  },
+  {
+    "path": "ext/fts3/unicode",
+    "sha1": "4b6796e83bdc569a84d2695553090ab2d24e174e"
+  },
+  {
+    "path": "ext/fts3/tool",
+    "sha1": "2b211c657eb29fff8762718048b0030951588461"
+  },
+  {
+    "path": "tool/win",
+    "sha1": "975041b14d4223a720b69eba71846452c1f19853"
+  },
+  {
+    "path": "test/json",
+    "sha1": "0524267bfecb0a2fcba844cd46ada8b2a7181ba8"
+  },
+  {
+    "path": "test/c",
+    "sha1": "5aeae49bf1c0965438742e15c6caa5e6cc52e52f"
+  },
+  {
+    "path": "ext/wasm",
+    "sha1": "105fcd8166300abee04702853f8f4e1301f3e912"
+  },
+  {
+    "path": "ext/vec1",
+    "sha1": "d8326ab32ed2802efa36ea131e38c5f88b5916ef"
+  },
+  {
+    "path": "ext/session",
+    "sha1": "4004fc59923041a6e625b7e3ea8af2e1666fa53f"
+  },
+  {
+    "path": "ext/rtree",
+    "sha1": "5c1367570373420b56328d767c480a840c0663c6"
+  },
+  {
+    "path": "ext/recover",
+    "sha1": "f4b240a49ae616fdd80e92d619e41a6979187cfe"
+  },
+  {
+    "path": "ext/rbu",
+    "sha1": "5ee2be9c6429cc415359877c8a49c05f2f80396d"
+  },
+  {
+    "path": "ext/qrf",
+    "sha1": "7cf077bb042b623016461a33a339f3e947d3a281"
+  },
+  {
+    "path": "ext/misc",
+    "sha1": "91d4ddeae5d7f05235921108e7e172718d0bbab0"
+  },
+  {
+    "path": "ext/jni",
+    "sha1": "fafa6db07963f0aba69d28384763927c9a481300"
+  },
+  {
+    "path": "ext/intck",
+    "sha1": "720383998d8941b994d2ca505eb29dd715e83c26"
+  },
+  {
+    "path": "ext/icu",
+    "sha1": "2fbbcab19cb050d26c3d8012cd9a76db76927717"
+  },
+  {
+    "path": "ext/fts5",
+    "sha1": "a59d5d441baac50130d2c991c6cb564ca675cf93"
+  },
+  {
+    "path": "ext/fts3",
+    "sha1": "cf0f9b4390f35f45becf77db8bc4d490abf56114"
+  },
+  {
+    "path": "ext/expert",
+    "sha1": "b86663ec241f51daf04011fde79ef1461bff3aaf"
+  },
+  {
+    "path": "autosetup/teaish",
+    "sha1": "28627004bba03f40c478d59a89012e7e75fd997e"
+  },
+  {
+    "path": "autoconf/tea",
+    "sha1": "87bdffe5a5ae7bf200f47ccacb5c258d27a46daf"
+  },
+  {
+    "path": "tool",
+    "sha1": "f535fb2e2f6878cce4c124efe8908a8c08bb5ba9"
+  },
+  {
+    "path": "test",
+    "sha1": "1891471fab6d1a881531fc3d11211f24bf7c166d"
+  },
+  {
+    "path": "src",
+    "sha1": "ec964c967bd7a7aacad1b58645ebc32a2902179d"
+  },
+  {
+    "path": "sqlcipher-resources",
+    "sha1": "9f22f954e03f86718b2ce647b75c56ea25357ccc"
+  },
+  {
+    "path": "mptest",
+    "sha1": "3710dd87c6e06dfeb0d2ccd7ba2caf1fdc563d59"
+  },
+  {
+    "path": "macosx",
+    "sha1": "33175ab16bd4b083c96d2193f9b3cedd7135cd84"
+  },
+  {
+    "path": "ext",
+    "sha1": "9a58d32016006f30bb0c1bb3156fd64d93fb1e12"
+  },
+  {
+    "path": "doc",
+    "sha1": "8fd597e13ddc54caa9e90b772fe579107d499897"
+  },
+  {
+    "path": "contrib",
+    "sha1": "5047ca3d85f9637d704e6589f1dcf726411f4642"
+  },
+  {
+    "path": "autosetup",
+    "sha1": "b9a59ef698837718fcb85066414aed222c774175"
+  },
+  {
+    "path": "autoconf",
+    "sha1": "1cf2cd57603b3d549e180d98fc282a8a3b4d66cc"
+  },
+  {
+    "path": "art",
+    "sha1": "ce748b7e64a96e0b62c19bf21d8bd27184320cfc"
+  },
+  {
+    "path": ".github",
+    "sha1": "d3ddfc053144ccdecf7fca69d639c523c954a3e6"
+  },
+  {
+    "path": "",
+    "sha1": "b3aa6f0a71413a40df4c968d357bbbbee61b42cb"
+  }
+]

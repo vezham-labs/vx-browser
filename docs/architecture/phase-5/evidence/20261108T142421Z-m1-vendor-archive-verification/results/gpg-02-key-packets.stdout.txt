@@ -1,0 +1,362 @@
+# off=0 ctb=99 tag=6 hlen=3 plen=525
+:public key packet:
+	version 4, algo 1, created 1398192947, expires 0
+	pkey[0]: [4096 bits]
+	pkey[1]: [17 bits]
+	keyid: D1FA3A2A97ED25C2
+# off=528 ctb=b4 tag=13 hlen=2 plen=33
+:user ID packet: "Zetetic LLC <support@zetetic.net>"
+# off=563 ctb=89 tag=2 hlen=3 plen=540
+:signature packet: algo 1, keyid 7CA502E93DB91BD9
+	version 4, created 1398265390, md5len 0, sigclass 0x10
+	digest algo 10, begin of digest ca 25
+	hashed subpkt 2 len 4 (sig created 2014-04-23)
+	subpkt 16 len 8 (issuer key ID 7CA502E93DB91BD9)
+	data: [4093 bits]
+# off=1106 ctb=89 tag=2 hlen=3 plen=540
+:signature packet: algo 1, keyid 2F87304808D40CEC
+	version 4, created 1398202579, md5len 0, sigclass 0x13
+	digest algo 2, begin of digest 80 34
+	hashed subpkt 2 len 4 (sig created 2014-04-22)
+	subpkt 16 len 8 (issuer key ID 2F87304808D40CEC)
+	data: [4096 bits]
+# off=1649 ctb=89 tag=2 hlen=3 plen=540
+:signature packet: algo 1, keyid 6BDF18EB9D6B3CE7
+	version 4, created 1398284461, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 5c 7c
+	hashed subpkt 2 len 4 (sig created 2014-04-23)
+	subpkt 16 len 8 (issuer key ID 6BDF18EB9D6B3CE7)
+	data: [4095 bits]
+# off=2192 ctb=89 tag=2 hlen=3 plen=573
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1398192947, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 47 f3
+	hashed subpkt 2 len 4 (sig created 2014-04-22)
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 9 len 4 (key expires after 3y0d0h0m)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
+# off=2768 ctb=89 tag=2 hlen=3 plen=596
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1587400018, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest b8 75
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2020-04-20)
+	hashed subpkt 9 len 4 (key expires after 6y364d21h31m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4092 bits]
+# off=3367 ctb=89 tag=2 hlen=3 plen=596
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1555603583, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 77 58
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2019-04-18)
+	hashed subpkt 9 len 4 (key expires after 5y361d21h10m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4093 bits]
+# off=3966 ctb=89 tag=2 hlen=3 plen=573
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1524120388, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 86 de
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 2 len 4 (sig created 2018-04-19)
+	hashed subpkt 9 len 4 (key expires after 4y362d11h50m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4093 bits]
+# off=4542 ctb=89 tag=2 hlen=3 plen=573
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1492693659, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 2d 86
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 2 len 4 (sig created 2017-04-20)
+	hashed subpkt 9 len 4 (key expires after 3y363d18h11m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4095 bits]
+# off=5118 ctb=89 tag=2 hlen=3 plen=596
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1621173818, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest cc 44
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2021-05-16)
+	hashed subpkt 9 len 4 (key expires after 8y25d19h7m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4093 bits]
+# off=5717 ctb=89 tag=2 hlen=3 plen=596
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1655029116, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 3b 0e
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2022-06-12)
+	hashed subpkt 9 len 4 (key expires after 10y52d15h22m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4095 bits]
+# off=6316 ctb=89 tag=2 hlen=3 plen=596
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1720780651, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 40 9e
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2024-07-12)
+	hashed subpkt 9 len 4 (key expires after 11y83d15h41m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4095 bits]
+# off=6915 ctb=89 tag=2 hlen=3 plen=596
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1754171872, md5len 0, sigclass 0x13
+	digest algo 10, begin of digest 23 01
+	hashed subpkt 27 len 1 (key flags: 01)
+	hashed subpkt 11 len 4 (pref-sym-algos: 9 8 7 3)
+	hashed subpkt 21 len 4 (pref-hash-algos: 10 9 8 11)
+	hashed subpkt 22 len 4 (pref-zip-algos: 2 3 1 0)
+	hashed subpkt 30 len 1 (features: 01)
+	hashed subpkt 23 len 1 (keyserver preferences: 80)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2025-08-02)
+	hashed subpkt 9 len 4 (key expires after 13y105d3h2m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
+# off=7514 ctb=b9 tag=14 hlen=3 plen=397
+:public sub key packet:
+	version 4, algo 1, created 1398193199, expires 0
+	pkey[0]: [3072 bits]
+	pkey[1]: [17 bits]
+	keyid: 0CB99EE267FD0322
+# off=7914 ctb=89 tag=2 hlen=3 plen=964
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1429288871, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest 4c e3
+	hashed subpkt 27 len 1 (key flags: 02)
+	hashed subpkt 2 len 4 (sig created 2015-04-17)
+	hashed subpkt 9 len 4 (key expires after 1y359d21h41m)
+	subpkt 32 len 412 (signature: v4, class 0x19, algo 1, digest algo 10)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4094 bits]
+# off=8881 ctb=89 tag=2 hlen=3 plen=987
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1587400054, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest 9c 6f
+	hashed subpkt 27 len 1 (key flags: 02)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2020-04-20)
+	hashed subpkt 9 len 4 (key expires after 6y364d21h27m)
+	subpkt 32 len 412 (signature: v4, class 0x19, algo 1, digest algo 10)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4093 bits]
+# off=9871 ctb=89 tag=2 hlen=3 plen=987
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1621173848, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest 61 d4
+	hashed subpkt 27 len 1 (key flags: 02)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2021-05-16)
+	hashed subpkt 9 len 4 (key expires after 8y25d19h4m)
+	subpkt 32 len 412 (signature: v4, class 0x19, algo 1, digest algo 10)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4093 bits]
+# off=10861 ctb=89 tag=2 hlen=3 plen=987
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1655029148, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest 34 37
+	hashed subpkt 27 len 1 (key flags: 02)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2022-06-12)
+	hashed subpkt 9 len 4 (key expires after 10y52d15h19m)
+	subpkt 32 len 412 (signature: v4, class 0x19, algo 1, digest algo 10)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4095 bits]
+# off=11851 ctb=89 tag=2 hlen=3 plen=987
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1720780681, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest c0 16
+	hashed subpkt 27 len 1 (key flags: 02)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2024-07-12)
+	hashed subpkt 9 len 4 (key expires after 11y83d15h38m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	subpkt 32 len 412 (signature: v4, class 0x19, algo 1, digest algo 10)
+	data: [4093 bits]
+# off=12841 ctb=89 tag=2 hlen=3 plen=987
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1754171885, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest c1 f2
+	hashed subpkt 27 len 1 (key flags: 02)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2025-08-02)
+	hashed subpkt 9 len 4 (key expires after 13y105d2h58m)
+	subpkt 32 len 412 (signature: v4, class 0x19, algo 1, digest algo 10)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4095 bits]
+# off=13831 ctb=b9 tag=14 hlen=3 plen=397
+:public sub key packet:
+	version 4, algo 1, created 1398193315, expires 0
+	pkey[0]: [3072 bits]
+	pkey[1]: [17 bits]
+	keyid: 3A7D809DD4DFEDA7
+# off=14231 ctb=89 tag=2 hlen=3 plen=549
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1429289042, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest f4 92
+	hashed subpkt 27 len 1 (key flags: 0C)
+	hashed subpkt 2 len 4 (sig created 2015-04-17)
+	hashed subpkt 9 len 4 (key expires after 1y359d21h42m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4094 bits]
+# off=14783 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1587400064, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest e3 df
+	hashed subpkt 27 len 1 (key flags: 0C)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2020-04-20)
+	hashed subpkt 9 len 4 (key expires after 6y364d21h25m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
+# off=15358 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1621173848, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest f1 f7
+	hashed subpkt 27 len 1 (key flags: 0C)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2021-05-16)
+	hashed subpkt 9 len 4 (key expires after 8y25d19h2m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
+# off=15933 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1655029160, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest be 2f
+	hashed subpkt 27 len 1 (key flags: 0C)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2022-06-12)
+	hashed subpkt 9 len 4 (key expires after 10y52d15h17m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
+# off=16508 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1720780691, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest bf 44
+	hashed subpkt 27 len 1 (key flags: 0C)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2024-07-12)
+	hashed subpkt 9 len 4 (key expires after 11y83d15h36m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4094 bits]
+# off=17083 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1754171913, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest eb b4
+	hashed subpkt 27 len 1 (key flags: 0C)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2025-08-02)
+	hashed subpkt 9 len 4 (key expires after 13y105d2h56m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
+# off=17658 ctb=b9 tag=14 hlen=3 plen=397
+:public sub key packet:
+	version 4, algo 1, created 1398193339, expires 0
+	pkey[0]: [3072 bits]
+	pkey[1]: [17 bits]
+	keyid: 62AE2C1CB1C49DF6
+# off=18058 ctb=89 tag=2 hlen=3 plen=549
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1429289053, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest a9 05
+	hashed subpkt 27 len 1 (key flags: 20)
+	hashed subpkt 2 len 4 (sig created 2015-04-17)
+	hashed subpkt 9 len 4 (key expires after 1y359d21h41m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4095 bits]
+# off=18610 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1587400079, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest 16 69
+	hashed subpkt 27 len 1 (key flags: 20)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2020-04-20)
+	hashed subpkt 9 len 4 (key expires after 6y364d21h25m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4094 bits]
+# off=19185 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1621173848, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest 74 0c
+	hashed subpkt 27 len 1 (key flags: 20)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2021-05-16)
+	hashed subpkt 9 len 4 (key expires after 8y25d19h1m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
+# off=19760 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1655029170, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest d2 07
+	hashed subpkt 27 len 1 (key flags: 20)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2022-06-12)
+	hashed subpkt 9 len 4 (key expires after 10y52d15h17m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4095 bits]
+# off=20335 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1720780699, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest 15 4f
+	hashed subpkt 27 len 1 (key flags: 20)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2024-07-12)
+	hashed subpkt 9 len 4 (key expires after 11y83d15h36m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4094 bits]
+# off=20910 ctb=89 tag=2 hlen=3 plen=572
+:signature packet: algo 1, keyid D1FA3A2A97ED25C2
+	version 4, created 1754171929, md5len 0, sigclass 0x18
+	digest algo 10, begin of digest d8 40
+	hashed subpkt 27 len 1 (key flags: 20)
+	hashed subpkt 33 len 21 (issuer fpr v4 D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2)
+	hashed subpkt 2 len 4 (sig created 2025-08-02)
+	hashed subpkt 9 len 4 (key expires after 13y105d2h56m)
+	subpkt 16 len 8 (issuer key ID D1FA3A2A97ED25C2)
+	data: [4096 bits]
