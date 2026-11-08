@@ -418,3 +418,7 @@ The task executed document/source inspection and hash/preservation checks. Worke
 [Design evidence](../../evidence/20261108T160235Z-m1-sqlcipher-worker-design/) · [Design crosswalk](../../evidence/20261108T160235Z-m1-sqlcipher-worker-design/design-crosswalk.json) · [Proposed link plan](../../evidence/20261108T160235Z-m1-sqlcipher-worker-design/link-plan.json) · [Change inventory](../../evidence/20261108T160235Z-m1-sqlcipher-worker-design/changed-files.json) · [Preservation audit](../../evidence/20261108T160235Z-m1-sqlcipher-worker-design/preservation-audit.json)
 
 **DESIGN READY FOR OWNER REVIEW**
+
+## Isolated SQLCipher worker implementation · Phase 1 — 2026-11-08
+
+The native qualification supervisor and fake-provider worker pass 119 conformance assertions. The separately built image has verified static linkage to the pinned SQLCipher archive through its linker map, symbols and binary identity. Phase 1 preserves the zero database/runtime and zero PQR execution boundary. The new control layout, lifecycle coverage, scope quarantine and Nx launcher limitation are recorded in the [Phase 1 implementation report](m1-sqlcipher-worker-phase1-implementation.md).

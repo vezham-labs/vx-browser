@@ -1,0 +1,1722 @@
+close-timeout
+close-failure
+normal
+0123456789abcdef
+VXW1
+VXK1
+thstndrd
+0123456789ABCDEF0123456789abcdef
+null
+-Inf
+btn?fr
+NULL
+(NULL)
+(join-%u)
+%u-ROW VALUES CLAUSE
+(subquery-%u)
+unix
+unix-none
+unix-dotfile
+unix-excl
+unix-posix
+unix-flock
+unix-afp
+unix-nfs
+unix-proxy
+PRAGMA "%w".page_count
+BEGIN IMMEDIATE; COMMIT;
+ATTACH x AS %Q
+backup is not supported with encrypted databases
+source and destination must be distinct
+string or blob too big
+bind on a busy prepared statement: [%s]
+cannot open virtual table: %s
+cannot open table without rowid: %s
+cannot open table with generated columns: %s
+cannot open view: %s
+no such column: "%s"
+foreign key
+indexed
+cannot open %s column for writing
+%s: failed to allocate static mutex %d
+sqlcipher_extra_init
+%s: failed to allocate private heap
+%s: failed to allocate provider
+%s: failed to register provider %p %d
+%s: failed to initilize provider context %d
+%s: failed to generate xoshiro seed %d
+%s: failed to allocate shield mask
+%s: failed to generate requisite random mask data %d
+%s: SQLCipher private heap stats: size=%u, hwm=%u, alloc=%u, allocs=%u, overflow=%u, overflows=%u
+sqlcipher_extra_shutdown
+sqlcipher_memset: setting %p[0-%u]=%d)
+%s: entering SQLCIPHER_MUTEX_MEM
+sqlcipher_malloc
+%s: entered SQLCIPHER_MUTEX_MEM
+%s: unable to allocate %u bytes on private heap, allocated %p using sqlcipher_internal_malloc fallback
+%s allocated %llu bytes (%zu used) on private heap at %p
+%s: leaving SQLCIPHER_MUTEX_MEM
+%s: left SQLCIPHER_MUTEX_MEM
+sqlcipher_free
+%s: unable to find %p with %u bytes on private heap, calling sqlcipher_internal_free fallback
+%s freed %u bytes (%u total) on private heap at %p
+%s: entering SQLCIPHER_MUTEX_PROVIDER
+sqlcipher_register_provider
+%s: entered SQLCIPHER_MUTEX_PROVIDER
+%s: leaving SQLCIPHER_MUTEX_PROVIDER
+%s: left SQLCIPHER_MUTEX_PROVIDER
+%s %s
+4.20.0
+community
+%s %s 
+%Y-%m-%d %H:%M:%S
+%s.%03d: %s
+rekey
+sqlcipher_codec_pragma: db=%p iDb=%d pParse=%p zLeft=%s zRight=%s ctx=%p
+cipher_fips_status
+cipher_status
+cipher_store_pass
+PRAGMA cipher_store_pass is deprecated, please remove from use
+cipher_profile
+cipher_add_random
+cipher_migrate
+sqlcipher_codec_pragma: error occurred during cipher_migrate: %d
+cipher_provider
+cipher_provider_version
+cipher_version
+cipher
+PRAGMA cipher is no longer supported.
+rekey_cipher
+PRAGMA rekey_cipher is no longer supported.
+cipher_default_kdf_iter
+kdf_iter
+fast_kdf_iter
+PRAGMA fast_kdf_iter is deprecated, please remove from use
+rekey_kdf_iter
+PRAGMA rekey_kdf_iter is no longer supported.
+page_size
+cipher_page_size
+cipher_default_page_size
+cipher_default_use_hmac
+cipher_use_hmac
+cipher_hmac_pgno
+PRAGMA cipher_hmac_pgno is deprecated, please remove from use
+native
+cipher_hmac_salt_mask
+PRAGMA cipher_hmac_salt_mask is deprecated, please remove from use
+%02x
+cipher_plaintext_header_size
+cipher_default_plaintext_header_size
+cipher_salt
+cipher_hmac_algorithm
+HMAC_SHA1
+HMAC_SHA256
+HMAC_SHA512
+cipher_default_hmac_algorithm
+cipher_kdf_algorithm
+PBKDF2_HMAC_SHA1
+PBKDF2_HMAC_SHA256
+PBKDF2_HMAC_SHA512
+cipher_default_kdf_algorithm
+cipher_compatibility
+cipher_default_compatibility
+cipher_memory_security
+sqlcipher_set_mem_security: on
+sqlcipher_get_mem_security: sqlcipher_mem_security_on = %d, sqlcipher_mem_executed = %d
+cipher_settings
+PRAGMA kdf_iter = %d;
+pragma
+PRAGMA cipher_page_size = %d;
+PRAGMA cipher_use_hmac = %d;
+PRAGMA cipher_plaintext_header_size = %d;
+PRAGMA cipher_hmac_algorithm = %s;
+PRAGMA cipher_kdf_algorithm = %s;
+cipher_default_settings
+PRAGMA cipher_default_kdf_iter = %d;
+PRAGMA cipher_default_page_size = %d;
+PRAGMA cipher_default_use_hmac = %d;
+PRAGMA cipher_default_plaintext_header_size = %d;
+PRAGMA cipher_default_hmac_algorithm = %s;
+PRAGMA cipher_default_kdf_algorithm = %s;
+cipher_integrity_check
+cipher_log_level
+ERROR
+WARN
+INFO
+DEBUG
+TRACE
+cipher_log_source
+NONE
+CORE
+MEMORY
+MUTEX
+PROVIDER
+cipher_log
+%s: db=%p, nDb=%d
+sqlcipherCodecAttach
+%s: sqlcipher not initialized %d
+%s: no key
+%s: invalid database %p %d
+%s: entering database mutex %p
+%s: entered database mutex %p
+%s: entering mutex %p
+%s: entered mutex %p
+%s: disregarding attempt to set key on an previously keyed database connection handle
+%s: disregarding attempt to set key on an shared cache handle
+%s: resetting existing codec on pager
+%s: context initialization failed, forcing error state with rc=%d inTransaction=%d
+%s: calling sqlcipherPagerSetCodec()
+%s: calling sqlite3BtreeSecureDelete()
+%s: calling sqlite3BtreeSetAutoVacuum()
+%s: leaving mutex %p
+%s: left mutex %p
+%s: leaving database mutex %p
+%s: left database mutex %p
+%s: db=%p
+sqlite3_key
+main
+%s: db=%p zDb=%s db_index=%d
+sqlite3_key_v2
+sqlite3_rekey: db=%p
+sqlite3_rekey_v2: db=%p zDb=%s
+sqlite3_rekey_v2
+%s: invalid database zDb=%p
+sqlite3_rekey_v2: database zDb=%p db_index:%d
+sqlite3_rekey_v2: no codec attached to db %s: rekey can't be used on an unencrypted database
+%s: failed to begin write transaction %d
+sqlite3_rekey_v2: error %d occurred writing page %d
+sqlite3_rekey_v2: error %d occurred reading page %d
+sqlite3_rekey_v2: committing
+sqlite3_rekey_v2: rollback
+sqlite3_rekey_v2: no key provided for db %s: rekey can't be used to decrypt an encrypted database
+sqlcipherCodecGetKey:db=%p, nDb=%d
+syntax error
+create
+trigger
+temp
+temporary
+explain
+unknown database: %s
+INTEGER
+no such table column: %s.%s
+SQLITE_
+2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6alt1
+afpfs
+smbfs
+webdav
+cannot fstat db file %s
+file unlinked while open: %s
+multiple links to file: %s
+file renamed while open: %s
+close
+os_unix.c:%d: (%d) %s(%s) - %s
+ftruncate
+full_fsync
+%s/etilqs_%llx%c
+SQLITE_TMPDIR
+TMPDIR
+/var/tmp
+/usr/tmp
+/tmp
+mmap
+:auto: (not held)
+:auto:
+break
+path error (len %d)
+read error (len %d)
+create failed (%d)
+write failed (%d)
+rename failed (%d)
+broke stale lock on %s
+failed to break stale lock on %s, %s
+sqliteplocks
+attempt to open "%s" as file descriptor %d
+/dev/null
+cannot open file
+%s at line %d of [%.10s]
+dummy
+psow
+%s.lock
+-conch
+write
+%s-shm
+readonly_shm
+open
+access
+getcwd
+stat
+fstat
+fcntl
+read
+pread
+pread64
+pwrite
+pwrite64
+fchmod
+fallocate
+unlink
+openDirectory
+mkdir
+rmdir
+fchown
+geteuid
+munmap
+mremap
+getpagesize
+readlink
+lstat
+ioctl
+msdos
+exfat
+SQLITE_FORCE_PROXY_LOCKING
+modeof
+fsync
+/dev/urandom
+memdb(%p,%lld)
+database corruption
+recovered %d pages from %s
+unknown database %s
+destination database is in use
+recovered %d frames from WAL file %s
+cannot limit WAL size: %s
+API called with finalized prepared statement
+FOREIGN KEY constraint failed
+%.4c%s%.16c
+MJ delete: %s
+MJ collide: %s
+-mj%06X9%02X
+%!.*g
+922337203685477580
+out of memory
+API called with NULL prepared statement
+k(%d
+,%s%s%s
+16LE
+16BE
+%.18s-%s
+%s(%d)
+%lld
+%.16g
+(blob)
+vtab:%p
+%c%u
+program
+subrtnsig:%d,%s
+Savepoint
+AutoCommit
+Transaction
+Checkpoint
+JournalMode
+Vacuum
+VFilter
+VUpdate
+Init
+Goto
+Gosub
+InitCoroutine
+Yield
+MustBeInt
+Jump
+Once
+IfNot
+IsType
+IfNullRow
+SeekLT
+SeekLE
+SeekGE
+SeekGT
+IfNoHope
+NoConflict
+NotFound
+Found
+SeekRowid
+NotExists
+Last
+IfSizeBetween
+SorterSort
+Sort
+Rewind
+IfEmpty
+SorterNext
+Prev
+Next
+IdxLE
+IdxGT
+IdxLT
+IdxGE
+IFindKey
+RowSetRead
+RowSetTest
+Program
+FkIfZero
+IsNull
+NotNull
+ElseEq
+IfPos
+IfNotZero
+DecrJumpZero
+IncrVacuum
+VNext
+Filter
+PureFunc
+Function
+Return
+EndCoroutine
+HaltIfNull
+Halt
+Integer
+Int64
+String
+BeginSubrtn
+Null
+SoftNull
+Blob
+Variable
+Move
+Copy
+SCopy
+IntCopy
+FkCheck
+ResultRow
+CollSeq
+AddImm
+RealAffinity
+Cast
+Permutation
+Compare
+IsTrue
+ZeroOrNull
+Offset
+Column
+TypeCheck
+Affinity
+MakeRecord
+Count
+ReadCookie
+SetCookie
+ReopenIdx
+BitAnd
+BitOr
+ShiftLeft
+ShiftRight
+Subtract
+Multiply
+Divide
+Remainder
+Concat
+OpenRead
+OpenWrite
+BitNot
+OpenDup
+OpenAutoindex
+String8
+OpenEphemeral
+SorterOpen
+SequenceTest
+OpenPseudo
+Close
+ColumnsUsed
+SeekScan
+SeekHit
+Sequence
+NewRowid
+Insert
+RowCell
+Delete
+ResetCount
+SorterCompare
+SorterData
+RowData
+Rowid
+NullRow
+SeekEnd
+IdxInsert
+SorterInsert
+IdxDelete
+DeferredSeek
+IdxRowid
+FinishSeek
+Destroy
+Clear
+ResetSorter
+CreateBtree
+SqlExec
+ParseSchema
+LoadAnalysis
+DropTable
+DropIndex
+Real
+DropTrigger
+IntegrityCk
+RowSetAdd
+Param
+FkCounter
+MemMax
+OffsetLimit
+AggInverse
+AggStep
+AggStep1
+AggValue
+AggFinal
+Expire
+CursorLock
+CursorUnlock
+TableLock
+VBegin
+VCreate
+VDestroy
+VOpen
+VCheck
+VInitIn
+VColumn
+VRename
+Pagecount
+MaxPgcnt
+ClrSubtype
+GetSubtype
+SetSubtype
+FilterAdd
+Trace
+CursorHint
+ReleaseReg
+Noop
+Explain
+Abortable
+NOT NULL
+UNIQUE
+CHECK
+FOREIGN KEY
+%s constraint failed
+%z: %s
+cannot store %s value in %s column %s.%s
+cannot open savepoint - SQL statements in progress
+no such savepoint: %s
+cannot release savepoint - SQL statements in progress
+cannot commit transaction - SQL statements in progress
+cannot start a transaction within a transaction
+cannot rollback - no transaction is active
+cannot commit - no transaction is active
+database schema has changed
+index corruption
+sqlite_master
+SELECT*FROM"%w".%s WHERE %s ORDER BY rowid
+triggers nested too deep
+cannot change %s wal mode from within a transaction
+into
+out of
+database table is locked: %s
+ValueList
+-- %s
+/* %s */ 
+/* unknown trigger */ 
+statement aborts at %d: %s; [%s%s]
+REAL
+TEXT
+BLOB
+:memory:
+immutable
+nolock
+table
+sqlite_temp_master
+CREATE TABLE x(type text,name text,tbl_name text,rootpage int,sql text)
+attached databases must use the same text encoding as main database
+unsupported file format
+SELECT*FROM"%w".%s ORDER BY rowid
+invalid rootpage
+orphan index
+too many schema objects
+rename
+drop column
+add column
+drop constraint
+error in %s %s after %s: %s
+malformed database schema (%s)
+%z - %s
+database schema is locked: %s
+statement too long
+sqlite_stat1
+SELECT tbl,idx,stat FROM %Q.sqlite_stat1
+unordered*
+sz=[0-9]*
+noskipscan*
+Freelist: 
+max rootpage (%u) disagrees with header (%u)
+incremental_vacuum enabled with a max rootpage of zero
+Page %u: never used
+Page %u: pointer map referenced
+failed to get page %u
+freelist leaf count too big on page %u
+%s is %u but should be %u
+size
+overflow list length
+invalid page number %u
+2nd reference to page %u
+Failed to read ptrmap key=%u
+Bad ptr map entry key=%u expected=(%u,%u) got=(%u,%u)
+Tree %u page %u: 
+unable to get the page. error code=%d
+btree depth exceeds %d
+btreeInitPage() returns error code %d
+free space corruption
+Tree %u page %u cell %u: 
+Tree %u page %u right child: 
+Offset %u out of range %u..%u
+Extends off end of page
+Bad cell header size
+Rowid %lld out of order
+Child page depth differs
+Multiple uses for byte %u of page %u
+Fragmentation of %u bytes reported as %u on page %u
+memdb
+delete
+persist
+truncate
+memory
+cannot VACUUM from within a transaction
+cannot VACUUM - SQL statements in progress
+non-text filename
+vacuum_%016llx
+ATTACH %Q AS %s
+output file already exists
+reserve
+BEGIN
+SELECT sql FROM "%w".sqlite_schema WHERE type='table'AND name<>'sqlite_sequence' AND coalesce(rootpage,1)>0
+SELECT sql FROM "%w".sqlite_schema WHERE type='index'
+SELECT'INSERT INTO %s.'||quote(name)||' SELECT*FROM"%w".'||quote(name)FROM %s.sqlite_schema WHERE type='table'AND coalesce(rootpage,1)>0
+INSERT INTO %s.sqlite_schema SELECT*FROM "%w".sqlite_schema WHERE type IN('view','trigger') OR(type='table'AND rootpage=0)
+no such module: %s
+vtable constructor called recursively: %s
+vtable constructor failed: %s
+vtable constructor did not declare schema: %s
+hidden
+addr
+opcode
+comment
+parent
+notused
+detail
+%!.15g
+'%.*q'
+zeroblob(%d)
+cannot open value of type %s
+real
+integer
+no such rowid: %lld
+%s: calling sqlcipher_extra_shutdown()
+sqlcipher_fini
+sqlcipher_atexit
+sqlcipher_export
+invalid number of arguments (%d) passed to sqlcipher_export
+target database can't be NULL
+source database can't be NULL
+invalid source database %s
+invalid target database %s
+SELECT sql   FROM "%w".sqlite_schema WHERE type='table' AND name!='sqlite_sequence'   AND rootpage>0
+SELECT sql   FROM "%w".sqlite_schema WHERE sql LIKE 'CREATE INDEX %%' 
+SELECT sql   FROM "%w".sqlite_schema WHERE sql LIKE 'CREATE UNIQUE INDEX %%'
+SELECT 'INSERT INTO ' || quote(%Q) || '.' || quote(name) || ' SELECT * FROM ' || quote(%Q) || '.' || quote(name) || ';'FROM "%w".sqlite_schema WHERE type = 'table' AND name!='sqlite_sequence'   AND rootpage>0
+SELECT 'INSERT INTO ' || quote(%Q) || '.' || quote(name) || ' SELECT * FROM ' || quote(%Q) || '.' || quote(name) || ';' FROM "%w".sqlite_schema WHERE name=='sqlite_sequence';
+INSERT INTO "%w".sqlite_schema   SELECT type, name, tbl_name, rootpage, sql    FROM "%w".sqlite_schema   WHERE type='view' OR type='trigger'      OR (type='table' AND rootpage=0)
+sqlcipher_mem_malloc: calling sqlcipher_mlock(%p,%d)
+sqlcipher_mlock: calling mlock(%p,%lu); _SC_PAGESIZE=%lu
+sqlcipher_mlock: mlock(%p,%lu) returned %d errno=%d
+%s: calling xoshiro_randomness(%p,%d) and sqlcipher_munlock(%p, %d)
+sqlcipher_mem_free
+sqlcipher_munlock: calling munlock(%p,%lu)
+sqlcipher_munlock: munlock(%p,%lu) returned %d errno=%d
+stdout
+stderr
+logcat
+device
+Elapsed time:%.3f ms - %s
+sqlcipher_codec_add_random: using raw random blob from hex
+%s: failed to allocate buffer for random data
+sqlcipher_codec_add_random
+sqlcipher_codec_add_random: attemt to add random with invalid format
+%s: underived key material is not available. PRAGMA cipher_migrate MUST be run as the first operation after keying
+sqlcipher_codec_ctx_migrate
+%s: failed to allocate key material storage
+sqlcipher_codec_ctx_migrate: no upgrade required - exiting
+PRAGMA cipher_compatibility = %d;
+%s: failed to format pragma_compat
+sqlcipher_codec_ctx_migrate: version %d format found
+sqlcipher_codec_ctx_migrate: unable to determine format version for upgrade: this may indicate custom settings were used 
+%s-migrated
+%s: failed to format temp filename
+%s: failed to allocate migrated db filename
+ATTACH DATABASE %Q as migrate;
+%s: failed to allocate attach command
+PRAGMA migrate.user_version = %d;
+%s: failed to allocate user_version command
+sqlcipher_codec_ctx_migrate: set compatibility mode failed, error code %d
+PRAGMA journal_mode = delete;
+sqlcipher_codec_ctx_migrate: force journal mode DELETE failed, error code %d
+sqlcipher_codec_ctx_migrate: attach failed, error code %d
+migrate
+sqlcipher_codec_ctx_migrate: keying attached database failed, error code %d
+SELECT sqlcipher_export('migrate');
+sqlcipher_codec_ctx_migrate: sqlcipher_export failed, error code %d
+sqlcipher_codec_ctx_migrate: set user version failed, error code %d
+sqlcipher_codec_ctx_migrate: cannot migrate from within a transaction
+sqlcipher_codec_ctx_migrate: cannot migrate - SQL statements in progress
+sqlcipher_codec_ctx_migrate: failed to set btree page size to %d res %d rc %d
+%s: failed to retrieve keyspec from migrated database
+sqlcipher_codec_ctx_migrate: performing POSIX rename
+sqlcipher_codec_ctx_migrate: error occurred while renaming migration files %s to %s: %d
+sqlcipher_codec_ctx_migrate: renamed migration database %s to main database %s: %d
+sqlcipher_codec_ctx_migrate: failed to reopen migration database %s: %d
+sqlcipher_codec_ctx_migrate: failed to reopen main database %s: %d
+sqlcipher_codec_ctx_migrate: reset pager
+DETACH DATABASE migrate;
+sqlcipher_codec_ctx_migrate: DETACH DATABASE migrate failed: %d
+sqlcipher_codec_ctx_migrate: reset all schemas
+PRAGMA journal_mode = %s;
+sqlcipher_codec_ctx_migrate: failed to re-set journal mode via %s: %d
+sqlcipher_codec_ctx_migrate: failed to delete migration database %s: %d
+sqlcipher_codec_ctx_migrate: an error occurred attempting to migrate the database - last error %d
+PRAGMA journal_mode;
+PRAGMA user_version;
+cipher_page_size not a power of 2 and between 512 and 65536 inclusive
+%s: %d lock=%d
+sqlcipher_codec_ctx_set_error
+codec_set_btree_to_codec_pagesize: sqlite3BtreeSetPageSize() size=%d reserve=%d
+codec_set_btree_to_codec_pagesize: entering database mutex %p
+codec_set_btree_to_codec_pagesize: entered database mutex %p
+codec_set_btree_to_codec_pagesize: sqlite3BtreeSetPageSize returned %d
+codec_set_btree_to_codec_pagesize: leaving database mutex %p
+codec_set_btree_to_codec_pagesize: left database mutex %p
+sqlcipher_codec_ctx_reserve_setup: base_reserve=%d block_sz=%d md_size=%d reserve=%d
+%s: attempt to set invalid plantext_header_size %d
+sqlcipher_codec_ctx_set_plaintext_header_size
+sqlcipher_codec_ctx_set_kdf_salt: attempt to set salt of incorrect size %d
+sqlcipher_codec_ctx_get_kdf_salt: error %d from sqlcipher_codec_ctx_init_kdf_salt
+sqlcipher_codec_ctx_init_kdf_salt: obtaining salt
+sqlcipher_codec_ctx_init_kdf_salt: unable to read salt from file header, generating random
+sqlcipher_codec_ctx_init_kdf_salt: error retrieving random bytes from provider
+database file is undefined
+HMAC is not enabled, unable to integrity check
+unable to derive keys
+failed to determine file size
+unable to allocate memory for hmac
+invalid plaintext header size
+error reading %d bytes from file page %d at offset %lld
+error reading from file (OOM)
+HMAC operation failed for page %d
+HMAC operation failed (OOM)
+HMAC verification failed for page %d
+HMAC verification failed (OOM)
+page %d has an invalid size of %lld bytes (expected %d bytes)
+page has an invalid size (OOM)
+sqlcipher_codec_key_derive: error occurred deriving read_ctx key
+sqlcipher_codec_key_derive: error occurred copying read_ctx to write_ctx
+sqlcipher_codec_key_derive: error occurred deriving write_ctx key
+%s: ctx->kdf_salt_sz=%d ctx->kdf_iter=%d ctx->fast_kdf_iter=%d ctx->key_sz=%d
+sqlcipher_cipher_ctx_key_derive
+sqlcipher_cipher_ctx_key_derive: key material is not present on the context for key derivation
+%s: error %d from sqlcipher_codec_ctx_init_kdf_salt
+%s: using raw key only
+%s: using raw key and salt
+%s: using raw key, hmac key, and salt
+%s: deriving key using PBKDF2 with %d iterations
+%s: error %d occurred from provider kdf generating encryption key
+%s: deriving hmac key from encryption key using PBKDF2 with %d iterations
+%s: error %d occurred from provider kdf generating HMAC key
+sqlcipher_cipher_ctx_cmp: c1=%p c2=%p sqlcipher_memcmp(c1->pass, c2_pass)=%d are_equal=%d
+sqlcipher_cipher_ctx_copy: target=%p, source=%p
+sqlcipher_set_log: set log to %s
+codec_ctx_free: iCtx=%p
+cipher_ctx_free: iCtx=%p
+sqlcipher_codec_ctx_init: allocating context
+sqlcipher_codec_ctx_init: allocating kdf_salt
+%s: failed to allocate kdf salt
+sqlcipher_codec_ctx_init
+sqlcipher_codec_ctx_init: allocating hmac_kdf_salt
+%s: failed to allocate hmac kdf salt
+sqlcipher_codec_ctx_init: error %d returned from ctx_init
+sqlcipher_codec_ctx_init: error %d returned from sqlcipher_codec_ctx_set_pagesize with %d
+sqlcipher_codec_ctx_init: error %d setting sqlcipher_codec_ctx_set_plaintext_header_size with %d
+sqlcipher_codec_ctx_init: error %d initializing read_ctx
+sqlcipher_codec_ctx_init: error %d initializing write_ctx
+sqlcipher_codec_ctx_init: error %d setting pass key
+sqlcipher_codec_ctx_init: error %d copying write_ctx to read_ctx
+sqlcipher_cipher_ctx_init: allocating context
+sqlcipher_cipher_ctx_init: allocating key
+sqlcipher_cipher_ctx_init: allocating hmac_key
+sqlcipher_codec_ctx_set_pass: error %d from sqlcipher_cipher_ctx_set_pass
+sqlite3Codec
+sqlite3Codec: pgno=%d, mode=%d, ctx->page_sz=%d
+%s: identified deferred error condition: %d mode=%d
+sqlite3Codec: error occurred during key derivation: %d
+sqlite3Codec: error invalid ctx->plaintext_header_sz: %d
+sqlite3Codec: switch mode=%d offset=%d
+sqlite3Codec: error decrypting page %d data: %d
+%s: plaintext header size of %d indicates recovery mode, suppressing permanent error
+sqlite3Codec: error retrieving salt: %d
+sqlite3Codec: error encrypting page %d data: %d
+sqlite3Codec: error unsupported codec mode %d
+%s: skipping encryption/decryption for fully  plaintext header
+sqlcipher_page_cipher
+%s: pgno=%d, mode=%d, size=%d
+%s: error possible context corruption, key_sz is zero for pgno=%d
+%s: hmac operation on decrypt failed for pgno=%d
+%s: comparing hmac on in=%p out=%p hmac_sz=%d
+%s: zeroed page (short read) for pgno %d with autovacuum enabled
+%s: hmac check failed for pgno=%d
+%s: cipher operation mode=%d failed for pgno=%d
+%s: hmac operation on encrypt failed for pgno=%d
+sqlite3FreeCodecArg
+codec_set_pass_key: db=%p nDb=%d for_ctx=%d
+codec_set_pass_key: error ocurred fetching codec from pager on db %d
+codec_set_pass_key: no btree present on db %d
+commoncrypto
+aes-256-cbc
+com.apple.security
+com.apple.Security
+unknown
+pragma_
+json
+no such view
+no such table
+%s: %s.%s
+%s: %s
+analysis_limit
+application_id
+auto_vacuum
+automatic_index
+busy_timeout
+cache_size
+cache_spill
+case_sensitive_like
+cell_size_check
+checkpoint_fullfsync
+collation_list
+compile_options
+count_changes
+data_version
+database_list
+default_cache_size
+defer_foreign_keys
+empty_result_callbacks
+encoding
+foreign_key_check
+foreign_key_list
+foreign_keys
+freelist_count
+full_column_names
+fullfsync
+function_list
+hard_heap_limit
+hexkey
+hexrekey
+ignore_check_constraints
+incremental_vacuum
+index_info
+index_list
+index_xinfo
+integrity_check
+journal_mode
+journal_size_limit
+legacy_alter_table
+lock_proxy_file
+locking_mode
+max_page_count
+mmap_size
+module_list
+optimize
+page_count
+pragma_list
+query_only
+quick_check
+read_uncommitted
+recursive_triggers
+reverse_unordered_selects
+schema_version
+secure_delete
+short_column_names
+shrink_memory
+soft_heap_limit
+synchronous
+table_info
+table_list
+table_xinfo
+temp_store
+temp_store_directory
+textkey
+textrekey
+threads
+trusted_schema
+user_version
+wal_autocheckpoint
+wal_checkpoint
+writable_schema
+CREATE TABLE x
+%c"%s"
+("%s"
+,arg HIDDEN
+,schema HIDDEN
+from
+on_update
+on_delete
+match
+name
+type
+notnull
+dflt_value
+builtin
+narg
+flags
+schema
+ncol
+strict
+seqno
+desc
+coll
+unique
+origin
+partial
+wdth
+hght
+flgs
+rowid
+fkid
+busy
+checkpointed
+file
+database
+status
+timeout
+PRAGMA 
+json_each
+json_tree
+jsonb_each
+jsonb_tree
+CREATE TABLE x(key,value,type,atom,id,parent,fullkey,path,json HIDDEN,root HIDDEN)
+"\/bfnrt
+malformed JSON
+true
+false
+-9e999
+9e999
+inity
+9.0e999
+infinity
+QNaN
+SNaN
+not an array element: %Q
+JSON path too deep
+bad JSON path: %Q
+[%lld]
+."%.*s"
+.%.*s
+%llu
+\u000b
+\u00
+\u0000
+0123456789abcdef
+JSON nested too deep
+text
+array
+object
+too many columns on %s
+unable to open a temporary database file for storing temporary tables
+unopened
+API call with %s database connection pointer
+onoffalseyestruextrafull
+sqlite3_get_table() called with two or more incompatible queries
+no such collation sequence: %s
+%s%s
+unrecognized token: "%T"
+%s in "%s"
+Recursion limit
+unknown table option: %.*s
+set list
+the INDEXED BY clause is not allowed on UPDATE or DELETE statements within triggers
+the NOT INDEXED clause is not allowed on UPDATE or DELETE statements within triggers
+generated column loop on "%s"
+misuse of aggregate: %#T()
+unknown function: %#T()
+%d columns assigned %d values
+row value misused
+RAISE() may only be used within a trigger-program
+not authorized to use function: %#T
+not authorized
+authorizer malfunction
+hex literal too big: %s%#T
+blob
+numeric
+flexnum
+none
+unsafe use of %#T()
+sub-select returns %d columns - expected %d
+REUSE SUBQUERY %d
+%sSCALAR SUBQUERY %d
+CORRELATED 
+USING ROWID SEARCH ON TABLE %s FOR IN-OPERATOR
+USING INDEX %s FOR IN-OPERATOR
+REUSE LIST SUBQUERY %d
+%sLIST SUBQUERY %d
+ROLLBACK
+COMMIT
+RELEASE
+temporary table name must be unqualified
+view
+%s %T already exists
+there is already an index named %s
+corrupt database
+unknown database %T
+sqlite_
+object name reserved for internal use: %s
+unknown datatype for %s.%s: "%s"
+missing datatype for %s.%s
+AUTOINCREMENT not allowed on WITHOUT ROWID tables
+PRIMARY KEY missing on table %s
+must have at least one non-generated column
+TABLE
+VIEW
+CREATE %s %.*s
+UPDATE %Q.sqlite_master SET type='%s', name=%Q, tbl_name=%Q, rootpage=#%d, sql=%Q WHERE rowid=#%d
+CREATE TABLE %Q.sqlite_sequence(name,seq)
+tbl_name='%q' AND type!='trigger'
+SELECT*FROM"%w"."%w"
+sqlite_sequence
+the "." operator
+second argument to %#T() must be a constant between 0.0 and 1.0
+non-deterministic functions
+%#T() may not be used as a window function
+window
+aggregate
+misuse of %s function %#T()
+no such function: %#T
+wrong number of arguments to function %#T()
+FILTER may not be used with non-aggregate %#T()
+subqueries
+parameters
+partial index WHERE clauses
+index expressions
+CHECK constraints
+generated columns
+%s prohibited in %s
+excluded
+misuse of aliased aggregate %s
+misuse of aliased window function %s
+double-quoted string literal: "%w"
+coalesce
+no such column
+ambiguous column name
+%s: %s.%s.%s
+%s: "%s" - should this be a string literal in single-quotes?
+sqlite_temp_schema
+sqlite_schema
+ROWID
+%s.%s
+%s.%z
+access to %z is prohibited
+ORDER BY may not be used with non-aggregate %#T()
+RANGE with offset PRECEDING/FOLLOWING requires one ORDER BY expression
+FILTER clause may only be used with aggregate window functions
+no such window: %s
+HAVING clause on a non-aggregate query
+ORDER
+GROUP
+aggregate functions are not allowed in the GROUP BY clause
+too many references to "%s": max 65535
+access to view "%s" prohibited
+unsafe use of virtual table "%s"
+..%s
+%s.%s.%s
+no such table: %s
+no tables specified
+too many columns in result set
+column%d
+%.*z:%u
+no such index: "%s"
+multiple references to recursive table: %s
+circular reference: %s
+table %s has %d values for %d columns
+multiple recursive references: %s
+recursive reference in a subquery: %s
+VIEWs and/or subqueries nested too deep
+'%s' is not a function
+view %s is circularly defined
+no such index: %s
+a NATURAL join may not have an ON or USING clause
+cannot join using column %s - column not present in both tables
+ambiguous reference to %s in USING()
+_ROWID_
+%r %s BY term out of range - should be between 1 and %d
+too many terms in %s BY clause
+all VALUES must have the same number of terms
+SELECTs to the left and right of %s do not have the same number of result columns
+UNION ALL
+INTERSECT
+EXCEPT
+UNION
+%s references tables to its right
+table-function argument
+ON clause
+too many terms in ORDER BY clause
+%r ORDER BY term does not match any column in the result set
+Expression tree is too large (maximum depth %d)
+CREATE TABLE 
+ TEXT
+ NUM
+ INT
+ REAL
+always
+generated
+duplicate column name: %s
+default value of column [%s] is not constant
+cannot use DEFAULT on a generated column
+table "%s" has more than one primary key
+AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY
+generated columns cannot be part of the PRIMARY KEY
+unsupported use of NULLS %s
+FIRST
+LAST
+index
+cannot create a TEMP index on non-TEMP table "%s"
+table %s may not be indexed
+views may not be indexed
+virtual tables may not be indexed
+there is already a table named %s
+index %s already exists
+sqlite_autoindex_%s_%d
+expressions prohibited in PRIMARY KEY and UNIQUE constraints
+conflicting ON CONFLICT clauses specified
+CREATE%s INDEX %.*s
+ UNIQUE
+INSERT INTO %Q.sqlite_master VALUES('index',%Q,%Q,#%d,%Q);
+name='%q' AND type='index'
+%s cannot use variables
+%s %T cannot reference objects in database %s
+index '%q'
+foreign key on %s should reference only one column of table %T
+number of columns in foreign key does not match the number of columns in the referenced table
+unknown column "%s" in foreign key definition
+virtual tables cannot use computed columns
+virtual
+error in generated column "%s"
+table %s may not be dropped
+use DROP TABLE to delete table %s
+use DROP VIEW to delete view %s
+sqlite_stat%d
+DELETE FROM %Q.%s WHERE %s=%Q
+DELETE FROM %Q.sqlite_sequence WHERE name=%Q
+DELETE FROM %Q.sqlite_master WHERE tbl_name=%Q and type!='trigger'
+DELETE FROM %Q.sqlite_master WHERE name=%Q AND type='trigger'
+corrupt schema
+UPDATE %Q.sqlite_master SET rootpage=%d WHERE #%d AND rootpage=#%d
+parameters are not allowed in views
+target object/alias may not appear in FROM clause: %s
+expected %d columns for '%s' but got %d
+CO-ROUTINE %!S
+MATERIALIZE %!S
+USE TEMP B-TREE FOR %s
+DISTINCT
+GROUP BY
+misuse of aggregate: %s()
+too many FROM clause terms, max: %d
+COMPOUND QUERY
+LEFT-MOST SUBQUERY
+SCAN %d CONSTANT ROW%s
+cannot use window functions in recursive queries
+recursive aggregate queries not supported
+SETUP
+RECURSIVE STEP
+MERGE (%s)
+LEFT
+RIGHT
+CREATE BLOOM FILTER
+count
+at most %d tables in a join
+SCAN CONSTANT ROW
+too many arguments on %s() - max %d
+NOCASE
+glob
+like
+regexp
+abbreviated query algorithm search
+%s.xBestIndex malfunction
+no query solution
+automatic index on %s(%s)
+auto-index
+BLOOM FILTER ON %S (
+%s=?
+rowid=?
+ AND 
+<expr>
+%s %S%s
+SEARCH
+SCAN
+ EXISTS
+PRIMARY KEY
+AUTOMATIC PARTIAL COVERING INDEX
+AUTOMATIC COVERING INDEX
+COVERING INDEX %s
+INDEX %s
+ USING 
+ USING INTEGER PRIMARY KEY (%s
+>? AND %s
+%c?)
+ VIRTUAL TABLE INDEX 
+0x%x:%s
+%d:%s
+ LEFT-JOIN
+ANY(%s)
+MULTI-INDEX OR
+INDEX %d
+frame starting offset must be a non-negative integer
+frame ending offset must be a non-negative integer
+second argument to nth_value must be a positive integer
+frame starting offset must be a non-negative number
+frame ending offset must be a non-negative number
+internal query planner error
+RIGHT-JOIN %s
+too many RIGHT JOINs
+more than %d aggregate terms
+DISTINCT aggregates must have exactly one argument
+USE TEMP B-TREE FOR %s(DISTINCT)
+USE TEMP B-TREE FOR %s(ORDER BY)
+SCAN %s%s%s
+ USING COVERING INDEX 
+USE TEMP B-TREE FOR %sORDER BY
+LAST TERM OF 
+USE TEMP B-TREE FOR LAST %d TERMS OF ORDER BY
+%s clause should come after %s not before
+ORDER BY
+LIMIT
+too many terms in compound SELECT
+a JOIN clause is required before %s
+USING
+naturaleftouterightfullinnercross
+unknown join type: %T%s%T%s%T
+rows deleted
+%s RETURNING is not available on virtual tables
+DELETE
+UPDATE
+table %s may not be modified
+cannot modify %s because it is a view
+-- TRIGGER %s
+foreign key mismatch - "%w" referencing "%w"
+RETURNING may not use "TABLE.*" wildcards
+cannot use RETURNING in a trigger
+sqlite_returning_%p
+too many columns in %s
+cannot UPDATE generated column "%s"
+no such column: %s
+rows updated
+%s.rowid
+cannot INSERT into generated column "%s"
+table %S has no column named %s
+SCAN %S
+table %S has %d columns but %d values were supplied
+%d values for %d columns
+UPSERT not implemented for virtual table "%s"
+cannot UPSERT a view
+rows inserted
+%sON CONFLICT clause does not match any PRIMARY KEY or UNIQUE constraint
+variable number must be between ?1 and ?%d
+too many SQL variables
+near "%T": syntax error
+too many arguments on function %T
+DISTINCT is not supported for window functions
+IN(...) element has %d term%s - expected %d
+syntax error after column name "%.*s"
+no such index: %S
+index associated with UNIQUE or PRIMARY KEY constraint cannot be dropped
+DELETE FROM %Q.sqlite_master WHERE name=%Q AND type='index'
+fast
+exclusive
+not a writable directory
+failed to set lock proxy file
+Safety level may not be changed inside a transaction
+reset
+issisii
+issisi
+SELECT*FROM"%w"
+shadow
+sssiii
+iisX
+isiX
+isisi
+iissssss
+*** in database %s ***
+wrong # of entries in index 
+row not in PRIMARY KEY order for %s
+NULL value in %s.%s
+non-%s value in %s.%s
+NUMERIC value in %s.%s
+TEXT value in %s.%s
+CHECK constraint failed in %s
+index %s stores an imprecise floating-point value for row 
+row 
+ missing from index 
+rowid not at end-of-record for row 
+ of index 
+ values differ from index 
+non-unique entry in index 
+UTF8
+UTF-8
+UTF-16le
+UTF-16be
+UTF16le
+UTF16be
+UTF-16
+UTF16
+unsupported encoding: %s
+full
+restart
+noop
+ANALYZE "%w"."%w"
+An error occurred with PRAGMA key or rekey. PRAGMA key requires a key of one or more characters. PRAGMA rekey can only be run on an existing encrypted database. Use sqlcipher_export() and ATTACH to convert encrypted/plaintext databases.
+incremental
+temporary storage cannot be changed from within a transaction
+utf8
+utf16le
+utf16be
+sissii
+SET NULL
+SET DEFAULT
+CASCADE
+RESTRICT
+NO ACTION
+LIKE or GLOB pattern too complex
+ESCAPE expression must be a single character
+trigger "%w" contains too many steps
+trigger "%s" may not write to shadow table "%s"
+INSERT INTO %Q.sqlite_master VALUES('trigger',%Q,%Q,0,'CREATE TRIGGER %q')
+type='trigger' AND name='%q'
+temporary trigger may not have qualified name
+cannot create triggers on virtual tables
+cannot create triggers on shadow tables
+trigger %T already exists
+cannot create trigger on system table
+cannot create %s trigger on view: %S
+BEFORE
+AFTER
+cannot create INSTEAD OF trigger on table: %S
+qualified table names are not allowed on INSERT, UPDATE, and DELETE statements within triggers
+no such trigger: %S
+sqlite_attach
+too many attached databases - max %d
+database %s is already in use
+database is already attached
+Invalid key value
+unable to open database: %s
+file:
+localhost
+invalid uri authority: %.*s
+cache
+shared
+private
+mode
+no such %s mode: %s
+%s mode not allowed: %s
+no such vfs: %s
+sqlite_detach
+no such database: %s
+cannot detach database %s
+database %s is locked
+expressions
+unable to identify the object to be reindexed
+tbl,idx,stat
+sqlite_stat4
+sqlite_stat3
+CREATE TABLE %Q.%s(%s)
+sqlite\_%
+stat_init
+stat_push
+stat_get
+ %llu
+there is already another table or index with this name: %s
+view %s may not be altered
+UPDATE "%w".sqlite_master SET sql = sqlite_rename_table(%Q, type, name, sql, %Q, %Q, %d) WHERE (type!='index' OR tbl_name=%Q COLLATE nocase)AND   name NOT LIKE 'sqliteX_%%' ESCAPE 'X'
+UPDATE %Q.sqlite_master SET tbl_name = %Q, name = CASE WHEN type='table' THEN %Q WHEN name LIKE 'sqliteX_autoindex%%' ESCAPE 'X'      AND type='index' THEN 'sqlite_autoindex_' || %Q || substr(name,%d+18) ELSE name END WHERE tbl_name=%Q COLLATE nocase AND (type='table' OR type='index' OR type='trigger');
+UPDATE "%w".sqlite_sequence set name = %Q WHERE name = %Q
+UPDATE sqlite_temp_schema SET sql = sqlite_rename_table(%Q, type, name, sql, %Q, %Q, 1), tbl_name = CASE WHEN tbl_name=%Q COLLATE nocase AND   sqlite_rename_test(%Q, sql, type, name, 1, 'after rename', 0) THEN %Q ELSE tbl_name END WHERE type IN ('view', 'trigger')
+after rename
+table %s may not be altered
+SELECT 1 FROM "%w".sqlite_master WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%' AND sqlite_rename_test(%Q, sql, type, name, %d, %Q, %d)=NULL 
+SELECT 1 FROM temp.sqlite_master WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%' AND sqlite_rename_test(%Q, sql, type, name, 1, %Q, %d)=NULL 
+Cannot add a PRIMARY KEY column
+Cannot add a UNIQUE column
+Cannot add a REFERENCES column with non-NULL default value
+Cannot add a NOT NULL column with default value NULL
+Cannot add a column with non-constant default
+cannot add a STORED column
+UPDATE "%w".sqlite_master SET sql = printf('%%.%ds, ',sql) || %Q || substr(sql,1+length(printf('%%.%ds',sql))) WHERE type = 'table' AND name = %Q
+SELECT CASE WHEN quick_check GLOB 'CHECK*' THEN raise(ABORT,'CHECK constraint failed') WHEN quick_check GLOB 'non-* value in*' THEN raise(ABORT,'type mismatch on DEFAULT') ELSE raise(ABORT,'NOT NULL constraint failed') END  FROM pragma_quick_check(%Q,%Q) WHERE quick_check GLOB 'CHECK*' OR quick_check GLOB 'NULL*' OR quick_check GLOB 'non-* value in*'
+cannot %s rowid alias: %s
+SELECT raise(ABORT,%Q) FROM "%w"."%w"
+virtual tables may not be altered
+Cannot add a column to a view
+sqlite_altertab_%s
+no such column: "%T"
+drop
+cannot drop %s column: "%s"
+cannot drop column "%s": no other columns exist
+UPDATE "%w".sqlite_master SET sql = sqlite_drop_column(%d, sql, %d) WHERE (type=='table' AND tbl_name=%Q COLLATE nocase)
+after drop column
+virtual table
+rename columns of
+drop column from
+edit constraints of
+cannot %s %s "%s"
+UPDATE "%w".sqlite_master SET sql = sqlite_rename_quotefix(%Q, sql)WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%'
+UPDATE temp.sqlite_master SET sql = sqlite_rename_quotefix('temp', sql)WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X' AND sql NOT LIKE 'create virtual%%'
+rename from
+rename to
+UPDATE "%w".sqlite_master SET sql = sqlite_rename_column(sql, type, name, %Q, %Q, %d, %Q, %d, %d) WHERE name NOT LIKE 'sqliteX_%%' ESCAPE 'X'  AND (type != 'index' OR tbl_name = %Q)
+UPDATE temp.sqlite_master SET sql = sqlite_rename_column(sql, type, name, %Q, %Q, %d, %Q, %d, 1) WHERE type IN ('trigger', 'view')
+UPDATE "%w".sqlite_master SET sql = sqlite_drop_constraint(sql, %s) WHERE type='table' AND tbl_name=%Q COLLATE nocase
+SELECT sqlite_fail('constraint failed', %d) FROM %Q.%Q AS x WHERE x.%.*s IS NULL
+UPDATE "%w".sqlite_master SET sql = sqlite_add_constraint(sqlite_drop_constraint(sql, %d), %.*Q, %d) WHERE type='table' AND tbl_name=%Q COLLATE nocase
+%.*s
+SELECT sqlite_fail('constraint %q already exists', %d) FROM "%w".sqlite_master WHERE type='table' AND tbl_name=%Q COLLATE nocase AND sqlite_find_constraint(sql, %Q)
+SELECT sqlite_fail('constraint failed', %d) FROM %Q.%Q WHERE (%.*s) IS FALSE
+UPDATE "%w".sqlite_master SET sql = sqlite_add_constraint(sql, %.*Q, -1) WHERE type='table' AND tbl_name=%Q COLLATE nocase
+CREATE VIRTUAL TABLE %T
+UPDATE %Q.sqlite_master SET type='table', name=%Q, tbl_name=%Q, rootpage=0, sql=%Q WHERE rowid=#%d
+name=%Q AND sql=%Q
+duplicate WITH table name: %s
+PARTITION clause
+ORDER BY clause
+frame specification
+cannot override %s of window: %s
+unsupported frame specification
+unrecognized token: "%s"
+incomplete input
+implies_nonnull_row
+expr_compare
+expr_implies_expr
+affinity
+sqlite_compileoption_used
+sqlite_compileoption_get
+unlikely
+likelihood
+likely
+ltrim
+rtrim
+trim
+typeof
+subtype
+length
+octet_length
+instr
+printf
+format
+unicode
+char
+round
+upper
+lower
+unhex
+concat
+concat_ws
+ifnull
+random
+randomblob
+nullif
+sqlite_version
+sqlite_source_id
+sqlite_log
+unistr
+quote
+unistr_quote
+last_insert_rowid
+changes
+total_changes
+replace
+zeroblob
+substr
+substring
+total
+group_concat
+string_agg
+median
+percentile
+percentile_cont
+percentile_disc
+ceil
+ceiling
+floor
+trunc
+log10
+log2
+power
+acos
+asin
+atan
+atan2
+cosh
+sinh
+tanh
+acosh
+asinh
+atanh
+sqrt
+radians
+degrees
+sign
+integer overflow
+%!.*f
+invalid Unicode escape
+%!0.17g
+the fraction argument to %%s() is not between 0.0 and %.1f
+the fraction argument to %%s() is not the same for all input rows
+input to %%s() is not numeric
+Inf input to %%s()
+sqlite_rename_column
+sqlite_rename_table
+sqlite_rename_test
+sqlite_drop_column
+sqlite_rename_quotefix
+sqlite_drop_constraint
+sqlite_fail
+sqlite_add_constraint
+sqlite_find_constraint
+CREATE 
+"%w" 
+%Q%s
+error in %s %s%s%s: %s
+%.*s%s
+constraint may not be dropped: %s
+no such constraint: %s
+%.*s%s%s
+ %s%s
+argument of ntile must be a positive integer
+julianday
+unixepoch
+date
+time
+datetime
+strftime
+timediff
+current_time
+current_timestamp
+current_date
+a CHECK constraint
+a generated column
+an index
+non-deterministic use of %s() in %s
+subsec
+subsecond
+40f-21a-21d
+20c:20e
+20b:20e
+auto
+end of 
+month
+year
+localtime
+weekday 
+start of 
+40f-20a-20d
+50f-20a-20d
+local time unavailable
+%02d
+%06.3f
+%04d-%02d-%02d
+%04d
+%03d
+%02d:%02d
+%.3f
+%02d:%02d:%02d
+%c%04d-%02d-%02d %02d:%02d:%06.3f
+jsonb
+json_array
+jsonb_array
+json_array_insert
+jsonb_array_insert
+json_array_length
+json_error_position
+json_extract
+jsonb_extract
+json_insert
+jsonb_insert
+json_object
+jsonb_object
+json_patch
+jsonb_patch
+json_pretty
+json_quote
+json_remove
+jsonb_remove
+json_replace
+jsonb_replace
+json_set
+jsonb_set
+json_type
+json_valid
+json_group_array
+jsonb_group_array
+json_group_object
+jsonb_group_object
+JSON cannot hold BLOB values
+insert
+array_insert
+json_%s() needs an odd number of arguments
+json_object() requires an even number of arguments
+json_object() labels must be TEXT
+    
+FLAGS parameter to json_valid() must be between 1 and 15
+failed to allocate %u bytes of memory
+failed memory resize %u to %u bytes
+hw.ncpu
+Sqlite_Heap
+unable to close due to unfinalized statements or unfinished backups
+not an error
+SQL logic error
+access permission denied
+query aborted
+database is locked
+database table is locked
+attempt to write a readonly database
+interrupted
+disk I/O error
+database disk image is malformed
+unknown operation
+database or disk is full
+unable to open database file
+locking protocol
+constraint failed
+datatype mismatch
+bad parameter or other API misuse
+authorization denied
+column index out of range
+file is not a database
+notification message
+warning message
+unknown error
+abort due to ROLLBACK
+another row available
+no more rows available
+unable to delete/modify user-function due to active statements
+unable to use function %s in the requested context
+PRAGMA table_list
+invalid
+RTRIM
+MATCH
+automatic extension loading failed: %s
+unable to delete/modify collation sequence due to active statements
+misuse
+0123456789
+ATOMIC_INTRINSICS=1
+COMPILER=clang-21.0.0
+DEFAULT_AUTOVACUUM
+DEFAULT_CACHE_SIZE=-2000
+DEFAULT_FILE_FORMAT=4
+DEFAULT_JOURNAL_SIZE_LIMIT=-1
+DEFAULT_MMAP_SIZE=0
+DEFAULT_PAGE_SIZE=4096
+DEFAULT_PCACHE_INITSZ=20
+DEFAULT_RECURSIVE_TRIGGERS
+DEFAULT_SECTOR_SIZE=4096
+DEFAULT_SYNCHRONOUS=2
+DEFAULT_WAL_AUTOCHECKPOINT=1000
+DEFAULT_WAL_SYNCHRONOUS=2
+DEFAULT_WORKER_THREADS=0
+DIRECT_OVERFLOW_READ
+ENABLE_MATH_FUNCTIONS
+ENABLE_PERCENTILE
+EXTRA_INIT=sqlcipher_extra_init
+EXTRA_SHUTDOWN=sqlcipher_extra_shutdown
+HAS_CODEC
+HAVE_ISNAN
+MALLOC_SOFT_LIMIT=1024
+MAX_ATTACHED=10
+MAX_COLUMN=2000
+MAX_COMPOUND_SELECT=500
+MAX_DEFAULT_PAGE_SIZE=8192
+MAX_EXPR_DEPTH=1000
+MAX_FUNCTION_ARG=1000
+MAX_LENGTH=1000000000
+MAX_LIKE_PATTERN_LENGTH=50000
+MAX_MMAP_SIZE=0x7fff0000
+MAX_PAGE_COUNT=0xfffffffe
+MAX_PAGE_SIZE=65536
+MAX_SCHEMA=10000000
+MAX_SQL_LENGTH=1000000000
+MAX_TRIGGER_DEPTH=1000
+MAX_VARIABLE_NUMBER=32766
+MAX_VDBE_OP=250000000
+MAX_WORKER_THREADS=0
+MUTEX_PTHREADS
+OMIT_LOAD_EXTENSION
+SYSTEM_MALLOC
+TEMP_STORE=3
+THREADSAFE=1
+>>>7
+/o9"
+ 7-t+
+7@ I
+1CO4:L~
+<<<<<<<<<<<<<<<<<<<<5<<<<5<<<<<<<5g<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<5<<<<<?<<<s<<<<<<<u<<<C<AEk<m
+FFFFFFFFFFF
+FFFFFFFFF
+FFFFF
+4FFF
+F4FF
+FF%FVF
+FFFFFFFFFFF+
+=============================
+============================================
+=========================================================
+2=====
+  C8
+                                                                                                   
+         1   
+***************************************************************************&*
+***$***+****************
+***************(*"
+*********
+3.54.1
+expand 32-byte k
+ !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+******""""""""""""""""""""
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+REINDEXEDESCAPEACHECKEYBEFOREIGNOREGEXPLAINSTEADDATABASELECTABLEFTHENDEFERRABLELSEXCLUDELETEMPORARYISNULLSAVEPOINTERSECTIESNOTNULLIKEXCEPTRANSACTIONATURALTERAISEXCLUSIVEXISTSCONSTRAINTOFFSETRIGGERANGENERATEDETACHAVINGLOBEGINNEREFERENCESUNIQUERYWITHOUTERELEASEATTACHBETWEENOTHINGROUPSCASCADEFAULTCASECOLLATECREATECURRENT_DATEIMMEDIATEJOINSERTMATCHPLANALYZEPRAGMATERIALIZEDEFERREDISTINCTUPDATEVALUESVIRTUALWAYSWHENWHERECURSIVEABORTAFTERENAMEANDROPARTITIONAUTOINCREMENTCASTCOLUMNCOMMITCONFLICTCROSSCURRENT_TIMESTAMPRECEDINGFAILASTFILTEREPLACEFIRSTFOLLOWINGFROMFULLIMITIFORDERESTRICTOTHERSOVERETURNINGRIGHTROLLBACKROWSUNBOUNDEDUNIONUSINGVACUUMVIEWINDOWBYINITIALLYPRIMARY
+@v:k
+@aQY
+8#Xl
+.$*(
+DwZu
+J9;c
+l00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+BINARY
+  !!""##$$%%&&''(())**++,,--..//00112233445566778899
+80( 
+80( 
+#&-5a
+IIII
+AAAAA&&A
+@&&&&&&&&&&@
+SQLite format 3
+*a6Y
+';)}D!
+NZ`(
+%weeVY*U
+wML[
+_ !9
+row_number
+dense_rank
+rank
+percent_rank
+cume_dist
+ntile
+lead
+CADDEB
+nth_value
+first_value
+-)(*'&#
+0123456789ABCDEFlast_value
+second
+minute
+hour
+month
+year
+!5Ng
+\u00
+%{public}s
+Elapsed time:%{public}.3f ms - %{public}s

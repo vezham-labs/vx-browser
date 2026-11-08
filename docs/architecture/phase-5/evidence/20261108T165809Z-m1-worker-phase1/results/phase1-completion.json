@@ -1,0 +1,30 @@
+{
+  "baseline_HEAD": "43f57789a32fed9fa3e3c6a2926e5aceadb9c029",
+  "final_attempt": "attempt-171322765352",
+  "assertions_passed": 119,
+  "assertions_failed": 0,
+  "unique_assertion_names": 84,
+  "per_child_diagnostic_assertions": 36,
+  "all_eight_owner_completion_criteria": "PASS subject to final preservation audit",
+  "library_identity": "PASS",
+  "static_symbol_count": 9,
+  "linked_image_executed": false,
+  "qualification_database_opens": 0,
+  "SQLCipher_key_calls": 0,
+  "PQR_runtime_cases_executed": 0,
+  "EXP03": "BLOCKED / NOT EXECUTED",
+  "EXP04": "NOT EXECUTED",
+  "native_Keychain_WebKit": "NOT EXECUTED",
+  "production_integration": false,
+  "new_runtime_dependencies": false,
+  "new_software_installed": false,
+  "phase1_implementation_sources": {
+    "protocol.h": "b17cea938eaf737202683c7dc0f5453cdd8d3bc6ad06401a58824a96eec3e575",
+    "worker.c": "3369d361d76302656e3b31a04b21e304d336b7af03d8f4f9050567f73f229465",
+    "supervisor.h": "deb516ed39e58667447268bccdf474e5cc21e90415954af63df5a0678153ab00",
+    "supervisor_tests.c": "58fdc0499507ebc02e3fdd254c00ae272a9dc1a5648146c76a479b3c7c75c23c",
+    "link_identity.c": "6d37208d545dc7185bd8d3029301d3bf0e25e989746d336b4d954ef482d7fe53",
+    "protocol.c": "be0cd1c2cd5b9bf009fbc10e754dad7e64dfb3d4cd103c184487b9b79fef5b17",
+    "supervisor.c": "771a4a4cc094c3751cd88d4ce627e078074597ab98e9da34b4a986856fbce343"
+  }
+}

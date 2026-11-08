@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "source_pin": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "archive": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a",
+  "archive_sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+  "header_sha256": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec",
+  "archive_member": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a(sqlite3.o)",
+  "symbols": {
+    "sqlite3_key": true,
+    "sqlite3_open_v2": true,
+    "sqlite3_close": true,
+    "sqlite3_libversion": true,
+    "sqlite3_sourceid": true,
+    "sqlcipher_cc_setup": true,
+    "sqlcipher_extra_init": true,
+    "sqlite3_backup_init": true,
+    "sqlite3_wal_checkpoint_v2": true
+  },
+  "binary": "/private/tmp/vx-m1-phase1-2xy9qleu/sqlcipher-linked-worker",
+  "binary_sha256": "18e71b16142511bcdce8e0ade5ce4bf02c592a369123112ffcca8a745152c1d9",
+  "sqlcipher_binary_version_string": "4.20.0",
+  "sqlite_binary_version_string": "3.54.1",
+  "sqlite_source_id": "2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6alt1",
+  "direct_dynamic_sqlite": false,
+  "linked_image_executed": false,
+  "provider_functions_called": false,
+  "authenticity_limit": "Vendor signed source correspondence passed previously; separate tag unknown_key remains historical. This is binary linkage evidence only."
+}

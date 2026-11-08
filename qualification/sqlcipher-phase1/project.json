@@ -1,0 +1,16 @@
+{
+  "name": "m1-sqlcipher-phase1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "qualification/sqlcipher-phase1",
+  "projectType": "application",
+  "tags": ["scope:qualification", "type:native-test-tool"],
+  "targets": {
+    "verify": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 qualification/sqlcipher-phase1/run_phase1.py"
+      }
+    }
+  }
+}

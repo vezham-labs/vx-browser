@@ -1,0 +1,155 @@
+[
+  {
+    "label": "compiler-version",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+      "--version"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "build-fake-worker",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-target",
+      "arm64-apple-macosx26.0",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk",
+      "-D__STDC_WANT_LIB_EXT1__=1",
+      "-I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/worker.c",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/protocol.c",
+      "-o",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/fake-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "build-supervisor",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-target",
+      "arm64-apple-macosx26.0",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk",
+      "-D__STDC_WANT_LIB_EXT1__=1",
+      "-I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/supervisor_tests.c",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/supervisor.c",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/protocol.c",
+      "-framework",
+      "Security",
+      "-o",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/phase1-supervisor"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "build-linked-worker",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-target",
+      "arm64-apple-macosx26.0",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk",
+      "-D__STDC_WANT_LIB_EXT1__=1",
+      "-I/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1",
+      "-DSQLITE_HAS_CODEC",
+      "-I/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/worker.c",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/protocol.c",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-phase1/link_identity.c",
+      "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a",
+      "-framework",
+      "Security",
+      "-framework",
+      "CoreFoundation",
+      "-Wl,-map,/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T165809Z-m1-worker-phase1/attempt-170622203724/worker-link.map",
+      "-o",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/sqlcipher-linked-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "linked-symbols",
+    "argv": [
+      "/usr/bin/nm",
+      "-g",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/sqlcipher-linked-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "linked-dependencies",
+    "argv": [
+      "xcrun",
+      "otool",
+      "-L",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/sqlcipher-linked-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "linked-load-commands",
+    "argv": [
+      "xcrun",
+      "otool",
+      "-l",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/sqlcipher-linked-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "linked-architecture",
+    "argv": [
+      "/usr/bin/lipo",
+      "-info",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/sqlcipher-linked-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "linked-strings",
+    "argv": [
+      "/usr/bin/strings",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/sqlcipher-linked-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  },
+  {
+    "label": "fake-provider-tests",
+    "argv": [
+      "/private/tmp/vx-m1-phase1-wjs6i31i/phase1-supervisor",
+      "/private/tmp/vx-m1-phase1-wjs6i31i/fake-worker"
+    ],
+    "cwd": "/private/tmp/vx-m1-phase1-wjs6i31i",
+    "returncode": 0
+  }
+]

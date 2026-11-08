@@ -1,0 +1,19 @@
+{
+  "canonical_report": "../../reports/M1/m1-sqlcipher-worker-phase1-implementation.md",
+  "qualification_sources": "../../../../../qualification/sqlcipher-phase1",
+  "final_attempt": "attempt-171322765352",
+  "historical_attempts": [
+    "attempt-170622203724",
+    "attempt-170851021550",
+    "attempt-171106269418"
+  ],
+  "final_build_and_test_commands": "attempt-171322765352/commands.json",
+  "linker_map": "attempt-171322765352/worker-link.map",
+  "identity_evidence": "attempt-171322765352/library-identity.json",
+  "tests": "attempt-171322765352/test-results.json",
+  "source_hashes": "attempt-171322765352/result.json",
+  "Nx_launcher": "results/nx-launcher.json",
+  "SHA256_manifest": "SHA256SUMS",
+  "source_database_runtime_operations": 0,
+  "commands_executed": "Read-only baseline/docs/source inspection, C11 qualification-tool builds, binary nm/otool/lipo/strings, fake-provider native tests, and documentation/preservation audit. Exact final argv/outputs retained. Previous version attempts are independent developmental snapshots."
+}

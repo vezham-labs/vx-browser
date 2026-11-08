@@ -1,0 +1,83 @@
+{
+  "files": [
+    {
+      "path": "qualification/sqlcipher-phase1/README.md",
+      "sha256": "8c8bfebbab995ca97682fdda2ffb6659242de8ed1a7d746c96e11459d04fda02",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/link_identity.c",
+      "sha256": "6d37208d545dc7185bd8d3029301d3bf0e25e989746d336b4d954ef482d7fe53",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/project.json",
+      "sha256": "6f7f21e34c23ed2b9814c4b8b1ebc3a486ea8d12c98c5b2d590d8fe98b7df3b9",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/protocol.c",
+      "sha256": "be0cd1c2cd5b9bf009fbc10e754dad7e64dfb3d4cd103c184487b9b79fef5b17",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/protocol.h",
+      "sha256": "b17cea938eaf737202683c7dc0f5453cdd8d3bc6ad06401a58824a96eec3e575",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/run_phase1.py",
+      "sha256": "ba55e556b4be2c58b7f20d5f3a4e62d25e36e13bb9fd2168d8e49c39eb0ce32e",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/supervisor.c",
+      "sha256": "771a4a4cc094c3751cd88d4ce627e078074597ab98e9da34b4a986856fbce343",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/supervisor.h",
+      "sha256": "deb516ed39e58667447268bccdf474e5cc21e90415954af63df5a0678153ab00",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/supervisor_tests.c",
+      "sha256": "58fdc0499507ebc02e3fdd254c00ae272a9dc1a5648146c76a479b3c7c75c23c",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/worker.c",
+      "sha256": "3369d361d76302656e3b31a04b21e304d336b7af03d8f4f9050567f73f229465",
+      "change": "Created qualification infrastructure"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-phase1-implementation.md",
+      "sha256": "011a6a1765710c9468725b8ee92d55ea19a54b70b6558ad13b68741ca5dda056",
+      "change": "Created report"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "b13eb34f9860032775e9ce4fbaf6e18cf7dd2df47e837f85dee0709cada4c198",
+      "change": "Append-only reference"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "4975be50c9ae95d7ad1a8e0802e57ec54fd18c6d1cdf2e095f2b612099e15b5e",
+      "change": "Append-only reference"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md",
+      "sha256": "fd0102195357f562c26e660919303b50c89e4a9deb3aa3371a6494145a028c9d",
+      "change": "Append-only reference"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md",
+      "sha256": "42e82bcb826dc97f71d512bb8ea9e9a644488b4e9c26a1b25f33dcf38faf0425",
+      "change": "Append-only reference"
+    }
+  ],
+  "created_evidence_directory": "docs/architecture/phase-5/evidence/20261108T165809Z-m1-worker-phase1",
+  "evidence_file_inventory": "artifact-index.json",
+  "production_source_or_dependencies_changed": false,
+  "index_or_history_changed": false
+}

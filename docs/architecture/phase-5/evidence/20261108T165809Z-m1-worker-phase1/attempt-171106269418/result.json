@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "attempt": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T165809Z-m1-worker-phase1/attempt-171106269418",
+  "work_directory": "/private/tmp/vx-m1-phase1-2xy9qleu",
+  "tests": {
+    "summary": true,
+    "passed": 117,
+    "failed": 0
+  },
+  "linked_image_executed": false,
+  "provider_databases_opened": 0,
+  "PQR_runtime_cases_executed": 0,
+  "worker_and_supervisor_sources": {
+    "protocol.h": "b17cea938eaf737202683c7dc0f5453cdd8d3bc6ad06401a58824a96eec3e575",
+    "worker.c": "16a606fada2c0e1e39feb0565f45c302cc905afe20a95f3faa13c59098bc6221",
+    "supervisor.h": "364497d168cee769d3a7eb575f0dac5f62054ea0183b6a1c6ddb5f3157605b93",
+    "supervisor_tests.c": "acf6812e7d22a5144f6963dc93a7a712fbd0ce984f3f6724eb43d2ddfb55fed0",
+    "link_identity.c": "6d37208d545dc7185bd8d3029301d3bf0e25e989746d336b4d954ef482d7fe53",
+    "protocol.c": "be0cd1c2cd5b9bf009fbc10e754dad7e64dfb3d4cd103c184487b9b79fef5b17",
+    "supervisor.c": "ccaaa859936ec22cbf8133fbeb1233df8dd60eacfdfa0a5e5dfb4a4defe2f84c"
+  }
+}

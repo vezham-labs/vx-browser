@@ -1,0 +1,214 @@
+# M1 – Isolated Worker Implementation, Phase 1
+
+## Objective
+
+Implement the first isolated native SQLCipher qualification worker and supervisor based on the approved technical design.
+
+Repository: `vezham-labs/vx-browser`  
+Branch: `timeline`  
+Baseline commit: `43f57789a32fed9fa3e3c6a2926e5aceadb9c029`
+
+This is disposable M1 qualification infrastructure only. It is not production browser persistence implementation.
+
+The goal is to establish a verifiable process, communication, scope-binding and lifecycle foundation before attempting actual SQLCipher runtime qualification.
+
+## 1. Inspect before implementing
+
+Read and follow:
+
+- `docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md`
+- `docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md`
+- Existing M1 SQLCipher provider, key-management, profile-isolation and recovery specifications.
+- Relevant ADRs and approved owner decisions.
+- Existing Swift host, BrowserPersistence contracts and native build configuration.
+
+Inspect the current repository structure and existing qualification tooling before choosing implementation locations.
+
+Do not duplicate existing contracts or create competing protocol definitions.
+
+## 2. Implement the isolated worker skeleton
+
+Implement:
+
+- A native C11 qualification worker.
+- A supervisor responsible for worker startup, communication and retirement.
+- A typed, versioned control-channel protocol.
+- Explicit worker identity and lifecycle states.
+- Explicit profile scope, store identity and lease metadata binding.
+- Strict input validation and rejection of malformed or mismatched messages.
+- Deterministic startup, cancellation, close and termination handling.
+
+Keep the worker isolated from production Browser Core and BrowserPersistence.
+
+Use the existing design's proposed architecture unless implementation evidence exposes a concrete blocker. Document any deviation and its reason.
+
+## 3. Key-frame handling
+
+Implement the designed key-frame protocol and its validation/ownership boundaries.
+
+Requirements:
+
+- Key material must never be passed through command-line arguments or environment variables.
+- Never write key material to logs, diagnostics, crash reports or persistent evidence.
+- Validate worker, profile scope, store and lease bindings.
+- Reject stale, mismatched, malformed or unauthorized frames.
+- Ensure temporary key buffers have an explicit ownership and cleanup lifecycle.
+- Do not claim secure erasure solely because a buffer was cleared; document the actual guarantee and platform limitations.
+
+Do not integrate the real Keychain or perform database key operations in this phase.
+
+Use synthetic test material only.
+
+## 4. Private-scope refusal
+
+The worker must explicitly reject private-browsing scopes.
+
+Private browsing must not silently fall back to a persistent profile or create persistent storage.
+
+Add tests demonstrating the refusal path and its observable result.
+
+## 5. Lifecycle and failure handling
+
+Implement and test:
+
+- Worker startup success and failure.
+- Invalid or incompatible protocol versions.
+- Worker identity mismatch.
+- Profile/store/lease mismatch.
+- Duplicate or stale requests.
+- Cancellation during startup.
+- Cancellation during an active operation.
+- Graceful close.
+- Close timeout.
+- Unexpected worker termination.
+- Supervisor handling of uncertain worker state.
+- Prevention of unsafe worker reuse after failed cleanup.
+
+Do not assume that terminating a process automatically proves all resources have been safely cleaned up.
+
+Represent uncertain cleanup explicitly rather than reporting success.
+
+## 6. SQLCipher library identity verification
+
+Establish evidence that the intended pinned SQLCipher static archive is actually linked into the qualification worker.
+
+Use the pinned source and artifacts documented in the existing M1 evidence.
+
+Required checks:
+
+- Record the exact compiler and linker invocation.
+- Generate and retain the linker map.
+- Verify expected SQLCipher symbols are resolved from the intended archive.
+- Verify the linked library identity and version using available compile-time and binary-level evidence.
+- Detect accidental linkage to system SQLite or another unintended SQLite implementation.
+- Record archive hashes and relevant build inputs.
+- Keep the existing source-authenticity limitations visible.
+
+Important:
+
+A successful compiler invocation or an archive existing on disk does not prove that the intended SQLCipher implementation was linked.
+
+Do not open a database or run encryption tests to establish this evidence. This phase is library-linkage verification only.
+
+If the existing archive or build environment cannot support a reliable identity check, report BLOCKED and explain precisely why. Do not substitute an unverified library.
+
+## 7. Testing boundary
+
+Use a fake/stub provider for worker protocol and lifecycle tests.
+
+Tests should cover:
+
+- Protocol encoding and decoding.
+- Version and message validation.
+- Scope and lease binding.
+- Private-scope refusal.
+- Key-frame validation and ownership.
+- Supervisor/worker communication.
+- Cancellation and close barriers.
+- Worker failure and uncertain cleanup.
+- No secret leakage into logs or evidence.
+
+Do not:
+
+- Generate encrypted database fixtures.
+- Open SQLCipher databases.
+- Run encryption/decryption tests.
+- Implement the observation VFS.
+- Execute the 50 PQR runtime cases.
+- Claim EXP-03 passed.
+
+## 8. Documentation and evidence
+
+Create a focused Phase 1 implementation report and timestamped evidence directory under the existing M1 reports/evidence structure.
+
+Document:
+
+- Implemented components and their boundaries.
+- Process and protocol architecture.
+- Build and linkage verification.
+- Test commands and actual results.
+- Lifecycle and failure behavior.
+- Security limitations.
+- Deviations from the approved design.
+- Outstanding blockers and next prerequisites.
+
+Use explicit statuses:
+
+- PASS
+- FAIL
+- BLOCKED
+- INCONCLUSIVE
+- NOT EXECUTED
+
+Clearly distinguish design requirements from implementation evidence.
+
+Update canonical M1 documentation only where necessary, preserving existing historical records and append-only evidence.
+
+## 9. Strict scope restrictions
+
+Do not:
+
+- Modify production browser functionality.
+- Integrate the worker into BrowserPersistence.
+- Change the four-target Browser Core architecture.
+- Introduce new runtime dependencies without approval.
+- Change approved owner decisions or ADR statuses.
+- Modify the pinned SQLCipher source or archive.
+- Generate real encryption fixtures.
+- Start EXP-03 or claim runtime qualification.
+- Perform unrelated refactoring.
+
+Do not install software, change system configuration or modify the host environment without first explaining the requirement and asking for permission.
+
+Do not commit or push changes unless explicitly instructed.
+
+## 10. Completion criteria
+
+Phase 1 is complete only when:
+
+1. The qualification worker and supervisor build successfully.
+2. Protocol tests pass.
+3. Lifecycle and failure tests pass using the fake provider.
+4. Private-scope refusal is demonstrated.
+5. Key-frame handling boundaries are tested without exposing real secrets.
+6. The intended SQLCipher archive's actual linkage is verified with retained evidence.
+7. No production source or dependency changes have occurred.
+8. Documentation accurately records all limitations and outstanding work.
+
+If any criterion cannot be met, report the exact blocker rather than weakening the requirement.
+
+## 11. Final response
+
+Provide:
+
+1. Summary of implemented components.
+2. Files created and modified.
+3. Build and test commands with actual results.
+4. Linker-map and SQLCipher identity verification evidence.
+5. Lifecycle and security test results.
+6. Preservation audit.
+7. PASS/FAIL/BLOCKED/INCONCLUSIVE status for each completion criterion.
+8. Explicit confirmation that no encryption runtime tests or EXP-03 execution occurred.
+9. Recommended next phase.
+
+**Do not describe this as SQLCipher runtime qualification or production-ready persistence.**
