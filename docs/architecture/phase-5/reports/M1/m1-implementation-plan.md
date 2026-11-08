@@ -270,3 +270,7 @@ Implementation sequencing uses observed failures/blocked prerequisites; it does 
 ## Minimum next engineering action
 
 Investigate the retained owned-store cleanup failure/crash in a finite isolated lifecycle procedure with exact source/binary context; complete selected encrypted-SQLite provider and recovery/archive specification before reauthorizing dependent procedures as executable. In parallel, review the proposed functional acceptance extension and package/bridge contracts. Existing validation authorization does not authorize product fixes. No repeated unchanged testing loop.
+
+## Remediation dependency refinement — 2026-11-08
+
+WP07/WP08 now use the detailed [encryption](m1-persistent-profile-encryption-specification.md) and [key/recovery](m1-keychain-and-independent-recovery-specification.md) contracts. Normative crypto/custody/lock/failure choices are specified; provider/build/binding/fixtures/native runtime/secure-memory and independent-Mac qualifications remain missing. WP05/06 retain the unresolved cleanup crash and unknown store states. WP13/14/18/19 retain downstream integration/backup/release gates. The19 work packages and their readiness classifications are unchanged; no product work starts.

@@ -1,0 +1,97 @@
+[
+  {
+    "path": "docs/architecture/phase-5/reports/M1/README.md",
+    "sha256": "fc086ea94d594d4cea0757623c8c292034f428cbcb54f54f35e5b62b48df8ff1",
+    "title": "# M1 Canonical Engineering Baseline",
+    "status_version_lines": [
+      "Updated2026-11-08. Documentation consolidation, isolated validation and implementation planning Authorized; product implementation/release Not Authorized. The [primary closeout](m1-closeout-report.md) owns this task's outcomes; no M1 product completion claim.",
+      "- [Architecture](browser-core-architecture.md), [boundary contracts](core-boundary-contracts.md), [data model](browser-core-data-model.md), [persistence](local-persistence-architecture.md), [recovery](migration-and-recovery-strategy.md), [capabilities](browser-capability-architecture.md): supporting Proposed designs; current technical dispositions in the specification.",
+      "- [Developer Specification v1.1 \u2014 Proposed](m1-developer-specification.md): REQ/AC/SPEC, policy,26-capability coverage, unresolved engineering definitions and implementation traceability.",
+      "- [Implementation plan v1.1](m1-implementation-plan.md):19 proposed work packages; no implementation authorization."
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-closeout-report.md",
+    "sha256": "ea0b5e8e387d328ac6da030778e7a0b0c77f9a9946a48bbe710d9a6e67717098",
+    "title": "# M1 Consolidated Closeout Report v1.1",
+    "status_version_lines": [
+      "Date2026-11-08. **Documentation consolidated; bounded eligible validation attempted; implementation planning prepared. M1 product acceptance/completion is not claimed.** Product implementation and release remain Not Authorized. ADR statuses unchanged.",
+      "The [owner instruction](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/owner-task-authorization.txt) authorized repository documentation, safe isolated EXP/SVC validation/fixtures/builds/evidence and implementation planning. It did not authorize product features, release/signing-notarization approval/distribution, branch changes, commits or pushes. Started clean on timeline; actual HEAD and tracked hashes are in [baseline](../../evidence/20261108T094414Z-m1-consolidated-closeout/repository-baseline.json). No production app source/configuration or Phase3 source/evidence was changed. Final audit is [here](../../evidence/20261108T094414Z-m1-consolidated-closeout/final-audit.json).",
+      "[Source catalog](m1-source-catalog.md) is the authority for actual paths, versions and supersession. [M1 index](README.md) links the canonical set. Exact full supplied DS/VP/SVC/CT/readiness sources were retrieved from the existing chat and archived, not reconstructed from summaries. Prior repository documents were archived before being labelled historical or reconciled."
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "sha256": "eef5bc21612d5bfa25e2729d2f24c4e7c944dfdb98dbb4505b91e65e0addab82",
+    "title": "# M1 Canonical Source Catalog and Supersession Record",
+    "status_version_lines": [
+      "Version1.1,2026-11-08. Authority: [current owner instruction](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/owner-task-authorization.txt). Documentation and isolated validation/planning Authorized; no product implementation/release authority.",
+      "| Purpose | Actual path in this directory | Version/status | Relationship |",
+      "| Architecture/design | [browser-core-architecture.md](browser-core-architecture.md), [core-boundary-contracts.md](core-boundary-contracts.md), [data model](browser-core-data-model.md), [persistence](local-persistence-architecture.md), [recovery](migration-and-recovery-strategy.md), [capabilities](browser-capability-architecture.md) | Proposed supporting designs plus current scope notices | DS\u00a732 owns current engineering dispositions; historic proposals do not override current owner policy |",
+      "| Developer specification | [m1-developer-specification.md](m1-developer-specification.md) | v1.1 Proposed | Current requirements/policy/coverage/engineering gaps; not validated implementation |",
+      "| Validation plan | [m1-validation-plan.md](m1-validation-plan.md) | v1.1 Proposed procedures | Current authorization with original EXP procedures and run reports |",
+      "| Supporting charters | [m1-supporting-validation-charters.md](m1-supporting-validation-charters.md) | v1.1 Proposed | All five charters preserved; C02/C03 corrected explicitly |",
+      "| Case traceability | [m1-case-level-traceability.md](m1-case-level-traceability.md) | v1.2 Proposed |154 cases +11 references; preserved mappings and separate actual outcomes |"
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-register.md",
+    "sha256": "db3b84a90e51e527e0ecb834a4e028d6543b20820527cefdeeef6b28c8683a22",
+    "title": "# M1 Owner Decision and Scope Register",
+    "status_version_lines": [
+      "Version: 1.1. Decision provenance: Product Owner's consolidated closeout instruction, 2026-11-08, plus the previously supplied complete OD-R register. Product implementation and release remain Not Authorized.",
+      "The current instruction authorizes documentation, isolated EXP/SVC validation within prerequisites, evidence retention and implementation planning. It supersedes earlier no-repository-change/no-validation-execution restrictions for this task only. OD-R01\u2013OD-R20 remain approved product/architecture direction; their approval does not independently authorize product implementation. ADR statuses are unchanged.",
+      "- [Preserved Developer Specification v1.0](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/developer-specification-v1.0-proposed.md), \u00a727 contains the verbatim supplied owner entries."
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+    "sha256": "f4620c4981b801c148c4aa8a9d511b02bf0cd85aa3c86698f8d1c7859ae79011",
+    "title": "# M1 Developer Specification v1.0 \u2014 Proposed (Refined)",
+    "status_version_lines": [
+      "# M1 Developer Specification v1.0 \u2014 Proposed (Refined)",
+      "## 1. Document status, scope and authorization boundary",
+      "Version 1.1 \u2014 Proposed engineering baseline, 2026-11-08. Supersedes the supplied v1.0 for current policy and validation authority; [exact v1.0 source](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/developer-specification-v1.0-proposed.md) is preserved. All original REQ/AC/SPEC/EXP/OD-R identifiers and historical mappings remain.",
+      "Documentation, safe isolated validation and implementation planning are Authorized. Product implementation is Not Started/Not Authorized; release/signing-notarization approval/distribution are Not Authorized. Earlier source observations and reported Phase 3 results are historical, not current M1 qualification. Final outcomes are in [evidence reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) and [closeout](m1-closeout-report.md).",
+      "ADR0001 Proposed; ADR0002 Accepted; ADR0003\u20130005 Proposed. WKWebView remains conditionally accepted for MVP planning/implementation; CEF evaluation-only; Aura excluded; no production Tamizhi or mandatory identity/cloud; no public distribution."
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+    "sha256": "4ffc939db7f2485c6fefb99f84bffceb6d1e3cb179cb1f08afb41fa135035a31",
+    "title": "# M1 Validation Plan v1.1 \u2014 Proposed",
+    "status_version_lines": [
+      "# M1 Validation Plan v1.1 \u2014 Proposed",
+      "Version1.1, 2026-11-08 \u2014 Proposed procedures with current execution outcomes recorded separately. [Exact supplied v1.0](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/validation-plan-v1.0-proposed.md) remains historical. EXP-01\u201308 and their hypotheses/procedures are preserved; [reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) provide actual outcomes. Current [owner policies](m1-owner-decision-register.md) replace earlier unresolved labels. Scope and authorization are not product acceptance."
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-supporting-validation-charters.md",
+    "sha256": "08a4fea2abf84a8f3453f8be0369f87205c69d0d937f9fe6f02a425098033035",
+    "title": "# M1 Supporting Validation Charters v1.1 \u2014 Proposed",
+    "status_version_lines": [
+      "# M1 Supporting Validation Charters v1.1 \u2014 Proposed",
+      "Version1.1 \u2014 Proposed supporting procedures, 2026-11-08. Five SVC charters and all154 case IDs (including120 permission rows) are preserved. The11 experiment-reference rows are additional traceability rows, not validation cases. The [source catalog](m1-source-catalog.md) identifies original documents; source observations in their historical review are not current experimental results.",
+      "Safe isolated validation is Authorized by the current owner instruction; product implementation/release remain Not Authorized. Current outcomes live in [reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) and [the matrix](m1-case-level-traceability.md). OP-01\u201304 and the26-capability historical OD17 scope are [Owner-Decided](m1-owner-decision-register.md); absent artifacts/API mappings remain blockers."
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+    "sha256": "0e2b31537acf641af25ec152793a7e60b8c233bb926a8407c24f39aa864d6918",
+    "title": "# M1 Case-Level Traceability Matrix v1.2 \u2014 Proposed",
+    "status_version_lines": [
+      "# M1 Case-Level Traceability Matrix v1.2 \u2014 Proposed",
+      "Maintained baseline,2026-11-08. Supersedes supplied v1.1 for current authority/policy state and execution reporting. [Exact source](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/case-level-traceability-v1.1-proposed.md) is preserved. Original IDs and all original REQ/AC/SPEC/OD-R/ADR/parent/artifact/environment/platform/OP mappings are unchanged. Existing planning labels are historical readiness, not execution results. Current owner policies are [Owner-Decided](m1-owner-decision-register.md). Documentation, eligible isolated validation and planning are Authorized; product implementation/release are Not Authorized."
+    ]
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+    "sha256": "251838cc179c1e7a8229ad0a9eeadbc832ad829f91559541d6039310fc53a3e4",
+    "title": "# M1 Implementation Plan v1.1 \u2014 Proposed",
+    "status_version_lines": [
+      "# M1 Implementation Plan v1.1 \u2014 Proposed",
+      "2026-11-08. **Planning Authorized; product implementation Not Started/Not Authorized; release Not Authorized.** This replaces the prior proposed I0\u2013I7 breakdown as the maintained planning view. [Original plan](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/repository-original-m1-implementation-plan.md) remains historical; no earlier implementation proposal is retroactively granted. All19 packages below are backlog tasks, not instructions to execute now.",
+      "Readiness is technical readiness for a future finite authorization; even Conditional packages are not authorized to implement. Relative complexity M/L/XL is not a schedule or staffing estimate. Every package inherits: separate implementation authorization, reviewed scope, source-pinned meaningful tests, no cross-profile/private leakage or unauthorized native effects, truthful partial outcomes and independent security review where required."
+    ]
+  }
+]

@@ -7,9 +7,9 @@ Updated2026-11-08. Documentation consolidation, isolated validation and implemen
 - [Source catalog and supersession](m1-source-catalog.md).
 - [Owner decision/scope register](m1-owner-decision-register.md): preserved OD-R01–20/WS01.1, owner-decided OP-01–04,26-capability OD17 scope and historical OD18 distinction.
 - [Architecture](browser-core-architecture.md), [boundary contracts](core-boundary-contracts.md), [data model](browser-core-data-model.md), [persistence](local-persistence-architecture.md), [recovery](migration-and-recovery-strategy.md), [capabilities](browser-capability-architecture.md): supporting Proposed designs; current technical dispositions in the specification.
-- [Developer Specification v1.1 — Proposed](m1-developer-specification.md): REQ/AC/SPEC, policy,26-capability coverage, unresolved engineering definitions and implementation traceability.
-- [Validation Plan v1.1](m1-validation-plan.md) and [Supporting Charters v1.1](m1-supporting-validation-charters.md).
-- [Case Matrix v1.2](m1-case-level-traceability.md):154 validation cases +11 experiment-reference rows; preserved mappings and actual outcomes.
+- [Developer Specification v1.2 — Proposed](m1-developer-specification.md): REQ/AC/SPEC, policy,26-capability coverage, unresolved engineering definitions and implementation traceability.
+- [Validation Plan v1.2](m1-validation-plan.md) and [Supporting Charters v1.2](m1-supporting-validation-charters.md).
+- [Case Matrix v1.3](m1-case-level-traceability.md):154 validation cases +11 experiment-reference rows; preserved mappings and actual outcomes.
 - [Evidence and13 reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/), [run environment](../../evidence/20261108T094414Z-m1-consolidated-closeout/environment.json), [frozen native procedure](../../evidence/20261108T094414Z-m1-consolidated-closeout/procedure.md), [row results](../../evidence/20261108T094414Z-m1-consolidated-closeout/traceability-results.json).
 - [Implementation plan v1.1](m1-implementation-plan.md):19 proposed work packages; no implementation authorization.
 - [Primary consolidated closeout](m1-closeout-report.md).
@@ -23,3 +23,7 @@ EXP-01 FAIL on retained cleanup assertion; EXP-02 INCONCLUSIVE normal native sub
 The original [owner packet](m1-owner-decision-packet.md), [decision/risk proposals](m1-decisions-and-risks.md), [launch matrix](m1-launch-feature-matrix.md), [execution proposal](m1-implementation-authorization-proposal.md) and DSH review retain historical IDs/meanings. [Exact supplied sources and prior repository documents](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/) are preserved; current canonical documents supersede old policy/authority proposals rather than silently rewriting history. Phase3 source/evidence/manifests are unchanged and never transferred as current acceptance. [Final audit](../../evidence/20261108T094414Z-m1-consolidated-closeout/final-audit.json).
 
 ADR0001 Proposed;0002 Accepted;0003–0005 Proposed. Conditional WKWebView; CEF evaluation-only; no Aura, production Tamizhi, mandatory cloud/identity or public distribution. Local browsing must work without cloud or local-server dependency. No release authority or product implementation is granted by this index.
+
+## M1 validation remediation — 2026-11-08
+
+[Current remediation report](m1-validation-remediation-report.md), [EXP-01 cleanup diagnosis](m1-exp-01-cleanup-diagnosis.md), [encryption specification](m1-persistent-profile-encryption-specification.md), [Keychain/independent recovery specification](m1-keychain-and-independent-recovery-specification.md), and [readiness/downstream dependencies](m1-validation-readiness-remediation.md) refine the existing baseline. Original EXP-01 FAIL/crash evidence and165-row outcomes are preserved; fresh cleanup diagnostics and EXP-03/04 remain Blocked. No product implementation, signing or release authorized.

@@ -1,0 +1,602 @@
+# VX Browser — M1 Validation Remediation v1.0
+
+## Objective
+
+Continue from the pushed M1 canonical documentation baseline in:
+
+`/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser`
+
+Branch: `timeline`
+
+Execute a bounded remediation milestone covering:
+
+1. EXP-01 WebKit persistent-store cleanup failure diagnosis.
+2. EXP-01 synthetic-store cleanup status determination.
+3. Persistent-profile encryption specification closure.
+4. Key hierarchy, Keychain and independent recovery specification closure.
+5. Readiness reassessment for EXP-03, EXP-04, EXP-05 and EXP-07.
+
+The purpose is to remove the immediate technical ambiguities blocking M1 validation.
+
+This is a validation-remediation and documentation task, NOT product implementation.
+
+---
+
+# 1. Authorization boundaries
+
+### Authorized
+
+- Read repository documentation, source code and existing validation evidence.
+- Inspect the existing EXP-01 failure evidence and cleanup crash report.
+- Perform read-only process, filesystem and WebKit diagnostic inspection.
+- Diagnose the cleanup failure using existing evidence and safe, isolated synthetic fixtures.
+- Execute a narrowly scoped diagnostic experiment only when its prerequisites and safety are established.
+- Update encryption and recovery specifications.
+- Update validation procedures, traceability and blocker registers.
+- Create isolated disposable test harnesses if strictly necessary.
+- Run bounded, non-destructive diagnostics.
+- Produce evidence-backed remediation reports.
+
+### Not authorized
+
+- Production Browser Core implementation.
+- Production encryption or key-management implementation.
+- Production profile lifecycle implementation.
+- Production backup or recovery implementation.
+- Production UI or browser chrome implementation.
+- Broad refactoring.
+- Release, signing, notarization or distribution.
+- Destructive cleanup of stores whose state or ownership is unknown.
+
+Do not change production application behaviour to make an experiment pass.
+
+Do not use personal browsing profiles, real user data, production credentials or non-disposable website data.
+
+No commit, push, branch switch, reset, rebase or destructive Git operation.
+
+Inspect the working tree before changes and preserve unrelated work.
+
+---
+
+# 2. Establish the current baseline
+
+Inspect the pushed repository state and identify:
+
+- Current branch and HEAD.
+- Working-tree state.
+- Canonical M1 documentation index.
+- M1 closeout report.
+- EXP-01 report and evidence.
+- Cleanup-only follow-up report.
+- Developer Specification.
+- Validation Plan.
+- Supporting Validation Charters.
+- Case-Level Traceability Matrix.
+- Encryption and recovery requirements.
+- Existing ADRs.
+
+Verify that the repository state corresponds to the reported pushed documentation baseline.
+
+Do not assume the report's descriptions are current without checking.
+
+Do not overwrite or recreate the documentation baseline.
+
+Record all source paths and versions used.
+
+---
+
+# 3. EXP-01 — WebKit store cleanup diagnosis
+
+## 3.1 Failure context
+
+The previous experiment reported:
+
+- Persistent profile isolation observations succeeded.
+- Cross-profile sharing observations succeeded.
+- Relaunch observations succeeded.
+- Store removal failed while references remained live.
+- A cleanup-only follow-up crashed after boot.
+- Cleanup completion for two disposable synthetic stores is unknown.
+- No unchanged retry loop was executed.
+
+Treat the failure and unknown cleanup state as unresolved.
+
+## 3.2 First phase: read-only diagnosis
+
+Before performing any cleanup operation:
+
+1. Inspect the original experiment report.
+2. Inspect the cleanup-only follow-up report.
+3. Inspect available crash logs and diagnostic output.
+4. Identify the two synthetic store locations, if recorded.
+5. Determine their ownership and whether they are still referenced by a running process.
+6. Identify the relevant WebKit configuration and lifecycle code used by the experiment.
+7. Identify every retained object, view, website-data store or process reference that could prevent removal.
+8. Determine whether the previous crash occurred before, during or after the removal operation.
+9. Determine whether the cleanup operation may have partially completed.
+10. Determine whether any test artefacts are still needed as evidence.
+
+Do not infer cleanup success from a missing directory alone.
+
+Do not infer cleanup failure solely from an old crash report.
+
+Do not delete anything during this phase.
+
+## 3.3 Second phase: classify store state
+
+For each synthetic store, report one of:
+
+- Confirmed present and intact.
+- Confirmed present but partially modified.
+- Confirmed removed.
+- Confirmed removal incomplete.
+- State unknown.
+- Inaccessible or unable to inspect safely.
+
+Include the evidence supporting each classification.
+
+If the original paths cannot be established, state that the store identity is unknown.
+
+Do not search broadly and delete similarly named directories.
+
+## 3.4 Third phase: identify the root cause
+
+Investigate possible causes without assuming any one is correct:
+
+- Live WKWebView references.
+- Retained WKWebsiteDataStore references.
+- Active navigation or website-data operations.
+- WebKit process lifecycle.
+- Incorrect teardown ordering.
+- Asynchronous removal completion.
+- Application termination or crash timing.
+- Operating-system/WebKit behaviour.
+- Incorrect test harness assumptions.
+- Other evidence-supported causes.
+
+Distinguish:
+
+- Confirmed root cause.
+- Contributing factor.
+- Plausible hypothesis.
+- Unknown.
+
+Do not label a hypothesis as a confirmed root cause.
+
+## 3.5 Fourth phase: bounded diagnostic verification
+
+Only after the state of the original synthetic stores is understood:
+
+- Use newly created disposable synthetic stores for any fresh diagnostic verification.
+- Record the exact macOS version and hardware architecture.
+- Record the WebKit configuration.
+- Record all creation and teardown steps.
+- Establish an explicit reference-release sequence.
+- Verify asynchronous operation completion.
+- Capture crash and error evidence.
+- Confirm the final state of each new synthetic store.
+
+Do not rerun the unchanged failed procedure in a loop.
+
+Do not attempt to remove an original store with unknown ownership or state.
+
+If a cleanup operation cannot be shown safe, stop and report it.
+
+## 3.6 EXP-01 conclusion
+
+Provide:
+
+- Confirmed root cause or unresolved diagnosis.
+- Evidence.
+- Store-by-store state.
+- Whether the original experiment result remains FAIL.
+- Whether a narrowly scoped follow-up result changes any specific finding.
+- Remaining limitations.
+- Required engineering changes as proposed tasks only.
+
+Do not silently convert the original EXP-01 FAIL to PASS.
+
+A follow-up can qualify a specific remediation without erasing the original failure history.
+
+---
+
+# 4. Persistent-profile encryption specification closure
+
+Review OD-R07, OD-R08, OD-R09, OD-R18 and OD-R19 alongside:
+
+- REQ-06, REQ-07, REQ-08 and REQ-22.
+- SPEC-05, SPEC-07 and SPEC-08.
+- EXP-03, EXP-04 and EXP-05.
+- Existing AC and case mappings.
+- ADRs 0001–0005.
+
+Produce a concrete technical specification without implementing it.
+
+## 4.1 Threat model
+
+Define:
+
+- Assets being protected.
+- Adversary assumptions.
+- Local device compromise assumptions.
+- Offline disk access.
+- Backup theft.
+- Keychain access assumptions.
+- Application process compromise limitations.
+- User-session and OS account boundaries.
+- What encryption does not protect against.
+
+Explicitly distinguish at-rest encryption from protection against malware or an attacker with access to an unlocked application session.
+
+## 4.2 Data protection inventory
+
+Produce a complete data-classification matrix covering:
+
+- Browser catalog.
+- Persistent profile SQLite databases.
+- SQLite WAL.
+- SQLite journals.
+- Temporary database files.
+- Profile metadata.
+- History.
+- Download metadata.
+- User-created snapshots.
+- Internal recovery snapshots.
+- Session state.
+- Recently closed tabs/windows.
+- Permission grants.
+- Bookmarks and saved pages.
+- Backup archives.
+- Recovery manifests.
+- Key metadata.
+- WebKit website data.
+- Downloaded external files.
+
+For each data class specify:
+
+- Storage location.
+- Sensitivity.
+- Encryption requirement.
+- Key scope.
+- Integrity requirement.
+- Backup inclusion.
+- Deletion requirement.
+- Private-mode behaviour.
+- Remaining unknowns.
+
+Do not claim that SQLite encryption protects WebKit's independently managed website-data store.
+
+Do not claim that browser metadata encryption protects external downloaded files.
+
+## 4.3 Cryptographic architecture
+
+Specify, with justified choices:
+
+- Encryption and authenticated-integrity construction.
+- Key sizes and random generation requirements.
+- Per-profile data-encryption keys.
+- Key-encryption or wrapping hierarchy.
+- Profile-specific key isolation.
+- Nonce/IV generation and uniqueness.
+- Associated authenticated data.
+- Format/version identifiers.
+- Authentication failure behaviour.
+- Corruption detection.
+- Rotation strategy.
+- Key replacement and migration.
+- Secure deletion limitations.
+
+Do not invent an unverified cryptographic provider or library dependency.
+
+Identify candidate implementations and their actual platform availability as a qualification task.
+
+Do not write cryptographic production code.
+
+## 4.4 SQLite protection
+
+Specify protection for:
+
+- Main database.
+- WAL.
+- Rollback journal.
+- Temporary files.
+- Checkpoints.
+- Vacuum and migration.
+- Backup snapshots.
+- Crash recovery.
+- File permissions and filesystem assumptions.
+
+Define what evidence EXP-03 must capture to establish protection across all relevant database artefacts.
+
+Do not accept a successful database-open test as proof of complete encryption coverage.
+
+## 4.5 WebKit data protection boundary
+
+Explicitly document:
+
+- What the application controls.
+- What WKWebsiteDataStore controls.
+- Which WebKit website-data categories need protection.
+- Which categories are persistent or nonpersistent.
+- What can be inspected, exported, deleted or verified through supported APIs.
+- What cannot be guaranteed by the application.
+- How WebKit data is treated in backup and restore.
+- Platform limitations and qualification requirements.
+
+Preserve the conditional WKWebView architecture decision.
+
+Do not assume that WebKit storage can be encrypted using the same SQLite key or mechanism.
+
+---
+
+# 5. Keychain and independent recovery specification closure
+
+Use OD-R08, OD-R09 and OD-R19 as the owner-approved direction.
+
+The intended custody model is:
+
+- macOS Keychain for normal access.
+- Independently held recovery material.
+- Printable recovery kit.
+- Exportable encrypted recovery file.
+- Recovery generated locally.
+- No transmission or retention of unprotected recovery secrets on Vezham servers.
+- Offline recovery without a Vezham account or cloud service.
+
+Specify the full lifecycle.
+
+## 5.1 Key hierarchy
+
+Define:
+
+- Profile data-encryption key.
+- Key-encryption key or wrapping layer.
+- Keychain-protected representation.
+- Recovery-material-protected representation.
+- Recovery metadata.
+- Key versioning.
+- Profile identity binding.
+- Key replacement and rotation.
+
+Explain how independent recovery protects the profile key without making recovery material itself a plaintext copy of that key.
+
+## 5.2 Recovery material
+
+Specify:
+
+- Printable recovery-kit format.
+- Exportable encrypted recovery-file format.
+- Entropy and encoding requirements.
+- Confidentiality and integrity protection.
+- Recovery verification.
+- Copy/export confirmation.
+- Loss and corruption behaviour.
+- Version migration.
+- Offline restoration.
+- Handling of an already unlocked profile.
+- Recovery when Keychain access is unavailable.
+
+The printable format must be suitable for secure offline custody.
+
+Do not expose recovery secrets in logs, crash reports or diagnostic output.
+
+## 5.3 Unlock and locking lifecycle
+
+Define:
+
+- Normal Keychain unlock.
+- Optional profile lock.
+- Manual lock.
+- macOS lock.
+- Sleep.
+- User switching.
+- Inactivity lock.
+- Key access invalidation.
+- Key reacquisition.
+- Failed authentication.
+- Recovery after restart.
+- Multiple profiles.
+- In-flight operations.
+- Download behaviour.
+- Event and subscription fencing.
+
+A UI-only lock is insufficient if the key remains available to an active data-access path.
+
+## 5.4 Loss and failure scenarios
+
+Define outcomes for:
+
+- Keychain item unavailable.
+- Keychain item deleted.
+- Recovery material lost.
+- Recovery material corrupted.
+- Wrong recovery material.
+- Profile database corrupted.
+- Recovery manifest corrupted.
+- Incompatible format version.
+- Interrupted rotation.
+- Partial restore.
+- Existing destination conflicts.
+
+Clearly identify the unrecoverable condition where both Keychain access and independent recovery material are unavailable.
+
+---
+
+# 6. EXP-03 and EXP-04 readiness reassessment
+
+For each experiment, create a prerequisite checklist with evidence requirements.
+
+### EXP-03
+
+Must establish:
+
+- Qualified encryption provider.
+- Key-management interface.
+- Disposable synthetic databases.
+- Main/WAL/journal/temp-file coverage.
+- Authentication and corruption fixtures.
+- Key rotation and recovery fixtures.
+- Pass/fail criteria.
+
+### EXP-04
+
+Must establish:
+
+- Keychain access in the supported macOS environment.
+- Independent recovery format.
+- Recovery fixture generation.
+- Offline recovery procedure.
+- Wrong-key and corrupted-material fixtures.
+- Verification of recovered profile data.
+- Clear evidence of key isolation.
+
+Do not mark either experiment ready merely because the specification was written.
+
+Use:
+
+- Ready.
+- Conditionally ready.
+- Blocked.
+
+Explain each classification.
+
+Do not execute either experiment until its prerequisites are genuinely satisfied.
+
+---
+
+# 7. Downstream impact assessment
+
+Reassess the impact on:
+
+- EXP-05 profile lock and key lifecycle.
+- EXP-07 encrypted backup and cross-Mac restore.
+- EXP-08 deleted-data reconciliation.
+- SVC-04 integrated offline operation.
+- SVC-05 durable host/content-process recovery.
+
+For each, report:
+
+- Newly resolved dependencies.
+- Remaining blockers.
+- Changes to prerequisites.
+- Whether its existing procedure remains valid.
+- Whether a future specification revision is necessary.
+
+Do not run downstream experiments simply because this remediation task was successful.
+
+---
+
+# 8. Documentation and traceability updates
+
+Update existing canonical documents where necessary.
+
+Preserve:
+- Historical OD01–OD20.
+- OD-R01–OD-R20.
+- WS01.1.
+- OP-01–OP-04.
+- SPEC-01–SPEC-16.
+- REQ-01–REQ-22.
+- AC01–AC15.
+- EXP-01–EXP-08.
+- SVC-01–SVC-05.
+- Existing validation case identifiers.
+- ADR statuses.
+
+Do not invent new acceptance criteria or silently alter existing case mappings.
+
+If additional cases are necessary, propose them separately with rationale.
+
+Maintain the historical EXP-01 FAIL and cleanup follow-up crash evidence.
+
+Record new findings as a dated remediation report linked to the original experiment.
+
+Do not erase or rewrite historical evidence to produce a cleaner status.
+
+---
+
+# 9. Required deliverables
+
+Produce:
+
+**D01 — EXP-01 Cleanup Diagnosis Report**
+- Original failure analysis.
+- Two original synthetic-store states.
+- Root-cause assessment.
+- Any bounded follow-up findings.
+- Remaining unknowns.
+
+**D02 — Persistent Profile Encryption Specification**
+- Threat model.
+- Data protection matrix.
+- Cryptographic architecture.
+- SQLite protection.
+- WebKit boundary.
+- Backup and deletion considerations.
+
+**D03 — Keychain and Independent Recovery Specification**
+- Key hierarchy.
+- Recovery material.
+- Unlock and lock lifecycle.
+- Rotation.
+- Loss and failure scenarios.
+
+**D04 — EXP-03/04 Readiness Assessment**
+- Prerequisites.
+- Qualified dependencies.
+- Fixtures.
+- Acceptance criteria.
+- Readiness classification.
+
+**D05 — Downstream Validation Dependency Update**
+- EXP-05, EXP-07, EXP-08, SVC-04 and SVC-05.
+
+**D06 — Updated Traceability**
+- Existing identifiers preserved.
+- Specification and validation links updated.
+- Remaining gaps explicitly recorded.
+
+**D07 — M1 Validation Remediation Report**
+- Changes made.
+- Evidence collected.
+- Failures and unresolved questions.
+- Current validation status.
+- Next recommended engineering task.
+
+---
+
+# 10. Final acceptance criteria
+
+This remediation task is complete only when:
+
+1. The original EXP-01 failure is preserved.
+2. The two original synthetic-store states are individually classified or explicitly unknown.
+3. No unsafe deletion has occurred.
+4. The cleanup crash is analysed using available evidence.
+5. Any fresh diagnostic execution uses newly created disposable stores.
+6. No unchanged retry loop has been run.
+7. Encryption coverage is defined for every relevant data class.
+8. SQLite artefact protection is specified.
+9. WebKit protection limitations are explicitly documented.
+10. Key hierarchy is specified.
+11. Keychain and recovery custody are specified.
+12. Recovery loss and failure scenarios are defined.
+13. Lock and key lifecycle semantics are specified.
+14. EXP-03 and EXP-04 readiness is evidence-based.
+15. Downstream experiment dependencies are reassessed.
+16. Traceability is updated without inventing IDs.
+17. No production product feature has been implemented.
+18. No release has been authorized.
+19. All changes and evidence are reported accurately.
+
+## Final authorization statement
+
+Documentation and bounded validation remediation are authorized.
+
+Product implementation is NOT AUTHORIZED.
+
+Release is NOT AUTHORIZED.
+
+If a prerequisite is unavailable, mark it blocked and provide the exact missing dependency. Do not substitute assumptions, mock success or broaden the scope.
+
+The desired outcome is a defensible EXP-01 diagnosis and a technically closed encryption/recovery specification that makes the next validation stage executable.

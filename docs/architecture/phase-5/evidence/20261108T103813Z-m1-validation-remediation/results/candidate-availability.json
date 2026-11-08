@@ -1,0 +1,188 @@
+{
+  "apple_sdk_declarations": {
+    "System/Library/Frameworks/CryptoKit.framework/Modules/CryptoKit.swiftmodule/arm64e-apple-macos.swiftinterface": {
+      "present": true,
+      "sha256": "fd6795bbc2ba434a0a3b23acb665173b011a34decb3b5eee078ab94ba4574d36",
+      "declarations": [
+        {
+          "line": 284,
+          "text": "public struct HKDF<H> : Swift::Sendable where H : CryptoKit::HashFunction {"
+        },
+        {
+          "line": 396,
+          "text": "public struct SymmetricKeySize : Swift::Sendable {"
+        },
+        {
+          "line": 410,
+          "text": "public struct SymmetricKey : Foundation::ContiguousBytes, Swift::Sendable {"
+        },
+        {
+          "line": 488,
+          "text": "public enum GCM : Swift::Sendable {"
+        }
+      ]
+    },
+    "System/Library/Frameworks/Security.framework/Headers/SecAccessControl.h": {
+      "present": true,
+      "sha256": "a3c5c75c87992d21a7bb1ce3e4638440a2fd0246936d8bb3a102b08fc3dc21ed",
+      "declarations": [
+        {
+          "line": 52,
+          "text": "@constant kSecAccessControlUserPresence"
+        },
+        {
+          "line": 94,
+          "text": "kSecAccessControlUserPresence           = 1u << 0,"
+        }
+      ]
+    },
+    "System/Library/Frameworks/Security.framework/Headers/SecItem.h": {
+      "present": true,
+      "sha256": "1a5a731dc52e85cf7fb6ebe26d75aa467113c07b6ec3389c98e183d75c651eaf",
+      "declarations": [
+        {
+          "line": 88,
+          "text": "kSecAttrAccessGroup (iOS; also macOS if kSecAttrSynchronizable and/or kSecUseDataProtectionKeychain set)"
+        },
+        {
+          "line": 89,
+          "text": "kSecAttrAccessible (iOS; also macOS if kSecAttrSynchronizable and/or kSecUseDataProtectionKeychain set)"
+        },
+        {
+          "line": 102,
+          "text": "kSecAttrSynchronizable"
+        },
+        {
+          "line": 107,
+          "text": "kSecAttrAccessGroup (iOS; also macOS if kSecAttrSynchronizable and/or kSecUseDataProtectionKeychain set)"
+        },
+        {
+          "line": 108,
+          "text": "kSecAttrAccessible (iOS; also macOS if kSecAttrSynchronizable and/or kSecUseDataProtectionKeychain set)"
+        },
+        {
+          "line": 125,
+          "text": "kSecAttrSynchronizable"
+        },
+        {
+          "line": 139,
+          "text": "kSecAttrSynchronizable"
+        },
+        {
+          "line": 144,
+          "text": "kSecAttrAccessGroup (iOS; also macOS if kSecAttrSynchronizable and/or kSecUseDataProtectionKeychain set)"
+        },
+        {
+          "line": 145,
+          "text": "kSecAttrAccessible (iOS; also macOS if kSecAttrSynchronizable and/or kSecUseDataProtectionKeychain set)"
+        },
+        {
+          "line": 164,
+          "text": "kSecAttrSynchronizable"
+        },
+        {
+          "line": 186,
+          "text": "items, unless the kSecAttrSynchronizable attribute is also present. If"
+        },
+        {
+          "line": 219,
+          "text": "@constant kSecAttrSynchronizable Specifies a dictionary key whose value is"
+        },
+        {
+          "line": 225,
+          "text": "A predefined value, kSecAttrSynchronizableAny, may be provided instead of"
+        },
+        {
+          "line": 229,
+          "text": "IMPORTANT: Specifying the kSecAttrSynchronizable key has several caveats:"
+        },
+        {
+          "line": 231,
+          "text": "- Updating or deleting items using the kSecAttrSynchronizable key will"
+        },
+        {
+          "line": 238,
+          "text": "- Items stored or obtained using the kSecAttrSynchronizable key cannot"
+        },
+        {
+          "line": 244,
+          "text": "- Items stored or obtained using the kSecAttrSynchronizable key may"
+        },
+        {
+          "line": 247,
+          "text": "- On macOS, when kSecAttrSynchronizable is set to true, returning"
+        },
+        {
+          "line": 252,
+          "text": "- When specifying a query that uses the kSecAttrSynchronizable key,"
+        },
+        {
+          "line": 257,
+          "text": "@constant kSecAttrSynchronizableAny Specifies that both synchronizable and"
+        },
+        {
+          "line": 259,
+          "text": "used as a value for the kSecAttrSynchronizable dictionary key in a call to"
+        },
+        {
+          "line": 456,
+          "text": "extern const CFStringRef kSecAttrSynchronizable"
+        },
+        {
+          "line": 458,
+          "text": "extern const CFStringRef kSecAttrSynchronizableAny"
+        },
+        {
+          "line": 588,
+          "text": "@constant kSecAttrAccessibleWhenUnlockedThisDeviceOnly Item data can only"
+        },
+        {
+          "line": 613,
+          "text": "extern const CFStringRef kSecAttrAccessibleWhenUnlockedThisDeviceOnly"
+        },
+        {
+          "line": 958,
+          "text": "or Identity items on macOS when either kSecUseDataProtectionKeychain"
+        },
+        {
+          "line": 959,
+          "text": "is set to true or kSecAttrSynchronizable is set to true."
+        },
+        {
+          "line": 1033,
+          "text": "@constant kSecUseDataProtectionKeychain Specifies a dictionary key whose value"
+        },
+        {
+          "line": 1036,
+          "text": "Note that when kSecUseDataProtectionKeychain is set to true, returning references is"
+        },
+        {
+          "line": 1055,
+          "text": "extern const CFStringRef kSecUseDataProtectionKeychain"
+        },
+        {
+          "line": 1148,
+          "text": "or Identity items on macOS when either kSecUseDataProtectionKeychain"
+        },
+        {
+          "line": 1149,
+          "text": "is set to true or kSecAttrSynchronizable is set to true."
+        },
+        {
+          "line": 1203,
+          "text": "may be. Similarly, on macOS with either kSecUseDataProtectionKeychain"
+        },
+        {
+          "line": 1204,
+          "text": "set to true or kSecAttrSynchronizable set to true, Certificate, Key, and Identity"
+        }
+      ]
+    }
+  },
+  "sqlcipher_paths": {
+    "/opt/homebrew/opt/sqlcipher": false,
+    "/usr/local/opt/sqlcipher": false
+  },
+  "qualified_provider": false,
+  "runtime_keychain_or_crypto_test_performed": false
+}

@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-08T10:40:10.648956+00:00",
+  "command": [
+    "xcrun",
+    "dwarfdump",
+    "--uuid",
+    "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app/Contents/MacOS/VXM1Validation"
+  ],
+  "returncode": 0,
+  "stdout": "UUID: 9B391BAD-3851-386E-A6CB-0B8C83691B1B (arm64) /private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app/Contents/MacOS/VXM1Validation\n",
+  "stderr": ""
+}

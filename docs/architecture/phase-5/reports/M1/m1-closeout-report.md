@@ -110,3 +110,7 @@ This task closes the documentation consolidation and bounded available validatio
 ## Native observation bounds and permission inventory
 
 Native cache observations cover CacheStorage markers, not all HTTP/disk caches; service-worker observations cover registration/readiness, not every execution/resource behavior; no scheduling-race or forensic-erasure guarantee. The maintained specification §34 explicitly lists all12 existing website permission kinds, actual SDK-declaration evidence, missing M1 positive/native qualification and unchanged PERM families. Native macOS notifications remain separate.
+
+## Subsequent bounded remediation — 2026-11-08
+
+This closeout remains the historical consolidation outcome. [Dated remediation](m1-validation-remediation-report.md) adds read-only crash/state diagnosis and concrete Proposed encryption/recovery specifications. It does not erase the original FAIL, alter historical evidence or qualify any old blocked case.

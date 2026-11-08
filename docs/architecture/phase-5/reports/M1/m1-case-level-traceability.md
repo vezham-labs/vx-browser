@@ -1,4 +1,4 @@
-# M1 Case-Level Traceability Matrix v1.2 — Proposed
+# M1 Case-Level Traceability Matrix v1.3 — Proposed
 
 Maintained baseline,2026-11-08. Supersedes supplied v1.1 for current authority/policy state and execution reporting. [Exact source](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/case-level-traceability-v1.1-proposed.md) is preserved. Original IDs and all original REQ/AC/SPEC/OD-R/ADR/parent/artifact/environment/platform/OP mappings are unchanged. Existing planning labels are historical readiness, not execution results. Current owner policies are [Owner-Decided](m1-owner-decision-register.md). Documentation, eligible isolated validation and planning are Authorized; product implementation/release are Not Authorized.
 
@@ -433,3 +433,6 @@ An affirmative external-file-deletion subcase remains **Unspecified — requires
 
 C01:154 cases +11 references =165 rows, recalculated from parsed individual rows. C02:PERM-016 remains AC09/AC14; maintained SVC AC07 summary corrected to LOCK-001/RECOVERY-006. C03:RECOVERY-010 remains OP-04; older SVC OP-01 mention corrected without adding a dependency. Source archives preserve the original discrepancy. No REQ/AC/SPEC/EXP/SVC/case IDs were introduced. REQ-21 remains Stage C with no AC assignment. REQ-22 route remains SPEC-08/AC08 and EXP-01/02/05/07. ADR statuses unchanged. F01–F17 remain open risks; historical OD/WS01.1 meanings unchanged.
 
+## Dated validation remediation — 2026-11-08
+
+No individual mapping or outcome changed. Existing154 cases+11 references remain165 rows:154 validation cases Blocked; references1 FAIL/1 INCONCLUSIVE/9 BLOCKED. ISO-001/EXP-01 original FAIL is preserved; [dated diagnosis](m1-exp-01-cleanup-diagnosis.md) adds matched crash/binary, actual fault phase and store-by-store unknown state. SPEC-04/05/07/08 and existing CRYPTO/KEY/LOCK/BACKUP routes now link [encryption](m1-persistent-profile-encryption-specification.md), [key/recovery](m1-keychain-and-independent-recovery-specification.md) and [readiness/downstream assessment](m1-validation-readiness-remediation.md). No new AC/case/EXP/SVC identifiers and no inferred pass. Original machine-readable outcomes remain immutable historical evidence.

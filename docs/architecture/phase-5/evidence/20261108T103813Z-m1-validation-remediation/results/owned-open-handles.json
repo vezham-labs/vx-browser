@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-08T10:40:10.630046+00:00",
+  "command": [
+    "lsof",
+    "-nP",
+    "+D",
+    "/Users/vigneshwaranbhoj/Library/Containers/internal.vx.M1Validation.run20261108T094414Z/Data/Library/WebKit/WebsiteDataStore"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": ""
+}

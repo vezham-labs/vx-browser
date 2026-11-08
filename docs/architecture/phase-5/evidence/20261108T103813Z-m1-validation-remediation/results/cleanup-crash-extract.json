@@ -1,0 +1,103 @@
+{
+  "procName": "VXM1Validation",
+  "pid": 60924,
+  "captureTime": "2026-11-08 15:26:16.0952 +0530",
+  "procLaunch": "2026-11-08 15:26:10.0183 +0530",
+  "exception": {
+    "codes": "0x0000000000000001, 0x0000000000000048",
+    "rawCodes": [
+      1,
+      72
+    ],
+    "type": "EXC_BAD_ACCESS",
+    "signal": "SIGSEGV",
+    "subtype": "KERN_INVALID_ADDRESS at 0x0000000000000048"
+  },
+  "termination": {
+    "flags": 0,
+    "code": 11,
+    "namespace": "SIGNAL",
+    "indicator": "Segmentation fault: 11",
+    "byProc": "exc handler",
+    "byPid": 60924
+  },
+  "faultingThread": 3,
+  "source_path": "/Users/vigneshwaranbhoj/Library/Logs/DiagnosticReports/VXM1Validation-2026-11-08-152729.ips",
+  "source_sha256": "5a613ea6fa12cfb1f2f7c87959d943374059618007c82f964bc02dd6d8274cec",
+  "frames": [
+    {
+      "image": "libsystem_platform.dylib",
+      "symbol": "os_unfair_lock_lock",
+      "imageOffset": 3188,
+      "symbolLocation": 12
+    },
+    {
+      "image": "JavaScriptCore",
+      "symbol": "WTF::RunLoop::dispatch(WTF::Function<void ()>&&)",
+      "imageOffset": 91428,
+      "symbolLocation": 56
+    },
+    {
+      "image": "WebKit",
+      "symbol": "WTF::Detail::CallableWrapper<WebKit::WebsiteDataStore::removeDataStoreWithIdentifierImpl(WTF::UUID const&, WTF::CompletionHandler<void (WTF::String const&)>&&)::$_0, void>::call()",
+      "imageOffset": 11673456,
+      "symbolLocation": 588
+    },
+    {
+      "image": "JavaScriptCore",
+      "symbol": "void WTF::dispatchWorkItem<WTF::(anonymous namespace)::DispatchWorkItem>(void*)",
+      "imageOffset": 106872,
+      "symbolLocation": 52
+    },
+    {
+      "image": "libdispatch.dylib",
+      "symbol": "_dispatch_client_callout",
+      "imageOffset": 112032,
+      "symbolLocation": 16
+    },
+    {
+      "image": "libdispatch.dylib",
+      "symbol": "_dispatch_lane_serial_drain",
+      "imageOffset": 40896,
+      "symbolLocation": 744
+    },
+    {
+      "image": "libdispatch.dylib",
+      "symbol": "_dispatch_lane_invoke",
+      "imageOffset": 43708,
+      "symbolLocation": 392
+    },
+    {
+      "image": "libdispatch.dylib",
+      "symbol": "_dispatch_root_queue_drain_deferred_wlh",
+      "imageOffset": 85848,
+      "symbolLocation": 284
+    },
+    {
+      "image": "libdispatch.dylib",
+      "symbol": "_dispatch_workloop_worker_thread",
+      "imageOffset": 84060,
+      "symbolLocation": 720
+    },
+    {
+      "image": "libsystem_pthread.dylib",
+      "symbol": "_pthread_wqthread",
+      "imageOffset": 12160,
+      "symbolLocation": 292
+    },
+    {
+      "image": "libsystem_pthread.dylib",
+      "symbol": "start_wqthread",
+      "imageOffset": 7364,
+      "symbolLocation": 8
+    }
+  ],
+  "app_image": [
+    {
+      "name": "VXM1Validation",
+      "uuid": "9b391bad-3851-386e-a6cb-0b8c83691b1b",
+      "arch": "arm64"
+    }
+  ],
+  "privacy": "selected diagnostic fields; no raw memory or unrelated crash reports"
+}

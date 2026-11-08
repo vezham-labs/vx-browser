@@ -1,0 +1,12 @@
+{
+  "sha256": "e502cb01eb392e5e74a5365b7be59694a891aec573b04dd4fdce4d54528c85e1",
+  "matches_original_cleanup_provenance": true,
+  "crash_image_uuid": [
+    {
+      "name": "VXM1Validation",
+      "uuid": "9b391bad-3851-386e-a6cb-0b8c83691b1b",
+      "arch": "arm64"
+    }
+  ],
+  "uuid_command_output": "UUID: 9B391BAD-3851-386E-A6CB-0B8C83691B1B (arm64) /private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app/Contents/MacOS/VXM1Validation\n"
+}

@@ -1,8 +1,8 @@
-# M1 Validation Plan v1.1 — Proposed
+# M1 Validation Plan v1.2 — Proposed
 
 ## 1. Current baseline and scope
 
-Version1.1, 2026-11-08 — Proposed procedures with current execution outcomes recorded separately. [Exact supplied v1.0](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/validation-plan-v1.0-proposed.md) remains historical. EXP-01–08 and their hypotheses/procedures are preserved; [reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) provide actual outcomes. Current [owner policies](m1-owner-decision-register.md) replace earlier unresolved labels. Scope and authorization are not product acceptance.
+Version1.2, 2026-11-08 — Proposed procedures with current execution outcomes recorded separately. [Exact supplied v1.0](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/validation-plan-v1.0-proposed.md) remains historical. EXP-01–08 and their hypotheses/procedures are preserved; [reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) provide actual outcomes. Current [owner policies](m1-owner-decision-register.md) replace earlier unresolved labels. Scope and authorization are not product acceptance.
 
 ## 2. Scope and authorization boundary
 
@@ -777,3 +777,6 @@ Current finite native procedure is [frozen here](../../evidence/20261108T094414Z
 
 Documentation/eligible isolated validation/evidence/planning are Authorized; product implementation and release remain Not Authorized. No branch changes/commits/pushes. Exact owner-approved scope is [preserved](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/owner-task-authorization.txt).
 
+## Remediation procedure bindings — 2026-11-08
+
+Existing EXP procedures/IDs/mappings remain. EXP-03/CRYPTO-001 now binds the proposed [protection/provider/artifact contract](m1-persistent-profile-encryption-specification.md); EXP-04/KEY-001/002 binds [key/envelope/custody/failure contract](m1-keychain-and-independent-recovery-specification.md). Prerequisites and exact evidence oracles are [assessed here](m1-validation-readiness-remediation.md); both full experiments remain Blocked and unexecuted. EXP-05/07/08 and SVC-04/05 are not triggered by specification closure. [Cleanup diagnosis](m1-exp-01-cleanup-diagnosis.md) records the confirmed fault phase and unknown original-store states. Do not init/remove an original store to inspect it; no fresh diagnostic until the original-state prerequisite is met.

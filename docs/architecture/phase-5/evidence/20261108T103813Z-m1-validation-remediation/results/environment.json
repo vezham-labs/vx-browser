@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-11-08T11:01:34.647824+00:00",
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+  "architecture": "arm64",
+  "xcode_path": "/Applications/Xcode.app/Contents/Developer",
+  "new_app_launch": false,
+  "new_store_creation_or_removal": false,
+  "signing": false,
+  "crypto_or_keychain_experiment": false,
+  "product_implementation": false,
+  "frameworks": {
+    "WebKit": {
+      "CFBundleIdentifier": "com.apple.WebKit",
+      "CFBundleShortVersionString": "22625",
+      "CFBundleVersion": "22625.2.8.11.9"
+    },
+    "JavaScriptCore": {
+      "CFBundleIdentifier": "com.apple.JavaScriptCore",
+      "CFBundleShortVersionString": "22625",
+      "CFBundleVersion": "22625.2.8.11.9"
+    }
+  }
+}

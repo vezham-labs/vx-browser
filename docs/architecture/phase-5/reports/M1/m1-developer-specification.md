@@ -1,8 +1,8 @@
-# M1 Developer Specification v1.0 — Proposed (Refined)
+# M1 Developer Specification v1.2 — Proposed
 
 ## 1. Document status, scope and authorization boundary
 
-Version 1.1 — Proposed engineering baseline, 2026-11-08. Supersedes the supplied v1.0 for current policy and validation authority; [exact v1.0 source](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/developer-specification-v1.0-proposed.md) is preserved. All original REQ/AC/SPEC/EXP/OD-R identifiers and historical mappings remain.
+Version 1.2 — Proposed engineering baseline, 2026-11-08. Supersedes the supplied v1.0 for current policy and validation authority; [exact v1.0 source](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/developer-specification-v1.0-proposed.md) is preserved. All original REQ/AC/SPEC/EXP/OD-R identifiers and historical mappings remain.
 
 Documentation, safe isolated validation and implementation planning are Authorized. Product implementation is Not Started/Not Authorized; release/signing-notarization approval/distribution are Not Authorized. Earlier source observations and reported Phase 3 results are historical, not current M1 qualification. Final outcomes are in [evidence reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) and [closeout](m1-closeout-report.md).
 
@@ -1180,8 +1180,8 @@ These remain **reported prior findings**, not fresh repository findings. “Reso
 | SPEC-01 | Concrete package graph, visibility, bindings and composition |
 | SPEC-02 | Swift engine contract and callback/capability mapping |
 | SPEC-03 | Schema/types/indexes/migrations/receipt configuration |
-| SPEC-04 | Crypto provider/parameters/formats and category-specific protection |
-| SPEC-05 | Keychain, wrapping, recovery-file and rotation protocols |
+| SPEC-04 | Proposed construction/configuration/category contract now defined in supporting encryption specification; candidate build/provenance/binding/artifact qualification remains |
+| SPEC-05 | Proposed key/Keychain/envelope/recovery/rotation contract now defined in supporting specification; implementation/interop/native access/independent recovery qualification remains |
 | SPEC-06 | Complete lifecycle ownership/checkpoints/reconciliation |
 | SPEC-07 | Reliable lock signals and actual access/key/view barrier |
 | SPEC-08 | WebKit storage/protection/deletion/backup evidence |
@@ -1260,8 +1260,8 @@ These decisions refine contracts for planning without implementing them. Defined
 | 01 | Proposed future BrowserCoreKit placement: packages/browser-core, four targets. Domain has reviewed Foundation values only; Ports→Domain; Core→Domain+Ports; Persistence→Domain+Ports+selected SQLite adapter. Native Host composes all; WebKit adapter stays in the native host target outside the four-target package. No such files/targets created. | Actual manifests/exports/conformance absent; SVC-01 blocked. |
 | 02 | Swift typed engine port owns no WK/AppKit objects; adapter uses MainActor and native registration. Legacy TypeScript facade remains reference syntax. | Exact Swift methods/callback fields and production chrome transport/origin/codec require finite specification; SVC-02 blocked. |
 | 03 | Catalog binds ProfileId/database/store identifiers, lifecycle and key/schema/privacy versions. Profile data includes approved history, bookmarks/preferences, manual download metadata, restore/recently-closed descriptors and grants where supported. Private has no disk lease. | DDL/index/version/receipt/window and safe path/open details incomplete; no schema/database created. |
-| 04 | Full profile encryption and authenticated integrity must cover SQLite-associated artifacts. Catalog and WebKit are separate classified domains. Stock sqlite3 without cipher_version is not a selected encrypted provider. | Provider/configuration/provenance/license and artifact qualification missing; EXP-03 blocked; no dependency installed. |
-| 05 | Keychain normal access plus independently wrapped user recovery; local printable/encrypted-file custody; no source-Keychain/cloud dependency on recovery. | Key hierarchy/wrapping/recovery format/ACL/rotation/version and independent Mac missing; EXP-04 blocked. |
+| 04 | Full profile encryption and authenticated integrity must cover SQLite-associated artifacts. Catalog and WebKit are separate classified domains. Stock sqlite3 without cipher_version is not a selected encrypted provider. | Proposed suite/configuration and coverage now defined in the supporting encryption specification; exact candidate build/digest/license/provider and artifact qualification missing; EXP-03 remains Blocked, no dependency installed. |
+| 05 | Keychain normal access plus independently wrapped user recovery; local printable/encrypted-file custody; no source-Keychain/cloud dependency on recovery. | Key hierarchy/envelopes/recovery-kit/file/ACL/rotation/version contract now specified in supporting Keychain/recovery document; actual binding/fixtures/Keychain and independent-Mac qualification missing; EXP-04 remains Blocked. |
 | 06 | Profile resource lifecycle uses creating/ready/deleting/cleanup-required; fail publication if a required resource is absent. Key/DB/WebKit/file operations are checkpointed sagas, not a global SQL transaction. | Executable transitions/restart checkpoints/private owner disposal and cleanup completion absent. Probe exposed live-store removal refusal and cleanup-only crash. |
 | 07 | Lock success requires an actual key/data/view-access barrier, not hiding UI or pausing media alone; fence ingress/results/subscriptions and revalidate after await; unrelated profiles unaffected. | Public OS trigger integration, WebKit access-stop mechanism and key reacquisition must be specified/validated; no lock/sleep/session switching executed. |
 | 08 | Required class inventory cookies/LocalStorage/IndexedDB/cache/service-workers plus explicitly declared additional types. Dedicated A/B and private-group observations are bounded; protection, physical locations and backup guarantees remain separate. | Owned-store removal failed while handles were live; cleanup-only follow-up crashed. No complete storage protection/deletion/backup guarantee; AC08 open. |
@@ -1320,3 +1320,9 @@ Source: existing engine-contract12-kind inventory, maintained SVC§6 and current
 | unknown | No affirmative mapping; denial-only required | Product denial dispatch itself BLOCKED until broker exists; never create positive grant | PERM-012 |
 
 Cross-cutting PERM-013–021 and all variant mappings remain unchanged in the canonical case matrix. Policy-only negatives cannot qualify the positive rows. Native macOS notifications are a separately selected OD17 capability with functional specification/acceptance still missing; no extra permission-kind or case ID is invented here.
+
+## 35. Focused encryption/recovery remediation — 2026-11-08
+
+[Encryption specification](m1-persistent-profile-encryption-specification.md) refines existing SPEC-04 and REQ-05/06 protection, full artifact inventory, candidate construction and WebKit boundary. [Keychain/independent recovery](m1-keychain-and-independent-recovery-specification.md) refines SPEC-05/07 custody/format/locking/rotation/failure contracts. These are Proposed technical choices, not provider qualification, owner disposition changes or implementation.
+
+[Readiness](m1-validation-readiness-remediation.md) keeps full EXP-03/04 Blocked: no pinned qualified encrypted-SQLite build/binding, interoperable key/format/crypto fixtures, actual app Keychain/lock qualification or independent Mac. Existing SPEC-08/AC08 WebKit limitations remain; no SQLCipher-key assumption covers engine-managed data. [Diagnosis](m1-exp-01-cleanup-diagnosis.md) preserves original FAIL/crash and explicitly unknown original cleanup states. Existing IDs/row mappings/ADR statuses and StageC policy unchanged.

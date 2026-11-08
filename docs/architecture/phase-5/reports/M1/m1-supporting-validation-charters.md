@@ -1,8 +1,8 @@
-# M1 Supporting Validation Charters v1.1 — Proposed
+# M1 Supporting Validation Charters v1.2 — Proposed
 
 ## 1. Maintained baseline and scope
 
-Version1.1 — Proposed supporting procedures, 2026-11-08. Five SVC charters and all154 case IDs (including120 permission rows) are preserved. The11 experiment-reference rows are additional traceability rows, not validation cases. The [source catalog](m1-source-catalog.md) identifies original documents; source observations in their historical review are not current experimental results.
+Version1.2 — Proposed supporting procedures, 2026-11-08. Five SVC charters and all154 case IDs (including120 permission rows) are preserved. The11 experiment-reference rows are additional traceability rows, not validation cases. The [source catalog](m1-source-catalog.md) identifies original documents; source observations in their historical review are not current experimental results.
 
 Safe isolated validation is Authorized by the current owner instruction; product implementation/release remain Not Authorized. Current outcomes live in [reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) and [the matrix](m1-case-level-traceability.md). OP-01–04 and the26-capability historical OD17 scope are [Owner-Decided](m1-owner-decision-register.md); absent artifacts/API mappings remain blockers.
 
@@ -721,3 +721,6 @@ RECOVERY-009 explicitly preserves external files across metadata/profile deletio
 
 Current [matrix](m1-case-level-traceability.md) retains all individual permission mappings and current outcomes; [reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) retain evidence. Positive native support is never inferred from denial-only policy fixtures. Website notifications are separate from native macOS notifications.
 
+## Remediation dependency overlay — 2026-11-08
+
+[Key/lock/recovery contract](m1-keychain-and-independent-recovery-specification.md) and [protection inventory](m1-persistent-profile-encryption-specification.md) refine SPEC-04/05/07/08. SVC-04/05 remain Blocked because integrated product artifacts/checkpoints are absent; writing the contract does not validate enforcement. PERM-016 remains AC09/AC14 and RECOVERY-010 remains OP-04. No154-case/120-permission-row mapping or status changes.

@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-08T10:40:10.277131+00:00",
+  "command": [
+    "ps",
+    "-axo",
+    "pid,ppid,comm"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

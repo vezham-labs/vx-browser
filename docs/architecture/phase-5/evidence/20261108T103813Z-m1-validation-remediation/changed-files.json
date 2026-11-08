@@ -1,0 +1,186 @@
+{
+  "recorded_at": "2026-11-08T11:10:56.907421+00:00",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "change": "modified",
+      "bytes": 4246,
+      "sha256": "28ba87bf358f718927c0c78b80848f2f87ab7867dfafb3d7398371a364df8e80"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+      "change": "modified",
+      "bytes": 105359,
+      "sha256": "3498aeab5fcac840ca08f7f47cf94395a93d30a9a568b5f5c4b9b9c6cdc712ae"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-closeout-report.md",
+      "change": "modified",
+      "bytes": 14991,
+      "sha256": "73bf83b530ccf6b77a79b14d58b0e9e2f5da0cc019356a37077e50d86a47070e"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+      "change": "modified",
+      "bytes": 95053,
+      "sha256": "e846fadee7694ef575a2f45f98bc4e0d280dd70fa7e4cbcd9a61f8fcd173afc3"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-implementation-plan.md",
+      "change": "modified",
+      "bytes": 25597,
+      "sha256": "14e953f86a6264f94fe84278fb2baebf513e97ae03162a84b00c27fe1e7437c0"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "change": "modified",
+      "bytes": 5997,
+      "sha256": "c404842daa4e8ded0f89511fe0a40dfc6694c30d5abe371f82306eeaefa57da6"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-supporting-validation-charters.md",
+      "change": "modified",
+      "bytes": 53775,
+      "sha256": "73eaa4f3c3a4a32b3a01d2053559946138d4533644190b9ab6993724bee4d638"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+      "change": "modified",
+      "bytes": 51723,
+      "sha256": "c8fbdd8499152f6f53d0f18405ea1a45530b3eadc0f7eca89abde66879ca7610"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/baseline.json",
+      "change": "created",
+      "bytes": 145435,
+      "sha256": "8676250a5fdacb0187b4348dd496f4411deb5977ea1f2e2a25b421ce5deb69e0"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/capture_read_only_diagnostics.py",
+      "change": "created",
+      "bytes": 5669,
+      "sha256": "c98575ef2d7c1baa3bb61d2fa04b371d536ff818ac6426bd1eb8ef32d16fc95e"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/remediation-audit.json",
+      "change": "created",
+      "bytes": 6566,
+      "sha256": "b2954779d9218afa540e7bf572b299c15cbb21e8c31c83851981e14764c1b5f3"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/candidate-availability.json",
+      "change": "created",
+      "bytes": 6203,
+      "sha256": "5430a7bea1137ecf8378c789cf0981dc96753995509e2712644dab1d4b6fa47c"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/cleanup-crash-extract.json",
+      "change": "created",
+      "bytes": 2901,
+      "sha256": "5d8ba27b0cb80928ed64f71a657214ac4e93f46aedc3160563a77359516263f4"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/environment.json",
+      "change": "created",
+      "bytes": 750,
+      "sha256": "660f406659f16d2ea01388bffa76d1072c3fe1776814e647525056babc75df9d"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/original-store-state.json",
+      "change": "created",
+      "bytes": 14766,
+      "sha256": "85807cf4d5f44bf3467d399fc3c80e2895e4840e22f16e0aa7d818253e2df814"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/owned-open-handles.json",
+      "change": "created",
+      "bytes": 284,
+      "sha256": "13faa9d6ea8378f63cfe80b816d7d95172d629b31ec4596f04f4b83c4f7c9e55"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/process-snapshot.json",
+      "change": "created",
+      "bytes": 162,
+      "sha256": "77699c75c6c28f6af4463150430ca07322cd88314aa2d80a229c99ce9d7d01c0"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/retained-binary-hash.json",
+      "change": "created",
+      "bytes": 452,
+      "sha256": "736df7a07bf66854c24ccf803d863ef4653c6782482dd9301f0c86b7de5fb0e2"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/retained-binary-uuid.json",
+      "change": "created",
+      "bytes": 406,
+      "sha256": "5cf5d3fb0526542dc2e738407b5f7c2bd93f0b76fa9fb87100a6a5f791d144db"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/unified-log-owned-crash-window.json",
+      "change": "created",
+      "bytes": 204549,
+      "sha256": "f5801915add9ba3f1da7e103f82b5b50fd213b0b7712d03844ba0a2ed22f1af2"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/results/unified-log-removal-summary.json",
+      "change": "created",
+      "bytes": 553,
+      "sha256": "be9e98907903d155f86517634943016eaa297e9e3a90cd3d26dc392e7108cf8e"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/sources/canonical-source-inventory.json",
+      "change": "created",
+      "bytes": 11686,
+      "sha256": "646a672f5f8220e0feb5f18f15e859f6cbe708187578017c8b2a69fab544a46a"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/sources/owner-authorization.txt",
+      "change": "created",
+      "bytes": 17780,
+      "sha256": "b1b72975efc3cb23fb2baad078d4a07490980b88fd063b426b95b7d438d34aae"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/sources/primary-sources.json",
+      "change": "created",
+      "bytes": 1634,
+      "sha256": "3c54fc1ceda20167ee50900a97503410c5d8b92877ed066ce8a3e82df252550c"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T103813Z-m1-validation-remediation/verify_remediation.py",
+      "change": "created",
+      "bytes": 8830,
+      "sha256": "515f39074be2d0bf35c6444cb3f51a0ae47efaf021e0d3c1ccbe54932642cf05"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-exp-01-cleanup-diagnosis.md",
+      "change": "created",
+      "bytes": 10132,
+      "sha256": "4bb9bb402fdce6a1a838670bdbaa64237c4434cc6c14f1ef49d105e3b3a7f75e"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+      "change": "created",
+      "bytes": 22204,
+      "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+      "change": "created",
+      "bytes": 23378,
+      "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+      "change": "created",
+      "bytes": 8774,
+      "sha256": "4a134b926ee011a38e7a5d56f24ef0f29bef903744a6fa58efc7437a23fb8288"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-remediation-report.md",
+      "change": "created",
+      "bytes": 10825,
+      "sha256": "fb3768c37420768c0204847c48b5c099365231bb420ddea567a38d65dcd539cb"
+    }
+  ]
+}

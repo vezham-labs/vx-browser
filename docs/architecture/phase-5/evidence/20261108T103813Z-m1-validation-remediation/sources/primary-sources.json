@@ -1,0 +1,50 @@
+{
+  "checked": "2026-11-08",
+  "sources": [
+    {
+      "url": "https://www.zetetic.net/sqlcipher/design/",
+      "use": "documented candidate page crypto and temp limitations"
+    },
+    {
+      "url": "https://www.zetetic.net/sqlcipher/sqlcipher-api/",
+      "use": "provider/settings/integrity interfaces"
+    },
+    {
+      "url": "https://www.zetetic.net/blog/",
+      "use": "SQLCipher4.20.0 announcement and Apple CommonCrypto candidate"
+    },
+    {
+      "url": "https://www.sqlite.org/tempfiles.html",
+      "use": "artifact categories and spill limits"
+    },
+    {
+      "url": "https://www.sqlite.org/compile.html#temp_store",
+      "use": "compile-time memory temp setting"
+    },
+    {
+      "url": "https://developer.apple.com/documentation/cryptokit/aes/gcm",
+      "use": "platform AEAD API"
+    },
+    {
+      "url": "https://developer.apple.com/documentation/security/restricting-keychain-item-accessibility",
+      "use": "access-control model"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc5869",
+      "use": "HKDF standard"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc8949",
+      "use": "deterministic binary format"
+    },
+    {
+      "url": "https://developer.apple.com/documentation/webkit/wkwebsitedatastore/remove%28foridentifier%3Acompletionhandler%3A%29",
+      "use": "release webviews before removal"
+    },
+    {
+      "url": "https://webkit.org/blog/14423/building-profiles-with-new-webkit-api/",
+      "use": "enumeration is noncreating existence check"
+    }
+  ],
+  "external_material_is_not_binary_matched_crash_root_cause_or_local_runtime_qualification": true
+}
