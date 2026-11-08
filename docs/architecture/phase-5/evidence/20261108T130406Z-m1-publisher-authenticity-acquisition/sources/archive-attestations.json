@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-08T13:05:49.209233+00:00",
+  "url": "https://api.github.com/repos/sqlcipher/sqlcipher/attestations/sha256:fc5394c916beeabb1f43e2ac97d0827f36e8917f6675a00cca54537c32cb36a2",
+  "method": "GET",
+  "default_TLS_certificate_validation": true,
+  "authentication": "none",
+  "timeout_seconds": 20,
+  "maximum_response_bytes": 4194304,
+  "status": 404,
+  "final_url": "https://api.github.com/repos/sqlcipher/sqlcipher/attestations/sha256:fc5394c916beeabb1f43e2ac97d0827f36e8917f6675a00cca54537c32cb36a2",
+  "content_type": "application/json; charset=utf-8",
+  "etag": null,
+  "last_modified": null,
+  "pagination_link": "<https://docs.github.com/en/rest/about-the-rest-api/api-versions>; rel=\"deprecation\"; type=\"text/html\"",
+  "bytes": 126,
+  "sha256": "8ecae33333826db91507fbc9512eabf6e8e7c9be3c43f6681ca70bff4c028a6d",
+  "raw_artifact": "sources/archive-attestations.body.json"
+}

@@ -1,0 +1,156 @@
+# M1 — SQLCipher Publisher Authenticity Evidence Acquisition
+
+## Objective
+
+Resolve the outstanding SQLCipher provider authenticity blocker for Vezham Browser M1.
+
+The previous qualification checkpoint established:
+
+- Pinned source commit: `355d4db92d3404e71faa8088d071a71d767807f4`
+- Provider authenticity: BLOCKED.
+- Claimed tag signer fingerprint: `2646E8ECC00DAF4C2F67DBCD19A0457D05EA8350`
+- Zetetic's published support-key fingerprint: `D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2`
+- The two fingerprints do not match.
+- No independently authenticated publisher-to-signing-key binding was established.
+- Runtime encryption, storage and interruption tests were correctly stopped before execution.
+
+Canonical report:
+
+`docs/architecture/phase-5/reports/M1/m1-provider-trust-and-runtime-qualification.md`
+
+Previous evidence:
+
+`docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/`
+
+## 1. Establish the exact baseline
+
+- Verify repository, branch, HEAD and working-tree state.
+- Confirm the previous checkpoint is present.
+- Read the complete canonical trust report and its evidence.
+- Preserve all existing evidence and source records.
+- Create a new timestamped, append-only evidence directory.
+
+Do not assume the previous observations are still current.
+
+## 2. Investigate authoritative publisher evidence
+
+Look specifically for evidence that independently binds the claimed signer to Zetetic and the exact SQLCipher release.
+
+Investigate:
+
+1. Official Zetetic release documentation and security documentation.
+2. Official publisher-controlled signing-key publication or fingerprint statements.
+3. Official release-signing instructions.
+4. Release-specific detached signatures, signed checksums or attestations.
+5. GitHub release assets and provenance/attestation metadata.
+6. Vendor documentation identifying authorized release signers.
+7. Any official vendor statement confirming the claimed tag-signing fingerprint.
+
+Prioritize evidence published through independently authenticated publisher-controlled channels.
+
+Do not treat these as sufficient by themselves:
+
+- A key downloaded from an arbitrary keyserver.
+- A GitHub tag's self-asserted signer metadata.
+- An unsigned checksum hosted alongside the artifact.
+- A support key assumed to be a release-signing key.
+- A key whose fingerprint merely resembles the claimed fingerprint.
+- A third-party statement without an authenticated publisher binding.
+
+## 3. Verify cryptographic evidence
+
+If suitable authoritative evidence is found:
+
+- Obtain the signing key through its authenticated publication channel.
+- Verify the complete fingerprint.
+- Check key validity, self-signatures, subkey bindings and revocation status.
+- Verify the exact tag or release signature using a maintained OpenPGP verifier.
+- Record verifier name, version, provenance and exact command.
+- Verify that the signed object resolves to the pinned commit.
+- Preserve raw public evidence and verification outputs.
+
+Do not write a custom cryptographic signature verifier.
+
+If the current environment lacks a maintained verifier, document the prerequisite and stop. Do not install software or alter the environment without authorization.
+
+## 4. If public evidence is insufficient
+
+Document precisely what is missing.
+
+Prepare a vendor inquiry draft addressed to Zetetic requesting:
+
+- Confirmation of the authorized release-signing key for SQLCipher 4.20.0.
+- Confirmation of the claimed fingerprint `2646E8ECC00DAF4C2F67DBCD19A0457D05EA8350`.
+- An authenticated publication location for the full signing key.
+- Confirmation that the signature binds the pinned commit.
+- An independently verifiable signed checksum or release attestation, if available.
+
+Do not send the inquiry. Do not contact the vendor or represent Vezham without separate authorization.
+
+## 5. Qualification decision
+
+Use explicit statuses:
+
+- PASS
+- FAIL
+- BLOCKED
+- INCONCLUSIVE
+- NOT EXECUTED
+
+A PASS requires sufficient authenticated publisher identity, valid signature verification and binding to the exact pinned source.
+
+If the evidence is unavailable or insufficient, retain BLOCKED.
+
+Do not turn an absence of evidence into a FAIL or infer malicious activity.
+
+## 6. Preservation and reporting
+
+Create:
+
+- Publisher authenticity evidence report.
+- Source and key provenance records.
+- Signature-verification command/output records, if executed.
+- Evidence index and SHA-256 manifest.
+- File-by-file change inventory.
+- Preservation audit.
+- Vendor inquiry draft, only if needed.
+
+Append references to the canonical M1 documents without rewriting historical outcomes.
+
+## 7. Strict boundaries
+
+Do NOT:
+
+- Run SQLCipher runtime tests.
+- Build or rebuild SQLCipher.
+- Execute the provider.
+- Modify production code or dependencies.
+- Change the pinned provider commit.
+- Modify original browser stores.
+- Run EXP-01, EXP-03 or EXP-04 campaigns.
+- Run native Keychain or WebKit qualification.
+- Change ADRs or owner decisions.
+- Send external communications.
+- Sign, notarize, release or distribute anything.
+- Commit or push unless separately requested.
+
+## 8. Final report
+
+Return:
+
+1. Baseline branch and HEAD.
+2. Evidence sources investigated.
+3. Publisher identity findings.
+4. Signing-key fingerprint findings.
+5. Cryptographic verification result, if possible.
+6. Exact relationship to the pinned source commit.
+7. Final trust-gate status.
+8. Files created or modified.
+9. Preservation results.
+10. Remaining prerequisites and recommended next action.
+
+## Expected outcome
+
+Either establish an independently verifiable publisher-authenticity PASS for the exact pinned SQLCipher source, or provide a precise evidence-based explanation of why the gate remains BLOCKED.
+
+Do not advance to runtime qualification in this task.

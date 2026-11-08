@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYMDV1Z7SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RYMDV1Z7SK');
+</script>
+
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Safari 15 title bar color -->
+    <meta name="theme-color" content="#323232">
+
+    <!-- Bootstrap -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+   <!--  <link href="/css/animated.css" rel="stylesheet" /> -->
+    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Zetetic Blog ATOM feed" href="https://www.zetetic.net/blog/atom.xml" />
+    <link rel="alternate" type="application/json" title="Zetetic Blog JSON feed" href="https://www.zetetic.net/blog/feed.json" />
+
+    <meta name="og:title" content="SQLCipher Package Signature Verification" />
+    <meta name="og:url" content="https://www.zetetic.net/sqlcipher/verify/" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="description" content="Verify the authenticity of SQLCipher binary packages using GnuPG and Zetetic&#39;s signing key. Step-by-step instructions for installation and verification." />
+    <meta name="og:description" content="Verify the authenticity of SQLCipher binary packages using GnuPG and Zetetic&#39;s signing key. Step-by-step instructions for installation and verification." />
+   
+    
+
+        <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/smoothscroll.js"></script>
+    
+    <link href="/css/command-line.css" rel="stylesheet">
+    
+    
+    <script src="/js/command-line.js"></script>
+    
+    <script src="/js/sqlcipher-verify.js"></script>
+    
+    <title>SQLCipher Package Signature Verification | Zetetic</title>
+  </head>
+  <body >
+    <nav id="topnav" class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+
+    <a class="navbar-brand main me-auto d-flex align-items-center" href="/">topnav</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarItemsContainer"
+      aria-controls="navBarItemsContainer" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- location: sqlcipher -->
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainer">
+      <ul class="nav navbar-nav gap-4 fs-6 ms-auto mb-0 mb-lg-0">
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/sqlcipher/">SQLCipher</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/codebook/">Codebook</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discuss.zetetic.net">Forum</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+    <!-- layout: custom -->
+    <nav id="subnav" class="navbar sticky-top navbar-expand-lg mb-0 py-0">
+  <div class="container">
+
+    <a class="navbar-brand sqlcipher me-auto d-flex align-items-center py-0" href="/sqlcipher">SQLCipher</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navBarItemsContainerSQLCipher" aria-controls="navBarItemsContainerSQLCipher"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainerSQLCipher">
+      <ul class="nav navbar-nav ms-auto mb-0 mb-lg-0 me-5 gap-3 fs-6 py-0">
+        <li class="nav-item">
+          <a class="nav-link " href="/sqlcipher">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/sqlcipher/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Editions <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/commercial">Commercial</a>
+            </li>
+
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/enterprise">Enterprise</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/fips">Enterprise FIPS</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/community">Community (Open Source)</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/sqlcipher/documentation">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="https://license.zetetic.net/request-account/">Customer Access</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div id="design" class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <h1>Verify SQLCipher</h1>
+
+      <p>All SQLCipher binary packages prepared by Zetetic are provided with a digital signature in order to verify the authenticity of a downloaded package. Below are the steps to <a href="#prepare">setup</a> your environment, <a href="#acquire-key">obtain</a> the Zetetic Software public key and <a href="#signatures">verify</a> any packages you have acquired with their corresponding signatures.</p>
+
+      <h2>Prepare Environment<a id="prepare" href="javascript:void();"></a></h2>
+
+      <p>The steps below will describe the usage of <a href="https://www.gnupg.org/">GnuPG</a> (i.e. <code>gpg</code>), a free implementation of the OpenPGP standard. If you already have GnuPG installed on your host machine, please skip to the next <a href="#acquire-key">step</a>. Depending on your operating system there are a few options available for installing a GnuPG implementation. We recommend the following:</p>
+
+      <ul>
+        <li>OS X - <a href="https://gpgtools.org/">GPGTools</a></li>
+        <li>Windows - <a href="https://www.gpg4win.org/">Gpg4win</a></li>
+      </ul>
+
+      <p>If you are running within a Linux environment, your distribution may already include a prebuilt version, if not, consult your package manager for specific installation instructions. To verify your installation on your machine, run the following command from your terminal &mdash; it should display the current version of the <code>gpg</code> tool:</p>
+      
+      <p class="command-line">gpg --version</p>
+
+      <h2>Acquire Zetetic Software Key<a id="acquire-key" href="javascript:void();"></a></h2>
+
+      <p>There are few ways to acquire the signing key, we will cover downloading and verifying the fingerprint of our key directly from S3 first.</p>
+
+      <p>
+        <a href="/security/support_zetetic_net_public_key.gpg" target="_blank" class="btn btn-primary btn-lg">Download Zetetic Signing Key</a>
+      </p>
+
+      <p>Before you import the key into your keyring, you should first verify the fingerprint of the key with the following command:</p>
+
+      <pre><code>gpg --keyid-format 0xlong --with-fingerprint support_zetetic_net_public_key.gpg</code></pre>
+
+      <p>This should print the following information, please verify the fingerprint matches:<a id="fingerprint" href="javascript:void();"></a></p>
+
+      <pre>
+pub   rsa4096/0xD1FA3A2A97ED25C2 2014-04-22 [C] [expires: 2027-08-02]
+      Key fingerprint = D83F 5F9E B811 D6E6 B4A0  D9C5 D1FA 3A2A 97ED 25C2
+uid                   [ unknown] Zetetic LLC &lt;support@zetetic.net&gt;
+sub   rsa3072/0x0CB99EE267FD0322 2014-04-22 [S] [expires: 2027-08-02]
+sub   rsa3072/0x3A7D809DD4DFEDA7 2014-04-22 [E] [expires: 2027-08-02]
+sub   rsa3072/0x62AE2C1CB1C49DF6 2014-04-22 [A] [expires: 2027-08-02]
+      </pre>
+      <p>Now we can import the Zetetic key into the keyring. From a terminal prompt execute the following within the directory that contains the key:</p>
+
+      <pre><code>cat support_zetetic_net_public_key.gpg | gpg --keyid-format long --import</code></pre>
+      
+      <p>Alternatively, you can request the key from a key server through the following command:</p>
+
+      <pre><code>gpg --keyserver hkps://keys.openpgp.org --recv-keys D1FA3A2A97ED25C2</code></pre>
+
+      <p>Again, we need to verify the fingerprint of the key matches <a href="#fingerprint">above</a>:</p>
+
+      <pre><code>gpg --fingerprint D1FA3A2A97ED25C2</code></pre>
+
+      <h2>Verify Signature<a id="signatures" href="javascript:void();"></a></h2>
+
+      <p>With the Zetetic key properly installed in your keyring, you can now obtain the the corresponding signature(s) for the package(s) you have acquired.<p>
+
+      <h3>Commercial and Enterprise Packages</h3>
+
+      <p>Signatures for official SQLCipher packages are available directly from the <a href="https://license.zetetic.net/request-account/">Customer Download site</a>. Once you download a package and the appropriate signature, execute the corresponding command to verify the signature matches the package.</p>
+
+      <pre><code>gpg --verify [file].sig [file]</code></pre> 
+
+      <p>For example, the following command will verify the signature of a file called <code>sqlcipher-windows-4.20.0.zip</code> using the detached signature <code>sqlcipher-windows-4.20.0.zip.sig</code>:
+
+      <pre><code>gpg --verify sqlcipher-windows-4.20.0.zip.sig sqlcipher-windows-4.20.0.zip</code></pre>
+
+      <h3>SQLCipher Core Source</h3>
+      <p>This archive contains the source code for the latest release:</p>
+      <div class="table-responsive">
+        <table class="table">
+          <tr>
+            <td>Package</td>
+            <td>Signature</td>
+            <td>Command</td>
+          </tr>
+          <tr>
+            <td><a href="/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip">sqlcipher-4.20.0.zip</a></td>
+            <td><a href="/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip.sig">sqlcipher-4.20.0.zip.sig</a></td>
+            <td><code>gpg --verify sqlcipher-4.20.0.zip.sig sqlcipher-4.20.0.zip</code></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+  <hr/>
+  <footer>
+    <p>
+      &copy;  2026, <a href="https://www.zetetic.net">Zetetic, LLC</a>.  All rights reserved. 
+      | <a href="/security/">Security</a> 
+      | <a href="/privacy/">Privacy</a> 
+      | <a href="/contact/">Contact</a> 
+    </p>
+    <p>
+      <a class="btn" href="https://twitter.com/TeamZetetic">Follow @TeamZetetic</a>
+      <a class="btn" href="https://confirmsubscription.com/h/y/2EC1451D94FE09EF">Zetetic Newsletter</a>
+    </p>
+  </footer>
+</div>
+
+  </body>
+</html>

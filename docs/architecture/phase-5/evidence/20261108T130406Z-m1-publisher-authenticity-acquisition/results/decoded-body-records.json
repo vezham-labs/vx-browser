@@ -1,0 +1,93 @@
+[
+  {
+    "name": "vendor-release-420",
+    "raw_artifact": "sources/vendor-release-420.txt",
+    "decoded_artifact": "sources/vendor-release-420.decoded.txt",
+    "gzip_decoded": true,
+    "status": 200
+  },
+  {
+    "name": "vendor-verification-instructions",
+    "raw_artifact": "sources/vendor-verification-instructions.txt",
+    "decoded_artifact": "sources/vendor-verification-instructions.decoded.txt",
+    "gzip_decoded": true,
+    "status": 200
+  },
+  {
+    "name": "vendor-community",
+    "raw_artifact": "sources/vendor-community.txt",
+    "decoded_artifact": "sources/vendor-community.decoded.txt",
+    "gzip_decoded": true,
+    "status": 200
+  },
+  {
+    "name": "vendor-security",
+    "raw_artifact": "sources/vendor-security.txt",
+    "decoded_artifact": "sources/vendor-security.decoded.txt",
+    "gzip_decoded": true,
+    "status": 200
+  },
+  {
+    "name": "vendor-sqlcipher-documentation",
+    "raw_artifact": "sources/vendor-sqlcipher-documentation.txt",
+    "decoded_artifact": "sources/vendor-sqlcipher-documentation.decoded.txt",
+    "gzip_decoded": true,
+    "status": 200
+  },
+  {
+    "name": "tag-reference",
+    "raw_artifact": "sources/tag-reference.body.json",
+    "decoded_artifact": "sources/tag-reference.decoded.txt",
+    "gzip_decoded": false,
+    "status": 200
+  },
+  {
+    "name": "tag-object",
+    "raw_artifact": "sources/tag-object.body.json",
+    "decoded_artifact": "sources/tag-object.decoded.txt",
+    "gzip_decoded": false,
+    "status": 200
+  },
+  {
+    "name": "pinned-commit",
+    "raw_artifact": "sources/pinned-commit.body.json",
+    "decoded_artifact": "sources/pinned-commit.decoded.txt",
+    "gzip_decoded": false,
+    "status": 504
+  },
+  {
+    "name": "release-420",
+    "raw_artifact": "sources/release-420.body.json",
+    "decoded_artifact": "sources/release-420.decoded.txt",
+    "gzip_decoded": false,
+    "status": 504
+  },
+  {
+    "name": "attestation-api-documentation",
+    "raw_artifact": "sources/attestation-api-documentation.txt",
+    "decoded_artifact": "sources/attestation-api-documentation.decoded.txt",
+    "gzip_decoded": false,
+    "status": 200
+  },
+  {
+    "name": "archive-attestations",
+    "raw_artifact": "sources/archive-attestations.body.json",
+    "decoded_artifact": "sources/archive-attestations.decoded.txt",
+    "gzip_decoded": false,
+    "status": 404
+  },
+  {
+    "name": "publisher-key-api",
+    "raw_artifact": "sources/publisher-key-api.body.json",
+    "decoded_artifact": "sources/publisher-key-api.decoded.txt",
+    "gzip_decoded": false,
+    "status": 200
+  },
+  {
+    "name": "publisher-gpg",
+    "raw_artifact": "sources/publisher-gpg.asc",
+    "decoded_artifact": "sources/publisher-gpg.decoded.txt",
+    "gzip_decoded": false,
+    "status": 200
+  }
+]

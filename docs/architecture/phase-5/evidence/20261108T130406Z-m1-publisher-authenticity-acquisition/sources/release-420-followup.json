@@ -1,0 +1,19 @@
+{
+  "url": "https://api.github.com/repos/sqlcipher/sqlcipher/releases/tags/v4.20.0",
+  "time": "2026-11-08T13:09:35.619001+00:00",
+  "method": "GET",
+  "authentication": "none",
+  "TLS": "default certificate validation",
+  "timeout_seconds": 20,
+  "maximum_response_bytes": 4194304,
+  "status": 200,
+  "final_url": "https://api.github.com/repos/sqlcipher/sqlcipher/releases/tags/v4.20.0",
+  "content_type": "application/json; charset=utf-8",
+  "content_encoding": null,
+  "pagination_link": null,
+  "raw_artifact": "sources/release-420-followup.body",
+  "sha256": "461b6b7a5f99970f1267d297cd457f036fa3b203aead9830d706d65024c928f3",
+  "bytes": 2392,
+  "decoded_artifact": "sources/release-420-followup.decoded",
+  "decoded_sha256": "461b6b7a5f99970f1267d297cd457f036fa3b203aead9830d706d65024c928f3"
+}

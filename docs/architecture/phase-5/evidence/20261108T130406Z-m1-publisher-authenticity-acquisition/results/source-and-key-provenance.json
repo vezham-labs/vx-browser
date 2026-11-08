@@ -1,0 +1,45 @@
+{
+  "pin": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "tag_object": "52252487a5cada9b430e8d4b20025790c5a6ba20",
+  "tag_target": {
+    "sha": "355d4db92d3404e71faa8088d071a71d767807f4",
+    "type": "commit",
+    "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/commits/355d4db92d3404e71faa8088d071a71d767807f4"
+  },
+  "tag_ref_object": {
+    "sha": "52252487a5cada9b430e8d4b20025790c5a6ba20",
+    "type": "tag",
+    "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/tags/52252487a5cada9b430e8d4b20025790c5a6ba20"
+  },
+  "tag_verification": {
+    "verified": false,
+    "reason": "unknown_key",
+    "verified_at": null
+  },
+  "tag_signature_matches_previous_bytes": true,
+  "claimed_tag_fingerprint_from_unchanged_signature_metadata": "2646E8ECC00DAF4C2F67DBCD19A0457D05EA8350",
+  "fresh_commit": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "fresh_tree": "b3aa6f0a71413a40df4c968d357bbbbee61b42cb",
+  "commit_verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  },
+  "release_tag": "v4.20.0",
+  "release_target_commitish": "master",
+  "release_immutable": false,
+  "release_assets": [],
+  "release_assets_pagination_link": null,
+  "vendor_published_package_key_fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2",
+  "current_package_key_sha256": "b5fa10e62b50478db1236f3a8c7157074d71450a1f6a245eb77a71802202eefd",
+  "package_key_bytes_match_previous_support_key": true,
+  "detached_signature_bytes": 459,
+  "vendor_source_archive_downloaded": false,
+  "vendor_archive_to_pin_equivalence_verified": false,
+  "key_validity_self_signatures_subkey_bindings_revocations_verified": false,
+  "cryptographic_verification_executed": false,
+  "runtime_tests_executed": 0,
+  "final_trust_gate_status": "BLOCKED"
+}

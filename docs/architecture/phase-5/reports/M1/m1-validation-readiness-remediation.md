@@ -75,3 +75,7 @@ First provision a pinned/provider-reviewed isolated SQLCipher candidate and audi
 ## Subsequent provider trust/runtime gate — 2026-11-08
 
 [Current gate assessment](m1-provider-trust-and-runtime-qualification.md) records a fresh unchanged-pin/source/archive check and bounded publisher-key/license/security review. Workstream A is BLOCKED on independently authenticated release provenance and signature verification. Workstreams B–D were NOT EXECUTED; encrypted main/WAL/SHM/journal/temp, key-binding and interruption outcomes remain unqualified. This supplies the missing trust-readiness detail without changing any historical EXP-03/04 or downstream status, owner decision or authorization boundary.
+
+## Publisher authenticity evidence — 2026-11-08
+
+[Publisher evidence acquisition](m1-sqlcipher-publisher-authenticity-evidence.md) adds an official vendor package-signing publication and 4.20.0 detached source signature. It does not supply cryptographic verification or exact signed-archive-to-pin binding: a maintained verifier must be separately authorized/provisioned, and the tag-signing-key or signed-archive correspondence route remains open. EXP-03/readiness remains BLOCKED; no provider build/runtime, native qualification, install or communication occurred. Historical outcomes and mappings are unchanged.

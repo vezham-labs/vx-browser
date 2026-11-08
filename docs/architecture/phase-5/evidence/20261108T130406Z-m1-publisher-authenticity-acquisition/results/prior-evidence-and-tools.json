@@ -1,0 +1,147 @@
+{
+  "previous_evidence": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate",
+  "artifact_checks": [
+    {
+      "path": "baseline.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "changed-files.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "finalize_gate_evidence.py",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "inspect_provider_authenticity.py",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "preservation-audit.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "results/authenticity-investigation.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "results/current-environment-and-state.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "results/gate-results.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "results/local-prerequisites.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "results/preservation-audit-initial.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "results/public-key-metadata.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "results/retained-input-integrity.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/canonical-inputs.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/current-pinned-commit.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/current-release.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/current-tag-object.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/current-tag-ref.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/github-publisher-key-api.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/github-publisher-public-keys.asc",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/github-publisher-public-keys.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/owner-authorization.txt",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/upstream-current-issues.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/upstream-published-advisories.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-prior-security-advisory.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-prior-security-advisory.txt",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-release-announcement.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-release-announcement.txt",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-security-page.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-security-page.txt",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-security-support-key.asc",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/vendor-security-support-key.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "verify_retained_provider_inputs.py",
+      "matches_recorded_hash": true
+    }
+  ],
+  "all_indexed_artifacts_match": true,
+  "verifiers": {
+    "gpg": null,
+    "gpgv": null,
+    "sq": null
+  },
+  "common_paths": {
+    "/opt/homebrew/bin/gpg": false,
+    "/opt/homebrew/bin/gpgv": false,
+    "/usr/local/bin/gpg": false,
+    "/usr/local/MacGPG2/bin/gpg2": false
+  },
+  "verifier_installed": false,
+  "signature_verification_executed": false
+}

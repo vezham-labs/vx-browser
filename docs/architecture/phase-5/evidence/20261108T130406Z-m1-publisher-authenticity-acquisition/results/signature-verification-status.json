@@ -1,0 +1,21 @@
+{
+  "status": "NOT EXECUTED",
+  "prerequisite_status": "BLOCKED",
+  "reason": "No maintained OpenPGP verifier available; installation not authorized under this acquisition task",
+  "verifier_name": null,
+  "verifier_version": null,
+  "verifier_provenance": null,
+  "executed_signature_commands": [],
+  "signature_stdout": null,
+  "signature_stderr": null,
+  "public_key_or_keyring_import_executed": false,
+  "key_self_signatures_validated": false,
+  "subkey_bindings_validated": false,
+  "key_validity_and_revocation_checked": false,
+  "tag_signature_validated": false,
+  "detached_signature_validated": false,
+  "exact_vendor_archive_pin_correspondence_validated": false,
+  "provider_executed": false,
+  "software_installed": false,
+  "final_authenticity_status": "BLOCKED"
+}

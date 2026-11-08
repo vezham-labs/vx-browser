@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYMDV1Z7SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RYMDV1Z7SK');
+</script>
+
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Safari 15 title bar color -->
+    <meta name="theme-color" content="#323232">
+
+    <!-- Bootstrap -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+   <!--  <link href="/css/animated.css" rel="stylesheet" /> -->
+    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Zetetic Blog ATOM feed" href="https://www.zetetic.net/blog/atom.xml" />
+    <link rel="alternate" type="application/json" title="Zetetic Blog JSON feed" href="https://www.zetetic.net/blog/feed.json" />
+
+    <meta name="og:title" content="SQLCipher Community Edition - Open Source Information" />
+    <meta name="og:url" content="https://www.zetetic.net/sqlcipher/community/" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="description" content="SQLCipher Community Edition is open source under a BSD-style license. Source code, attribution requirements, licensing guidelines, and community support resources." />
+    <meta name="og:description" content="SQLCipher Community Edition is open source under a BSD-style license. Source code, attribution requirements, licensing guidelines, and community support resources." />
+   
+    
+
+        <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/smoothscroll.js"></script>
+    
+    
+    <title>SQLCipher Community Edition - Open Source Information | Zetetic</title>
+  </head>
+  <body >
+    <nav id="topnav" class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+
+    <a class="navbar-brand main me-auto d-flex align-items-center" href="/">topnav</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarItemsContainer"
+      aria-controls="navBarItemsContainer" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- location: sqlcipher -->
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainer">
+      <ul class="nav navbar-nav gap-4 fs-6 ms-auto mb-0 mb-lg-0">
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/sqlcipher/">SQLCipher</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/codebook/">Codebook</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discuss.zetetic.net">Forum</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+    <!-- layout: custom -->
+    <nav id="subnav" class="navbar sticky-top navbar-expand-lg mb-0 py-0">
+  <div class="container">
+
+    <a class="navbar-brand sqlcipher me-auto d-flex align-items-center py-0" href="/sqlcipher">SQLCipher</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navBarItemsContainerSQLCipher" aria-controls="navBarItemsContainerSQLCipher"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainerSQLCipher">
+      <ul class="nav navbar-nav ms-auto mb-0 mb-lg-0 me-5 gap-3 fs-6 py-0">
+        <li class="nav-item">
+          <a class="nav-link " href="/sqlcipher">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/sqlcipher/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle  active" href="#" data-bs-toggle="dropdown">Editions <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/commercial">Commercial</a>
+            </li>
+
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/enterprise">Enterprise</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/fips">Enterprise FIPS</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="active" href="/sqlcipher/community">Community (Open Source)</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/sqlcipher/documentation">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="https://license.zetetic.net/request-account/">Customer Access</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div id="design" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>SQLCipher Community Edition</h1>
+      <p>SQLCipher is an open source project, below are a few resources for those interested in the community behind the project.  Digital signatures for community releases can be found <a href="/sqlcipher/verify">here</a>.</p>
+      <p>The source code for the core SQLCipher library can be found <a href="https://github.com/sqlcipher/sqlcipher">here</a>, or can be cloned from our git repository:</p>
+      <pre><code>git clone https://github.com/sqlcipher/sqlcipher.git</code></pre>
+      <p>Source code for the Android packages are made available via git:</p>
+      <pre><code>git clone https://github.com/sqlcipher/sqlcipher-android.git</code></pre>
+      <p>Note that private support for SQLCipher is available through our <a href="/sqlcipher/commercial">Commercial Edition program</a>. </p>
+
+      <h2 id="community">Support</h2>
+      <p>
+        For those using the Open Source Community Edition software, the primary venue for free support and announcements is the <a href="https://discuss.zetetic.net/category/sqlcipher">SQLCipher discussion site</a>. This resource provides a searchable forum where community members can come together to ask questions and get answers about SQLCipher.
+      </p>
+      <p>
+        <strong>All Open Source requests should initially be opened in the community discussion site!</strong> GitHub issues are reserved for reproducible bug reports, and we are unable to provide private support for Community Edition users.
+      </p>
+
+      <h2 id="bugs">Bug Reports &amp; Pull Requests</h2>
+      <p>
+        Bug reports for specific issues in SQLCipher should be reported to the project <a href="https://github.com/sqlcipher/sqlcipher/issues">GitHub Issues Page</a>.
+        <strong class="fw-bold">Note that only legitimate reproducible bugs should be filed on the GitHub page; if you're not sure, please post to the discuss site first!</strong>
+      </p>
+      <p>
+        The SQLCipher project also welcomes <a href="https://github.com/sqlcipher/sqlcipher/pulls">Pull Requests</a>. Please note that a current <a href="https://www.zetetic.net/contributions/">contributor license agreement</a> is required before any patches will even be looked at for consideration.
+      </p>
+
+      <h2>License</h2>
+      <p>SQLCipher Community Edition can be used it in both open source and closed source commercial software,  <em>but you must include our <a href="/sqlcipher/license">BSD-style license</a> and copyright statements prominently in the application and documentation.</em></p>
+
+      <hr class="separator">
+
+      <h2>Guidelines for Including SQLCipher Community Edition</h2>
+      <p>
+        When you include SQLCipher Community Edition in your project, you must comply with the BSD-style license terms. The most important requirement is that you must reproduce the copyright notice, license conditions, and disclaimer in your application.
+      </p>
+
+      <h3>License and Copyright Requirements</h3>
+      <p>
+        The SQLCipher Community Edition license requires that you include the following in a user-accessible location:
+      </p>
+      <ul>
+        <li>The full copyright notice: "Copyright (c) 2008-2026, ZETETIC, LLC"</li>
+        <li>The complete license text from the <a href="/sqlcipher/license/SQLCIPHER_COMMUNITY_EDITION_LICENSE.txt">SQLCipher Community Edition License</a></li>
+        <li>Any additional required notices for dependencies (SQLite, OpenSSL, or other cryptographic providers)</li>
+      </ul>
+
+      <h3>Where to Include License Information</h3>
+      <p>
+        The license and copyright statements must be included in a location that is accessible to users. Acceptable locations include:
+      </p>
+      <ul>
+        <li>An "About" screen within the application that displays license information</li>
+        <li>A dedicated "Licenses" or "Open Source Notices" section in the application settings or help menu</li>
+        <li>Product documentation or a website linked from the application (such as a "Legal" or "Attributions" page)</li>
+        <li>README or NOTICE files included with the application distribution</li>
+      </ul>
+
+      <p>
+        <strong class="fw-bold">Example:</strong> A mobile application might include a "Settings > About > Open Source Licenses" screen that displays the SQLCipher copyright and license text along with other open source components used in the application.
+      </p>
+
+      <hr class="separator">
+
+      <h2>Publishing Builds or Extensions of SQLCipher</h2>
+      <p>
+        If you create modified versions, builds, or extensions of SQLCipher and distribute them to others, there are important trademark considerations in addition to license compliance.
+      </p>
+
+      <h3>Trademark Usage Guidelines</h3>
+      <p>
+        SQLCipher is a registered trademark of Zetetic, LLC. Forks, modified versions, or redistributions of SQLCipher by third parties should not use the name "SQLCipher" directly as the primary product name. This helps avoid confusion among users about the source and support status of the software.
+      </p>
+
+      <h3>Naming Your Project</h3>
+      <p>
+        When creating a fork or distribution of SQLCipher, you should use one of the following approaches:
+      </p>
+
+      <h4>Option 1: Prefix with Your Project Name</h4>
+      <p>
+        Add your project, package, or organization name before "SQLCipher" to clearly distinguish it from the official releases.
+      </p>
+      <ul>
+        <li><strong class="fw-bold">Good:</strong> "myproject-sqlcipher" - Clearly indicates a project-specific build</li>
+        <li><strong class="fw-bold">Good:</strong> "acmecorp-sqlcipher" - Shows organizational ownership</li>
+        <li><strong class="fw-bold">Good:</strong> "alpine-sqlcipher" - Common pattern for distribution-specific packages</li>
+        <li><strong class="fw-bold">Avoid:</strong> "sqlcipher" - Could be confused with official releases</li>
+        <li><strong class="fw-bold">Avoid:</strong> "sqlcipher-enhanced" - Suggests it is an official variant</li>
+      </ul>
+
+      <h4>Option 2: Use an Entirely Different Name</h4>
+      <p>
+        Choose a completely different name that does not include "SQLCipher" to avoid any potential confusion.
+      </p>
+      <ul>
+        <li><strong class="fw-bold">Good:</strong> "SecureDB" - Completely distinct name</li>
+        <li><strong class="fw-bold">Good:</strong> "CryptoDB" - Unrelated name that describes functionality</li>
+      </ul>
+
+      <h3>Attribution in Forks and Distributions</h3>
+      <p>
+        Even when using a different name, your documentation should clearly state that your project is based on or derived from SQLCipher, and must include the required copyright and license notices. For example:
+      </p>
+      <blockquote>
+        MyProject-SQLCipher is a modified distribution of SQLCipher. SQLCipher is Copyright (c) 2008-2026, ZETETIC, LLC and is used under the terms of the BSD-style license.
+      </blockquote>
+
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+  <hr/>
+  <footer>
+    <p>
+      &copy;  2026, <a href="https://www.zetetic.net">Zetetic, LLC</a>.  All rights reserved. 
+      | <a href="/security/">Security</a> 
+      | <a href="/privacy/">Privacy</a> 
+      | <a href="/contact/">Contact</a> 
+    </p>
+    <p>
+      <a class="btn" href="https://twitter.com/TeamZetetic">Follow @TeamZetetic</a>
+      <a class="btn" href="https://confirmsubscription.com/h/y/2EC1451D94FE09EF">Zetetic Newsletter</a>
+    </p>
+  </footer>
+</div>
+
+  </body>
+</html>

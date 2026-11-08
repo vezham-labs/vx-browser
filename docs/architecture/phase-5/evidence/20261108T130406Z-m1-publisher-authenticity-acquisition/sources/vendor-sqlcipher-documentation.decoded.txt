@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYMDV1Z7SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RYMDV1Z7SK');
+</script>
+
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Safari 15 title bar color -->
+    <meta name="theme-color" content="#323232">
+
+    <!-- Bootstrap -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+   <!--  <link href="/css/animated.css" rel="stylesheet" /> -->
+    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Zetetic Blog ATOM feed" href="https://www.zetetic.net/blog/atom.xml" />
+    <link rel="alternate" type="application/json" title="Zetetic Blog JSON feed" href="https://www.zetetic.net/blog/feed.json" />
+
+    <meta name="og:title" content="SQLCipher Documentation - How-to Guides, Articles, and Documentation" />
+    <meta name="og:url" content="https://www.zetetic.net/sqlcipher/documentation/" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="description" content="SQLCipher documentation including core concepts, API reference, and platform integration guides for Android, Apple, .NET, Windows, Linux, Java, React Native, and Cordova." />
+    <meta name="og:description" content="SQLCipher documentation including core concepts, API reference, and platform integration guides for Android, Apple, .NET, Windows, Linux, Java, React Native, and Cordova." />
+   
+    
+
+        <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/smoothscroll.js"></script>
+    
+    <link href="/css/sqlcipher.css" rel="stylesheet">
+    
+    
+    <script src="/js/sqlcipher.js"></script>
+    
+    <title>SQLCipher Documentation - How-to Guides, Articles, and Documentation | Zetetic</title>
+  </head>
+  <body >
+    <nav id="topnav" class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+
+    <a class="navbar-brand main me-auto d-flex align-items-center" href="/">topnav</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarItemsContainer"
+      aria-controls="navBarItemsContainer" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- location: sqlcipher -->
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainer">
+      <ul class="nav navbar-nav gap-4 fs-6 ms-auto mb-0 mb-lg-0">
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/sqlcipher/">SQLCipher</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/codebook/">Codebook</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discuss.zetetic.net">Forum</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+    <!-- layout: custom -->
+    <nav id="subnav" class="navbar sticky-top navbar-expand-lg mb-0 py-0">
+  <div class="container">
+
+    <a class="navbar-brand sqlcipher me-auto d-flex align-items-center py-0" href="/sqlcipher">SQLCipher</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navBarItemsContainerSQLCipher" aria-controls="navBarItemsContainerSQLCipher"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainerSQLCipher">
+      <ul class="nav navbar-nav ms-auto mb-0 mb-lg-0 me-5 gap-3 fs-6 py-0">
+        <li class="nav-item">
+          <a class="nav-link " href="/sqlcipher">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/sqlcipher/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Editions <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/commercial">Commercial</a>
+            </li>
+
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/enterprise">Enterprise</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/fips">Enterprise FIPS</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="" href="/sqlcipher/community">Community (Open Source)</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/sqlcipher/documentation">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="https://license.zetetic.net/request-account/">Customer Access</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<nav id="docs-pill-nav" class="docs-toc-wrapper navbar navbar-expand-lg sticky-top" aria-label="Documentation sections">
+  <div class="container-fluid justify-content-end">
+    <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#pillsNav"
+      aria-controls="navBarItemsContainer" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="pillsNav" class="navbar-collapse collapse">
+      <ul class="nav nav-pills docs-toc-pills mx-auto mb-2 mb-lg-0" role="tablist">
+        <li class="nav-item"><a class="nav-link active" href="#core-concepts">Concepts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#platform-integrations">Commercial &amp; Enterprise
+            Integrations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#enterprise-features">Commercial &amp; Enterprise Features</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#fips-supplements">FIPS Installation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#community-integrations">Community Edition</a></li>
+        <li class="nav-item"><a class="nav-link" href="#other-resources">Other Resources</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div data-bs-spy="scroll" data-bs-target="#docs-pill-nav" data-bs-root-margin="-65px 0px -75% 0px" tabindex="0"
+  data-bs-smooth-scroll="true">
+
+  <div id="core-concepts" class="container docsindex">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>SQLCipher Core Concepts</h1> <!-- SQLCIPHER CORE CONCEPTS Heading -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col card-container"> <!--  Design -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-title card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/icons8-design-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Design</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Design, security features, and encryption / decryption features
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/design">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  API -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-title card-header-container">
+                <div class="card-header-item">
+                  <img src="/codebook/documentation/index-icons/icon_settings_gears.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>API</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Detailed information about the SQLCipher API and control PRAGMAs
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-api">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!--  Evaluation Checklist  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/icons8-comparison-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Evaluation Checklist</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Questions to ask when evaluating encrypted SQLite solutions
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/comparison">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Row -->
+
+      <div class="row row-cols-1 row-cols-md-3"> <!-- CORE CONCEPTS - Row 2 -->
+        <div class="col card-container"> <!--  Performance Optimization -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-title card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/icons8-performance-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Performance</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Get blazing-fast speed from SQLCipher and minimize the impact of encryption
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/performance">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  Database Key Material -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-title card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/icons8-tip-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Key Material</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Best practices for selecting and managing SQLCipher database key material
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/database-key-material">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  Encrypting Plaintext Databases -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-title card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/icons8-encryption-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Encrypting Plaintext Databases</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                How to convert an existing plaintext SQLite database to use SQLCipher encryption
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/encrypting-plaintext-databases">Learn
+                  More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="platform-integrations" class="container">
+    <div class="row">
+      <div class="col-md-12"> <!--  COMMERCIAL AND ENTERPRISE INTERGRATIONS Heading-->
+        <h1 class="mt-5">Commercial &amp; Enterprise Package Integrations</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3"> <!--  COMMERCIAL AND ENTERPRISE EDITIONS - Row 1-->
+
+        <div class="col card-container"> <!--  Android  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-title card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-android-os-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Android</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                For Java and Kotlin-based projects using Android Studio
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-for-android">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  Apple-->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-apple-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Apple</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                For Swift and ObjC projects using Xcode for Apple platforms (sold separately).
+              </p>
+              <div class="row text-center">
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-ios-logo-256.png" alt="iOS" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-mac-os-logo-256.png" alt="macOS" />
+                </div>
+              </div>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-apple">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!-- .NET -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-title card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-.net-framework-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>.NET</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                For .NET and Maui projects targeting the following platforms (sold separately).
+              </p>
+              <div class="row text-center">
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-microsoft-256.png" alt="Windows" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-ios-logo-256.png" alt="iOS" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-android-os-256.png" alt="Android" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-mac-os-logo-256.png" alt="macOS" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-linux-256.png" alt="Linux" />
+                </div>
+              </div>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-for-dotnet">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3"> <!--  COMMERCIAL AND ENTERPRISE EDITIONS - Row 2-->
+        <div class="col card-container"> <!-- Windows   -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-microsoft-256.png" alt="Windows .net" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Windows</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                For native Windows C/C++ projects or those requiring an unmanaged DLL
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-windows">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!--  Linux -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-linux-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Linux</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                For native Linux projects requiring shared libraries (.so) or static linking (.a)
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-linux">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 card-container"> <!-- SYSTEM DATA SQLITE  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/windows-vs-256.png" alt="Windows.net" />
+                </div>
+                <div class="card-header-item">
+                  <h3>System.Data.SQLite</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Legacy .NET Framework 4.x library for System.Data.SQLite 1.1.119 compatibility on Windows.
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs4" role="button" href="/sqlcipher/sqlcipher-ado">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row flex-row"> <!--  COMMERCIAL AND ENTERPRISE EDITIONS - Row 3 -->
+        <div class="col-md-4 card-container"> <!--  Java  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class=" card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-java-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Java</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                SQLCipher-enabled JDBC driver for Java applications
+              </p>
+              <div class="row text-center">
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-microsoft-256.png" alt="Windows" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-mac-os-logo-256.png" alt="macOS" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-linux-256.png" alt="Linux" />
+                </div>
+              </div>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/jdbc">Integration Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 card-container"> <!-- React Native -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-react-native-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>React Native</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Cross-platform encrypted databases on React Native applications.
+              </p>
+              <div class="row text-center">
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-android-os-256.png" alt="Android" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-ios-logo-256.png" alt="iOS" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-microsoft-256.png" alt="Windows" />
+                </div>
+              </div>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/react-native">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 card-container"> <!--  Cordova -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-cordova-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Cordova</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Cross-platform encrypted databases on Cordova Mobile applications
+              </p>
+              <div class="row text-center">
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-ios-logo-256.png" alt="iOS" />
+                </div>
+                <div class="card-body-platform-image-container col">
+                  <img src="/images/sqlcipher/logos/icons8-android-os-256.png" alt="Android" />
+                </div>
+              </div>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/cordova">Integration Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- End COMMERCIAL AND ENTERPRISE INTEGRATIONS -->
+  </div>
+
+  <div id="enterprise-features" class="container">
+    <div class="row">
+      <div class="col-md-12"> <!--  COMMERCIAL AND ENTERPRISE FEATURES Heading-->
+        <h1 class="mt-5">Commercial &amp; Enterprise Features</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row rol-cols-1 row-cols-md-3">
+        <div class="col card-container"> <!--  Value Level Encryption -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/icons8-encryption-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Value Level Encryption</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                SQL functions for partial data encryption
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/value-level-encryption">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  Encrypted Virtual Tables -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/icons8-encryptionTable-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Encrypted Virtual Tables</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                Table-level data encryption
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/encrypted-virtual-tables">Learn
+                  More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!--  Performance Counters and Statistics -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/icons8-statistics-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Performance Counters</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                Performance counters and statistics for optimization and tuning
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5 " role="button" href="/sqlcipher/sqlcipher-stats">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col card-container"> <!--  Benchmarking and Performance Test Tools -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/icons8-benchmark-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Benchmarking Tools</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                For performance analysis of SQLCipher applications
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-perf">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  Embedded FIPS 140-3 Cryptographic Module  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/fips-140-3.jpg" alt="" width="85" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Enterprise FIPS</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                For US Government and FedRAMP requirements
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/fips">Learn More &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!--  License Codes  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-header-item">
+                  <img src="/images/sqlcipher/icons8-tip-100.png" alt="" />
+                </div>
+                <div class="card-title card-header-item">
+                  <h3>License Codes</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                How to apply SQLCipher license codes to avoid SQLITE_AUTH (23) not authorized errors
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-license-codes/">Commercial
+                  +
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fips-supplements" class="container">
+    <div class="row">
+      <div class="col-md-12"> <!--  FIPS INSTALLATION SUPPLEMENTS Heading-->
+        <h1 class="mt-5">FIPS Installation Supplements</h1>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col-md-4 card-container"> <!-- Android FIPS -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-android-os-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Android FIPS</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Installation supplement for SQLCipher for Android FIPS with an embedded FIPS 140-3 validated
+                cryptographic
+                module
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-android-fips">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!-- Apple FIPS -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-apple-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Apple FIPS</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Installation supplement for SQLCipher for Apple FIPS with an embedded FIPS 140-3 validated cryptographic
+                module
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-apple-fips">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!-- Linux FIPS -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-linux-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Linux FIPS</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Installation supplement for SQLCipher for Linux FIPS with an embedded FIPS 140-3 validated cryptographic
+                module
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-linux-fips">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3"> <!-- FIPS INSTALLATION SUPPLEMENTS - Row 2 -->
+
+        <div class="col-md-4 card-container"> <!-- Windows FIPS -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-microsoft-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Windows FIPS</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Installation supplement for SQLCipher for Windows FIPS with an embedded FIPS 140-3 validated
+                cryptographic
+                module
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-windows-fips">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!-- Android .NET FIPS -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-.net-framework-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Android .NET FIPS</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Installation supplement for SQLCipher for Android .NET FIPS with an embedded FIPS 140-3 validated
+                cryptographic module
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-android-net-fips">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!-- iOS .NET FIPS -->
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="card-badge fips-badge">Enterprise Only</span>
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-.net-framework-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>iOS .NET FIPS</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Installation supplement for SQLCipher for iOS .NET FIPS with an embedded FIPS 140-3 validated
+                cryptographic
+                module
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-ios-net-fips">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="community-integrations" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="mt-5">Community Edition Integrations</h1> <!-- COMMUNTIY EDITION INTEGRATIONS HEADING -->
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3"> <!-- COMMUNTIY EDITION INTEGRATIONS -->
+
+        <div class="col card-container"> <!--  Android  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-android-os-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Android</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                How to add Community Edition sqlcipher-android to an Android project
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-for-android-community">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  Apple Community -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-apple-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Apple</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                How to include Community Edition SQLCipher.swift in an Apple project
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-apple-community">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!--  Linux Community -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-linux-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Linux</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Instructions for building SQLCipher from source on Linux
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-linux-community">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row flex-row"> <!-- COMMUNITY EDITIONS - Row 2 -->
+        <div class="col-md-4 card-container"> <!--  Apple Integrators Community -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-apple-256.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Apple Integrators</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                For third party Swift Packages adding a dependency on the SQLCipher.swift Package
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="/sqlcipher/sqlcipher-apple-integrators">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="other-integrations" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="mt-5">Other Integrations</h1> <!-- OTHER INTEGRATIONS HEADING -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3"> <!-- OTHER INTEGRATIONS -->
+
+        <div class="col card-container"> <!--  Electron  -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/electron-browser-logo-icon.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Electron</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Using SQLCipher with Electron
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-electron">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-container"> <!--  Python -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/logos/icons8-python-96.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Python</h3>
+                </div>
+              </div>
+              <p class="card-text fw-light fs-5">
+                Using SQLCipher with Python
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/sqlcipher-python">Integration
+                  Instructions
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="other-resources" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="mt-5">Other Resources</h1> <!--  OTHER RESOURCES HEADING-->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row rol-cols-1 row-cols-md-3">
+        <div class="col card-container"> <!--  Software Licenses -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/icons8-software-license-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Software Licenses</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                Learn about the different license options and agreements that govern use of SQLCipher
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/license">Learn More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!--  FAQ -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/icons8-faq-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>FAQ</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                Frequently Asked Questions and Tips for SQLCipher
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button"
+                  href="https://discuss.zetetic.net/category/sqlcipher/sqlcipher-faq">Learn More &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card-container"> <!--  Export Compliance -->
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="card-header-container">
+                <div class="card-title card-header-item">
+                  <img src="/images/sqlcipher/icons8-certificate-100.png" alt="" />
+                </div>
+                <div class="card-header-item">
+                  <h3>Export Compliance</h3>
+                </div>
+              </div>
+
+              <p class="card-text fw-light fs-5">
+                Export and import regulations that apply to applications incorporating SQLCipher
+              </p>
+              <div class="button-holder">
+                <a class="btn btn-default btn-lg fs-5" role="button" href="/sqlcipher/export-compliance">Learn
+                  More
+                  &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="container">
+  <hr/>
+  <footer>
+    <p>
+      &copy;  2026, <a href="https://www.zetetic.net">Zetetic, LLC</a>.  All rights reserved. 
+      | <a href="/security/">Security</a> 
+      | <a href="/privacy/">Privacy</a> 
+      | <a href="/contact/">Contact</a> 
+    </p>
+    <p>
+      <a class="btn" href="https://twitter.com/TeamZetetic">Follow @TeamZetetic</a>
+      <a class="btn" href="https://confirmsubscription.com/h/y/2EC1451D94FE09EF">Zetetic Newsletter</a>
+    </p>
+  </footer>
+</div>
+
+  </body>
+</html>

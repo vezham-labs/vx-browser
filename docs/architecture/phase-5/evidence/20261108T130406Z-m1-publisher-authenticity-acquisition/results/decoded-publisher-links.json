@@ -1,0 +1,118 @@
+[
+  {
+    "source": "vendor-release-420",
+    "url": "https://www.zetetic.net/blog/2026/10/27/sqlcipher-4.20.0-release/"
+  },
+  {
+    "source": "vendor-release-420",
+    "url": "https://www.sqlite.org/releaselog/3_54_1.html"
+  },
+  {
+    "source": "vendor-release-420",
+    "url": "https://github.com/sqlcipher/libtomcrypt/tree/sqlcipher"
+  },
+  {
+    "source": "vendor-release-420",
+    "url": "https://github.com/sqlcipher/sqlcipher/tree/v4.20.0"
+  },
+  {
+    "source": "vendor-release-420",
+    "url": "https://github.com/sqlcipher/SQLCipher.swift"
+  },
+  {
+    "source": "vendor-release-420",
+    "url": "https://www.zetetic.net/blog/2026/10/27/sqlcipher-4.20.0-release/"
+  },
+  {
+    "source": "vendor-release-420",
+    "url": "https://www.zetetic.net/blog/2026/09/08/sqlcipher-4.19.0-release/"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/sqlcipher/verify/"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/sqlcipher/community"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/sqlcipher/verify/#prepare"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/sqlcipher/verify/#acquire-key"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/sqlcipher/verify/#signatures"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/sqlcipher/verify/#acquire-key"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/sqlcipher/verify/#fingerprint"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip"
+  },
+  {
+    "source": "vendor-verification-instructions",
+    "url": "https://www.zetetic.net/downloads/sqlcipher/verify/4.20.0/sqlcipher-4.20.0.zip.sig"
+  },
+  {
+    "source": "vendor-community",
+    "url": "https://www.zetetic.net/sqlcipher/community/"
+  },
+  {
+    "source": "vendor-community",
+    "url": "https://www.zetetic.net/sqlcipher/community"
+  },
+  {
+    "source": "vendor-community",
+    "url": "https://www.zetetic.net/sqlcipher/verify"
+  },
+  {
+    "source": "vendor-community",
+    "url": "https://github.com/sqlcipher/sqlcipher"
+  },
+  {
+    "source": "vendor-community",
+    "url": "https://github.com/sqlcipher/sqlcipher/issues"
+  },
+  {
+    "source": "vendor-community",
+    "url": "https://github.com/sqlcipher/sqlcipher/pulls"
+  },
+  {
+    "source": "vendor-community",
+    "url": "https://www.zetetic.net/sqlcipher/license/SQLCIPHER_COMMUNITY_EDITION_LICENSE.txt"
+  },
+  {
+    "source": "vendor-sqlcipher-documentation",
+    "url": "https://www.zetetic.net/sqlcipher/community"
+  },
+  {
+    "source": "vendor-sqlcipher-documentation",
+    "url": "https://www.zetetic.net/sqlcipher/documentation/#community-integrations"
+  },
+  {
+    "source": "vendor-sqlcipher-documentation",
+    "url": "https://www.zetetic.net/sqlcipher/design"
+  },
+  {
+    "source": "vendor-sqlcipher-documentation",
+    "url": "https://www.zetetic.net/sqlcipher/sqlcipher-for-android-community"
+  },
+  {
+    "source": "vendor-sqlcipher-documentation",
+    "url": "https://www.zetetic.net/sqlcipher/sqlcipher-apple-community"
+  },
+  {
+    "source": "vendor-sqlcipher-documentation",
+    "url": "https://www.zetetic.net/sqlcipher/sqlcipher-linux-community"
+  }
+]

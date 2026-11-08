@@ -35,3 +35,7 @@ ADR0001 Proposed;0002 Accepted;0003–0005 Proposed. Conditional WKWebView; CEF 
 ## Provider trust and runtime gate — 2026-11-08
 
 [Current trust/runtime gate assessment](m1-provider-trust-and-runtime-qualification.md) rechecks the unchanged pin and retained source/build integrity. Independent publisher authenticity remains BLOCKED: GitHub reports unknown_key and no authenticated matching release key/attestation was established. Runtime, storage-surface and interruption qualification stopped before execution as required. No EXP-03, case or acceptance outcome changed.
+
+## Publisher authenticity acquisition — 2026-11-08
+
+[Current publisher-evidence report](m1-sqlcipher-publisher-authenticity-evidence.md) locates official Zetetic package-signing instructions and the 4.20.0 source ZIP/detached signature, retaining the published key and signature. The package key differs from the Git tag's claimed signer; no maintained verifier was found and signed-archive-to-pin correspondence is unverified. Authenticity remains BLOCKED. No build/runtime qualification, installation or external communication occurred; an unsent inquiry is preserved.

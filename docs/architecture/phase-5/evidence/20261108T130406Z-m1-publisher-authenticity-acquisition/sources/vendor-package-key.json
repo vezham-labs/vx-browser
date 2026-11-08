@@ -1,0 +1,19 @@
+{
+  "url": "https://www.zetetic.net/security/support_zetetic_net_public_key.gpg",
+  "time": "2026-11-08T13:09:35.617928+00:00",
+  "method": "GET",
+  "authentication": "none",
+  "TLS": "default certificate validation",
+  "timeout_seconds": 20,
+  "maximum_response_bytes": 4194304,
+  "status": 200,
+  "final_url": "https://www.zetetic.net/security/support_zetetic_net_public_key.gpg",
+  "content_type": "text/plain; charset=utf-8",
+  "content_encoding": null,
+  "pagination_link": null,
+  "raw_artifact": "sources/vendor-package-key.asc",
+  "sha256": "b5fa10e62b50478db1236f3a8c7157074d71450a1f6a245eb77a71802202eefd",
+  "bytes": 29175,
+  "decoded_artifact": "sources/vendor-package-key.decoded",
+  "decoded_sha256": "b5fa10e62b50478db1236f3a8c7157074d71450a1f6a245eb77a71802202eefd"
+}

@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-08T13:05:49.328134+00:00",
+  "url": "https://docs.github.com/en/rest/repos/attestations",
+  "method": "GET",
+  "default_TLS_certificate_validation": true,
+  "authentication": "none",
+  "timeout_seconds": 20,
+  "maximum_response_bytes": 4194304,
+  "status": 200,
+  "final_url": "https://docs.github.com/en/rest/repos/attestations",
+  "content_type": "text/html; charset=utf-8",
+  "etag": null,
+  "last_modified": null,
+  "pagination_link": null,
+  "bytes": 320419,
+  "sha256": "73868feadf68f1fbc36405929563e081491aa925ef1ceca1cbd665e5221595b6",
+  "raw_artifact": "sources/attestation-api-documentation.txt"
+}

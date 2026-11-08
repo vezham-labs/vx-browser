@@ -39,3 +39,7 @@ New maintained supporting specifications: [Persistent-profile encryption v1.0](m
 ## Provider trust/runtime gate — 2026-11-08
 
 [Canonical trust/runtime assessment v1.0](m1-provider-trust-and-runtime-qualification.md) owns the subsequent authenticity stop decision at baseline 7fb95f769f9af0000997c2d193b3d3675d0ca6a6. Evidence: ../../evidence/20261108T123527Z-m1-provider-trust-runtime-gate/. Prior source/build hashes still agree; independent publisher authenticity remains BLOCKED, so runtime/storage/interruption qualification was NOT EXECUTED. Prior source versions, outcomes, owner decisions and ADR statuses are preserved.
+
+## Publisher authenticity evidence acquisition — 2026-11-08
+
+[Canonical publisher evidence report v1.0](m1-sqlcipher-publisher-authenticity-evidence.md) records fresh official signing instructions, published key and 4.20.0 detached signature at baseline 9118f89930a738c5e9d4711c7718a1e373e49761. Evidence: ../../evidence/20261108T130406Z-m1-publisher-authenticity-acquisition/. Exact Git tag→pin relationship still agrees; independent authenticity remains BLOCKED pending maintained verification and complete publisher/artifact/pin binding. An inquiry draft is unsent. Prior evidence/report bodies, ADR/owner decisions and all acceptance outcomes remain unchanged.

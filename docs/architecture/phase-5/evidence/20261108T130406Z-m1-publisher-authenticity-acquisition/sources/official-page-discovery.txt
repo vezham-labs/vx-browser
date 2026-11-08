@@ -1,0 +1,180 @@
+SQLCipher Package Signature Verification | Zetetic (https://www.zetetic.net/sqlcipher/verify/)
+citeturn48view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.zetetic.net/sqlcipher/verify/","lineno":null}); Total lines: 68
+L0:   * 【0†Editions】
+L1:     * 【1†Commercial】
+L2:     * 【2†Enterprise】
+L3:     * 【3†Enterprise FIPS】
+L4:     * 【4†Community (Open Source)】
+L5: 
+L6: # Verify SQLCipher
+L7: 
+L8: All SQLCipher binary packages prepared by Zetetic are provided with a digital signature in order to verify the authenticity of a downloaded package. Below are the steps to 【5†setup】 your environment, 【6†obtain】 the Zetetic Software public key and 【7†verify】 any packages you have acquired with their corresponding signatures.
+L9: ## Prepare Environment
+L10: 
+L11: The steps below will describe the usage of 【8†GnuPG†www.gnupg.org】 (i.e. `gpg`), a free implementation of the OpenPGP standard. If you already have GnuPG installed on your host machine, please skip to the next 【6†step】. Depending on your operating system there are a few options available for installing a GnuPG implementation. We recommend the following:
+L12: 
+L13:   * OS X - 【9†GPGTools†gpgtools.org】
+L14:   * Windows - 【10†Gpg4win†www.gpg4win.org】
+L15: If you are running within a Linux environment, your distribution may already include a prebuilt version, if not, consult your package manager for specific installation instructions. To verify your installation on your machine, run the following command from your terminal — it should display the current version of the `gpg` tool:
+L16: 
+L17: gpg --version
+L18: ## Acquire Zetetic Software Key
+L19: 
+L20: There are few ways to acquire the signing key, we will cover downloading and verifying the fingerprint of our key directly from S3 first.
+L21: 
+L22: 【11†Download Zetetic Signing Key】
+L23: 
+L24: Before you import the key into your keyring, you should first verify the fingerprint of the key with the following command:
+L25: 
+L26:     `gpg --keyid-format 0xlong --with-fingerprint support_zetetic_net_public_key.gpg`
+L27: This should print the following information, please verify the fingerprint matches:
+L28: 
+L29:     pub   rsa4096/0xD1FA3A2A97ED25C2 2014-04-22 [C] [expires: 2027-08-02]
+L30:           Key fingerprint = D83F 5F9E B811 D6E6 B4A0  D9C5 D1FA 3A2A 97ED 25C2
+L31:     uid                   [ unknown] Zetetic LLC <support@zetetic.net>
+L32:     sub   rsa3072/0x0CB99EE267FD0322 2014-04-22 [S] [expires: 2027-08-02]
+L33:     sub   rsa3072/0x3A7D809DD4DFEDA7 2014-04-22 [E] [expires: 2027-08-02]
+--------------------------------------------------------------------------------
+SQLCipher Community Edition - Open Source Information | Zetetic (https://www.zetetic.net/sqlcipher/community/)
+citeturn48view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.zetetic.net/sqlcipher/community/","lineno":null}); Total lines: 85
+L0:   * 【0†Editions】
+L1:     * 【1†Commercial】
+L2:     * 【2†Enterprise】
+L3:     * 【3†Enterprise FIPS】
+L4:     * 【4†Community (Open Source)】
+L5: # SQLCipher Community Edition
+L6: 
+L7: SQLCipher is an open source project, below are a few resources for those interested in the community behind the project. Digital signatures for community releases can be found 【5†here】.
+L8: 
+L9: The source code for the core SQLCipher library can be found 【6†here†github.com】, or can be cloned from our git repository:
+L10: 
+L11:     `git clone https://github.com/sqlcipher/sqlcipher.git`
+L12: Source code for the Android packages are made available via git:
+L13: 
+L14:     `git clone https://github.com/sqlcipher/sqlcipher-android.git`
+L15: 
+L16: Note that private support for SQLCipher is available through our 【1†Commercial Edition program】.
+L17: ## Support
+L18: 
+L19: For those using the Open Source Community Edition software, the primary venue for free support and announcements is the 【7†SQLCipher discussion site†discuss.zetetic.net】. This resource provides a searchable forum where community members can come together to ask questions and get answers about SQLCipher.
+L20: All Open Source requests should initially be opened in the community discussion site! GitHub issues are reserved for reproducible bug reports, and we are unable to provide private support for Community Edition users.
+L21: ## Bug Reports & Pull Requests
+L22: 
+L23: Bug reports for specific issues in SQLCipher should be reported to the project 【8†GitHub Issues Page†github.com】. Note that only legitimate reproducible bugs should be filed on the GitHub page; if you're not sure, please post to the discuss site first!
+L24: 
+L25: The SQLCipher project also welcomes 【9†Pull Requests†github.com】. Please note that a current 【10†contributor license agreement】 is required before any patches will even be looked at for consideration.
+L26: ## License
+L27: 
+L28: SQLCipher Community Edition can be used it in both open source and closed source commercial software, but you must include our 【11†BSD-style license】 and copyright statements prominently in the application and documentation.
+L29: 
+L30: * * *
+L31: ## Guidelines for Including SQLCipher Community Edition
+L32: 
+L33: When you include SQLCipher Community Edition in your project, you must comply with the BSD-style license terms. The most important requirement is that you must reproduce the copyright notice, license conditions, and disclaimer in your application.
+--------------------------------------------------------------------------------
+REST API endpoints for repository attestations - GitHub Docs (https://docs.github.com/en/rest/repos/attestations?apiVersion=2022-11-28)
+citeturn48view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://docs.github.com/en/rest/repos/attestations?apiVersion=2022-11-28","lineno":null}); Total lines: 146
+L0:   1.   2. 【0†GitHub Docs】
+L1: 
+L2: Search or ask Copilot/
+L3: 
+L4: Menu
+L5: 
+L6: Collapse sidebar
+L7: 
+L8: Expand sidebar
+L9: 
+L10:   1. 【0†Home】
+L11:   2. 【1†REST API】
+L12:   3. 【2†Repositories】
+L13:   4. Attestations
+L14: 
+L15: In this article
+L16: 
+L17: # REST API endpoints for repository attestations
+L18: 
+L19: Use the REST API to manage repository attestations.
+L20: ## 【3†Create an attestation】
+L21: 
+L22: Store an artifact attestation and associate it with a repository.
+L23: 
+L24: The authenticated user must have write permission to the repository and, if using a fine-grained access token, the `attestations:write` permission is required.
+L25: 
+L26: Artifact attestations are meant to be created using the 【4†attest action†github.com】. For more information, see our guide on 【5†using artifact attestations to establish a build's provenance】.
+L27: ### 【6†Fine-grained access tokens for "Create an attestation"】
+L28: 
+L29: This endpoint works with the following fine-grained token types:
+L30: 
+L31:   * 【7†GitHub App user access tokens】
+L32:   * 【8†GitHub App installation access tokens】
+L33:   * 【9†Fine-grained personal access tokens】
+L34: 
+L35: The fine-grained token must have the following permission set:
+L36: 
+L37:   * "Attestations" repository permissions (write)
+L38: ### 【10†Parameters for "Create an attestation"】
+L39: Headers
+L40: `accept` string Setting to `application/vnd.github+json` is recommended.
+L41: Path parameters
+L42: `owner` string Required The account owner of the repository. The name is not case sensitive.
+L43: `repo` string Required The name of the repository without the `.git` extension. The name is not case sensitive.
+L44: Body parameters
+L45: `bundle` object Required The attestation's Sigstore Bundle. Refer to the 【11†Sigstore Bundle Specification†github.com】 for more information.
+L46: Properties of `bundle`
+L47: `mediaType` string
+L48: `verificationMaterial` object
+L49: `dsseEnvelope` object
+L50: ### 【12†HTTP response status codes for "Create an attestation"】
+L51: 
+L52: Status code  | Description
+L53: --- | ---
+L54: `201`  | Created
+L55: `403`  | Forbidden
+L56: `422`  | Validation failed, or the endpoint has been spammed.
+L57: 
+L58: ### 【13†Code samples for "Create an attestation"】
+L59: #### Request example
+L60: 
+L61: post/repos/{owner}/{repo}/attestations
+L62: 
+L63:   * cURL
+L64: 
+L65:   * JavaScript
+L66: 
+L67:   * GitHub CLI
+L68: 
+L69: Copy to clipboard curl request example
+--------------------------------------------------------------------------------
+SQLCipher 4.20.0 Release | Zetetic (https://www.zetetic.net/blog/2026/10/27/sqlcipher-4.20.0-release/)
+citeturn48view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.zetetic.net/blog/2026/10/27/sqlcipher-4.20.0-release/","lineno":null}); Total lines: 50
+L0: # 【0†SQLCipher 4.20.0 Release】
+L1: 
+L2: 2026-10-27 08:00:00 -0400
+L3: 
+L4: We’re pleased to announce SQLCipher 4.20.0. This maintenance release updates the SQLite baseline to 3.54.1, improves migration error behavior, and refreshes cryptographic providers.
+L5: 
+L6: ## SQLCipher Changes
+L7: 
+L8:   * Updates the SQLite baseline to 【1†3.54.1†www.sqlite.org】
+L9:   * Avoids a deferred error when `PRAGMA cipher_migrate` fails before migrating
+L10:   * Skips the `.fini_array` finalizer on WebAssembly
+L11: ## Cryptographic Provider Matrix
+L12: 
+L13: The table below summarizes the cryptographic providers used across SQLCipher packages and platforms:
+L14: Edition  | Platform  | Cryptographic Provider
+L15: --- | --- | ---
+L16: Community (non-FIPS)  | Android  | 【2†based on LibTomCrypt 1.18.2†github.com】
+L17: Community (non-FIPS)  | Apple  | Common Crypto (version varies by OS)
+L18: Commercial & Enterprise (non-FIPS)  | Apple  | Common Crypto (version varies by OS)
+L19: Commercial & Enterprise (non-FIPS)  | Other Platforms  | 【3†OpenSSL 3.5.9 LTS†openssl-library.org】
+L20: Enterprise FIPS  | All Platforms  | 【4†SQLCipher Cryptographic Module】
+L21: Based on OpenSSL 3.5.9 LTS
+L22: ## Upgrading and Availability
+L23: 
+L24: SQLCipher 4.20.0 is available now. We recommend that all applications upgrade to incorporate the improvements in this release. This release updates the SQLite baseline to 3.54.1, so review the 【5†release notes†sqlite.org】 for changes that may affect your application. As always, test your applications thoroughly with the new version before deploying to production.
+L25: Commercial and Enterprise - On-demand access to new releases of SQLCipher packages are available to all licensees with an active subscription from the 【6†Customer Downloads†license.zetetic.net】 fulfillment site. Subscribers will also receive a separate email notification regarding the update and can contact us at any time for private support directly from the SQLCipher development team.
+L26: Commercial and Enterprise edition upgrades require a new license code from the SQLCipher fulfillment site for each version. Don’t forget to change the license code in your application(s) when you upgrade.
+L27: Community Edition - SQLCipher Community Edition source code is available 【7†on GitHub†github.com】, via AAR packaging for Android, and 【8†Swift Package Manager†github.com】 for Apple platforms.
+L28: 
+L29: For feedback and questions, please visit our 【9†Community Forum†discuss.zetetic.net】 or 【10†private support channels】. Thank you for using SQLCipher!
+

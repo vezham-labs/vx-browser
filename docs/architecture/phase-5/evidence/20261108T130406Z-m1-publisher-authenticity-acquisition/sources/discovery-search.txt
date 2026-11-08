@@ -1,0 +1,736 @@
+Releases · sqlcipher/sqlcipher · GitHub (https://github.com/sqlcipher/sqlcipher/releases)
+citeturn47search0 [wordlim: 200] Crawled: today; ## v4.20.0 ... This maintenance release addresses two low-risk security issues in the core library related to `sqlcipher_export` and the `hexkey` URI parameters respectively. ... This release includes a fix for a defensive mode bypass in `sqlcipher_export`.
+
+# Releases
+
+[Input: Find a release] [Input]
+
+Releases · sqlcipher/sqlcipher
+
+## v4.20.0
+
+Image: @sjlombardo sjlombardo released this 27 Oct 14:15
+
+v4.20.0
+
+`355d4db`
+
+This is a maintenance release includes these changes:
+
+  * Updates the SQLite baseline to 3.54.1
+  * Avoids a deferred error when `PRAGMA cipher_migrate` fails before migrating
+  * Skips the `.fini_array` finalizer on WebAssembly
+
+For additional details and release notes please consult release announcement.
+
+## v5.0.0-beta.1
+
+v5.0.0-beta.1
+
+Pre-release
+
+Image: @sjlombardo sjlombardo released this 22 Oct 18:19
+
+v5.0.0-beta.1
+
+`6570336`
+
+WARNING: This should only be used for beta testing at this time, not in production. It includes major functional, API, and behavioral changes that are NOT COMPATIBLE with SQLCipher 4 and earlier by default.
+
+SQLCipher 5.0.0-beta.1 details: https://www.zetetic.net/blog/2026/10/22/sqlcipher-5.0.0-beta.1/
+
+Changes between 5.0.0-beta to 5.0.0-beta.1:
+
+  * Changes architecture to use codec
+  * Adjusts KDF iteration back to 256K
+  * Rekey support for databases in WAL mode with concurrent connections
+  * Journal spill behavior is now locked down to prevent plaintext writes
+  * Fixed a bug where `cipher_hmac_fast_kdf` could write the page HMAC past the reserved area
+  * Improved error handling and reporting for rekey failures
+  * Fixed shared cache connections for encrypted databases
+  * Added `PRAGMA cipher_selftest` for verifying internal implementations
+
+Summary of major version 5 changes:
+
+  * Uses AEAD Encryption with AES-256-GCM
+  * Increase default page size to 8192 bytes
+  * Adds encryption and decryption support to PRAGMA rekey
+  * BREAKING CHANGES - see CHANGELOG.md and release announcement
+
+## v5.0.0-beta
+
+v5.0.0-beta
+
+Image: @sjlombardo sjlombardo released this 15 Sep 16:18
+
+v5.0.0-beta
+
+`02051d3`
+
+WARNING: This should only be used for beta testing at this time, not in production. It includes major functional, API, and behavioral changes that are NOT COMPATIBLE with SQLCipher 4 and earlier by default.
+
+SQLCipher 5.0.0-beta details: https://www.zetetic.net/blog/2026/09/15/sqlcipher-5.0.0-beta/
+
+Summary:
+
+  * Changes architecture to use VFS shims
+  * Uses AEAD Encryption with AES-256-GCM
+  * Increases KDF iteration increase to 512K
+  * Increase default page size to 8192 bytes
+  * Adds encryption and decryption support to PRAGMA rekey
+  * BREAKING CHANGES - see CHANGELOG.md and release announcement
+
+## v4.19.0
+
+v4.19.0
+
+Compare
+
+Image: @sjlombardo sjlombardo released this 08 Sep 14:31
+
+v4.19.0
+
+`c4b275a`
+
+  * Reports an error if a database is opened with an invalid `hexkey` URI parameter
+  * Includes the provider error code in KDF error messages
+  * Fixes escaping of migration file names
+  * Fixes escaping of database aliases in `sqlcipher_export()`
+  * Avoids returning NULL rows from `cipher_settings` if allocation fails
+  * Adjusts behavior for permanent error states
+  * Avoids leaking a partially initialized context if an initialization error occurs
+  * Fixes error reporting for failed rekey operations
+  * Improves consistency of internal memory utilization tracking
+
+This maintenance release addresses two low-risk security issues in the core library related to `sqlcipher_export` and the `hexkey` URI parameters respectively. While the practical risks are low, we recommend that applications upgrade to incorporate the fix and the other improvements in this release. For additional details and release notes please consult release announcement.
+
+## v4.18.0
+
+v4.18.0
+
+Image: @sjlombardo sjlombardo released this 18 Aug 15:09
+
+v4.18.0
+
+`63697be`
+
+  * Updates the upstream SQLite baseline to the latest patch release 3.53.4
+  * Avoids allocating memory on Windows during log writes which could cause a crash on Windows under non-default log settings with `PRAGMA cipher_memory_security = ON`
+  * Fixes "relocation truncated to fit" error for optimized GCC builds
+  * Adds comments clarifying intent of `crypto_openssl.c`
+  * Other miscellaneous fixes and general improvements
+
+For additional details and release notes please consult the 4.18.0 release announcement.
+
+## v4.17.0
+
+v4.17.0
+
+Image: @sjlombardo sjlombardo released this 08 Jul 14:22
+
+v4.17.0
+
+`810db22`
+
+  * Update baseline to SQLite 3.53.3
+  * Normalize error behavior for incorrect keys when first operation attempts to modfiy the schema
+  * Improve error detection, propagation, and fix fortuna reinitialization in LibTomCrypt provider
+  * Improve thread safety for debug memory counters and xoshiro state
+  * Add optional `SQLCIPHER_OMIT_MALLOC` macro to improve testability with Address Sanitizer
+  * Numerous miscellaneous fixes and general improvements
+
+For additional details and release notes please consult the 4.17.0 release announcement.
+
+## v4.16.0
+
+v4.16.0
+
+Image: @sjlombardo sjlombardo released this 12 May 13:48
+
+v4.16.0
+
+`e2a6040`
+
+  * Updates the upstream SQLite baseline to the latest patch release 3.53.1
+  * Fixes an allocation issue that could cause an increase in mlock warning messages (most frequently on Android)
+  * Removes redundant logging of `mlock` and `VirtualLock` failures at WARN level
+
+For additional details and release notes please consult the 4.16.0 release announcement.
+
+## v4.15.0
+
+v4.15.0
+
+Image: @sjlombardo sjlombardo released this 28 Apr 13:51
+
+v4.15.0
+
+`0b4d160`
+
+  * Update baseline to SQLite 3.53.0
+  * Sanitize source database name passed to `sqlcipher_export` (reported by
+Dima Petschke from Deutsche Telekom Security GmbH)
+  * Improve error handling in `sqlcipher_extra_init`
+  * Remove const from pzErrMesg in `sqlcipher_export_init` (issue #590)
+  * Minor code cleanups
+
+This release includes a fix for a defensive mode bypass in `sqlcipher_export`. While the practical risk of the bypass is low, we recommend that applications upgrade to incorporate the fix and the other improvements in this release. For additional details and release notes please consult release announcement.
+
+## v4.14.0
+
+v4.14.0
+
+Image: @sjlombardo sjlombardo released this 17 Mar 13:45
+
+v4.14.0
+
+`778ab89`
+
+  * Updates the upstream SQLite baseline to 3.51.3, which fixes a critical WAL-reset database corruption bug. Applications running SQLCipher in WAL mode are strongly advised to upgrade.
+  * Reintroduces LibTomCrypt cryptographic provider support based on community feedback
+  * Updates the LibTomCrypt provider with improved logging and error handling
+
+
+## v4.13.0
+
+v4.13.0
+
+Image: @sjlombardo sjlombardo released this 20 Jan 17:44
+
+v4.13.0
+
+`222bdca`
+
+  * Updates baseline to SQLite 3.51.2
+  * Corrects encoding for `sqlcipher_export()` function registration
+--------------------------------------------------------------------------------
+SQLCipher Package Signature Verification | Zetetic (https://www.zetetic.net/sqlcipher/verify/)
+citeturn47search1 [wordlim: 200] Crawled: 2 months ago; There are few ways to acquire the signing key, we will cover downloading and verifying the fingerprint of our key directly from S3 first. ... For example, the following command will verify the signature of a file called `sqlcipher-windows-4.18.0.zip` using the detached signature `sqlcipher-windows-4.18.0.zip.sig`: ... This archive contains the source code for the latest release:
+
+# Verify SQLCipher
+
+All SQLCipher binary packages prepared by Zetetic are provided with a digital signature in order to verify the authenticity of a downloaded package. Below are the steps to setup your environment, obtain the Zetetic Software public key and verify any packages you have acquired with their corresponding signatures.
+
+## Prepare Environment
+
+The steps below will describe the usage of GnuPG (i.e. `gpg`), a free implementation of the OpenPGP standard. If you already have GnuPG installed on your host machine, please skip to the next step. Depending on your operating system there are a few options available for installing a GnuPG implementation. We recommend the following:
+
+  * OS X - GPGTools
+  * Windows - Gpg4win
+
+If you are running within a Linux environment, your distribution may already include a prebuilt version, if not, consult your package manager for specific installation instructions. To verify your installation on your machine, run the following command from your terminal — it should display the current version of the `gpg` tool:
+
+gpg --version
+
+## Acquire Zetetic Software Key
+
+There are few ways to acquire the signing key, we will cover downloading and verifying the fingerprint of our key directly from S3 first.
+
+Download Zetetic Signing Key
+
+Before you import the key into your keyring, you should first verify the fingerprint of the key with the following command:
+    
+    `gpg --keyid-format 0xlong --with-fingerprint support_zetetic_net_public_key.gpg`
+
+This should print the following information, please verify the fingerprint matches:
+    
+    pub   rsa4096/0xD1FA3A2A97ED25C2 2014-04-22 [C] [expires: 2027-08-02]
+          Key fingerprint = D83F 5F9E B811 D6E6 B4A0  D9C5 D1FA 3A2A 97ED 25C2
+    uid                   [ unknown] Zetetic LLC <support@zetetic.net>
+    sub   rsa3072/0x0CB99EE267FD0322 2014-04-22 [S] [expires: 2027-08-02]
+    sub   rsa3072/0x3A7D809DD4DFEDA7 2014-04-22 [E] [expires: 2027-08-02]
+    sub   rsa3072/0x62AE2C1CB1C49DF6 2014-04-22 [A] [expires: 2027-08-02]
+          
+
+Now we can import the Zetetic key into the keyring. From a terminal prompt execute the following within the directory that contains the key:
+    
+    `cat support_zetetic_net_public_key.gpg | gpg --keyid-format long --import`
+
+Alternatively, you can request the key from a key server through the following command:
+    
+    `gpg --keyserver hkps://keys.openpgp.org --recv-keys D1FA3A2A97ED25C2`
+
+Again, we need to verify the fingerprint of the key matches above:
+    
+    `gpg --fingerprint D1FA3A2A97ED25C2`
+
+## Verify Signature
+
+With the Zetetic key properly installed in your keyring, you can now obtain the the corresponding signature(s) for the package(s) you have acquired.
+
+### Commercial and Enterprise Packages
+
+Signatures for official SQLCipher packages are available directly from the Customer Download site. Once you download a package and the appropriate signature, execute the corresponding command to verify the signature matches the package.
+    
+    `gpg --verify [file].sig [file]`
+
+For example, the following command will verify the signature of a file called `sqlcipher-windows-4.18.0.zip` using the detached signature `sqlcipher-windows-4.18.0.zip.sig`:
+    
+    `gpg --verify sqlcipher-windows-4.18.0.zip.sig sqlcipher-windows-4.18.0.zip`
+
+### SQLCipher Core Source
+
+This archive contains the source code for the latest release:
+
+Package  | Signature  | Command
+sqlcipher-4.18.0.zip  | sqlcipher-4.18.0.zip.sig  | `gpg --verify sqlcipher-4.18.0.zip.sig sqlcipher-4.18.0.zip`
+
+* * *
+--------------------------------------------------------------------------------
+Releases · sqlcipher/sqlcipher-android · GitHub (https://github.com/sqlcipher/sqlcipher-android/releases)
+citeturn47search2 [wordlim: 200] Crawled: last month; [Input: Find a release] [Input] ... This tag was signed with the committer’s verified signature. ...   * SQLCipher core submodule already at v4.19.0
+
+sqlcipher / sqlcipher-android Public
+
+  * Notifications You must be signed in to change notification settings
+  * Fork 39
+  * Star
+
+  * Code
+  * Issues 2
+  * Pull requests 0
+  * Actions
+  * Projects
+  * Security and quality 0
+  * Insights
+
+Additional navigation options
+
+# Releases: sqlcipher/sqlcipher-android
+
+Releases Tags
+
+[Input: Find a release] [Input]
+
+Releases · sqlcipher/sqlcipher-android
+
+## Release list
+
+  * v4.19.1
+  * v5.0.0-beta
+  * v4.19.0
+  * v4.18.0
+  * v4.17.0
+  * v4.16.0
+  * v4.15.0
+  * v4.14.1
+  * v4.14.0
+  * v4.13.0
+
+
+## v4.19.1
+
+v4.19.1
+
+Latest
+
+Compare
+
+# Choose a tag to compare
+
+## Sorry, something went wrong.
+
+Filter
+
+Loading [Input]
+
+## Sorry, something went wrong.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+## No results found
+
+View all tags
+
+Image: @developernotes developernotes released this 29 Sep 19:04
+
+v4.19.1
+
+This tag was signed with the committer’s verified signature.
+
+developernotes Nick Parker
+
+GPG key ID: 2F87304808D40CEC
+
+Verified
+
+Learn about vigilant mode.
+
+`96e35d1`
+
+## What's Changed
+
+  * library bump version to 4.19.1
+  * SQLCipher core submodule already at v4.19.0
+  * Both `targetSdkVersion` and `compileSdkVersion` use 36
+  * Add common-page-size linker flag
+  * SQLCipherStatement.getColumnType: report SQLITE_DATA_* values (NULL was 0) by @ZoeyJones in #94
+
+## New Contributors
+
+  * @ZoeyJones made their first contribution in #94
+
+Full Changelog: `v4.19.0...v4.19.1`
+
+## v5.0.0-beta
+
+v5.0.0-beta
+
+Pre-release
+
+Compare
+
+# Choose a tag to compare
+
+## Sorry, something went wrong.
+
+Filter
+
+Loading [Input]
+
+## Sorry, something went wrong.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+## No results found
+
+View all tags
+
+Image: @developernotes developernotes released this 15 Sep 16:31
+
+v5.0.0-beta
+
+This tag was signed with the committer’s verified signature.
+
+developernotes Nick Parker
+
+GPG key ID: 2F87304808D40CEC
+
+Verified
+
+Learn about vigilant mode.
+
+`73ea06a`
+
+## SQLCipher 5.0.0-beta details
+
+Summary:
+
+  * Changes architecture to use VFS shims
+  * Uses AEAD Encryption with AES-256-GCM
+  * Increases KDF iteration increase to 512K
+  * Increase default page size to 8192 bytes
+  * Adds encryption and decryption support to PRAGMA rekey
+  * BREAKING CHANGES - see CHANGELOG.md and release announcement
+
+## v4.19.0
+
+v4.19.0
+
+Compare
+
+# Choose a tag to compare
+
+## Sorry, something went wrong.
+
+Filter
+
+Loading [Input]
+
+## Sorry, something went wrong.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+## No results found
+
+View all tags
+
+Image: @developernotes developernotes released this 08 Sep 14:32
+
+v4.19.0
+
+This tag was signed with the committer’s verified signature.
+
+developernotes Nick Parker
+
+GPG key ID: 2F87304808D40CEC
+
+Verified
+
+Learn about vigilant mode.
+
+`9a5d685`
+
+Full Changelog: `v4.18.0...v4.19.0`
+
+## v4.18.0
+
+v4.18.0
+
+Compare
+
+# Choose a tag to compare
+
+## Sorry, something went wrong.
+
+Filter
+
+Loading [Input]
+
+## Sorry, something went wrong.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+## No results found
+
+View all tags
+
+Image: @developernotes developernotes released this 18 Aug 14:29
+
+v4.18.0
+
+This tag was signed with the committer’s verified signature.
+
+developernotes Nick Parker
+
+GPG key ID: 2F87304808D40CEC
+
+Verified
+
+Learn about vigilant mode.
+
+`e15752c`
+
+SQLCipher for Android v4.18.0 now includes:
+
+  * Support for Room 3
+  * Requires `compileSdk` 37
+
+Full Changelog: `v4.17.0...v4.18.0`
+
+## v4.17.0
+
+v4.17.0
+
+Compare
+
+--------------------------------------------------------------------------------
+GitHub - sqlcipher/sqlcipher: SQLCipher is a standalone fork of SQLite that adds 256 bit AES encryption of database files and other security features. · GitHub (https://github.com/sqlcipher/sqlcipher)
+citeturn47search3 [wordlim: 200] Crawled: last week; SQLCipher is based on SQLite and stable upstream release features are periodically integrated. ...     `PRAGMA key = "x'2DD29CA851E7B56E4697B0E1F08507293D761A05CE4D1B628663F411A8086D99'"; ... https://github.com/sqlcipher/sqlcipher/issues
+
+## SQLCipher
+
+SQLCipher is a standalone fork of the SQLite database library that adds 256 bit AES encryption of database files and other security features like:
+
+  * on-the-fly encryption
+  * tamper detection
+  * memory sanitization
+  * strong key derivation
+
+SQLCipher is based on SQLite and stable upstream release features are periodically integrated. While SQLCipher is maintained as a separate version of the source tree, the project minimizes alterations to core SQLite code whenever possible.
+
+SQLCipher is maintained by Zetetic, LLC, and additional information and documentation is available on the official SQLCipher site.
+
+## Features
+
+  * Fast performance with as little as 5-15% overhead for encryption on many operations
+  * 100% of data in the database file is encrypted
+  * Good security practices (CBC mode, HMAC, key derivation)
+  * Zero-configuration and application level cryptography
+  * Support for multiple cryptographic providers
+
+## Compatibility
+
+SQLCipher maintains database format compatibility within the same major version number so an application on any platform can open databases created by any other application provided the major version of SQLCipher is the same between them. However, major version updates (e.g. from 3.x to 4.x) often include changes to default settings. This means that newer major versions of SQLCipher will not open databases created by older versions without using special settings. For example, SQLCipher 4 introduces many new performance and security enhancements. The new default algorithms, increased KDF iterations, and larger page size mean that SQLCipher 4 will not open databases created by SQLCipher 1.x, 2.x, or 3.x by default. Instead, an application would either need to migrate the older databases to use the new format or enable a special backwards-compatibility mode. The available options are described in SQLCipher's upgrade documentation.
+
+SQLCipher is also compatible with standard SQLite databases. When a key is not provided, SQLCipher will behave just like the standard SQLite library. It is also possible to convert from a plaintext database (standard SQLite) to an encrypted SQLCipher database using ATTACH and the sqlcipher_export() convenience function.
+
+## Contributions
+
+The SQLCipher team welcomes contributions to the core library. All contributions including pull requests and patches should be based on the `prerelease` branch, and must be accompanied by a contributor agreement. We strongly encourage discussion of the proposed change prior to development and submission.
+
+## Compiling
+
+Building SQLCipher is similar to compiling a regular version of SQLite from source, with a few small exceptions. You must:
+
+  1. define `SQLITE_HAS_CODEC`
+  2. define `SQLITE_TEMP_STORE=2` or `SQLITE_TEMP_STORE=3` (or use `configure`'s --with-tempstore=yes option)
+  3. define `SQLITE_EXTRA_INIT=sqlcipher_extra_init` and `SQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown`
+  4. define `SQLITE_THREADSAFE` to `1` or `2` (enabled automatically by `configure`)
+  5. compile and link with a supported cryptographic provider (OpenSSL, LibTomCrypt, CommonCrypto/Security.framework, or NSS)
+
+The following examples demonstrate use of OpenSSL, which is a readily available provider on most Unix-like systems. Note that, in this example, `--with-tempstore=yes` is setting `SQLITE_TEMP_STORE=2` for the build, and `SQLITE_THREADSAFE` has a default value of `1`.
+    
+    `$ ./configure --with-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC -DSQLITE_EXTRA_INIT=sqlcipher_extra_init -DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown" \
+    	LDFLAGS="-lcrypto"
+    $ make
+    `
+
+## Support
+
+The primary source for complete documentation (design, API, platforms, usage) is the SQLCipher website:
+
+https://www.zetetic.net/sqlcipher/documentation
+
+The primary avenue for support and discussions is the SQLCipher discuss site:
+
+https://discuss.zetetic.net/c/sqlcipher
+
+Issues or support questions on using SQLCipher should be entered into the GitHub Issue tracker:
+
+https://github.com/sqlcipher/sqlcipher/issues
+
+Please DO NOT post issues, support questions, or other problems to blog posts about SQLCipher as we do not monitor them frequently.
+
+If you are using SQLCipher in your own software please let us know at support@zetetic.net!
+
+## Community Edition Open Source License
+
+Copyright (c) 2025, ZETETIC LLC All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. --------------------------------------------------------------------------------
+SQLCipher Database Key Material and Selection | Zetetic (https://www.zetetic.net/sqlcipher/database-key-material/)
+citeturn47search4 [wordlim: 200] Crawled: 3 weeks ago; This cleanly separates the management of the key material from the implementation of the database encryption, allowing SQLCipher to address the widest possible set of requirements and use cases. ... Most keystores support access controls that require the user to authenticate with a fingerprint, face scan, secure PIN, or the device passcode before the stored key is released to the application.
+
+Random key protected by a hardware-backed keystore. For applications that open the database without a passphrase prompt, a cryptographically random 256-bit key may be generated and provided to SQLCipher using the raw key syntax. In this model, the key itself is held in a platform “keystore”. Most keystores support access controls that require the user to authenticate with a fingerprint, face scan, secure PIN, or the device passcode before the stored key is released to the application. This allows an application to be unlocked behind a single system-managed prompt rather than an application-level passphrase. Specific facilities vary by platform:
+
+  * Apple: Keychain, with access controls that can require device unlock, biometry, or the device passcode.
+  * Android: Android Keystore, with options to require user authentication or invalidate keys on biometric enrollment changes.
+  * Windows: Windows Hello, DPAPI, or TPM-backed key storage.
+  * Linux: Secret Service API (`gnome-keyring`, `KWallet`), the kernel keyring, or TPM.
+--------------------------------------------------------------------------------
+SQLCipher Community Edition - Open Source Information | Zetetic (https://www.zetetic.net/sqlcipher/community/)
+citeturn47search5 [wordlim: 200] Crawled: 3 weeks ago; Example: A mobile application might include a "Settings > About > Open Source Licenses" screen that displays the SQLCipher copyright and license text along with other open source components used in the application.
+
+# SQLCipher Community Edition
+
+SQLCipher is an open source project, below are a few resources for those interested in the community behind the project. Digital signatures for community releases can be found here.
+
+The source code for the core SQLCipher library can be found here, or can be cloned from our git repository:
+    
+    `git clone https://github.com/sqlcipher/sqlcipher.git`
+
+Source code for the Android packages are made available via git:
+    
+    `git clone https://github.com/sqlcipher/sqlcipher-android.git`
+
+Note that private support for SQLCipher is available through our Commercial Edition program.
+
+## Support
+
+For those using the Open Source Community Edition software, the primary venue for free support and announcements is the SQLCipher discussion site. This resource provides a searchable forum where community members can come together to ask questions and get answers about SQLCipher.
+
+All Open Source requests should initially be opened in the community discussion site! --------------------------------------------------------------------------------
+sqlcipher/README.md at master · sqlcipher/sqlcipher · GitHub (https://github.com/sqlcipher/sqlcipher/blob/master/README.md)
+citeturn47search6 [wordlim: 200] Crawled: 2 weeks ago; This repository contains the complete source code for the SQLite database engine going back to 2000-05-29. ... If you are reading this on GitHub or some other Git repository or service, then you are looking at a mirror. ...         make releasetest              ;#  Run full release tests ... Some of these extensions (ex: FTS3/4, FTS5, RTREE) might get built into the SQLite amalgamation, but not all of them. ... The SQL language parser is parse.c which is generated from a grammar in the src/parse.y file.
+
+Because SQLite is in the public domain, we do not normally accept pull requests, because if we did take a pull request, the changes in that pull request might carry a copyright and the SQLite source code would then no longer be fully in the public domain.
+
+## Obtaining The SQLite Source Code
+
+Source code tarballs or ZIP archives are available at:
+
+  * Latest trunk check-in.
+
+  * Latest release
+
+  * For other check-ins, browse the project timeline and click on the check-in hash of the check-in you want to download. On the resulting "info" page, click one of the options to the right of the "Downloads:" label in the "Overview" section near the top.
+
+To access sources directly using Fossil, first install Fossil version 2.0 or later. Source tarballs and precompiled binaries for Fossil are available at https://fossil-scm.org/home/uv/download.html. Fossil is a stand-alone program. To install, simply download or build the single executable file and put that file someplace on your $PATH or %PATH%. Then run commands like this:
+    
+    `    mkdir -p ~/sqlite
+        cd ~/sqlite
+        fossil open https://sqlite.org/src
+    `
+
+The initial "fossil open" command will take two or three minutes. Afterwards, you can do fast, bandwidth-efficient updates to the whatever versions of SQLite you like. Some examples:
+    
+    `    fossil update trunk             ;# latest trunk check-in
+        fossil update release           ;# latest official release
+        fossil update trunk:2024-01-01  ;# First trunk check-in after 2024-01-01
+        fossil update version-3.39.0    ;# Version 3.39.0
+    `
+
+Or type "fossil ui" to get a web-based user interface.
+
+## Verifying Code Authenticity
+
+The `manifest` file at the root directory of the source tree contains either a SHA3-256 hash or a SHA1 hash for every source file in the repository. The name of the version of the entire source tree is just the SHA3-256 hash of the `manifest` file itself, possibly with the last line of that file omitted if the last line begins with "`# Remove this line`". The `manifest.uuid` file should contain the SHA3-256 hash of the `manifest` file. If all of the above hash comparisons are correct, then you can be confident that your source tree is authentic and unadulterated. Details on the format for the `manifest` files are available on the Fossil website.
+
+The process of checking source code authenticity is automated by the makefile:
+
+> make verify-source
+
+Using the makefile to verify source integrity is good for detecting accidental changes to the source tree, but malicious changes could be hidden by also modifying the makefiles.
+
+## Contacts
+
+The main SQLite website is https://sqlite.org/ with geographically distributed backups at https://www2.sqlite.org/ and https://www3.sqlite.org/.
+
+Contact the SQLite developers through the SQLite Forum. In an emergency, you can send private email to the lead developer at drh at sqlite dot org.--------------------------------------------------------------------------------
+SQLCipher · GitHub (https://github.com/sqlcipher)
+citeturn47search7 [wordlim: 200] Crawled: 3 days ago; SQLCipher is an open source extension to SQLite that provides transparent 256-bit AES encryption of database files. ... Java 92 64 0 3 Updated Sep 6, 2024
+
+SQLCipher is a standalone fork of SQLite that adds 256 bit AES encryption of database files and other security features.
+
+Uh oh!
+
+There was an error while loading. Please reload this page.
+
+sqlcipher/sqlcipher's past year of commit activity
+
+C 7,324 BSD-3-Clause 1,401 7 4 Updated Oct 27, 2026
+
+  * SQLCipherManager Public
+
+SQLCipher access manager class, and a Cocoa project for building a static library
+
+Uh oh!
+
+There was an error while loading. Please reload this page.
+
+sqlcipher/SQLCipherManager's past year of commit activity
+
+Objective-C 81 25 0 0 Updated Oct 12, 2026
+
+  * libtomcrypt Public Forked from libtom/libtomcrypt
+
+LibTomCrypt is a fairly comprehensive, modular and portable cryptographic toolkit that provides developers with a vast array of well known published block ciphers, one-way hash functions, chaining modes, pseudo-random number generators, public key cryptography and a plethora of other routines.
+--------------------------------------------------------------------------------
+SQLCipher 3.3.0 Release - SQLCipher - Zetetic Community Discussion (https://discuss.zetetic.net/t/sqlcipher-3-3-0-release/492)
+citeturn47search8 [wordlim: 200] Published: 11.6 years ago; Crawled: 11.1 years ago; Primary key fingerprint: D83F 5F9E B811 D6E6 B4A0 D9C5 D1FA 3A2A 97ED 25C2 ... In order to get rid of the warning you would need to edit Zetetic’s signing key and explicitly trust it: https://www.gnupg.org/gph/en/manual/r899.html ... I found the issue on my side. it turns out I need to upgrade my version of OpenSSL and use latest stable SqlCipher code.
+--------------------------------------------------------------------------------
+SQLCipher Community Edition - Adding Full Database Encryption for SQLite for Apple platforms | Zetetic (https://www.zetetic.net/sqlcipher/sqlcipher-apple-community/)
+citeturn47search9 [wordlim: 200] Crawled: 3 weeks ago; In most cases SQLCipher uses PBKDF2, a salted and iterated key derivation function, to obtain the encryption key. ... There are a number of ways that you can verify SQLCipher is working as expected in your applications before its release to users.
+--------------------------------------------------------------------------------
+Issues · sqlcipher/sqlcipher · GitHub (https://github.com/sqlcipher/sqlcipher/issues)
+citeturn47search10 [wordlim: 200] Crawled: 3 weeks ago;   * ### with upgrade to 4.17.0 cross compile for Mac-x86_64 is failing ... sqlcipher/sqlcipher#371 · Filter by author jzzocc opened on Sep 3, 2020
+--------------------------------------------------------------------------------
+One question about the keystore? - SQLCipher - Zetetic Community Discussion (https://discuss.zetetic.net/t/one-question-about-the-keystore/4871)
+citeturn47search11 [wordlim: 200] Published: 5.7 years ago; Crawled: 5.6 years ago; You may use a hardware keystore to store an encryption key, however, that is not something that SQLCipher itself manages.
+--------------------------------------------------------------------------------
+zätetic
+
+SQLCipher Trial
+
+Software License Agreeme (https://www.zetetic.net/sqlcipher/license/SQLCIPHER_TRIAL_LICENSE.pdf)
+citeturn47search12 [wordlim: 200] Published: 1.7 years ago; SQLCipher Trial
+--------------------------------------------------------------------------------
+zätetic
+
+SQLCipher Commercial Edition
+
+Subscriptio (https://www.zetetic.net/sqlcipher/license/SQLCIPHER_COMMERCIAL_EDITION_LICENSE.pdf)
+citeturn47search13 [wordlim: 200] Published: 1.1 years ago; SQLCipher Commercial Edition
+--------------------------------------------------------------------------------
+Enhancing Password Based Key Derivation Techniques (https://www.zetetic.net/storage/files/enhancing-password-based-key-derivation-techniques.pdf)
+citeturn47search14 [wordlim: 200] • http://sqlcipher.net
+

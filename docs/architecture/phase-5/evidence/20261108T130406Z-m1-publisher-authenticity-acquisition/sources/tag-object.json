@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-08T13:05:37.557432+00:00",
+  "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/tags/52252487a5cada9b430e8d4b20025790c5a6ba20",
+  "method": "GET",
+  "default_TLS_certificate_validation": true,
+  "authentication": "none",
+  "timeout_seconds": 20,
+  "maximum_response_bytes": 4194304,
+  "status": 200,
+  "final_url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/tags/52252487a5cada9b430e8d4b20025790c5a6ba20",
+  "content_type": "application/json; charset=utf-8",
+  "etag": "W/\"b146be56f180c6ba8802f2e44e472a54e7019b2f07fe3b96bf06245823f1af04\"",
+  "last_modified": "Sun, 08 Nov 2026 10:09:02 GMT",
+  "pagination_link": null,
+  "bytes": 2242,
+  "sha256": "bced5384482d5f6f6db3f7653ebdd73c140f46a7d4f2415938ef65992438d8c4",
+  "raw_artifact": "sources/tag-object.body.json"
+}

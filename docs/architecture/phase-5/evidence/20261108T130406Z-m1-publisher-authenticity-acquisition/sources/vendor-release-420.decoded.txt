@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYMDV1Z7SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RYMDV1Z7SK');
+</script>
+
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Safari 15 title bar color -->
+    <meta name="theme-color" content="#323232">
+
+    <!-- Bootstrap -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+   <!--  <link href="/css/animated.css" rel="stylesheet" /> -->
+    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Zetetic Blog ATOM feed" href="https://www.zetetic.net/blog/atom.xml" />
+    <link rel="alternate" type="application/json" title="Zetetic Blog JSON feed" href="https://www.zetetic.net/blog/feed.json" />
+
+    <meta name="og:title" content="SQLCipher 4.20.0 Release" />
+    <meta name="og:url" content="https://www.zetetic.net/blog/2026/10/27/sqlcipher-4.20.0-release/" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="description" content="SQLCipher 4.20.0 updates the SQLite baseline to 3.54.1 and refreshes OpenSSL-based providers to 3.5.9 LTS." />
+    <meta name="og:description" content="SQLCipher 4.20.0 updates the SQLite baseline to 3.54.1 and refreshes OpenSSL-based providers to 3.5.9 LTS." />
+   
+    
+
+    <link href="/css/post.css" rel="stylesheet">
+    
+    
+    <title>SQLCipher 4.20.0 Release | Zetetic</title>
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://www.zetetic.net/blog/atom.xml" />
+  </head>
+  <body >
+    <nav id="topnav" class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+
+    <a class="navbar-brand main me-auto d-flex align-items-center" href="/">topnav</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarItemsContainer"
+      aria-controls="navBarItemsContainer" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- location: blog -->
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainer">
+      <ul class="nav navbar-nav gap-4 fs-6 ms-auto mb-0 mb-lg-0">
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/sqlcipher/">SQLCipher</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/codebook/">Codebook</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discuss.zetetic.net">Forum</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+    <!-- layout: post -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <h1><a href="/blog/2026/10/27/sqlcipher-4.20.0-release/">SQLCipher 4.20.0 Release</a></h1>
+          <p class="author">
+            <span class="date">2026-10-27 08:00:00 -0400</span>
+          </p>
+          <p>We’re pleased to announce SQLCipher 4.20.0. This maintenance release updates the SQLite baseline to 3.54.1, improves migration error behavior, and refreshes cryptographic providers.</p>
+
+<h2 id="sqlcipher-changes-4200">SQLCipher Changes</h2>
+
+<ul>
+  <li>Updates the SQLite baseline to <a href="https://www.sqlite.org/releaselog/3_54_1.html">3.54.1</a></li>
+  <li>Avoids a deferred error when <code class="language-plaintext highlighter-rouge">PRAGMA cipher_migrate</code> fails before migrating</li>
+  <li>Skips the <code class="language-plaintext highlighter-rouge">.fini_array</code> finalizer on WebAssembly</li>
+</ul>
+
+<h2 id="crypto-provider-support-4200">Cryptographic Provider Matrix</h2>
+
+<p>The table below summarizes the cryptographic providers used across SQLCipher packages and platforms:</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Edition</th>
+      <th>Platform</th>
+      <th>Cryptographic Provider</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Community (non-FIPS)</td>
+      <td>Android</td>
+      <td><a href="https://github.com/sqlcipher/libtomcrypt/tree/sqlcipher">based on LibTomCrypt 1.18.2</a></td>
+    </tr>
+    <tr>
+      <td>Community (non-FIPS)</td>
+      <td>Apple</td>
+      <td>Common Crypto (version varies by OS)</td>
+    </tr>
+    <tr>
+      <td>Commercial &amp; Enterprise (non-FIPS)</td>
+      <td>Apple</td>
+      <td>Common Crypto (version varies by OS)</td>
+    </tr>
+    <tr>
+      <td>Commercial &amp; Enterprise (non-FIPS)</td>
+      <td>Other Platforms</td>
+      <td><a href="https://openssl-library.org/news/openssl-3.5-notes/">OpenSSL 3.5.9 LTS</a></td>
+    </tr>
+    <tr>
+      <td>Enterprise FIPS</td>
+      <td>All Platforms</td>
+      <td><a href="/sqlcipher/fips">SQLCipher Cryptographic Module</a><br />Based on OpenSSL 3.5.9 LTS</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="availability-4200">Upgrading and Availability</h2>
+
+<p>SQLCipher 4.20.0 is available now. We recommend that all applications upgrade to incorporate the improvements in this release. This release updates the SQLite baseline to 3.54.1, so review the <a href="https://sqlite.org/changes.html">release notes</a> for changes that may affect your application. As always, test your applications thoroughly with the new version before deploying to production.</p>
+
+<p><strong>Commercial and Enterprise</strong> - On-demand access to new releases of SQLCipher packages are available to all licensees with an active subscription from the <a href="https://license.zetetic.net/request-account/">Customer Downloads</a> fulfillment site. Subscribers will also receive a separate email notification regarding the update and can contact us at any time for private support directly from the SQLCipher development team. <strong>Commercial and Enterprise edition upgrades require a new license code from the SQLCipher fulfillment site for each version. Don’t forget to change the license code in your application(s) when you upgrade.</strong></p>
+
+<p><strong>Community Edition</strong> - SQLCipher Community Edition source code is available <a href="https://github.com/sqlcipher/sqlcipher/tree/v4.20.0">on GitHub</a>, via AAR packaging for Android, and <a href="https://github.com/sqlcipher/SQLCipher.swift">Swift Package Manager</a> for Apple platforms.</p>
+
+<p>For feedback and questions, please visit our <a href="https://discuss.zetetic.net/c/sqlcipher/5">Community Forum</a> or <a href="https://www.zetetic.net/sqlcipher/support/">private support channels</a>. Thank you for using SQLCipher!</p>
+
+        </div>
+        <div class="col-md-3">
+          <div class="sidebar-section">
+<h3>About Zetetic</h3>
+
+<p>Zetetic LLC is a small company specializing in applied data security. As the developers behind the <a href="/sqlcipher/">SQLCipher</a> encrypted database library and <a href="/codebook/">Codebook</a> Password Manager, hundreds of organizations and millions of users trust Zetetic’s software and frameworks.</p>
+</div>
+
+<div class="sidebar-section">
+<h3>Recent Posts</h3>
+<ul>
+  
+    <li><a href="/blog/2026/10/27/sqlcipher-4.20.0-release/">SQLCipher 4.20.0 Release</a></li>
+  
+    <li><a href="/blog/2026/10/22/sqlcipher-5.0.0-beta.1/">SQLCipher 5.0.0-beta.1</a></li>
+  
+    <li><a href="/blog/2026/09/28/codebook-5.4-with-passkey-support/">Codebook 5.4 Release with Passkey Support</a></li>
+  
+    <li><a href="/blog/2026/09/15/sqlcipher-5.0.0-beta/">SQLCipher 5.0.0-beta</a></li>
+  
+    <li><a href="/blog/2026/09/08/sqlcipher-4.19.0-release/">SQLCipher 4.19.0 Release</a></li>
+  
+</ul>
+</div>
+
+<div class="sidebar-section">
+<h3>Search Other Posts</h3>
+
+  <iframe src="https://duckduckgo.com/search.html?site=zetetic.net&prefill=Search%20Zetetic.net" style="overflow:hidden;margin:0;padding:0;width:230px;height:40px; border:none;" ></iframe>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+  <hr/>
+  <footer>
+    <p>
+      &copy;  2026, <a href="https://www.zetetic.net">Zetetic, LLC</a>.  All rights reserved. 
+      | <a href="/security/">Security</a> 
+      | <a href="/privacy/">Privacy</a> 
+      | <a href="/contact/">Contact</a> 
+    </p>
+    <p>
+      <a class="btn" href="https://twitter.com/TeamZetetic">Follow @TeamZetetic</a>
+      <a class="btn" href="https://confirmsubscription.com/h/y/2EC1451D94FE09EF">Zetetic Newsletter</a>
+    </p>
+  </footer>
+</div>
+
+        <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>

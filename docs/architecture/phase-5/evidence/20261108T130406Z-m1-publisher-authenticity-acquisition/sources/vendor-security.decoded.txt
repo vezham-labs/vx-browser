@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYMDV1Z7SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RYMDV1Z7SK');
+</script>
+
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Safari 15 title bar color -->
+    <meta name="theme-color" content="#323232">
+
+    <!-- Bootstrap -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+   <!--  <link href="/css/animated.css" rel="stylesheet" /> -->
+    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Zetetic Blog ATOM feed" href="https://www.zetetic.net/blog/atom.xml" />
+    <link rel="alternate" type="application/json" title="Zetetic Blog JSON feed" href="https://www.zetetic.net/blog/feed.json" />
+
+    <meta name="og:title" content="Secure Contact and Security Disclosures" />
+    <meta name="og:url" content="https://www.zetetic.net/security/" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="description" content="Public key contact information for Zetetic" />
+    <meta name="og:description" content="Public key contact information for Zetetic" />
+   
+    
+
+        <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/smoothscroll.js"></script>
+    
+    
+    <title>Secure Contact and Security Disclosures | Zetetic</title>
+  </head>
+  <body >
+    <nav id="topnav" class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container">
+
+    <a class="navbar-brand main me-auto d-flex align-items-center" href="/">topnav</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarItemsContainer"
+      aria-controls="navBarItemsContainer" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- location: security -->
+    <div class="navbar-collapse collapse text-center justify-content-end" id="navBarItemsContainer">
+      <ul class="nav navbar-nav gap-4 fs-6 ms-auto mb-0 mb-lg-0">
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/sqlcipher/">SQLCipher</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/codebook/">Codebook</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discuss.zetetic.net">Forum</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+    <!-- layout: custom -->
+    <div id="about" class="container">
+	<div class="row">
+    <div class="col-md-12">
+      <h2 class="fs-1 pt-4">Security and Responsible Disclosure</h2>
+      <p>
+        We take security reports seriously, and we sincerely appreciate private advanced notification of issues, in a responsible manner, before public disclosures that could put users at risk.
+      </p>
+      <p>
+        If you discover a security issue with Zetetic <a href="https://www.zetetic.net">software or services</a>, please email immediately at support@zetetic.net. If the security issue is of a sensitive nature, please encrypt any communications using the PGP key below.
+      </p>
+      <p>
+        Upon receipt of the report, our team will work closely with you to ensure that we understand the scope and impact of the problem, and will make resolution of security issues our highest priority. Provided that you act in good faith towards our user's security, privacy, and data we will not take legal or administrative action against you.
+      </p>
+      <h3>PGP Encrypted Email</h3>
+      <p>Use the following link to download Zetetic's support public key.</p>
+      <p>
+        <a href="support_zetetic_net_public_key.gpg">Public Key: Zetetic LLC &lt;support@zetetic.net&gt;</a>
+      </p>
+      <p>
+        Before you import the key into your keyring, please verify the fingerprint of the key with the following command:
+      </p>
+<pre>
+    gpg --import support_zetetic_net_public_key.gpg
+    gpg -k --with-fingerprint support@zetetic.net
+</pre>
+      <p>
+        This should print the following information, please verify the fingerprint matches:
+      </p>
+<pre>
+pub   rsa4096/0xD1FA3A2A97ED25C2 2014-04-22 [C] [expires: 2024-06-11]
+      Key fingerprint = D83F 5F9E B811 D6E6 B4A0  D9C5 D1FA 3A2A 97ED 25C2
+uid                             Zetetic LLC &lt;support@zetetic.net&gt;
+sub   rsa3072/0x0CB99EE267FD0322 2014-04-22 [S] [expires: 2024-06-11]
+sub   rsa3072/0x3A7D809DD4DFEDA7 2014-04-22 [E] [expires: 2024-06-11]
+sub   rsa3072/0x62AE2C1CB1C49DF6 2014-04-22 [A] [expires: 2024-06-11]
+</pre>
+      <p>
+        Alternatively, you can request the key from a key server through the following command, below we will use the sks keyservers pool.
+      </p>
+<pre>
+    gpg --keyserver hkps://keys.openpgp.org --recv-keys D1FA3A2A97ED25C2
+</pre>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+  <hr/>
+  <footer>
+    <p>
+      &copy;  2026, <a href="https://www.zetetic.net">Zetetic, LLC</a>.  All rights reserved. 
+      | <a href="/security/">Security</a> 
+      | <a href="/privacy/">Privacy</a> 
+      | <a href="/contact/">Contact</a> 
+    </p>
+    <p>
+      <a class="btn" href="https://twitter.com/TeamZetetic">Follow @TeamZetetic</a>
+      <a class="btn" href="https://confirmsubscription.com/h/y/2EC1451D94FE09EF">Zetetic Newsletter</a>
+    </p>
+  </footer>
+</div>
+
+  </body>
+</html>

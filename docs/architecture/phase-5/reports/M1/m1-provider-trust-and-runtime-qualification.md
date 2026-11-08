@@ -112,3 +112,7 @@ No vendor contact was sent, software installed, pin changed or trust exception r
 
 **Disposition: assessment complete with Workstream A BLOCKED; B–D BLOCKED / NOT EXECUTED. EXP-03 remains BLOCKED. Stop here.**
 
+## 9. Subsequent publisher-evidence acquisition — 2026-11-08
+
+[Publisher-authenticity evidence](m1-sqlcipher-publisher-authenticity-evidence.md) starts from committed checkpoint 9118f89930a738c5e9d4711c7718a1e373e49761. Newly located official package-verification instructions explicitly authorize the published D83F…25C2 key for package signatures and link the 4.20.0 source ZIP/signature. This adds evidence beyond this report's earlier support-key-only publication review; it does not establish authorization of the different 2646…8350 tag signer. The public key/signature were acquired, but maintained-verifier/key-validity/signature checks and vendor-archive equivalence to the pin remain unexecuted. Authenticity and EXP-03 remain BLOCKED. This append-only update preserves all earlier findings/results; no runtime test, install, vendor contact or pin change occurred.
+

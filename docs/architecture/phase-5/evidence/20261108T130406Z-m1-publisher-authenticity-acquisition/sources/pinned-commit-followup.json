@@ -1,0 +1,19 @@
+{
+  "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/commits/355d4db92d3404e71faa8088d071a71d767807f4",
+  "time": "2026-11-08T13:09:35.618908+00:00",
+  "method": "GET",
+  "authentication": "none",
+  "TLS": "default certificate validation",
+  "timeout_seconds": 20,
+  "maximum_response_bytes": 4194304,
+  "status": 200,
+  "final_url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/commits/355d4db92d3404e71faa8088d071a71d767807f4",
+  "content_type": "application/json; charset=utf-8",
+  "content_encoding": null,
+  "pagination_link": null,
+  "raw_artifact": "sources/pinned-commit-followup.body",
+  "sha256": "01a0b176e7cf2a087a655b21c4384aa2fe9d7fc6ebad3a7104b7fd4ddb70e5eb",
+  "bytes": 1132,
+  "decoded_artifact": "sources/pinned-commit-followup.decoded",
+  "decoded_sha256": "01a0b176e7cf2a087a655b21c4384aa2fe9d7fc6ebad3a7104b7fd4ddb70e5eb"
+}

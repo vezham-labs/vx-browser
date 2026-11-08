@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-08T13:05:35.546257+00:00",
+  "url": "https://www.zetetic.net/security/",
+  "method": "GET",
+  "default_TLS_certificate_validation": true,
+  "authentication": "none",
+  "timeout_seconds": 20,
+  "maximum_response_bytes": 4194304,
+  "status": 200,
+  "final_url": "https://www.zetetic.net/security/",
+  "content_type": "text/html; charset=utf-8",
+  "etag": "\"bb50da86d3f4473dfaedc090c17d5c32\"",
+  "last_modified": "Fri, 16 Oct 2026 21:12:17 GMT",
+  "pagination_link": null,
+  "bytes": 2303,
+  "sha256": "35da222fef1224f3c422fd5e0425c007d1278a20987c3ea6a654bc6814a6f228",
+  "raw_artifact": "sources/vendor-security.txt"
+}
