@@ -1,0 +1,8 @@
+{
+  "status": "BLOCKED",
+  "reason": "Owned loopback fixture unavailable: [Errno 1] Operation not permitted",
+  "records": [],
+  "ended_at": "2026-11-08T09:51:31.941776+00:00",
+  "product_qualification": false,
+  "macos26_qualification": false
+}

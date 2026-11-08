@@ -79,3 +79,7 @@ Use the [approved measurement rules](../browser-mvp-acceptance-criteria.md#perfo
 Each future milestone exits only when its declared criteria have evidence or an explicit allowed partial/blocked disposition. A blocked external workflow may allow unrelated development to continue; it does not complete compatibility or release. A failed verification may be retried only after a recorded code/environment/method change or a justified new diagnostic question. Phase 3 closure stays approved regardless of new Phase 5 work; new defects belong to their own revision record.
 
 Phase 5 overall exit means an implemented, internally release-eligible MVP with accepted evidence for all applicable mandatory gates and a separate release-owner decision. Until then it is incomplete/conditional; no complete browser readiness, public distribution or unconditional engine acceptance is inferred.
+
+## Current M1 consolidation — 2026-11-08
+
+The maintained [M1 baseline](reports/M1/README.md) supersedes historical pending-policy and blanket Spaces-deferral statements for current owner scope. OP-01–04 are decided; current OD17 selects26 capabilities including basic Spaces, while advanced automation remains deferred and historical OD18 is preserved. Documentation/isolated validation/planning are authorized; product implementation/release remain unauthorized. Actual outcomes and blockers are in the M1 closeout; no milestone/product qualification follows from this documentation update.

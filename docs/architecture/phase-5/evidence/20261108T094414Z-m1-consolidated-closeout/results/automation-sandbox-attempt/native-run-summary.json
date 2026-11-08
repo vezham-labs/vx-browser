@@ -1,0 +1,14 @@
+{
+  "status": "BLOCKED",
+  "reason": "Native launch did not complete diagnostic procedure at seed; no acceptance claimed.",
+  "records": [
+    {
+      "label": "native-seed",
+      "returncode": -6,
+      "error": null
+    }
+  ],
+  "ended_at": "2026-11-08T09:51:56.786136+00:00",
+  "product_qualification": false,
+  "macos26_qualification": false
+}

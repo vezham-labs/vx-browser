@@ -34,7 +34,7 @@ The [owner record](../architecture/phase-3/owner-approval-decision.md) approves 
 ## Credentials and permissions
 
 - [ ] Vezham ID credentials are stored in Keychain, inaccessible to page JS and browser UI state inspection, and scoped as intended.
-- [ ] Website permissions default-deny when unknown or unsupported; prompts show the correct origin and profile.
+- [ ] Supported new website permission requests default to Ask; unknown/unsupported/ambiguous requests deny/fail closed; prompts show the verified origin and profile. Browser grants do not replace independent native OS authorization.
 - [ ] Test grant, one-time grant, denial, expiry, revocation, and OS TCC denial/revocation for each implemented permission type.
 - [ ] Verify permission decisions do not leak across profiles or private sessions.
 

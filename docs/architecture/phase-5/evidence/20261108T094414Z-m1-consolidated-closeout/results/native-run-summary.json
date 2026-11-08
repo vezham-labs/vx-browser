@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "reason": "At least one defined native subset observation failed.",
+  "records": [
+    {
+      "label": "native-seed",
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "label": "native-verify",
+      "returncode": 0,
+      "error": null
+    }
+  ],
+  "ended_at": "2026-11-08T09:53:24.926851+00:00",
+  "product_qualification": false,
+  "macos26_qualification": false
+}

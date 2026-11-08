@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-08T09:51:55.771114+00:00",
+  "ended_at": "2026-11-08T09:51:56.785320+00:00",
+  "command": [
+    "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app/Contents/MacOS/VXM1Validation",
+    "seed",
+    "abb4ca2d-33dc-4d25-9c16-d135202c03e3",
+    "9ec735a8-b9eb-416c-994b-4b299c5ee5f5",
+    "http://127.0.0.1:54588/",
+    "http://127.0.0.1:54589/",
+    "run20261108T094414Z"
+  ],
+  "returncode": -6,
+  "stdout": "",
+  "stderr": ""
+}

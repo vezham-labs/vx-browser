@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-08T09:53:14.820714+00:00",
+  "ended_at": "2026-11-08T09:53:24.917840+00:00",
+  "command": [
+    "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app/Contents/MacOS/VXM1Validation",
+    "verify",
+    "abb4ca2d-33dc-4d25-9c16-d135202c03e3",
+    "9ec735a8-b9eb-416c-994b-4b299c5ee5f5",
+    "http://127.0.0.1:54846/",
+    "http://127.0.0.1:54847/",
+    "run20261108T094414Z"
+  ],
+  "returncode": 0,
+  "stdout": "VX_BOOT disposable-native-harness\nVX_RESULT {\"checks\":[{\"observation\":\"persistent stores persistent\",\"passed\":true},{\"observation\":\"relaunch A cookie\",\"passed\":true},{\"observation\":\"relaunch A local\",\"passed\":true},{\"observation\":\"relaunch A idb\",\"passed\":true},{\"observation\":\"relaunch B cookie\",\"passed\":true},{\"observation\":\"relaunch B local\",\"passed\":true},{\"observation\":\"relaunch B idb\",\"passed\":true},{\"observation\":\"scoped-delete A cookie\",\"passed\":true},{\"observation\":\"scoped-delete A local\",\"passed\":true},{\"observation\":\"scoped-delete A idb\",\"passed\":true},{\"observation\":\"scoped-delete preserves B cookie\",\"passed\":true},{\"observation\":\"scoped-delete preserves B local\",\"passed\":true},{\"observation\":\"scoped-delete preserves B idb\",\"passed\":true},{\"observation\":\"owned store removal completed\",\"passed\":false}],\"mode\":\"verify\",\"observations\":[{\"label\":\"relaunch A\",\"values\":{\"cache\":\"PROFILE_A\",\"cookie\":\"PROFILE_A\",\"idb\":\"PROFILE_A\",\"local\":\"PROFILE_A\",\"workers\":1}},{\"label\":\"relaunch B\",\"values\":{\"cache\":\"PROFILE_B\",\"cookie\":\"PROFILE_B\",\"idb\":\"PROFILE_B\",\"local\":\"PROFILE_B\",\"workers\":1}},{\"label\":\"scoped-delete A\",\"values\":{\"cache\":null,\"cookie\":null,\"idb\":null,\"local\":null,\"workers\":0}},{\"label\":\"scoped-delete preserves B\",\"values\":{\"cache\":\"PROFILE_B\",\"cookie\":\"PROFILE_B\",\"idb\":\"PROFILE_B\",\"local\":\"PROFILE_B\",\"workers\":1}},{\"A\":\"Error Domain=WKWebSiteDataStore Code=1 \\\"Data store is in use\\\" UserInfo={NSLocalizedDescription=Data store is in use}\",\"B\":\"Error Domain=WKWebSiteDataStore Code=1 \\\"Data store is in use\\\" UserInfo={NSLocalizedDescription=Data store is in use}\",\"label\":\"owned-store-removal\"}],\"platformQualification\":false,\"productQualification\":false}\n",
+  "stderr": ""
+}

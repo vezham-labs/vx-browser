@@ -115,3 +115,7 @@ Future checks should be scoped to changed behavior and mandatory integration con
 The approved architecture boundaries and conditional WKWebView direction govern future execution; they are not proof of the code that must be built. Phase 5 is complete only when scoped implementation criteria and applicable final-release gates are evidenced and an internal release candidate receives its separate authorization. No unconditional production-engine acceptance, new service integration, public distribution or security waiver follows from this plan.
 
 **Current stop:** M0 foundation is complete; finish only [M1 design and consistency review](reports/M1/README.md). M1 implementation, M2-M8, full adapter/chrome, service integrations, production signing/release infrastructure and distribution remain out of scope. Do not restart Phase 3 or treat its historical results as M0 qualification.
+
+## Current M1 consolidation — 2026-11-08
+
+The maintained [M1 baseline](reports/M1/README.md) supersedes historical pending-policy and blanket Spaces-deferral statements for current owner scope. OP-01–04 are decided; current OD17 selects26 capabilities including basic Spaces, while advanced automation remains deferred and historical OD18 is preserved. Documentation/isolated validation/planning are authorized; product implementation/release remain unauthorized. Actual outcomes and blockers are in the M1 closeout; no milestone/product qualification follows from this documentation update.

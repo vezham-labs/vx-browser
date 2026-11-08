@@ -1,0 +1,67 @@
+# Proposed M1 Implementation Breakdown
+
+**Date:** 2026-11-07. **Status:** M1 design prepared for owner review; implementation Not Started.
+
+## Authorization and dependency policy
+
+This is a sequence for later scoped work, not authorization to execute it. Review [ADR 0003](../../../../decisions/0003-browser-core-runtime-and-language.md), [ADR 0004](../../../../decisions/0004-browser-local-persistence.md) and the [decision register](m1-decisions-and-risks.md) first. The owner may approve one slice without approving all M1 features. Proposed choices remain Proposed until explicitly approved; the current instruction permits design only.
+
+Keep the existing M0 native app and Phase3 prototype/evidence distinct. Before creating Swift targets/Nx integration, inspect the applicable generator/workspace guidance and document the concrete target map. No new language/runtime, ORM, cloud dependency, Aura or engine integration is implied by this plan. Use the existing repository and preserve any then-current user changes.
+
+## Bounded sequence
+
+| Slice                                         | Dependencies / scope to authorize                  | Outputs                                                                                                                                                    | Required later acceptance and stop                                                                                                                                                                                      |
+| --------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| M1-I0 — Design disposition                    | Owner review of this packet                        | Runtime/package decision; store direction if DB work is included; fixture-only or real-data boundary; unresolved policy assignments                        | Explicit implementation instruction naming selected slices and exclusions. No silent ADR acceptance or bulk M1 authorization                                                                                            |
+| M1-I1 — Domain and ports                      | Runtime/language choice approved                   | Local Swift package, opaque ID/tagged scope/value models, invariants, typed ports and fake implementations for tests                                       | Builds independently of AppKit/WebKit/SQLite/React/cloud; ownership mismatch/private-store request rejection is exercised. No real engine or native bridge                                                              |
+| M1-I2 — Runtime state coordination            | I1                                                 | Core actor, window/tab ownership, navigation state, effect identity, revision/subscription/cancellation semantics                                          | Finite tests for reentrancy, stale/disposed/foreign callbacks, conflicting revisions and quiesce. Fake host/engine only; no website navigation                                                                          |
+| M1-I3 — Persistence bootstrap and preferences | I1; storage/file-layout approval                   | SQLite adapter, catalog/profile identity header, schema/min-reader/writer versioning, typed preferences, short transactions/receipts and serialized worker | Synthetic data only unless real-data policy separately approved. Wrong-store/private refusal, rollback, busy/full/error, migration interruption and receipt reconciliation tests; no silent reset or plaintext fallback |
+| M1-I4 — History/bookmark metadata             | I2/I3; explicit feature/retention/URL-data scope   | Core-owned commit eligibility and profile-keyed repository operations, folder ordering/integrity and deletion/retention rules                              | Duplicate/provisional/private/stale commits rejected; transaction and referential integrity demonstrated; no UI, full engine adapter or import/export feature                                                           |
+| M1-I5 — Session/preferences/recovery model    | I2/I3; explicit restore policy                     | Pure restore descriptors, new-runtime identity reconstruction policy, generation invalidation and private exclusions                                       | Opt-in/default-off policy and no private/pending action persistence tested with fakes; no automatic POST/form replay or actual engine recovery                                                                          |
+| M1-I6 — Native-service policy contracts       | I1/I2; finite approved policy subset               | Origin/request/revocation/token lifetime value models and fail-closed policy cases                                                                         | No TCC prompts, real grants, choosers, Keychain items, uploads/downloads or profile creation. Actual brokers/engine isolation stay M5                                                                                   |
+| M1-I7 — Foundation integration and exit       | Selected previous slices with exact scope/evidence | Compose approved core/storage into native host if separately authorized, using fake engine/services; updated evidence/ADRs as owner directs                | Required scoped checks pass or honest Partial/Blocked result. No M2/React/bridge/release work. M1 implementation is incomplete while applicable agreed outcomes lack evidence                                           |
+
+I4-I6 are not prerequisites to begin a separately approved I1/I2 proof; their dependencies and feature approvals must be resolved before relying on them. A small first authorization should cover **I1-I2 and a synthetic I3 proof**, rather than a complete browser or all metadata features. Encryption/retention/restore decisions may remain open for fixtures but cannot be bypassed before real data or the relevant feature.
+
+## DSH-inspired refinement within the existing sequence
+
+[Proposed ADR0005](../../../../decisions/0005-browser-capability-boundaries-and-lifecycle.md) and the [capability design](browser-capability-architecture.md) refine the same I1/I2/I6/I7 boundaries; no new milestone or implementation authorization is added. At I0 review the detailed static-composition/lifecycle rules and which independently replaceable built-ins are launch-required. Existing Swift/store/protection decisions remain pending.
+
+If separately authorized, I1 defines only the typed feature/lifecycle values needed by the selected proof, and I2 exercises a fake optional provider's activation/failure/stop alongside core ownership. I6 later specializes permissions/transfers; I7 verifies native composition only within its explicit scope. Use direct compiled bindings, not a dependency-container/plugin manager, generalized tools or empty future provider packages.
+
+Additional finite **future** cases (Not Tested now):
+
+| Concern                                    | Expected behavior                                                                                                                                      | Stage limit                                     |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| Duplicate/wrong-version/missing dependency | Reject invalid binding; publish no ready capability or new privilege; only affected optional features unavailable                                      | Fake I1/I2 proof, not runtime extension support |
+| Partial initialization failure             | Acquired subscription/task/resource is released; no ghost listener/ready event remains                                                                 | Fake I2/I7; actual native resources later       |
+| Revocation and dependent disposal          | Stop fences new calls before await; late result rejected; dependency lives until cleanup; repeated disposal safe; incomplete cleanup reported honestly | I2/I6 model then real M5 lifecycle              |
+| Slow/failing optional consumer             | Bounded event delivery keeps unrelated core/revocation usable; authorized resnapshot handles gaps; no private/global event log                         | I2/M3; no claim of fatal-crash containment      |
+| Missing permission-grant provider          | Mandatory core/native route returns deny/cancel, never implicit allow or bypass prompt                                                                 | Fake policy proof then M2/M5 native mapping     |
+| Required feature unavailable               | UI/state reports unavailable and its feature gate remains unmet even while unrelated navigation policy remains usable                                  | Named MVP matrix and later M6/M8 evidence       |
+
+Same-process fatal traps/blocking/resource exhaustion are residual risks, not solved by these fakes or a timeout. Untrusted runtime code would need a separate approved isolation architecture. The optional/future Tamizhi classification introduces no content extraction, agent loop or provider implementation now.
+
+## Meaningful future verification
+
+| Concern               | Required finite case / expected behavior                                                                                     | Scope of proof                                                   |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Engine independence   | Compile/domain tests with fake ports and no AppKit/WebKit/native handles                                                     | Core boundary only, not website compatibility                    |
+| Profile/private model | Persistent A/B leases reject foreign IDs; private scope rejected before queue/file/receipt access                            | Core/store refusal, not WKWebsiteDataStore isolation             |
+| Actor suspension      | Owner retires while a fake port is suspended; late result cannot mutate replacement; committed storage is still reconciled   | Reentrancy/ownership, not all crash scenarios                    |
+| Transactions          | Failure mid-batch leaves no partial records; receipt and revision agree after reopen                                         | New SQLite implementation and named fault point                  |
+| Migration/version     | Interrupt before/after commit; bad checksum/newer writer refused without recreation                                          | Versioned store fixture, not release rollback qualification      |
+| Privacy clear/backup  | Older snapshot cannot resurrect cleared records; incomplete cleanup reported accurately                                      | App-owned fixture copies, not OS snapshots/secure erasure        |
+| History/bookmarks     | Only current eligible main-frame commits persist; duplicates do not; folder cycle/wrong-profile/order failures remain atomic | Explicit metadata policy, not real adapter event translation     |
+| Restore/credentials   | Private state, pending grants/tokens, POST/form data and secrets absent from serialized descriptors                          | App-owned model/snapshot, not engine or OS artifact completeness |
+| Local-first design    | Fake ports require no identity or remote client; later implementation makes zero Vezham requests                             | Core/store slice; real browsing/outage matrix remains M6         |
+
+Do not write tests that merely mirror getters or rerun the Phase3 suite. Pin source/config/dependency/OS/SDK context; keep finite case IDs, setup, expected/actual, artifacts, limitations and defect disposition in a new M1 implementation run. Retry only after a named code, environment or method change.
+
+## Security, performance and exit
+
+Typed authority, private persistence refusal, transaction correctness and stale-result rejection must pass before the affected feature is used. Cross-profile/private leakage or unauthorized native access blocks the affected slice; it is not a risk waiver. Production bridge hostile-message tests remain M3, actual profile/private/file/permission integration M5, compatibility/reliability/performance M6, and exact macOS26/signing/notarization/release qualification M8. Preserve all mandatory gates and approved performance targets; no historical measurement transfers to new code.
+
+No core/database benchmark was run here. During implementation, measure main-thread responsiveness, bounded query/queue behavior and durability cost before adding pools, caches or weakening sync. Any new numeric core latency target needs an approved method/threshold; this plan invents no pass.
+
+**Current stop:** design review only. No source targets, dependencies, schema migrations, database files or new product behavior are created by this task. M1 implementation and M2+ require separate instructions.

@@ -1,7 +1,7 @@
 # Vezham Browser Engine Contract
 
-**Status:** Proposed detailed API contract under the approved engine-independent architecture; WKWebView direction conditionally accepted for planning/implementation. ADR 0001 remains Proposed. Current execution scope is M0 host foundation, not the full adapter.  
-**Target language:** Engine-independent TypeScript browser-core API behind a Swift/AppKit native host adapter. React/TypeScript browser chrome uses a separate typed, allowlisted bridge.  
+**Status:** Proposed detailed API contract under the approved engine-independent architecture; WKWebView direction conditionally accepted for planning/implementation. ADR 0001 remains Proposed. Current execution scope is M0 host foundation, not the full adapter.
+**Reference syntax:** historical illustrative TypeScript API; approved trusted Core direction is Swift6 with engine-independent values/ports. The current [M1 specification](phase-5/reports/M1/m1-developer-specification.md) owns binding requirements. React/TypeScript chrome uses a separate typed, allowlisted bridge; this facade is not that bridge.
 **Scope:** Normalize common navigation/page-view behavior without pretending WebKit and Chromium have identical capabilities. Platform baseline is macOS 26 Tahoe and later. `@vezham/aura` is not ready and is excluded. WKWebView has conditional owner acceptance as the MVP adapter direction; CEF remains evaluation-only and is not an active implementation.
 
 ## Design rules

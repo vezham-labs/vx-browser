@@ -18,3 +18,7 @@ engine or product security qualification. Preserve failed prerequisite commands
 and corrected attempts with their distinct reasons, rather than hiding failures
 or running unchanged retries. Build outputs/caches remain ignored under the app;
 only bounded review evidence belongs here.
+
+## 2026-11-08 M1 consolidated closeout
+
+[Run records](20261108T094414Z-m1-consolidated-closeout/) preserve exact supplied sources, original tracked hashes, disposable harness revisions, failed/inconclusive native observations, blocked campaign reports and final preservation audit. No Phase3 evidence is overwritten; no production/release qualification.

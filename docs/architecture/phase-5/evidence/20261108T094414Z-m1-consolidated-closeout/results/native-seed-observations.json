@@ -1,0 +1,198 @@
+{
+  "results": [
+    {
+      "checks": [
+        {
+          "observation": "persistent stores persistent",
+          "passed": true
+        },
+        {
+          "observation": "same-profile cookie",
+          "passed": true
+        },
+        {
+          "observation": "same-profile local",
+          "passed": true
+        },
+        {
+          "observation": "same-profile idb",
+          "passed": true
+        },
+        {
+          "observation": "same-profile cache",
+          "passed": true
+        },
+        {
+          "observation": "same-profile service-worker",
+          "passed": true
+        },
+        {
+          "observation": "foreign-profile cookie",
+          "passed": true
+        },
+        {
+          "observation": "foreign-profile local",
+          "passed": true
+        },
+        {
+          "observation": "foreign-profile idb",
+          "passed": true
+        },
+        {
+          "observation": "foreign-profile cache",
+          "passed": true
+        },
+        {
+          "observation": "foreign-profile service-worker",
+          "passed": true
+        },
+        {
+          "observation": "separate-origin local",
+          "passed": true
+        },
+        {
+          "observation": "separate-origin idb",
+          "passed": true
+        },
+        {
+          "observation": "separate-origin cache",
+          "passed": true
+        },
+        {
+          "observation": "private stores nonpersistent",
+          "passed": true
+        },
+        {
+          "observation": "private same-group cookie",
+          "passed": true
+        },
+        {
+          "observation": "private same-group local",
+          "passed": true
+        },
+        {
+          "observation": "private same-group idb",
+          "passed": true
+        },
+        {
+          "observation": "private same-group cache",
+          "passed": true
+        },
+        {
+          "observation": "private same-group service-worker",
+          "passed": true
+        },
+        {
+          "observation": "private independent-group cookie",
+          "passed": true
+        },
+        {
+          "observation": "private independent-group local",
+          "passed": true
+        },
+        {
+          "observation": "private independent-group idb",
+          "passed": true
+        },
+        {
+          "observation": "private independent-group cache",
+          "passed": true
+        },
+        {
+          "observation": "private independent-group service-worker",
+          "passed": true
+        },
+        {
+          "observation": "fresh-private-session cookie",
+          "passed": true
+        },
+        {
+          "observation": "fresh-private-session local",
+          "passed": true
+        },
+        {
+          "observation": "fresh-private-session idb",
+          "passed": true
+        },
+        {
+          "observation": "fresh-private-session cache",
+          "passed": true
+        },
+        {
+          "observation": "fresh-private-session service-worker",
+          "passed": true
+        }
+      ],
+      "mode": "seed",
+      "observations": [
+        {
+          "label": "persistent capability observations",
+          "values": {
+            "cacheSupported": true,
+            "workerSupported": true
+          }
+        },
+        {
+          "label": "same-profile",
+          "values": {
+            "cache": "PROFILE_A",
+            "cookie": "PROFILE_A",
+            "idb": "PROFILE_A",
+            "local": "PROFILE_A",
+            "workers": 1
+          }
+        },
+        {
+          "label": "foreign-profile",
+          "values": {
+            "cache": null,
+            "cookie": null,
+            "idb": null,
+            "local": null,
+            "workers": 0
+          }
+        },
+        {
+          "label": "private same-group",
+          "values": {
+            "cache": "PRIVATE",
+            "cookie": "PRIVATE",
+            "idb": "PRIVATE",
+            "local": "PRIVATE",
+            "workers": 1
+          }
+        },
+        {
+          "label": "private independent-group",
+          "values": {
+            "cache": null,
+            "cookie": null,
+            "idb": null,
+            "local": null,
+            "workers": 0
+          }
+        },
+        {
+          "label": "private capability observations",
+          "values": {
+            "cacheSupported": true,
+            "workerSupported": true
+          }
+        },
+        {
+          "label": "fresh-private-session",
+          "values": {
+            "cache": null,
+            "cookie": null,
+            "idb": null,
+            "local": null,
+            "workers": 0
+          }
+        }
+      ],
+      "platformQualification": false,
+      "productQualification": false
+    }
+  ],
+  "launch_returncode": 0
+}

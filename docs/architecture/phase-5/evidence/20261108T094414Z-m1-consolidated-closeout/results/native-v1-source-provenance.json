@@ -1,0 +1,6 @@
+{
+  "source": "harness/revisions/NativeProbe-v1.swift",
+  "sha256": "ef19da9c246920821c662ae6ba7884c8e4d8f20d0c9e483d99c7bba24ff21335",
+  "binary_provenance": "native-binary-provenance.json",
+  "outcome": "seed succeeded; verify cleanup failed with data store in use; retained unchanged"
+}

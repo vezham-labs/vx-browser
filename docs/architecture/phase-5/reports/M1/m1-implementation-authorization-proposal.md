@@ -1,6 +1,6 @@
-# Proposed First M1 Implementation Authorization
+# Proposed First M1 Implementation Authorization — Historical Review Record
 
-**Prepared:** 2026-11-08 (Asia/Kolkata; work started 2026-11-07). **Authorization status:** Proposed / Not Granted. **M1 implementation:** Not Started.
+**Historical source:** original proposals/IDs below are preserved; current owner decisions and scope are in [the owner register](m1-owner-decision-register.md), current acceptance coverage in [Developer Specification §31](m1-developer-specification.md#31-current-owner-selected-launch-capability-coverage), and current authorization/results in [closeout](m1-closeout-report.md). No product implementation authorization.
 
 ## Scope to decide
 

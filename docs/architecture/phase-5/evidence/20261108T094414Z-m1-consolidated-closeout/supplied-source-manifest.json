@@ -1,0 +1,132 @@
+[
+  {
+    "path": "supplied/case-level-traceability-v1.1-proposed.md",
+    "sha256": "99fedf60ac12a51d7549feb285a20d42ab83cd46e2c4bc8e8a08bba8f96ef3e3",
+    "bytes": 42616
+  },
+  {
+    "path": "supplied/developer-specification-v1.0-proposed.md",
+    "sha256": "b6795f3a59faaad71b1134f6856c9a63ce154b2a6ee09c705a5b7ad8a3a8f938",
+    "bytes": 75469
+  },
+  {
+    "path": "supplied/owner-readiness-review-v1.1-proposed.md",
+    "sha256": "9fefdac0d0ae90148491eab09d5401a89c121f3f29bfa77d127fa3b4e2517819",
+    "bytes": 71499
+  },
+  {
+    "path": "supplied/owner-task-authorization.txt",
+    "sha256": "2037e30712b36d641aec89dc4954a50c419e60b25f2982d580aaa9a0cb5dc5a0",
+    "bytes": 32148
+  },
+  {
+    "path": "supplied/repository-original-README.md",
+    "sha256": "3f4574a158b4fbeefe3adaff1b984a39a7f6872e3a11fbab95dc0944ef21940f",
+    "bytes": 10809
+  },
+  {
+    "path": "supplied/repository-original-browser-capability-architecture.md",
+    "sha256": "fc2c780d05b4341a7ce9a041c12ee385d42e7d0407332aeddeedbb632c5f43ce",
+    "bytes": 18780
+  },
+  {
+    "path": "supplied/repository-original-browser-core-architecture.md",
+    "sha256": "ba9609502a0e8e3e8c999986b7cfb20c7aaf52437660b119c76ee8c0d5eee6e2",
+    "bytes": 13746
+  },
+  {
+    "path": "supplied/repository-original-browser-core-data-model.md",
+    "sha256": "afc0dd4fb7a50be5228b1290cec2e6086d2a8880b8d9ec06ac11280713a47902",
+    "bytes": 13345
+  },
+  {
+    "path": "supplied/repository-original-browser-engine-contract.md",
+    "sha256": "6a3068791d5e58ef77dadbe66613dca1be9e20bcc18634619ef4eb62952461dc",
+    "bytes": 22290
+  },
+  {
+    "path": "supplied/repository-original-browser-security-acceptance-criteria.md",
+    "sha256": "60b537d67f223f42bb1d8efcb5b9b68feb476ee90ecd188eab5f6d5a3191c68d",
+    "bytes": 5976
+  },
+  {
+    "path": "supplied/repository-original-browser-security-architecture.md",
+    "sha256": "47aec398547c568bcc365dbd7210f3bebb301fd805a76e8e45af0d980a864665",
+    "bytes": 10543
+  },
+  {
+    "path": "supplied/repository-original-core-boundary-contracts.md",
+    "sha256": "44f02f3bdc750b45c77291aa17cf02626306f2d5064b76de0f1b5956c23d85a6",
+    "bytes": 18385
+  },
+  {
+    "path": "supplied/repository-original-dsh-architecture-assessment.md",
+    "sha256": "6a6d59598632367d8bd2a8603d759c712ba143b1ebf21a7cdbb3984c498aa9c5",
+    "bytes": 9707
+  },
+  {
+    "path": "supplied/repository-original-evidence-README.md",
+    "sha256": "0f83fec04cbe7a7cae9095b331ef6b80a4cf15ee9137deb541841bbfbb479008",
+    "bytes": 1254
+  },
+  {
+    "path": "supplied/repository-original-local-persistence-architecture.md",
+    "sha256": "e97e6277cf9c1833d0e0585632e9c64098f2ea9354ae73f996047bd576848c0a",
+    "bytes": 10125
+  },
+  {
+    "path": "supplied/repository-original-m1-decisions-and-risks.md",
+    "sha256": "0e5d60819f5074c2e34d1f0b8bec018368fa10584a7e2d230ee635628ac2232f",
+    "bytes": 20837
+  },
+  {
+    "path": "supplied/repository-original-m1-implementation-authorization-proposal.md",
+    "sha256": "fcedbaa60a13d690c56bb1764c7618050df767986555d5c77cf61b15895ea809",
+    "bytes": 18722
+  },
+  {
+    "path": "supplied/repository-original-m1-implementation-plan.md",
+    "sha256": "beeba23674c6eb9754ffdb77210611f1e944f290b9b548a21e0f6e30a74c6caa",
+    "bytes": 13452
+  },
+  {
+    "path": "supplied/repository-original-m1-launch-feature-matrix.md",
+    "sha256": "5a07610bec16b1e055cdcc006b094156859856efb06882f0700a2219c0d68c68",
+    "bytes": 18300
+  },
+  {
+    "path": "supplied/repository-original-m1-owner-decision-packet.md",
+    "sha256": "8b26e69f72ff2b8bcc6784d8ef8013f1dd86720e02408a78935eb3a12a839e04",
+    "bytes": 40533
+  },
+  {
+    "path": "supplied/repository-original-migration-and-recovery-strategy.md",
+    "sha256": "8f60ccad70121bcb6bd97c845755390a70e2b0e10552f517caf91a19393a16e2",
+    "bytes": 11064
+  },
+  {
+    "path": "supplied/repository-original-phase5-README.md",
+    "sha256": "fd5e0324996c9681721ed5c719ba1cfa94ea2b100cdd4d9e80fb2b66cd7a83f5",
+    "bytes": 5242
+  },
+  {
+    "path": "supplied/repository-original-phase5-phase-5-implementation-plan.md",
+    "sha256": "0217e04c85ad8f40bd99b10181024cc9fe196e1f79d640aee6179ce38358b89f",
+    "bytes": 20624
+  },
+  {
+    "path": "supplied/repository-original-phase5-phase-5-scope-and-milestones.md",
+    "sha256": "de3e2dc4bab97ec4c8f29099456c87598b31b6013bda956974d9974286a3a257",
+    "bytes": 23774
+  },
+  {
+    "path": "supplied/supporting-validation-charters-v1.0-proposed.md",
+    "sha256": "b1aacc4e62f6166e9d90f97f0ef99ab6e81ff9805dda10d3e870377aed0aa945",
+    "bytes": 56532
+  },
+  {
+    "path": "supplied/validation-plan-v1.0-proposed.md",
+    "sha256": "ec4389c98dd0817ae190e95b02ce00d2b9f433d42b07559a28085a32e0a55abe",
+    "bytes": 50376
+  }
+]

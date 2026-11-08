@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-11-08T09:50:24.851692+00:00",
+  "ended_at": "2026-11-08T09:50:45.207265+00:00",
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-parse-as-library",
+    "-swift-version",
+    "6",
+    "-target",
+    "arm64-apple-macosx26.0",
+    "-module-cache-path",
+    "/private/tmp/vx-m1-native-20261108T094414Z/module-cache",
+    "-framework",
+    "AppKit",
+    "-framework",
+    "WebKit",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/harness/NativeProbe.swift",
+    "-o",
+    "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app/Contents/MacOS/VXM1Validation"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

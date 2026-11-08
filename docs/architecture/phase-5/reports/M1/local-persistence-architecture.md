@@ -1,5 +1,6 @@
 # Local Persistence Architecture
 
+**Current baseline (2026-11-08):** supporting Proposed design; [owner register](m1-owner-decision-register.md) and [Developer Specification](m1-developer-specification.md) govern current policies/scope. Documentation/isolated validation/planning Authorized; no product implementation or release. Original draft is preserved in the evidence source archive.
 **Date:** 2026-11-07. **Status:** Proposed M1 design for owner review; not approved or implemented.
 
 ## Recommendation and alternatives
@@ -43,11 +44,11 @@ History URLs/titles, bookmarks, profile labels and restore state are sensitive e
 
 Recommend no application DB encryption dependency for the **fixture-only** first slice. Before real browsing data is persisted, obtain an explicit owner/security disposition for managed-device encryption/file protection or an evaluated encrypted SQLite provider. Provider/key availability is a storage precondition if encryption is required; never generate a replacement key over an inaccessible existing database. Key rotation, loss/recovery, backup encryption and search/index leakage need design before encrypted storage is enabled. Native Keychain integration remains a future broker; this task stores no keys or accounts.
 
-Propose history/download metadata retention of 30 days, bookmarks/preferences until explicit deletion, and durable session restore opt-in/off by default. These are **unapproved product proposals**, not existing defaults. URL queries and titles can contain sensitive data; reject credential-bearing URLs, exclude known transient authentication flows, and disclose that filters cannot detect every secret. The owner must approve what URL/query data is retained before real browsing data. Never log URLs/query strings or rely on hashing them as anonymization. See [risk register](m1-decisions-and-risks.md).
+Current OP-01/02/04: Forever history default; manual download metadata retention; normal-quit/restart session restoration and crash prompt. Retain full history URLs after stripping embedded credentials; do not automatically filter queries/fragments. Encrypt/profile-scope; never private persistence or raw URL diagnostics. Paths/query/fragments may contain secrets; encryption and redaction do not remove that privacy risk. Exact schema/title/checkpoint/retention integration remains specification work.
 
 ## Backup, export, deletion and future synchronization
 
-Use a verified SQLite snapshot API for controlled pre-migration backups; never copy only a live main DB and assume WAL state is included. [SQLite Backup API](https://sqlite.org/backup.html). Recommend one app-owned pre-migration snapshot, retained at most 24 hours or until a privacy clear/delete, whichever comes first; this TTL is also proposed, not approved. Backups share the profile's protection level and include a manifest, schema and privacy epoch. No private backup or automatic upload.
+Use a verified SQLite snapshot API for controlled pre-migration backups; never copy only a live main DB and assume WAL state is included. [SQLite Backup API](https://sqlite.org/backup.html). User-created snapshots have manual retention/no default expiry under OP-03. Internal pre-migration/recovery snapshot lifecycle is distinct and remains engineering specification; do not import the historical24-hour proposal as a current default. Backups share the profile's protection level and include a manifest, schema and privacy epoch. No private backup or automatic upload.
 
 Backup recovery and logical user export are separate. Future user-selected logical export uses a versioned sanitized format, limits record counts and excludes cookies, passwords, grants, native bookmarks, private data and operational receipts by default. Import allocates/revalidates ownership and does not overwrite an existing profile implicitly. No importer/exporter is implemented.
 

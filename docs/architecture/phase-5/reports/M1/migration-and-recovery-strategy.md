@@ -1,5 +1,6 @@
 # Migration, Integrity and Recovery Strategy
 
+**Current baseline (2026-11-08):** supporting Proposed design; [owner register](m1-owner-decision-register.md) and [Developer Specification](m1-developer-specification.md) govern current policies/scope. Documentation/isolated validation/planning Authorized; no product implementation or release. Original draft is preserved in the evidence source archive.
 **Date:** 2026-11-07. **Status:** Proposed design only; no schema, migration, service or bridge implemented.
 
 ## Decision and alternatives
@@ -47,16 +48,16 @@ No such fault test runs during this documentation task. Store receipts provide b
 
 Content-process recovery uses core memory for the affected view's last committed descriptor and owner generation. Reject late/disposed/foreign callbacks. Do not reload automatically, repeat an upload/form/POST, regrant permissions or resume a transfer from a stale intent. If safe restoration semantics cannot be established through public APIs, show a stopped/error state and require a new explicit action. Earlier Phase3 recovery suites do not validate this new architecture.
 
-Host restart uses only opt-in persistent restore descriptors, never arbitrary serialized core memory. Assign new AppRun/Window/Tab/View/capability IDs and revalidate URLs/profile ownership. Show the proposed restore choice before navigation; do not resurrect live network operations, old IPC requests, prompt grants or credential data. Private windows and their URLs/titles/permissions/restore records are never restored.
+Host restart uses owner-decided OP-04 persistent descriptors, never arbitrary serialized Core memory. Normal quit/macOS restart restore previous session; crash prompts; private discarded; locks/deletions are respected; unavailable pages retain entries with explicit failure state. Assign new AppRun/Window/Tab/View/capability IDs and revalidate URLs/profile ownership. Apply the situation-specific OP-04 choice before navigation; do not resurrect live network operations, old IPC requests, prompt grants or credential data. Private windows and their URLs/titles/permissions/restore records are never restored.
 
 M5 must clean app-owned private staging after abrupt death using minimal opaque resource markers and a fixed owned directory policy, without persisting private browsing metadata. Memory-only core cannot promise no OS/engine artifacts. User-approved private download/export files intentionally remain outside automatic session cleanup unless separately requested.
 
 ## Backup, rollback and privacy deletion
 
-Propose at most one app-owned pre-migration snapshot for no more than 24h, invalidated sooner by a clear/delete. Owner review must approve TTL/protection policy. Backup manifest/schema/profile/privacy-epoch checks and integrity verification precede any restore. Recovery never overwrites the sole original automatically; preserve it and require an explicit user decision before losing newer valid records. Do not merge corrupted rows by best effort or send them to cloud diagnostics.
+OP-03 user-created snapshots have manual retention/no default expiry and individual/bulk deletion. Internal recovery/pre-migration snapshot lifecycle is separate and still needs engineering specification; no historical24-hour default is adopted. Backup manifest/schema/profile/privacy-epoch checks and integrity verification precede any restore. Recovery never overwrites the sole original automatically; preserve it and require an explicit user decision before losing newer valid records. Do not merge corrupted rows by best effort or send them to cloud diagnostics.
 
 A signed app rollback is not a database downgrade. Release engineering must select a candidate compatible with the current store or an explicitly approved recovery/export path; obsolete snapshots cannot bypass privacy epochs or reintroduce vulnerable policy. Device/Time Machine snapshots and user exports have separate retention/deletion limits. Logical deletion, checkpoint/vacuum and encrypted-key destruction must not be advertised as guaranteed SSD/backup forensic erasure.
 
 ## Reversibility and open review
 
-Before any production data exists, changing the logical schema or provider is cheap. Once data exists, preserve versioned logical export, migration fixtures, backup eligibility and minimum writer policy. Final encryption/provider choice, retention, restore UX, privacy-clear scope and operational recovery ownership await approval. No release gate, security defect or private/cross-profile leak can be waived by accepting this strategy.
+Before any production data exists, changing the logical schema or provider is cheap. Once data exists, preserve versioned logical export, migration fixtures, backup eligibility and minimum writer policy. Provider/configuration, internal snapshot lifecycle, exact schema/checkpoint/privacy-clear mechanics and operational recovery ownership remain technical specification work. OP-01–04 policies and26-capability OD17 scope are owner-decided; no production implementation authority follows. No release gate, security defect or private/cross-profile leak can be waived by accepting this strategy.

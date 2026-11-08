@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-11-08T09:49:07.868917+00:00",
+  "macos": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+  "architecture": "arm64",
+  "xcode_path": "/Applications/Xcode.app/Contents/Developer",
+  "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "sdk": "27.2",
+  "macos26_runtime_qualified": false,
+  "sqlcipher_installed": false,
+  "dependencies_installed": false
+}

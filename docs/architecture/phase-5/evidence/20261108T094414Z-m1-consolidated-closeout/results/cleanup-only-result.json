@@ -1,0 +1,7 @@
+{
+  "status": "INCONCLUSIVE",
+  "observations": [],
+  "source_sha256": "f50e5fa7a634b68c5ec524221f9b256a933f1353cb4146397d7ff7f83824d69e",
+  "binary_sha256": "e502cb01eb392e5e74a5365b7be59694a891aec573b04dd4fdce4d54528c85e1",
+  "scope": "cleanup-only after prior app exit; does not change retained failed EXP-01 run"
+}

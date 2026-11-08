@@ -1,0 +1,7 @@
+{
+  "origins": [
+    "http://127.0.0.1:54588/",
+    "http://127.0.0.1:54589/"
+  ],
+  "ownership": "synthetic loopback only; no external accounts"
+}

@@ -1,6 +1,6 @@
-# M1 Owner Decision Packet
+# M1 Owner Decision Packet — Historical Review Record
 
-**Prepared:** 2026-11-08 (Asia/Kolkata; work started 2026-11-07). **Status:** Ready for owner review; decisions pending. **M1 implementation:** Not Started. **Execution authorization:** Not Granted.
+**Historical source:** original proposals/IDs below are preserved; current owner decisions and scope are in [the owner register](m1-owner-decision-register.md), current acceptance coverage in [Developer Specification §31](m1-developer-specification.md#31-current-owner-selected-launch-capability-coverage), and current authorization/results in [closeout](m1-closeout-report.md). No product implementation authorization.
 
 This packet completes decision preparation, not owner approval. The task title does not close the outstanding choices. Proposed defaults below are recommendations; no real data, database, source target, build/test, bridge or feature is created. Existing ADR lifecycle labels remain unchanged.
 

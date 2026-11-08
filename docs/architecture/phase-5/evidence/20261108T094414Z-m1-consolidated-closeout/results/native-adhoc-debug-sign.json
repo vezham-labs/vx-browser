@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-08T09:50:45.211196+00:00",
+  "ended_at": "2026-11-08T09:50:45.328292+00:00",
+  "command": [
+    "codesign",
+    "--force",
+    "--sign",
+    "-",
+    "--options",
+    "runtime",
+    "--entitlements",
+    "/private/tmp/vx-m1-native-20261108T094414Z/entitlements.plist",
+    "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app: replacing existing signature\n"
+}

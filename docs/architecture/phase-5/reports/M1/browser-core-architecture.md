@@ -1,5 +1,6 @@
 # Browser Core Module Architecture
 
+**Current baseline (2026-11-08):** supporting Proposed design; [owner register](m1-owner-decision-register.md) and [Developer Specification](m1-developer-specification.md) govern current policies/scope. Documentation/isolated validation/planning Authorized; no product implementation or release. Original draft is preserved in the evidence source archive.
 **Date:** 2026-11-07. **Status:** Proposed M1 design for owner review; not approved or implemented.
 
 ## Authority, scope and design basis
@@ -53,7 +54,7 @@ See [capability architecture](browser-capability-architecture.md) for core/built
 | Navigation                       | Current/provisional/last-committed state, request cancellation, explicit terminal state, history eligibility        | Engine callback translation and native URL opening belong to adapter/host. M1 pure policy, M2 actual navigation                                       |
 | Browser sessions                 | App-run identity; persistent restore descriptors separately from live runtime sessions                              | Fresh runtime IDs/epochs on every restart; never persist capabilities or pending effects. M1 model; real restoration later                            |
 | Profiles and private sessions    | Persistent/private tagged scope, immutable ownership, owner counts, lifecycle policy and deletion refusal           | M5 engine-store creation/isolation/cleanup. M1 can later test model/store refusal using fakes, not claim private browsing                             |
-| Spaces/workspaces                | No additional module proposed for M1                                                                                | No approved behavior beyond windows/tabs establishes a spaces feature. Defer product semantics; no table/placeholder or implicit Arc feature adoption |
+| Spaces/workspaces                | Basic Spaces/workspaces selected by current OD17; no implementation here                                                                                | Historical OD18 deferral preserved; current scoped basic organization requires explicit domain/UX/schema and functional acceptance. Advanced automation deferred |
 | Bookmarks                        | Profile-scoped stable entities, folder/order validity and explicit user intent                                      | Repository stores metadata; UI/import/export later. Initial M1 foundation does not implement bookmark UX                                              |
 | History                          | Accept only validated main-frame committed navigations; deduplicate commit events; profile/private/retention policy | Never engine-owned global history, cookie-derived history or frontend local storage. Feature storage slice requires separate scope                    |
 | Downloads                        | Metadata state transitions and policy; ownership, terminal-state rules and cancellation intent                      | M5 broker owns bytes, staging, native destinations, quarantine and completion proofs. No pause/resume promise without capabilities                    |

@@ -1,0 +1,10 @@
+{
+  "storeA": "abb4ca2d-33dc-4d25-9c16-d135202c03e3",
+  "storeB": "9ec735a8-b9eb-416c-994b-4b299c5ee5f5",
+  "ownership": "minted exclusively for this experimental run; never default store",
+  "markers": [
+    "PROFILE_A",
+    "PROFILE_B",
+    "PRIVATE"
+  ]
+}

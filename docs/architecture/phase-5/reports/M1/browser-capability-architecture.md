@@ -1,5 +1,6 @@
 # Browser Capability Boundaries and Lifecycle
 
+**Current baseline (2026-11-08):** supporting Proposed design; [owner register](m1-owner-decision-register.md) and [Developer Specification](m1-developer-specification.md) govern current policies/scope. Documentation/isolated validation/planning Authorized; no product implementation or release. Original draft is preserved in the evidence source archive.
 **Date:** 2026-11-07. **Status:** Proposed M1 architecture refinement; design only, no implementation or new feature authorization.
 
 ## Direction and terminology

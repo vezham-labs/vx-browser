@@ -1,0 +1,9 @@
+{
+  "sha256": "2824f7faea1abcaddd2b62d743533b571b2d709b67fb1ce8c7ad7c03d82f0238",
+  "bundle_identifier": "internal.vx.M1Validation.run20261108T094414Z",
+  "entitlements": {
+    "com.apple.security.app-sandbox": true,
+    "com.apple.security.network.client": true
+  },
+  "release_signing": false
+}

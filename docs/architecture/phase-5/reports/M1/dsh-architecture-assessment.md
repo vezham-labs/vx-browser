@@ -1,6 +1,6 @@
-# DSH-Inspired M1 Architecture Review
+# DSH-Inspired M1 Architecture Review — Historical Review Record
 
-**Date:** 2026-11-07. **Status:** Proposed M1 architecture refinement; design only, no implementation or new feature authorization.
+**Historical source:** original proposals/IDs below are preserved; current owner decisions and scope are in [the owner register](m1-owner-decision-register.md), current acceptance coverage in [Developer Specification §31](m1-developer-specification.md#31-current-owner-selected-launch-capability-coverage), and current authorization/results in [closeout](m1-closeout-report.md). No product implementation authorization.
 
 ## Assessment and source boundary
 

@@ -1,0 +1,899 @@
+# VX Browser — M1 Consolidated Closeout, Validation Execution & Implementation Planning
+
+## Mission
+
+Execute the remaining M1 Browser work as one coordinated engineering milestone.
+
+Repository:
+`/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser`
+
+Branch context:
+`timeline`
+
+The objective is to eliminate fragmented documentation cycles, establish one coherent M1 engineering baseline, execute the authorized M1 validation programme, and prepare an implementation-ready engineering plan.
+
+This is a documentation, validation and implementation-planning task.
+
+**Product implementation and release are explicitly outside this authorization.**
+
+Do not stop after producing another review document. Inspect the repository, reconcile the existing artefacts, update the canonical documentation, execute eligible validation work, record actual evidence and produce a concrete implementation plan.
+
+---
+
+# 1. Authorization and operating boundaries
+
+The owner authorizes the following work.
+
+### A. Documentation — AUTHORIZED
+
+You may:
+- Inspect existing M1 documentation and repository architecture.
+- Edit and consolidate existing canonical M1 documents.
+- Create supporting documentation where genuinely necessary.
+- Correct confirmed cross-document inconsistencies.
+- Add owner-approved decisions and scope.
+- Update traceability, validation procedures and engineering requirements.
+- Mark superseded documents clearly.
+- Produce a final documentation closeout report.
+
+Prefer updating canonical documents over creating additional parallel versions.
+
+### B. Validation — AUTHORIZED
+
+You may:
+- Execute the existing EXP-01 through EXP-08 validation experiments.
+- Execute SVC-01 through SVC-05 supporting validation campaigns.
+- Create isolated validation fixtures and temporary test harnesses where necessary.
+- Run relevant builds, tests and diagnostic commands required by the validation procedures.
+- Collect and preserve actual evidence.
+- Report pass, fail, blocked, inconclusive or not run outcomes.
+
+Validation is authorized only within the approved experiment scope and safe, isolated environments.
+
+Do not use real personal browsing profiles, personal website data, production secrets or irreplaceable user files as test fixtures.
+
+If an experiment requires unavailable hardware, another Mac, unavailable permissions, missing specifications or additional owner approval, mark it blocked. Do not simulate a pass.
+
+### C. Implementation planning — AUTHORIZED
+
+You may:
+- Define implementation phases and sequencing.
+- Break requirements into engineering work packages.
+- Identify package boundaries, dependencies and integration points.
+- Define acceptance gates and completion criteria.
+- Estimate relative complexity and identify technical risks.
+- Produce an implementation backlog and dependency graph.
+- Recommend a safe M1 implementation sequence.
+
+### D. Product implementation — NOT AUTHORIZED
+
+Do not:
+- Implement browser product features.
+- Build production Browser Core functionality.
+- Implement production UI or browser chrome.
+- Implement production persistence, encryption, profile management or recovery features.
+- Change application behaviour to make a validation case pass.
+- Treat experimental prototypes or validation harnesses as production implementations.
+
+Validation-only code must remain clearly separated from production code and must be identified as experimental.
+
+If a validation experiment exposes a defect requiring product implementation, document it and create a proposed engineering task. Do not fix it as part of this authorization.
+
+### E. Release — NOT AUTHORIZED
+
+No:
+- Release candidate approval.
+- Signing/notarization release.
+- Distribution.
+- Production deployment.
+- Release authorization or claims of M1 completion.
+
+### F. Git and repository safety
+
+- Do not switch branches.
+- Do not commit or push.
+- Do not reset, rebase, clean or discard existing changes.
+- Do not overwrite unrelated user work.
+- Do not install or upgrade dependencies without establishing necessity and documenting the reason.
+- Do not modify unrelated applications, packages or repositories.
+- Preserve existing work and inspect the working tree before editing.
+
+Documentation changes and isolated validation artefacts are authorized. Product implementation is not.
+
+---
+
+# 2. Source-of-truth and document reconciliation
+
+Inspect the repository before making changes.
+
+Review all available sources, including:
+
+- Existing Phase 5 architecture documentation.
+- M1 design and architecture reports.
+- M1 Owner Decision Packet.
+- M1 Decisions and Risks.
+- Developer Specification v1.0.
+- Validation Plan v1.0.
+- Supporting Validation Charters v1.0.
+- Case-Level Traceability v1.1.
+- Consolidated Owner Readiness Review v1.1.
+- Existing ADRs and historical owner-decision records.
+- Existing implementation and test structure.
+
+Some newer documents may exist only in supplied review material rather than as canonical repository files.
+
+Do not claim a document exists in the repository unless you verify it.
+
+For every source, establish:
+- Actual path or supplied source reference.
+- Version and status.
+- Whether it is canonical, supporting, historical or superseded.
+- Its relationship to the proposed final baseline.
+
+Do not silently reconstruct missing documents from incomplete summaries.
+
+Where source material is unavailable, identify the gap and proceed only with supported information.
+
+## Canonical documentation structure
+
+Prefer the existing repository structure. Do not relocate documents merely to achieve a new folder layout.
+
+Establish one canonical set containing:
+
+1. M1 Architecture and Design
+2. M1 Owner Decision Register
+3. M1 Developer Specification
+4. M1 Validation Plan
+5. M1 Supporting Validation Charters
+6. M1 Case-Level Traceability Matrix
+7. M1 Experiment Evidence and Reports
+8. M1 Implementation Plan
+9. M1 Final Closeout Report
+
+Use versioned documents and an explicit supersession record where necessary.
+
+Do not maintain multiple competing documents claiming to be the latest approved specification.
+
+---
+
+# 3. Consolidate owner decisions and product scope
+
+Incorporate the following owner-approved decisions exactly.
+
+All decisions are approved as product direction. They do not independently authorize product implementation.
+
+## 3.1 OD-R01 through OD-R20
+
+Preserve all twenty owner decisions and their existing meanings.
+
+Do not renumber them, merge them or reinterpret them.
+
+Important areas include:
+- Swift 6 engine-independent Browser Core.
+- Same-process Native Host/Core MVP boundary.
+- Four-target package structure.
+- SQLite-first offline persistence.
+- Browser catalog and separate persistent-profile databases.
+- Memory-only private browser state.
+- Full persistent-profile encryption.
+- Keychain and independent recovery material.
+- OS-native profile unlock and locking.
+- Dedicated persistent WebKit stores per profile.
+- Centralized permission policy.
+- Encrypted browsing history.
+- Download metadata and external-file separation.
+- Encrypted portable backup and restore.
+- Static capability composition.
+- Typed contracts and profile-scoped events.
+- Deleted-data reconciliation.
+- Locking on macOS lock, sleep and user switching.
+- Printable and exportable independent recovery material.
+- Download exclusion from backups by default.
+
+Preserve outstanding technical definitions as engineering specification items rather than inventing defaults.
+
+## 3.2 OP-01 — Browsing history
+
+Owner decision:
+
+- Retain full URLs: scheme, hostname, path, query parameters and fragments.
+- Strip embedded username and password credentials.
+- Never persist private browsing history.
+- Encrypt and scope history to its profile.
+- Default retention: Forever.
+- Configurable retention: 30 days, 90 days, one year or Forever.
+- Support individual, date-range and all-history deletion.
+- Backup and restore must respect deletion decisions.
+- Deleted entries must not silently reappear.
+- Full URLs must not leak into diagnostic logs.
+- Do not automatically filter query parameters under this policy.
+
+Record the privacy risk of sensitive information embedded in URL paths, query parameters or fragments. Preserve encryption and diagnostic protections.
+
+## 3.3 OP-02 — Download metadata
+
+Owner decision:
+
+- Manual retention.
+- Retain metadata until the user removes it.
+- Encrypted and profile-scoped.
+- Individual deletion and clear-all supported.
+- Metadata deletion must not delete the actual downloaded file.
+- Download files remain separate from browser metadata.
+- Backup metadata.
+- Exclude download files by default.
+- Optional download-file backup follows OD-R20.
+
+Exact metadata fields and incomplete-download retention remain engineering specification details.
+
+## 3.4 OP-03 — App-owned snapshots
+
+Owner decision:
+
+- Manual retention for user-created snapshots.
+- No automatic expiry by default.
+- Individual and bulk deletion.
+- Encrypted and profile-scoped.
+- No persistent private-browsing snapshots.
+- Backup and restore must respect deliberate deletion.
+
+Keep user-created snapshots distinct from internal recovery snapshots, website cache, WebKit website data and download files.
+
+Define separate lifecycle policies for user-created and internal recovery snapshots in the engineering specification.
+
+## 3.5 OP-04 — Session restoration and recovery
+
+Owner decision:
+
+| Situation | Required behaviour |
+|---|---|
+| Normal quit | Restore previous session |
+| Crash recovery | Prompt user |
+| macOS restart | Restore previous session |
+| Recently closed tabs/windows | Manual retention |
+| Private session recovery | Discard |
+| Form/POST replay | Never automatically replay |
+| Profile handling | Isolated per profile |
+
+Additional requirements:
+- Restore tab/window entries even when a page is unavailable; show an explicit failure state.
+- Keep session state, browsing history, recently closed entries and internal recovery snapshots separate.
+- Respect profile locks and deletion decisions.
+- Never expose private session state through persistent recovery.
+
+Session checkpoint timing, consistency, recently closed storage and lock/recovery interactions remain specification items.
+
+## 3.6 Historical OD17 — M1 launch capability scope
+
+Preserve the historical OD17 record and incorporate the following 26 selected capabilities.
+
+### Core browsing and navigation
+
+1. Address bar, URL entry, search, redirects, back, forward and reload.
+2. Multiple tabs, creation, closing, reordering and duplication.
+3. Multiple browser windows and window management.
+4. Recently closed tabs and windows.
+5. Download manager with progress, cancellation and supported resume.
+6. Bookmarks, favorites and saved pages.
+7. Searchable browsing history and history management.
+
+### Browser organization
+
+8. Multiple isolated browser profiles.
+9. Private browsing with nonpersistent website data.
+10. Session restoration and crash recovery.
+11. Tab grouping and contextual organization.
+12. Basic Arc-style Spaces and workspace organization.
+
+### Native macOS integration
+
+13. Native file selection and upload.
+14. Native download destinations and file opening.
+15. macOS Keychain and authentication integration.
+16. Native macOS notifications where authorized.
+17. External links and registered URL handling.
+
+### Browser security and privacy
+
+18. Certificate/TLS error handling with no silent bypass.
+19. Origin-scoped and profile-isolated permission controls.
+20. Private-session isolation and cleanup.
+21. Independent clearing of history, cookies, website data and cache.
+22. Profile locking on macOS lock, sleep and user switching.
+
+### Recovery and reliability
+
+23. Browser host crash recovery.
+24. WebKit content-process termination recovery.
+25. Encrypted profile backup and restore.
+26. Core browser operation without mandatory cloud account or local server.
+
+### Permission policy
+
+- Positive support only for permission kinds verified against actual supported APIs.
+- Default behaviour for a new permission request: Ask.
+- Unsupported or ambiguous permissions: Deny/fail closed.
+- Native macOS authorization is independent of browser permission grants.
+- Do not assume all twelve inventoried permission kinds are positively supported.
+- Produce an evidence-backed support matrix for each permission kind.
+- Keep website notifications separate from native macOS notifications.
+
+### M1 launch philosophy
+
+Balanced browser: polished essential browsing workflows, profiles, privacy, downloads, recovery and verified permissions.
+
+### Explicitly deferred capabilities
+
+- Cloud account and cross-device synchronization.
+- Third-party extensions and dynamic plugins.
+- Tamizhi browser intelligence and autonomous web actions.
+- iOS, iPadOS and Android browser applications.
+- Advanced Arc-style Spaces and workspace automation.
+
+### OD17 / historical OD18 clarification
+
+Historical OD18 broadly deferred Spaces.
+
+OD17 now explicitly selects basic Arc-style Spaces and workspace organization for M1 while deferring advanced Spaces and workspace automation.
+
+Preserve OD18 historically. Record this as a scoped distinction/refinement. Do not silently rewrite OD18 or claim its original meaning was different.
+
+## 3.7 Historical decision namespace
+
+Preserve:
+- Historical OD01–OD20.
+- Current review OD-R01–OD-R20.
+- WS01.1 crosswalk.
+
+Never equate matching numeric suffixes.
+
+Historical OD20 implementation authorization is not the same as current OD-R20 download/backup policy.
+
+Preserve the historical OD07, OD08 and OD14 mappings and their documented relationships.
+
+---
+
+# 4. Close the documentation baseline
+
+Consolidate the Developer Specification, Validation Plan, Supporting Charters, Case-Level Traceability and Owner Readiness Review into a consistent canonical baseline.
+
+Do not create another broad review cycle.
+
+## 4.1 Preserve the existing identifiers
+
+Do not invent, renumber or casually reassign:
+
+- OD-R01–OD-R20.
+- Historical OD01–OD20.
+- WS01.1.
+- F01–F17.
+- OP-01–OP-04.
+- SPEC-01–SPEC-16.
+- REQ-01–REQ-22.
+- AC01–AC15.
+- EXP-01–EXP-08.
+- SVC-01–SVC-05.
+- Existing PKG, BRIDGE, PERM, OFFLINE, RECOVERY and other case identifiers.
+
+REQ-21 remains separate Stage C release qualification. It is not an AC criterion and must not become an invented AC16.
+
+REQ-22 remains mapped to WebKit website-data protection/deletion/backup qualification and AC08.
+
+## 4.2 Existing traceability baseline
+
+The case-level matrix previously reported:
+
+- PKG: 7 cases.
+- BRIDGE: 9 cases.
+- PERM: 120 cases.
+- OFFLINE: 8 cases.
+- RECOVERY: 10 cases.
+- Total: 154 validation cases.
+- 11 experiment-reference rows.
+- 165 total traceability rows.
+
+Previously reported combined statuses:
+- 36 Blocked.
+- 57 Unspecified.
+- 72 Proposed/Not Run.
+
+Recalculate from the actual current canonical matrix. Do not copy these counts blindly.
+
+Preserve the existing case-level distinctions and mappings.
+
+Known discrepancies to retain or resolve only with evidence:
+
+1. PERM-016 remains AC09 and AC14, not AC07. Supporting Validation Charters v1.0 §9 contains an older AC07 association. LOCK-001 and RECOVERY-006 retain their AC07 routes.
+2. RECOVERY-010 remains OP-04. Supporting Validation Charters v1.0 §14 contains an older OP-01 mention.
+3. REQ-21 remains separate Stage C qualification.
+4. REQ-22 retains its existing WebKit qualification mapping.
+5. Do not invent new acceptance criteria or validation case IDs.
+
+## 4.3 Functional coverage gaps
+
+OD17 selects several user-visible launch capabilities that may not have dedicated functional acceptance coverage in the existing matrix.
+
+Explicitly audit:
+- Address bar and navigation.
+- Redirects and URL handling.
+- Tabs and tab lifecycle.
+- Windows.
+- Recently closed tabs/windows.
+- Bookmarks, favorites and saved pages.
+- Tab groups.
+- Basic Spaces and workspaces.
+- TLS/certificate handling.
+- Native file selection and upload.
+- Native downloads and file opening.
+- External URL handling.
+- Native macOS notifications.
+- Website notification permission separation.
+
+For each capability:
+- Identify actual existing specification and validation coverage.
+- State whether that coverage is complete, partial, absent or blocked.
+- Do not force an unrelated existing AC or case to appear sufficient.
+- Do not invent new identifiers in the existing approved matrix.
+- Where new functional cases are genuinely needed, present a clearly marked proposed extension for owner review. Do not silently add them to the approved baseline.
+
+## 4.4 Final documentation readiness
+
+Produce a single requirements-to-validation-to-implementation traceability view:
+
+Owner decision → Product capability → SPEC → REQ → AC → EXP/SVC/case → Evidence → Implementation work package.
+
+Every link must be grounded in a source.
+
+Use explicit `Unspecified`, `Blocked`, `Not Applicable` and `Proposed` values where appropriate.
+
+Do not turn missing information into an assumed pass.
+
+---
+
+# 5. Execute the M1 validation programme
+
+After documentation reconciliation, execute eligible validation activities.
+
+Use the existing validation procedures and case-level traceability as the source of truth.
+
+Before each experiment:
+1. Confirm prerequisites.
+2. Confirm exact scope and expected outcome.
+3. Confirm test environment and platform.
+4. Confirm fixtures are isolated and disposable.
+5. Confirm no production data or secrets are involved.
+6. Confirm no destructive operation can affect unrelated user data.
+7. Record the experiment start and environment details.
+8. Execute only the authorized procedure.
+
+If the procedure is underspecified, stop that case and record the missing definition. Do not improvise a different test and claim equivalence.
+
+## 5.1 First-wave experiments
+
+Execute in dependency-aware order.
+
+### EXP-01 — WebKit persistent profile isolation
+
+Verify:
+- Dedicated persistent website-data store per persistent profile.
+- Cookie and website-data isolation.
+- LocalStorage and IndexedDB isolation.
+- Service-worker and cache isolation where supported.
+- Cross-profile leakage absence.
+- Store lifecycle and cleanup.
+
+### EXP-03 — SQLite encryption and temporary-file protection
+
+Verify:
+- Encryption and authenticated integrity.
+- Database protection.
+- WAL and journal protection.
+- Temporary-file handling.
+- Key lifecycle and failure behaviour.
+- Relevant backup and recovery implications.
+
+Do not claim database encryption proves all WebKit website data is encrypted.
+
+### EXP-04 — Keychain and independent offline recovery
+
+Verify:
+- Keychain-based access.
+- Independent recovery material.
+- Recovery without Vezham account/cloud dependency.
+- Wrong-key and corrupted-material handling.
+- Recovery limitations and key-loss behaviour.
+
+Offline recovery success does not prove the entire browser works offline.
+
+### EXP-07 — Encrypted backup and cross-Mac restore
+
+Verify:
+- Encrypted portable backup.
+- Manifest and integrity checks.
+- Restore to an independent environment or second Mac where available.
+- Existing destination preservation.
+- Profile and key recovery.
+- Deletion reconciliation.
+- OD-R20 download-file exclusion and optional selection.
+
+Do not silently overwrite existing data.
+
+## 5.2 Second-wave experiments
+
+### EXP-02 — Private website-data cleanup
+
+Verify:
+- Nonpersistent private WebKit store.
+- No private browsing history persistence.
+- Cleanup after closing the private session.
+- Failure and interruption handling.
+- Limits of cleanup guarantees.
+
+### EXP-05 — Profile locking and key lifecycle
+
+Verify:
+- Manual profile lock.
+- macOS lock, sleep and user switching.
+- Blocked access while locked.
+- WebKit view suspension.
+- Key-access invalidation and reacquisition.
+- In-flight operations and subscriptions.
+- Independent profiles remain unaffected.
+
+### EXP-06 — WebKit download lifecycle
+
+Verify:
+- Download progress.
+- Cancellation.
+- Supported resume behaviour.
+- Destination handling.
+- Duplicate and overwrite safety.
+- Temporary-file cleanup.
+- Metadata/file separation.
+- Private download behaviour.
+
+### EXP-08 — Deleted-data reconciliation
+
+Verify:
+- Deletion records where available.
+- Unknown deletion status.
+- Explicit confirmation before restoring potentially affected data.
+- Backup preservation.
+- No unsupported claim that reconciliation guarantees deletion across every copy.
+
+## 5.3 Supporting validation campaigns
+
+Execute the five existing supporting charters.
+
+**SVC-01 — Package and dependency conformance**
+- Four-target architecture.
+- Actual package dependency graph.
+- Engine adapter placement.
+- Dependency direction and isolation.
+
+**SVC-02 — Native host and browser chrome bridge**
+- Host/Core authority.
+- Typed bridge messages.
+- Origin and sender validation.
+- Hostile messages.
+- Cancellation and lifecycle.
+- Profile isolation.
+
+**SVC-03 — Permission-kind, origin and native authorization matrix**
+- Every existing permission kind.
+- Ask-by-default.
+- Deny/fail-closed behaviour.
+- Positive support only where actual APIs are verified.
+- Browser grants versus native OS authorization.
+- Private isolation and grant lifecycle.
+
+**SVC-04 — Integrated offline product operation**
+- Launch and relaunch.
+- Core local functionality.
+- Local persistence.
+- No mandatory local server.
+- No mandatory cloud account.
+- Clearly distinguish this from offline recovery.
+
+**SVC-05 — Durable host/content-process recovery**
+- Browser host restart.
+- WebKit content-process termination.
+- Session recovery.
+- Profile-lock interaction.
+- SQLite/WebKit/download interactions.
+- External download file preservation.
+
+## 5.4 Validation result classification
+
+Every experiment and case must end with exactly one evidence-backed status:
+
+- PASS — all defined criteria met with retained evidence.
+- FAIL — one or more criteria failed.
+- BLOCKED — prerequisites or environment unavailable.
+- INCONCLUSIVE — evidence insufficient or ambiguous.
+- NOT RUN — no execution performed.
+
+A test that cannot run is not a pass.
+
+A policy-only denial test does not qualify positive native permission support.
+
+A prototype does not establish production readiness.
+
+A successful isolated experiment does not establish complete M1 product acceptance.
+
+## 5.5 Evidence retention
+
+For every executed experiment, record:
+- Experiment and case IDs.
+- Exact procedure/version.
+- Environment and macOS version.
+- Hardware and architecture.
+- Relevant software/build version.
+- Fixture identifiers.
+- Commands and meaningful output.
+- Screenshots/logs where useful.
+- Expected versus actual results.
+- Pass/fail/blocked/inconclusive reasoning.
+- Limitations.
+- Follow-up engineering work.
+- Reviewer and execution date.
+
+Redact secrets, credentials, personal URLs and private information.
+
+Never include raw full browsing URLs in diagnostic evidence unless they are synthetic fixtures explicitly designed for that test.
+
+Preserve evidence in the existing repository reporting structure.
+
+---
+
+# 6. Handle unresolved specification and policy gates
+
+OP-01 through OP-04 are now owner-decided.
+
+Update their status from unresolved policy gates to owner-decided policy, while keeping remaining engineering definitions visible.
+
+Do not remove their traceability or validation dependencies.
+
+Retain the following specification work:
+
+- Exact OP-01 history schema and URL handling.
+- OP-02 download metadata fields and incomplete-download lifecycle.
+- OP-03 user-created versus internal recovery snapshot lifecycle.
+- OP-04 checkpoint consistency, recently closed item storage and recovery transitions.
+- Exact encryption coverage across SQLite, WebKit and backup data.
+- Key hierarchy, recovery material format and lifecycle.
+- WebKit API support and limitations.
+- Per-permission-kind positive API support.
+- Native authorization mapping.
+- Profile locking and in-flight operation semantics.
+- External file conflict and deletion rules.
+- Functional acceptance coverage for OD17 launch capabilities.
+- Stage C release qualification requirements.
+
+For every remaining gap:
+- State the impact.
+- Identify affected requirements and cases.
+- Identify whether it blocks EXP, implementation or release.
+- Recommend a resolution.
+- Do not invent owner decisions.
+
+---
+
+# 7. Produce the M1 implementation plan
+
+After documentation closeout and validation execution, prepare an implementation plan based on actual findings.
+
+Do not start product implementation.
+
+## 7.1 Preserve the architecture direction
+
+Use the existing approved direction:
+
+- Swift 6.
+- Native macOS host using Swift/AppKit.
+- Engine-independent Browser Core.
+- BrowserDomain.
+- BrowserPorts.
+- BrowserCore.
+- BrowserPersistence.
+- SQLite browser-owned persistence.
+- Dedicated persistent WebKit store per persistent profile.
+- Nonpersistent private WebKit store.
+- Keychain and independent recovery material.
+- Actor-coordinated core state.
+- Typed capability contracts and profile-scoped events.
+- Core owns browser policy and state.
+- Native Host owns platform execution and lifecycle.
+- React + TypeScript + HeroUI v3 browser chrome remains a planned UI direction, not permission to implement it now.
+
+Respect existing ADR status:
+- ADR 0001: Proposed.
+- ADR 0002: Accepted.
+- ADR 0003–0005: Proposed.
+
+Do not silently change ADR status.
+
+## 7.2 Implementation work packages
+
+Create a dependency-aware work breakdown. At minimum, assess:
+
+1. Package and dependency foundation.
+2. Browser domain and typed contracts.
+3. Browser Core runtime and state coordination.
+4. Native host and lifecycle integration.
+5. WebKit engine adapter and browser views.
+6. Profile management and website-data isolation.
+7. SQLite persistence and encryption.
+8. Keychain and independent recovery.
+9. Private browsing.
+10. Permissions and native authorization.
+11. History and deletion.
+12. Downloads and native file operations.
+13. Backup, restore and migration.
+14. Session restoration and crash recovery.
+15. Tabs, windows, groups, Spaces and workspace organization.
+16. Navigation, address bar and TLS/certificate handling.
+17. Browser chrome and native integration.
+18. Offline operation and reliability.
+19. Integrated acceptance and Stage C release qualification.
+
+For each work package provide:
+- Objective.
+- Scope.
+- Requirement and decision mapping.
+- Dependencies.
+- Relevant validation evidence.
+- Deliverables.
+- Acceptance criteria.
+- Risks and unresolved questions.
+- Definition of done.
+- Whether it is ready, conditional or blocked.
+
+Do not mark a work package ready when a critical prerequisite is unresolved.
+
+## 7.3 Implementation sequencing
+
+Propose a practical sequence with parallelizable work clearly identified.
+
+Use actual experiment findings to change sequencing where necessary.
+
+Do not assume every package must be implemented in the numbered order above.
+
+Identify:
+- Critical path.
+- Work that can begin independently.
+- Work blocked by experiments.
+- Work blocked by owner decisions.
+- Work requiring macOS 26 or additional hardware.
+- Integration milestones.
+- Security and recovery milestones.
+- M1 functional acceptance milestone.
+
+Produce a backlog that can later be handed to Codex as implementation tasks.
+
+Every implementation task must map to requirements and acceptance criteria.
+
+---
+
+# 8. Stage C release qualification remains separate
+
+REQ-21 remains a mandatory final candidate release qualification.
+
+Do not execute or approve release as part of this task.
+
+Preserve its scope, including where applicable:
+- macOS 26 and supported 26.x versions.
+- Supported architecture.
+- Developer ID and nested code signing.
+- Notarization and Gatekeeper.
+- App Sandbox and Hardened Runtime.
+- Entitlements.
+- Candidate reliability and performance.
+- Updater and artifact integrity.
+- Replay, expiry, channel and minimum-version behaviour.
+- Revocation and rollback.
+- Dependency provenance, license and security review.
+- Separate internal release decision.
+
+Report what must be validated and when. Do not claim qualification without an actual candidate and evidence.
+
+---
+
+# 9. Final deliverables
+
+Complete the following deliverables.
+
+### D01 — M1 canonical documentation baseline
+One coherent and internally consistent set of canonical documents.
+
+### D02 — Owner decision and scope register
+OD-R01–OD-R20, OP-01–OP-04, historical OD17 and the OD18 distinction, with provenance and status.
+
+### D03 — Final Developer Specification
+Requirements and functional scope updated to reflect owner decisions and documented technical gaps.
+
+### D04 — Final Validation Plan and Supporting Charters
+Existing EXP-01–08 and SVC-01–05 preserved, refined and execution outcomes added.
+
+### D05 — Final case-level traceability matrix
+Existing IDs preserved, mappings checked, coverage gaps identified and status counts recalculated.
+
+### D06 — Experiment evidence reports
+One evidence-backed report per executed experiment and supporting campaign. Clearly distinguish blocked and unexecuted work.
+
+### D07 — M1 implementation plan
+Work packages, sequencing, dependencies, acceptance gates, critical path and proposed backlog.
+
+### D08 — M1 consolidated closeout report
+Include:
+- What documentation was consolidated.
+- What decisions were incorporated.
+- What validation was executed.
+- Actual results and evidence locations.
+- Failures and blockers.
+- Remaining specification gaps.
+- Functional scope coverage.
+- Implementation readiness.
+- Explicit authorization status.
+
+---
+
+# 10. Final audit and completion criteria
+
+Before declaring this task complete, verify:
+
+1. All twenty OD-R decisions are preserved.
+2. All four OP decisions are incorporated accurately.
+3. Historical OD17 launch scope is reflected.
+4. Historical OD18 remains preserved with the documented scope distinction.
+5. Historical OD01–OD20 and WS01.1 are preserved.
+6. No identifiers were silently renumbered or invented.
+7. All REQ-01–REQ-22 are accounted for.
+8. All AC01–AC15 are accounted for.
+9. All SPEC-01–SPEC-16 are accounted for.
+10. All EXP-01–EXP-08 have an actual execution status.
+11. All SVC-01–SVC-05 have an actual execution status.
+12. All existing validation cases are accounted for.
+13. OP-01–OP-04 policy decisions and remaining engineering definitions are distinguished.
+14. All OD17 launch capabilities have a coverage assessment.
+15. Every passing validation result has retained evidence.
+16. Blocked, inconclusive and unrun work is not represented as passed.
+17. REQ-21 remains separate Stage C release qualification.
+18. No product implementation has been performed.
+19. No release has been authorized.
+20. No unrelated user work has been overwritten or discarded.
+
+At the end, report:
+- Canonical document paths.
+- Documents created, updated and superseded.
+- EXP results.
+- SVC results.
+- Total validation cases and status breakdown.
+- Requirement and acceptance coverage.
+- Outstanding blockers.
+- Implementation work package count.
+- Critical path.
+- Recommended next engineering action.
+- Git working-tree changes, without committing.
+
+## Final authorization statement
+
+The owner has authorized M1 documentation consolidation, the defined validation programme within safe and available environments, and implementation planning.
+
+The owner has **not** authorized product implementation or release.
+
+Therefore:
+
+- Documentation: Authorized.
+- EXP-01–EXP-08: Authorized within defined scope and prerequisites.
+- SVC-01–SVC-05: Authorized within defined scope and prerequisites.
+- Validation evidence and reporting: Authorized.
+- Implementation planning and backlog: Authorized.
+- Production product implementation: Not Authorized.
+- Release, signing/notarization approval and distribution: Not Authorized.
+
+Do not ask for repeated confirmation of these already authorized activities.
+
+If a specific experiment requires a new destructive operation, a materially expanded scope, access to sensitive data, a new owner policy decision or an unavailable external resource, stop only that activity and report the blocker.
+
+**The objective is to finish the M1 documentation and validation work properly, produce a defensible implementation plan, and hand back a clear implementation authorization checkpoint — not to begin coding prematurely.**

@@ -1,6 +1,6 @@
-# M1 Launch-Required Feature Matrix
+# M1 Launch-Required Feature Matrix — Historical Review Record
 
-**Prepared:** 2026-11-08 (Asia/Kolkata; work started 2026-11-07). **Status:** Complete recommendation set for owner review; remaining product details/classifications pending OD17. **Implementation/acceptance:** Not Started / Not Tested for the new browser.
+**Historical source:** original proposals/IDs below are preserved; current owner decisions and scope are in [the owner register](m1-owner-decision-register.md), current acceptance coverage in [Developer Specification §31](m1-developer-specification.md#31-current-owner-selected-launch-capability-coverage), and current authorization/results in [closeout](m1-closeout-report.md). No product implementation authorization.
 
 This matrix preserves existing required outcomes and proposes explicit treatment of previously unsettled convenience/future features. It is not a change to the historical gate ledger or approval to implement any feature. The [owner packet](m1-owner-decision-packet.md) records OD17, settled constraints and data/access gates. Required rows derived from existing criteria are not being submitted for repeated approval or waiver; owner review closes exact UX/capability/subflow details and the proposed optional/deferred scope.
 

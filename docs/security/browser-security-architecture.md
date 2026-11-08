@@ -30,7 +30,7 @@ Website JavaScript has no browser-native bridge. If page JavaScript evaluation i
 
 Assign immutable profile IDs. Bind engine storage, history, bookmarks, permissions, downloads metadata, and sync records to the selected profile. Validate WKWebsiteDataStore persistent stores by identifier and in-memory stores on macOS 26 across cookies, local storage, IndexedDB, service workers, caches, concurrent web views, deletion, and process termination. Do not infer complete isolation from distinct identifiers alone. Deny implicit cross-profile window creation.
 
-Private browsing uses non-persistent website storage and ephemeral app state. Do not persist or sync private history, cookies, downloads metadata beyond operational completion state, Tamizhi page content, or permission grants. On session end, dispose views, clear transient app state, and validate the non-persistent store is released. Document unavoidable OS/engine crash artifacts if any arise during testing.
+Private browsing uses non-persistent website storage and ephemeral app state. Do not persist or sync private history, cookies, download metadata, session recovery metadata, Tamizhi page content or permission grants. Private transfer progress is memory-only during the live operation; deliberately saved payload files are separate. On session end, dispose views, clear transient app state, and validate the non-persistent store is released. Document unavoidable OS/engine crash artifacts if any arise during testing.
 
 Store Vezham ID refresh/access credentials and sync cryptographic material in Keychain with appropriate access controls and access group. Keep website passwords under engine/browser-managed secure storage only if explicitly designed and audited; never read them into browser UI or Tamizhi. Do not log tokens, cookies, authorization headers, page bodies, or file contents.
 
@@ -63,3 +63,7 @@ Incident response must support halting rollout, revoking signed release metadata
 ## Remaining risks
 
 Engine zero-days, same-user malware, browser UI XSS, WebKit storage edge cases, OS-level process behavior, permission API coverage, prompt injection, cloud account compromise, and signing-key compromise remain residual risks. Acceptance criteria in [security acceptance criteria](browser-security-acceptance-criteria.md) require behavior-specific implementation and final-release evidence at their applicable stage; historical prototype evidence is not a current product pass. This document is not a security certification.
+
+## Current M1 policy authority
+
+[Owner register](../architecture/phase-5/reports/M1/m1-owner-decision-register.md) records full encrypted credential-stripped URL retention without query filtering and no raw URL diagnostics, manual download metadata/user-created snapshot retention, situation-specific restoration and Ask for supported new permissions. Unsupported/ambiguous kinds deny; native OS authorization remains independent. WebKit data and catalog protection are separate from SQLite encryption. No current source/evidence claims whole product qualification.

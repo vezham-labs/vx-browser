@@ -1,0 +1,36 @@
+{
+  "recorded_at": "2026-11-08T09:56:58.944902+00:00",
+  "production_swift_sources": [
+    "apps/browser-macos/Sources/Host/MainWindowController.swift",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "apps/browser-macos/Sources/App/ApplicationMain.swift"
+  ],
+  "production_source_hashes": {
+    "apps/browser-macos/Sources/Host/MainWindowController.swift": "9ecf5c6ba614f9de2886967bb2e901e8d92bf48e09fa6414cea1a566d796baa4",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift": "ad30d63933810fa259b7b85303bcf520eebaada8e069f450e800c8a6b61e60b6",
+    "apps/browser-macos/Sources/App/ApplicationMain.swift": "fa6487c530fb0d47e57ee921c0c212c26cf563fc11db9e537b38d018c56e173d"
+  },
+  "package_manifests_outside_dependencies": [],
+  "selected_encrypted_sqlite_provider": null,
+  "sqlite_cipher_version_stdout": "",
+  "sqlcipher_paths_present": {
+    "/opt/homebrew/opt/sqlcipher": false,
+    "/usr/local/opt/sqlcipher": false
+  },
+  "second_mac": "not provisioned or identified for this run",
+  "product_core_bridge_persistence_key_recovery_archive_implementation": "not present in the inspected M0 app/source/package inventory; not implemented by this task",
+  "native_header_hits": [
+    {
+      "header": "WKUIDelegate.h",
+      "line": 165,
+      "declaration": "- (void)webView:(WKWebView *)webView requestMediaCapturePermissionForOrigin:(WKSecurityOrigin *)origin initiatedByFrame:(WKFrameInfo *)frame type:(WKMediaCaptureType)type decisionHandler:(WK_SWIFT_UI_ACTOR void (^)(WKPermissionDecision decision))decisionHandler WK_SWIFT_ASYNC_NAME(webView(_:decideMediaCapturePermissionsFor:initiatedBy:type:)) WK_SWIFT_ASYNC(5) API_AVAILABLE(macos(12.0), ios(15.0));"
+    },
+    {
+      "header": "WKUIDelegate.h",
+      "line": 302,
+      "declaration": "- (void)webView:(WKWebView *)webView requestGeolocationPermissionForOrigin:(WKSecurityOrigin*)origin initiatedByFrame:(WKFrameInfo *)frame decisionHandler:(WK_SWIFT_UI_ACTOR void (^)(WKPermissionDecision decision))decisionHandler WK_SWIFT_ASYNC_NAME(webView(_:requestGeolocationPermissionFor:initiatedBy:)) API_AVAILABLE(macos(27.0), ios(27.0), visionos(27.0));"
+    }
+  ],
+  "header_hits_are_positive_support_evidence": false,
+  "missing_nx_workspace_skill": "searched installed skill roots; no nx-workspace skill found; no Nx task/generator configuration changed; native probe has no existing Nx target"
+}

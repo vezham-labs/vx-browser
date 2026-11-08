@@ -1,5 +1,6 @@
 # Native Host, Core, Engine, UI and Storage Contracts
 
+**Current baseline (2026-11-08):** supporting Proposed design; [owner register](m1-owner-decision-register.md) and [Developer Specification](m1-developer-specification.md) govern current policies/scope. Documentation/isolated validation/planning Authorized; no product implementation or release. Original draft is preserved in the evidence source archive.
 **Date:** 2026-11-07. **Status:** Proposed design only; no schema, migration, service or bridge implemented.
 
 ## Status, version and compatibility
@@ -75,7 +76,7 @@ On an async result, core checks ownership/generation and receipt before publishi
 
 ## Boundary E — Future Permission and Transfer Brokers
 
-Request envelopes bind AppRun, DataScope, ViewId/generation, trusted requesting/top-level/frame origins where available, kind, user-action context, request/effect ID, revocation epoch and deadline. Host brokers enforce OS/TCC and current authorization immediately before work; policy cannot override OS denial. Unknown/unmapped kinds and missing required origin data deny. One-time/private grants are memory-only; supported persisted grants require explicit later product policy and revocation tests.
+Request envelopes bind AppRun, DataScope, ViewId/generation, trusted requesting/top-level/frame origins where available, kind, user-action context, request/effect ID, revocation epoch and deadline. Host brokers enforce OS/TCC and current authorization immediately before work; policy cannot override OS denial. Unknown/unmapped kinds and missing required origin data deny. One-time/private grants are memory-only; supported scoped persistent grants follow OD-R11 with finalized per-kind lifetime/reset/revocation contracts. Supported new requests Ask; unsupported/ambiguous deny; OS authorization remains independent.
 
 File selection/destination results use one-shot native opaque resource tokens, bound to request/scope/view/origin and current epoch. A string from UI cannot fabricate or reuse a valid token. The native broker owns security-scoped access and closes it on cancellation/disposal/expiry. Transfer metadata does not prove byte completion: the broker validates staging/finalization/quarantine before completion is accepted. Native tokens, selected file URLs, file contents and bookmark blobs never enter general UI state or persistent core tables.
 

@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-11-08T09:56:09.962684+00:00",
+  "command": [
+    "codesign",
+    "--verify",
+    "--strict",
+    "--verbose=2",
+    "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app: valid on disk\n/private/tmp/vx-m1-native-20261108T094414Z/VXM1Validation.app: satisfies its Designated Requirement\n"
+}

@@ -1,6 +1,6 @@
-# M1 Decisions and Risk Register
+# M1 Decisions and Risk Register — Historical Review Record
 
-**Date:** 2026-11-07. **Status:** M1 design prepared for owner review; implementation Not Started.
+**Historical source:** original proposals/IDs below are preserved; current owner decisions and scope are in [the owner register](m1-owner-decision-register.md), current acceptance coverage in [Developer Specification §31](m1-developer-specification.md#31-current-owner-selected-launch-capability-coverage), and current authorization/results in [closeout](m1-closeout-report.md). No product implementation authorization.
 
 ## Established authority
 
