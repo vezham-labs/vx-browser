@@ -71,3 +71,7 @@ First provision a pinned/provider-reviewed isolated SQLCipher candidate and audi
 ## Subsequent provider/fixture checkpoint — 2026-11-08
 
 [Qualification report](m1-provider-and-fixture-qualification.md) supplies pinned source/tree verification, two identical arm64 static archives, compile-setting evidence, plaintext detector controls, syntax-only binary-key binding and bounded synthetic CryptoKit/format observations. No full EXP-03/04 campaign ran; runtime artifact protection/binding, provider trust/security qualification, native Keychain identity/ACL and independent destination remain Blocked. WebKit enumeration remains designed/blocked under the signing boundary. This update adds evidence links without changing existing mappings/outcomes or treating the source Mac as cross-Mac recovery.
+
+## Subsequent provider trust/runtime gate — 2026-11-08
+
+[Current gate assessment](m1-provider-trust-and-runtime-qualification.md) records a fresh unchanged-pin/source/archive check and bounded publisher-key/license/security review. Workstream A is BLOCKED on independently authenticated release provenance and signature verification. Workstreams B–D were NOT EXECUTED; encrypted main/WAL/SHM/journal/temp, key-binding and interruption outcomes remain unqualified. This supplies the missing trust-readiness detail without changing any historical EXP-03/04 or downstream status, owner decision or authorization boundary.

@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-08T12:37:05.949520+00:00",
+  "url": "https://www.zetetic.net/security/",
+  "command_description": "urllib.request HTTPS GET, default certificate validation, 25s timeout, 4MiB bound",
+  "status": 200,
+  "final_url": "https://www.zetetic.net/security/",
+  "content_type": "text/html; charset=utf-8",
+  "sha256": "35da222fef1224f3c422fd5e0425c007d1278a20987c3ea6a654bc6814a6f228",
+  "bytes": 2303,
+  "payload": "sources/vendor-security-page.txt"
+}

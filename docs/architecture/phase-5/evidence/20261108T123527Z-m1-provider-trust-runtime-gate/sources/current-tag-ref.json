@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-08T12:37:03.327828+00:00",
+  "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/ref/tags/v4.20.0",
+  "command_description": "urllib.request HTTPS GET, default certificate validation, 25s timeout, 4MiB bound",
+  "status": 200,
+  "final_url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/ref/tags/v4.20.0",
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "b75292d06480e5f062255cb831f99265d131bb1cbce98a33de8e3a5d69e0ab36",
+  "bytes": 339,
+  "data": {
+    "ref": "refs/tags/v4.20.0",
+    "node_id": "MDM6UmVmMzg2MTc6cmVmcy90YWdzL3Y0LjIwLjA=",
+    "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/refs/tags/v4.20.0",
+    "object": {
+      "sha": "52252487a5cada9b430e8d4b20025790c5a6ba20",
+      "type": "tag",
+      "url": "https://api.github.com/repos/sqlcipher/sqlcipher/git/tags/52252487a5cada9b430e8d4b20025790c5a6ba20"
+    }
+  }
+}

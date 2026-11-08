@@ -35,3 +35,7 @@ New maintained supporting specifications: [Persistent-profile encryption v1.0](m
 ## Provider and fixture qualification checkpoint — 2026-11-08
 
 [Canonical qualification-readiness report v1.0](m1-provider-and-fixture-qualification.md) is the focused checkpoint for static source/build and synthetic fixture evidence. It supplements existing specs without replacing owner decisions or altering historical EXP/case outcomes. Evidence: ../../evidence/20261108T113403Z-m1-provider-fixture-qualification/. Original inputs/version hashes and archive/build records are retained; no production dependency selected/installed and no signing/release.
+
+## Provider trust/runtime gate — 2026-11-08
+
+[Canonical trust/runtime assessment v1.0](m1-provider-trust-and-runtime-qualification.md) owns the subsequent authenticity stop decision at baseline 7fb95f769f9af0000997c2d193b3d3675d0ca6a6. Evidence: ../../evidence/20261108T123527Z-m1-provider-trust-runtime-gate/. Prior source/build hashes still agree; independent publisher authenticity remains BLOCKED, so runtime/storage/interruption qualification was NOT EXECUTED. Prior source versions, outcomes, owner decisions and ADR statuses are preserved.

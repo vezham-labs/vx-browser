@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-08",
+  "pin": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "workstream_A_status": "BLOCKED",
+  "trust_criteria": [
+    {
+      "criterion": "Canonical upstream identity",
+      "status": "PASS",
+      "scope": "Vendor announcement links official repository; bounded source identity observation",
+      "evidence": "sources/vendor-release-announcement.txt"
+    },
+    {
+      "criterion": "Exact release/tag/commit relationship",
+      "status": "PASS",
+      "scope": "Fresh tag resolves to unchanged pin and tree",
+      "evidence": "sources/current-tag-object.json"
+    },
+    {
+      "criterion": "Retained source-tree/archive integrity",
+      "status": "PASS",
+      "scope": "2325 archive and extracted file records match; archive digest unchanged",
+      "evidence": "results/retained-input-integrity.json"
+    },
+    {
+      "criterion": "Publisher-to-signing-key binding",
+      "status": "BLOCKED",
+      "scope": "No authenticated matching release-key binding or equivalent attestation established",
+      "evidence": "results/public-key-metadata.json"
+    },
+    {
+      "criterion": "Cryptographic tag verification",
+      "status": "BLOCKED",
+      "scope": "unknown_key; no authenticated matching key or installed OpenPGP verifier",
+      "evidence": "results/local-prerequisites.json"
+    },
+    {
+      "criterion": "Independent source authenticity",
+      "status": "BLOCKED",
+      "scope": "No independently verified artifact-to-publisher binding",
+      "evidence": "results/authenticity-investigation.json"
+    },
+    {
+      "criterion": "License obligations / internal-use compatibility assessment",
+      "status": "PASS",
+      "scope": "Engineering assessment of retained license terms only; organizational dependency/legal review still needed",
+      "evidence": "../20261108T113403Z-m1-provider-fixture-qualification/sources/upstream-LICENSE.md"
+    },
+    {
+      "criterion": "Current upstream security-source inventory/review",
+      "status": "PASS",
+      "scope": "Bounded inventory/review only; no exhaustive security or vulnerability-free claim",
+      "evidence": "sources/upstream-current-issues.json"
+    },
+    {
+      "criterion": "Build/dependency provenance and repeatability assessment",
+      "status": "PASS",
+      "scope": "Previous exact static build records retained and current two hashes match; runtime/independent-machine unqualified",
+      "evidence": "results/local-prerequisites.json"
+    }
+  ],
+  "trust_criterion_counts": {
+    "PASS": 6,
+    "FAIL": 0,
+    "BLOCKED": 3,
+    "INCONCLUSIVE": 0,
+    "NOT EXECUTED": 0,
+    "total": 9
+  },
+  "runtime_workstreams": [
+    {
+      "workstream": "B",
+      "status": "BLOCKED",
+      "execution": "NOT EXECUTED",
+      "reason": "Independent provider authenticity not established; owner's explicit stop condition",
+      "conditions": [
+        {
+          "checklist_ordinal": 1,
+          "condition": "Encryption enabled",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 2,
+          "condition": "Database encrypted at rest",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 3,
+          "condition": "Correct-key authenticated reads",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 4,
+          "condition": "Incorrect key fails safely",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 5,
+          "condition": "Cross-profile key isolation",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 6,
+          "condition": "Ciphertext tamper detection",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 7,
+          "condition": "Integrity-check semantics",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 8,
+          "condition": "No unintended plaintext temporary/auxiliary writes",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        }
+      ]
+    },
+    {
+      "workstream": "C",
+      "status": "BLOCKED",
+      "execution": "NOT EXECUTED",
+      "reason": "Independent provider authenticity not established; owner's explicit stop condition",
+      "conditions": [
+        {
+          "checklist_ordinal": 1,
+          "condition": "Main database",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 2,
+          "condition": "WAL",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 3,
+          "condition": "SHM",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 4,
+          "condition": "Rollback journal",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 5,
+          "condition": "Temporary database files",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 6,
+          "condition": "Temporary operation storage",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        }
+      ]
+    },
+    {
+      "workstream": "D",
+      "status": "BLOCKED",
+      "execution": "NOT EXECUTED",
+      "reason": "Independent provider authenticity not established; owner's explicit stop condition",
+      "conditions": [
+        {
+          "checklist_ordinal": 1,
+          "condition": "Interrupted writes",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 2,
+          "condition": "Process termination during writes",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 3,
+          "condition": "Reopen after interruption",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 4,
+          "condition": "Wrong-key recovery",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 5,
+          "condition": "Key rotation boundaries",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 6,
+          "condition": "Profile-key separation",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        },
+        {
+          "checklist_ordinal": 7,
+          "condition": "Failure preservation without silent data loss",
+          "status": "BLOCKED",
+          "execution": "NOT EXECUTED",
+          "case_id_assigned": false
+        }
+      ]
+    }
+  ],
+  "runtime_tests_executed": 0,
+  "runtime_tests_passed": 0,
+  "runtime_tests_failed": 0,
+  "blocked_runtime_checklist_conditions": 21,
+  "checklist_conditions_are_not_executed_or_independent_case_counts": true,
+  "EXP_03_status": "BLOCKED",
+  "existing_case_matrix_changed": false,
+  "production_implementation_authorized": false,
+  "full_EXP_03_or_EXP_04_executed": false
+}

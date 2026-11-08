@@ -1,0 +1,72 @@
+{
+  "time": "2026-11-08T12:41:03.300955+00:00",
+  "commands": [
+    {
+      "argv": [
+        "sw_vers"
+      ],
+      "returncode": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uname",
+        "-m"
+      ],
+      "returncode": 0,
+      "stdout": "arm64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "xcrun",
+        "--show-sdk-version"
+      ],
+      "returncode": 0,
+      "stdout": "27.2\n",
+      "stderr": "2026-11-08 18:11:02.091 xcodebuild[72145:1279680]  DVTFilePathFSEvents: Failed to start fs event stream.\n"
+    },
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "returncode": 0,
+      "stdout": "timeline\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "7fb95f769f9af0000997c2d193b3d3675d0ca6a6\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD^"
+      ],
+      "returncode": 0,
+      "stdout": "f5733fabeee1b0eb559d472c6c86f317b74d8108\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "returncode": 0,
+      "stdout": "## timeline...origin/timeline\n?? docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/\n",
+      "stderr": ""
+    }
+  ]
+}

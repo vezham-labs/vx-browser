@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-08T12:37:07.845766+00:00",
+  "url": "https://www.zetetic.net/blog/2026/09/08/sqlcipher-4.19.0-release/",
+  "command_description": "urllib.request HTTPS GET, default certificate validation, 25s timeout, 4MiB bound",
+  "status": 200,
+  "final_url": "https://www.zetetic.net/blog/2026/09/08/sqlcipher-4.19.0-release/",
+  "content_type": "text/html; charset=utf-8",
+  "sha256": "dc6162f02493fedbed0f20a72f300d4b385c29798a313595397123e92b901a8b",
+  "bytes": 4319,
+  "payload": "sources/vendor-prior-security-advisory.txt"
+}

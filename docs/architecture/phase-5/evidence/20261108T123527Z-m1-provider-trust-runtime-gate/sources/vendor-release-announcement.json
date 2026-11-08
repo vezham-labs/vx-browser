@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-08T12:37:07.277045+00:00",
+  "url": "https://www.zetetic.net/blog/2026/10/27/sqlcipher-4.20.0-release/",
+  "command_description": "urllib.request HTTPS GET, default certificate validation, 25s timeout, 4MiB bound",
+  "status": 200,
+  "final_url": "https://www.zetetic.net/blog/2026/10/27/sqlcipher-4.20.0-release/",
+  "content_type": "text/html; charset=utf-8",
+  "sha256": "4a78e7795c3acdbebb9facd7ecd7dbc74866343903bb3584eaa1bd686d36684d",
+  "bytes": 3161,
+  "payload": "sources/vendor-release-announcement.txt"
+}

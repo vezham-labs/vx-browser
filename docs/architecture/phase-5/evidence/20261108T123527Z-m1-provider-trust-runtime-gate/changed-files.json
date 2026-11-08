@@ -1,0 +1,195 @@
+{
+  "tracked_modified": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md"
+  ],
+  "new_report": "docs/architecture/phase-5/reports/M1/m1-provider-trust-and-runtime-qualification.md",
+  "new_evidence_directory": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate",
+  "files": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "change": "Modified / appended reference",
+      "sha256": "9f985073bb034abf7110215631d75b15789ec7f5cfce8b825b2d59f8f65f7288"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+      "change": "Modified / appended reference",
+      "sha256": "2d32164ddc3082dfa8b6c27c0e3ead5e95a43de16ff0a62a70dd365464a0e279"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-provider-trust-and-runtime-qualification.md",
+      "change": "Created / gate report",
+      "sha256": "f04788f84d7a9102bf54efa932e269876d924f64d12181d125efc75260d7e51d"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "change": "Modified / appended reference",
+      "sha256": "6c72346a808e36eb1c9cb27a9e2b7bce730d08483455ce8404c8e671b2659ad3"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+      "change": "Modified / appended reference",
+      "sha256": "3d1c83d75540d990f1c7195c308db32b1e6d5fd2f61148aef3701e05c0c47a33"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/baseline.json",
+      "change": "Created / new evidence",
+      "sha256": "891074a12bf2a9cf3b6575c7081cd96c698fc99bbf4ba9a73df645a4694051f5"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/finalize_gate_evidence.py",
+      "change": "Created / new evidence",
+      "sha256": "760445eae257318695ed36d7c7a168af19b32b1fae8e222f13c8a493bf1a827a"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/inspect_provider_authenticity.py",
+      "change": "Created / new evidence",
+      "sha256": "f587c496729a86543acb04679a28dab835febfb86e9844a2770834cfd42e8b27"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/preservation-audit.json",
+      "change": "Created / new evidence",
+      "sha256": "ada8caa37a5a63523f3a130e67c6cf6f7ffcd77ed4002d0062d0ab775a050f03"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/results/authenticity-investigation.json",
+      "change": "Created / new evidence",
+      "sha256": "15858864a37f285634eb89b2093608ca39c5251a3cbc13dce5ed0961a46af497"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/results/current-environment-and-state.json",
+      "change": "Created / new evidence",
+      "sha256": "4332cfb4d0f87ca16af8541224eae5b29a44d3a6a2a365ffd51dd6d07c1774b7"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/results/gate-results.json",
+      "change": "Created / new evidence",
+      "sha256": "67f0380f74b21afec927f20d3e33258777a9569d903b3459444c6d5c27549cdb"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/results/local-prerequisites.json",
+      "change": "Created / new evidence",
+      "sha256": "b37f90c317d8e45d897e4f1419163154b6b0931b4c20775deb133afacf128d0f"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/results/preservation-audit-initial.json",
+      "change": "Created / new evidence",
+      "sha256": "dffc544af1aecf2685b6a53559efaf9ab8253fb55df8415039d37a75c92a84ba"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/results/public-key-metadata.json",
+      "change": "Created / new evidence",
+      "sha256": "52bba35f3f95fe6f799917be51d5b1690cd5a2589977977e956573ea9ee1849f"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/results/retained-input-integrity.json",
+      "change": "Created / new evidence",
+      "sha256": "938f5cbd0ae8e43edd71b0e1dc2ea3e00795462d96259550f41c4d0ab678fb65"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/canonical-inputs.json",
+      "change": "Created / new evidence",
+      "sha256": "9c36a8bab61545017cfd01c615fc9fb4c5d357d7ac033cce2f42c84d4e7241d7"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/current-pinned-commit.json",
+      "change": "Created / new evidence",
+      "sha256": "ae89847eb5939a39d4b3a12d7f7ff40a0c7546ada432a8079ceb535bb6b440de"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/current-release.json",
+      "change": "Created / new evidence",
+      "sha256": "01048b48abe1108e5eef720ab7b1843f7a7a3526aaa443dafbf95d4b0f58490c"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/current-tag-object.json",
+      "change": "Created / new evidence",
+      "sha256": "10659fd929bd85907ba7a392eeb8cf82803cd1b4ba660396c0d5cb9846782f64"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/current-tag-ref.json",
+      "change": "Created / new evidence",
+      "sha256": "2bf93d32bd2969d6ce70fa79e84a946c97a0659f04f036af858ddfb2ab879a66"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/github-publisher-key-api.json",
+      "change": "Created / new evidence",
+      "sha256": "642e83e2b745e9dc32b999e74aab6e3469fbdaba3bdfbf434a6bfbff021a72ed"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/github-publisher-public-keys.asc",
+      "change": "Created / new evidence",
+      "sha256": "ea23c38d85238dfb5676b7bf89652798c7f3496da055d76e58fac89c46c69f17"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/github-publisher-public-keys.json",
+      "change": "Created / new evidence",
+      "sha256": "96e1cbfd58568b0a807c3cc822b071c628739d6440c8c12f83e0b9ec8c4620e2"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/owner-authorization.txt",
+      "change": "Created / new evidence",
+      "sha256": "2d541c67daf7226587c52634857b355f96f4529b99fa0512f56f801f50ecf5b5"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/upstream-current-issues.json",
+      "change": "Created / new evidence",
+      "sha256": "0c2b01ba5cd6934a804ab2aa49e8421b9364eeb9b4153bce6a2fd7ca1d29cca4"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/upstream-published-advisories.json",
+      "change": "Created / new evidence",
+      "sha256": "ef7e8d0ea0e8fcd202adb52a7fd4893f900d22cfbcd92b4aacd4f46b8bc80e75"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-prior-security-advisory.json",
+      "change": "Created / new evidence",
+      "sha256": "7542baad6145a69a3ffa19595b577660452b86ef62ddedc757562f0e00a9703a"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-prior-security-advisory.txt",
+      "change": "Created / new evidence",
+      "sha256": "dc6162f02493fedbed0f20a72f300d4b385c29798a313595397123e92b901a8b"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-release-announcement.json",
+      "change": "Created / new evidence",
+      "sha256": "c11f0ba14a9b0d5be843f7f778fbd87f7f5dba3152b8e4f4e8071188fda2a815"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-release-announcement.txt",
+      "change": "Created / new evidence",
+      "sha256": "4a78e7795c3acdbebb9facd7ecd7dbc74866343903bb3584eaa1bd686d36684d"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-security-page.json",
+      "change": "Created / new evidence",
+      "sha256": "e24a72d48ed9f1986e14f4af05ffc1e589c06d4dce36f6c592b1a6a4ce696cdd"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-security-page.txt",
+      "change": "Created / new evidence",
+      "sha256": "35da222fef1224f3c422fd5e0425c007d1278a20987c3ea6a654bc6814a6f228"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-security-support-key.asc",
+      "change": "Created / new evidence",
+      "sha256": "b5fa10e62b50478db1236f3a8c7157074d71450a1f6a245eb77a71802202eefd"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/sources/vendor-security-support-key.json",
+      "change": "Created / new evidence",
+      "sha256": "08f54b79683b75c29c65c73a81543697348f87fbfa20d51b5a8d694dcf8a7b2a"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T123527Z-m1-provider-trust-runtime-gate/verify_retained_provider_inputs.py",
+      "change": "Created / new evidence",
+      "sha256": "38c1060447844e5b28416bd7323d0c321967e5069d48a3f12b02b9f9c651372a"
+    }
+  ],
+  "inventory_exclusions": [
+    "changed-files.json and artifact-index.json exclude their own/cross hashes to avoid circularity"
+  ]
+}

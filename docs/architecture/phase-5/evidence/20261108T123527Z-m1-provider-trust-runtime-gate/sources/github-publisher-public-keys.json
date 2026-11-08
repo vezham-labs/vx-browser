@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-08T12:37:05.172534+00:00",
+  "url": "https://github.com/sjlombardo.gpg",
+  "command_description": "urllib.request HTTPS GET, default certificate validation, 25s timeout, 4MiB bound",
+  "status": 200,
+  "final_url": "https://github.com/sjlombardo.gpg",
+  "content_type": "text/plain; charset=utf-8",
+  "sha256": "ea23c38d85238dfb5676b7bf89652798c7f3496da055d76e58fac89c46c69f17",
+  "bytes": 125,
+  "payload": "sources/github-publisher-public-keys.asc"
+}

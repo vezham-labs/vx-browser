@@ -1,0 +1,14 @@
+{
+  "scope": "Public source/archive/build integrity only; not publisher authentication or runtime qualification",
+  "archive_path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-source.tar.gz",
+  "archive_sha256": "fc5394c916beeabb1f43e2ac97d0827f36e8917f6675a00cca54537c32cb36a2",
+  "expected_archive_sha256": "fc5394c916beeabb1f43e2ac97d0827f36e8917f6675a00cca54537c32cb36a2",
+  "manifest_entries": 2325,
+  "archive_file_matches": 2325,
+  "extracted_file_matches": 2325,
+  "mismatches": [],
+  "provider_executed": false,
+  "archive_matches": true,
+  "archive_file_count": 2325,
+  "integrity_status": "PASS"
+}

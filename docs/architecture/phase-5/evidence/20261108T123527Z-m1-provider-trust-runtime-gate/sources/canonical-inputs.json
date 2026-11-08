@@ -1,0 +1,47 @@
+[
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+    "title": "# M1 Provider and Fixture Qualification \u2014 v1.0",
+    "sha256": "5d0d29a304b83da9c7a0863076f95207cba151ce9caa47c38d34872414a8755c"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+    "title": "# M1 Persistent-Profile Encryption Specification",
+    "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+    "title": "# M1 Keychain and Independent Recovery Specification",
+    "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+    "title": "# M1 Validation Readiness and Downstream Remediation",
+    "sha256": "640718b65a807e0f5abf1cea742337b67b29e13852809f9f0fc829ee98b4c466"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+    "title": "# M1 Developer Specification v1.2 \u2014 Proposed",
+    "sha256": "e846fadee7694ef575a2f45f98bc4e0d280dd70fa7e4cbcd9a61f8fcd173afc3"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+    "title": "# M1 Validation Plan v1.2 \u2014 Proposed",
+    "sha256": "c8fbdd8499152f6f53d0f18405ea1a45530b3eadc0f7eca89abde66879ca7610"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-supporting-validation-charters.md",
+    "title": "# M1 Supporting Validation Charters v1.2 \u2014 Proposed",
+    "sha256": "73eaa4f3c3a4a32b3a01d2053559946138d4533644190b9ab6993724bee4d638"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+    "title": "# M1 Case-Level Traceability Matrix v1.3 \u2014 Proposed",
+    "sha256": "3498aeab5fcac840ca08f7f47cf94395a93d30a9a568b5f5c4b9b9c6cdc712ae"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-register.md",
+    "title": "# M1 Owner Decision and Scope Register",
+    "sha256": "db3b84a90e51e527e0ecb834a4e028d6543b20820527cefdeeef6b28c8683a22"
+  }
+]

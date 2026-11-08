@@ -1,0 +1,32 @@
+{
+  "pinned_commit": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "prior_archives_current": [
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a",
+      "exists": true,
+      "matches_prior_sha256": true,
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c"
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-2/libsqlite3.a",
+      "exists": true,
+      "matches_prior_sha256": true,
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c"
+    }
+  ],
+  "verification_tools": {
+    "gpg": null,
+    "gpgv": null,
+    "sq": null,
+    "openssl": "/opt/homebrew/bin/openssl"
+  },
+  "known_gpg_paths": {
+    "/usr/local/MacGPG2/bin/gpg2": false,
+    "/usr/local/MacGPG2/bin/gpg": false,
+    "/opt/homebrew/bin/gpg": false,
+    "/opt/homebrew/bin/gpgv": false,
+    "/usr/local/bin/gpg": false
+  },
+  "tool_install_performed": false,
+  "runtime_gate_open": false
+}

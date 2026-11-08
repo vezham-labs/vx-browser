@@ -31,3 +31,7 @@ ADR0001 Proposed;0002 Accepted;0003–0005 Proposed. Conditional WKWebView; CEF 
 ## Provider and fixture qualification — 2026-11-08
 
 [Current qualification-readiness report](m1-provider-and-fixture-qualification.md) records immutable SQLCipher source provenance, two repeatable isolated static builds, synthetic fixture preparation/observations and blocked native Keychain/same-identity WebKit registry work. Source/build/fixture evidence is not EXP-03/04 acceptance. Original165-row outcomes, owner/ADR decisions and original-store state remain unchanged; no signing/product integration or release.
+
+## Provider trust and runtime gate — 2026-11-08
+
+[Current trust/runtime gate assessment](m1-provider-trust-and-runtime-qualification.md) rechecks the unchanged pin and retained source/build integrity. Independent publisher authenticity remains BLOCKED: GitHub reports unknown_key and no authenticated matching release key/attestation was established. Runtime, storage-surface and interruption qualification stopped before execution as required. No EXP-03, case or acceptance outcome changed.

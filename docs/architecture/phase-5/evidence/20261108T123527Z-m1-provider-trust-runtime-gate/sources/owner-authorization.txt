@@ -1,0 +1,194 @@
+# M1 — Provider Trust and Runtime Qualification Gate
+
+## Objective
+
+Continue the Vezham Browser M1 qualification work from the latest committed checkpoint.
+
+Establish whether the pinned SQLCipher provider is trustworthy and whether its runtime encryption behavior satisfies the M1 persistence and security requirements.
+
+This is a **bounded, validation-only qualification task**. It is not authorization for production implementation, dependency integration, or release.
+
+## 1. Baseline and repository verification
+
+Before doing anything:
+
+1. Confirm repository, current branch, HEAD and working-tree status.
+2. Confirm the latest committed checkpoint and its parent.
+3. Read the canonical M1 documentation and latest provider/fixture qualification report.
+4. Review the existing evidence under:
+
+`docs/architecture/phase-5/evidence/20261108T113403Z-m1-provider-fixture-qualification/`
+
+5. Preserve all previous evidence and owner decisions.
+6. Record the exact baseline in a new evidence directory.
+
+Do not assume the previous report's findings are still current without checking.
+
+## 2. Workstream A — Provider trust and source authenticity
+
+Pinned SQLCipher source:
+
+`355d4db92d3404e71faa8088d071a71d767807f4`
+
+Investigate and document:
+
+- Upstream repository identity and canonical source.
+- Exact commit and release/tag relationship.
+- Publisher identity and signature-verification status.
+- Independent verification of source authenticity.
+- License obligations and compatibility with Vezham's intended distribution.
+- Relevant known security advisories and upstream security posture.
+- Dependency provenance and reproducibility considerations.
+
+Important:
+
+- A tag showing `unknown_key` is not verified publisher authenticity.
+- Do not treat source availability or a successful build as proof of trust.
+- Do not silently change the pinned source commit.
+- If authenticity cannot be independently established, record the blocker and stop before runtime qualification.
+
+**Deliverable:** Provider trust assessment with evidence, commands, source references and explicit PASS / FAIL / BLOCKED status for each criterion.
+
+## 3. Workstream B — Runtime provider qualification
+
+Proceed only if Workstream A establishes sufficient source authenticity and licensing confidence.
+
+Use an isolated validation harness. Do not modify production browser code or add production dependencies.
+
+Verify:
+
+1. The selected SQLCipher build actually enables encryption.
+2. A database is encrypted at rest.
+3. Authenticated reads succeed with the correct key.
+4. Opening with an incorrect key fails safely.
+5. Cross-profile key isolation works.
+6. Ciphertext tampering is detected.
+7. Database integrity checks behave as expected.
+8. Plaintext is not unintentionally written to temporary or auxiliary files.
+
+Record exact provider configuration, compile definitions, runtime version and key-binding behavior.
+
+Do not rely on compile-only checks or static archive hashes as runtime evidence.
+
+**Deliverable:** Reproducible runtime qualification report and isolated test harness.
+
+## 4. Workstream C — SQLite storage-surface protection
+
+Use synthetic databases only.
+
+Inspect and test the protection behavior of:
+
+- Main database.
+- WAL.
+- SHM.
+- Rollback journal.
+- Temporary database files.
+- Temporary storage used during database operations.
+
+Verify that sensitive database content is not exposed in plaintext through auxiliary files or temporary artifacts.
+
+Record:
+
+- File inventory.
+- File signatures and relevant metadata.
+- Encryption observations.
+- Test commands and outputs.
+- Cleanup behavior.
+- Any unverified storage surfaces.
+
+Do not inspect, modify or reuse original user profile stores for these tests.
+
+## 5. Workstream D — Interruption and key-boundary tests
+
+Using synthetic fixtures only, test:
+
+- Interrupted database writes.
+- Process termination during write operations.
+- Reopening after interruption.
+- Wrong-key recovery behavior.
+- Key rotation boundaries.
+- Profile-key separation.
+- Failure handling without silent data loss.
+
+Distinguish between:
+- A test that was executed and passed.
+- A test that was prepared but not executed.
+- A test blocked by an environment or authorization prerequisite.
+
+Do not claim recovery qualification from fixture preparation alone.
+
+## 6. Traceability and reporting
+
+Update the M1 qualification report with:
+
+- Objective and scope.
+- Baseline commit and environment.
+- Provider provenance.
+- Source authenticity findings.
+- Runtime provider configuration.
+- Test cases and results.
+- Commands and artifacts.
+- File and storage observations.
+- Known limitations.
+- Unresolved blockers.
+- Risk assessment.
+- Traceability to existing M1 requirements and EXP-03.
+
+Use explicit statuses:
+
+- PASS
+- FAIL
+- BLOCKED
+- INCONCLUSIVE
+- NOT EXECUTED
+
+Update canonical references only where necessary.
+
+Preserve the existing M1 documentation structure and naming conventions.
+
+## 7. Strict authorization boundaries
+
+Do NOT:
+
+- Modify production Browser Core or persistence implementation.
+- Add or upgrade production dependencies.
+- Change the pinned provider source without a separately documented proposal.
+- Modify owner decisions.
+- Change ADR status or architecture decisions.
+- Run native Keychain qualification.
+- Run WebKit cleanup or registry campaigns.
+- Run EXP-04.
+- Modify original browser stores or prior experiment evidence.
+- Perform signing, notarization or release activities.
+- Claim EXP-03 passed based on partial provider qualification.
+- Commit or push unless separately requested.
+
+If provider trust cannot be established, stop before runtime testing and document the exact blocker.
+
+## 8. Final report
+
+At completion, provide:
+
+1. Baseline branch and HEAD.
+2. Files created or modified.
+3. Provider authenticity outcome.
+4. Runtime encryption outcome.
+5. Storage-surface protection outcome.
+6. Interruption-test outcome.
+7. Test counts by status.
+8. Evidence directory and artifact index.
+9. Preservation checks and any failures.
+10. Remaining blockers.
+11. Whether further owner authorization is required.
+
+## Expected outcome
+
+The objective is to establish a defensible qualification decision for the SQLCipher provider.
+
+A successful static build is not runtime encryption qualification.
+
+Runtime encryption qualification is not full EXP-03 acceptance.
+
+Full EXP-03 acceptance is not production implementation or release authorization.
+
+Keep these milestones separate and preserve all existing evidence.

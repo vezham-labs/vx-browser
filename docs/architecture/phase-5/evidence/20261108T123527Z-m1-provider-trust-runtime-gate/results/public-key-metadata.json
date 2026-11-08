@@ -1,0 +1,27 @@
+{
+  "metadata_only_not_signature_verification": true,
+  "support_key_fingerprints": [
+    {
+      "packet": "primary",
+      "fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2"
+    },
+    {
+      "packet": "subkey",
+      "fingerprint": "A4EA79E649E745B92117A56F0CB99EE267FD0322"
+    },
+    {
+      "packet": "subkey",
+      "fingerprint": "466459A718EC371CDD171FC03A7D809DD4DFEDA7"
+    },
+    {
+      "packet": "subkey",
+      "fingerprint": "5AE773802F16DD3AE688050462AE2C1CB1C49DF6"
+    }
+  ],
+  "tag_issuer_fingerprints": [
+    "2646E8ECC00DAF4C2F67DBCD19A0457D05EA8350"
+  ],
+  "signature_public_key_algorithm": 1,
+  "signature_hash_algorithm": 10,
+  "vendor_support_key_contains_tag_issuer": false
+}

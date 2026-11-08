@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-08T12:37:06.894052+00:00",
+  "url": "https://www.zetetic.net/security/support_zetetic_net_public_key.gpg",
+  "command_description": "urllib.request HTTPS GET, default certificate validation, 25s timeout, 4MiB bound",
+  "status": 200,
+  "final_url": "https://www.zetetic.net/security/support_zetetic_net_public_key.gpg",
+  "content_type": "text/plain; charset=utf-8",
+  "sha256": "b5fa10e62b50478db1236f3a8c7157074d71450a1f6a245eb77a71802202eefd",
+  "bytes": 29175,
+  "payload": "sources/vendor-security-support-key.asc"
+}
