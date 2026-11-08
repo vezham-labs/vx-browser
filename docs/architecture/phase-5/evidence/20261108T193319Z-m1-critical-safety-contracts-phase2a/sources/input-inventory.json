@@ -1,0 +1,1676 @@
+{
+  "baseline": "fb3a71668f92deef88cc61ef454eda202fbc2587",
+  "inputs": [
+    {
+      "path": ".agents/skills/nx-workspace/SKILL.md",
+      "sha256": "e1a0c99a3f4528c2e5cc371ba24d6acc1d03af1c342b2beff62966712cc626df",
+      "line_count": 286,
+      "matches_prior_review_input": null,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Nx Workspace Exploration"
+        },
+        {
+          "line": 12,
+          "heading": "## Listing Projects"
+        },
+        {
+          "line": 19,
+          "heading": "# List all projects"
+        },
+        {
+          "line": 22,
+          "heading": "# Filter by pattern (glob)"
+        },
+        {
+          "line": 26,
+          "heading": "# Filter by tag"
+        },
+        {
+          "line": 30,
+          "heading": "# Filter by target (projects that have a specific target)"
+        },
+        {
+          "line": 33,
+          "heading": "# Combine filters"
+        },
+        {
+          "line": 38,
+          "heading": "# Negate patterns"
+        },
+        {
+          "line": 42,
+          "heading": "# Output as JSON"
+        },
+        {
+          "line": 46,
+          "heading": "## Project Configuration"
+        },
+        {
+          "line": 55,
+          "heading": "# Get full project configuration"
+        },
+        {
+          "line": 58,
+          "heading": "# Extract specific parts from the JSON"
+        },
+        {
+          "line": 63,
+          "heading": "# Check project metadata"
+        },
+        {
+          "line": 67,
+          "heading": "## Target Information"
+        },
+        {
+          "line": 72,
+          "heading": "# List all targets for a project"
+        },
+        {
+          "line": 75,
+          "heading": "# Get full target configuration"
+        },
+        {
+          "line": 78,
+          "heading": "# Check target executor/command"
+        },
+        {
+          "line": 82,
+          "heading": "# View target options"
+        },
+        {
+          "line": 85,
+          "heading": "# Check target inputs/outputs (for caching)"
+        },
+        {
+          "line": 89,
+          "heading": "# Find projects with a specific target"
+        },
+        {
+          "line": 94,
+          "heading": "## Workspace Configuration"
+        },
+        {
+          "line": 100,
+          "heading": "# Read the full nx.json"
+        },
+        {
+          "line": 103,
+          "heading": "# Or use jq for specific sections"
+        },
+        {
+          "line": 117,
+          "heading": "## Affected Projects"
+        },
+        {
+          "line": 121,
+          "heading": "## Common Exploration Patterns"
+        },
+        {
+          "line": 141,
+          "heading": "# Use the project graph to find dependents"
+        },
+        {
+          "line": 145,
+          "heading": "## Programmatic Answers"
+        },
+        {
+          "line": 164,
+          "heading": "# Count projects"
+        },
+        {
+          "line": 167,
+          "heading": "# Filter by pattern"
+        },
+        {
+          "line": 170,
+          "heading": "# Get affected projects as array"
+        },
+        {
+          "line": 210,
+          "heading": "# Get target names"
+        },
+        {
+          "line": 213,
+          "heading": "# Get specific target config"
+        },
+        {
+          "line": 216,
+          "heading": "# Get tags"
+        },
+        {
+          "line": 219,
+          "heading": "# Get project root"
+        },
+        {
+          "line": 259,
+          "heading": "# Get all project names from graph"
+        },
+        {
+          "line": 262,
+          "heading": "# Find dependencies of a project"
+        },
+        {
+          "line": 265,
+          "heading": "# Find projects that depend on a library"
+        },
+        {
+          "line": 269,
+          "heading": "## Troubleshooting"
+        },
+        {
+          "line": 274,
+          "heading": "# Check what targets exist on the project"
+        },
+        {
+          "line": 277,
+          "heading": "# Check if any projects have that target"
+        }
+      ]
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "ee3aacd5002ec6d2cfc6930fcd7299a69238905c31355ff7b9f1a4e55b5a0872",
+      "line_count": 30,
+      "matches_prior_review_input": null,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 4,
+          "heading": "# General Guidelines for working with Nx"
+        },
+        {
+          "line": 13,
+          "heading": "## Scaffolding & Generators"
+        },
+        {
+          "line": 17,
+          "heading": "## When to use nx_docs"
+        },
+        {
+          "line": 25,
+          "heading": "## CLI template baseline"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/prerequisite-assessment.json",
+      "sha256": "5ed96defdf599ebdcf590d1532e67b17fc0b5f229216688c8638b7c8f0d3f692",
+      "line_count": 88,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/readiness-gaps.json",
+      "sha256": "59d0cd31a0457ebb03aabd7bef6d1348fb1d15d9980cc492018c44333f46c481",
+      "line_count": 69,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/synthetic-test-matrix.json",
+      "sha256": "6934307144ed869aa88b8c631833a57e677ed10ae067a49ea6ea6f678ba4b0b3",
+      "line_count": 3372,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/design-crosswalk.json",
+      "sha256": "3211f4225de45dc9bfba6e6289f11e106f8a2c33b58ca918b4ea01971d47055f",
+      "line_count": 3394,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T165809Z-m1-worker-phase1/SHA256SUMS",
+      "sha256": "e46d29826575ff855b4e03b60898aec39b5ac8644490ab3e2b03295aa3320c7e",
+      "line_count": 107,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T165809Z-m1-worker-phase1/attempt-171322765352/library-identity.json",
+      "sha256": "4dc821458aec6852e6850de0977e47a56a466154c33c6808c4091b85bc0e96aa",
+      "line_count": 28,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T165809Z-m1-worker-phase1/attempt-171322765352/result.json",
+      "sha256": "9a4bcfae4fab855501777591c5a2cf6cd9f7d981dc98add017b1114d9c7eb5a5",
+      "line_count": 22,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T165809Z-m1-worker-phase1/preservation-audit.json",
+      "sha256": "29bf5b08504cdb92c24ffde8890f282b8ef0a20ef39629a4a439de04e90871c8",
+      "line_count": 270,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "2a5954c7d47dde336cfcdc68c366b086c26caaec2fd438a7df00e5e1b877f440",
+      "line_count": 61,
+      "matches_prior_review_input": null,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Canonical Engineering Baseline"
+        },
+        {
+          "line": 5,
+          "heading": "## Canonical documents"
+        },
+        {
+          "line": 17,
+          "heading": "## Results and limitations"
+        },
+        {
+          "line": 21,
+          "heading": "## Historical sources"
+        },
+        {
+          "line": 27,
+          "heading": "## M1 validation remediation \u2014 2026-11-08"
+        },
+        {
+          "line": 31,
+          "heading": "## Provider and fixture qualification \u2014 2026-11-08"
+        },
+        {
+          "line": 35,
+          "heading": "## Provider trust and runtime gate \u2014 2026-11-08"
+        },
+        {
+          "line": 39,
+          "heading": "## Publisher authenticity acquisition \u2014 2026-11-08"
+        },
+        {
+          "line": 43,
+          "heading": "## Vendor archive cryptographic verification \u2014 2026-11-08 (latest source checkpoint)"
+        },
+        {
+          "line": 47,
+          "heading": "## SQLCipher provider runtime readiness \u2014 2026-11-08"
+        },
+        {
+          "line": 51,
+          "heading": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 55,
+          "heading": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        },
+        {
+          "line": 59,
+          "heading": "## SQLCipher provider adapter \u00b7 Phase 2 design \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+      "sha256": "21d101f7d3fda53ebe9f89e720dddb7fa47de636d333013f246fa27893382d6a",
+      "line_count": 119,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Native Host, Core, Engine, UI and Storage Contracts"
+        },
+        {
+          "line": 6,
+          "heading": "## Status, version and compatibility"
+        },
+        {
+          "line": 12,
+          "heading": "## Ownership context and common envelope"
+        },
+        {
+          "line": 29,
+          "heading": "## Boundary A \u2014 Host to Browser Core"
+        },
+        {
+          "line": 41,
+          "heading": "## Boundary B \u2014 Core to Engine Adapter"
+        },
+        {
+          "line": 59,
+          "heading": "## Boundary C \u2014 Core and Future React Chrome"
+        },
+        {
+          "line": 69,
+          "heading": "## Boundary D \u2014 Core to Persistence"
+        },
+        {
+          "line": 77,
+          "heading": "## Boundary E \u2014 Future Permission and Transfer Brokers"
+        },
+        {
+          "line": 85,
+          "heading": "## Boundary F \u2014 Selected feature providers and lifecycle events"
+        },
+        {
+          "line": 115,
+          "heading": "## Error, lifecycle and verification policy"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+      "sha256": "3498aeab5fcac840ca08f7f47cf94395a93d30a9a568b5f5c4b9b9c6cdc712ae",
+      "line_count": 438,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Case-Level Traceability Matrix v1.3 \u2014 Proposed"
+        },
+        {
+          "line": 5,
+          "heading": "## Recalculated inventory and outcomes"
+        },
+        {
+          "line": 21,
+          "heading": "## Original conventions"
+        },
+        {
+          "line": 23,
+          "heading": "## Matrix conventions"
+        },
+        {
+          "line": 60,
+          "heading": "## Consolidated individual rows"
+        },
+        {
+          "line": 230,
+          "heading": "## Per-row reasons"
+        },
+        {
+          "line": 400,
+          "heading": "## REQ-21: retained Stage C qualification reference"
+        },
+        {
+          "line": 420,
+          "heading": "## SVC-05 / RECOVERY-009 clarification"
+        },
+        {
+          "line": 432,
+          "heading": "## Current consistency record"
+        },
+        {
+          "line": 436,
+          "heading": "## Dated validation remediation \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+      "sha256": "e846fadee7694ef575a2f45f98bc4e0d280dd70fa7e4cbcd9a61f8fcd173afc3",
+      "line_count": 1328,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Developer Specification v1.2 \u2014 Proposed"
+        },
+        {
+          "line": 3,
+          "heading": "## 1. Document status, scope and authorization boundary"
+        },
+        {
+          "line": 13,
+          "heading": "## 2. Product principles and M1 goals"
+        },
+        {
+          "line": 38,
+          "heading": "## 3. Platform baseline and macOS requirements"
+        },
+        {
+          "line": 65,
+          "heading": "## 4. System architecture and ownership boundaries"
+        },
+        {
+          "line": 108,
+          "heading": "## 5. Swift 6 Browser Core runtime"
+        },
+        {
+          "line": 128,
+          "heading": "## 6. Native Host and Browser Core boundary"
+        },
+        {
+          "line": 162,
+          "heading": "## 7. Four-target package architecture"
+        },
+        {
+          "line": 187,
+          "heading": "## 8. Browser engine strategy and WebKit integration boundary"
+        },
+        {
+          "line": 210,
+          "heading": "## 9. Database topology and persistence contracts"
+        },
+        {
+          "line": 245,
+          "heading": "## 10. Profile creation, isolation, unlock, lock and deletion lifecycle"
+        },
+        {
+          "line": 277,
+          "heading": "## 11. Encryption, Keychain, recovery material and key lifecycle"
+        },
+        {
+          "line": 338,
+          "heading": "## 12. WebKit website-data storage and protection"
+        },
+        {
+          "line": 358,
+          "heading": "## 13. Private browsing lifecycle and cleanup"
+        },
+        {
+          "line": 380,
+          "heading": "## 14. Website permissions and authorization"
+        },
+        {
+          "line": 401,
+          "heading": "## 15. History, retention and deletion"
+        },
+        {
+          "line": 424,
+          "heading": "## 16. Downloads and filesystem lifecycle"
+        },
+        {
+          "line": 454,
+          "heading": "## 17. Backup, restore, migration and deletion reconciliation"
+        },
+        {
+          "line": 501,
+          "heading": "## 18. Static capability composition and typed capability contracts"
+        },
+        {
+          "line": 528,
+          "heading": "## 19. Events, cancellation, sequencing and profile-context propagation"
+        },
+        {
+          "line": 550,
+          "heading": "## 20. Failure handling and cross-component consistency"
+        },
+        {
+          "line": 571,
+          "heading": "## 21. Security and privacy threat model requirements"
+        },
+        {
+          "line": 594,
+          "heading": "## 22. Data lifecycle requirements"
+        },
+        {
+          "line": 613,
+          "heading": "## 23. Experiments and validation plan"
+        },
+        {
+          "line": 643,
+          "heading": "## 24. M1 acceptance criteria and requirement traceability \u2014 R3"
+        },
+        {
+          "line": 728,
+          "heading": "## 25. Owner-decided policies and remaining engineering dependencies"
+        },
+        {
+          "line": 743,
+          "heading": "## 26. Historical decision crosswalk"
+        },
+        {
+          "line": 774,
+          "heading": "## 27. OD-R01\u2013OD-R20 traceability index"
+        },
+        {
+          "line": 1152,
+          "heading": "## 28. F01\u2013F17 audit finding traceability"
+        },
+        {
+          "line": 1176,
+          "heading": "## 29. Open technical specifications and implementation dependencies"
+        },
+        {
+          "line": 1209,
+          "heading": "## 30. Current authorization and closeout"
+        },
+        {
+          "line": 1217,
+          "heading": "## 31. Current owner-selected launch capability coverage"
+        },
+        {
+          "line": 1254,
+          "heading": "## 32. Engineering disposition register \u2014 SPEC-01\u2013SPEC-16"
+        },
+        {
+          "line": 1280,
+          "heading": "## 33. Owner \u2192 capability \u2192 specification \u2192 requirement \u2192 validation \u2192 evidence \u2192 implementation"
+        },
+        {
+          "line": 1303,
+          "heading": "## 34. Evidence-backed website permission support inventory"
+        },
+        {
+          "line": 1324,
+          "heading": "## 35. Focused encryption/recovery remediation \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+      "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c",
+      "line_count": 156,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Keychain and Independent Recovery Specification"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Key hierarchy and trust limits"
+        },
+        {
+          "line": 26,
+          "heading": "## 2. Key envelope v1 \u2014 exact proposed serialization"
+        },
+        {
+          "line": 59,
+          "heading": "## 3. Keychain item and native authentication contract"
+        },
+        {
+          "line": 69,
+          "heading": "## 4. Independent recovery material and custody"
+        },
+        {
+          "line": 103,
+          "heading": "## 5. Profile lock and key lifecycle"
+        },
+        {
+          "line": 125,
+          "heading": "## 6. Rotation and recovery-version lifecycle"
+        },
+        {
+          "line": 134,
+          "heading": "## 7. Loss and failure matrix"
+        },
+        {
+          "line": 154,
+          "heading": "## 8. Qualification boundary"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-register.md",
+      "sha256": "db3b84a90e51e527e0ecb834a4e028d6543b20820527cefdeeef6b28c8683a22",
+      "line_count": 574,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Owner Decision and Scope Register"
+        },
+        {
+          "line": 7,
+          "heading": "## Source provenance"
+        },
+        {
+          "line": 14,
+          "heading": "## Current policy and capability dispositions \u2014 verbatim from current instruction"
+        },
+        {
+          "line": 16,
+          "heading": "## 3.2 OP-01 \u2014 Browsing history"
+        },
+        {
+          "line": 34,
+          "heading": "## 3.3 OP-02 \u2014 Download metadata"
+        },
+        {
+          "line": 50,
+          "heading": "## 3.4 OP-03 \u2014 App-owned snapshots"
+        },
+        {
+          "line": 65,
+          "heading": "## 3.5 OP-04 \u2014 Session restoration and recovery"
+        },
+        {
+          "line": 87,
+          "heading": "## 3.6 Historical OD17 \u2014 M1 launch capability scope"
+        },
+        {
+          "line": 162,
+          "heading": "## 3.7 Historical decision namespace"
+        },
+        {
+          "line": 179,
+          "heading": "## Engineering qualifications"
+        },
+        {
+          "line": 183,
+          "heading": "## Preserved OD-R01\u2013OD-R20"
+        },
+        {
+          "line": 538,
+          "heading": "## WS01.1 historical crosswalk (historical meanings preserved)"
+        },
+        {
+          "line": 540,
+          "heading": "## 26. Historical decision crosswalk"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+      "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af",
+      "line_count": 115,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Persistent-Profile Encryption Specification"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Closure boundary and sources"
+        },
+        {
+          "line": 19,
+          "heading": "## 2. Threat model"
+        },
+        {
+          "line": 29,
+          "heading": "## 3. Location and classification rules"
+        },
+        {
+          "line": 58,
+          "heading": "## 4. Cryptographic construction and provider qualification"
+        },
+        {
+          "line": 78,
+          "heading": "## 5. SQLite artifact and I/O contract"
+        },
+        {
+          "line": 93,
+          "heading": "## 6. Rotation, deletion and OS limitations"
+        },
+        {
+          "line": 99,
+          "heading": "## 7. WebKit protection boundary \u2014 SPEC-08 / REQ-22"
+        },
+        {
+          "line": 109,
+          "heading": "## 8. Validation and remaining gates"
+        },
+        {
+          "line": 113,
+          "heading": "## 9. Existing package and authority boundaries"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+      "sha256": "2d32164ddc3082dfa8b6c27c0e3ead5e95a43de16ff0a62a70dd365464a0e279",
+      "line_count": 211,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Provider and Fixture Qualification \u2014 v1.0"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Baseline, authority and source inventory"
+        },
+        {
+          "line": 20,
+          "heading": "## 2. Workstream A \u2014 candidate provenance/build/license"
+        },
+        {
+          "line": 99,
+          "heading": "## 3. Workstream B \u2014 Keychain and recovery fixtures"
+        },
+        {
+          "line": 132,
+          "heading": "## 4. Workstream C \u2014 original stores and observability"
+        },
+        {
+          "line": 162,
+          "heading": "## 5. Consolidated status and existing traceability"
+        },
+        {
+          "line": 183,
+          "heading": "## 6. Commands, artifacts and limits"
+        },
+        {
+          "line": 194,
+          "heading": "## 7. Next bounded task and authorization checkpoint"
+        },
+        {
+          "line": 201,
+          "heading": "## 8. Checkpoint completion and remaining boundaries"
+        },
+        {
+          "line": 209,
+          "heading": "## 9. Subsequent provider trust/runtime gate \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-provider-trust-and-runtime-qualification.md",
+      "sha256": "6b14bb69f12570972b9d87ec786ad59590db1828f766bc0258e04487a9213730",
+      "line_count": 122,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Provider Trust and Runtime Qualification Gate \u2014 v1.0"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Baseline and scope"
+        },
+        {
+          "line": 13,
+          "heading": "## 2. Provider identity, integrity and independent authenticity"
+        },
+        {
+          "line": 43,
+          "heading": "## 3. Workstream A criterion ledger"
+        },
+        {
+          "line": 61,
+          "heading": "## 4. License, security posture and dependency considerations"
+        },
+        {
+          "line": 77,
+          "heading": "## 5. Runtime, storage and interruption outcomes"
+        },
+        {
+          "line": 89,
+          "heading": "## 6. Traceability and unchanged historical results"
+        },
+        {
+          "line": 97,
+          "heading": "## 7. Commands, evidence and preservation"
+        },
+        {
+          "line": 107,
+          "heading": "## 8. Smallest next action and authority"
+        },
+        {
+          "line": 115,
+          "heading": "## 9. Subsequent publisher-evidence acquisition \u2014 2026-11-08"
+        },
+        {
+          "line": 119,
+          "heading": "## 10. Subsequent vendor archive verification \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "1e764cad5b9d216e51c27ed6dd0b70928ba16f80c526d3eb8e8f8d8a4e9e6711",
+      "line_count": 61,
+      "matches_prior_review_input": null,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Canonical Source Catalog and Supersession Record"
+        },
+        {
+          "line": 5,
+          "heading": "## Canonical maintained set"
+        },
+        {
+          "line": 19,
+          "heading": "## Supplied sources preserved verbatim"
+        },
+        {
+          "line": 25,
+          "heading": "## ADR/platform/source controls"
+        },
+        {
+          "line": 31,
+          "heading": "## Focused remediation sources \u2014 2026-11-08"
+        },
+        {
+          "line": 35,
+          "heading": "## Provider and fixture qualification checkpoint \u2014 2026-11-08"
+        },
+        {
+          "line": 39,
+          "heading": "## Provider trust/runtime gate \u2014 2026-11-08"
+        },
+        {
+          "line": 43,
+          "heading": "## Publisher authenticity evidence acquisition \u2014 2026-11-08"
+        },
+        {
+          "line": 47,
+          "heading": "## Vendor archive verification \u2014 2026-11-08 (latest source checkpoint)"
+        },
+        {
+          "line": 51,
+          "heading": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 55,
+          "heading": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        },
+        {
+          "line": 59,
+          "heading": "## SQLCipher provider adapter \u00b7 Phase 2 design \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2-implementation-plan.md",
+      "sha256": "0770a6077e3abcab3cb80a02458e6f2b8838bcdd5d9b977f5cd14cc341fcd2e3",
+      "line_count": 132,
+      "matches_prior_review_input": null,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 SQLCipher Phase 2 implementation and qualification plan"
+        },
+        {
+          "line": 7,
+          "heading": "## 1. Baseline, scope and sequencing"
+        },
+        {
+          "line": 20,
+          "heading": "## 2. Common entry and execution gates"
+        },
+        {
+          "line": 30,
+          "heading": "## 3. Stage A \u2014 Provider initialization and runtime identity"
+        },
+        {
+          "line": 42,
+          "heading": "## 4. Stage B \u2014 Key binding and connection ownership"
+        },
+        {
+          "line": 54,
+          "heading": "## 5. Stage C \u2014 Exclusive creation and existing-store authentication"
+        },
+        {
+          "line": 66,
+          "heading": "## 6. Stage D \u2014 Connection settings and readback"
+        },
+        {
+          "line": 78,
+          "heading": "## 7. Stage E \u2014 Filesystem observation and VFS"
+        },
+        {
+          "line": 90,
+          "heading": "## 8. Stage F \u2014 Failure, close and recovery qualification"
+        },
+        {
+          "line": 102,
+          "heading": "## 9. Stage G \u2014 Encrypted fixtures and bounded runtime cases"
+        },
+        {
+          "line": 114,
+          "heading": "## 10. Stage H \u2014 EXP-03 / EXP-04 readiness review"
+        },
+        {
+          "line": 122,
+          "heading": "## 11. Test evidence and decision accounting"
+        },
+        {
+          "line": 128,
+          "heading": "## 12. Current status and next authorization request"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2-pqr-crosswalk.md",
+      "sha256": "1a2ff5e329df200fabea530ddaee7f3974199902a740fb042ab09099d4f1c95c",
+      "line_count": 81,
+      "matches_prior_review_input": null,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 SQLCipher Phase 2 PQR crosswalk"
+        },
+        {
+          "line": 7,
+          "heading": "## Interpretation and common prerequisites"
+        },
+        {
+          "line": 17,
+          "heading": "## Consolidated case routes"
+        },
+        {
+          "line": 72,
+          "heading": "## Mapping reconciliation and coverage limits"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-adapter-phase2-design.md",
+      "sha256": "861b0be887c8b4184d8d13dee7fb6a82b74ee1f2352b0b3d00f26772ebf6cd90",
+      "line_count": 242,
+      "matches_prior_review_input": null,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 SQLCipher provider adapter \u00b7 Phase 2 design and runtime safety review"
+        },
+        {
+          "line": 7,
+          "heading": "## 1. Review boundary and evidence hierarchy"
+        },
+        {
+          "line": 17,
+          "heading": "## 2. Architecture and component ownership"
+        },
+        {
+          "line": 34,
+          "heading": "## 3. Pinned provider, ABI and runtime lifecycle"
+        },
+        {
+          "line": 55,
+          "heading": "## 4. Phase 1 IPC changes required before real operations"
+        },
+        {
+          "line": 65,
+          "heading": "## 5. Key binding, authentication and the pre-read gate"
+        },
+        {
+          "line": 90,
+          "heading": "## 6. Open modes, resource ownership and creation"
+        },
+        {
+          "line": 105,
+          "heading": "## 7. Configuration and effective-value contract"
+        },
+        {
+          "line": 141,
+          "heading": "## 8. Filesystem observation, confinement and plaintext detection"
+        },
+        {
+          "line": 160,
+          "heading": "## 9. Close, failures, quarantine and restart"
+        },
+        {
+          "line": 198,
+          "heading": "## 10. Snapshot, copy, rotation and recovery scope"
+        },
+        {
+          "line": 206,
+          "heading": "## 11. Security assessment and unresolved gates"
+        },
+        {
+          "line": 225,
+          "heading": "## 12. Requirement traceability, status and handoff"
+        },
+        {
+          "line": 240,
+          "heading": "## Primary API references"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md",
+      "sha256": "fd0102195357f562c26e660919303b50c89e4a9deb3aa3371a6494145a028c9d",
+      "line_count": 93,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 SQLCipher provider runtime readiness"
+        },
+        {
+          "line": 7,
+          "heading": "## Candidate freeze"
+        },
+        {
+          "line": 23,
+          "heading": "## Key binding and ownership"
+        },
+        {
+          "line": 36,
+          "heading": "## Synthetic matrix and evidence"
+        },
+        {
+          "line": 51,
+          "heading": "## Prerequisite assessment"
+        },
+        {
+          "line": 70,
+          "heading": "## Work before runtime authorization"
+        },
+        {
+          "line": 87,
+          "heading": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 91,
+          "heading": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-publisher-authenticity-evidence.md",
+      "sha256": "e7b53df75ffc3bcafbc5b19bc83fa1702300b300f3535c411c26513fa2017240",
+      "line_count": 195,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 SQLCipher Publisher Authenticity Evidence \u2014 v1.0"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Exact baseline and authority"
+        },
+        {
+          "line": 13,
+          "heading": "## 2. Sources investigated and new evidence"
+        },
+        {
+          "line": 37,
+          "heading": "## 3. Publisher identity and fingerprint findings"
+        },
+        {
+          "line": 45,
+          "heading": "## 4. Exact source binding and cryptographic verification"
+        },
+        {
+          "line": 60,
+          "heading": "## 5. Qualification ledger"
+        },
+        {
+          "line": 77,
+          "heading": "## 6. Precise blockers, next action and unsent inquiry"
+        },
+        {
+          "line": 88,
+          "heading": "## 7. Changes, artifacts and preservation"
+        },
+        {
+          "line": 98,
+          "heading": "## 8. Vendor archive cryptographic verification \u2014 2026-11-08 (current checkpoint)"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md",
+      "sha256": "42e82bcb826dc97f71d512bb8ea9e9a644488b4e9c26a1b25f33dcf38faf0425",
+      "line_count": 424,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 isolated SQLCipher worker and key-binding design"
+        },
+        {
+          "line": 11,
+          "heading": "## 1. Inspected baseline and existing contracts"
+        },
+        {
+          "line": 28,
+          "heading": "## 2. Worker boundary and ownership"
+        },
+        {
+          "line": 74,
+          "heading": "## 3. Static integration and library identity"
+        },
+        {
+          "line": 125,
+          "heading": "## 4. Key ownership and lifecycle"
+        },
+        {
+          "line": 205,
+          "heading": "## 5. Exact connection initialization sequence"
+        },
+        {
+          "line": 254,
+          "heading": "## 6. Synthetic fixture specification"
+        },
+        {
+          "line": 296,
+          "heading": "## 7. File observation and controlled faults"
+        },
+        {
+          "line": 326,
+          "heading": "## 8. Copy, DEK rotation and promotion"
+        },
+        {
+          "line": 344,
+          "heading": "## 9. Security analysis and remaining validation"
+        },
+        {
+          "line": 361,
+          "heading": "## 10. Requirement-to-design traceability"
+        },
+        {
+          "line": 381,
+          "heading": "## 11. Design readiness and outstanding work"
+        },
+        {
+          "line": 412,
+          "heading": "## 12. Evidence and completion boundary"
+        },
+        {
+          "line": 422,
+          "heading": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-phase1-implementation.md",
+      "sha256": "011a6a1765710c9468725b8ee92d55ea19a54b70b6558ad13b68741ca5dda056",
+      "line_count": 144,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 isolated worker implementation \u00b7 Phase 1"
+        },
+        {
+          "line": 8,
+          "heading": "## 1. Existing architecture and implementation location"
+        },
+        {
+          "line": 16,
+          "heading": "## 2. Implemented files and behavior"
+        },
+        {
+          "line": 31,
+          "heading": "## 3. Protocol, identity and process ownership"
+        },
+        {
+          "line": 45,
+          "heading": "## 4. Lifecycle and failure evidence"
+        },
+        {
+          "line": 71,
+          "heading": "## 5. Build and linkage verification"
+        },
+        {
+          "line": 93,
+          "heading": "## 6. Commands, revisions and actual results"
+        },
+        {
+          "line": 115,
+          "heading": "## 7. Deviations and security limits"
+        },
+        {
+          "line": 127,
+          "heading": "## 8. Completion criteria and next phase"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-supporting-validation-charters.md",
+      "sha256": "73eaa4f3c3a4a32b3a01d2053559946138d4533644190b9ab6993724bee4d638",
+      "line_count": 726,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Supporting Validation Charters v1.2 \u2014 Proposed"
+        },
+        {
+          "line": 3,
+          "heading": "## 1. Maintained baseline and scope"
+        },
+        {
+          "line": 9,
+          "heading": "## 2. Canonical sources and historical inspection record"
+        },
+        {
+          "line": 13,
+          "heading": "## 3. Supporting validation coverage summary"
+        },
+        {
+          "line": 34,
+          "heading": "## 4. SVC-01 \u2014 Package and dependency conformance"
+        },
+        {
+          "line": 107,
+          "heading": "## 5. SVC-02 \u2014 Native host and browser chrome bridge"
+        },
+        {
+          "line": 178,
+          "heading": "## 6. SVC-03 \u2014 Permission-kind, origin and native authorization matrix"
+        },
+        {
+          "line": 311,
+          "heading": "## 7. SVC-04 \u2014 Integrated offline product operation"
+        },
+        {
+          "line": 377,
+          "heading": "## 8. SVC-05 \u2014 Durable host/content-process recovery"
+        },
+        {
+          "line": 456,
+          "heading": "## 9. Case-level traceability matrix"
+        },
+        {
+          "line": 527,
+          "heading": "## 10. Platform and environment matrix"
+        },
+        {
+          "line": 563,
+          "heading": "## 11. Evidence artifact and reporting standard"
+        },
+        {
+          "line": 604,
+          "heading": "## 12. Dependencies and critical path"
+        },
+        {
+          "line": 630,
+          "heading": "## 13. Unresolved specification gaps"
+        },
+        {
+          "line": 659,
+          "heading": "## 14. OP-01\u2013OP-04 policy gate status"
+        },
+        {
+          "line": 692,
+          "heading": "## 15. Consolidated M1 validation readiness assessment"
+        },
+        {
+          "line": 714,
+          "heading": "## 16. Current authorization and correction record"
+        },
+        {
+          "line": 724,
+          "heading": "## Remediation dependency overlay \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+      "sha256": "f9bbcc42121a22c4d30f160397bb47a0f3c0a5e6376182ecf0c34eba47be747f",
+      "line_count": 786,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# M1 Validation Plan v1.2 \u2014 Proposed"
+        },
+        {
+          "line": 3,
+          "heading": "## 1. Current baseline and scope"
+        },
+        {
+          "line": 7,
+          "heading": "## 2. Scope and authorization boundary"
+        },
+        {
+          "line": 49,
+          "heading": "## 3. Experiment inventory"
+        },
+        {
+          "line": 88,
+          "heading": "## 4. EXP-01 through EXP-08 detailed charters"
+        },
+        {
+          "line": 440,
+          "heading": "## 5. Consolidated validation matrix"
+        },
+        {
+          "line": 457,
+          "heading": "## 6. Dependency graph and execution sequence"
+        },
+        {
+          "line": 520,
+          "heading": "## 7. Owner-decided OP-01\u2013OP-04 dependencies"
+        },
+        {
+          "line": 527,
+          "heading": "## 8. Evidence and reporting requirements"
+        },
+        {
+          "line": 578,
+          "heading": "## 9. Failure handling and escalation"
+        },
+        {
+          "line": 606,
+          "heading": "## 10. Requirement-to-validation traceability"
+        },
+        {
+          "line": 736,
+          "heading": "## 11. Readiness assessment"
+        },
+        {
+          "line": 751,
+          "heading": "## 12. Open questions and remaining gaps"
+        },
+        {
+          "line": 772,
+          "heading": "## 13. Execution outcomes and authorization"
+        },
+        {
+          "line": 780,
+          "heading": "## Remediation procedure bindings \u2014 2026-11-08"
+        },
+        {
+          "line": 784,
+          "heading": "## SQLCipher provider runtime readiness \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0001-browser-engine-strategy.md",
+      "sha256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5",
+      "line_count": 164,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0001: Browser engine strategy for Vezham Browser"
+        },
+        {
+          "line": 9,
+          "heading": "## Context"
+        },
+        {
+          "line": 17,
+          "heading": "## Decision drivers"
+        },
+        {
+          "line": 26,
+          "heading": "## Options considered"
+        },
+        {
+          "line": 47,
+          "heading": "## Owner decision and evidence basis \u2014 conditional acceptance"
+        },
+        {
+          "line": 61,
+          "heading": "## Four decision paths reviewed"
+        },
+        {
+          "line": 72,
+          "heading": "## Rationale and remaining risk"
+        },
+        {
+          "line": 82,
+          "heading": "## Staged validation policy and approved bounded closure"
+        },
+        {
+          "line": 130,
+          "heading": "## Recorded approvals, remaining conditions and execution boundary"
+        },
+        {
+          "line": 143,
+          "heading": "## Consequences of the conditional owner decision"
+        },
+        {
+          "line": 149,
+          "heading": "## Revisit triggers"
+        },
+        {
+          "line": 155,
+          "heading": "## Related records"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "sha256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2",
+      "line_count": 63,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0002: Internal distribution and macOS platform baseline"
+        },
+        {
+          "line": 8,
+          "heading": "## Context"
+        },
+        {
+          "line": 12,
+          "heading": "## Decisions"
+        },
+        {
+          "line": 27,
+          "heading": "## Product decisions and implementation assumptions"
+        },
+        {
+          "line": 33,
+          "heading": "## Consequences"
+        },
+        {
+          "line": 49,
+          "heading": "## Open questions"
+        },
+        {
+          "line": 57,
+          "heading": "## Related documents"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+      "sha256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e",
+      "line_count": 44,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0003: Browser Core runtime and language"
+        },
+        {
+          "line": 8,
+          "heading": "## Problem and established boundaries"
+        },
+        {
+          "line": 12,
+          "heading": "## Alternatives"
+        },
+        {
+          "line": 24,
+          "heading": "## Proposed decision"
+        },
+        {
+          "line": 34,
+          "heading": "## Consequences and reversibility"
+        },
+        {
+          "line": 40,
+          "heading": "## Approval and revisit conditions"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0004-browser-local-persistence.md",
+      "sha256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3",
+      "line_count": 39,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0004: Browser-owned local persistence"
+        },
+        {
+          "line": 8,
+          "heading": "## Problem"
+        },
+        {
+          "line": 12,
+          "heading": "## Alternatives and trade-offs"
+        },
+        {
+          "line": 25,
+          "heading": "## Proposed decision and conditions"
+        },
+        {
+          "line": 33,
+          "heading": "## Maintenance, reversibility and approval"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md",
+      "sha256": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17",
+      "line_count": 47,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# ADR 0005: Browser capability boundaries and lifecycle"
+        },
+        {
+          "line": 8,
+          "heading": "## Problem and preserved decisions"
+        },
+        {
+          "line": 14,
+          "heading": "## Alternatives"
+        },
+        {
+          "line": 23,
+          "heading": "## Proposed decision"
+        },
+        {
+          "line": 33,
+          "heading": "## Source, trade-offs and security limits"
+        },
+        {
+          "line": 41,
+          "heading": "## Compatibility, reversibility and owner decisions"
+        }
+      ]
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/README.md",
+      "sha256": "8c8bfebbab995ca97682fdda2ffb6659242de8ed1a7d746c96e11459d04fda02",
+      "line_count": 49,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Isolated SQLCipher qualification tools \u00b7 Phase 1"
+        },
+        {
+          "line": 19,
+          "heading": "## Files and responsibility"
+        },
+        {
+          "line": 29,
+          "heading": "## Wire contract"
+        },
+        {
+          "line": 37,
+          "heading": "## Lifecycle and limits"
+        }
+      ]
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/link_identity.c",
+      "sha256": "6d37208d545dc7185bd8d3029301d3bf0e25e989746d336b4d954ef482d7fe53",
+      "line_count": 8,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/project.json",
+      "sha256": "6f7f21e34c23ed2b9814c4b8b1ebc3a486ea8d12c98c5b2d590d8fe98b7df3b9",
+      "line_count": 16,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/protocol.c",
+      "sha256": "be0cd1c2cd5b9bf009fbc10e754dad7e64dfb3d4cd103c184487b9b79fef5b17",
+      "line_count": 163,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/protocol.h",
+      "sha256": "b17cea938eaf737202683c7dc0f5453cdd8d3bc6ad06401a58824a96eec3e575",
+      "line_count": 60,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/run_phase1.py",
+      "sha256": "ba55e556b4be2c58b7f20d5f3a4e62d25e36e13bb9fd2168d8e49c39eb0ce32e",
+      "line_count": 123,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/supervisor.c",
+      "sha256": "771a4a4cc094c3751cd88d4ce627e078074597ab98e9da34b4a986856fbce343",
+      "line_count": 216,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/supervisor.h",
+      "sha256": "deb516ed39e58667447268bccdf474e5cc21e90415954af63df5a0678153ab00",
+      "line_count": 29,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/supervisor_tests.c",
+      "sha256": "58fdc0499507ebc02e3fdd254c00ae272a9dc1a5648146c76a479b3c7c75c23c",
+      "line_count": 343,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    },
+    {
+      "path": "qualification/sqlcipher-phase1/worker.c",
+      "sha256": "3369d361d76302656e3b31a04b21e304d336b7af03d8f4f9050567f73f229465",
+      "line_count": 150,
+      "matches_prior_review_input": true,
+      "review_basis": "Current text/source excerpts plus unchanged prior reviewed baseline where matched",
+      "headings": []
+    }
+  ]
+}

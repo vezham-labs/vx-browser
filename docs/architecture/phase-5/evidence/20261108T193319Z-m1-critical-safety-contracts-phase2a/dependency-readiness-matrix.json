@@ -1,0 +1,200 @@
+{
+  "status": "Proposed design only",
+  "gates": [
+    {
+      "gate": "OPEN-01",
+      "contract_disposition": "Blocked",
+      "owner_dependency": "D2A-01",
+      "remaining_limit": "Supported literal key-aware open not established"
+    },
+    {
+      "gate": "OPEN-02",
+      "contract_disposition": "Resolved at proposed-contract level",
+      "owner_dependency": null,
+      "remaining_limit": "Broker/write-fence implementation and evidence absent"
+    },
+    {
+      "gate": "OPEN-03",
+      "contract_disposition": "Partially resolved",
+      "owner_dependency": null,
+      "remaining_limit": "VFS/locks/RAM-WAL/direct-I/O validation absent"
+    },
+    {
+      "gate": "OPEN-04",
+      "contract_disposition": "Resolved at proposed qualification-contract level",
+      "owner_dependency": null,
+      "remaining_limit": "Durable restart/process evidence absent; product intent separate"
+    },
+    {
+      "gate": "OPEN-05",
+      "contract_disposition": "Partially resolved",
+      "owner_dependency": null,
+      "remaining_limit": "Single-worker wire contract specified; maintenance extension excluded"
+    },
+    {
+      "gate": "OPEN-06",
+      "contract_disposition": "Pending",
+      "owner_dependency": null,
+      "remaining_limit": "Genuine provider bind-failure observation"
+    },
+    {
+      "gate": "OPEN-07",
+      "contract_disposition": "Pending",
+      "owner_dependency": null,
+      "remaining_limit": "OS/device/crash diagnostics and direct-I/O coverage"
+    },
+    {
+      "gate": "OPEN-08",
+      "contract_disposition": "Pending",
+      "owner_dependency": null,
+      "remaining_limit": "Real-case finite budgets and frozen oracles"
+    }
+  ],
+  "activities": [
+    {
+      "activity": "Fake-provider implementation",
+      "contracts_to_freeze": [
+        "C01",
+        "C04",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "dependencies": [],
+      "authority_boundary": "Separate fake-only implementation/build/execution scope",
+      "current_status": "Proposed / Not Authorized"
+    },
+    {
+      "activity": "VFS implementation",
+      "contracts_to_freeze": [
+        "C03",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "dependencies": [
+        "Fake-provider implementation",
+        "Non-DB filesystem backend validation"
+      ],
+      "authority_boundary": "Separate isolated backend/VFS scope",
+      "current_status": "Proposed / Not Authorized"
+    },
+    {
+      "activity": "SQLCipher initialization",
+      "contracts_to_freeze": [
+        "C01",
+        "C15"
+      ],
+      "dependencies": [
+        "Static link identity and diagnostic/finalizer review"
+      ],
+      "authority_boundary": "Separate provider-linked init-only launch authority",
+      "current_status": "Not Authorized"
+    },
+    {
+      "activity": "First existing database open",
+      "contracts_to_freeze": [
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C12"
+      ],
+      "dependencies": [
+        "D2A-01 or supported literal API",
+        "VFS implementation",
+        "SQLCipher initialization",
+        "Finite run manifest"
+      ],
+      "authority_boundary": "Separate exact runtime scope",
+      "current_status": "Blocked"
+    },
+    {
+      "activity": "Real key binding",
+      "contracts_to_freeze": [
+        "C02",
+        "C04",
+        "C08",
+        "C09",
+        "C15"
+      ],
+      "dependencies": [
+        "First existing database open",
+        "Owned key frame and cleanup contract"
+      ],
+      "authority_boundary": "Separate explicit key/provider authority",
+      "current_status": "Blocked"
+    },
+    {
+      "activity": "Encrypted fixture creation",
+      "contracts_to_freeze": [
+        "C03",
+        "C04",
+        "C05",
+        "C07",
+        "C11",
+        "C12"
+      ],
+      "dependencies": [
+        "VFS implementation",
+        "SQLCipher initialization",
+        "Exclusive-new and CreateInitialize contract",
+        "Independent synthetic key custody",
+        "Permitted fresh-process reopen"
+      ],
+      "authority_boundary": "Separate fixture/runtime authority",
+      "current_status": "Blocked"
+    },
+    {
+      "activity": "PQR runtime execution",
+      "contracts_to_freeze": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "dependencies": [
+        "Selected exact case prerequisites",
+        "Frozen budgets/oracles",
+        "Observer/detector controls",
+        "Allowed encrypted fixture/reopen"
+      ],
+      "authority_boundary": "Separate bounded selected-PQR authority",
+      "current_status": "Blocked"
+    },
+    {
+      "activity": "EXP-03/04 readiness review",
+      "contracts_to_freeze": [
+        "C16"
+      ],
+      "dependencies": [
+        "Actual selected-case evidence and all remaining charter dependencies"
+      ],
+      "authority_boundary": "Review only; experiment execution not inferred",
+      "current_status": "Unexecuted"
+    }
+  ],
+  "smallest_next_milestone": "M2A-F0: unlinked fake v2 codec/policy/recovery models, no filesystem backend or provider; separate authorization required",
+  "real_SQLCipher_calls": 0,
+  "PQR_cases_executed": 0
+}

@@ -1,0 +1,185 @@
+{
+  "status": "PASS \u2014 documentation/preservation only",
+  "client_date": "2026-11-09",
+  "timezone": "Asia/Kolkata",
+  "baseline_HEAD": "fb3a71668f92deef88cc61ef454eda202fbc2587",
+  "baseline_parent": "384f200f7cda567d6782df46aea322faeab54fb7",
+  "branch": "timeline",
+  "tracked_baseline_files": 1166,
+  "unchanged_preexisting_tracked_files": 1164,
+  "changed_preexisting_paths": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md"
+  ],
+  "missing_preexisting_paths": [],
+  "unexpected_new_files": [],
+  "protected_file_counts": {
+    "Phase1_source_files": 10,
+    "prior_Phase2_reports": 3,
+    "historical_evidence_files": 570,
+    "ADR_files": 5,
+    "Phase3_source_and_docs": 377,
+    "owner_records": 3
+  },
+  "checks": {
+    "baseline_HEAD_and_parent_match": true,
+    "branch_timeline_unchanged": true,
+    "no_staged_changes": true,
+    "only_two_existing_indexes_changed": true,
+    "no_existing_file_missing": true,
+    "indexes_append_only": true,
+    "six_exact_required_reports_present": true,
+    "all_source_excerpt_hashes_lines_match": true,
+    "prior_Phase2_and_Phase1_manifests_preserved": true,
+    "retained_archive_and_header_preserved": true,
+    "all_documentation_arithmetic_checks_pass": true,
+    "all_local_link_targets_resolve_or_are_declared_finalizers": true,
+    "owner_decision_not_approved": true,
+    "owner_decision_exact_text_matches_report": true,
+    "OPEN01_still_blocked": true,
+    "all_50_original_PQR_cases_preserved": true,
+    "full_UUID_and_epoch_read_barriers_explicit": true,
+    "REQ21_not_assigned_AC": true,
+    "no_provider_runtime_or_tests": true,
+    "no_unexpected_new_files": true
+  },
+  "append_only_index_checks": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "baseline_matches_HEAD": true,
+      "original_prefix_preserved": true,
+      "appended_bytes": 996
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "baseline_matches_HEAD": true,
+      "original_prefix_preserved": true,
+      "appended_bytes": 996
+    }
+  ],
+  "source_excerpt_checks": [
+    {
+      "id": "S01",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S02",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S03",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S04",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S05",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S06",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S07",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S08",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S09",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S10",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S11",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S12",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S13",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    },
+    {
+      "id": "S14",
+      "file_hash_matches": true,
+      "exact_line_excerpts_match": true
+    }
+  ],
+  "local_document_links_checked": 41,
+  "gate_disposition": [
+    {
+      "gate": "OPEN-01",
+      "contract_disposition": "Blocked",
+      "owner_dependency": "D2A-01",
+      "remaining_limit": "Supported literal key-aware open not established"
+    },
+    {
+      "gate": "OPEN-02",
+      "contract_disposition": "Resolved at proposed-contract level",
+      "owner_dependency": null,
+      "remaining_limit": "Broker/write-fence implementation and evidence absent"
+    },
+    {
+      "gate": "OPEN-03",
+      "contract_disposition": "Partially resolved",
+      "owner_dependency": null,
+      "remaining_limit": "VFS/locks/RAM-WAL/direct-I/O validation absent"
+    },
+    {
+      "gate": "OPEN-04",
+      "contract_disposition": "Resolved at proposed qualification-contract level",
+      "owner_dependency": null,
+      "remaining_limit": "Durable restart/process evidence absent; product intent separate"
+    },
+    {
+      "gate": "OPEN-05",
+      "contract_disposition": "Partially resolved",
+      "owner_dependency": null,
+      "remaining_limit": "Single-worker wire contract specified; maintenance extension excluded"
+    },
+    {
+      "gate": "OPEN-06",
+      "contract_disposition": "Pending",
+      "owner_dependency": null,
+      "remaining_limit": "Genuine provider bind-failure observation"
+    },
+    {
+      "gate": "OPEN-07",
+      "contract_disposition": "Pending",
+      "owner_dependency": null,
+      "remaining_limit": "OS/device/crash diagnostics and direct-I/O coverage"
+    },
+    {
+      "gate": "OPEN-08",
+      "contract_disposition": "Pending",
+      "owner_dependency": null,
+      "remaining_limit": "Real-case finite budgets and frozen oracles"
+    }
+  ],
+  "provider_runtime_qualification": "Not performed; Blocked/Unvalidated",
+  "statement": "No source, ADR, owner decision, historical evidence or validation outcome changed. No build/test/provider runtime, stage/commit/push or branch change."
+}

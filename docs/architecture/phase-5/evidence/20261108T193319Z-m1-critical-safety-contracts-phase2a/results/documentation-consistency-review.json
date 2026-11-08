@@ -1,0 +1,337 @@
+{
+  "status": "PASS \u2014 static document consistency only",
+  "client_date": "2026-11-09",
+  "checks": {
+    "control_header_145": true,
+    "broker_header_177": true,
+    "journal_480": true,
+    "key_frame_133": true,
+    "result_prefix_24": true,
+    "no_missing_local_links": true,
+    "all_six_reports_present": true
+  },
+  "layouts": {
+    "control_header": {
+      "fields": [
+        {
+          "field": "magic",
+          "offset": 0,
+          "width": 4
+        },
+        {
+          "field": "version",
+          "offset": 4,
+          "width": 2
+        },
+        {
+          "field": "opcode",
+          "offset": 6,
+          "width": 2
+        },
+        {
+          "field": "context",
+          "offset": 8,
+          "width": 77
+        },
+        {
+          "field": "operation",
+          "offset": 85,
+          "width": 16
+        },
+        {
+          "field": "sequence",
+          "offset": 101,
+          "width": 8
+        },
+        {
+          "field": "reply_to",
+          "offset": 109,
+          "width": 8
+        },
+        {
+          "field": "resource",
+          "offset": 117,
+          "width": 16
+        },
+        {
+          "field": "deadline",
+          "offset": 133,
+          "width": 8
+        },
+        {
+          "field": "payload_length",
+          "offset": 141,
+          "width": 4
+        }
+      ],
+      "total": 145
+    },
+    "broker_header": {
+      "fields": [
+        {
+          "field": "magic",
+          "offset": 0,
+          "width": 4
+        },
+        {
+          "field": "version",
+          "offset": 4,
+          "width": 2
+        },
+        {
+          "field": "opcode",
+          "offset": 6,
+          "width": 2
+        },
+        {
+          "field": "context",
+          "offset": 8,
+          "width": 77
+        },
+        {
+          "field": "request",
+          "offset": 85,
+          "width": 16
+        },
+        {
+          "field": "operation",
+          "offset": 101,
+          "width": 16
+        },
+        {
+          "field": "sequence",
+          "offset": 117,
+          "width": 8
+        },
+        {
+          "field": "resource",
+          "offset": 125,
+          "width": 16
+        },
+        {
+          "field": "handle",
+          "offset": 141,
+          "width": 8
+        },
+        {
+          "field": "authority_epoch",
+          "offset": 149,
+          "width": 8
+        },
+        {
+          "field": "offset",
+          "offset": 157,
+          "width": 8
+        },
+        {
+          "field": "count",
+          "offset": 165,
+          "width": 4
+        },
+        {
+          "field": "flags",
+          "offset": 169,
+          "width": 4
+        },
+        {
+          "field": "payload_length",
+          "offset": 173,
+          "width": 4
+        }
+      ],
+      "total": 177
+    },
+    "journal_record": {
+      "fields": [
+        {
+          "field": "magic",
+          "offset": 0,
+          "width": 4
+        },
+        {
+          "field": "version",
+          "offset": 4,
+          "width": 2
+        },
+        {
+          "field": "type",
+          "offset": 6,
+          "width": 2
+        },
+        {
+          "field": "length",
+          "offset": 8,
+          "width": 4
+        },
+        {
+          "field": "sequence",
+          "offset": 12,
+          "width": 8
+        },
+        {
+          "field": "previous",
+          "offset": 20,
+          "width": 32
+        },
+        {
+          "field": "context",
+          "offset": 52,
+          "width": 77
+        },
+        {
+          "field": "operation",
+          "offset": 129,
+          "width": 16
+        },
+        {
+          "field": "mutation",
+          "offset": 145,
+          "width": 16
+        },
+        {
+          "field": "resource",
+          "offset": 161,
+          "width": 16
+        },
+        {
+          "field": "object_generation",
+          "offset": 177,
+          "width": 8
+        },
+        {
+          "field": "grant",
+          "offset": 185,
+          "width": 8
+        },
+        {
+          "field": "state",
+          "offset": 193,
+          "width": 2
+        },
+        {
+          "field": "outcome",
+          "offset": 195,
+          "width": 1
+        },
+        {
+          "field": "cleanup",
+          "offset": 196,
+          "width": 1
+        },
+        {
+          "field": "expected_revision",
+          "offset": 197,
+          "width": 8
+        },
+        {
+          "field": "actual_revision",
+          "offset": 205,
+          "width": 8
+        },
+        {
+          "field": "payload_digest",
+          "offset": 213,
+          "width": 32
+        },
+        {
+          "field": "manifest_digest",
+          "offset": 245,
+          "width": 32
+        },
+        {
+          "field": "identity_digest",
+          "offset": 277,
+          "width": 32
+        },
+        {
+          "field": "executable_digest",
+          "offset": 309,
+          "width": 32
+        },
+        {
+          "field": "PID",
+          "offset": 341,
+          "width": 8
+        },
+        {
+          "field": "start_token",
+          "offset": 349,
+          "width": 16
+        },
+        {
+          "field": "device",
+          "offset": 365,
+          "width": 8
+        },
+        {
+          "field": "inode",
+          "offset": 373,
+          "width": 8
+        },
+        {
+          "field": "bundle_digest",
+          "offset": 381,
+          "width": 32
+        },
+        {
+          "field": "timestamp",
+          "offset": 413,
+          "width": 8
+        },
+        {
+          "field": "reserved",
+          "offset": 421,
+          "width": 27
+        },
+        {
+          "field": "record_digest",
+          "offset": 448,
+          "width": 32
+        }
+      ],
+      "total": 480
+    }
+  },
+  "local_link_count": 41,
+  "missing_links": [],
+  "finalizer_targets_declared": [
+    "SHA256SUMS",
+    "artifact-index.json",
+    "changed-files.json",
+    "results/documentation-consistency-review.json",
+    "results/preservation-audit.json"
+  ],
+  "claim_boundary": "No binary codec, fake implementation or provider executed; arithmetic checks are documentation review, not runtime protocol conformance.",
+  "final_report_hashes": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-critical-safety-contracts-phase2a.md",
+      "sha256": "b95f29e076137ec309fd3310459ade53197c42737ce51642daffa1a20652d79e",
+      "line_count": 86
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open01-resolution.md",
+      "sha256": "0d904ed12ade1f104a28fa9a9d383ff97784519bc0b60e4f29b7794ac425f6b9",
+      "line_count": 81
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open02-write-fence-specification.md",
+      "sha256": "9259c1a5dafb34c24d7dd90b3217eb0a22229279a2b3831c472bda85dc4ba19e",
+      "line_count": 81
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open03-vfs-confinement-specification.md",
+      "sha256": "9a736e167b2a7ed55e9ab1f9812688e5641953d815d4c5efd4ffe0048a370660",
+      "line_count": 77
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open04-open05-protocol-and-recovery-specification.md",
+      "sha256": "229a04ec8ec78c989af340d520cafc43fff8ae42d26c456efcb1b0352301f08e",
+      "line_count": 138
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2a-readiness-matrix.md",
+      "sha256": "e1cb8fc49855a71186a2ece6daf681cd67f352e79ee9b122679bb9b35b6ba467",
+      "line_count": 105
+    }
+  ]
+}

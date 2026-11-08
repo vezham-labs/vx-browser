@@ -1,0 +1,42 @@
+{
+  "created": [
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/README.md",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/SHA256SUMS",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/artifact-index.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/baseline.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/changed-files.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/decision-and-requirement-traceability.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/dependency-readiness-matrix.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/owner-decision-required.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/results/documentation-consistency-review.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/results/historical-preservation-reconciliation.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/results/non-execution.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/results/preservation-audit.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/sources/input-inventory.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/sources/official-api-references.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/sources/owner-task.txt",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/sources/pinned-source-excerpts.json",
+    "docs/architecture/phase-5/evidence/20261108T193319Z-m1-critical-safety-contracts-phase2a/sources/sdk-declarations.json",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-critical-safety-contracts-phase2a.md",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open01-resolution.md",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open02-write-fence-specification.md",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open03-vfs-confinement-specification.md",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open04-open05-protocol-and-recovery-specification.md",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2a-readiness-matrix.md"
+  ],
+  "modified": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "change": "Append-only Phase2A report/evidence references"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "change": "Append-only Phase2A report/evidence references"
+    }
+  ],
+  "deleted": [],
+  "source_configuration_or_dependency_changes": [],
+  "staged_committed_pushed": false,
+  "branch_or_HEAD_changed": false,
+  "baseline_HEAD": "fb3a71668f92deef88cc61ef454eda202fbc2587"
+}

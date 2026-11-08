@@ -1,0 +1,123 @@
+{
+  "purpose": "Design documentation integrity inventory; no runtime evidence",
+  "reports": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-critical-safety-contracts-phase2a.md",
+      "sha256": "b95f29e076137ec309fd3310459ade53197c42737ce51642daffa1a20652d79e",
+      "lines": 86
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open01-resolution.md",
+      "sha256": "0d904ed12ade1f104a28fa9a9d383ff97784519bc0b60e4f29b7794ac425f6b9",
+      "lines": 81
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open02-write-fence-specification.md",
+      "sha256": "9259c1a5dafb34c24d7dd90b3217eb0a22229279a2b3831c472bda85dc4ba19e",
+      "lines": 81
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open03-vfs-confinement-specification.md",
+      "sha256": "9a736e167b2a7ed55e9ab1f9812688e5641953d815d4c5efd4ffe0048a370660",
+      "lines": 77
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open04-open05-protocol-and-recovery-specification.md",
+      "sha256": "229a04ec8ec78c989af340d520cafc43fff8ae42d26c456efcb1b0352301f08e",
+      "lines": 138
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2a-readiness-matrix.md",
+      "sha256": "e1cb8fc49855a71186a2ece6daf681cd67f352e79ee9b122679bb9b35b6ba467",
+      "lines": 105
+    }
+  ],
+  "appended_indexes": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "f992e513ef3d146d535816b9e9a64c5b92d272f3329c35ae38434586e838c7c8"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "aaa718c213a68d60e8e574c3b5019a561dc9ffc9619328248e295f38893bfcf4"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "README.md",
+      "sha256": "1a04086980911aaf66fcf895c99cff53bc8d83239943af79155ea2d859c53775",
+      "bytes": 2381
+    },
+    {
+      "path": "baseline.json",
+      "sha256": "38933b5ba5e5e28f89228ed7deb28841c4d091de3ebcc396dde5c8f2255a17f4",
+      "bytes": 239361
+    },
+    {
+      "path": "changed-files.json",
+      "sha256": "b1eca968bdb4b604dbb34080709193af5fb4f7223e4120b5546727c19e215b18",
+      "bytes": 3220
+    },
+    {
+      "path": "decision-and-requirement-traceability.json",
+      "sha256": "4c2bd0886c8dda0ccbf818bc6ad6bb7de5109ab737535e50f0d4cbc258cd5d33",
+      "bytes": 10214
+    },
+    {
+      "path": "dependency-readiness-matrix.json",
+      "sha256": "3c2b8e246d818a65eb79d371e511a14ae04e9254f7e0cab5159be955223f0675",
+      "bytes": 5451
+    },
+    {
+      "path": "owner-decision-required.json",
+      "sha256": "fbd05ca7c53a85069ef38bfecab51be5f3a25473238ff7a829d6a26a6add62b4",
+      "bytes": 3284
+    },
+    {
+      "path": "results/documentation-consistency-review.json",
+      "sha256": "b0f716711bbadd8f61a22c04fd99b96c60600d66840ed8f9c05352650383e59b",
+      "bytes": 7577
+    },
+    {
+      "path": "results/historical-preservation-reconciliation.json",
+      "sha256": "d858159afd9076515b67c433533932ed7fc69ce18053770130e05c903d27d95b",
+      "bytes": 35730
+    },
+    {
+      "path": "results/non-execution.json",
+      "sha256": "452178a52021182d6ff3551893a5fda239f00c2127b364a9120e08739150212a",
+      "bytes": 985
+    },
+    {
+      "path": "results/preservation-audit.json",
+      "sha256": "b7d55fbfde9e0deb9edc2088074aa857a4c39aa49ebbb0e308d93a102ec80ba2",
+      "bytes": 5567
+    },
+    {
+      "path": "sources/input-inventory.json",
+      "sha256": "02c6ee1d52328a458f42f01139e8934e99d097be72de079a5a320f5f4026497c",
+      "bytes": 52430
+    },
+    {
+      "path": "sources/official-api-references.json",
+      "sha256": "a518f0165d252e719d6a3c9b021ff62ee86d972fa38aa399ac725da2b4d087bd",
+      "bytes": 886
+    },
+    {
+      "path": "sources/owner-task.txt",
+      "sha256": "8baabfd1c479f91e72f8b2c11d70db97ac1766664240c1af085ddf0310693aff",
+      "bytes": 5847
+    },
+    {
+      "path": "sources/pinned-source-excerpts.json",
+      "sha256": "38bea295f1cebed5e0177a3ba3f21f2339c6fff86d6aec6181ca9034a47b6b7f",
+      "bytes": 53800
+    },
+    {
+      "path": "sources/sdk-declarations.json",
+      "sha256": "57c41863bb8dc9fc3d5994f3236d8f9231f0e07bdb456493ef976b92ab6af293",
+      "bytes": 5096
+    }
+  ],
+  "hash_cycle_policy": "Index excludes itself/manifest; manifest excludes itself only."
+}

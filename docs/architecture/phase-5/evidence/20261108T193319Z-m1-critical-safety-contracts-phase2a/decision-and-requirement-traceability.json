@@ -1,0 +1,420 @@
+{
+  "status": "Proposed design contribution, not requirement validation",
+  "source": "Current developer specification \u00a724.2 rows673\u2013694 and original owner/architecture contracts",
+  "owner_decision_required": "D2A-01 Proposed / Not Decided; no owner record modified",
+  "contracts": [
+    {
+      "id": "C01",
+      "topic": "Private and scope refusal",
+      "requirements": [
+        "REQ-09"
+      ],
+      "specifications": [
+        "SPEC-06"
+      ],
+      "acceptance_routes": [
+        "AC04",
+        "AC14"
+      ],
+      "owner_direction": [
+        "OD-R05",
+        "OD-R06"
+      ],
+      "inspection_sources": [
+        "S11",
+        "S12",
+        "S13"
+      ],
+      "design_reference": "OPEN-02 \u00a72; protocol \u00a7\u00a71\u20135",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C02",
+      "topic": "No silent pre-key requirement weakening",
+      "requirements": [
+        "REQ-05"
+      ],
+      "specifications": [
+        "SPEC-04"
+      ],
+      "acceptance_routes": [
+        "AC05"
+      ],
+      "owner_direction": [
+        "OD-R07"
+      ],
+      "inspection_sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "design_reference": "OPEN-01 \u00a7\u00a71\u20135; exact task requirement; D2A-01 remains proposed",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C03",
+      "topic": "Pre-auth original preservation",
+      "requirements": [
+        "REQ-05",
+        "REQ-06"
+      ],
+      "specifications": [
+        "SPEC-03",
+        "SPEC-04"
+      ],
+      "acceptance_routes": [
+        "AC05",
+        "AC12",
+        "AC14",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R04",
+        "OD-R07"
+      ],
+      "inspection_sources": [
+        "S07",
+        "S08"
+      ],
+      "design_reference": "OPEN-02 \u00a7\u00a72\u20135",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C04",
+      "topic": "Separate key/auth/read/write authority",
+      "requirements": [
+        "REQ-05",
+        "REQ-18"
+      ],
+      "specifications": [
+        "SPEC-04",
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC05",
+        "AC14",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R07",
+        "OD-R16"
+      ],
+      "inspection_sources": [
+        "S06",
+        "S13"
+      ],
+      "design_reference": "OPEN-02 \u00a72; protocol \u00a7\u00a73\u20136",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C05",
+      "topic": "Descriptor-bound objects",
+      "requirements": [
+        "REQ-04",
+        "REQ-19"
+      ],
+      "specifications": [
+        "SPEC-03",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC03",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R05",
+        "OD-R07"
+      ],
+      "inspection_sources": [
+        "SDK:openat/fstatat"
+      ],
+      "design_reference": "OPEN-03 \u00a7\u00a72\u20133",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C06",
+      "topic": "No persistent SHM mapping",
+      "requirements": [
+        "REQ-05"
+      ],
+      "specifications": [
+        "SPEC-04"
+      ],
+      "acceptance_routes": [
+        "AC05"
+      ],
+      "owner_direction": [
+        "OD-R07"
+      ],
+      "inspection_sources": [
+        "S07"
+      ],
+      "design_reference": "OPEN-03 \u00a74; RAM candidate only, E05 oracle not presumed covered",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C07",
+      "topic": "No unobserved temp/scratch/trace fallback",
+      "requirements": [
+        "REQ-05",
+        "REQ-19"
+      ],
+      "specifications": [
+        "SPEC-04",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC05",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R07"
+      ],
+      "inspection_sources": [
+        "S09",
+        "S10"
+      ],
+      "design_reference": "OPEN-03 \u00a7\u00a75\u20136",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C08",
+      "topic": "Full UUID and protocol separation",
+      "requirements": [
+        "REQ-18"
+      ],
+      "specifications": [
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC14",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R16"
+      ],
+      "inspection_sources": [
+        "S11",
+        "S12"
+      ],
+      "design_reference": "Protocol \u00a7\u00a72\u20134",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C09",
+      "topic": "Serialized connection and interrupt pins",
+      "requirements": [
+        "REQ-08",
+        "REQ-18"
+      ],
+      "specifications": [
+        "SPEC-07",
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC07",
+        "AC14",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R09",
+        "OD-R18"
+      ],
+      "inspection_sources": [
+        "SQLite interrupt API",
+        "S11"
+      ],
+      "design_reference": "Protocol \u00a7\u00a75\u20137",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C10",
+      "topic": "Cancellation independent of outcome",
+      "requirements": [
+        "REQ-18",
+        "REQ-19"
+      ],
+      "specifications": [
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC14",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R16",
+        "OD-R18"
+      ],
+      "inspection_sources": [
+        "Core boundary D:73\u201375"
+      ],
+      "design_reference": "Protocol \u00a7\u00a76\u20137",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C11",
+      "topic": "Atomic mutation/revision/receipt",
+      "requirements": [
+        "REQ-18",
+        "REQ-19"
+      ],
+      "specifications": [
+        "SPEC-03",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC14",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R16"
+      ],
+      "inspection_sources": [
+        "Core boundary D:73\u201375"
+      ],
+      "design_reference": "Protocol \u00a76; worker design \u00a76 historical schema preserved",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C12",
+      "topic": "Durable deny-admission/quarantine",
+      "requirements": [
+        "REQ-19",
+        "REQ-20"
+      ],
+      "specifications": [
+        "SPEC-06",
+        "SPEC-10",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R18"
+      ],
+      "inspection_sources": [
+        "S11",
+        "Key/recovery spec \u00a7\u00a75\u20136"
+      ],
+      "design_reference": "Protocol \u00a78; product authenticated-intent scope remains separate",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C13",
+      "topic": "No stale PID authority",
+      "requirements": [
+        "REQ-19",
+        "REQ-20"
+      ],
+      "specifications": [
+        "SPEC-06",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R18"
+      ],
+      "inspection_sources": [
+        "S11"
+      ],
+      "design_reference": "Protocol \u00a7\u00a78\u20139",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C14",
+      "topic": "Independent cleanup witnesses",
+      "requirements": [
+        "REQ-08",
+        "REQ-19"
+      ],
+      "specifications": [
+        "SPEC-07",
+        "SPEC-15"
+      ],
+      "acceptance_routes": [
+        "AC07",
+        "AC14",
+        "AC15"
+      ],
+      "owner_direction": [
+        "OD-R18"
+      ],
+      "inspection_sources": [
+        "S11",
+        "SQLite close contract in Phase2 review"
+      ],
+      "design_reference": "OPEN-02 \u00a75; protocol \u00a79",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C15",
+      "topic": "Secret-free public evidence",
+      "requirements": [
+        "REQ-05",
+        "REQ-07"
+      ],
+      "specifications": [
+        "SPEC-04",
+        "SPEC-05"
+      ],
+      "acceptance_routes": [
+        "AC05",
+        "AC06"
+      ],
+      "owner_direction": [
+        "OD-R07",
+        "OD-R08",
+        "OD-R19"
+      ],
+      "inspection_sources": [
+        "S09",
+        "S10"
+      ],
+      "design_reference": "OPEN-03 \u00a7\u00a75\u20136; protocol \u00a7\u00a74,9; OS diagnostics remain OPEN-07",
+      "evidence_status": "Static source/contract inspection only; no runtime validation"
+    },
+    {
+      "id": "C16",
+      "topic": "Separate release/WebKit/owner boundaries",
+      "requirements": [
+        "REQ-21",
+        "REQ-22"
+      ],
+      "specifications": [
+        "SPEC-08"
+      ],
+      "acceptance_routes": [
+        "AC08"
+      ],
+      "owner_direction": [
+        "OD-R10",
+        "OD-R14"
+      ],
+      "inspection_sources": [
+        "ADR0001\u20130005",
+        "Developer spec:693\u2013703"
+      ],
+      "design_reference": "Primary \u00a76; readiness \u00a7\u00a75\u20136; REQ-21 has no AC assignment",
+      "evidence_status": "Static source/contract inspection only; no runtime validation",
+      "requirement_acceptance_mapping": {
+        "REQ-21": [],
+        "REQ-22": [
+          "AC08"
+        ]
+      },
+      "acceptance_scope": "AC08 belongs to REQ-22 only; no AC assignment to REQ-21"
+    }
+  ],
+  "REQ21_note": "Separate mandatory Stage C release qualification, no AC identifier assigned; AC08 above belongs only to REQ22.",
+  "PQR_ids_and_outcomes_changed": false
+}

@@ -1,0 +1,16 @@
+{
+  "checked_client_date": "2026-11-09",
+  "method": "Primary official API documentation read; pinned-source excerpts govern candidate-specific call-order assertions",
+  "urls": [
+    "https://www.zetetic.net/sqlcipher/sqlcipher-api/",
+    "https://sqlite.org/c3ref/open.html",
+    "https://sqlite.org/c3ref/io_methods.html",
+    "https://sqlite.org/c3ref/vfs.html",
+    "https://sqlite.org/c3ref/interrupt.html",
+    "https://sqlite.org/wal.html",
+    "https://sqlite.org/uri.html",
+    "https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man2/open.2.html",
+    "https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man2/fsync.2.html"
+  ],
+  "limitations": "Apple archived manuals are supplemented with installed SDK declarations. Declarations and documentation are not runtime/macOS26 validation."
+}

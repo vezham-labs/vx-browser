@@ -1,0 +1,187 @@
+# Vezham Browser — M1 Phase 2A: Critical SQLCipher Safety Contract Resolution
+
+## Role
+
+Act as a senior macOS database-security and SQLite/SQLCipher systems engineer.
+
+Work within the existing `vx-browser` repository and the established M1 architecture.
+
+The Phase 2 provider adapter design has been reviewed and committed. Your task is to resolve its critical open design questions before implementation is authorized.
+
+## Baseline
+
+Start from the current `timeline` HEAD.
+
+Read and preserve:
+
+- `m1-sqlcipher-provider-adapter-phase2-design.md`
+- `m1-sqlcipher-phase2-implementation-plan.md`
+- `m1-sqlcipher-phase2-pqr-crosswalk.md`
+- Phase 1 worker implementation and design
+- Persistent-profile encryption specification
+- Keychain and independent recovery specification
+- Core-to-Persistence contracts
+- Existing ADRs, owner decisions, EXP-03/04 charters and PQR definitions
+
+## Primary objectives
+
+### 1. Resolve OPEN-01: key-before-read
+
+Investigate the pinned SQLCipher source and public API behavior.
+
+Determine whether a supported, maintainable approach can satisfy the literal requirement that no database bytes are read before key application.
+
+Evaluate alternatives without assuming that patching SQLite internals is acceptable.
+
+For each alternative document:
+
+- Exact open and key-binding sequence
+- Whether any physical file read occurs before key application
+- Required SQLite/SQLCipher API behavior
+- Compatibility with the pinned source
+- Maintenance and upgrade implications
+- Security implications
+- Testability and observable proof
+- Failure modes
+
+If the literal requirement cannot be met with a supported approach, state that clearly.
+
+Do not silently weaken the requirement. Define the exact owner decision required to resolve any proposed narrower interpretation.
+
+### 2. Resolve OPEN-02: pre-authentication write protection
+
+Specify an enforceable design that protects existing database content before authentication.
+
+Cover:
+
+- Main database
+- WAL
+- SHM and shared-memory mappings
+- Rollback journals
+- Statement journals
+- Temporary files
+- Provider scratch files
+- File replacement, truncation and deletion
+- Recovery and checkpoint behavior
+
+Define which operations are permitted before authentication and which must be denied.
+
+Specify how the implementation proves that the original protected files remain unchanged after:
+
+- Wrong-key authentication
+- Corrupt database input
+- Authenticated identity mismatch
+- Interrupted open
+- Process termination
+- WAL or hot-journal recovery requirements
+
+Do not treat read-only open flags or post-operation hash comparisons as sufficient enforcement.
+
+### 3. Resolve OPEN-03: VFS and filesystem confinement
+
+Provide a detailed architecture for:
+
+- Descriptor-relative file access
+- Stable resource identity
+- Symlink and hard-link rejection
+- Main database and sidecar binding
+- WAL and SHM mapping behavior
+- Path replacement and TOCTOU prevention
+- Complete I/O observation
+- Trace overflow and missing-event detection
+- Temporary and unnamed file handling
+- Provider direct-I/O limitations
+
+Distinguish enforceable guarantees from observations and assumptions.
+
+### 4. Resolve OPEN-04 and OPEN-05
+
+Specify:
+
+- Durable quarantine and restart reconciliation
+- Process ownership and stale-child handling
+- Operation identity and full UUID preservation
+- IPC v2 framing and version negotiation
+- Request/response state machine
+- Cancellation and interrupt lifetime
+- Commit outcome and receipt semantics
+- Late-result fencing
+- Bounded diagnostics and cleanup
+
+Preserve the Phase 1 protocol as a separate fake conformance baseline.
+
+### 5. Implementation readiness
+
+Create a dependency graph identifying which contracts must be frozen before:
+
+- Fake-provider implementation
+- VFS implementation
+- SQLCipher initialization
+- Key binding
+- First database open
+- Encrypted fixture creation
+- PQR runtime execution
+
+Identify the smallest safe implementation milestone after design approval.
+
+## Deliverables
+
+Create:
+
+1. `m1-sqlcipher-critical-safety-contracts-phase2a.md`
+2. `m1-sqlcipher-open01-resolution.md`
+3. `m1-sqlcipher-open02-write-fence-specification.md`
+4. `m1-sqlcipher-open03-vfs-confinement-specification.md`
+5. `m1-sqlcipher-open04-open05-protocol-and-recovery-specification.md`
+6. `m1-sqlcipher-phase2a-readiness-matrix.md`
+
+Create timestamped evidence containing:
+
+- Source inventory and hashes
+- Exact pinned-source excerpts supporting technical claims
+- Decision and requirement traceability
+- Dependency/readiness matrix
+- Changed-file inventory
+- Preservation audit
+- Non-execution record
+- Artifact index and SHA256 manifest
+
+Append references to the canonical M1 README and source catalog only.
+
+## Strict restrictions
+
+This is a design-only task.
+
+Do not:
+
+- Implement the provider adapter
+- Implement a VFS
+- Launch or initialize SQLCipher
+- Call `sqlite3_key` or other provider functions
+- Open or create databases
+- Generate encrypted fixtures
+- Run encryption or PQR runtime tests
+- Modify Phase 1 worker source
+- Change production BrowserPersistence or BrowserCore
+- Modify ADRs or owner decisions
+- Change approved security requirements
+- Install software or modify host configuration
+- Commit or push without explicit instruction
+
+If an issue cannot be resolved technically without an owner decision, document the precise decision required rather than making one.
+
+## Final report
+
+Report:
+
+- Each OPEN gate: resolved, partially resolved or blocked
+- Exact remaining owner decisions
+- Exact technical assumptions
+- What is safe to implement next
+- What must remain prohibited
+- Preservation results
+- Confirmation that no provider operations or runtime tests occurred
+
+Do not claim runtime readiness or EXP-03/04 completion.
+
+**The objective is to remove ambiguity before implementation, not to make progress by weakening security requirements.**
