@@ -1,0 +1,49 @@
+{
+  "repository": "https://github.com/WebKit/WebKit",
+  "commit": "75dff6dba87fafb94367ddb5bb155a110963ba80",
+  "commit_date": "2026-11-08T19:18:17Z",
+  "method": "Official repository branch resolved once; static source bytes only",
+  "shipping_runtime_equivalence": "Not established; not proof of installed macOS26 or27 behavior",
+  "files": [
+    {
+      "path": "Source/WebKit/UIProcess/API/Cocoa/WKWebsiteDataStore.mm",
+      "local": "WKWebsiteDataStore.mm",
+      "url": "https://raw.githubusercontent.com/WebKit/WebKit/75dff6dba87fafb94367ddb5bb155a110963ba80/Source/WebKit/UIProcess/API/Cocoa/WKWebsiteDataStore.mm",
+      "sha256": "78cabcc713af3fd8731e41d3031e69c4d0d5074dc308aed015a522ef9ae66937",
+      "bytes": 73639,
+      "lines": 1789
+    },
+    {
+      "path": "Source/WebKit/UIProcess/WebsiteData/WebsiteDataStore.cpp",
+      "local": "WebsiteDataStore.cpp",
+      "url": "https://raw.githubusercontent.com/WebKit/WebKit/75dff6dba87fafb94367ddb5bb155a110963ba80/Source/WebKit/UIProcess/WebsiteData/WebsiteDataStore.cpp",
+      "sha256": "f92f5c05865c351033b43a88e8cfddb08b59fe3d00ed7655bfa7f9b5f424074a",
+      "bytes": 147275,
+      "lines": 3231
+    },
+    {
+      "path": "Source/WebKit/UIProcess/API/Cocoa/WKWebViewConfiguration.mm",
+      "local": "WKWebViewConfiguration.mm",
+      "url": "https://raw.githubusercontent.com/WebKit/WebKit/75dff6dba87fafb94367ddb5bb155a110963ba80/Source/WebKit/UIProcess/API/Cocoa/WKWebViewConfiguration.mm",
+      "sha256": "0dbbb1d79bfeb970e4e56214c2b7d7822859936d1328e6c1d4eed3c8000197e6",
+      "bytes": 54204,
+      "lines": 1726
+    },
+    {
+      "path": "Source/WebKit/UIProcess/API/APIPageConfiguration.cpp",
+      "local": "APIPageConfiguration.cpp",
+      "url": "https://raw.githubusercontent.com/WebKit/WebKit/75dff6dba87fafb94367ddb5bb155a110963ba80/Source/WebKit/UIProcess/API/APIPageConfiguration.cpp",
+      "sha256": "b5ee4bab030ea758d436a7cea2720683f8d861ae751690d754e9a7fee1ccc05e",
+      "bytes": 14254,
+      "lines": 461
+    },
+    {
+      "path": "Source/WebKit/UIProcess/WebsiteData/Cocoa/WebsiteDataStoreCocoa.mm",
+      "local": "WebsiteDataStoreCocoa.mm",
+      "url": "https://raw.githubusercontent.com/WebKit/WebKit/75dff6dba87fafb94367ddb5bb155a110963ba80/Source/WebKit/UIProcess/WebsiteData/Cocoa/WebsiteDataStoreCocoa.mm",
+      "sha256": "53faeffefc9442f6e97e0e9eecb3e0d5baf76d028d52eabeb9fc095fe016ec11",
+      "bytes": 50433,
+      "lines": 1133
+    }
+  ]
+}

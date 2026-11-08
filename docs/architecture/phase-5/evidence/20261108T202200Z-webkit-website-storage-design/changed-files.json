@@ -1,0 +1,49 @@
+{
+  "created": [
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/README.md",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/SHA256SUMS",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/artifact-index.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/baseline.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/changed-files.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/claims-ledger.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/qualification-cases.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/results/non-execution.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/results/preservation-audit.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/results/static-consistency-review.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/APIPageConfiguration.cpp",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/WKWebViewConfiguration.mm",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/WKWebsiteDataStore.mm",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/WebsiteDataStore.cpp",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/WebsiteDataStoreCocoa.mm",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/apple-wkwebsitedatastore.md",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/official-references.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/owner-task.txt",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/repository-input-inventory.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/sdk-WKWebView.h.txt",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/sdk-WKWebViewConfiguration.h.txt",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/sdk-WKWebsiteDataRecord.h.txt",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/sdk-WKWebsiteDataStore.h.txt",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/sdk-api-inventory.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/upstream-source-excerpts.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sources/webkit-upstream-source-pin.json",
+    "docs/architecture/phase-5/evidence/20261108T202200Z-webkit-website-storage-design/sqlcipher-pqr-applicability.json",
+    "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-architecture.md",
+    "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-qualification-plan.md",
+    "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-traceability.md"
+  ],
+  "modified": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "change": "Append-only canonical links to website-storage architecture, qualification/traceability and evidence"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "change": "Append-only canonical links to website-storage architecture, qualification/traceability and evidence"
+    }
+  ],
+  "deleted": [],
+  "production_or_qualification_source_configuration_dependency_changes": [],
+  "upstream_source_archives": "Five inert reviewed source inputs under evidence/sources; not implemented/compiled application code",
+  "baseline_HEAD": "a99da90d4d2ec7fbcb6308689709558641cf2b73",
+  "staged_committed_pushed": false
+}

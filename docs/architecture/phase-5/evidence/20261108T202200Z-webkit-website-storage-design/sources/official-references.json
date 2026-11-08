@@ -1,0 +1,13 @@
+{
+  "checked_client_date": "2026-11-09",
+  "urls": [
+    "https://developer.apple.com/documentation/webkit/wkwebsitedatastore",
+    "https://developer.apple.com/documentation/webkit/wkwebsitedatastore.md",
+    "https://webkit.org/blog/14423/building-profiles-with-new-webkit-api/",
+    "https://developer.apple.com/documentation/webkit/wkwebsitedatastore/remove(foridentifier:completionhandler:)",
+    "https://developer.apple.com/documentation/webkit/wkwebsitedatastore/fetchdata(of:completionhandler:)",
+    "https://developer.apple.com/documentation/webkit/wkwebsitedatastore/restoredata(_:completionhandler:)"
+  ],
+  "method": "Official Apple/WebKit documentation and SDK static declarations; GitHub official WebKit source resolved to one commit",
+  "retrieval_note": "Web page Markdown content type was unsupported by web reader; official Apple overview Markdown fetched as static text via urllib, no browser/framework execution."
+}

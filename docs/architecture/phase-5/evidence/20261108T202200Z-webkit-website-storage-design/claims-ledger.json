@@ -1,0 +1,112 @@
+{
+  "purpose": "Explicitly distinguish documentary/source/design/runtime-evidence categories",
+  "upstream_commit": "75dff6dba87fafb94367ddb5bb155a110963ba80",
+  "shipping_binary_equivalence": false,
+  "claims": [
+    {
+      "id": "D01",
+      "category": "Documented API",
+      "claim": "Explicit configuration assignment before view construction; default persists; nonPersistent memory API intent",
+      "source": "Apple overview; SDK WKWebsiteDataStore/WKWebViewConfiguration/WKWebView",
+      "limitation": "No Vezham runtime/private nonpersistence result"
+    },
+    {
+      "id": "D02",
+      "category": "Documented API",
+      "claim": "Named UUID APIs/enumeration/removal declared macOS14; factory creates missing store; release views before removal",
+      "source": "SDK WKWebsiteDataStore.h:90\u2013123; WebKit profiles guide",
+      "limitation": "No catalog transaction, data integrity or physical-erasure guarantee"
+    },
+    {
+      "id": "D03",
+      "category": "Documented API",
+      "claim": "Export/restore declarations macOS26 with unsupported/error interface",
+      "source": "SDK WKWebsiteDataStore.h:92\u2013102; per-view WKWebView.h:698\u2013716 is separate and also annotated macOS26",
+      "limitation": "No all-class support, portable format or successful actual restore"
+    },
+    {
+      "id": "D04",
+      "category": "Documented API",
+      "claim": "WKWebsiteDataRecord groups by domain using public suffix list",
+      "source": "SDK WKWebsiteDataRecord.h:71\u201388",
+      "limitation": "Not exact origin/capability authority"
+    },
+    {
+      "id": "S01",
+      "category": "Upstream source verified",
+      "claim": "Unset configuration store getter lazily resolves default",
+      "source": "UP-01 APIPageConfiguration.cpp:325\u2013337; UP-02 wrapper",
+      "limitation": "Not source-matched to installed system WebKit"
+    },
+    {
+      "id": "S02",
+      "category": "Upstream source verified",
+      "claim": "Public source export handles localStorage and rejects other classes; restore dispatches localStorage",
+      "source": "UP-05 WKWebsiteDataStore.mm:594\u2013716",
+      "limitation": "No shipping26 support assumption, atomicity or stable serialization promise"
+    },
+    {
+      "id": "S03",
+      "category": "Upstream source verified",
+      "claim": "Enumeration scans UUID-like directory names; removal checks use/network-process state and can fail",
+      "source": "UP-04 WebsiteDataStoreCocoa.mm:297\u2013363",
+      "limitation": "Not authoritative catalog reconciliation or historical crash diagnosis"
+    },
+    {
+      "id": "S04",
+      "category": "Upstream source verified",
+      "claim": "Credential handling precedes filesystem deletion in removal path; logs include identifier",
+      "source": "UP-04 WebsiteDataStoreCocoa.mm:311\u2013363",
+      "limitation": "An error does not prove no effects; not a claim about current Keychain contents"
+    },
+    {
+      "id": "A01",
+      "category": "Proposed design",
+      "claim": "Protected browser catalog maps stable opaque descriptor/UUID to profile with lifecycle saga",
+      "source": "Architecture WSR-01/02/08/10/12/13",
+      "limitation": "Not implemented; catalog crypto/durability needs independent provider qualification"
+    },
+    {
+      "id": "A02",
+      "category": "Proposed design",
+      "claim": "Private instance ownership, immutable view binding and last-owner barriers",
+      "source": "Architecture WSR-03\u201308",
+      "limitation": "Reference release/background stop and actual private artifact scope unqualified"
+    },
+    {
+      "id": "A03",
+      "category": "Proposed design",
+      "claim": "Per-class clear/removal and staged restore with honest unknown outcomes",
+      "source": "Architecture WSR-09\u201313",
+      "limitation": "No cleanup/crash-safety/backup guarantee until runtime evidence"
+    },
+    {
+      "id": "A04",
+      "category": "Proposed design",
+      "claim": "SQLCipher never controls live WebKit files; class export archive remains separate",
+      "source": "Architecture WSR-11/16; traceability \u00a74",
+      "limitation": "Existing provider gates remain; no security requirement waived"
+    },
+    {
+      "id": "R01",
+      "category": "Historical runtime evidence only",
+      "claim": "Phase3 49/49 recovery and separate48/48 regression on preserved revision",
+      "source": "Phase3 exit review:17\u201339",
+      "limitation": "No aggregate or transfer to M1/M2/current source"
+    },
+    {
+      "id": "R02",
+      "category": "Historical runtime evidence only",
+      "claim": "EXP-01/ISO-001 FAIL; cleanup crash and original store states unknown",
+      "source": "M1 cleanup diagnosis and EXP-01 report",
+      "limitation": "No new diagnosis/removal or changed result"
+    },
+    {
+      "id": "R03",
+      "category": "Historical runtime evidence only",
+      "claim": "EXP-02/PRIV-001 INCONCLUSIVE; EXP-05/07 BLOCKED",
+      "source": "M1 validation plan and canonical matrix",
+      "limitation": "40 WKS remain Proposed/NotRun; no new native evidence"
+    }
+  ]
+}

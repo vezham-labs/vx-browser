@@ -1,0 +1,147 @@
+{
+  "status": "PASS \u2014 documentation/static preservation only",
+  "client_date": "2026-11-09",
+  "timezone": "Asia/Kolkata",
+  "baseline_HEAD": "a99da90d4d2ec7fbcb6308689709558641cf2b73",
+  "parent": "fb3a71668f92deef88cc61ef454eda202fbc2587",
+  "branch": "timeline",
+  "baseline_tracked_files": 1189,
+  "unchanged_preexisting_tracked_files": 1187,
+  "changed_preexisting_paths": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md"
+  ],
+  "missing_preexisting_paths": [],
+  "unexpected_new_paths": [],
+  "checks": {
+    "baseline_HEAD_parent_unchanged": true,
+    "branch_timeline_unchanged": true,
+    "no_staged_changes": true,
+    "only_two_expected_indexes_modified": true,
+    "no_preexisting_file_missing": true,
+    "append_only_prefixes_preserved": true,
+    "no_unexpected_new_files": true,
+    "all_static_consistency_checks_pass": true,
+    "five_upstream_snapshots_match_pin_manifest": true,
+    "all_upstream_excerpts_match": true,
+    "all_SDK_captures_lines_match": true,
+    "all_prior_evidence_manifests_preserved": true,
+    "no_WebKit_Keychain_provider_or_tests": true
+  },
+  "append_only_index_checks": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "HEAD_matches_baseline": true,
+      "prefix_preserved": true,
+      "appended_bytes": 815
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "HEAD_matches_baseline": true,
+      "prefix_preserved": true,
+      "appended_bytes": 815
+    }
+  ],
+  "protected_baseline_file_counts": {
+    "Phase1_source": 10,
+    "all_historical_evidence": 587,
+    "Phase3_source_and_docs": 377,
+    "ADRs": 5,
+    "owner_records": 3,
+    "canonical_validation_and_matrix": 2
+  },
+  "upstream_snapshot_checks": [
+    {
+      "path": "WKWebsiteDataStore.mm",
+      "hash_matches": true
+    },
+    {
+      "path": "WebsiteDataStore.cpp",
+      "hash_matches": true
+    },
+    {
+      "path": "WKWebViewConfiguration.mm",
+      "hash_matches": true
+    },
+    {
+      "path": "APIPageConfiguration.cpp",
+      "hash_matches": true
+    },
+    {
+      "path": "WebsiteDataStoreCocoa.mm",
+      "hash_matches": true
+    }
+  ],
+  "upstream_excerpt_checks": [
+    {
+      "id": "UP-01",
+      "hash_matches": true,
+      "exact_excerpts": true
+    },
+    {
+      "id": "UP-02",
+      "hash_matches": true,
+      "exact_excerpts": true
+    },
+    {
+      "id": "UP-03",
+      "hash_matches": true,
+      "exact_excerpts": true
+    },
+    {
+      "id": "UP-04",
+      "hash_matches": true,
+      "exact_excerpts": true
+    },
+    {
+      "id": "UP-05",
+      "hash_matches": true,
+      "exact_excerpts": true
+    }
+  ],
+  "SDK_checks": [
+    {
+      "id": "SDK-WKWebsiteDataStore.h",
+      "installed_matches_capture": true,
+      "snapshot_matches": true,
+      "exact_excerpts": true
+    },
+    {
+      "id": "SDK-WKWebViewConfiguration.h",
+      "installed_matches_capture": true,
+      "snapshot_matches": true,
+      "exact_excerpts": true
+    },
+    {
+      "id": "SDK-WKWebView.h",
+      "installed_matches_capture": true,
+      "snapshot_matches": true,
+      "exact_excerpts": true
+    },
+    {
+      "id": "SDK-WKWebsiteDataRecord.h",
+      "installed_matches_capture": true,
+      "snapshot_matches": true,
+      "exact_excerpts": true
+    }
+  ],
+  "historical_manifests": [
+    {
+      "directory": "20261108T193319Z-m1-critical-safety-contracts-phase2a",
+      "manifest_entries": 16,
+      "all_hashes_match": true
+    },
+    {
+      "directory": "20261108T175705Z-m1-provider-adapter-phase2-design",
+      "manifest_entries": 13,
+      "all_hashes_match": true
+    },
+    {
+      "directory": "20261108T165809Z-m1-worker-phase1",
+      "manifest_entries": 107,
+      "all_hashes_match": true
+    }
+  ],
+  "runtime_result": "Not Run; no new pass/fail assigned; native qualification Blocked on authority/prerequisites",
+  "authorization_preserved": "No production/dependency/ADR/owner/security change; no implementation/build/runtime/Keychain/provider/test/git mutation"
+}

@@ -1,0 +1,4951 @@
+{
+  "version": "1.0 Proposed",
+  "namespace": "WKS local supporting engine-storage plan; not a renumbering/addition to canonical165 rows or SQLCipher50 PQR cases",
+  "case_count": 40,
+  "cases": [
+    {
+      "id": "WKS-001",
+      "title": "Explicit store assignment precedes view construction",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-03"
+      ],
+      "setup": "Resolve A; assign native configuration before construction/load; inspect copied view binding",
+      "assertions": "Persistent flag and exact A identifier correct; no load before validated assignment",
+      "failure_injection": "Delay resolution/assignment callback; no constructor until completion",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-06",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-002",
+      "title": "Default-store and coder/initializer prevention",
+      "mode": "Static/Model",
+      "fixtures": [
+        "F0"
+      ],
+      "new_requirement_references": [
+        "WSR-02",
+        "WSR-03"
+      ],
+      "setup": "Audit every website-view/configuration path; model omitted assignment, nil identifier/default object and coder path",
+      "assertions": "Zero default acquisition/website-view construction on invalid path; reject without a getter that creates default",
+      "failure_injection": "Bypass normal factory in the model; construction guard must deny",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-003",
+      "title": "Invalid/missing identifier rejected before native effect",
+      "mode": "Model",
+      "fixtures": [
+        "F0"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-02"
+      ],
+      "setup": "Feed zero/nil/malformed/unknown-version descriptor with valid caller scope",
+      "assertions": "No named-store lookup, view, navigation or replacement UUID; mapping stays blocked",
+      "failure_injection": "One invalid descriptor per frozen vector; compare native-call counter zero",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-04",
+          "REQ-06",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K09",
+          "PQR-K10"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-004",
+      "title": "Duplicate or foreign profile mapping",
+      "mode": "Model",
+      "fixtures": [
+        "F0"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-02"
+      ],
+      "setup": "Give A/B the same UUID or descriptor from another namespace/lease",
+      "assertions": "Neither affected binding becomes usable; no merge/default/adoption",
+      "failure_injection": "Duplicate uniqueness/revision/namespace vectors",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-04",
+          "REQ-06",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K09",
+          "PQR-K10"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-005",
+      "title": "Same-profile sharing with browsing-context controls",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-03"
+      ],
+      "setup": "Two A views, same origin; seed C1/C2/C3/C5/C6/C7 where supported; C4 separately",
+      "assertions": "Declared store-scoped positives visible to A2; sessionStorage follows per-context oracle, not blanket sharing",
+      "failure_injection": "Replace A1 view after writes; use completed-read acknowledgements",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "FX",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-06",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-006",
+      "title": "Cross-profile and origin/partition isolation",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-03"
+      ],
+      "setup": "Seed A; probe B at same origin, then distinct-origin controls in each store",
+      "assertions": "No foreign profile markers; intended same-A positives and web-origin rules both exercised",
+      "failure_injection": "Interleave writes and reads at named barriers; unsupported required class blocks",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-06",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-007",
+      "title": "Persistent relaunch with stable mapping",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-02",
+        "WSR-08"
+      ],
+      "setup": "Seed declared persistent classes, quit test app and reopen same app namespace/UUIDs",
+      "assertions": "A/B expected data and mapping survive within frozen retention oracle; private/context-only data is not expected to persist",
+      "failure_injection": "Fresh app run/IDs; simulate catalog label change without changing binding",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-04",
+          "REQ-06",
+          "REQ-18",
+          "REQ-19",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-008",
+      "title": "Concurrent persistent profiles",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-04"
+      ],
+      "setup": "Keep A1/A2/B active; alternate cookie/storage/cache/worker requests under exact origins",
+      "assertions": "No cross-profile data or callback delivery; both positive workloads remain attributable",
+      "failure_injection": "Opposing order/completion delay at finite barrier schedule",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-06",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-009",
+      "title": "Profile switch recreates immutable view ownership",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-04",
+        "WSR-08"
+      ],
+      "setup": "Switch an A tab/window intent to B using new view/generation",
+      "assertions": "Old view never rebound; no cookie/form/POST/pending grant transfer or stale A result to B",
+      "failure_injection": "Deliver A callbacks after switch and stale generation token",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-010",
+      "title": "Popup/configuration ownership gate",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2"
+      ],
+      "new_requirement_references": [
+        "WSR-03",
+        "WSR-04"
+      ],
+      "setup": "Use trusted parent A; test supported supplied configuration and model foreign/unverified config",
+      "assertions": "Only qualified same-scope path constructs; unsupported/unverified popup refused; no default getter fallback",
+      "failure_injection": "Foreign B/private/unknown configuration injection at policy boundary",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-011",
+      "title": "Intentional private-group sharing",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-05"
+      ],
+      "setup": "Two views share P1 native store instance; persistent A remains control",
+      "assertions": "Same P1 sharing for declared supported classes, nonpersistent flag and native instance provenance; nil identifier alone insufficient",
+      "failure_injection": "Retain one private owner while replacing the other view",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K14"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-012",
+      "title": "Independent private groups and persistent separation",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-05"
+      ],
+      "setup": "Seed P1; inspect P2 and A/B at identical origin using separate objects",
+      "assertions": "No P1 markers in P2/A/B; functioning same-P1 positive controls",
+      "failure_injection": "Interleaved group creation/write/read; attempt model group-ID spoof",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K14"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-013",
+      "title": "Private non-last-owner closure",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-05",
+        "WSR-06"
+      ],
+      "setup": "Close one of two P1 views with a live sibling and unrelated P2",
+      "assertions": "P1 sibling remains usable; no premature whole-session cleanup; P2 unaffected",
+      "failure_injection": "Delay closing-view callbacks until after first owner retirement",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-003"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-003"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K14"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-014",
+      "title": "Last-private-owner teardown and late-result fencing",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-06"
+      ],
+      "setup": "Close final P1 owner; inventory views/configurations/tasks/handlers/operations; create a distinct later private session",
+      "assertions": "No stale delivery/reactivation; declared accessible markers absent in new session; no durable private metadata; no forensic claim",
+      "failure_injection": "Held configuration/task reference, pending response and deadline subcases",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-003"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-003"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K14"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-015",
+      "title": "Private graceful shutdown and fresh session",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "new_requirement_references": [
+        "WSR-05",
+        "WSR-06",
+        "WSR-08"
+      ],
+      "setup": "Seed P1 and persistent positives; graceful quit; new app/private IDs",
+      "assertions": "Fresh private state empty for exercised classes; persistent positives retained; no private catalog/restore metadata",
+      "failure_injection": "Named pending-private operation at shutdown; no silent save",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K14"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-016",
+      "title": "Private abrupt-host termination",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "new_requirement_references": [
+        "WSR-06",
+        "WSR-08"
+      ],
+      "setup": "Seed P1; terminate only the registered harness at one frozen pending-operation barrier; fresh run",
+      "assertions": "No private restoration or cross-session marker; declared browser-owned artifacts inspected with persistent detection controls",
+      "failure_injection": "Owned host termination before last-owner completion; ambiguity stops run",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K14"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-017",
+      "title": "Profile lock engine access barrier",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-07"
+      ],
+      "setup": "Use a synthetic native lock signal for A with B active; track page/service-worker/network/callback activity",
+      "assertions": "No successful Locked report before actual defined access barrier; no stale disclosure; B scope intact",
+      "failure_injection": "Late callback/network completion and fake unlock without current epoch",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-08",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC07",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-07",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R09",
+          "OD-R10",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "LOCK-001",
+          "RECOVERY-006"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-08",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC07",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-05",
+          "SPEC-06",
+          "SPEC-07",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R09",
+          "OD-R10",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "LOCK-001",
+          "RECOVERY-006"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-018",
+      "title": "Incomplete lock/cleanup remains blocked",
+      "mode": "Model",
+      "fixtures": [
+        "F0"
+      ],
+      "new_requirement_references": [
+        "WSR-06",
+        "WSR-07"
+      ],
+      "setup": "Hold a view/configuration/worker/operation owner past the manifest deadline",
+      "assertions": "AccessBlocked/CleanupRequired, no false Locked/Cleaned; no old grant reuse",
+      "failure_injection": "Timeout, retained owner and teardown-error vectors",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-08",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC07",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-06",
+          "SPEC-07",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R09",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "LOCK-001",
+          "PRIV-001",
+          "RECOVERY-003",
+          "RECOVERY-006"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-08",
+          "REQ-09",
+          "REQ-18",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC07",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-05",
+          "SPEC-06",
+          "SPEC-07",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R09",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "LOCK-001",
+          "PRIV-001",
+          "RECOVERY-003",
+          "RECOVERY-006"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-019",
+      "title": "Content-process termination and replacement view",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-04",
+        "WSR-08"
+      ],
+      "setup": "Attribute the test content process; terminate at one named navigation barrier; explicitly recover with new view generation",
+      "assertions": "Persistent store binding stable; stale callbacks fenced; no auto POST/form replay; affected-scope set recorded honestly",
+      "failure_injection": "Owned attributed process termination; if attribution unsafe case is Blocked",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT",
+        "UI"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-020",
+      "title": "Network-process/lifecycle interruption",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "new_requirement_references": [
+        "WSR-06",
+        "WSR-08"
+      ],
+      "setup": "Only if a disposable test-only engine process can be safely attributed, interrupt one pending operation",
+      "assertions": "No cross-profile/private disclosure or false durable/cleanup success; reconcile callback Unknown; report multi-view impact",
+      "failure_injection": "Network-process loss with exact ownership witness; no shared/global PID kill",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "PRIV-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-021",
+      "title": "Graceful application shutdown and recovery policy",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "new_requirement_references": [
+        "WSR-08"
+      ],
+      "setup": "Quiesce A/B/private; collect pending outcomes and fresh-run policy decisions",
+      "assertions": "No flush/durability claim from app exit; OP-04 followed, private/forms/POST/grants excluded",
+      "failure_injection": "Lost final callback, deadline and crash-versus-normal policy vectors",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-09",
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-18",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-022",
+      "title": "Selected class/record data deletion",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-09"
+      ],
+      "setup": "Seed classes/origins A/B; quiesce writers; remove exact selected A types/records",
+      "assertions": "Selected scope verified, unrelated class/profile positives preserved; domain-group scope disclosed; browser metadata unchanged",
+      "failure_injection": "Delayed/duplicate callback and deliberate recreated-data control after resume",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R10",
+          "OD-R12"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R10",
+          "OD-R12"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-023",
+      "title": "Modified-since deletion semantics",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-09"
+      ],
+      "setup": "Seed before/after cutoff using recorded engine-supported timestamp behavior; quiesce",
+      "assertions": "Verify only supported cutoff semantics; no history-visit or exact-origin promise; unsupported timing oracle is Inconclusive",
+      "failure_injection": "Clock/timestamp uncertainty and delayed write control; no host clock change",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R10",
+          "OD-R12"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R10",
+          "OD-R12"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-024",
+      "title": "Clear-data completion is not store removal",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-09",
+        "WSR-10"
+      ],
+      "setup": "Clear selected data; retain catalog binding; enumerate without named-factory probing",
+      "assertions": "No whole-store removal API/catalog deletion issued; callback alone never proves all classes; absent/uncertain store stays blocked",
+      "failure_injection": "Missing callback, residual record and temporarily absent enumeration vectors",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R12",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R12",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-025",
+      "title": "In-use whole-store removal failure",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-10"
+      ],
+      "setup": "Deliberately retain one registered view/configuration for a fresh disposable A and request removal under approved negative-test scope",
+      "assertions": "Error/partial outcome surfaced; mapping/tombstone retained; no unrelated deletion; no claim original untouched from error alone",
+      "failure_injection": "Known in-use reference; no filesystem tampering",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-026",
+      "title": "Whole-store removal after release boundary",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-06",
+        "WSR-10"
+      ],
+      "setup": "Release all A owners in distinct lifetime scopes; main-actor remove with per-store checkpoints; public enumeration after",
+      "assertions": "Error-free callback and owned identifier absence with B positive; no named-factory recreation; logical removal only",
+      "failure_injection": "Delay callbacks/reference retirement; any crash stops, no unchanged retry",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "PRIV-001",
+          "RECOVERY-003",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-09",
+          "REQ-18",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC04",
+          "AC08",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "PRIV-001",
+          "RECOVERY-003",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-027",
+      "title": "Removal error without false rollback/success",
+      "mode": "Model",
+      "fixtures": [
+        "F0",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-10"
+      ],
+      "setup": "Return bounded native-error/partial-effect results through fake engine port",
+      "assertions": "FailedOrPartial/Unknown retained, no Active rollback, no auto reset/delete/repair; native FS-error behavior remains unqualified",
+      "failure_injection": "Permission/I/O/partial credential-effect model; no real chmod/engine-file edits",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-028",
+      "title": "Interrupted removal and lost completion",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F4",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-10"
+      ],
+      "setup": "Persist deletion intent; interrupt after before-call checkpoint but before terminal callback; fresh noncreating reconciliation",
+      "assertions": "Unknown/AbsentObserved distinguished from callback-confirmed removal; no stale callback publication or auto-recreate",
+      "failure_injection": "Owned host loss or dropped callback at one approved cutpoint",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-029",
+      "title": "Missing established store mapping",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F4"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-02"
+      ],
+      "setup": "Use fake absent enumeration for an ObservedExisting binding; any native absence fixture needs explicit owned removal setup",
+      "assertions": "Missing/Unknown; named factory/default/new UUID counters zero; preserve Vezham data",
+      "failure_injection": "Absent, delayed, incomplete/ambiguous observation vectors",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-04",
+          "REQ-06",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K09",
+          "PQR-K10"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-030",
+      "title": "Orphan/inconsistent namespace reconciliation",
+      "mode": "Model",
+      "fixtures": [
+        "F0",
+        "F4"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-02",
+        "WSR-08"
+      ],
+      "setup": "Simulate extra engine UUID, missing catalog entry, namespace change and AccessStarted-without-publication",
+      "assertions": "No orphan adoption/sweep or Virgin assumption after uncertain access; only intended fresh Provisioning may create",
+      "failure_injection": "Crash between catalog intent/native effect/publication modeled as three labeled cutpoints",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-04",
+          "REQ-06",
+          "REQ-18",
+          "REQ-19",
+          "REQ-20",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-10",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R10",
+          "OD-R16",
+          "OD-R18"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "BRIDGE-004",
+          "ISO-001",
+          "RECOVERY-001",
+          "RECOVERY-003",
+          "RECOVERY-004",
+          "RECOVERY-010"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-K09",
+          "PQR-K10"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-031",
+      "title": "macOS26 localStorage export/restore candidate",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F5"
+      ],
+      "new_requirement_references": [
+        "WSR-11",
+        "WSR-12"
+      ],
+      "setup": "When separately authorized, export only localStorage from A; restore opaque blob into fresh staged S; verify origins/records offline",
+      "assertions": "Exact declared records and exclusions, no full-backup/atomicity inference; source/B unchanged; no active destination overwrite",
+      "failure_injection": "Unsupported/error/crash callback reported rather than ignored",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-14",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC12",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-05",
+          "SPEC-08",
+          "SPEC-12",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-R09",
+          "PQR-R10",
+          "PQR-R11",
+          "PQR-R12"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-032",
+      "title": "Unsupported export types and capability inventory",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F5"
+      ],
+      "new_requirement_references": [
+        "WSR-11"
+      ],
+      "setup": "Record public type inventory and request each frozen non-localStorage candidate separately; model all-types misuse rejection",
+      "assertions": "Capability result truthful per actual build; unsupported required class Blocked; no blanket all-types backup or empty-blob success",
+      "failure_injection": "Unknown type, empty result and error vectors; source expectation not forced onto shipping runtime",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-14",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC12",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-04",
+          "SPEC-05",
+          "SPEC-08",
+          "SPEC-12"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-033",
+      "title": "Invalid blob/format and partial restore",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F5"
+      ],
+      "new_requirement_references": [
+        "WSR-12"
+      ],
+      "setup": "Reject unqualified outer manifest before engine call; only approved bounded malformed synthetic blob goes to fresh stage",
+      "assertions": "No publication/active overwrite on error/crash; preserve source/archive/old binding; no assumed atomic provider rollback",
+      "failure_injection": "Truncation/type/version/missing/partial callback vectors; disposable stage only",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "FAULT",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-14",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC12",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-05",
+          "SPEC-08",
+          "SPEC-12",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-R09",
+          "PQR-R10",
+          "PQR-R11",
+          "PQR-R12"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-034",
+      "title": "Cross-Mac/version migration and deletion lineage",
+      "mode": "Native/Model",
+      "fixtures": [
+        "F0",
+        "F1",
+        "F2",
+        "F5"
+      ],
+      "new_requirement_references": [
+        "WSR-11",
+        "WSR-12",
+        "WSR-13"
+      ],
+      "setup": "Freeze producer/consumer matrix and independent destination; apply known deletion records or approved unknown-lineage disclosure",
+      "assertions": "Only supported exact classes restore; no source-Keychain/cloud requirement; unsupported format/conflict preserved and blocked",
+      "failure_injection": "Older/newer unsupported producer, UUID conflict and unknown deletion coverage",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "FAULT",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-15",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC13",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-08",
+          "SPEC-12",
+          "SPEC-13",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14",
+          "OD-R17",
+          "OD-R20"
+        ],
+        "experiments": [
+          "EXP-07",
+          "EXP-08"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "DELETE-001",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-14",
+          "REQ-15",
+          "REQ-16",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC12",
+          "AC13",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-05",
+          "SPEC-08",
+          "SPEC-12",
+          "SPEC-13",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14",
+          "OD-R17",
+          "OD-R20"
+        ],
+        "experiments": [
+          "EXP-07",
+          "EXP-08"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "DELETE-001",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-R09",
+          "PQR-R10",
+          "PQR-R11",
+          "PQR-R12"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-035",
+      "title": "Permissions and privacy/logging boundary",
+      "mode": "Static/Model",
+      "fixtures": [
+        "F0"
+      ],
+      "new_requirement_references": [
+        "WSR-14",
+        "WSR-15"
+      ],
+      "setup": "Inspect fake own logs/intents for cookie/URL/private payload and expired origin/profile grants; no device request",
+      "assertions": "Own logs minimized, page cannot choose stores, restored data grants no TCC/native permission; no native affirmative claim",
+      "failure_injection": "Sensitive synthetic error text, stale/foreign grant, raw console output vectors",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "FX",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-09",
+          "REQ-10",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC09",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-09"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R11",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "LOCK-001",
+          "PERM-001.D",
+          "PRIV-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-09",
+          "REQ-10",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC09",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-09",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R10",
+          "OD-R11",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05"
+        ],
+        "existing_case_references": [
+          "ISO-001",
+          "LOCK-001",
+          "PERM-001.D",
+          "PRIV-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-036",
+      "title": "Minimum-OS public API surface audit",
+      "mode": "Static",
+      "fixtures": [
+        "F0"
+      ],
+      "new_requirement_references": [
+        "WSR-03",
+        "WSR-11",
+        "WSR-16"
+      ],
+      "setup": "Review SDK declarations and future call inventory for deployment26.0; distinguish per-store and per-view APIs using their actual availability annotations",
+      "assertions": "No unguarded macOS27-only/private API dependency; SDK evidence remains static only",
+      "failure_injection": "Model capability unavailable/unknown; no fallback to default/private API",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R10",
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05",
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "ISO-001",
+          "LOCK-001",
+          "PRIV-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0002",
+          "ADR-0003",
+          "ADR-0004"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-14",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-04",
+          "SPEC-05",
+          "SPEC-08",
+          "SPEC-12"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R10",
+          "OD-R14"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05",
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "ISO-001",
+          "LOCK-001",
+          "PRIV-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "separate_release_gate": {
+        "requirement": "REQ-21",
+        "AC_assignment": null,
+        "scope": "WKS case supplies API/platform input only; full final-candidate Stage C qualification remains separate and unpassed."
+      },
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-037",
+      "title": "Required macOS26 runtime matrix",
+      "mode": "Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-05",
+        "WSR-06",
+        "WSR-10",
+        "WSR-16"
+      ],
+      "setup": "At owner-scheduled final validation, run relevant frozen cases on26.0 and latest supported26.x with pinned app/WebKit build",
+      "assertions": "Per-version actual results and mandatory gates; newer-host discovery or deployment target never substitutes",
+      "failure_injection": "Repeat only named supported-lifecycle faults; no security relaxation",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "FAULT",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R07",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05",
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "ISO-001",
+          "LOCK-001",
+          "PRIV-001",
+          "RECOVERY-003",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0002",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-06",
+          "REQ-09",
+          "REQ-18",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC04",
+          "AC08",
+          "AC12",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-14",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R06",
+          "OD-R07",
+          "OD-R10",
+          "OD-R13",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05",
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "ISO-001",
+          "LOCK-001",
+          "PRIV-001",
+          "RECOVERY-003",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "separate_release_gate": {
+        "requirement": "REQ-21",
+        "AC_assignment": null,
+        "scope": "WKS case supplies API/platform input only; full final-candidate Stage C qualification remains separate and unpassed."
+      },
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-038",
+      "title": "At-rest protection inventory and limits",
+      "mode": "Static/Native",
+      "fixtures": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "new_requirement_references": [
+        "WSR-14",
+        "WSR-16"
+      ],
+      "setup": "Review public protection capabilities; future authorized read-only inventory of exact synthetic engine namespace, no SQL/raw path manipulation",
+      "assertions": "No claim of Vezham DEK encryption/secure erase; visibility limits/OS protection facts recorded; required protection gap stays open",
+      "failure_injection": "Access-denied/incomplete inventory treated Inconclusive; no bypass/real user data",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "TRACE",
+        "STATE",
+        "HASH"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08"
+        ],
+        "specifications": [
+          "SPEC-08"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R07",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05",
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "ISO-001",
+          "LOCK-001",
+          "PRIV-001"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0002",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-03",
+          "REQ-09",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC04",
+          "AC08",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-02",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R06",
+          "OD-R07",
+          "OD-R10",
+          "OD-R16"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-02",
+          "EXP-05",
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "ISO-001",
+          "LOCK-001",
+          "PRIV-001"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-039",
+      "title": "Catalog failure after engine lifecycle effect",
+      "mode": "Model",
+      "fixtures": [
+        "F0",
+        "F4",
+        "F6"
+      ],
+      "new_requirement_references": [
+        "WSR-01",
+        "WSR-10",
+        "WSR-12",
+        "WSR-13"
+      ],
+      "setup": "Use fake catalog commit failure after create/remove/restore callback success in separate labeled recipes",
+      "assertions": "Pending saga/tombstone survives; no Active reset, empty recreation, false save/removed publication or automatic merge",
+      "failure_injection": "Commit failure and late result after generation retirement",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "FX",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R14",
+          "OD-R16",
+          "OD-R17",
+          "OD-R20"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "DELETE-001",
+          "ISO-001",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0003",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-04",
+          "REQ-06",
+          "REQ-14",
+          "REQ-15",
+          "REQ-16",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC03",
+          "AC08",
+          "AC12",
+          "AC13",
+          "AC14",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-05",
+          "SPEC-06",
+          "SPEC-08",
+          "SPEC-12",
+          "SPEC-13",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R05",
+          "OD-R10",
+          "OD-R14",
+          "OD-R16",
+          "OD-R17",
+          "OD-R20"
+        ],
+        "experiments": [
+          "EXP-01",
+          "EXP-07",
+          "EXP-08"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "DELETE-001",
+          "ISO-001",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-R03"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    },
+    {
+      "id": "WKS-040",
+      "title": "Interrupted multi-resource backup publication",
+      "mode": "Model",
+      "fixtures": [
+        "F0",
+        "F4",
+        "F5"
+      ],
+      "new_requirement_references": [
+        "WSR-11",
+        "WSR-12",
+        "WSR-13"
+      ],
+      "setup": "Model catalog/profile snapshot and engine export generations with one incomplete/mismatched member",
+      "assertions": "No coherent/full backup published; originals/stage retained; external downloads untouched and selection exclusions explicit",
+      "failure_injection": "Missing class blob, stale privacy epoch, incomplete manifest or commit receipt",
+      "evidence_codes": [
+        "RESULT",
+        "REVIEW",
+        "CFG",
+        "FX",
+        "TRACE",
+        "STATE",
+        "FAULT"
+      ],
+      "environment": "D0/C0 for Static/Model; I0/R0/L0/X0 as qualified in plan for native activity",
+      "platform": "Recorded discovery host only initially; WKS-037 specifically26.0 and latest supported26.x; second Mac for WKS-034",
+      "mapping": {
+        "requirements": [
+          "REQ-14",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC12",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-08",
+          "SPEC-12",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14",
+          "OD-R17",
+          "OD-R20"
+        ],
+        "experiments": [
+          "EXP-07"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "DELETE-001",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ],
+        "ADRs": [
+          "ADR-0001",
+          "ADR-0004",
+          "ADR-0005"
+        ]
+      },
+      "mapping_scope": "Supporting prerequisite/engine subset only; no whole AC/EXP/provider/PQR pass. Model branches do not qualify native assertions.",
+      "status": "Proposed / Not Run",
+      "execution_readiness": "Not authorized; native prerequisites, exact budgets/oracles and historical cleanup diagnostic disposition required",
+      "pass_criteria": "All listed assertions within the exact mode/class/platform pass with positive controls, complete evidence and truthful cleanup; native claims require native observations",
+      "fail_criteria": "Wrong/default binding, cross-profile/private leak, unintended deletion/overwrite, stale authority, forbidden persistence or false success/cleanup",
+      "inconclusive_criteria": "Missing/unsafe fault attribution, unavailable class or invalid positive control, unresolved lifecycle/outcome, incomplete trace or inaccessible artifact scope; unsupported mandatory behavior remains Blocked",
+      "architecture_context_mapping": {
+        "requirements": [
+          "REQ-14",
+          "REQ-15",
+          "REQ-16",
+          "REQ-19",
+          "REQ-22"
+        ],
+        "acceptance_routes": [
+          "AC08",
+          "AC12",
+          "AC13",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04",
+          "SPEC-05",
+          "SPEC-08",
+          "SPEC-12",
+          "SPEC-13",
+          "SPEC-15"
+        ],
+        "owner_direction": [
+          "OD-R07",
+          "OD-R08",
+          "OD-R14",
+          "OD-R17",
+          "OD-R20"
+        ],
+        "experiments": [
+          "EXP-07",
+          "EXP-08"
+        ],
+        "existing_case_references": [
+          "BACKUP-003",
+          "DELETE-001",
+          "RECOVERY-008",
+          "RECOVERY-009"
+        ]
+      },
+      "mapping_basis": "Only the listed assertion contributes to these routes; architecture_context_mapping is related contract context, not additional validated AC coverage.",
+      "SQLCipher_PQR_relationship": {
+        "context_ids": [
+          "PQR-R09",
+          "PQR-R10",
+          "PQR-R11",
+          "PQR-R12"
+        ],
+        "coverage": "None: WebKit/WS-F0 cases do not execute or satisfy SQLCipher PQR; these are independent ownership/lifecycle analogies or dependencies only."
+      }
+    }
+  ],
+  "case_executions": 0,
+  "requirements": {
+    "WSR-01": {
+      "REQ": [
+        "REQ-04",
+        "REQ-06",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC03",
+        "AC08",
+        "AC12",
+        "AC14",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-03",
+        "SPEC-04",
+        "SPEC-08"
+      ],
+      "OD-R": [
+        "OD-R05",
+        "OD-R10"
+      ],
+      "EXP": [
+        "EXP-01"
+      ],
+      "existing_case_references": [
+        "ISO-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004"
+      ]
+    },
+    "WSR-02": {
+      "REQ": [
+        "REQ-03",
+        "REQ-04",
+        "REQ-19",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC03",
+        "AC08",
+        "AC14",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-02",
+        "SPEC-03",
+        "SPEC-08",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R05",
+        "OD-R10",
+        "OD-R16"
+      ],
+      "EXP": [
+        "EXP-01"
+      ],
+      "existing_case_references": [
+        "ISO-001",
+        "BRIDGE-004"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-03": {
+      "REQ": [
+        "REQ-04",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC03",
+        "AC08"
+      ],
+      "SPEC": [
+        "SPEC-02",
+        "SPEC-08"
+      ],
+      "OD-R": [
+        "OD-R10"
+      ],
+      "EXP": [
+        "EXP-01"
+      ],
+      "existing_case_references": [
+        "ISO-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003"
+      ]
+    },
+    "WSR-04": {
+      "REQ": [
+        "REQ-04",
+        "REQ-18",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC03",
+        "AC08",
+        "AC14",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-02",
+        "SPEC-06",
+        "SPEC-08",
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R10",
+        "OD-R16"
+      ],
+      "EXP": [
+        "EXP-01"
+      ],
+      "existing_case_references": [
+        "ISO-001",
+        "RECOVERY-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0005"
+      ]
+    },
+    "WSR-05": {
+      "REQ": [
+        "REQ-09",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC04",
+        "AC08",
+        "AC14"
+      ],
+      "SPEC": [
+        "SPEC-06",
+        "SPEC-08"
+      ],
+      "OD-R": [
+        "OD-R06",
+        "OD-R10"
+      ],
+      "EXP": [
+        "EXP-02"
+      ],
+      "existing_case_references": [
+        "PRIV-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004"
+      ]
+    },
+    "WSR-06": {
+      "REQ": [
+        "REQ-09",
+        "REQ-18",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC04",
+        "AC08",
+        "AC14",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-06",
+        "SPEC-08",
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R06",
+        "OD-R10",
+        "OD-R13",
+        "OD-R16"
+      ],
+      "EXP": [
+        "EXP-02"
+      ],
+      "existing_case_references": [
+        "PRIV-001",
+        "RECOVERY-003"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-07": {
+      "REQ": [
+        "REQ-08",
+        "REQ-18",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC07",
+        "AC08",
+        "AC14",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-05",
+        "SPEC-06",
+        "SPEC-07",
+        "SPEC-08",
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R09",
+        "OD-R10",
+        "OD-R18"
+      ],
+      "EXP": [
+        "EXP-05"
+      ],
+      "existing_case_references": [
+        "LOCK-001",
+        "RECOVERY-006"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-08": {
+      "REQ": [
+        "REQ-18",
+        "REQ-20",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC08",
+        "AC14",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-02",
+        "SPEC-06",
+        "SPEC-08",
+        "SPEC-10",
+        "SPEC-14",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R06",
+        "OD-R10",
+        "OD-R16",
+        "OD-R18"
+      ],
+      "EXP": [
+        "EXP-01",
+        "EXP-02",
+        "EXP-05"
+      ],
+      "existing_case_references": [
+        "RECOVERY-001",
+        "RECOVERY-003",
+        "RECOVERY-004",
+        "RECOVERY-010"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-09": {
+      "REQ": [
+        "REQ-22"
+      ],
+      "AC": [
+        "AC08"
+      ],
+      "SPEC": [
+        "SPEC-08"
+      ],
+      "OD-R": [
+        "OD-R10",
+        "OD-R12"
+      ],
+      "EXP": [
+        "EXP-01"
+      ],
+      "existing_case_references": [
+        "ISO-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0004"
+      ]
+    },
+    "WSR-10": {
+      "REQ": [
+        "REQ-04",
+        "REQ-19",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC03",
+        "AC08",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-03",
+        "SPEC-06",
+        "SPEC-08",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R05",
+        "OD-R10",
+        "OD-R16"
+      ],
+      "EXP": [
+        "EXP-01"
+      ],
+      "existing_case_references": [
+        "ISO-001",
+        "RECOVERY-009"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-11": {
+      "REQ": [
+        "REQ-14",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC08",
+        "AC12",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-04",
+        "SPEC-05",
+        "SPEC-08",
+        "SPEC-12"
+      ],
+      "OD-R": [
+        "OD-R07",
+        "OD-R08",
+        "OD-R14"
+      ],
+      "EXP": [
+        "EXP-07"
+      ],
+      "existing_case_references": [
+        "BACKUP-003"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0004"
+      ]
+    },
+    "WSR-12": {
+      "REQ": [
+        "REQ-14",
+        "REQ-19",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC08",
+        "AC12",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-03",
+        "SPEC-05",
+        "SPEC-08",
+        "SPEC-12",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R14"
+      ],
+      "EXP": [
+        "EXP-07"
+      ],
+      "existing_case_references": [
+        "BACKUP-003",
+        "RECOVERY-008",
+        "RECOVERY-009"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-13": {
+      "REQ": [
+        "REQ-14",
+        "REQ-15",
+        "REQ-16",
+        "REQ-19",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC08",
+        "AC12",
+        "AC13",
+        "AC15"
+      ],
+      "SPEC": [
+        "SPEC-08",
+        "SPEC-12",
+        "SPEC-13",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R14",
+        "OD-R17",
+        "OD-R20"
+      ],
+      "EXP": [
+        "EXP-07",
+        "EXP-08"
+      ],
+      "existing_case_references": [
+        "BACKUP-003",
+        "RECOVERY-008",
+        "RECOVERY-009",
+        "DELETE-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-14": {
+      "REQ": [
+        "REQ-03",
+        "REQ-09",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC04",
+        "AC08",
+        "AC14"
+      ],
+      "SPEC": [
+        "SPEC-02",
+        "SPEC-06",
+        "SPEC-08",
+        "SPEC-15"
+      ],
+      "OD-R": [
+        "OD-R06",
+        "OD-R10",
+        "OD-R16"
+      ],
+      "EXP": [
+        "EXP-01",
+        "EXP-02"
+      ],
+      "existing_case_references": [
+        "ISO-001",
+        "PRIV-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0005"
+      ]
+    },
+    "WSR-15": {
+      "REQ": [
+        "REQ-03",
+        "REQ-10",
+        "REQ-22"
+      ],
+      "AC": [
+        "AC08",
+        "AC09",
+        "AC14"
+      ],
+      "SPEC": [
+        "SPEC-02",
+        "SPEC-08",
+        "SPEC-09"
+      ],
+      "OD-R": [
+        "OD-R11"
+      ],
+      "EXP": [
+        "EXP-01",
+        "EXP-05"
+      ],
+      "existing_case_references": [
+        "PERM-001.D",
+        "LOCK-001"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0005"
+      ]
+    },
+    "WSR-16": {
+      "REQ": [
+        "REQ-22"
+      ],
+      "AC": [
+        "AC08"
+      ],
+      "SPEC": [
+        "SPEC-08"
+      ],
+      "OD-R": [
+        "OD-R07",
+        "OD-R10"
+      ],
+      "EXP": [
+        "EXP-01",
+        "EXP-02",
+        "EXP-05",
+        "EXP-07"
+      ],
+      "existing_case_references": [
+        "ISO-001",
+        "PRIV-001",
+        "LOCK-001",
+        "BACKUP-003"
+      ],
+      "ADRs": [
+        "ADR-0001",
+        "ADR-0002",
+        "ADR-0004"
+      ]
+    }
+  }
+}

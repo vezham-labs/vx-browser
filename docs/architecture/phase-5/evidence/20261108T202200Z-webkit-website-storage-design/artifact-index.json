@@ -1,0 +1,158 @@
+{
+  "purpose": "Integrity index of static design/review artifacts; not runtime qualification evidence",
+  "reports": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-architecture.md",
+      "sha256": "62509c0b12f96c9dea97fd6d3326396286e8d77febabcceb3059309e34865f99",
+      "lines": 127
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-qualification-plan.md",
+      "sha256": "402925412033f2ad1bec04c3a1896373e79b52d4894d00f18847a906b002bd8b",
+      "lines": 103
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-webkit-website-storage-traceability.md",
+      "sha256": "27c0954b5872092cba015839e656bb9fd11e3cf4a636dfe7448161b57858fe3e",
+      "lines": 111
+    }
+  ],
+  "appended_indexes": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "47278ed0191f64334cc85cb9b61419571919648786166b542221110a33ef8949"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "f1b6fb20ceebdb08556cd62a7efe89b82842374800c1cfb375dabf0b69bfb384"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "README.md",
+      "sha256": "a09002102bcf0f49d3bd5ddd3942a344f5f9d39d6323850854a50a4c8b1e969f",
+      "bytes": 2803
+    },
+    {
+      "path": "baseline.json",
+      "sha256": "11fd8cce3383d5d8464ab4da473396a65b0bfe96cac8e4fc6c470160e875d8d8",
+      "bytes": 244472
+    },
+    {
+      "path": "changed-files.json",
+      "sha256": "3bd7fcccaae3eab876940cb0767d1ef0c04f1044d4b4a6478d7c57155af9c58a",
+      "bytes": 4231
+    },
+    {
+      "path": "claims-ledger.json",
+      "sha256": "e854e60e4595869b9579f14f85a35d2c23a7d6b6c2cc6efd9c2209b981db923e",
+      "bytes": 5080
+    },
+    {
+      "path": "qualification-cases.json",
+      "sha256": "dbce9fd39d01d06c87309fd752ea8a0aef23b03a3f78a83f79b7ed4fd4328729",
+      "bytes": 160966
+    },
+    {
+      "path": "results/non-execution.json",
+      "sha256": "88496291fb617db0d224abce021fcceb1e0ea7707738297f9686d9b82b91c014",
+      "bytes": 1044
+    },
+    {
+      "path": "results/preservation-audit.json",
+      "sha256": "e26bfdffe88dd68cb97e2b8f4fbbca7469ca8573729bbb13a7736ec88f1370e7",
+      "bytes": 4075
+    },
+    {
+      "path": "results/static-consistency-review.json",
+      "sha256": "17de9f823bdf5c7d94c63c94eaf64c7c09d8c80e54348d4acb0e577006b24dc5",
+      "bytes": 1337
+    },
+    {
+      "path": "sources/APIPageConfiguration.cpp",
+      "sha256": "b5ee4bab030ea758d436a7cea2720683f8d861ae751690d754e9a7fee1ccc05e",
+      "bytes": 14254
+    },
+    {
+      "path": "sources/WKWebViewConfiguration.mm",
+      "sha256": "0dbbb1d79bfeb970e4e56214c2b7d7822859936d1328e6c1d4eed3c8000197e6",
+      "bytes": 54204
+    },
+    {
+      "path": "sources/WKWebsiteDataStore.mm",
+      "sha256": "78cabcc713af3fd8731e41d3031e69c4d0d5074dc308aed015a522ef9ae66937",
+      "bytes": 73639
+    },
+    {
+      "path": "sources/WebsiteDataStore.cpp",
+      "sha256": "f92f5c05865c351033b43a88e8cfddb08b59fe3d00ed7655bfa7f9b5f424074a",
+      "bytes": 147275
+    },
+    {
+      "path": "sources/WebsiteDataStoreCocoa.mm",
+      "sha256": "53faeffefc9442f6e97e0e9eecb3e0d5baf76d028d52eabeb9fc095fe016ec11",
+      "bytes": 50433
+    },
+    {
+      "path": "sources/apple-wkwebsitedatastore.md",
+      "sha256": "fff242854949192aaa325eea38becb24941c95128b667c8a4f39da80d5827f60",
+      "bytes": 5885
+    },
+    {
+      "path": "sources/official-references.json",
+      "sha256": "b355e4e86a835843219e36bf1f6612b56e7a7ab2466c2e0d057b27ea06e5b830",
+      "bytes": 938
+    },
+    {
+      "path": "sources/owner-task.txt",
+      "sha256": "1dc7b38362717ef7a627de1bd587074765e794e7525ce1bbe55615e2504c3454",
+      "bytes": 3358
+    },
+    {
+      "path": "sources/repository-input-inventory.json",
+      "sha256": "8b7955501849e9f27517eb9785797f3000026a9ffc18a5248cfcb9e6ab96e8b0",
+      "bytes": 66914
+    },
+    {
+      "path": "sources/sdk-WKWebView.h.txt",
+      "sha256": "951f69d51f00727949afe339ec4369c58ad312b5661de03506f276289cd3e2ce",
+      "bytes": 43553
+    },
+    {
+      "path": "sources/sdk-WKWebViewConfiguration.h.txt",
+      "sha256": "ad689fa5f7fba5830111dd6d953b5fb69eedec3275ae51b8f2672597f23ec766",
+      "bytes": 13731
+    },
+    {
+      "path": "sources/sdk-WKWebsiteDataRecord.h.txt",
+      "sha256": "81587f9de6180dd04095406f865639ece1aa7271a0b13392c120faf388b0a9b5",
+      "bytes": 4628
+    },
+    {
+      "path": "sources/sdk-WKWebsiteDataStore.h.txt",
+      "sha256": "416940fc49e703de57c6da8ef372f98493503fb9d6cffe9d2b3479c6c62f4b9a",
+      "bytes": 8029
+    },
+    {
+      "path": "sources/sdk-api-inventory.json",
+      "sha256": "c95cca23db12f5d64054de0b538d06ab1518ecbe1abf63645719b182b9fc3eab",
+      "bytes": 15089
+    },
+    {
+      "path": "sources/upstream-source-excerpts.json",
+      "sha256": "8d7d97c9b06c2f8cc0cfc359cb9daba9c3699a5260394c445d42b3dd53eb7a0e",
+      "bytes": 13601
+    },
+    {
+      "path": "sources/webkit-upstream-source-pin.json",
+      "sha256": "fe27fd40e38e27d4338c9839393f3f364c16c59bf5cfd85cec9f959e2972160e",
+      "bytes": 2450
+    },
+    {
+      "path": "sqlcipher-pqr-applicability.json",
+      "sha256": "977e737312287e16c9d88b5f25a68667b65746310ead57f5281095f4ee8f2dbc",
+      "bytes": 192944
+    }
+  ],
+  "self_hash_policy": "Index excludes itself and SHA256SUMS; SHA256SUMS includes index and excludes only itself."
+}

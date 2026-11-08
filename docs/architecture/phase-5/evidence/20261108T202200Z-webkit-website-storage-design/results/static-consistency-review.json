@@ -1,0 +1,41 @@
+{
+  "status": "PASS \u2014 static design/document consistency only",
+  "checks": {
+    "three_reports_present": true,
+    "40_unique_ordered_case_ids": true,
+    "all_case_statuses_proposed_not_run": true,
+    "40_plan_rows_match_JSON": true,
+    "40_trace_rows_match_JSON": true,
+    "all_titles_setups_assertions_faults_codes_in_plan": true,
+    "all_required_case_fields": true,
+    "all_16_WSR_requirements_in_architecture_and_trace": true,
+    "all_existing_case_refs_grounded": true,
+    "all50_PQR_definitions_verbatim": true,
+    "no_WKS_claims_PQR_substitution": true,
+    "REQ21_has_no_case_AC_assignment": true,
+    "all_relative_links_resolve_or_are_declared_outputs": true,
+    "all_tables_rectangular": true,
+    "M2_report_not_invented": true
+  },
+  "local_links_checked": 35,
+  "missing_links": [],
+  "table_errors": [],
+  "canonical_existing_case_references": [
+    "BACKUP-003",
+    "BRIDGE-004",
+    "DELETE-001",
+    "ISO-001",
+    "LOCK-001",
+    "PERM-001.D",
+    "PRIV-001",
+    "RECOVERY-001",
+    "RECOVERY-003",
+    "RECOVERY-004",
+    "RECOVERY-006",
+    "RECOVERY-008",
+    "RECOVERY-009",
+    "RECOVERY-010"
+  ],
+  "source_snapshot_scope": "SDK and upstream pin are documentary/static; not runtime framework proof",
+  "test_outcomes": "0 new WKS/provider/PQR cases executed; no runtime pass/fail assigned"
+}

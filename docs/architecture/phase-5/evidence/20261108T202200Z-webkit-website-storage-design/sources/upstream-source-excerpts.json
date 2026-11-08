@@ -1,0 +1,81 @@
+{
+  "commit": "75dff6dba87fafb94367ddb5bb155a110963ba80",
+  "shipping_binary_equivalence": "Not established",
+  "entries": [
+    {
+      "id": "UP-01",
+      "file": "APIPageConfiguration.cpp",
+      "sha256": "b5ee4bab030ea758d436a7cea2720683f8d861ae751690d754e9a7fee1ccc05e",
+      "excerpts": [
+        {
+          "start": 325,
+          "end": 337,
+          "text": "WebsiteDataStore& PageConfiguration::websiteDataStore() const\n{\n    if (!m_data.websiteDataStore)\n        m_data.websiteDataStore = WebsiteDataStore::defaultDataStore();\n    return *m_data.websiteDataStore;\n}\n\nWebKit::WebsiteDataStore* PageConfiguration::websiteDataStoreIfExists() const\n{\n    return m_data.websiteDataStore.get();\n}\n\nvoid PageConfiguration::setWebsiteDataStore(RefPtr<WebsiteDataStore>&& websiteDataStore)"
+        }
+      ]
+    },
+    {
+      "id": "UP-02",
+      "file": "WKWebViewConfiguration.mm",
+      "sha256": "0dbbb1d79bfeb970e4e56214c2b7d7822859936d1328e6c1d4eed3c8000197e6",
+      "excerpts": [
+        {
+          "start": 472,
+          "end": 475,
+          "text": "- (WKWebsiteDataStore *)websiteDataStore\n{\n    return wrapper(protect(protect(*_pageConfiguration)->websiteDataStore()).get());\n}"
+        },
+        {
+          "start": 507,
+          "end": 512,
+          "text": "- (void)setWebsiteDataStore:(WKWebsiteDataStore *)websiteDataStore\n{\n    protect(*_pageConfiguration)->setWebsiteDataStore(websiteDataStore ? websiteDataStore->_websiteDataStore.get() : nullptr);\n}\n\n- (BOOL)showsSystemScreenTimeBlockingView"
+        }
+      ]
+    },
+    {
+      "id": "UP-03",
+      "file": "WKWebsiteDataStore.mm",
+      "sha256": "78cabcc713af3fd8731e41d3031e69c4d0d5074dc308aed015a522ef9ae66937",
+      "excerpts": [
+        {
+          "start": 402,
+          "end": 412,
+          "text": "WK_OBJECT_DISABLE_DISABLE_KVC_IVAR_ACCESS;\n\n+ (WKWebsiteDataStore *)defaultDataStore\n{\n    return wrapper(WebKit::WebsiteDataStore::defaultDataStore());\n}\n\n+ (WKWebsiteDataStore *)nonPersistentDataStore\n{\n    return wrapper(WebKit::WebsiteDataStore::createNonPersistent()).autorelease();\n}"
+        },
+        {
+          "start": 439,
+          "end": 458,
+          "text": "{\n    return YES;\n}\n\n- (instancetype)initWithCoder:(NSCoder *)coder\n{\n    if ([coder decodeBoolForKey:@\"isDefaultDataStore\"])\n        return [[WKWebsiteDataStore defaultDataStore] retain];\n    return [[WKWebsiteDataStore nonPersistentDataStore] retain];\n}\n\n- (void)encodeWithCoder:(NSCoder *)coder\n{\n    if (self == [WKWebsiteDataStore defaultDataStore]) {\n        [coder encodeBool:YES forKey:@\"isDefaultDataStore\"];\n        return;\n    }\n\n    ASSERT(!self.persistent);\n}"
+        },
+        {
+          "start": 534,
+          "end": 560,
+          "text": "\n- (NSUUID *)identifier\n{\n    return [self _identifier];\n}\n\n+ (WKWebsiteDataStore *)dataStoreForIdentifier:(NSUUID *)identifier\n{\n    if (!identifier)\n        [NSException raise:NSInvalidArgumentException format:@\"Identifier is nil\"];\n\n    auto uuid = WTF::UUID::fromNSUUID(identifier);\n    if (!uuid || !uuid->isValid())\n        [NSException raise:NSInvalidArgumentException format:@\"Identifier (%@) is invalid for data store\", identifier.UUIDString];\n\n    return wrapper(WebKit::WebsiteDataStore::dataStoreForIdentifier(*uuid)).autorelease();\n}\n\n+ (void)removeDataStoreForIdentifier:(NSUUID *)identifier completionHandler:(void(^)(NSError *))completionHandler\n{\n    [self _removeDataStoreWithIdentifier:identifier completionHandler:completionHandler];\n}\n\n+ (void)fetchAllDataStoreIdentifiers:(void(^)(NSArray<NSUUID *> *))completionHandler\n{\n    [self _fetchAllIdentifiers:completionHandler];\n}"
+        }
+      ]
+    },
+    {
+      "id": "UP-04",
+      "file": "WebsiteDataStoreCocoa.mm",
+      "sha256": "53faeffefc9442f6e97e0e9eecb3e0d5baf76d028d52eabeb9fc095fe016ec11",
+      "excerpts": [
+        {
+          "start": 297,
+          "end": 363,
+          "text": "void WebsiteDataStore::fetchAllDataStoreIdentifiers(CompletionHandler<void(Vector<WTF::UUID>&&)>&& completionHandler)\n{\n    ASSERT(isMainRunLoop());\n\n    websiteDataStoreIOQueueSingleton().dispatch([completionHandler = WTF::move(completionHandler), directory = defaultWebsiteDataStoreRootDirectory().isolatedCopy()]() mutable {\n        auto identifiers = WTF::compactMap(FileSystem::listDirectory(directory), [](auto&& identifierString) {\n            return WTF::UUID::parse(identifierString);\n        });\n        RunLoop::mainSingleton().dispatch([completionHandler = WTF::move(completionHandler), identifiers = crossThreadCopy(WTF::move(identifiers))]() mutable {\n            completionHandler(WTF::move(identifiers));\n        });\n    });\n}\n\nvoid WebsiteDataStore::removeDataStoreWithIdentifierImpl(const WTF::UUID& identifier, CompletionHandler<void(const String&)>&& completionHandler)\n{\n    websiteDataStoreIOQueueSingleton().dispatch([completionHandler = WTF::move(completionHandler), identifier, directory = defaultWebsiteDataStoreDirectory(identifier).isolatedCopy()]() mutable {\n        RetainPtr nsCredentialStorage = adoptNS([[NSURLCredentialStorage alloc] _initWithIdentifier:identifier.toString().createNSString().get() private:NO]);\n        RetainPtr credentials = [nsCredentialStorage allCredentials];\n        // FIXME: Remove the suppression once https://github.com/llvm/llvm-project/pull/230818 is deployed (rdar://189710680).\n        for (SUPPRESS_UNRETAINED_LOCAL NSURLProtectionSpace *space in credentials.get()) {\n            // FIXME: Remove the suppression once https://github.com/llvm/llvm-project/pull/230818 is deployed (rdar://189710680).\n            for (SUPPRESS_UNRETAINED_LOCAL NSURLCredential *credential in [credentials.get()[space] allValues])\n                [nsCredentialStorage removeCredential:credential forProtectionSpace:space];\n        }\n\n        bool deleted = FileSystem::deleteNonEmptyDirectory(directory);\n        RunLoop::mainSingleton().dispatch([completionHandler = WTF::move(completionHandler), deleted]() mutable {\n            if (!deleted)\n                return completionHandler(\"Failed to delete files on disk\"_s);\n\n            completionHandler({ });\n        });\n    });\n}\n\nvoid WebsiteDataStore::removeDataStoreWithIdentifier(const WTF::UUID& identifier, CompletionHandler<void(const String&)>&& callback)\n{\n    ASSERT(isMainRunLoop());\n\n    auto completionHandler = [identifier, callback = WTF::move(callback)](const String& error) mutable {\n        RELEASE_LOG(Storage, \"WebsiteDataStore::removeDataStoreWithIdentifier: Removal completed for identifier %\" PUBLIC_LOG_STRING \" (error '%\" PUBLIC_LOG_STRING \"')\", identifier.toString().utf8(), error.isEmpty() ? \"null\"_s : error.utf8());\n        callback(error);\n    };\n    RELEASE_LOG(Storage, \"WebsiteDataStore::removeDataStoreWithIdentifier: Removal started for identifier %\" PUBLIC_LOG_STRING, identifier.toString().utf8());\n    if (!identifier.isValid())\n        return completionHandler(\"Identifier is invalid\"_s);\n\n    if (RefPtr existingDataStore = existingDataStoreForIdentifier(identifier)) {\n        if (existingDataStore->hasActivePages())\n            return completionHandler(\"Data store is in use\"_s);\n\n        // FIXME: Try removing session from network process instead of returning error.\n        if (existingDataStore->networkProcessIfExists())\n            return completionHandler(\"Data store is in use (by network process)\"_s);\n    }\n\n    if (RefPtr networkProcess = NetworkProcessProxy::defaultNetworkProcess().get()) {\n        networkProcess->sendWithAsyncReply(Messages::NetworkProcess::EnsureSessionWithDataStoreIdentifierRemoved { identifier }, [identifier, completionHandler = WTF::move(completionHandler)]() mutable {\n            removeDataStoreWithIdentifierImpl(identifier, WTF::move(completionHandler));\n        });\n        return;\n    }\n\n    removeDataStoreWithIdentifierImpl(identifier, WTF::move(completionHandler));\n}\n"
+        }
+      ]
+    },
+    {
+      "id": "UP-05",
+      "file": "WKWebsiteDataStore.mm",
+      "sha256": "78cabcc713af3fd8731e41d3031e69c4d0d5074dc308aed015a522ef9ae66937",
+      "excerpts": [
+        {
+          "start": 594,
+          "end": 716,
+          "text": "}\n\nstruct WKWebsiteData {\n    std::optional<HashMap<WebCore::ClientOrigin, HashMap<String, String>>> localStorage;\n};\n\n- (void)fetchDataOfTypes:(NSSet<NSString *> *)dataTypes completionHandler:(void(^)(NSData *, NSError *))completionHandler\n{\n    Vector<WebKit::WebsiteDataType> dataTypesToEncode;\n    // FIXME: Remove the suppression once https://github.com/llvm/llvm-project/pull/230818 is deployed (rdar://189710680).\n    for (SUPPRESS_UNRETAINED_LOCAL NSString *dataType in dataTypes) {\n        if ([dataType isEqualToString:WKWebsiteDataTypeLocalStorage]) {\n            dataTypesToEncode.append(WebKit::WebsiteDataType::LocalStorage);\n            continue;\n        }\n\n        NSString *unsupportedPrefix = @\"This API does not support fetching: \";\n        RetainPtr<NSString> unsupportedMessage = [unsupportedPrefix stringByAppendingString:dataType];\n        NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : unsupportedMessage.get(), };\n\n        completionHandler(nullptr, adoptNS([[NSError alloc] initWithDomain:WKErrorDomain code:WKErrorUnknown userInfo:userInfo]).get());\n\n        return;\n    }\n\n    auto data = Box<WKWebsiteData>::create();\n\n    Ref callbackAggregator = CallbackAggregator::create([completionHandler = makeBlockPtr(completionHandler), dataTypesToEncode = WTF::move(dataTypesToEncode), data] {\n        WTF::Persistence::Encoder encoder;\n        constexpr unsigned currentWKWebsiteDataSerializationVersion = 1;\n        encoder << currentWKWebsiteDataSerializationVersion;\n        encoder << dataTypesToEncode;\n\n        for (auto& dataTypeToEncode : borrow(dataTypesToEncode)) {\n            switch (dataTypeToEncode) {\n            case WebKit::WebsiteDataType::LocalStorage:\n                if (!data->localStorage) {\n                    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @\"Unknown error occurred while fetching data.\", };\n                    completionHandler(nullptr, adoptNS([[NSError alloc] initWithDomain:WKErrorDomain code:WKErrorUnknown userInfo:userInfo]).get());\n\n                    return;\n                }\n\n                encoder << data->localStorage.value();\n                break;\n            default:\n                ASSERT_NOT_REACHED();\n                break;\n            }\n        }\n\n        completionHandler(toNSData(encoder.span()).get(), nullptr);\n    });\n\n    if ([dataTypes containsObject:WKWebsiteDataTypeLocalStorage]) {\n        protect(*_websiteDataStore)->fetchLocalStorage([callbackAggregator, data](auto&& localStorage) {\n            data->localStorage = WTF::move(localStorage);\n        });\n    }\n}\n\n- (void)restoreData:(NSData *)data completionHandler:(void(^)(NSError *))completionHandler\n{\n    WTF::Persistence::Decoder decoder(span(data));\n\n    std::optional<unsigned> currentWKWebsiteDataSerializationVersion;\n    decoder >> currentWKWebsiteDataSerializationVersion;\n\n    if (!currentWKWebsiteDataSerializationVersion) {\n        NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @\"Version number is missing.\", };\n        completionHandler(adoptNS([[NSError alloc] initWithDomain:WKErrorDomain code:WKErrorUnknown userInfo:userInfo]).get());\n\n        return;\n    }\n\n    std::optional<Vector<WebKit::WebsiteDataType>> encodedDataTypes;\n    decoder >> encodedDataTypes;\n\n    if (!encodedDataTypes) {\n        NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @\"List of encoded data types is missing.\", };\n        completionHandler(adoptNS([[NSError alloc] initWithDomain:WKErrorDomain code:WKErrorUnknown userInfo:userInfo]).get());\n\n        return;\n    }\n\n    auto error = Box<RetainPtr<NSError>>::create(nil);\n\n    Ref callbackAggregator = CallbackAggregator::create([completionHandler = makeBlockPtr(completionHandler), error] {\n        if (*error)\n            completionHandler(error->get());\n        else\n            completionHandler(nullptr);\n    });\n\n    for (auto& encodedDataType : borrow(*encodedDataTypes)) {\n        switch (encodedDataType) {\n        case WebKit::WebsiteDataType::LocalStorage: {\n            std::optional<HashMap<WebCore::ClientOrigin, HashMap<String, String>>> localStorage;\n            decoder >> localStorage;\n\n            if (!localStorage) {\n                NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @\"Encoded local storage data is missing.\", };\n                *error = adoptNS([[NSError alloc] initWithDomain:WKErrorDomain code:WKErrorUnknown userInfo:userInfo]).get();\n\n                return;\n            }\n\n            if (!localStorage->isEmpty()) {\n                protect(*_websiteDataStore)->restoreLocalStorage(WTF::move(*localStorage), [callbackAggregator, error](bool restoreSucceeded) {\n                    if (!restoreSucceeded) {\n                        NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @\"Unknown error occurred while restoring data.\", };\n                        *error = adoptNS([[NSError alloc] initWithDomain:WKErrorDomain code:WKErrorUnknown userInfo:userInfo]).get();\n                    }\n                });\n            }\n\n            break;\n        }\n        default:\n            ASSERT_NOT_REACHED();\n            break;\n        }\n    }"
+        }
+      ]
+    }
+  ]
+}

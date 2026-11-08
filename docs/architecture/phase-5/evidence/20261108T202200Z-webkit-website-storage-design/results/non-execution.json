@@ -1,0 +1,21 @@
+{
+  "task": "WebKit-managed website storage architecture",
+  "client_date": "2026-11-09",
+  "baseline": "a99da90d4d2ec7fbcb6308689709558641cf2b73",
+  "WebKit_framework_loaded_or_called": false,
+  "WebKit_store_enumeration_creation_deletion": 0,
+  "Keychain_access": 0,
+  "SQLCipher_initialization_or_calls": 0,
+  "database_opens_or_creates": 0,
+  "encrypted_fixtures": 0,
+  "provider_or_PQR_runtime_cases": 0,
+  "new_WKS_cases_executed": 0,
+  "prototype_or_existing_suites_restarted": false,
+  "builds_benchmarks_runtime_tests": 0,
+  "production_code_or_dependency_changes": false,
+  "ADR_or_owner_decision_changes": false,
+  "software_installs_or_host_changes": 0,
+  "staging_commits_pushes_branch_changes": 0,
+  "allowed_activity": "Static repository/SDK/public-source inspection, primary API browsing, source snapshots/hashes and design/plan/traceability/index/evidence documents",
+  "source_snapshot_note": "Third-party .mm/.cpp files under sources are inert reviewed upstream evidence; not implementation or compiled production source."
+}

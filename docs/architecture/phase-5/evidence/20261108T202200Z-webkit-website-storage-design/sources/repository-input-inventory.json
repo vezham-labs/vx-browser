@@ -1,0 +1,2466 @@
+{
+  "baseline": "a99da90d4d2ec7fbcb6308689709558641cf2b73",
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "ee3aacd5002ec6d2cfc6930fcd7299a69238905c31355ff7b9f1a4e55b5a0872",
+      "lines": 30,
+      "headings": [
+        {
+          "line": 4,
+          "text": "# General Guidelines for working with Nx"
+        },
+        {
+          "line": 13,
+          "text": "## Scaffolding & Generators"
+        },
+        {
+          "line": 17,
+          "text": "## When to use nx_docs"
+        },
+        {
+          "line": 25,
+          "text": "## CLI template baseline"
+        }
+      ]
+    },
+    {
+      "path": ".agents/skills/nx-workspace/SKILL.md",
+      "sha256": "e1a0c99a3f4528c2e5cc371ba24d6acc1d03af1c342b2beff62966712cc626df",
+      "lines": 286,
+      "headings": [
+        {
+          "line": 6,
+          "text": "# Nx Workspace Exploration"
+        },
+        {
+          "line": 12,
+          "text": "## Listing Projects"
+        },
+        {
+          "line": 19,
+          "text": "# List all projects"
+        },
+        {
+          "line": 22,
+          "text": "# Filter by pattern (glob)"
+        },
+        {
+          "line": 26,
+          "text": "# Filter by tag"
+        },
+        {
+          "line": 30,
+          "text": "# Filter by target (projects that have a specific target)"
+        },
+        {
+          "line": 33,
+          "text": "# Combine filters"
+        },
+        {
+          "line": 38,
+          "text": "# Negate patterns"
+        },
+        {
+          "line": 42,
+          "text": "# Output as JSON"
+        },
+        {
+          "line": 46,
+          "text": "## Project Configuration"
+        },
+        {
+          "line": 55,
+          "text": "# Get full project configuration"
+        },
+        {
+          "line": 58,
+          "text": "# Extract specific parts from the JSON"
+        },
+        {
+          "line": 63,
+          "text": "# Check project metadata"
+        },
+        {
+          "line": 67,
+          "text": "## Target Information"
+        },
+        {
+          "line": 72,
+          "text": "# List all targets for a project"
+        },
+        {
+          "line": 75,
+          "text": "# Get full target configuration"
+        },
+        {
+          "line": 78,
+          "text": "# Check target executor/command"
+        },
+        {
+          "line": 82,
+          "text": "# View target options"
+        },
+        {
+          "line": 85,
+          "text": "# Check target inputs/outputs (for caching)"
+        },
+        {
+          "line": 89,
+          "text": "# Find projects with a specific target"
+        },
+        {
+          "line": 94,
+          "text": "## Workspace Configuration"
+        },
+        {
+          "line": 100,
+          "text": "# Read the full nx.json"
+        },
+        {
+          "line": 103,
+          "text": "# Or use jq for specific sections"
+        },
+        {
+          "line": 117,
+          "text": "## Affected Projects"
+        },
+        {
+          "line": 121,
+          "text": "## Common Exploration Patterns"
+        },
+        {
+          "line": 123,
+          "text": "### \"What's in this workspace?\""
+        },
+        {
+          "line": 131,
+          "text": "### \"How do I build/test/lint project X?\""
+        },
+        {
+          "line": 138,
+          "text": "### \"What depends on library Y?\""
+        },
+        {
+          "line": 141,
+          "text": "# Use the project graph to find dependents"
+        },
+        {
+          "line": 145,
+          "text": "## Programmatic Answers"
+        },
+        {
+          "line": 149,
+          "text": "### Listing Projects"
+        },
+        {
+          "line": 164,
+          "text": "# Count projects"
+        },
+        {
+          "line": 167,
+          "text": "# Filter by pattern"
+        },
+        {
+          "line": 170,
+          "text": "# Get affected projects as array"
+        },
+        {
+          "line": 174,
+          "text": "### Project Details"
+        },
+        {
+          "line": 210,
+          "text": "# Get target names"
+        },
+        {
+          "line": 213,
+          "text": "# Get specific target config"
+        },
+        {
+          "line": 216,
+          "text": "# Get tags"
+        },
+        {
+          "line": 219,
+          "text": "# Get project root"
+        },
+        {
+          "line": 223,
+          "text": "### Project Graph"
+        },
+        {
+          "line": 259,
+          "text": "# Get all project names from graph"
+        },
+        {
+          "line": 262,
+          "text": "# Find dependencies of a project"
+        },
+        {
+          "line": 265,
+          "text": "# Find projects that depend on a library"
+        },
+        {
+          "line": 269,
+          "text": "## Troubleshooting"
+        },
+        {
+          "line": 271,
+          "text": "### \"Cannot find configuration for task X:target\""
+        },
+        {
+          "line": 274,
+          "text": "# Check what targets exist on the project"
+        },
+        {
+          "line": 277,
+          "text": "# Check if any projects have that target"
+        },
+        {
+          "line": 281,
+          "text": "### \"The workspace is out of sync\""
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/browser-engine-contract.md",
+      "sha256": "d39898d20cdd4af43c3286f7f3435d4d2c040c16f63b9e2eec62f0f7f99b54a8",
+      "lines": 503,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Vezham Browser Engine Contract"
+        },
+        {
+          "line": 7,
+          "text": "## Design rules"
+        },
+        {
+          "line": 19,
+          "text": "## Trust boundaries and command transport"
+        },
+        {
+          "line": 73,
+          "text": "## Core types"
+        },
+        {
+          "line": 313,
+          "text": "## Proposed adapter surface"
+        },
+        {
+          "line": 468,
+          "text": "## Event and lifecycle semantics"
+        },
+        {
+          "line": 478,
+          "text": "## Features that are not fully portable"
+        },
+        {
+          "line": 491,
+          "text": "## Staged adapter acceptance requirements"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/README.md",
+      "sha256": "35bb786ef9e34f0231e8e4ae5f7d1b4a691edbf7558c9eb208dac2378132d664",
+      "lines": 37,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Phase 5 \u2014 MVP foundation and implementation preparation"
+        },
+        {
+          "line": 5,
+          "text": "## Authority and starting state"
+        },
+        {
+          "line": 11,
+          "text": "## Read in order"
+        },
+        {
+          "line": 19,
+          "text": "## Non-negotiable constraints"
+        },
+        {
+          "line": 29,
+          "text": "## Stage separation and stop point"
+        },
+        {
+          "line": 35,
+          "text": "## Current M1 consolidation \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+      "sha256": "367fbfa0dc3b86557c6883489f68cb1d846909a3e2a9110dccb39e30cbd71ecc",
+      "lines": 85,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Phase 5 scope and milestones"
+        },
+        {
+          "line": 7,
+          "text": "## Approved direction and scope"
+        },
+        {
+          "line": 15,
+          "text": "## Alignment with the completed Phase 4.1 policy"
+        },
+        {
+          "line": 25,
+          "text": "## Sequence and dependencies"
+        },
+        {
+          "line": 43,
+          "text": "## Implementation-stage versus final-release requirements"
+        },
+        {
+          "line": 55,
+          "text": "## Approved performance targets to retain"
+        },
+        {
+          "line": 67,
+          "text": "## Risks and stop/exit conditions"
+        },
+        {
+          "line": 83,
+          "text": "## Current M1 consolidation \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/phase-5-implementation-plan.md",
+      "sha256": "a6c58bbb2ab9e51a81f7463976bd1da1b0fbc19ce3e842141a7a19311b660cbf",
+      "lines": 121,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Phase 5 implementation plan \u2014 M0 reviewed, M1 design prepared"
+        },
+        {
+          "line": 5,
+          "text": "## Inputs and authority"
+        },
+        {
+          "line": 14,
+          "text": "## Validation-stage alignment"
+        },
+        {
+          "line": 20,
+          "text": "## Preparation before the first execution task"
+        },
+        {
+          "line": 28,
+          "text": "## Work packages and dependencies"
+        },
+        {
+          "line": 30,
+          "text": "### M0 \u2014 Foundation and native host"
+        },
+        {
+          "line": 36,
+          "text": "### M1 \u2014 Core and local state"
+        },
+        {
+          "line": 44,
+          "text": "### M2 \u2014 WKWebView adapter"
+        },
+        {
+          "line": 50,
+          "text": "### M3 \u2014 Trust boundary and privileged transport"
+        },
+        {
+          "line": 56,
+          "text": "### M4 \u2014 React/TypeScript/HeroUI v3 interface"
+        },
+        {
+          "line": 62,
+          "text": "### M5 \u2014 Profiles/private sessions, permissions and transfers"
+        },
+        {
+          "line": 70,
+          "text": "### M6 \u2014 Compatibility, reliability, performance and local-first behavior"
+        },
+        {
+          "line": 80,
+          "text": "### M7 \u2014 Internal release engineering and readiness"
+        },
+        {
+          "line": 86,
+          "text": "### M8 \u2014 Final-release qualification"
+        },
+        {
+          "line": 92,
+          "text": "## Evidence, change control and finite verification"
+        },
+        {
+          "line": 100,
+          "text": "## Outstanding design decisions and risk ownership"
+        },
+        {
+          "line": 113,
+          "text": "## Overall exit and current stop"
+        },
+        {
+          "line": 119,
+          "text": "## Current M1 consolidation \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/README.md",
+      "sha256": "faed49b50601723b909e72a0f25278adf4fb78ff56fceab36245a3877bf77f0c",
+      "lines": 17,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Phase 5 Reports"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0001-browser-engine-strategy.md",
+      "sha256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5",
+      "lines": 164,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# ADR 0001: Browser engine strategy for Vezham Browser"
+        },
+        {
+          "line": 9,
+          "text": "## Context"
+        },
+        {
+          "line": 17,
+          "text": "## Decision drivers"
+        },
+        {
+          "line": 26,
+          "text": "## Options considered"
+        },
+        {
+          "line": 28,
+          "text": "### A. Apple WebKit through WKWebView"
+        },
+        {
+          "line": 34,
+          "text": "### B. Chromium through CEF"
+        },
+        {
+          "line": 40,
+          "text": "### C. Direct custom Chromium integration"
+        },
+        {
+          "line": 47,
+          "text": "## Owner decision and evidence basis \u2014 conditional acceptance"
+        },
+        {
+          "line": 61,
+          "text": "## Four decision paths reviewed"
+        },
+        {
+          "line": 72,
+          "text": "## Rationale and remaining risk"
+        },
+        {
+          "line": 82,
+          "text": "## Staged validation policy and approved bounded closure"
+        },
+        {
+          "line": 86,
+          "text": "### Stage A \u2014 Before engine selection"
+        },
+        {
+          "line": 95,
+          "text": "### Stage B \u2014 During implementation"
+        },
+        {
+          "line": 107,
+          "text": "### Stage C \u2014 Before final release"
+        },
+        {
+          "line": 116,
+          "text": "### Relationship to the preserved gate ledger"
+        },
+        {
+          "line": 130,
+          "text": "## Recorded approvals, remaining conditions and execution boundary"
+        },
+        {
+          "line": 143,
+          "text": "## Consequences of the conditional owner decision"
+        },
+        {
+          "line": 149,
+          "text": "## Revisit triggers"
+        },
+        {
+          "line": 155,
+          "text": "## Related records"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+      "sha256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2",
+      "lines": 63,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# ADR 0002: Internal distribution and macOS platform baseline"
+        },
+        {
+          "line": 8,
+          "text": "## Context"
+        },
+        {
+          "line": 12,
+          "text": "## Decisions"
+        },
+        {
+          "line": 27,
+          "text": "## Product decisions and implementation assumptions"
+        },
+        {
+          "line": 33,
+          "text": "## Consequences"
+        },
+        {
+          "line": 35,
+          "text": "### Positive"
+        },
+        {
+          "line": 42,
+          "text": "### Costs and risks"
+        },
+        {
+          "line": 49,
+          "text": "## Open questions"
+        },
+        {
+          "line": 57,
+          "text": "## Related documents"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+      "sha256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e",
+      "lines": 44,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# ADR 0003: Browser Core runtime and language"
+        },
+        {
+          "line": 8,
+          "text": "## Problem and established boundaries"
+        },
+        {
+          "line": 12,
+          "text": "## Alternatives"
+        },
+        {
+          "line": 24,
+          "text": "## Proposed decision"
+        },
+        {
+          "line": 34,
+          "text": "## Consequences and reversibility"
+        },
+        {
+          "line": 40,
+          "text": "## Approval and revisit conditions"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0004-browser-local-persistence.md",
+      "sha256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3",
+      "lines": 39,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# ADR 0004: Browser-owned local persistence"
+        },
+        {
+          "line": 8,
+          "text": "## Problem"
+        },
+        {
+          "line": 12,
+          "text": "## Alternatives and trade-offs"
+        },
+        {
+          "line": 25,
+          "text": "## Proposed decision and conditions"
+        },
+        {
+          "line": 33,
+          "text": "## Maintenance, reversibility and approval"
+        }
+      ]
+    },
+    {
+      "path": "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md",
+      "sha256": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17",
+      "lines": 47,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# ADR 0005: Browser capability boundaries and lifecycle"
+        },
+        {
+          "line": 8,
+          "text": "## Problem and preserved decisions"
+        },
+        {
+          "line": 14,
+          "text": "## Alternatives"
+        },
+        {
+          "line": 23,
+          "text": "## Proposed decision"
+        },
+        {
+          "line": 33,
+          "text": "## Source, trade-offs and security limits"
+        },
+        {
+          "line": 41,
+          "text": "## Compatibility, reversibility and owner decisions"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-3/README.md",
+      "sha256": "584ea92d4bd3434d5accfacac7f0366166faae92695dd21e7f840d391a412fd8",
+      "lines": 32,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Phase 3 evidence and Phase 4 decision review"
+        },
+        {
+          "line": 5,
+          "text": "## Owner decision and Phase 5 handoff"
+        },
+        {
+          "line": 9,
+          "text": "## Reading order and primary exit review"
+        },
+        {
+          "line": 16,
+          "text": "## Historical evidence versus maintained decisions"
+        },
+        {
+          "line": 28,
+          "text": "## Scope and stop point"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-3/owner-approval-decision.md",
+      "sha256": "20f33c8a693dd14844b3f94c2c60a04390ef7c486776f83185c468f6964d0e75",
+      "lines": 66,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Owner approval decision \u2014 Phase 4.2"
+        },
+        {
+          "line": 8,
+          "text": "## Decisions as approved"
+        },
+        {
+          "line": 20,
+          "text": "## Phase 3 closure and evidence limits"
+        },
+        {
+          "line": 28,
+          "text": "## Remaining conditions and mandatory gates"
+        },
+        {
+          "line": 39,
+          "text": "## ADR 0001 / Phase 4.1 consistency review"
+        },
+        {
+          "line": 47,
+          "text": "## Validation stages and gate-category mapping"
+        },
+        {
+          "line": 61,
+          "text": "## Related records"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-3/phase-3-exit-review.md",
+      "sha256": "47e0a55519b466078374b6fb7fe2298fbf63c24e5ef5f17810cd7ff9e0695326",
+      "lines": 136,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Phase 3 exit review"
+        },
+        {
+          "line": 9,
+          "text": "## Scope, authority and preserved state"
+        },
+        {
+          "line": 17,
+          "text": "## Primary recovery revision: keep the two suites separate"
+        },
+        {
+          "line": 40,
+          "text": "## Earlier results: evidence, not qualification of the latest revision"
+        },
+        {
+          "line": 49,
+          "text": "## Historical performance: cannot qualify the recovery revision"
+        },
+        {
+          "line": 65,
+          "text": "## Failure and incomplete-run disposition"
+        },
+        {
+          "line": 79,
+          "text": "## Reconciled closure and open requirements"
+        },
+        {
+          "line": 87,
+          "text": "## Owner approvals recorded and Phase 5 preparation"
+        },
+        {
+          "line": 95,
+          "text": "## Evidence register"
+        },
+        {
+          "line": 134,
+          "text": "## Preserved reports and authority"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-3/browser-mvp-architecture-baseline.md",
+      "sha256": "bae3009809679225f66e206b881b0ca1fbda2fe5e2ff4d6f31bffbb8d540718c",
+      "lines": 92,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Browser MVP architecture baseline \u2014 approved boundaries"
+        },
+        {
+          "line": 7,
+          "text": "## Binding product decisions and scope"
+        },
+        {
+          "line": 13,
+          "text": "## Approved ownership and trust boundaries"
+        },
+        {
+          "line": 48,
+          "text": "## Command, event and lifecycle rules to freeze"
+        },
+        {
+          "line": 59,
+          "text": "## Storage and private-session rules to freeze"
+        },
+        {
+          "line": 67,
+          "text": "## Distribution and operation rules"
+        },
+        {
+          "line": 73,
+          "text": "## Approved freeze surface and explicit implementation exceptions"
+        },
+        {
+          "line": 90,
+          "text": "## Evidence and authority"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-3/browser-acceptance-gate-ledger.md",
+      "sha256": "1602bc3c72d6c199344a2ba0b3fb1cdba5c2e6d9ebf496e1cd4022dccc10c62a",
+      "lines": 238,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Consolidated browser acceptance-gate ledger"
+        },
+        {
+          "line": 13,
+          "text": "## A. Engine feasibility requirements"
+        },
+        {
+          "line": 41,
+          "text": "## B. Product-owner or access-blocked tests"
+        },
+        {
+          "line": 58,
+          "text": "## C. Final-release validation"
+        },
+        {
+          "line": 73,
+          "text": "## D. Future product implementation requirements"
+        },
+        {
+          "line": 100,
+          "text": "## Historical failures and incomplete runs (not current-requirement totals)"
+        },
+        {
+          "line": 116,
+          "text": "## Crosswalk from the former 13 mixed gates"
+        },
+        {
+          "line": 134,
+          "text": "## Source-requirement coverage"
+        },
+        {
+          "line": 234,
+          "text": "## Decision boundary"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/prototype/wkwebview-feasibility-report.md",
+      "sha256": "93d010e8aef4d51103d050e097f97b0d54ea6d0bec5ab1783668de25e79a2901",
+      "lines": 100,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# WKWebView Native Feasibility Prototype Report"
+        },
+        {
+          "line": 7,
+          "text": "## Executive summary"
+        },
+        {
+          "line": 15,
+          "text": "## Environment and evidence"
+        },
+        {
+          "line": 33,
+          "text": "## Implemented prototype capabilities"
+        },
+        {
+          "line": 50,
+          "text": "## Acceptance-gate status"
+        },
+        {
+          "line": 70,
+          "text": "## Security observations"
+        },
+        {
+          "line": 82,
+          "text": "## Performance observations"
+        },
+        {
+          "line": 94,
+          "text": "## Recommendation"
+        },
+        {
+          "line": 98,
+          "text": "## Distribution and updater review"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/prototype/wkwebview-test-results.md",
+      "sha256": "42ead4565198c71db04fee29d09e9cfc57fdae050bcd7fea7a0756d72bce8da1",
+      "lines": 98,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# WKWebView Prototype Test Results"
+        },
+        {
+          "line": 9,
+          "text": "## Final local/public review"
+        },
+        {
+          "line": 22,
+          "text": "## Earlier per-run records"
+        },
+        {
+          "line": 26,
+          "text": "## Tests actually executed"
+        },
+        {
+          "line": 49,
+          "text": "## Test protocol and run evidence"
+        },
+        {
+          "line": 73,
+          "text": "## Acceptance gate results"
+        },
+        {
+          "line": 91,
+          "text": "## Remaining dependencies and follow-up"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/prototype/wkwebview-limitations.md",
+      "sha256": "35262c8a31e5b6b141f5ec7af47dad69e7c615d944a03bf20d131e99828625ff",
+      "lines": 62,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# WKWebView Prototype Limitations"
+        },
+        {
+          "line": 6,
+          "text": "## Prototype scope limitations"
+        },
+        {
+          "line": 14,
+          "text": "## Isolation guarantees and unknowns"
+        },
+        {
+          "line": 26,
+          "text": "## WebKit/API capability limitations"
+        },
+        {
+          "line": 38,
+          "text": "## Security and distribution limitations"
+        },
+        {
+          "line": 46,
+          "text": "## Compatibility and performance limitations"
+        },
+        {
+          "line": 53,
+          "text": "## Current follow-up and final release validation"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "f992e513ef3d146d535816b9e9a64c5b92d272f3329c35ae38434586e838c7c8",
+      "lines": 65,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Canonical Engineering Baseline"
+        },
+        {
+          "line": 5,
+          "text": "## Canonical documents"
+        },
+        {
+          "line": 17,
+          "text": "## Results and limitations"
+        },
+        {
+          "line": 21,
+          "text": "## Historical sources"
+        },
+        {
+          "line": 27,
+          "text": "## M1 validation remediation \u2014 2026-11-08"
+        },
+        {
+          "line": 31,
+          "text": "## Provider and fixture qualification \u2014 2026-11-08"
+        },
+        {
+          "line": 35,
+          "text": "## Provider trust and runtime gate \u2014 2026-11-08"
+        },
+        {
+          "line": 39,
+          "text": "## Publisher authenticity acquisition \u2014 2026-11-08"
+        },
+        {
+          "line": 43,
+          "text": "## Vendor archive cryptographic verification \u2014 2026-11-08 (latest source checkpoint)"
+        },
+        {
+          "line": 47,
+          "text": "## SQLCipher provider runtime readiness \u2014 2026-11-08"
+        },
+        {
+          "line": 51,
+          "text": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 55,
+          "text": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        },
+        {
+          "line": 59,
+          "text": "## SQLCipher provider adapter \u00b7 Phase 2 design \u2014 2026-11-08"
+        },
+        {
+          "line": 63,
+          "text": "## SQLCipher critical safety contracts \u00b7 Phase 2A \u2014 2026-11-09"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "aaa718c213a68d60e8e574c3b5019a561dc9ffc9619328248e295f38893bfcf4",
+      "lines": 65,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Canonical Source Catalog and Supersession Record"
+        },
+        {
+          "line": 5,
+          "text": "## Canonical maintained set"
+        },
+        {
+          "line": 19,
+          "text": "## Supplied sources preserved verbatim"
+        },
+        {
+          "line": 25,
+          "text": "## ADR/platform/source controls"
+        },
+        {
+          "line": 31,
+          "text": "## Focused remediation sources \u2014 2026-11-08"
+        },
+        {
+          "line": 35,
+          "text": "## Provider and fixture qualification checkpoint \u2014 2026-11-08"
+        },
+        {
+          "line": 39,
+          "text": "## Provider trust/runtime gate \u2014 2026-11-08"
+        },
+        {
+          "line": 43,
+          "text": "## Publisher authenticity evidence acquisition \u2014 2026-11-08"
+        },
+        {
+          "line": 47,
+          "text": "## Vendor archive verification \u2014 2026-11-08 (latest source checkpoint)"
+        },
+        {
+          "line": 51,
+          "text": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 55,
+          "text": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        },
+        {
+          "line": 59,
+          "text": "## SQLCipher provider adapter \u00b7 Phase 2 design \u2014 2026-11-08"
+        },
+        {
+          "line": 63,
+          "text": "## SQLCipher critical safety contracts \u00b7 Phase 2A \u2014 2026-11-09"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+      "sha256": "709b21bc4b9941e545f5cde8e8910deb9fe6a8a1d23a64a61c29dbd991c19182",
+      "lines": 85,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Browser Core Module Architecture"
+        },
+        {
+          "line": 6,
+          "text": "## Authority, scope and design basis"
+        },
+        {
+          "line": 10,
+          "text": "## Proposed module dependencies"
+        },
+        {
+          "line": 38,
+          "text": "## Capability-oriented composition refinement"
+        },
+        {
+          "line": 48,
+          "text": "## Product responsibilities and sequencing"
+        },
+        {
+          "line": 65,
+          "text": "## State, authority and concurrency"
+        },
+        {
+          "line": 73,
+          "text": "## Lifecycle examples and invariants"
+        },
+        {
+          "line": 81,
+          "text": "## Open choices and acceptance"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/browser-core-data-model.md",
+      "sha256": "2d4f31740f98937b089be99b93a151c7416c7439cc1a567464268ef67aea1840",
+      "lines": 79,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Initial Browser Core Data Model"
+        },
+        {
+          "line": 6,
+          "text": "## Scope and versioning"
+        },
+        {
+          "line": 12,
+          "text": "## Runtime-only model"
+        },
+        {
+          "line": 26,
+          "text": "## Application catalog proposal"
+        },
+        {
+          "line": 38,
+          "text": "## Persistent profile database proposal"
+        },
+        {
+          "line": 71,
+          "text": "## Write rules and privacy policy proposals"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+      "sha256": "21d101f7d3fda53ebe9f89e720dddb7fa47de636d333013f246fa27893382d6a",
+      "lines": 119,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Native Host, Core, Engine, UI and Storage Contracts"
+        },
+        {
+          "line": 6,
+          "text": "## Status, version and compatibility"
+        },
+        {
+          "line": 12,
+          "text": "## Ownership context and common envelope"
+        },
+        {
+          "line": 29,
+          "text": "## Boundary A \u2014 Host to Browser Core"
+        },
+        {
+          "line": 41,
+          "text": "## Boundary B \u2014 Core to Engine Adapter"
+        },
+        {
+          "line": 59,
+          "text": "## Boundary C \u2014 Core and Future React Chrome"
+        },
+        {
+          "line": 69,
+          "text": "## Boundary D \u2014 Core to Persistence"
+        },
+        {
+          "line": 77,
+          "text": "## Boundary E \u2014 Future Permission and Transfer Brokers"
+        },
+        {
+          "line": 85,
+          "text": "## Boundary F \u2014 Selected feature providers and lifecycle events"
+        },
+        {
+          "line": 115,
+          "text": "## Error, lifecycle and verification policy"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+      "sha256": "5b42269946ba15871e87924f2369081cca936055e1a78a3ee967b902bd1bd11c",
+      "lines": 57,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Local Persistence Architecture"
+        },
+        {
+          "line": 6,
+          "text": "## Recommendation and alternatives"
+        },
+        {
+          "line": 10,
+          "text": "## Data domains and access"
+        },
+        {
+          "line": 23,
+          "text": "## Connections, transactions and durability"
+        },
+        {
+          "line": 33,
+          "text": "## Private sessions and profile separation"
+        },
+        {
+          "line": 41,
+          "text": "## Protection, encryption and credentials"
+        },
+        {
+          "line": 49,
+          "text": "## Backup, export, deletion and future synchronization"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/migration-and-recovery-strategy.md",
+      "sha256": "8e994108f40dbf286750585dd9e4abfdb1666ab51fea8c6017cfd9c1c146bfb7",
+      "lines": 63,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# Migration, Integrity and Recovery Strategy"
+        },
+        {
+          "line": 6,
+          "text": "## Decision and alternatives"
+        },
+        {
+          "line": 12,
+          "text": "## Open and migration protocol"
+        },
+        {
+          "line": 23,
+          "text": "## Catalog and native resource reconciliation"
+        },
+        {
+          "line": 33,
+          "text": "## Failure handling and acknowledgment"
+        },
+        {
+          "line": 47,
+          "text": "## Content-process, host and session recovery"
+        },
+        {
+          "line": 55,
+          "text": "## Backup, rollback and privacy deletion"
+        },
+        {
+          "line": 61,
+          "text": "## Reversibility and open review"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-register.md",
+      "sha256": "db3b84a90e51e527e0ecb834a4e028d6543b20820527cefdeeef6b28c8683a22",
+      "lines": 574,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Owner Decision and Scope Register"
+        },
+        {
+          "line": 7,
+          "text": "## Source provenance"
+        },
+        {
+          "line": 14,
+          "text": "## Current policy and capability dispositions \u2014 verbatim from current instruction"
+        },
+        {
+          "line": 16,
+          "text": "## 3.2 OP-01 \u2014 Browsing history"
+        },
+        {
+          "line": 34,
+          "text": "## 3.3 OP-02 \u2014 Download metadata"
+        },
+        {
+          "line": 50,
+          "text": "## 3.4 OP-03 \u2014 App-owned snapshots"
+        },
+        {
+          "line": 65,
+          "text": "## 3.5 OP-04 \u2014 Session restoration and recovery"
+        },
+        {
+          "line": 87,
+          "text": "## 3.6 Historical OD17 \u2014 M1 launch capability scope"
+        },
+        {
+          "line": 91,
+          "text": "### Core browsing and navigation"
+        },
+        {
+          "line": 101,
+          "text": "### Browser organization"
+        },
+        {
+          "line": 109,
+          "text": "### Native macOS integration"
+        },
+        {
+          "line": 117,
+          "text": "### Browser security and privacy"
+        },
+        {
+          "line": 125,
+          "text": "### Recovery and reliability"
+        },
+        {
+          "line": 132,
+          "text": "### Permission policy"
+        },
+        {
+          "line": 142,
+          "text": "### M1 launch philosophy"
+        },
+        {
+          "line": 146,
+          "text": "### Explicitly deferred capabilities"
+        },
+        {
+          "line": 154,
+          "text": "### OD17 / historical OD18 clarification"
+        },
+        {
+          "line": 162,
+          "text": "## 3.7 Historical decision namespace"
+        },
+        {
+          "line": 179,
+          "text": "## Engineering qualifications"
+        },
+        {
+          "line": 183,
+          "text": "## Preserved OD-R01\u2013OD-R20"
+        },
+        {
+          "line": 185,
+          "text": "### Verbatim normative owner entries"
+        },
+        {
+          "line": 187,
+          "text": "### OD-R01 \u2014 Swift 6 Browser Core Runtime"
+        },
+        {
+          "line": 202,
+          "text": "### OD-R02 \u2014 Same-Process Native Host and Browser Core Boundary"
+        },
+        {
+          "line": 217,
+          "text": "### OD-R03 \u2014 Four-Target Package Structure"
+        },
+        {
+          "line": 237,
+          "text": "### OD-R04 \u2014 SQLite Persistence Adapter and Offline-First Operation"
+        },
+        {
+          "line": 253,
+          "text": "### OD-R05 \u2014 Database Topology"
+        },
+        {
+          "line": 271,
+          "text": "### OD-R06 \u2014 Private Browsing Storage"
+        },
+        {
+          "line": 287,
+          "text": "### OD-R07 \u2014 Persistent Profile Encryption"
+        },
+        {
+          "line": 303,
+          "text": "### OD-R08 \u2014 Keychain and Independent Recovery"
+        },
+        {
+          "line": 319,
+          "text": "### OD-R09 \u2014 Profile Unlock and Authentication Policy"
+        },
+        {
+          "line": 335,
+          "text": "### OD-R10 \u2014 WebKit Website-Data Store Architecture"
+        },
+        {
+          "line": 351,
+          "text": "### OD-R11 \u2014 Website Permissions and Authorization"
+        },
+        {
+          "line": 369,
+          "text": "### OD-R12 \u2014 History Retention and Deletion"
+        },
+        {
+          "line": 389,
+          "text": "### OD-R13 \u2014 Downloads Storage and Lifecycle Management"
+        },
+        {
+          "line": 409,
+          "text": "### OD-R14 \u2014 Encrypted Portable Backup, Restore and Migration"
+        },
+        {
+          "line": 431,
+          "text": "### OD-R15 \u2014 Static Capability Composition"
+        },
+        {
+          "line": 449,
+          "text": "### OD-R16 \u2014 Typed Capability Contracts and Events"
+        },
+        {
+          "line": 466,
+          "text": "### OD-R17 \u2014 Deleted-Data Reconciliation Across Backups"
+        },
+        {
+          "line": 482,
+          "text": "### OD-R18 \u2014 Profile Lock Policy"
+        },
+        {
+          "line": 503,
+          "text": "### OD-R19 \u2014 Recovery-Material Custody and Loss"
+        },
+        {
+          "line": 519,
+          "text": "### OD-R20 \u2014 Download and Backup Policy"
+        },
+        {
+          "line": 538,
+          "text": "## WS01.1 historical crosswalk (historical meanings preserved)"
+        },
+        {
+          "line": 540,
+          "text": "## 26. Historical decision crosswalk"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-packet.md",
+      "sha256": "3597f2964b8004908e902c178686e3e4a4ee11a3929d7b31d3f008c3448024f0",
+      "lines": 123,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Owner Decision Packet \u2014 Historical Review Record"
+        },
+        {
+          "line": 7,
+          "text": "## Read and decide"
+        },
+        {
+          "line": 16,
+          "text": "## Settled authority and non-negotiable controls"
+        },
+        {
+          "line": 26,
+          "text": "## Consolidated decision matrix"
+        },
+        {
+          "line": 53,
+          "text": "## Dependency and approval groups"
+        },
+        {
+          "line": 74,
+          "text": "## Security and privacy enablement gates"
+        },
+        {
+          "line": 89,
+          "text": "## Clarifications, contradictions and missing inputs"
+        },
+        {
+          "line": 101,
+          "text": "## Owner disposition recording rules"
+        },
+        {
+          "line": 117,
+          "text": "## Review baseline, deliverables and verification"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+      "sha256": "e846fadee7694ef575a2f45f98bc4e0d280dd70fa7e4cbcd9a61f8fcd173afc3",
+      "lines": 1328,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Developer Specification v1.2 \u2014 Proposed"
+        },
+        {
+          "line": 3,
+          "text": "## 1. Document status, scope and authorization boundary"
+        },
+        {
+          "line": 13,
+          "text": "## 2. Product principles and M1 goals"
+        },
+        {
+          "line": 38,
+          "text": "## 3. Platform baseline and macOS requirements"
+        },
+        {
+          "line": 65,
+          "text": "## 4. System architecture and ownership boundaries"
+        },
+        {
+          "line": 108,
+          "text": "## 5. Swift 6 Browser Core runtime"
+        },
+        {
+          "line": 128,
+          "text": "## 6. Native Host and Browser Core boundary"
+        },
+        {
+          "line": 162,
+          "text": "## 7. Four-target package architecture"
+        },
+        {
+          "line": 187,
+          "text": "## 8. Browser engine strategy and WebKit integration boundary"
+        },
+        {
+          "line": 210,
+          "text": "## 9. Database topology and persistence contracts"
+        },
+        {
+          "line": 245,
+          "text": "## 10. Profile creation, isolation, unlock, lock and deletion lifecycle"
+        },
+        {
+          "line": 277,
+          "text": "## 11. Encryption, Keychain, recovery material and key lifecycle"
+        },
+        {
+          "line": 281,
+          "text": "### 11.1 Normative coverage matrix \u2014 R1"
+        },
+        {
+          "line": 321,
+          "text": "### 11.2 Key lifecycle requirements"
+        },
+        {
+          "line": 338,
+          "text": "## 12. WebKit website-data storage and protection"
+        },
+        {
+          "line": 358,
+          "text": "## 13. Private browsing lifecycle and cleanup"
+        },
+        {
+          "line": 380,
+          "text": "## 14. Website permissions and authorization"
+        },
+        {
+          "line": 401,
+          "text": "## 15. History, retention and deletion"
+        },
+        {
+          "line": 424,
+          "text": "## 16. Downloads and filesystem lifecycle"
+        },
+        {
+          "line": 454,
+          "text": "## 17. Backup, restore, migration and deletion reconciliation"
+        },
+        {
+          "line": 501,
+          "text": "## 18. Static capability composition and typed capability contracts"
+        },
+        {
+          "line": 528,
+          "text": "## 19. Events, cancellation, sequencing and profile-context propagation"
+        },
+        {
+          "line": 550,
+          "text": "## 20. Failure handling and cross-component consistency"
+        },
+        {
+          "line": 571,
+          "text": "## 21. Security and privacy threat model requirements"
+        },
+        {
+          "line": 594,
+          "text": "## 22. Data lifecycle requirements"
+        },
+        {
+          "line": 613,
+          "text": "## 23. Experiments and validation plan"
+        },
+        {
+          "line": 643,
+          "text": "## 24. M1 acceptance criteria and requirement traceability \u2014 R3"
+        },
+        {
+          "line": 645,
+          "text": "### 24.1 Acceptance identifiers"
+        },
+        {
+          "line": 665,
+          "text": "### 24.2 Requirement-to-validation matrix"
+        },
+        {
+          "line": 698,
+          "text": "### 24.3 REQ-22 \u2014 WebKit Website-Data Protection, Deletion and Backup Qualification"
+        },
+        {
+          "line": 728,
+          "text": "## 25. Owner-decided policies and remaining engineering dependencies"
+        },
+        {
+          "line": 743,
+          "text": "## 26. Historical decision crosswalk"
+        },
+        {
+          "line": 774,
+          "text": "## 27. OD-R01\u2013OD-R20 traceability index"
+        },
+        {
+          "line": 801,
+          "text": "### Verbatim normative owner entries"
+        },
+        {
+          "line": 803,
+          "text": "### OD-R01 \u2014 Swift 6 Browser Core Runtime"
+        },
+        {
+          "line": 818,
+          "text": "### OD-R02 \u2014 Same-Process Native Host and Browser Core Boundary"
+        },
+        {
+          "line": 833,
+          "text": "### OD-R03 \u2014 Four-Target Package Structure"
+        },
+        {
+          "line": 853,
+          "text": "### OD-R04 \u2014 SQLite Persistence Adapter and Offline-First Operation"
+        },
+        {
+          "line": 869,
+          "text": "### OD-R05 \u2014 Database Topology"
+        },
+        {
+          "line": 887,
+          "text": "### OD-R06 \u2014 Private Browsing Storage"
+        },
+        {
+          "line": 903,
+          "text": "### OD-R07 \u2014 Persistent Profile Encryption"
+        },
+        {
+          "line": 919,
+          "text": "### OD-R08 \u2014 Keychain and Independent Recovery"
+        },
+        {
+          "line": 935,
+          "text": "### OD-R09 \u2014 Profile Unlock and Authentication Policy"
+        },
+        {
+          "line": 951,
+          "text": "### OD-R10 \u2014 WebKit Website-Data Store Architecture"
+        },
+        {
+          "line": 967,
+          "text": "### OD-R11 \u2014 Website Permissions and Authorization"
+        },
+        {
+          "line": 985,
+          "text": "### OD-R12 \u2014 History Retention and Deletion"
+        },
+        {
+          "line": 1005,
+          "text": "### OD-R13 \u2014 Downloads Storage and Lifecycle Management"
+        },
+        {
+          "line": 1025,
+          "text": "### OD-R14 \u2014 Encrypted Portable Backup, Restore and Migration"
+        },
+        {
+          "line": 1047,
+          "text": "### OD-R15 \u2014 Static Capability Composition"
+        },
+        {
+          "line": 1065,
+          "text": "### OD-R16 \u2014 Typed Capability Contracts and Events"
+        },
+        {
+          "line": 1082,
+          "text": "### OD-R17 \u2014 Deleted-Data Reconciliation Across Backups"
+        },
+        {
+          "line": 1098,
+          "text": "### OD-R18 \u2014 Profile Lock Policy"
+        },
+        {
+          "line": 1119,
+          "text": "### OD-R19 \u2014 Recovery-Material Custody and Loss"
+        },
+        {
+          "line": 1135,
+          "text": "### OD-R20 \u2014 Download and Backup Policy"
+        },
+        {
+          "line": 1152,
+          "text": "## 28. F01\u2013F17 audit finding traceability"
+        },
+        {
+          "line": 1176,
+          "text": "## 29. Open technical specifications and implementation dependencies"
+        },
+        {
+          "line": 1209,
+          "text": "## 30. Current authorization and closeout"
+        },
+        {
+          "line": 1217,
+          "text": "## 31. Current owner-selected launch capability coverage"
+        },
+        {
+          "line": 1250,
+          "text": "### Proposed functional extension \u2014 owner review required, no new IDs assigned"
+        },
+        {
+          "line": 1254,
+          "text": "## 32. Engineering disposition register \u2014 SPEC-01\u2013SPEC-16"
+        },
+        {
+          "line": 1280,
+          "text": "## 33. Owner \u2192 capability \u2192 specification \u2192 requirement \u2192 validation \u2192 evidence \u2192 implementation"
+        },
+        {
+          "line": 1303,
+          "text": "## 34. Evidence-backed website permission support inventory"
+        },
+        {
+          "line": 1324,
+          "text": "## 35. Focused encryption/recovery remediation \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+      "sha256": "f9bbcc42121a22c4d30f160397bb47a0f3c0a5e6376182ecf0c34eba47be747f",
+      "lines": 786,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Validation Plan v1.2 \u2014 Proposed"
+        },
+        {
+          "line": 3,
+          "text": "## 1. Current baseline and scope"
+        },
+        {
+          "line": 7,
+          "text": "## 2. Scope and authorization boundary"
+        },
+        {
+          "line": 13,
+          "text": "### Scope"
+        },
+        {
+          "line": 28,
+          "text": "### Execution boundary"
+        },
+        {
+          "line": 32,
+          "text": "### Source and evidence qualification"
+        },
+        {
+          "line": 37,
+          "text": "### ADR status preservation"
+        },
+        {
+          "line": 49,
+          "text": "## 3. Experiment inventory"
+        },
+        {
+          "line": 64,
+          "text": "### Common prerequisites"
+        },
+        {
+          "line": 76,
+          "text": "### Common macOS and hardware policy"
+        },
+        {
+          "line": 88,
+          "text": "## 4. EXP-01 through EXP-08 detailed charters"
+        },
+        {
+          "line": 92,
+          "text": "### EXP-01 \u2014 WebKit persistent profile isolation"
+        },
+        {
+          "line": 135,
+          "text": "### EXP-02 \u2014 Private website-data cleanup"
+        },
+        {
+          "line": 178,
+          "text": "### EXP-03 \u2014 SQLite encryption, WAL and temporary-file protection"
+        },
+        {
+          "line": 221,
+          "text": "### EXP-04 \u2014 Keychain and independent offline recovery"
+        },
+        {
+          "line": 264,
+          "text": "### EXP-05 \u2014 Profile locking and key lifecycle"
+        },
+        {
+          "line": 307,
+          "text": "### EXP-06 \u2014 WebKit download lifecycle"
+        },
+        {
+          "line": 351,
+          "text": "### EXP-07 \u2014 Consistent encrypted backup and cross-Mac restore"
+        },
+        {
+          "line": 396,
+          "text": "### EXP-08 \u2014 Deleted-data reconciliation"
+        },
+        {
+          "line": 440,
+          "text": "## 5. Consolidated validation matrix"
+        },
+        {
+          "line": 457,
+          "text": "## 6. Dependency graph and execution sequence"
+        },
+        {
+          "line": 493,
+          "text": "### Critical path"
+        },
+        {
+          "line": 504,
+          "text": "### Recommended sequence and parallelism"
+        },
+        {
+          "line": 514,
+          "text": "### Blocking conditions"
+        },
+        {
+          "line": 520,
+          "text": "## 7. Owner-decided OP-01\u2013OP-04 dependencies"
+        },
+        {
+          "line": 527,
+          "text": "## 8. Evidence and reporting requirements"
+        },
+        {
+          "line": 529,
+          "text": "### Future run record"
+        },
+        {
+          "line": 548,
+          "text": "### Evidence protection"
+        },
+        {
+          "line": 557,
+          "text": "### Result semantics"
+        },
+        {
+          "line": 567,
+          "text": "### Evidence required before readiness review"
+        },
+        {
+          "line": 578,
+          "text": "## 9. Failure handling and escalation"
+        },
+        {
+          "line": 606,
+          "text": "## 10. Requirement-to-validation traceability"
+        },
+        {
+          "line": 608,
+          "text": "### 10.1 REQ-01\u2013REQ-22 and acceptance criteria"
+        },
+        {
+          "line": 637,
+          "text": "### 10.2 SPEC-01\u2013SPEC-16"
+        },
+        {
+          "line": 658,
+          "text": "### 10.3 OD-R01\u2013OD-R20"
+        },
+        {
+          "line": 683,
+          "text": "### 10.4 WS01.1 and historical crosswalk"
+        },
+        {
+          "line": 712,
+          "text": "### 10.5 F01\u2013F17"
+        },
+        {
+          "line": 736,
+          "text": "## 11. Readiness assessment"
+        },
+        {
+          "line": 751,
+          "text": "## 12. Open questions and remaining gaps"
+        },
+        {
+          "line": 772,
+          "text": "## 13. Execution outcomes and authorization"
+        },
+        {
+          "line": 780,
+          "text": "## Remediation procedure bindings \u2014 2026-11-08"
+        },
+        {
+          "line": 784,
+          "text": "## SQLCipher provider runtime readiness \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+      "sha256": "3498aeab5fcac840ca08f7f47cf94395a93d30a9a568b5f5c4b9b9c6cdc712ae",
+      "lines": 438,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Case-Level Traceability Matrix v1.3 \u2014 Proposed"
+        },
+        {
+          "line": 5,
+          "text": "## Recalculated inventory and outcomes"
+        },
+        {
+          "line": 21,
+          "text": "## Original conventions"
+        },
+        {
+          "line": 23,
+          "text": "## Matrix conventions"
+        },
+        {
+          "line": 60,
+          "text": "## Consolidated individual rows"
+        },
+        {
+          "line": 230,
+          "text": "## Per-row reasons"
+        },
+        {
+          "line": 400,
+          "text": "## REQ-21: retained Stage C qualification reference"
+        },
+        {
+          "line": 420,
+          "text": "## SVC-05 / RECOVERY-009 clarification"
+        },
+        {
+          "line": 432,
+          "text": "## Current consistency record"
+        },
+        {
+          "line": 436,
+          "text": "## Dated validation remediation \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+      "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af",
+      "lines": 115,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Persistent-Profile Encryption Specification"
+        },
+        {
+          "line": 5,
+          "text": "## 1. Closure boundary and sources"
+        },
+        {
+          "line": 19,
+          "text": "## 2. Threat model"
+        },
+        {
+          "line": 29,
+          "text": "## 3. Location and classification rules"
+        },
+        {
+          "line": 58,
+          "text": "## 4. Cryptographic construction and provider qualification"
+        },
+        {
+          "line": 60,
+          "text": "### Database suite"
+        },
+        {
+          "line": 68,
+          "text": "### Envelopes, managed blobs and archives"
+        },
+        {
+          "line": 78,
+          "text": "## 5. SQLite artifact and I/O contract"
+        },
+        {
+          "line": 93,
+          "text": "## 6. Rotation, deletion and OS limitations"
+        },
+        {
+          "line": 99,
+          "text": "## 7. WebKit protection boundary \u2014 SPEC-08 / REQ-22"
+        },
+        {
+          "line": 109,
+          "text": "## 8. Validation and remaining gates"
+        },
+        {
+          "line": 113,
+          "text": "## 9. Existing package and authority boundaries"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+      "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c",
+      "lines": 156,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Keychain and Independent Recovery Specification"
+        },
+        {
+          "line": 5,
+          "text": "## 1. Key hierarchy and trust limits"
+        },
+        {
+          "line": 26,
+          "text": "## 2. Key envelope v1 \u2014 exact proposed serialization"
+        },
+        {
+          "line": 59,
+          "text": "## 3. Keychain item and native authentication contract"
+        },
+        {
+          "line": 69,
+          "text": "## 4. Independent recovery material and custody"
+        },
+        {
+          "line": 71,
+          "text": "### Printable kit"
+        },
+        {
+          "line": 81,
+          "text": "### Exportable encrypted recovery file"
+        },
+        {
+          "line": 91,
+          "text": "### Offline recovery sequence"
+        },
+        {
+          "line": 103,
+          "text": "## 5. Profile lock and key lifecycle"
+        },
+        {
+          "line": 125,
+          "text": "## 6. Rotation and recovery-version lifecycle"
+        },
+        {
+          "line": 134,
+          "text": "## 7. Loss and failure matrix"
+        },
+        {
+          "line": 154,
+          "text": "## 8. Qualification boundary"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-exp-01-cleanup-diagnosis.md",
+      "sha256": "4bb9bb402fdce6a1a838670bdbaa64237c4434cc6c14f1ef49d105e3b3a7f75e",
+      "lines": 81,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# EXP-01 Cleanup Diagnosis \u2014 Remediation 2026-11-08"
+        },
+        {
+          "line": 5,
+          "text": "## 1. Verified baseline and source identity"
+        },
+        {
+          "line": 13,
+          "text": "## 2. First failure: retained-reference analysis"
+        },
+        {
+          "line": 26,
+          "text": "## 3. Separate cleanup-only crash"
+        },
+        {
+          "line": 42,
+          "text": "### Bounded unified-log corroboration"
+        },
+        {
+          "line": 48,
+          "text": "## 4. Store-by-store current classification"
+        },
+        {
+          "line": 63,
+          "text": "## 5. Bounded follow-up disposition"
+        },
+        {
+          "line": 73,
+          "text": "## 6. Conclusion and proposed engineering tasks"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+      "sha256": "62a511c643a7f72c46cad73eb2556e3db99bf7e98393ad0e8952e88ea2285021",
+      "lines": 93,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Validation Readiness and Downstream Remediation"
+        },
+        {
+          "line": 5,
+          "text": "## 1. EXP-03 prerequisite checklist"
+        },
+        {
+          "line": 22,
+          "text": "## 2. EXP-04 prerequisite checklist"
+        },
+        {
+          "line": 42,
+          "text": "## 3. Downstream dependencies"
+        },
+        {
+          "line": 54,
+          "text": "## 4. Existing traceability retained"
+        },
+        {
+          "line": 67,
+          "text": "## 5. Next bounded engineering checkpoint"
+        },
+        {
+          "line": 71,
+          "text": "## Subsequent provider/fixture checkpoint \u2014 2026-11-08"
+        },
+        {
+          "line": 75,
+          "text": "## Subsequent provider trust/runtime gate \u2014 2026-11-08"
+        },
+        {
+          "line": 79,
+          "text": "## Publisher authenticity evidence \u2014 2026-11-08"
+        },
+        {
+          "line": 83,
+          "text": "## Vendor archive verification \u2014 2026-11-08"
+        },
+        {
+          "line": 87,
+          "text": "## SQLCipher provider runtime readiness \u2014 2026-11-08"
+        },
+        {
+          "line": 91,
+          "text": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+      "sha256": "2d32164ddc3082dfa8b6c27c0e3ead5e95a43de16ff0a62a70dd365464a0e279",
+      "lines": 211,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Provider and Fixture Qualification \u2014 v1.0"
+        },
+        {
+          "line": 5,
+          "text": "## 1. Baseline, authority and source inventory"
+        },
+        {
+          "line": 20,
+          "text": "## 2. Workstream A \u2014 candidate provenance/build/license"
+        },
+        {
+          "line": 22,
+          "text": "### Exact candidate record"
+        },
+        {
+          "line": 42,
+          "text": "### License and security assessment"
+        },
+        {
+          "line": 50,
+          "text": "### Isolated source build and reproducibility"
+        },
+        {
+          "line": 66,
+          "text": "### Database fixture inventory and expected observations"
+        },
+        {
+          "line": 89,
+          "text": "### Key-binding interface review"
+        },
+        {
+          "line": 99,
+          "text": "## 3. Workstream B \u2014 Keychain and recovery fixtures"
+        },
+        {
+          "line": 101,
+          "text": "### Native Keychain feasibility"
+        },
+        {
+          "line": 111,
+          "text": "### Independent recovery fixtures actually executed"
+        },
+        {
+          "line": 128,
+          "text": "### Offline recovery minimum reproducible setup \u2014 prepared only"
+        },
+        {
+          "line": 132,
+          "text": "## 4. Workstream C \u2014 original stores and observability"
+        },
+        {
+          "line": 136,
+          "text": "### Noncreating registry feasibility"
+        },
+        {
+          "line": 142,
+          "text": "### Future per-store lifecycle observability design \u2014 not executed"
+        },
+        {
+          "line": 162,
+          "text": "## 5. Consolidated status and existing traceability"
+        },
+        {
+          "line": 183,
+          "text": "## 6. Commands, artifacts and limits"
+        },
+        {
+          "line": 194,
+          "text": "## 7. Next bounded task and authorization checkpoint"
+        },
+        {
+          "line": 201,
+          "text": "## 8. Checkpoint completion and remaining boundaries"
+        },
+        {
+          "line": 209,
+          "text": "## 9. Subsequent provider trust/runtime gate \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md",
+      "sha256": "fd0102195357f562c26e660919303b50c89e4a9deb3aa3371a6494145a028c9d",
+      "lines": 93,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 SQLCipher provider runtime readiness"
+        },
+        {
+          "line": 7,
+          "text": "## Candidate freeze"
+        },
+        {
+          "line": 23,
+          "text": "## Key binding and ownership"
+        },
+        {
+          "line": 36,
+          "text": "## Synthetic matrix and evidence"
+        },
+        {
+          "line": 51,
+          "text": "## Prerequisite assessment"
+        },
+        {
+          "line": 70,
+          "text": "## Work before runtime authorization"
+        },
+        {
+          "line": 87,
+          "text": "## SQLCipher worker and key-binding design \u2014 2026-11-08"
+        },
+        {
+          "line": 91,
+          "text": "## Isolated SQLCipher worker implementation \u00b7 Phase 1 \u2014 2026-11-08"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2-pqr-crosswalk.md",
+      "sha256": "1a2ff5e329df200fabea530ddaee7f3974199902a740fb042ab09099d4f1c95c",
+      "lines": 81,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 SQLCipher Phase 2 PQR crosswalk"
+        },
+        {
+          "line": 7,
+          "text": "## Interpretation and common prerequisites"
+        },
+        {
+          "line": 17,
+          "text": "## Consolidated case routes"
+        },
+        {
+          "line": 72,
+          "text": "## Mapping reconciliation and coverage limits"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-critical-safety-contracts-phase2a.md",
+      "sha256": "b95f29e076137ec309fd3310459ade53197c42737ce51642daffa1a20652d79e",
+      "lines": 86,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 SQLCipher critical safety contracts \u00b7 Phase 2A"
+        },
+        {
+          "line": 7,
+          "text": "## 1. Contract package and status"
+        },
+        {
+          "line": 28,
+          "text": "## 2. Proposed architecture and reason for the refinement"
+        },
+        {
+          "line": 36,
+          "text": "## 3. Frozen proposed invariants"
+        },
+        {
+          "line": 59,
+          "text": "## 4. Exact owner decision still required"
+        },
+        {
+          "line": 65,
+          "text": "## 5. Explicit assumptions and evidence gaps"
+        },
+        {
+          "line": 80,
+          "text": "## 6. Preservation and authorization"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2a-readiness-matrix.md",
+      "sha256": "e1cb8fc49855a71186a2ece6daf681cd67f352e79ee9b122679bb9b35b6ba467",
+      "lines": 105,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# M1 Phase 2A dependency and implementation-readiness matrix"
+        },
+        {
+          "line": 5,
+          "text": "## 1. Gate assessment"
+        },
+        {
+          "line": 20,
+          "text": "## 2. Dependency graph"
+        },
+        {
+          "line": 48,
+          "text": "## 3. Exact freeze and execution prerequisites"
+        },
+        {
+          "line": 63,
+          "text": "## 4. Smallest safe next milestone: M2A-F0 (proposed)"
+        },
+        {
+          "line": 81,
+          "text": "## 5. PQR and historical traceability preservation"
+        },
+        {
+          "line": 99,
+          "text": "## 6. Final readiness verdict"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/reports/EXP-01.md",
+      "sha256": "caa3e08598950b26618911396c6e1b6722eff3b92873668ae3e622f67d40c01f",
+      "lines": 18,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# EXP-01 \u2014 Evidence report"
+        },
+        {
+          "line": 16,
+          "text": "## Observation precision"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/reports/EXP-02.md",
+      "sha256": "2130c6220f6fa5a5d118d96d17e91f073600c564271f20106a3d18c5c84e06af",
+      "lines": 18,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# EXP-02 \u2014 Evidence report"
+        },
+        {
+          "line": 16,
+          "text": "## Observation precision"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/reports/EXP-03.md",
+      "sha256": "a744b7fff06726b41c5829eef12167bab8aa86db3218ce4c234882393fe6318b",
+      "lines": 14,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# EXP-03 \u2014 Evidence report"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/reports/EXP-04.md",
+      "sha256": "304c2ef70652360b8e58c41539383ae67690aa404d3d9b3df9ca1cbfaf59ab31",
+      "lines": 14,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# EXP-04 \u2014 Evidence report"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/reports/EXP-05.md",
+      "sha256": "11dbac26876116185e240ca7bcce43968953a7840177fdba5d53b1b3edf4b9fa",
+      "lines": 14,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# EXP-05 \u2014 Evidence report"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T094414Z-m1-consolidated-closeout/reports/EXP-07.md",
+      "sha256": "29acddd4c32908f0bee24ddd6617d812fedf2e9edc7768b9d7f1a2b9e95dc03f",
+      "lines": 14,
+      "headings": [
+        {
+          "line": 1,
+          "text": "# EXP-07 \u2014 Evidence report"
+        }
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/synthetic-test-matrix.json",
+      "sha256": "6934307144ed869aa88b8c631833a57e677ed10ae067a49ea6ea6f678ba4b0b3",
+      "lines": 3372,
+      "headings": []
+    }
+  ],
+  "M2_inventory": "No reports/M2 directory or executed M2 qualification report exists in this baseline; M2/M5/M6/M8 obligations are in Phase5 milestone plans, not assumed complete.",
+  "method": "Current static text/line inspection and preserved prior-review hashes where applicable; no runtime/build"
+}

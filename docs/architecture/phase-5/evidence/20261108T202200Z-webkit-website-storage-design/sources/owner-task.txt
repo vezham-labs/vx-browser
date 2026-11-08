@@ -1,0 +1,57 @@
+# Codex Task: Vezham Browser — WebKit-Managed Website Storage Architecture
+
+## Objective
+
+Define and integrate the architecture for engine-managed website storage in Vezham Browser. WebKit owns website data; Vezham owns browser policy, profile identity, lifecycle coordination and Vezham-specific persistence.
+
+This is a documentation and design task only.
+
+## Repository
+
+`vezham-labs/vx-browser`
+
+## Required work
+
+1. Inspect the current architecture, ADRs, owner decisions, Browser Core/Ports/Persistence contracts, WebKit evaluation and M1/M2 qualification documents before editing.
+2. Produce a WebKit website-storage architecture document covering:
+   - Component ownership and trust boundaries.
+   - Persistent profile mapping to stable `WKWebsiteDataStore` identifiers.
+   - Private-session isolation using nonpersistent data stores.
+   - Store assignment before `WKWebView` construction.
+   - Profile switching, locking, shutdown, crash recovery and deletion lifecycle.
+   - Website-data deletion versus complete data-store removal.
+   - Backup, restore, migration and failure behavior.
+   - Logging, permissions and privacy requirements.
+   - Unsupported guarantees and unresolved assumptions.
+3. Produce an engine qualification plan with test IDs, fixtures, setup, assertions, failure injection, evidence requirements and pass/fail/inconclusive criteria for:
+   - Store assignment and default-store prevention.
+   - Persistent profile isolation and relaunch.
+   - Private-session isolation and cleanup.
+   - Concurrent profiles and profile switching.
+   - Crash and interrupted lifecycle recovery.
+   - Data deletion and store-removal failures.
+   - Missing or inconsistent profile-to-store mappings.
+   - Minimum macOS compatibility.
+4. Map the new requirements to existing architecture contracts, owner decisions, ADRs, experiments and PQR cases. Preserve existing identifiers and historical records.
+5. Explicitly distinguish documented Apple API behavior, source-verified behavior, design assumptions and behavior requiring runtime qualification.
+6. Review the SQLCipher workstream's applicability to Vezham-owned persistence only. Document how engine-managed website storage changes its scope; do not silently close or rewrite existing decisions.
+
+## Constraints
+
+- Do not implement production code.
+- Do not change dependencies, ADR status, owner decisions or security requirements.
+- Do not run SQLCipher, open or create databases, create encrypted fixtures, or execute provider/PQR runtime tests.
+- Do not access Keychain or WebKit at runtime.
+- Do not claim WebKit website data is encrypted using Vezham's per-profile keys.
+- Do not claim secure erasure, crash-safe recovery, profile isolation or private-data nonpersistence without appropriate evidence.
+- Preserve all existing tracked files and append-only records except for explicitly required, reviewed documentation updates.
+
+## Deliverables
+
+- Architecture document.
+- Qualification plan and traceability matrix.
+- Updated canonical indexes only where necessary.
+- Preservation audit and non-execution record.
+- List of unresolved product/security decisions and the recommended next milestone.
+
+Stop after documentation and static consistency checks. Report exact changed files, evidence paths, test outcomes and any blockers. Do not commit or push unless separately instructed.
