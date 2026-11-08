@@ -1,0 +1,11 @@
+{
+  "checked_utc_date": "2026-11-08",
+  "purpose": "Primary API contracts read via web; candidate-specific assertions grounded in retained pinned source, not current upstream defaults",
+  "urls": [
+    "https://sqlite.org/c3ref/open.html",
+    "https://sqlite.org/c3ref/close.html",
+    "https://sqlite.org/vfs.html",
+    "https://sqlite.org/c3ref/shm_lock.html",
+    "https://www.zetetic.net/sqlcipher/sqlcipher-api/"
+  ]
+}

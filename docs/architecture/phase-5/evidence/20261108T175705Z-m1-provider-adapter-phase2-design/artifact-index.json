@@ -1,0 +1,93 @@
+{
+  "purpose": "Integrity inventory for design review artifacts only; not runtime evidence",
+  "reports": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-adapter-phase2-design.md",
+      "sha256": "861b0be887c8b4184d8d13dee7fb6a82b74ee1f2352b0b3d00f26772ebf6cd90",
+      "line_count": 242
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2-implementation-plan.md",
+      "sha256": "0770a6077e3abcab3cb80a02458e6f2b8838bcdd5d9b977f5cd14cc341fcd2e3",
+      "line_count": 132
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2-pqr-crosswalk.md",
+      "sha256": "1a2ff5e329df200fabea530ddaee7f3974199902a740fb042ab09099d4f1c95c",
+      "line_count": 81
+    }
+  ],
+  "appended_indexes": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "2a5954c7d47dde336cfcdc68c366b086c26caaec2fd438a7df00e5e1b877f440"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "1e764cad5b9d216e51c27ed6dd0b70928ba16f80c526d3eb8e8f8d8a4e9e6711"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "README.md",
+      "bytes": 2432,
+      "sha256": "e55e8a52e9112c1657534e6fe411f30c3f260885fae55c44c3b81cc0a45127a1"
+    },
+    {
+      "path": "baseline.json",
+      "bytes": 235576,
+      "sha256": "d45afa887d9843a59e69ab07156541250a83e42515ec279502f0ca41cc2d24c0"
+    },
+    {
+      "path": "changed-files.json",
+      "bytes": 2535,
+      "sha256": "382beb36e7b057dc7f2c3f4f37b7260edf02c144a622aafcf12f9ef14418ab06"
+    },
+    {
+      "path": "design-pqr-crosswalk.json",
+      "bytes": 258667,
+      "sha256": "0e65ffc5711f3a443ef7f2a5245c1ede6255e084a04fbfe36cb0d9b608c66e4b"
+    },
+    {
+      "path": "design-traceability.json",
+      "bytes": 4022,
+      "sha256": "98125ad153c6a6e917851e11ee7def7c3068732832efd6f5c17c12783ab02cf3"
+    },
+    {
+      "path": "results/baseline-reconciliation.json",
+      "bytes": 30295,
+      "sha256": "0007c0e17ad7940bdf32edc8d07159dde849b0b021d3a31ead65df9815da597e"
+    },
+    {
+      "path": "results/non-execution.json",
+      "bytes": 926,
+      "sha256": "09092b57a3c24eb105c608ee3ed03c984d75b9dac2c5d760698dae0fa5d350af"
+    },
+    {
+      "path": "results/preservation-audit.json",
+      "bytes": 4178,
+      "sha256": "d0120b719aefcc8d58906f635da979246328e67bfdca317229d795d2d1d0cb28"
+    },
+    {
+      "path": "sources/input-inventory.json",
+      "bytes": 52165,
+      "sha256": "6fee204600360eea1b3d435984a5f174eaf2f028ec40c5ab7a9c98505c2184cb"
+    },
+    {
+      "path": "sources/official-api-references.json",
+      "bytes": 425,
+      "sha256": "a0459faead83a5a954362de89e068a2d0770008fc88ecc2c815190ac0d134f77"
+    },
+    {
+      "path": "sources/owner-task.txt",
+      "bytes": 9679,
+      "sha256": "5ae3dde7d1e8c7d290d11dca618d68592dc709a873777632e45f20fd26edbe42"
+    },
+    {
+      "path": "sources/pinned-source-excerpts.json",
+      "bytes": 22445,
+      "sha256": "0e452929a8ada00cc1c67d29a9f679c686ea95f3c1b2e0db18560ebb93aefbd1"
+    }
+  ],
+  "self_hash_policy": "This index excludes itself and SHA256SUMS; SHA256SUMS includes this index and excludes only itself."
+}

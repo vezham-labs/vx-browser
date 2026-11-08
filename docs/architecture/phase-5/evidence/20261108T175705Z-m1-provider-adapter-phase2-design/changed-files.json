@@ -1,0 +1,36 @@
+{
+  "created": [
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/README.md",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/SHA256SUMS",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/artifact-index.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/baseline.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/changed-files.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/design-pqr-crosswalk.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/design-traceability.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/results/baseline-reconciliation.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/results/non-execution.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/results/preservation-audit.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/sources/input-inventory.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/sources/official-api-references.json",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/sources/owner-task.txt",
+    "docs/architecture/phase-5/evidence/20261108T175705Z-m1-provider-adapter-phase2-design/sources/pinned-source-excerpts.json",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2-implementation-plan.md",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2-pqr-crosswalk.md",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-adapter-phase2-design.md"
+  ],
+  "modified": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "change": "Append-only reference to Phase 2 design, implementation plan, 50-case crosswalk and evidence"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "change": "Append-only reference to Phase 2 design, implementation plan, 50-case crosswalk and evidence"
+    }
+  ],
+  "deleted": [],
+  "source_or_configuration_changes": [],
+  "staged_committed_pushed": false,
+  "baseline_HEAD": "384f200f7cda567d6782df46aea322faeab54fb7",
+  "client_completion_date": "2026-11-09"
+}

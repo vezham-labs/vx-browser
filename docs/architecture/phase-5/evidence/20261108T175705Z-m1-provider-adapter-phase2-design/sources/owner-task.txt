@@ -1,0 +1,302 @@
+# M1 – SQLCipher Provider Adapter, Phase 2: Design and Runtime Safety Review
+
+## Objective
+
+Prepare the next technical design for introducing the real pinned SQLCipher provider into the isolated qualification worker.
+
+Repository: `vezham-labs/vx-browser`  
+Branch: `timeline`  
+Latest reviewed baseline: `384f200f7cda567d6782df46aea322faeab54fb7`
+
+This is a DESIGN-ONLY task.
+
+Do not implement real provider initialization, open databases, bind real keys, create encrypted fixtures or execute runtime encryption tests.
+
+The objective is to establish a safe, testable and evidence-backed implementation plan before requesting separate authorization for real provider execution.
+
+## 1. Inspect the existing foundation
+
+Review:
+
+- `qualification/sqlcipher-phase1/`
+- `docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-phase1-implementation.md`
+- `docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md`
+- `docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md`
+- Existing encryption and key lifecycle specifications.
+- Core boundary contracts.
+- Relevant ADRs and approved owner decisions.
+- EXP-03, EXP-04 and all 50 PQR case definitions.
+- Existing source authenticity and SQLCipher build evidence.
+
+Treat Phase 1 as the verified infrastructure baseline, not proof of provider runtime behavior.
+
+Preserve all historical evidence and existing owner decisions.
+
+## 2. Design the real provider adapter boundary
+
+Define how the pinned SQLCipher implementation will be introduced into the worker.
+
+Cover:
+
+- Provider initialization and shutdown.
+- Provider identity verification at runtime.
+- SQLCipher version and SQLite source identity checks.
+- Provider capability verification.
+- Exact linkage and ABI assumptions.
+- Initialization failure and partial initialization.
+- Duplicate initialization prevention.
+- Worker termination during initialization.
+- Provider error normalization.
+
+Distinguish compile-time, link-time and runtime identity evidence.
+
+Do not assume the Phase 1 linked-image inspection proves runtime provider behavior.
+
+## 3. Design key binding and authentication
+
+Define the complete lifecycle for:
+
+- Receiving a scoped key frame.
+- Validating worker, profile, store, lease and key-version identity.
+- Applying the binary key using the length-explicit SQLCipher API.
+- Ensuring key application occurs before any database read.
+- Authenticating an existing database.
+- Validating schema identity, profile/store identity and encryption suite.
+- Handling wrong keys, malformed databases and corrupted stores.
+- Preventing an authentication failure from modifying or replacing existing ciphertext.
+- Retiring key material and connection ownership after failure.
+
+Clearly distinguish key acceptance from successful database authentication.
+
+Do not claim that a successful key-binding call proves the database is readable or authentic.
+
+## 4. Design database ownership and open semantics
+
+Define separate paths for:
+
+1. Exclusive creation of a new encrypted store.
+2. Opening an existing encrypted store.
+3. Refusing an existing path during exclusive creation.
+4. Handling an incomplete or interrupted creation.
+5. Handling an existing but unauthenticated store.
+6. Handling a store whose identity does not match the requested profile.
+
+Specify which component owns:
+
+- Database paths.
+- SQLite connections.
+- Statements and cursors.
+- Transactions.
+- Key leases.
+- Connection close.
+- Worker retirement.
+
+Define serialization rules and whether one worker may own more than one database connection.
+
+Prefer the simplest safe ownership model. Explain any reason to introduce additional concurrency.
+
+## 5. Design connection configuration and verification
+
+Use the existing M1 specifications and proposed settings as the source of requirements.
+
+Review:
+
+- SQLCipher compatibility and encryption suite.
+- Page size and KDF parameters.
+- WAL mode.
+- Synchronous policy.
+- Foreign-key enforcement.
+- Temporary storage policy.
+- Busy timeout.
+- Memory-security configuration.
+- Shutdown and checkpoint behavior.
+
+For each setting, define:
+
+- When it is applied.
+- Whether it must be applied before or after key binding/authentication.
+- How its effective value is read back.
+- What happens if the setting is unsupported or differs from expectation.
+
+Do not silently accept provider defaults.
+
+Mark unresolved settings as proposals requiring evidence or owner approval.
+
+## 6. Design filesystem observation
+
+This is a critical design requirement.
+
+Define an observation strategy covering every relevant storage artifact:
+
+- Main database.
+- WAL.
+- SHM.
+- Rollback journals.
+- Statement journals.
+- Temporary database files.
+- Provider-created scratch files.
+- Backup and copy intermediates.
+
+Determine whether a custom VFS is required or whether another controlled observation mechanism can meet the requirements.
+
+For each artifact, define:
+
+- How its creation is observed.
+- How plaintext leakage is detected.
+- How cleanup is verified.
+- How interrupted operations are handled.
+- What evidence is retained.
+
+Do not claim database encryption alone proves that all related files are encrypted.
+
+Do not implement the VFS in this task.
+
+## 7. Design close, failure and recovery behavior
+
+Extend the Phase 1 lifecycle design to real provider ownership.
+
+Cover:
+
+- Successful connection close.
+- Active statement or cursor at close.
+- Active transaction at close.
+- Busy connection.
+- Failed checkpoint.
+- Failed close.
+- Provider initialization failure.
+- Authentication failure.
+- Unexpected worker termination.
+- Supervisor termination.
+- Uncertain commit outcome.
+- Quarantine and subsequent recovery.
+
+Define what constitutes confirmed cleanup.
+
+Do not assume process termination proves SQLite or filesystem cleanup.
+
+Identify which recovery guarantees require persistent state beyond the current in-memory supervisor registry.
+
+## 8. Build a staged implementation and qualification plan
+
+Propose bounded implementation stages with explicit entry and exit criteria.
+
+At minimum, separate:
+
+A. Provider initialization and runtime identity.
+
+B. Key binding and connection ownership.
+
+C. Exclusive creation and existing-store authentication.
+
+D. Connection settings and readback.
+
+E. Filesystem observation/VFS.
+
+F. Failure, close and recovery qualification.
+
+G. Encrypted fixtures and bounded runtime tests.
+
+H. EXP-03/EXP-04 readiness review.
+
+Map the existing 50 PQR scenarios to their prerequisites and stages.
+
+Identify which scenarios can be tested with synthetic or fake providers and which require actual SQLCipher execution.
+
+Do not execute any PQR cases.
+
+## 9. Security and architecture review
+
+Explicitly assess:
+
+- Whether the Phase 1 IPC design remains sufficient for real provider operations.
+- Secret lifetime and memory ownership.
+- Key leakage through crash diagnostics or child output.
+- Worker isolation and process permissions.
+- Cross-profile access prevention.
+- Private-browsing refusal before path resolution.
+- Symlink/path replacement and filesystem race risks.
+- Database copy and backup consistency.
+- Uncertain commit handling.
+- Worker and supervisor restart behavior.
+
+Identify threats that the current architecture does not yet address.
+
+Do not silently resolve product-level policy questions. List them for owner review.
+
+## 10. Required deliverables
+
+Create:
+
+1. `m1-sqlcipher-provider-adapter-phase2-design.md`
+   - Architecture and component responsibilities.
+   - Provider lifecycle.
+   - Key and authentication sequence.
+   - Connection ownership.
+   - Filesystem observation.
+   - Failure and recovery model.
+   - Security limitations.
+
+2. `m1-sqlcipher-phase2-implementation-plan.md`
+   - Ordered implementation stages.
+   - Dependencies.
+   - Acceptance criteria.
+   - Test strategy.
+   - Runtime authorization boundaries.
+
+3. `m1-sqlcipher-phase2-pqr-crosswalk.md`
+   - All 50 existing PQR scenarios.
+   - Prerequisites.
+   - Planned stage.
+   - Required evidence.
+   - Whether actual SQLCipher execution is required.
+
+4. Timestamped evidence directory.
+   - Repository baseline.
+   - Files inspected.
+   - Design traceability.
+   - Preservation audit.
+   - Explicit statement that no provider runtime operations were executed.
+
+Append references to canonical M1 indexes only where necessary. Do not rewrite historical reports.
+
+## 11. Strict execution restrictions
+
+This task is design-only.
+
+DO NOT:
+
+- Initialize SQLCipher at runtime.
+- Call `sqlite3_key` or any other provider operation.
+- Open or create databases.
+- Generate encrypted fixtures.
+- Run encryption or decryption tests.
+- Implement a custom VFS.
+- Integrate with Keychain or WebKit.
+- Modify production BrowserPersistence.
+- Change ADR or owner-decision statuses.
+- Execute EXP-03 or EXP-04.
+- Execute any PQR runtime case.
+- Install software or change host configuration.
+- Commit or push without explicit instruction.
+
+If a design requirement cannot be resolved from existing specifications, report it as OPEN or BLOCKED. Do not invent an owner decision.
+
+## 12. Final report
+
+Provide:
+
+- Summary of the proposed adapter architecture.
+- Exact files created or modified.
+- Key technical decisions and rationale.
+- Security risks and unresolved questions.
+- PQR crosswalk coverage.
+- Proposed implementation sequence.
+- Explicit runtime authorization boundaries.
+- Preservation audit.
+- PASS / FAIL / BLOCKED / INCONCLUSIVE status.
+
+The final report must clearly state:
+
+**No real SQLCipher provider operations, database opens, encryption tests, fixtures or PQR runtime cases were executed. EXP-03 and EXP-04 remain unexecuted.**
+
+Do not describe this design as runtime-qualified or production-ready.

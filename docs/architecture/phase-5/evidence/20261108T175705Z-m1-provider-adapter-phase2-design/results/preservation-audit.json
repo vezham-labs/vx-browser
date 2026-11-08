@@ -1,0 +1,107 @@
+{
+  "status": "PASS \u2014 documentation consistency and preservation only; no runtime qualification",
+  "finalized_client_date": "2026-11-09",
+  "client_timezone": "Asia/Kolkata",
+  "baseline_HEAD": "384f200f7cda567d6782df46aea322faeab54fb7",
+  "branch": "timeline",
+  "tracked_files_in_baseline": 1149,
+  "preexisting_files_hash_unchanged": 1147,
+  "changed_preexisting_files": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md"
+  ],
+  "missing_preexisting_files": [],
+  "unexpected_untracked_files": [],
+  "protected_baseline_file_counts": {
+    "Phase1_source_files": 10,
+    "existing_evidence_files": 556,
+    "ADR_files": 5,
+    "Phase3_source_and_document_files": 377,
+    "owner_records": 3
+  },
+  "checks": {
+    "HEAD_unchanged": true,
+    "branch_unchanged": true,
+    "baseline_started_clean": true,
+    "no_staged_changes": true,
+    "only_two_expected_tracked_files_modified": true,
+    "no_preexisting_file_missing": true,
+    "both_index_edits_append_only": true,
+    "no_unexpected_untracked_files": true,
+    "Phase1_107_manifest_entries_preserved": true,
+    "retained_archive_and_header_preserved": true,
+    "Phase1_final_source_hashes_preserved": true,
+    "all_case_traceability_checks_pass": true,
+    "no_missing_documentation_link_targets": true,
+    "pinned_source_hashes_and_line_excerpts_match": true
+  },
+  "append_only_checks": [
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "baseline_matches_HEAD": true,
+      "prefix_preserved": true,
+      "appended_bytes": 823
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "baseline_matches_HEAD": true,
+      "prefix_preserved": true,
+      "appended_bytes": 823
+    }
+  ],
+  "PQR_consistency_checks": {
+    "all_50_unique_original_IDs": true,
+    "original_case_definitions_preserved_exactly": true,
+    "order_and_descriptions_match_markdown": true,
+    "original_evidence_codes_preserved": true,
+    "non_K14_mappings_unchanged": true,
+    "K14_correction_explicit": true,
+    "all_cases_unexecuted": true,
+    "original_case_group_counts": true
+  },
+  "documentation_relative_link_targets_checked": 35,
+  "broken_links": [],
+  "declared_final_outputs": [
+    "results/preservation-audit.json",
+    "changed-files.json",
+    "artifact-index.json",
+    "SHA256SUMS"
+  ],
+  "pinned_source_checks": [
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/src/main.c",
+      "full_file_hash_matches": true,
+      "all_line_excerpts_match": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/src/btree.c",
+      "full_file_hash_matches": true,
+      "all_line_excerpts_match": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/src/pager.c",
+      "full_file_hash_matches": true,
+      "all_line_excerpts_match": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c",
+      "full_file_hash_matches": true,
+      "all_line_excerpts_match": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/src/crypto_cc.c",
+      "full_file_hash_matches": true,
+      "all_line_excerpts_match": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/sqlcipher-355d4db92d3404e71faa8088d071a71d767807f4/src/backup.c",
+      "full_file_hash_matches": true,
+      "all_line_excerpts_match": true
+    }
+  ],
+  "no_runtime_evidence_generated": true,
+  "provider_runtime_status": "BLOCKED \u2014 unimplemented adapter/observer and unresolved OPEN-01/02",
+  "provider_behavior_status": "INCONCLUSIVE \u2014 no execution",
+  "runtime_failures_observed": "Not assessed; zero runtime cases executed",
+  "authorization": "Design only; no provider execution, build, test, product implementation or release authorization"
+}

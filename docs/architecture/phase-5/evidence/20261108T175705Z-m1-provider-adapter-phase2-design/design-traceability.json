@@ -1,0 +1,89 @@
+{
+  "status": "Proposed design; not runtime validation",
+  "rows": [
+    {
+      "id": "T01",
+      "requirement": "Foundation and provenance",
+      "design_route": "Design \u00a7\u00a71\u20133; plan A",
+      "inspection_grounding": "Phase 1 report \u00a7\u00a75\u20137; publisher evidence \u00a78; baseline-reconciliation.json",
+      "remaining_limitation": "Static provenance only; runtime identity pending"
+    },
+    {
+      "id": "T02",
+      "requirement": "Provider lifecycle",
+      "design_route": "Design \u00a73; plan A",
+      "inspection_grounding": "Pinned sqlcipher.c:412\u2013524,636\u2013680",
+      "remaining_limitation": "Default logging/finalizer exposure OPEN-07; no init run"
+    },
+    {
+      "id": "T03",
+      "requirement": "Key binding and IPC",
+      "design_route": "Design \u00a7\u00a74\u20135; plan B",
+      "inspection_grounding": "worker.c:113\u2013119; supervisor.h:13\u201320; sqlcipher.c:1372\u20131385,3810\u20133826",
+      "remaining_limitation": "v2 protocol OPEN-05; real bind failure OPEN-06"
+    },
+    {
+      "id": "T04",
+      "requirement": "Key before any DB read",
+      "design_route": "Design \u00a75.2; plan C/E/G",
+      "inspection_grounding": "main.c:3682; btree.c:2712\u20132716; pager.c:4063\u20134081",
+      "remaining_limitation": "OPEN-01 BLOCKED: stock open performs physical encrypted-header read before public key call"
+    },
+    {
+      "id": "T05",
+      "requirement": "Existing ciphertext preservation",
+      "design_route": "Design \u00a7\u00a75.3,6,8; plan C/E/F",
+      "inspection_grounding": "Encryption spec \u00a74/5; existing worker design \u00a75 limitation",
+      "remaining_limitation": "OPEN-02 BLOCKED until enforced pre-auth write/SHM fence proven"
+    },
+    {
+      "id": "T06",
+      "requirement": "Ownership/create semantics",
+      "design_route": "Design \u00a7\u00a72,6; plan B/C",
+      "inspection_grounding": "Core boundary D; key spec \u00a7\u00a75\u20136",
+      "remaining_limitation": "Stable paths and operation receipts require implementation"
+    },
+    {
+      "id": "T07",
+      "requirement": "Settings/readback",
+      "design_route": "Design \u00a77; plan D",
+      "inspection_grounding": "Encryption \u00a74\u20135; worker design \u00a75; pinned cipher_settings/version/logging excerpts",
+      "remaining_limitation": "Effective settings unobserved; no defaults silently accepted"
+    },
+    {
+      "id": "T08",
+      "requirement": "All artifacts and faults",
+      "design_route": "Design \u00a78; plan E/G",
+      "inspection_grounding": "Original 50-case definitions; VFS public contract; encryption \u00a73/5",
+      "remaining_limitation": "OPEN-03 path races, mappings and direct-I/O proof pending"
+    },
+    {
+      "id": "T09",
+      "requirement": "Close/restart/quarantine",
+      "design_route": "Design \u00a79; plan F",
+      "inspection_grounding": "supervisor.c:15\u201340,184\u2013218; Core boundary D",
+      "remaining_limitation": "OPEN-04 durable recovery; reap/diagnostic assumptions require later correction"
+    },
+    {
+      "id": "T10",
+      "requirement": "Copy and rotation",
+      "design_route": "Design \u00a710; plan F/G",
+      "inspection_grounding": "backup.c:145\u2013178,270\u2013315; key spec \u00a76",
+      "remaining_limitation": "Second-key maintenance IPC and actual encrypted copy behavior unqualified"
+    },
+    {
+      "id": "T11",
+      "requirement": "50 PQR routes",
+      "design_route": "PQR report; plan \u00a711",
+      "inspection_grounding": "Original synthetic-test-matrix.json; prior design-crosswalk.json K14 correction",
+      "remaining_limitation": "50 proposed routes; 0 execution; no whole AC/EXP pass"
+    },
+    {
+      "id": "T12",
+      "requirement": "Security/owner boundaries",
+      "design_route": "Design \u00a7\u00a71,11\u201312; plan H",
+      "inspection_grounding": "Owner register, ADR0001\u20130005, EXP03/04 charters",
+      "remaining_limitation": "Owner/ADR/policy unchanged; product/release unauthorized"
+    }
+  ]
+}

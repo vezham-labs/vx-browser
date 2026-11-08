@@ -55,3 +55,7 @@ The proposed design supplies the scoped native qualification worker, exact stati
 ## Isolated SQLCipher worker implementation · Phase 1 — 2026-11-08
 
 The native qualification supervisor and fake-provider worker pass 119 conformance assertions. The separately built image has verified static linkage to the pinned SQLCipher archive through its linker map, symbols and binary identity. Phase 1 preserves the zero database/runtime and zero PQR execution boundary. The new control layout, lifecycle coverage, scope quarantine and Nx launcher limitation are recorded in the [Phase 1 implementation report](m1-sqlcipher-worker-phase1-implementation.md).
+
+## SQLCipher provider adapter · Phase 2 design — 2026-11-08
+
+[Adapter and runtime safety design](m1-sqlcipher-provider-adapter-phase2-design.md), [staged implementation plan](m1-sqlcipher-phase2-implementation-plan.md) and [all 50 PQR routes](m1-sqlcipher-phase2-pqr-crosswalk.md) extend the committed Phase 1 infrastructure baseline with design-only ownership, authentication, filesystem fencing and restart requirements. Literal pre-key database-read ordering and pre-auth write/SHM preservation remain blocking gates; no requirement is silently relaxed. All PQR cases remain unexecuted. No provider-linked image, database, fixture, EXP-03/04 or product implementation was executed by this review. [Review evidence and preservation audit](../../evidence/20261108T175705Z-m1-provider-adapter-phase2-design/README.md).
