@@ -1,0 +1,80 @@
+[
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-publisher-authenticity-evidence.md",
+    "title": "# M1 SQLCipher Publisher Authenticity Evidence \u2014 v1.0",
+    "sha256": "e7b53df75ffc3bcafbc5b19bc83fa1702300b300f3535c411c26513fa2017240",
+    "lines": 195
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-provider-trust-and-runtime-qualification.md",
+    "title": "# M1 Provider Trust and Runtime Qualification Gate \u2014 v1.0",
+    "sha256": "6b14bb69f12570972b9d87ec786ad59590db1828f766bc0258e04487a9213730",
+    "lines": 122
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+    "title": "# M1 Provider and Fixture Qualification \u2014 v1.0",
+    "sha256": "2d32164ddc3082dfa8b6c27c0e3ead5e95a43de16ff0a62a70dd365464a0e279",
+    "lines": 211
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+    "title": "# M1 Persistent-Profile Encryption Specification",
+    "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af",
+    "lines": 115
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+    "title": "# M1 Keychain and Independent Recovery Specification",
+    "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c",
+    "lines": 156
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+    "title": "# M1 Validation Readiness and Downstream Remediation",
+    "sha256": "04022c8e19831138c085b1e3570a97f3c7f8e7a16291d11ae05f72f7ff970edf",
+    "lines": 85
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+    "title": "# M1 Developer Specification v1.2 \u2014 Proposed",
+    "sha256": "e846fadee7694ef575a2f45f98bc4e0d280dd70fa7e4cbcd9a61f8fcd173afc3",
+    "lines": 1328
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+    "title": "# M1 Validation Plan v1.2 \u2014 Proposed",
+    "sha256": "c8fbdd8499152f6f53d0f18405ea1a45530b3eadc0f7eca89abde66879ca7610",
+    "lines": 782
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+    "title": "# Native Host, Core, Engine, UI and Storage Contracts",
+    "sha256": "21d101f7d3fda53ebe9f89e720dddb7fa47de636d333013f246fa27893382d6a",
+    "lines": 119
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+    "title": "# Local Persistence Architecture",
+    "sha256": "5b42269946ba15871e87924f2369081cca936055e1a78a3ee967b902bd1bd11c",
+    "lines": 57
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+    "title": "# Browser Core Module Architecture",
+    "sha256": "709b21bc4b9941e545f5cde8e8910deb9fe6a8a1d23a64a61c29dbd991c19182",
+    "lines": 85
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+    "title": "# M1 Case-Level Traceability Matrix v1.3 \u2014 Proposed",
+    "sha256": "3498aeab5fcac840ca08f7f47cf94395a93d30a9a568b5f5c4b9b9c6cdc712ae",
+    "lines": 438
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-supporting-validation-charters.md",
+    "title": "# M1 Supporting Validation Charters v1.2 \u2014 Proposed",
+    "sha256": "73eaa4f3c3a4a32b3a01d2053559946138d4533644190b9ab6993724bee4d638",
+    "lines": 726
+  }
+]

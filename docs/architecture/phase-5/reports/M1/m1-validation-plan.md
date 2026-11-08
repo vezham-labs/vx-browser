@@ -780,3 +780,7 @@ Documentation/eligible isolated validation/evidence/planning are Authorized; pro
 ## Remediation procedure bindings — 2026-11-08
 
 Existing EXP procedures/IDs/mappings remain. EXP-03/CRYPTO-001 now binds the proposed [protection/provider/artifact contract](m1-persistent-profile-encryption-specification.md); EXP-04/KEY-001/002 binds [key/envelope/custody/failure contract](m1-keychain-and-independent-recovery-specification.md). Prerequisites and exact evidence oracles are [assessed here](m1-validation-readiness-remediation.md); both full experiments remain Blocked and unexecuted. EXP-05/07/08 and SVC-04/05 are not triggered by specification closure. [Cleanup diagnosis](m1-exp-01-cleanup-diagnosis.md) records the confirmed fault phase and unknown original-store states. Do not init/remove an original store to inspect it; no fresh diagnostic until the original-state prerequisite is met.
+
+## SQLCipher provider runtime readiness — 2026-11-08
+
+The static candidate and its source evidence are recorded. The 50 proposed scenarios await an isolated worker, key-binding adapter, encrypted fixtures and controlled faults. EXP-03 remains BLOCKED. [Provider runtime readiness](m1-sqlcipher-provider-runtime-readiness.md)

@@ -83,3 +83,7 @@ First provision a pinned/provider-reviewed isolated SQLCipher candidate and audi
 ## Vendor archive verification — 2026-11-08
 
 [Latest source-authenticity addendum, publisher evidence §8](m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint) supersedes only the earlier source-authenticity blocker: approved GnuPG verified the vendor ZIP signature under its published primary-bound subkey, and all 2,325 files/Git executable bits match the unchanged pin exactly. Bounded source authenticity is PASS. Remaining EXP-03 provider/runtime/key-binding/artifact/fault/readiness prerequisites and all EXP-04/native/downstream blockers remain open; no full EXP-03 execution or acceptance is authorized or inferred. Earlier checklist positions/results remain historical. Source-only verification is not browser implementation, platform/release qualification or cloud/identity integration.
+
+## SQLCipher provider runtime readiness — 2026-11-08
+
+The static candidate and its source evidence are recorded. The 50 proposed scenarios await an isolated worker, key-binding adapter, encrypted fixtures and controlled faults. EXP-03 remains BLOCKED. [Provider runtime readiness](m1-sqlcipher-provider-runtime-readiness.md)

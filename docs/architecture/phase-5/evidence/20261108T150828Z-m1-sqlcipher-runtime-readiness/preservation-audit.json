@@ -1,0 +1,24 @@
+{
+  "HEAD": "670bebd4b4f7e878674e7588ddcb7e6aa4a86d32",
+  "tracked_files_checked": 1005,
+  "append_only_updates": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+    "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md"
+  ],
+  "other_tracked_files_matching_baseline": 1002,
+  "new_report": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md",
+  "new_report_sha256": "1b53e95f2a35fa36a5201bdbbdd43a9963668c77d856e525773bbe5b382db1bb",
+  "local_report_links_resolve": true,
+  "unique_complete_scenarios": 50,
+  "runtime_cases_executed": 0,
+  "prerequisites": {
+    "PASS": 3,
+    "FAIL": 0,
+    "BLOCKED": 5,
+    "INCONCLUSIVE": 4
+  },
+  "staged_changes": false,
+  "whitespace_check": "PASS",
+  "scope_check": "PASS"
+}

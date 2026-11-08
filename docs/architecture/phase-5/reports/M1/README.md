@@ -43,3 +43,7 @@ ADR0001 Proposed;0002 Accepted;0003–0005 Proposed. Conditional WKWebView; CEF 
 ## Vendor archive cryptographic verification — 2026-11-08 (latest source checkpoint)
 
 [Current verification addendum](m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint) records approved GnuPG provisioning, a valid vendor-primary-bound archive signature and all 2,325 pinned files matching with zero missing/extra/content/executable-bit differences. The bounded source-authenticity prerequisite is now PASS via the vendor archive; earlier BLOCKED entries/header remain historical. The separate Git tag signature is unverified. Runtime/provider qualification and EXP-03 remain BLOCKED; no build, encryption/runtime/native campaign or product/release authorization is inferred.
+
+## SQLCipher provider runtime readiness — 2026-11-08
+
+The static candidate and its source evidence are recorded. The 50 proposed scenarios await an isolated worker, key-binding adapter, encrypted fixtures and controlled faults. EXP-03 remains BLOCKED. [Provider runtime readiness](m1-sqlcipher-provider-runtime-readiness.md)

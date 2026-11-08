@@ -1,0 +1,69 @@
+{
+  "status": "Proposed technical/readiness work; no new owner decisions",
+  "gaps": [
+    {
+      "id": "G01",
+      "classification": "Technical specification / experimental prerequisite",
+      "topic": "Exact native worker and link identity",
+      "gap": "No linked isolated worker/final linker recipe or image-dependency record exists. libsqlite3.a contains SQLCipher; a system -lsqlite3/wrapper substitution would invalidate qualification.",
+      "resolve": "Specify exact retained archive/header, entry point, initialization hooks and link closure; review image/symbol/version probes before separately authorized adapter construction.",
+      "source": "m1-provider-and-fixture-qualification.md:55-100"
+    },
+    {
+      "id": "G02",
+      "classification": "Technical specification / experimental prerequisite",
+      "topic": "Owned key/scope/handle lifecycle and failure contract",
+      "gap": "The compile-only helper accepts a bare sqlite3 pointer and 32-byte buffer; it does not open/authenticate/identify stores, enforce native scope/epoch, own close/cursors or define consumed-vs-borrowed input on every rejection path. Early invalid-input return does not wipe that buffer itself.",
+      "resolve": "Define exact native ownership/lease protocol, open-existing/create split, key-before-access sequence, authenticated identity gate, typed coarse error mapping, real close barrier and scratch/provider cleanup semantics. No raw key in Domain/Ports/Core/UI.",
+      "source": "key_binding_compile_fixture.c:9-18; core-boundary-contracts.md:68-76; key/recovery §§1/5"
+    },
+    {
+      "id": "G03",
+      "classification": "Technical specification required",
+      "topic": "Connection settings and readback oracles",
+      "gap": "WAL/FULL/foreign keys/memory-temp and cipher suite are defined, but exact settings order, macOS fullfsync/checkpoint_fullfsync, memory-security activation and finite busy/deadline settings are not frozen. The pinned memory-security getter also depends on allocator activity; the switch is process-global enable-only.",
+      "resolve": "Record a reviewed setting/order/readback table per normal-WAL and rollback-diagnostic worker. Recommend memory security ON in a fresh worker; do not silently promote this recommendation to the existing contract. Reject missing required getter results, not just nonzero setter errors.",
+      "source": "encryption §5; local-persistence-architecture.md:23-29; pinned src/sqlcipher.c:3348-3405"
+    },
+    {
+      "id": "G04",
+      "classification": "Experimental validation prerequisite",
+      "topic": "Complete artifact/temp observation and controls",
+      "gap": "Positive main/WAL plaintext controls exist, but no instrumented encrypted artifact or transient/unlinked I/O coverage exists. Directory scans alone miss short-lived/unlinked writes; SHM metadata cannot be called encrypted.",
+      "resolve": "Review a bounded native I/O/VFS observation design covering named and unnamed files, operation phases and encryption boundaries, with functioning public-marker controls and cleanup traces. Do not capture key bytes or raw sensitive buffers.",
+      "source": "encryption §§3/5; provider fixture report:72-90"
+    },
+    {
+      "id": "G05",
+      "classification": "Technical specification required",
+      "topic": "Synthetic database identity and expected-state ledger",
+      "gap": "No reviewed implemented schema/fixture defines exact scope, suite, schema/key generation, revision, receipts, row corpus and malformed/tamper offsets for the planned worker.",
+      "resolve": "Freeze test-only schema/version, full expected records, scope mismatch controls, source-audited mutation offsets and typed result/error oracles; preserve canonical product schema decisions.",
+      "source": "developer §§9/10/20; encryption §§4/5; validation-plan EXP-03"
+    },
+    {
+      "id": "G06",
+      "classification": "Technical specification / experimental prerequisite",
+      "topic": "Failure injection, cancellation and terminal outcomes",
+      "gap": "No barrier-driven supervisor, VFS error injection or mutation/receipt/promotion checkpoints exist. Random sleeps/kills and unspecified error states cannot establish recovery.",
+      "resolve": "Specify exact before/after commit/checkpoint/write/promotion hooks, PID/start-token ownership, emitted durable/acknowledged ledger states, bounded fault ordinals and per-cutpoint acceptable outcomes. Ambiguity prevents a PASS.",
+      "source": "core-boundary-contracts.md:72-76; key/recovery §§5/6; validation-plan EXP-03"
+    },
+    {
+      "id": "G07",
+      "classification": "Technical specification / experimental prerequisite",
+      "topic": "Encrypted snapshot/copy-and-promote primitive",
+      "gap": "The contract selects quiesced encrypted copy-and-promote rather than in-place rekey, but no exact public copy API, protected destination setup or durable intent/promotion protocol is frozen.",
+      "resolve": "Specify and review a public provider-supported copy mechanism and its encrypted output, identity/key-generation checks, retained old branch and promotion checkpoints. Multi-resource backups, custody and second-Mac recovery remain EXP-04/07 work.",
+      "source": "encryption §5; key/recovery §6"
+    },
+    {
+      "id": "G08",
+      "classification": "Experimental validation prerequisite",
+      "topic": "Owned environment, secrets channel and safe cleanup",
+      "gap": "Current compiler/SDK and static inputs exist, but the runtime run root/process/resource manifest, secret-only memory/channel ownership, stop policy and cleanup protocol have not been exercised.",
+      "resolve": "Review per-case owned paths/processes, exclusive scope, finite resource guards, no core dumps/key logs, failure retention and quiescent cleanup. No personal stores, real Keychain, WebKit/native prompts or host-disk exhaustion.",
+      "source": "validation-plan §§3/8/9; encryption §3"
+    }
+  ]
+}

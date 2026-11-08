@@ -1,0 +1,247 @@
+# Codex Task: M1 – SQLCipher Provider Runtime Qualification Readiness
+
+## Repository
+
+`vezham-labs/vx-browser`
+
+Branch: `timeline`
+
+## Objective
+
+Prepare the technical and experimental prerequisites for bounded SQLCipher provider runtime qualification.
+
+The vendor archive authenticity prerequisite is now PASS. The official signed SQLCipher 4.20.0 archive has been verified, and all 2,325 source files match the pinned upstream commit:
+
+`355d4db92d3404e71faa8088d071a71d767807f4`
+
+The next objective is to establish whether this exact provider can satisfy Vezham Browser's persistent-profile encryption requirements.
+
+This task is a READINESS task, not authorization to execute the full runtime qualification campaign.
+
+## Step 1 – Establish the current baseline
+
+Read the latest canonical documents:
+
+- `m1-sqlcipher-publisher-authenticity-evidence.md`
+- `m1-provider-trust-and-runtime-qualification.md`
+- `m1-provider-and-fixture-qualification.md`
+- `m1-persistent-profile-encryption-specification.md`
+- `m1-keychain-and-independent-recovery-specification.md`
+- `m1-validation-readiness-remediation.md`
+- M1 Developer Specification and Validation Plan.
+
+Inspect the current branch and existing evidence.
+
+Do not repeat completed work unnecessarily.
+
+Preserve all historical evidence, decisions, experiment IDs and outcomes.
+
+## Step 2 – Freeze the SQLCipher candidate
+
+Produce a complete provider configuration record covering:
+
+- Exact upstream repository, release, tag and commit.
+- Vendor-authenticated archive and signature evidence references.
+- SQLCipher version.
+- SQLite version.
+- Compiler and toolchain versions.
+- Target architecture and deployment target.
+- Required compile-time macros.
+- Codec and cryptographic provider configuration.
+- Static versus dynamic linkage.
+- Build flags and relevant linker settings.
+- Expected runtime artifacts.
+- Known platform-specific limitations.
+- Security and licensing review references.
+
+Compare this configuration with the previously retained static-build evidence.
+
+Identify inconsistencies or missing evidence. Do not silently choose between conflicting configurations.
+
+## Step 3 – Review the encryption and key-binding contract
+
+Trace the existing contracts across BrowserDomain, BrowserPorts, BrowserCore and BrowserPersistence.
+
+Document:
+
+1. Where encryption keys originate.
+2. How key material reaches the SQLCipher provider.
+3. How the database key is applied before any database access.
+4. How key material is scoped to an individual profile.
+5. How wrong-key and malformed-database failures are surfaced.
+6. How key material is cleared from memory where feasible.
+7. How database close and reopen operations interact with key lifecycle.
+8. How WAL, journal and temporary storage are protected.
+9. How private browsing remains isolated from persistent profile storage.
+
+Identify missing or ambiguous contracts.
+
+Do not introduce new product architecture or alter owner-approved decisions.
+
+## Step 4 – Prepare the synthetic test matrix
+
+Create a finite test matrix for:
+
+### Encryption and confidentiality
+- Newly created database.
+- Main database file.
+- WAL and SHM files.
+- Rollback journal.
+- Temporary database storage.
+- Checkpoint and close behavior.
+- Reopen using the correct key.
+- Read attempt using an incorrect key.
+- Plaintext detection controls.
+
+### Key binding
+- Correct profile key.
+- Wrong profile key.
+- Missing key.
+- Malformed key input.
+- Key scope mismatch.
+- Repeated open/close.
+- Key replacement and rotation behavior, if supported by the approved contract.
+
+### Tamper and corruption
+- Modified database bytes.
+- Truncated database.
+- Malformed encrypted database.
+- Corrupted WAL or journal.
+- Authentication/integrity failure.
+- Recovery after incomplete writes.
+
+### Interruption and recovery
+- Interrupted transaction.
+- Process termination during writes.
+- Reopen after interruption.
+- Checkpoint interruption.
+- Recovery with correct key.
+- Rejection with incorrect key.
+
+For every case specify:
+
+- Unique test identifier.
+- Requirement/acceptance mapping.
+- Preconditions.
+- Synthetic fixture.
+- Operation.
+- Expected result.
+- Failure oracle.
+- Evidence to capture.
+- Cleanup requirements.
+
+Do not invent acceptance criteria. Map to existing requirements and identify gaps explicitly.
+
+## Step 5 – Define evidence and security oracles
+
+Specify how we will demonstrate:
+
+- Persistent database encryption.
+- Absence of plaintext in database sidecar files.
+- Correct-key reopen.
+- Wrong-key rejection.
+- Profile isolation.
+- Tamper detection.
+- Interrupted-write recovery.
+- Key lifecycle behavior.
+- No unintended plaintext temporary artifacts.
+
+Distinguish observable evidence from assumptions.
+
+Do not claim confidentiality merely because the main database header is not readable.
+
+Do not use production or personal browser data.
+
+## Step 6 – Assess prerequisites and blockers
+
+Create a readiness table covering:
+
+- Authenticated source.
+- Frozen build configuration.
+- Reproducible build.
+- Provider runtime availability.
+- Key-binding implementation or test adapter.
+- Synthetic fixtures.
+- Test harness.
+- File inspection tools.
+- Failure injection.
+- Cleanup and preservation.
+- Test environment isolation.
+- Acceptance mapping.
+
+Assign each item PASS, FAIL, BLOCKED or INCONCLUSIVE with evidence.
+
+Explicitly distinguish existing evidence from new evidence.
+
+## Step 7 – Deliverables
+
+Create a timestamped evidence directory under:
+
+`docs/architecture/phase-5/evidence/`
+
+Create a focused readiness report under:
+
+`docs/architecture/phase-5/reports/M1/`
+
+Suggested report:
+
+`m1-sqlcipher-provider-runtime-readiness.md`
+
+Include:
+
+- Executive summary.
+- Frozen provider configuration.
+- Architecture and key-binding review.
+- Synthetic test matrix.
+- Evidence/oracle specification.
+- Prerequisite assessment.
+- Risks and blockers.
+- Recommended execution sequence.
+- Explicit execution authorization boundary.
+
+Update canonical M1 references append-only.
+
+## Strict boundaries
+
+This task does NOT authorize:
+
+- Full SQLCipher runtime qualification.
+- EXP-03 execution or acceptance.
+- EXP-04 execution.
+- Keychain experiments.
+- WebKit lifecycle experiments.
+- Production source-code changes.
+- Browser dependency integration.
+- Production database creation or migration.
+- Changes to owner decisions or ADR status.
+- Signing, notarization or release.
+
+Do not modify the pinned SQLCipher source.
+
+Do not access original browser stores or personal data.
+
+Do not send external messages.
+
+Do not commit or push without my instruction.
+
+If a small isolated preflight is required, document it and stop if it would cross the runtime execution boundary.
+
+## Completion response
+
+Report:
+
+1. What was inspected.
+2. What provider configuration is frozen.
+3. What key-binding gaps remain.
+4. How many test cases are prepared.
+5. Which prerequisites PASS, FAIL, BLOCKED or INCONCLUSIVE.
+6. What is needed before runtime qualification.
+7. The exact evidence and report paths.
+
+Finish with one recommendation:
+
+- READY FOR SEPARATE RUNTIME AUTHORIZATION
+- NOT READY – BLOCKED
+- INCONCLUSIVE – ADDITIONAL EVIDENCE REQUIRED
+
+Do not claim runtime qualification or EXP-03 acceptance from a readiness-only task.

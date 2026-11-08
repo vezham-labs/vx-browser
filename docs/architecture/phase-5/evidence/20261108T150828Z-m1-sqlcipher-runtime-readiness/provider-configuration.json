@@ -1,0 +1,150 @@
+{
+  "status": "Static candidate identity/recipe frozen; runtime connection/harness configuration incomplete",
+  "upstream": "https://github.com/sqlcipher/sqlcipher",
+  "release": "SQLCipher 4.20.0 Community",
+  "tag": "v4.20.0",
+  "tag_object": "52252487a5cada9b430e8d4b20025790c5a6ba20",
+  "commit": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "tree": "b3aa6f0a71413a40df4c968d357bbbbee61b42cb",
+  "vendor_archive_sha256": "a1417a5a672a2342de6ae44e08ccd68487fa3d0a43212331f4226a0d00b51b9c",
+  "vendor_signature_sha256": "c5d13b33ff0bd57baa7cb92c2e835d8620add0f95940024dc72fdccbdd68854b",
+  "authenticated_source_evidence": "../20261108T142421Z-m1-vendor-archive-verification/results/qualification-decision.json",
+  "vendor_primary_fingerprint": "D83F5F9EB811D6E6B4A0D9C5D1FA3A2A97ED25C2",
+  "actual_signing_subkey": "A4EA79E649E745B92117A56F0CB99EE267FD0322",
+  "separate_git_tag_signature": "not authenticated by this readiness task",
+  "sqlcipher_version_source_expected": "4.20.0 community",
+  "sqlite_version_source_expected": "3.54.1",
+  "runtime_versions_observed": false,
+  "compiler": {
+    "path": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+    "version": "Apple clang 21.0.0 (clang-2100.4.1.1)"
+  },
+  "swift_orchestrator_toolchain": "Swift 6.4.2 (swiftlang-6.4.2.1.9), not a selected database wrapper",
+  "sdk": {
+    "path": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk",
+    "version": "27.2"
+  },
+  "host": "macOS 27.2 /26B123 /arm64",
+  "target": "arm64-apple-macosx26.0",
+  "deployment_target": "26.0",
+  "configuration_command_arguments": [
+    "--disable-shared",
+    "--disable-tcl",
+    "--disable-readline",
+    "--disable-load-extension",
+    "--with-tempstore=always"
+  ],
+  "CFLAGS": "-O2 -target arm64-apple-macosx26.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -DSQLITE_HAS_CODEC -DSQLCIPHER_CRYPTO_CC -DSQLITE_EXTRA_INIT=sqlcipher_extra_init -DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown -DSQLITE_OMIT_LOAD_EXTENSION -ffile-prefix-map=/private/tmp/vx-m1-provider-fixtures-20261108T113403Z=/validation -fdebug-prefix-map=/private/tmp/vx-m1-provider-fixtures-20261108T113403Z=/validation",
+  "environment": {
+    "LDFLAGS": "-framework Security -framework CoreFoundation",
+    "MACOSX_DEPLOYMENT_TARGET": "26.0",
+    "ZERO_AR_DATE": "1",
+    "SOURCE_DATE_EPOCH": "1793028838",
+    "autosetup_tclsh": "/usr/bin/tclsh"
+  },
+  "additional_build_environment": {
+    "CC": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+    "LC_ALL": "C",
+    "TZ": "UTC",
+    "TMPDIR": "fresh owned native temporary directory; old run path is not reusable authority",
+    "TMP": "same owned temporary directory",
+    "TEMP": "same owned temporary directory"
+  },
+  "required_macros": [
+    "SQLITE_HAS_CODEC",
+    "SQLCIPHER_CRYPTO_CC",
+    "SQLITE_EXTRA_INIT=sqlcipher_extra_init",
+    "SQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown",
+    "SQLITE_OMIT_LOAD_EXTENSION",
+    "SQLITE_TEMP_STORE=3",
+    "SQLITE_THREADSAFE=1"
+  ],
+  "crypto_provider": "Apple CommonCrypto /SecRandom, not a FIPS qualification claim",
+  "linkage": "retained static libsqlite3.a; no dynamic SQLCipher or stock sqlite3 fallback",
+  "build_command": [
+    "/usr/bin/make",
+    "-j2",
+    "libsqlite3.a"
+  ],
+  "retained_builds": [
+    {
+      "build": 1,
+      "archive": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a",
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+      "bytes": 1651288,
+      "amalgamation_sha256": "8cd2347d18886fee4651153fabeeeffb7cec008700987dab1c00261febc4220f",
+      "header_sha256": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec",
+      "configure_settings": null
+    },
+    {
+      "build": 2,
+      "archive": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-2/libsqlite3.a",
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+      "bytes": 1651288,
+      "amalgamation_sha256": "8cd2347d18886fee4651153fabeeeffb7cec008700987dab1c00261febc4220f",
+      "header_sha256": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec",
+      "configure_settings": null
+    }
+  ],
+  "static_observations": "CommonCrypto/SecRandom unresolved symbols, SQLCipher key symbols, TEMP_STORE=3/THREADSAFE=1 strings and LC_BUILD_VERSION minos26/sdk27.2 in prior static evidence; current hashes checked only",
+  "current_toolchain_matches_retained": true,
+  "database_suite": {
+    "page_size": 4096,
+    "cipher": "AES-256-CBC",
+    "hmac": "HMAC-SHA512 enabled",
+    "kdf": "PBKDF2-HMAC-SHA512",
+    "kdf_iterations": 256000,
+    "key_input": "32 random bytes as length-explicit binary passphrase, not SQLCipher hex/raw-key syntax",
+    "compatibility": "SQLCipher4",
+    "plaintext_header_bytes": 0
+  },
+  "connection_contract_targets": {
+    "persistent_journal": "WAL",
+    "synchronous": "FULL",
+    "foreign_keys": "ON before transaction",
+    "temp_store": "MEMORY plus compile-time3",
+    "rollback_diagnostic_mode": "DELETE only for owned rollback-journal cases, separate frozen configuration",
+    "normal_cross_profile_ATTACH": "forbidden",
+    "rotation": "quiesced encrypted copy-and-promote; in-place rekey not selected"
+  },
+  "unfrozen_runtime_fields": {
+    "final_harness_link_command": "No linked worker or final image dependency record exists; must use exact retained archive/header and prohibit accidental -lsqlite3 resolution",
+    "setting_and_authentication_order": "Exact allowed before-read operations and query results/error cardinality need reviewed implementation",
+    "cipher_memory_security": "Not fixed by present contract; default is disabled; source setting is process-global enable-only and getter needs allocator activity. Recommend ON for a fresh worker; ratify before execution, no implicit switch",
+    "fullfsync_and_checkpoint_fullfsync": "WAL/FULL is specified; macOS full-sync knobs still require explicit technical disposition",
+    "busy_and_resource_limits": "Finite safe bounds proposed in readiness report, unmeasured planning guards, not product performance criteria",
+    "snapshot_copy_primitive": "Encrypted destination behavior of chosen public copy API not selected/qualified",
+    "fixture_identity_and_receipt_schema": "Exact synthetic schema/version/generation/receipt contract not implemented"
+  },
+  "expected_artifacts": [
+    "main DB",
+    "WAL frames/header",
+    "SHM WAL index",
+    "rollback journal",
+    "statement journal (RAM/disk observed separately)",
+    "TEMP tables/sort/index/materialization storage",
+    "VACUUM/rebuild transients",
+    "encrypted snapshot/rotation candidate and promotion intent",
+    "scoped worker/key lease and cleanup traces"
+  ],
+  "platform_limits": [
+    "arm64 discovery on macOS27.2 only",
+    "minos26 compile record is not macOS26 runtime acceptance",
+    "no independent-machine reproducibility",
+    "no app sandbox/Keychain/WebKit/production host qualification",
+    "filesystem metadata and OS swap/diagnostic artifacts are separate limitations"
+  ],
+  "security_license_references": [
+    "../../reports/M1/m1-provider-and-fixture-qualification.md#license-and-security-assessment",
+    "../../reports/M1/m1-provider-trust-and-runtime-qualification.md",
+    "../20261108T123527Z-m1-provider-trust-runtime-gate/sources/upstream-current-issues.json"
+  ],
+  "configuration_consistency_findings": [
+    "Vendor ZIP and older codeload tar have different container hashes; source equivalence previously proven, not a conflict",
+    "configure_settings is null in retained summary; configure/make logs and static inspection supply selected macro evidence, not runtime getter results",
+    "No compile/toolchain/hash discrepancy found in retained archives/header/amalgamation; no rebuild performed",
+    "Generic older local-persistence fixture-only no-encryption recommendation and stale catalog/provider-open wording must be read with the later normative encryption/key specs and current authenticity addendum; not permission for plaintext product storage"
+  ],
+  "provider_loaded_or_executed": false,
+  "build_run": false
+}

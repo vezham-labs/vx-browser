@@ -1,0 +1,232 @@
+{
+  "source": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification",
+  "manifest_checks": [
+    {
+      "path": "SHA256SUMS",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "acquire_vendor_archive.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifact-index-final.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifact-index.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "baseline.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "changed-files-final.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "changed-files.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "compare_authenticated_source.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "finalize_archive_evidence.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "finalize_archive_evidence_v2.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "preservation-audit-final.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "preservation-audit.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/archive-file-manifest.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/archive-to-commit-comparison.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/archive-to-commit-deterministic.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/disposable-keyring-cleanup.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-01-show-key.stderr.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-01-show-key.stdout.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-02-key-packets.stderr.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-02-key-packets.stdout.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-03-import-public-key.stderr.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-03-import-public-key.stdout.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-04-check-key-signatures.stderr.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-04-check-key-signatures.stdout.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-05-verify-vendor-archive.stderr.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-05-verify-vendor-archive.stdout.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/gpg-commands.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/key-structure-review.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/pinned-tree-object-verification.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/preflight.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/qualification-decision.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/retained-pinned-source-byte-comparison.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/signature-verification.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/tool-installation-record.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/vendor-acquisition.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "results/verifier-environment.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/comparison-pinned-commit.decoded.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/comparison-pinned-commit.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/comparison-pinned-commit.raw",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/comparison-pinned-tree.decoded.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/comparison-pinned-tree.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/comparison-pinned-tree.raw",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/gnupg-INSTALL_RECEIPT.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/gnupg-installed-formula.rb",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/owner-authorization.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/sqlcipher-4.20.0.zip",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/sqlcipher-4.20.0.zip.sig",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/support_zetetic_net_public_key.gpg",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/tool-install-approval.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-detached-signature.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-public-key.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-source-zip.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-verification-page.html",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-verification-page.html.decoded",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "sources/vendor-verification-page.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "verify_vendor_archive.py",
+      "matches_recorded_sha256": true
+    }
+  ],
+  "all_match": true,
+  "signature_verification_repeated": false,
+  "source_comparison_repeated": false
+}

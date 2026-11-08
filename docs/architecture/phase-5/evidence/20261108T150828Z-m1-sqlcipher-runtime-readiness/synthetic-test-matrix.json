@@ -1,0 +1,3372 @@
+{
+  "status": "Proposed / Not Executed; no runtime authority",
+  "namespace": "PQR local proposed provider-readiness checks, not additions to the 165-row canonical matrix",
+  "case_count": 50,
+  "case_group_counts": {
+    "E": 12,
+    "K": 16,
+    "T": 10,
+    "R": 12
+  },
+  "case_policy": "Each ID is a finite scenario; any operation ordinal or bounded row/cycle index must appear in evidence and must not be silently aggregated into acceptance passes.",
+  "cases": [
+    {
+      "id": "PQR-E01",
+      "group": "Encryption and confidentiality",
+      "description": "Candidate identity and effective settings",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G01 resolved for this case",
+        "G03 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: fresh worker; exact retained archive/header and reviewed settings order",
+      "operation": "Query source/SQLite/cipher/provider versions, compile options and actual suite/temp/journal/sync/foreign-key results before test data",
+      "expected_result": "Expected source-derived identity and required settings returned with correct row counts; required unsupported options stop qualification",
+      "failure_oracle": "Wrong/stock library, unexpected settings or silently empty required PRAGMA accepted. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E01/cfg.json (future artifact; secrets excluded)",
+        "PQR-E01/fx.json (future artifact; secrets excluded)",
+        "PQR-E01/hash.json (future artifact; secrets excluded)",
+        "PQR-E01/state.json (future artifact; secrets excluded)",
+        "PQR-E01/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G01",
+        "G03"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E02",
+      "group": "Encryption and confidentiality",
+      "description": "Create a new encrypted profile database",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: new exclusively owned profile-A path; key A; no existing ciphertext",
+      "operation": "Apply key and suite before data access; create synthetic identity/receipt/data schema and commit public rows",
+      "expected_result": "Authorized create and authenticated identity/data verification succeed; declared cipher protection active",
+      "failure_oracle": "Plaintext creation, keyless fallback, wrong scope or false success. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E02/cfg.json (future artifact; secrets excluded)",
+        "PQR-E02/fx.json (future artifact; secrets excluded)",
+        "PQR-E02/hash.json (future artifact; secrets excluded)",
+        "PQR-E02/state.json (future artifact; secrets excluded)",
+        "PQR-E02/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E03",
+      "group": "Encryption and confidentiality",
+      "description": "Main database protection",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: closed profile-A database with multi-page public fixture",
+      "operation": "Inventory/hash main file and scan public marker corpus; reopen and check all expected records",
+      "expected_result": "No sensitive marker/key plaintext in declared file; source/build/settings and authenticated reads support encryption coverage",
+      "failure_oracle": "Known protected marker or key bytes exposed; valid data not recoverable. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E03/cfg.json (future artifact; secrets excluded)",
+        "PQR-E03/fx.json (future artifact; secrets excluded)",
+        "PQR-E03/hash.json (future artifact; secrets excluded)",
+        "PQR-E03/state.json (future artifact; secrets excluded)",
+        "PQR-E03/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E04",
+      "group": "Encryption and confidentiality",
+      "description": "Live WAL protection",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: WAL worker paused at reviewed post-commit barrier before checkpoint; public WAL rows",
+      "operation": "Observe actual WAL/header/frame writes and marker results while matching commit ledger",
+      "expected_result": "WAL page payload protected; declared structural metadata distinguished; correct-key WAL reopen recovers committed records",
+      "failure_oracle": "Protected plaintext in WAL or acknowledged data missing/unauthenticated. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E04/cfg.json (future artifact; secrets excluded)",
+        "PQR-E04/fx.json (future artifact; secrets excluded)",
+        "PQR-E04/hash.json (future artifact; secrets excluded)",
+        "PQR-E04/state.json (future artifact; secrets excluded)",
+        "PQR-E04/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E05",
+      "group": "Encryption and confidentiality",
+      "description": "SHM classification and isolation",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: two owned connections to the same profile only; actual WAL-index activity",
+      "operation": "Inspect SHM content classes, marker/key detectors and file-access scope",
+      "expected_result": "No protected content/key material; operational WAL-index metadata explicitly inventoried without blanket encryption claim",
+      "failure_oracle": "Sensitive bytes or foreign scope in SHM; metadata falsely called encrypted. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E05/cfg.json (future artifact; secrets excluded)",
+        "PQR-E05/fx.json (future artifact; secrets excluded)",
+        "PQR-E05/hash.json (future artifact; secrets excluded)",
+        "PQR-E05/state.json (future artifact; secrets excluded)",
+        "PQR-E05/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E06",
+      "group": "Encryption and confidentiality",
+      "description": "Rollback journal protection",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: separate DELETE-mode diagnostic; dirty transaction held after journal writes",
+      "operation": "Observe real rollback-journal payload/header; roll back and verify baseline",
+      "expected_result": "Journal data pages protected; rollback preserves baseline; plaintext/path leakage classified",
+      "failure_oracle": "Sensitive plaintext spill or wrong rollback result. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E06/cfg.json (future artifact; secrets excluded)",
+        "PQR-E06/fx.json (future artifact; secrets excluded)",
+        "PQR-E06/hash.json (future artifact; secrets excluded)",
+        "PQR-E06/state.json (future artifact; secrets excluded)",
+        "PQR-E06/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E07",
+      "group": "Encryption and confidentiality",
+      "description": "Statement-journal protection",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: bounded multi-row statement failure/savepoint workload; internal I/O visibility",
+      "operation": "Force the reviewed statement-journal path and record its memory/disk lifecycle",
+      "expected_result": "Any actual disk payload protected; memory-only/no-disk conclusion supported by full path instrumentation",
+      "failure_oracle": "Unobserved journal counted as covered or protected plaintext spilled. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E07/cfg.json (future artifact; secrets excluded)",
+        "PQR-E07/fx.json (future artifact; secrets excluded)",
+        "PQR-E07/hash.json (future artifact; secrets excluded)",
+        "PQR-E07/state.json (future artifact; secrets excluded)",
+        "PQR-E07/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E08",
+      "group": "Encryption and confidentiality",
+      "description": "Memory-only temporary workload",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G03 resolved for this case",
+        "G04 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: bounded TEMP table, materialization, ORDER BY/DISTINCT and transient-index fixture",
+      "operation": "Run fixed workload while tracing owned/temp/unlinked storage and bounded allocation",
+      "expected_result": "Memory-temp contract holds for covered operations; no unintended plaintext disk artifacts",
+      "failure_oracle": "Disk plaintext, untracked transient writes or treating TEMP_STORE alone as proof. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E08/cfg.json (future artifact; secrets excluded)",
+        "PQR-E08/fx.json (future artifact; secrets excluded)",
+        "PQR-E08/hash.json (future artifact; secrets excluded)",
+        "PQR-E08/state.json (future artifact; secrets excluded)",
+        "PQR-E08/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G03",
+        "G04"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E09",
+      "group": "Encryption and confidentiality",
+      "description": "VACUUM/rebuild transient protection",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned populated encrypted profile-A copy; all VFS paths observed",
+      "operation": "Run reviewed vacuum/rebuild operation; compare exact logical records and transient inventory",
+      "expected_result": "Records unchanged; persistent/transient protection contract preserved",
+      "failure_oracle": "Plaintext staging, unexpected path or altered accepted data. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E09/cfg.json (future artifact; secrets excluded)",
+        "PQR-E09/fx.json (future artifact; secrets excluded)",
+        "PQR-E09/hash.json (future artifact; secrets excluded)",
+        "PQR-E09/state.json (future artifact; secrets excluded)",
+        "PQR-E09/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E10",
+      "group": "Encryption and confidentiality",
+      "description": "Checkpoint and normal close",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G03 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: committed WAL fixture; statements/cursors retired",
+      "operation": "Checkpoint in frozen mode, close, inventory remaining artifacts and reopen under a new lease",
+      "expected_result": "All committed rows survive; actual checkpoint/close results and residual artifacts reported",
+      "failure_oracle": "False closed/clean acknowledgement, lost rows or deleting live sidecars to pass. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E10/cfg.json (future artifact; secrets excluded)",
+        "PQR-E10/fx.json (future artifact; secrets excluded)",
+        "PQR-E10/hash.json (future artifact; secrets excluded)",
+        "PQR-E10/state.json (future artifact; secrets excluded)",
+        "PQR-E10/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G03"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E11",
+      "group": "Encryption and confidentiality",
+      "description": "Correct-key fresh-process reopen",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case",
+        "G08 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: closed encrypted profile fixture; controller retains key only in memory",
+      "operation": "Pass key via owned nonlogging channel to fresh worker; authenticated full record/identity read",
+      "expected_result": "Exact expected scope/suite/version and full synthetic data readable",
+      "failure_oracle": "Open return code alone accepted as proof or wrong identity published. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E11/cfg.json (future artifact; secrets excluded)",
+        "PQR-E11/fx.json (future artifact; secrets excluded)",
+        "PQR-E11/hash.json (future artifact; secrets excluded)",
+        "PQR-E11/state.json (future artifact; secrets excluded)",
+        "PQR-E11/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05",
+        "G08"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-E12",
+      "group": "Encryption and confidentiality",
+      "description": "Plaintext-detector positive and negative controls",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: explicitly labeled unencrypted synthetic controls separate from encrypted cases",
+      "operation": "Prove marker detectors on actual main/WAL controls and encrypted counterpart across raw/UTF-8/binary corpus",
+      "expected_result": "Positive controls detected and scan coverage demonstrated; absence alone never proves encryption",
+      "failure_oracle": "Broken/missing positive detector control or header-only confidentiality claim. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-E12/cfg.json (future artifact; secrets excluded)",
+        "PQR-E12/fx.json (future artifact; secrets excluded)",
+        "PQR-E12/hash.json (future artifact; secrets excluded)",
+        "PQR-E12/state.json (future artifact; secrets excluded)",
+        "PQR-E12/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K01",
+      "group": "Key binding and lifecycle",
+      "description": "Correct profile-key binding",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G03 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: profile-A database and authorized current A lease",
+      "operation": "Bind a 32-byte key containing embedded zero bytes using explicit length; authenticated read",
+      "expected_result": "Full key length preserved and data correct; no String/hex/URI key conversion",
+      "failure_oracle": "strlen/truncation, implicit raw-key reinterpretation or wrong identity success. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K01/cfg.json (future artifact; secrets excluded)",
+        "PQR-K01/fx.json (future artifact; secrets excluded)",
+        "PQR-K01/hash.json (future artifact; secrets excluded)",
+        "PQR-K01/state.json (future artifact; secrets excluded)",
+        "PQR-K01/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G03"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K02",
+      "group": "Key binding and lifecycle",
+      "description": "Wrong-profile key rejection",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: profile-B encrypted database; independent key A",
+      "operation": "Use key A against B in an owned noncreating reopen path",
+      "expected_result": "Authenticated read rejected; B ciphertext preserved and no foreign results delivered",
+      "failure_oracle": "Cross-profile data or destructive/key-regeneration fallback. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K02/cfg.json (future artifact; secrets excluded)",
+        "PQR-K02/fx.json (future artifact; secrets excluded)",
+        "PQR-K02/hash.json (future artifact; secrets excluded)",
+        "PQR-K02/state.json (future artifact; secrets excluded)",
+        "PQR-K02/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K03",
+      "group": "Key binding and lifecycle",
+      "description": "Catalog/profile key separation",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: catalog and A/B fixtures with independent key inputs",
+      "operation": "Attempt profile key against catalog, with native scope binding and known positive controls",
+      "expected_result": "Catalog protected independently; wrong scope/key rejected; no bootstrap shortcut",
+      "failure_oracle": "Shared-key bypass, sensitive catalog exposure or arbitrary directory adoption. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K03/cfg.json (future artifact; secrets excluded)",
+        "PQR-K03/fx.json (future artifact; secrets excluded)",
+        "PQR-K03/hash.json (future artifact; secrets excluded)",
+        "PQR-K03/state.json (future artifact; secrets excluded)",
+        "PQR-K03/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K04",
+      "group": "Key binding and lifecycle",
+      "description": "Independent incorrect key",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G04 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: existing A ciphertext; unrelated 32-byte key W",
+      "operation": "Noncreating open, bind W and force authenticated schema/identity read",
+      "expected_result": "Safe rejection and preservation; all unintended I/O classified",
+      "failure_oracle": "Accepted plaintext/data or reset/new key over ciphertext. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K04/cfg.json (future artifact; secrets excluded)",
+        "PQR-K04/fx.json (future artifact; secrets excluded)",
+        "PQR-K04/hash.json (future artifact; secrets excluded)",
+        "PQR-K04/state.json (future artifact; secrets excluded)",
+        "PQR-K04/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G04"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K05",
+      "group": "Key binding and lifecycle",
+      "description": "Missing key input",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: existing encrypted A; no key lease/value",
+      "operation": "Request reopen without key; observe adapter/provider call boundary",
+      "expected_result": "Adapter denies before data access or create/reset effects",
+      "failure_oracle": "Stock/keyless SQLite fallback or any accepted record. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K05/cfg.json (future artifact; secrets excluded)",
+        "PQR-K05/fx.json (future artifact; secrets excluded)",
+        "PQR-K05/hash.json (future artifact; secrets excluded)",
+        "PQR-K05/state.json (future artifact; secrets excluded)",
+        "PQR-K05/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K06",
+      "group": "Key binding and lifecycle",
+      "description": "Null key pointer",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned handle setup with input pointer NULL and declared length32",
+      "operation": "Exercise isolated binding invalid-input branch without database query",
+      "expected_result": "Coarse invalid-key failure; no provider key/data access and owned-buffer cleanup defined",
+      "failure_oracle": "Crash, dereference, fallback or false success. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K06/cfg.json (future artifact; secrets excluded)",
+        "PQR-K06/fx.json (future artifact; secrets excluded)",
+        "PQR-K06/hash.json (future artifact; secrets excluded)",
+        "PQR-K06/state.json (future artifact; secrets excluded)",
+        "PQR-K06/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K07",
+      "group": "Key binding and lifecycle",
+      "description": "31-byte malformed key",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned scope with 31-byte input buffer",
+      "operation": "Reject invalid length and retire caller-owned input per contract",
+      "expected_result": "No silent padding/truncation or database access",
+      "failure_oracle": "Accepted short key or abandoned owned secret buffer. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K07/cfg.json (future artifact; secrets excluded)",
+        "PQR-K07/fx.json (future artifact; secrets excluded)",
+        "PQR-K07/hash.json (future artifact; secrets excluded)",
+        "PQR-K07/state.json (future artifact; secrets excluded)",
+        "PQR-K07/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K08",
+      "group": "Key binding and lifecycle",
+      "description": "33-byte malformed key",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned scope with 33-byte input buffer",
+      "operation": "Reject invalid length and retire caller-owned input per contract",
+      "expected_result": "No silent truncation or reinterpretation",
+      "failure_oracle": "Accepted long key or abandoned owned secret buffer. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K08/cfg.json (future artifact; secrets excluded)",
+        "PQR-K08/fx.json (future artifact; secrets excluded)",
+        "PQR-K08/hash.json (future artifact; secrets excluded)",
+        "PQR-K08/state.json (future artifact; secrets excluded)",
+        "PQR-K08/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K09",
+      "group": "Key binding and lifecycle",
+      "description": "Native scope/lease mismatch",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: valid A key but foreign or retired registered store lease",
+      "operation": "Attempt operation through adapter with mismatched native ownership",
+      "expected_result": "Rejected before sensitive result publication/native DB authority",
+      "failure_oracle": "Caller-supplied UUID grants authority or wrong scope receives data. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K09/cfg.json (future artifact; secrets excluded)",
+        "PQR-K09/fx.json (future artifact; secrets excluded)",
+        "PQR-K09/hash.json (future artifact; secrets excluded)",
+        "PQR-K09/state.json (future artifact; secrets excluded)",
+        "PQR-K09/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K10",
+      "group": "Key binding and lifecycle",
+      "description": "Authenticated database identity mismatch",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: valid encryption key; fixture has deliberately wrong profile/suite/schema identity",
+      "operation": "Decrypt/authenticate then validate expected native scope and format before publication",
+      "expected_result": "Fail closed on identity/version mismatch; preserve original; no records published",
+      "failure_oracle": "Encryption success bypasses semantic identity or silently migrates/resets. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K10/cfg.json (future artifact; secrets excluded)",
+        "PQR-K10/fx.json (future artifact; secrets excluded)",
+        "PQR-K10/hash.json (future artifact; secrets excluded)",
+        "PQR-K10/state.json (future artifact; secrets excluded)",
+        "PQR-K10/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K11",
+      "group": "Key binding and lifecycle",
+      "description": "Repeated open and close",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G08 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: one A fixture; ten fixed fresh-lease cycles",
+      "operation": "Open/authenticate/read/close serially; record handles and final scope generation",
+      "expected_result": "All ten planned cycles resolve; no leaked handles or stale completion reuse",
+      "failure_oracle": "Handle/key lease leaks, corrupted state or false close. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K11/cfg.json (future artifact; secrets excluded)",
+        "PQR-K11/fx.json (future artifact; secrets excluded)",
+        "PQR-K11/hash.json (future artifact; secrets excluded)",
+        "PQR-K11/state.json (future artifact; secrets excluded)",
+        "PQR-K11/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G08"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K12",
+      "group": "Key binding and lifecycle",
+      "description": "Close with outstanding cursor",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned prepared statement/cursor intentionally retained",
+      "operation": "Request close under reviewed close/close_v2 semantics, then retire cursor and reconcile",
+      "expected_result": "No false closed/key-retired acknowledgement while access remains; eventual real close traced",
+      "failure_oracle": "BUSY/zombie handle reported retired or key wiped before safe ownership resolution. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K12/cfg.json (future artifact; secrets excluded)",
+        "PQR-K12/fx.json (future artifact; secrets excluded)",
+        "PQR-K12/hash.json (future artifact; secrets excluded)",
+        "PQR-K12/state.json (future artifact; secrets excluded)",
+        "PQR-K12/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K13",
+      "group": "Key binding and lifecycle",
+      "description": "Retired lease and late completion",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: controlled async adapter result queued before lease retirement",
+      "operation": "Retire generation/close and deliver queued result under old context",
+      "expected_result": "No sensitive delivery to retired/foreign consumer; committed outcome reconciled internally",
+      "failure_oracle": "Late publication, unauthorized replay or false rollback acknowledgement. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K13/cfg.json (future artifact; secrets excluded)",
+        "PQR-K13/fx.json (future artifact; secrets excluded)",
+        "PQR-K13/hash.json (future artifact; secrets excluded)",
+        "PQR-K13/state.json (future artifact; secrets excluded)",
+        "PQR-K13/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K14",
+      "group": "Key binding and lifecycle",
+      "description": "Private context refused by persistence",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G04 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: private DataScope plus attempted catalog/profile persistence request",
+      "operation": "Observe admission before queue/path/key/provider access",
+      "expected_result": "No persistent lease, DB call, receipt or private metadata write",
+      "failure_oracle": "Private flag routed into persistent DB or cleanup log. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K14/cfg.json (future artifact; secrets excluded)",
+        "PQR-K14/fx.json (future artifact; secrets excluded)",
+        "PQR-K14/hash.json (future artifact; secrets excluded)",
+        "PQR-K14/state.json (future artifact; secrets excluded)",
+        "PQR-K14/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G04"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K15",
+      "group": "Key binding and lifecycle",
+      "description": "Caller-buffer retirement on bind failure",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned valid-length buffer; deterministic provider binding error",
+      "operation": "Exercise owned-consumed/borrowed failure path and instrument caller cleanup",
+      "expected_result": "One defined owner clears eligible caller buffer on every terminal path; no secret logging",
+      "failure_oracle": "Unowned error buffer retained or claiming wipe without observation. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K15/cfg.json (future artifact; secrets excluded)",
+        "PQR-K15/fx.json (future artifact; secrets excluded)",
+        "PQR-K15/hash.json (future artifact; secrets excluded)",
+        "PQR-K15/state.json (future artifact; secrets excluded)",
+        "PQR-K15/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-K16",
+      "group": "Key binding and lifecycle",
+      "description": "Key lifetime after successful bind and close",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G03 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned binary input; lazy derivation/read and provider close observed",
+      "operation": "Clear caller scratch after documented copy, authenticate/read, then retire connections/provider handles",
+      "expected_result": "Successful read after caller cleanup; reviewed provider-handle retirement; zeroization limits explicit",
+      "failure_oracle": "Use-after-free, hidden live access after close or universal RAM-erasure claim. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE"
+      ],
+      "evidence_to_capture": [
+        "PQR-K16/cfg.json (future artifact; secrets excluded)",
+        "PQR-K16/fx.json (future artifact; secrets excluded)",
+        "PQR-K16/hash.json (future artifact; secrets excluded)",
+        "PQR-K16/state.json (future artifact; secrets excluded)",
+        "PQR-K16/trace.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G03"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T01",
+      "group": "Tamper and corruption",
+      "description": "First-page/salt mutation",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: disposable encrypted copy; untouched baseline retained",
+      "operation": "Mutate one frozen source-audited first-page byte; fresh correct-key read",
+      "expected_result": "Tamper rejected or explicit authenticated unavailable/corrupt result; no reset",
+      "failure_oracle": "Accepted unauthenticated protected data or destructive fallback. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T01/cfg.json (future artifact; secrets excluded)",
+        "PQR-T01/fx.json (future artifact; secrets excluded)",
+        "PQR-T01/hash.json (future artifact; secrets excluded)",
+        "PQR-T01/state.json (future artifact; secrets excluded)",
+        "PQR-T01/trace.json (future artifact; secrets excluded)",
+        "PQR-T01/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T02",
+      "group": "Tamper and corruption",
+      "description": "Nonheader ciphertext mutation",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned copy; known occupied nonheader page offset",
+      "operation": "Flip exactly one ciphertext byte; fresh reader plus integrity oracles",
+      "expected_result": "Affected authenticated read rejected; original preserved",
+      "failure_oracle": "Tampered record accepted or fault ignored by cached-only read. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T02/cfg.json (future artifact; secrets excluded)",
+        "PQR-T02/fx.json (future artifact; secrets excluded)",
+        "PQR-T02/hash.json (future artifact; secrets excluded)",
+        "PQR-T02/state.json (future artifact; secrets excluded)",
+        "PQR-T02/trace.json (future artifact; secrets excluded)",
+        "PQR-T02/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T03",
+      "group": "Tamper and corruption",
+      "description": "Authentication-tag mutation",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned copy; source/config-reviewed tag offset",
+      "operation": "Flip one HMAC/tag byte; full page authentication/read",
+      "expected_result": "Tamper detected; no accepted affected plaintext",
+      "failure_oracle": "Wrong offset guessed or tag change accepted. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T03/cfg.json (future artifact; secrets excluded)",
+        "PQR-T03/fx.json (future artifact; secrets excluded)",
+        "PQR-T03/hash.json (future artifact; secrets excluded)",
+        "PQR-T03/state.json (future artifact; secrets excluded)",
+        "PQR-T03/trace.json (future artifact; secrets excluded)",
+        "PQR-T03/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T04",
+      "group": "Tamper and corruption",
+      "description": "Same-file page swap",
+      "mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned multi-page A copy; source-audited occupied pages",
+      "operation": "Swap two authenticated pages and open in a fresh process",
+      "expected_result": "Page-position/integrity violation rejected for declared format",
+      "failure_oracle": "Swapped protected rows accepted or no affected page read. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T04/cfg.json (future artifact; secrets excluded)",
+        "PQR-T04/fx.json (future artifact; secrets excluded)",
+        "PQR-T04/hash.json (future artifact; secrets excluded)",
+        "PQR-T04/state.json (future artifact; secrets excluded)",
+        "PQR-T04/trace.json (future artifact; secrets excluded)",
+        "PQR-T04/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T05",
+      "group": "Tamper and corruption",
+      "description": "Cross-profile page substitution",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: A/B copies; different keys and independently tagged public data",
+      "operation": "Replace one A page from B then authenticate affected/full records",
+      "expected_result": "No foreign data accepted; explicit integrity failure",
+      "failure_oracle": "Accepted cross-profile page or fallback repair overwrites source. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T05/cfg.json (future artifact; secrets excluded)",
+        "PQR-T05/fx.json (future artifact; secrets excluded)",
+        "PQR-T05/hash.json (future artifact; secrets excluded)",
+        "PQR-T05/state.json (future artifact; secrets excluded)",
+        "PQR-T05/trace.json (future artifact; secrets excluded)",
+        "PQR-T05/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T06",
+      "group": "Tamper and corruption",
+      "description": "Truncated encrypted database",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned populated A copy; exact mid-page cut offset frozen",
+      "operation": "Truncate only disposable copy; correct-key integrity/full record attempt",
+      "expected_result": "Explicit truncated/corrupt failure; no partial state advertised complete",
+      "failure_oracle": "Silent empty recreation, accepted incomplete dataset or source mutation. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T06/cfg.json (future artifact; secrets excluded)",
+        "PQR-T06/fx.json (future artifact; secrets excluded)",
+        "PQR-T06/hash.json (future artifact; secrets excluded)",
+        "PQR-T06/state.json (future artifact; secrets excluded)",
+        "PQR-T06/trace.json (future artifact; secrets excluded)",
+        "PQR-T06/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T07",
+      "group": "Tamper and corruption",
+      "description": "Malformed non-database input",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned file of fixed public non-SQLite bytes; existing-file open path",
+      "operation": "Apply reviewed keyed open and semantic validation without CREATE",
+      "expected_result": "Coarse unsupported/corrupt result; bytes preserved",
+      "failure_oracle": "File overwritten, schema created or accepted as empty valid profile. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T07/cfg.json (future artifact; secrets excluded)",
+        "PQR-T07/fx.json (future artifact; secrets excluded)",
+        "PQR-T07/hash.json (future artifact; secrets excluded)",
+        "PQR-T07/state.json (future artifact; secrets excluded)",
+        "PQR-T07/trace.json (future artifact; secrets excluded)",
+        "PQR-T07/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T08",
+      "group": "Tamper and corruption",
+      "description": "Corrupt committed WAL frame",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: coherent owned main/WAL fault fixture at frozen frame boundary",
+      "operation": "Mutate selected occupied frame on a stopped disposable copy; correct-key reopen",
+      "expected_result": "Authentication/recovery fails truthfully or matches frozen valid ledger; no tampered page accepted",
+      "failure_oracle": "Tampered data accepted or missing committed data hidden. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T08/cfg.json (future artifact; secrets excluded)",
+        "PQR-T08/fx.json (future artifact; secrets excluded)",
+        "PQR-T08/hash.json (future artifact; secrets excluded)",
+        "PQR-T08/state.json (future artifact; secrets excluded)",
+        "PQR-T08/trace.json (future artifact; secrets excluded)",
+        "PQR-T08/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T09",
+      "group": "Tamper and corruption",
+      "description": "Corrupt hot rollback journal",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned stopped rollback fixture with known prior committed baseline",
+      "operation": "Mutate journal payload at declared point; correct-key recovery attempt",
+      "expected_result": "Authenticated prior data recovered or explicit preserved corruption blocks success",
+      "failure_oracle": "Unauthenticated rollback data, silent reset or fabricated recovery success. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T09/cfg.json (future artifact; secrets excluded)",
+        "PQR-T09/fx.json (future artifact; secrets excluded)",
+        "PQR-T09/hash.json (future artifact; secrets excluded)",
+        "PQR-T09/state.json (future artifact; secrets excluded)",
+        "PQR-T09/trace.json (future artifact; secrets excluded)",
+        "PQR-T09/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-T10",
+      "group": "Tamper and corruption",
+      "description": "Integrity-oracle interpretation after corruption",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: corrupt copy plus identical clean control; fresh and error-state connections",
+      "operation": "Compare cipher_integrity_check, structural checks and actual authenticated records on fresh handles",
+      "expected_result": "Crypto/structural results distinguished; error-poisoned connection cannot manufacture coverage",
+      "failure_oracle": "Normal integrity_check alone treated as MAC proof or cascaded errors misreported as independent corruption. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-T10/cfg.json (future artifact; secrets excluded)",
+        "PQR-T10/fx.json (future artifact; secrets excluded)",
+        "PQR-T10/hash.json (future artifact; secrets excluded)",
+        "PQR-T10/state.json (future artifact; secrets excluded)",
+        "PQR-T10/trace.json (future artifact; secrets excluded)",
+        "PQR-T10/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R01",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Transaction rollback before commit",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: known committed baseline and one pending mutation",
+      "operation": "Explicitly abort before commit and reopen with correct key",
+      "expected_result": "Exact baseline data/receipt remains; pending mutation absent",
+      "failure_oracle": "Uncommitted data published or false commit receipt. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R01/cfg.json (future artifact; secrets excluded)",
+        "PQR-R01/fx.json (future artifact; secrets excluded)",
+        "PQR-R01/hash.json (future artifact; secrets excluded)",
+        "PQR-R01/state.json (future artifact; secrets excluded)",
+        "PQR-R01/trace.json (future artifact; secrets excluded)",
+        "PQR-R01/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R02",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Process termination before commit call",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case",
+        "G08 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: worker paused after reviewed dirty writes but before invoking COMMIT",
+      "operation": "Terminate only registered worker; reopen under correct key and baseline ledger",
+      "expected_result": "Prior acknowledged baseline intact; pending mutation not committed",
+      "failure_oracle": "Wrong PID, uncontrolled kill or uncommitted success. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R02/cfg.json (future artifact; secrets excluded)",
+        "PQR-R02/fx.json (future artifact; secrets excluded)",
+        "PQR-R02/hash.json (future artifact; secrets excluded)",
+        "PQR-R02/state.json (future artifact; secrets excluded)",
+        "PQR-R02/trace.json (future artifact; secrets excluded)",
+        "PQR-R02/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R03",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Termination after commit before acknowledgement",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case",
+        "G08 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: COMMIT returned SQLITE_OK; controller acknowledgement deliberately withheld",
+      "operation": "Terminate at exact barrier; reopen and reconcile retained mutation receipt",
+      "expected_result": "Committed data/receipt present; operation not blindly replayed",
+      "failure_oracle": "Committed write labeled rolled back or duplicate effect from retry. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R03/cfg.json (future artifact; secrets excluded)",
+        "PQR-R03/fx.json (future artifact; secrets excluded)",
+        "PQR-R03/hash.json (future artifact; secrets excluded)",
+        "PQR-R03/state.json (future artifact; secrets excluded)",
+        "PQR-R03/trace.json (future artifact; secrets excluded)",
+        "PQR-R03/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R04",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Incorrect-key reopen after interruption",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned interrupted fixture with known valid correct-key control",
+      "operation": "Try independent W key before a separately controlled correct-key recovery",
+      "expected_result": "Wrong-key access rejected and recoverable ciphertext not reset",
+      "failure_oracle": "Incorrect-key acceptance or replacement key/schema generated. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R04/cfg.json (future artifact; secrets excluded)",
+        "PQR-R04/fx.json (future artifact; secrets excluded)",
+        "PQR-R04/hash.json (future artifact; secrets excluded)",
+        "PQR-R04/state.json (future artifact; secrets excluded)",
+        "PQR-R04/trace.json (future artifact; secrets excluded)",
+        "PQR-R04/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R05",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Checkpoint interruption",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case",
+        "G08 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: committed WAL transaction; reviewed checkpoint write/sync hook",
+      "operation": "Terminate during frozen checkpoint boundary and reopen without manual sidecar deletion",
+      "expected_result": "All previously acknowledged rows/receipts recovered; actual residual artifacts traced",
+      "failure_oracle": "Lost acknowledged rows, ignored integrity error or sidecar deletion used to pass. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R05/cfg.json (future artifact; secrets excluded)",
+        "PQR-R05/fx.json (future artifact; secrets excluded)",
+        "PQR-R05/hash.json (future artifact; secrets excluded)",
+        "PQR-R05/state.json (future artifact; secrets excluded)",
+        "PQR-R05/trace.json (future artifact; secrets excluded)",
+        "PQR-R05/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R06",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Bounded SQLITE_BUSY handling",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G03 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned competing connection holds declared write lock",
+      "operation": "Attempt mutation under frozen timeout/retry policy; release controller lock",
+      "expected_result": "Bounded busy result without false receipt; known state consistent",
+      "failure_oracle": "Unbounded retry, dropped committed data or false saved state. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R06/cfg.json (future artifact; secrets excluded)",
+        "PQR-R06/fx.json (future artifact; secrets excluded)",
+        "PQR-R06/hash.json (future artifact; secrets excluded)",
+        "PQR-R06/state.json (future artifact; secrets excluded)",
+        "PQR-R06/trace.json (future artifact; secrets excluded)",
+        "PQR-R06/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G03",
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R07",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Injected write I/O failure",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: owned VFS hook with exact operation/ordinal/error frozen",
+      "operation": "Inject one SQLITE_IOERR write failure, retain artifacts and reopen",
+      "expected_result": "No false commit; exact prior acknowledged ledger preserved or explicit unresolved corruption prevents pass",
+      "failure_oracle": "Silent data loss, destructive reset or guessed recovery success. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R07/cfg.json (future artifact; secrets excluded)",
+        "PQR-R07/fx.json (future artifact; secrets excluded)",
+        "PQR-R07/hash.json (future artifact; secrets excluded)",
+        "PQR-R07/state.json (future artifact; secrets excluded)",
+        "PQR-R07/trace.json (future artifact; secrets excluded)",
+        "PQR-R07/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05",
+        "G06"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R08",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Injected SQLITE_FULL",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case",
+        "G08 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: bounded synthetic VFS/quota; never exhaust host volume",
+      "operation": "Inject deterministic FULL at frozen write point and reopen",
+      "expected_result": "Bounded failure; no false success, prior data checked and artifacts retained",
+      "failure_oracle": "Host disk filled, unbounded growth or false committed receipt. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R08/cfg.json (future artifact; secrets excluded)",
+        "PQR-R08/fx.json (future artifact; secrets excluded)",
+        "PQR-R08/hash.json (future artifact; secrets excluded)",
+        "PQR-R08/state.json (future artifact; secrets excluded)",
+        "PQR-R08/trace.json (future artifact; secrets excluded)",
+        "PQR-R08/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R09",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Single-database encrypted snapshot",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G04 resolved for this case",
+        "G05 resolved for this case",
+        "G07 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: quiesced A fixture; selected copy API and fresh encrypted destination",
+      "operation": "Copy via reviewed public interface, verify destination artifacts/settings/full records",
+      "expected_result": "Coherent single-DB records and encrypted destination; no plaintext staging",
+      "failure_oracle": "Backup API name assumed encrypted or snapshot loses committed state. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R09/cfg.json (future artifact; secrets excluded)",
+        "PQR-R09/fx.json (future artifact; secrets excluded)",
+        "PQR-R09/hash.json (future artifact; secrets excluded)",
+        "PQR-R09/state.json (future artifact; secrets excluded)",
+        "PQR-R09/trace.json (future artifact; secrets excluded)",
+        "PQR-R09/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G04",
+        "G05",
+        "G07"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R10",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Copy-and-promote rotation interrupted before promotion",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case",
+        "G07 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: old keyed source plus fresh-key destination and retained intent",
+      "operation": "Interrupt protected copy before publication; reopen old source with old key",
+      "expected_result": "Old recoverable branch/required key retained; incomplete candidate never published",
+      "failure_oracle": "Sole source/key discarded or partial destination called active. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R10/cfg.json (future artifact; secrets excluded)",
+        "PQR-R10/fx.json (future artifact; secrets excluded)",
+        "PQR-R10/hash.json (future artifact; secrets excluded)",
+        "PQR-R10/state.json (future artifact; secrets excluded)",
+        "PQR-R10/trace.json (future artifact; secrets excluded)",
+        "PQR-R10/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R11",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Copy-and-promote interruption at promotion boundary",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G05 resolved for this case",
+        "G06 resolved for this case",
+        "G07 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: complete verified destination and frozen promotion/intent/checkpoint protocol",
+      "operation": "Interrupt at one reviewed before/after publication barrier; restart reconciliation",
+      "expected_result": "Exactly declared complete branch active or explicit ambiguity blocked; both sources retained until safe",
+      "failure_oracle": "False atomicity/global transaction, stale intent accepted or destructive cleanup. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R11/cfg.json (future artifact; secrets excluded)",
+        "PQR-R11/fx.json (future artifact; secrets excluded)",
+        "PQR-R11/hash.json (future artifact; secrets excluded)",
+        "PQR-R11/state.json (future artifact; secrets excluded)",
+        "PQR-R11/trace.json (future artifact; secrets excluded)",
+        "PQR-R11/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    },
+    {
+      "id": "PQR-R12",
+      "group": "Interruption, recovery and copy/rotation",
+      "description": "Post-rotation key separation and retained old branch",
+      "mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "preconditions": [
+        "Separate explicit authorization for the isolated adapter/harness and this bounded run",
+        "Reviewed owned path/worker/key/fixture manifest, positive controls, fixed operation limits and exact frozen oracles",
+        "G02 resolved for this case",
+        "G05 resolved for this case",
+        "G06 resolved for this case",
+        "G07 resolved for this case"
+      ],
+      "synthetic_fixture": "Proposed; not created here: successful synthetic promotion; old/new key inputs and separate source copies",
+      "operation": "New key reopens promoted DB; old key denied there; old retained branch checked with its own key",
+      "expected_result": "Exact content/scope/version and key-generation boundaries; no silent loss of declared old dependency",
+      "failure_oracle": "Old key grants current normal access, wrong version promoted or old recovery branch destroyed. Missing artifact/visibility or unfrozen oracle remains BLOCKED/INCONCLUSIVE; never PASS by absence.",
+      "evidence_codes": [
+        "CFG",
+        "FX",
+        "HASH",
+        "STATE",
+        "TRACE",
+        "FAULT"
+      ],
+      "evidence_to_capture": [
+        "PQR-R12/cfg.json (future artifact; secrets excluded)",
+        "PQR-R12/fx.json (future artifact; secrets excluded)",
+        "PQR-R12/hash.json (future artifact; secrets excluded)",
+        "PQR-R12/state.json (future artifact; secrets excluded)",
+        "PQR-R12/trace.json (future artifact; secrets excluded)",
+        "PQR-R12/fault.json (future artifact; secrets excluded)"
+      ],
+      "cleanup_requirements": "Fence admission; reconcile pending operations; finalize statements/cursors and confirm real close; retire native key/scratch ownership. Inventory/hash declared residual artifacts. Remove only registered, quiescent owned successes after evidence capture; retain failed/ambiguous ciphertext and originals. Never unlink live sidecars or touch original browser stores. Faulted workers are terminated only by registered PID/start token.",
+      "environment": "Existing DB0 provider-harness family; macOS27.2 arm64 discovery/minos26 only. M26 acceptance and Stage C remain deferred.",
+      "status": "Proposed / Not Executed",
+      "readiness": "BLOCKED",
+      "blocking_gap_references": [
+        "G02",
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "OP_dependency": "No unresolved owner policy needed for these fixed synthetic inputs. OP-03 is relevant to future product snapshot lifecycle; this plan does not choose a retention policy.",
+      "not_validated": "No Keychain/recovery-custody, WebKit/private-engine, production Core/bridge, cross-Mac backup, hardware-power-loss, forensic memory erasure or release claim."
+    }
+  ]
+}
