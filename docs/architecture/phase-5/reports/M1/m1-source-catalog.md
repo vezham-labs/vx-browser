@@ -47,3 +47,7 @@ New maintained supporting specifications: [Persistent-profile encryption v1.0](m
 ## Vendor archive verification — 2026-11-08 (latest source checkpoint)
 
 [Publisher evidence §8, current verification](m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint) at baseline 0139c80a519f1b90c2d06bacea9d2af2620b16cc supplies the maintained-verifier signature and complete signed-archive-to-pin comparison. Source authenticity PASS via the vendor archive; the previous BLOCKED acquisition snapshot is preserved, not rewritten. Evidence: ../../evidence/20261108T142421Z-m1-vendor-archive-verification/. No pinned-source change, source execution/build, runtime qualification, owner/ADR change or release. GnuPG and required host-tool dependencies were installed only after explicit owner approval; browser dependencies are unchanged.
+
+## SQLCipher worker and key-binding design — 2026-11-08
+
+The proposed design supplies the scoped native qualification worker, exact static link plan, key lifecycle, settings sequence, synthetic fixture contracts and controlled fault barriers. All 50 PQR scenarios remain unexecuted. The design is ready for owner review, while implementation and runtime prerequisites remain pending. The private-refusal mapping correction is recorded for the future executable procedure. [Worker and key-binding design](m1-sqlcipher-worker-and-key-binding-design.md)

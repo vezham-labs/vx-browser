@@ -1,0 +1,268 @@
+# Codex Task: M1 – Isolated SQLCipher Worker & Key-Binding Design
+
+## Repository
+
+`vezham-labs/vx-browser`
+
+Branch: `timeline`
+
+## Objective
+
+Prepare the detailed technical design for an isolated native SQLCipher worker and its key-binding lifecycle.
+
+The purpose is to establish a safe, independently testable boundary between Browser Core, BrowserPersistence and the SQLCipher provider before runtime qualification.
+
+This task follows the completed readiness review:
+
+`docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md`
+
+The current readiness assessment is:
+
+- 3 prerequisites PASS
+- 5 prerequisites BLOCKED
+- 4 prerequisites INCONCLUSIVE
+- 50 proposed test cases
+- 0 runtime test cases executed
+
+The vendor-authenticated SQLCipher source and pinned source correspondence are already PASS. Do not repeat that investigation.
+
+## Step 1 – Inspect the existing architecture
+
+Read the canonical M1 documentation, including:
+
+- Runtime readiness report.
+- Persistent profile encryption specification.
+- Keychain and independent recovery specification.
+- Browser Core architecture.
+- BrowserPersistence contracts.
+- Provider and fixture qualification report.
+- M1 Developer Specification.
+- M1 Validation Plan.
+- Relevant ADRs and owner decisions.
+
+Inspect existing source code and repository structure.
+
+Identify existing interfaces and contracts before proposing anything new.
+
+Do not invent missing implementations or assume that a documented interface already exists in code.
+
+## Step 2 – SQLCipher native worker design
+
+Design an isolated native worker responsible for SQLCipher database operations.
+
+Document:
+
+1. Worker ownership and lifecycle.
+2. Static library and header integration.
+3. Compiler and linker configuration.
+4. Required SQLCipher/SQLite symbols.
+5. Symbol verification and library identity checks.
+6. Database connection creation and destruction.
+7. Thread and concurrency ownership.
+8. Cancellation and timeout handling.
+9. Error propagation.
+10. Worker termination and cleanup.
+
+Specify how the worker prevents unintended access to plaintext SQLite connections.
+
+The worker must not become a second owner of browser policy or profile state.
+
+## Step 3 – Key-binding lifecycle
+
+Design the complete key lifecycle.
+
+Cover:
+
+1. Profile identity validation.
+2. Key acquisition through the approved key-management boundary.
+3. Profile/key scope validation.
+4. Secure key transfer to the worker.
+5. SQLCipher key application.
+6. Database authentication.
+7. Database identity validation.
+8. Connection readiness.
+9. Key material lifetime.
+10. Database close.
+11. Key release and cleanup.
+
+Explicitly address:
+
+- Wrong key.
+- Missing key.
+- Malformed key.
+- Profile mismatch.
+- Repeated open and close.
+- Concurrent open requests.
+- Cancelled requests.
+- Worker termination during opening.
+- Stale key leases.
+- Key replacement or rotation, if supported by the approved contract.
+
+Define the states and legal transitions.
+
+Do not invent a key format or key derivation mechanism. Reuse the approved specifications or explicitly document the missing decision.
+
+## Step 4 – SQLCipher connection configuration
+
+Specify the exact order of connection initialization.
+
+Cover:
+
+- Key application before database access.
+- SQLCipher compatibility settings.
+- Required cipher configuration.
+- Page size and KDF settings where applicable.
+- Authentication/read validation.
+- Database initialization.
+- WAL configuration.
+- Checkpoint behavior.
+- Journal behavior.
+- Temporary storage.
+- Close and reopen behavior.
+
+For every setting, record:
+
+- Whether it is required.
+- Its source of authority.
+- When it must be applied.
+- How it will be verified.
+- What failure should look like.
+
+Do not assume that a successful PRAGMA command proves the effective configuration. Define the necessary readback or behavioral evidence.
+
+## Step 5 – Encrypted fixture architecture
+
+Design an isolated fixture generator for synthetic databases.
+
+Prepare fixture specifications for:
+
+- Empty encrypted database.
+- Populated encrypted database.
+- Wrong-key database access.
+- Wrong-profile access.
+- WAL activity.
+- Rollback journal activity.
+- Temporary storage.
+- Interrupted transaction.
+- Truncated database.
+- Modified database bytes.
+- Corrupted WAL and journal.
+- Reopen after process interruption.
+
+Define deterministic fixture inputs and expected outputs.
+
+No real browser data or personal data may be used.
+
+Do not execute the runtime fixtures in this task.
+
+## Step 6 – Controlled fault-injection design
+
+Specify a controlled fault-injection mechanism.
+
+Cover:
+
+- Failure before key binding.
+- Failure during key binding.
+- Failure during database authentication.
+- Failure during transaction.
+- Process interruption during write.
+- Checkpoint interruption.
+- Worker termination.
+- Cleanup failure.
+- Reopen after interruption.
+
+Define how each fault is triggered, observed and cleaned up.
+
+Fault injection must be restricted to the isolated test environment.
+
+## Step 7 – Security and isolation review
+
+Document how the design protects against:
+
+- Cross-profile key reuse.
+- Plaintext database creation.
+- Plaintext sidecar files.
+- Unintended temporary files.
+- Key leakage through logs.
+- Key retention after close.
+- Concurrent access races.
+- Worker lifecycle races.
+- Incomplete cleanup.
+- Accidental access to production browser data.
+
+Identify any design assumptions that still require validation.
+
+## Step 8 – Deliverables
+
+Create a timestamped evidence directory under:
+
+`docs/architecture/phase-5/evidence/`
+
+Create the report:
+
+`docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md`
+
+Include:
+
+- Architecture overview.
+- Worker responsibility boundaries.
+- Link configuration.
+- Key lifecycle state machine.
+- Database connection initialization sequence.
+- Fixture architecture.
+- Fault-injection design.
+- Security analysis.
+- Requirement-to-design traceability.
+- Unresolved decisions and blockers.
+- Proposed implementation sequence.
+- Proposed runtime qualification sequence.
+
+Include diagrams where they materially improve understanding.
+
+Update canonical M1 references append-only. Preserve previous evidence and historical outcomes.
+
+## Strict boundaries
+
+This task is design and preparation only.
+
+DO NOT:
+
+- Modify production source code.
+- Add SQLCipher to browser production dependencies.
+- Implement the native worker.
+- Execute encryption tests.
+- Execute EXP-03 or EXP-04.
+- Run Keychain experiments.
+- Run WebKit lifecycle experiments.
+- Create or migrate production databases.
+- Change ADR status.
+- Change owner decisions.
+- Send external messages.
+- Commit or push without my instruction.
+
+You may inspect existing code, existing build artifacts and retained evidence.
+
+If an isolated build or experiment is necessary to support a design claim, document the need and stop before executing it.
+
+## Completion criteria
+
+Report:
+
+1. What existing architecture and code were inspected.
+2. The proposed native worker boundary.
+3. The exact proposed link configuration.
+4. The complete key-binding lifecycle.
+5. The SQLCipher connection initialization sequence.
+6. The fixture and fault-injection design.
+7. Security risks and unresolved contracts.
+8. Requirement traceability.
+9. Which previously blocked prerequisites are now design-ready.
+10. Which prerequisites still require actual implementation or runtime evidence.
+
+Conclude with one of:
+
+- DESIGN READY FOR OWNER REVIEW
+- DESIGN INCOMPLETE – BLOCKED
+- INCONCLUSIVE – ADDITIONAL INVESTIGATION REQUIRED
+
+Do not claim runtime qualification or EXP-03 acceptance.

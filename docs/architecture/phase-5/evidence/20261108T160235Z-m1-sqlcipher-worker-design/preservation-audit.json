@@ -1,0 +1,268 @@
+{
+  "time": "2026-11-08T16:15:18.930080+00:00",
+  "baseline_HEAD": "85bdcf55a0e671424ecd284bb26a8263c9316845",
+  "branch": "timeline",
+  "baseline_tracked_files": 1018,
+  "checks": [
+    {
+      "check": "branch unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "HEAD unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "parent unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "empty staged diff",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "no tracked files removed",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "only four canonical references changed",
+      "passed": true,
+      "details": [
+        "docs/architecture/phase-5/reports/M1/README.md",
+        "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+        "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md",
+        "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md"
+      ]
+    },
+    {
+      "check": "four tracked changes append-only",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all other tracked bytes match baseline",
+      "passed": true,
+      "details": {
+        "baseline_files": 1018,
+        "unchanged_files": 1014
+      }
+    },
+    {
+      "check": "previous evidence/manifests preserved",
+      "passed": true,
+      "details": {
+        "files": 437
+      }
+    },
+    {
+      "check": "ADR/owner decisions preserved",
+      "passed": true,
+      "details": {
+        "files": 6
+      }
+    },
+    {
+      "check": "Phase3/prototype preserved",
+      "passed": true,
+      "details": {
+        "files": 377
+      }
+    },
+    {
+      "check": "production source/dependencies preserved",
+      "passed": true,
+      "details": {
+        "files": 30
+      }
+    },
+    {
+      "check": "canonical acceptance matrix preserved",
+      "passed": true,
+      "details": {
+        "files": 1
+      }
+    },
+    {
+      "check": "new paths limited to design report and current evidence",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "diff whitespace",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "design Markdown has paired fences and one newline",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "local design/reference links resolve",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "all50 existing PQR cases have design coverage",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all8 previous readiness gaps have design dispositions",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "private refusal correction explicitly grounded",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "previous readiness manifest/static hashes match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "zero runtime/implementation claims",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "proposed key frame byte count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "link plan uses exact static archive",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "passed": 24,
+  "failed": 0,
+  "all_passed": true,
+  "git_commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "timeline\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "85bdcf55a0e671424ecd284bb26a8263c9316845\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD^"
+      ],
+      "exit_code": 0,
+      "stdout": "670bebd4b4f7e878674e7588ddcb7e6aa4a86d32\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "HEAD:docs/architecture/phase-5/reports/M1/README.md"
+      ],
+      "exit_code": 0,
+      "stdout": "# M1 Canonical Engineering Baseline\n\nUpdated2026-11-08. Documentation consolidation, isolated validation and implementation planning Authorized; product implementation/release Not Authorized. The [primary closeout](m1-closeout-report.md) owns this task's outcomes; no M1 product completion claim.\n\n## Canonical documents\n\n- [Source catalog and supersession](m1-source-catalog.md).\n- [Owner decision/scope register](m1-owner-decision-register.md): preserved OD-R01\u201320/WS01.1, owner-decided OP-01\u201304,26-capability OD17 scope and historical OD18 distinction.\n- [Architecture](browser-core-architecture.md), [boundary contracts](core-boundary-contracts.md), [data model](browser-core-data-model.md), [persistence](local-persistence-architecture.md), [recovery](migration-and-recovery-strategy.md), [capabilities](browser-capability-architecture.md): supporting Proposed designs; current technical dispositions in the specification.\n- [Developer Specification v1.2 \u2014 Proposed](m1-developer-specification.md): REQ/AC/SPEC, policy,26-capability coverage, unresolved engineering definitions and implementation traceability.\n- [Validation Plan v1.2](m1-validation-plan.md) and [Supporting Charters v1.2](m1-supporting-validation-charters.md).\n- [Case Matrix v1.3](m1-case-level-traceability.md):154 validation cases +11 experiment-reference rows; preserved mappings and actual outcomes.\n- [Evidence and13 reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/), [run environment](../../evidence/20261108T094414Z-m1-consolidated-closeout/environment.json), [frozen native procedure](../../evidence/20261108T094414Z-m1-consolidated-closeout/procedure.md), [row results](../../evidence/20261108T094414Z-m1-consolidated-closeout/traceability-results.json).\n- [Implementation plan v1.1](m1-implementation-plan.md):19 proposed work packages; no implementation authorization.\n- [Primary consolidated closeout](m1-closeout-report.md).\n\n## Results and limitations\n\nEXP-01 FAIL on retained cleanup assertion; EXP-02 INCONCLUSIVE normal native subset; EXP-03\u201308 and SVC-01\u201305 BLOCKED. No complete REQ/AC passes. All154 product validation cases preflight-blocked; do not count experiment-reference observations as case passes. Native environment macOS27.2/arm64 with26.0 compile target; final macOS26 qualification remains Stage C. Cleanup-only follow-up crashed; two owned synthetic store cleanup states are unknown and retained for bounded diagnosis. No personal profiles/default stores, secrets, device permissions or irreplaceable files used.\n\n## Historical sources\n\nThe original [owner packet](m1-owner-decision-packet.md), [decision/risk proposals](m1-decisions-and-risks.md), [launch matrix](m1-launch-feature-matrix.md), [execution proposal](m1-implementation-authorization-proposal.md) and DSH review retain historical IDs/meanings. [Exact supplied sources and prior repository documents](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/) are preserved; current canonical documents supersede old policy/authority proposals rather than silently rewriting history. Phase3 source/evidence/manifests are unchanged and never transferred as current acceptance. [Final audit](../../evidence/20261108T094414Z-m1-consolidated-closeout/final-audit.json).\n\nADR0001 Proposed;0002 Accepted;0003\u20130005 Proposed. Conditional WKWebView; CEF evaluation-only; no Aura, production Tamizhi, mandatory cloud/identity or public distribution. Local browsing must work without cloud or local-server dependency. No release authority or product implementation is granted by this index.\n\n## M1 validation remediation \u2014 2026-11-08\n\n[Current remediation report](m1-validation-remediation-report.md), [EXP-01 cleanup diagnosis](m1-exp-01-cleanup-diagnosis.md), [encryption specification](m1-persistent-profile-encryption-specification.md), [Keychain/independent recovery specification](m1-keychain-and-independent-recovery-specification.md), and [readiness/downstream dependencies](m1-validation-readiness-remediation.md) refine the existing baseline. Original EXP-01 FAIL/crash evidence and165-row outcomes are preserved; fresh cleanup diagnostics and EXP-03/04 remain Blocked. No product implementation, signing or release authorized.\n\n## Provider and fixture qualification \u2014 2026-11-08\n\n[Current qualification-readiness report](m1-provider-and-fixture-qualification.md) records immutable SQLCipher source provenance, two repeatable isolated static builds, synthetic fixture preparation/observations and blocked native Keychain/same-identity WebKit registry work. Source/build/fixture evidence is not EXP-03/04 acceptance. Original165-row outcomes, owner/ADR decisions and original-store state remain unchanged; no signing/product integration or release.\n\n## Provider trust and runtime gate \u2014 2026-11-08\n\n[Current trust/runtime gate assessment](m1-provider-trust-and-runtime-qualification.md) rechecks the unchanged pin and retained source/build integrity. Independent publisher authenticity remains BLOCKED: GitHub reports unknown_key and no authenticated matching release key/attestation was established. Runtime, storage-surface and interruption qualification stopped before execution as required. No EXP-03, case or acceptance outcome changed.\n\n## Publisher authenticity acquisition \u2014 2026-11-08\n\n[Current publisher-evidence report](m1-sqlcipher-publisher-authenticity-evidence.md) locates official Zetetic package-signing instructions and the 4.20.0 source ZIP/detached signature, retaining the published key and signature. The package key differs from the Git tag's claimed signer; no maintained verifier was found and signed-archive-to-pin correspondence is unverified. Authenticity remains BLOCKED. No build/runtime qualification, installation or external communication occurred; an unsent inquiry is preserved.\n\n## Vendor archive cryptographic verification \u2014 2026-11-08 (latest source checkpoint)\n\n[Current verification addendum](m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint) records approved GnuPG provisioning, a valid vendor-primary-bound archive signature and all 2,325 pinned files matching with zero missing/extra/content/executable-bit differences. The bounded source-authenticity prerequisite is now PASS via the vendor archive; earlier BLOCKED entries/header remain historical. The separate Git tag signature is unverified. Runtime/provider qualification and EXP-03 remain BLOCKED; no build, encryption/runtime/native campaign or product/release authorization is inferred.\n\n## SQLCipher provider runtime readiness \u2014 2026-11-08\n\nThe static candidate and its source evidence are recorded. The 50 proposed scenarios await an isolated worker, key-binding adapter, encrypted fixtures and controlled faults. EXP-03 remains BLOCKED. [Provider runtime readiness](m1-sqlcipher-provider-runtime-readiness.md)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "HEAD:docs/architecture/phase-5/reports/M1/m1-source-catalog.md"
+      ],
+      "exit_code": 0,
+      "stdout": "# M1 Canonical Source Catalog and Supersession Record\n\nVersion1.1,2026-11-08. Authority: [current owner instruction](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/owner-task-authorization.txt). Documentation and isolated validation/planning Authorized; no product implementation/release authority.\n\n## Canonical maintained set\n\n| Purpose | Actual path in this directory | Version/status | Relationship |\n|---|---|---|---|\n| Architecture/design | [browser-core-architecture.md](browser-core-architecture.md), [core-boundary-contracts.md](core-boundary-contracts.md), [data model](browser-core-data-model.md), [persistence](local-persistence-architecture.md), [recovery](migration-and-recovery-strategy.md), [capabilities](browser-capability-architecture.md) | Proposed supporting designs plus current scope notices | DS\u00a732 owns current engineering dispositions; historic proposals do not override current owner policy |\n| Owner decisions/scope | [m1-owner-decision-register.md](m1-owner-decision-register.md) | v1.1; owner-approved direction | Exact OD-R entries, current OP decisions,26 capabilities and historical crosswalk |\n| Developer specification | [m1-developer-specification.md](m1-developer-specification.md) | v1.2 Proposed | Current requirements/policy/coverage/engineering gaps; not validated implementation |\n| Validation plan | [m1-validation-plan.md](m1-validation-plan.md) | v1.2 Proposed procedures | Current authorization with original EXP procedures and run reports |\n| Supporting charters | [m1-supporting-validation-charters.md](m1-supporting-validation-charters.md) | v1.2 Proposed | All five charters preserved; C02/C03 corrected explicitly |\n| Case traceability | [m1-case-level-traceability.md](m1-case-level-traceability.md) | v1.3 Proposed |154 cases +11 references; preserved mappings and separate actual outcomes |\n| Experiment evidence | [this run](../../evidence/20261108T094414Z-m1-consolidated-closeout/), [activity reports](../../evidence/20261108T094414Z-m1-consolidated-closeout/reports/) | Actual diagnostic records/blocked assessments | Not release or production acceptance; per-row JSON is audit input |\n| Implementation plan | [m1-implementation-plan.md](m1-implementation-plan.md) | v1.1 Proposed,19 work packages | Backlog only; not implementation authorization |\n| Final closeout | [m1-closeout-report.md](m1-closeout-report.md) | v1.1 qualified closeout | Consolidates this bounded task, remaining blockers and handoff |\n\n## Supplied sources preserved verbatim\n\nThe four review deliverables were not found as canonical repository files before this task. They were retrieved from the complete supplied chat documents, not reconstructed from summaries. [Archived Developer Specification](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/developer-specification-v1.0-proposed.md), [Validation Plan](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/validation-plan-v1.0-proposed.md), [Supporting Charters](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/supporting-validation-charters-v1.0-proposed.md), [Case Matrix](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/case-level-traceability-v1.1-proposed.md), [Owner Readiness Review v1.1](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/owner-readiness-review-v1.1-proposed.md) retain exact text. Their original no-execution/unresolved-policy language is historical and superseded only by the current instruction and maintained documents. They are not competing latest specifications.\n\nThe previous repository M1 README/implementation plan are [archived](../../evidence/20261108T094414Z-m1-consolidated-closeout/supplied/) before replacement. [Historical owner packet](m1-owner-decision-packet.md), [decision/risk proposals](m1-decisions-and-risks.md), [old execution proposal](m1-implementation-authorization-proposal.md), DSH assessment and historical evidence retain their IDs/meanings. Current owner decisions do not retroactively approve the historical OD20 implementation proposal.\n\n## ADR/platform/source controls\n\nADR0001 Proposed,0002 Accepted,0003\u20130005 Proposed; no status transition. Conditional WKWebView, CEF evaluation-only, Aura excluded, no production Tamizhi/cloud dependency, no public distribution. macOS26 minimum remains;27.2 native results are discovery. Phase3 source/evidence/manifests are preserved; historical49/49 and48/48 results are not combined with current observations.\n\nOriginal tracked-file hashes/HEAD/branch/clean state: [baseline](../../evidence/20261108T094414Z-m1-consolidated-closeout/repository-baseline.json). Current source/probe hashes, commands and environment: [results](../../evidence/20261108T094414Z-m1-consolidated-closeout/results/), [environment](../../evidence/20261108T094414Z-m1-consolidated-closeout/environment.json). Final preservation audit records actual changed paths; no commit/push/branch change.\n\n## Focused remediation sources \u2014 2026-11-08\n\nNew maintained supporting specifications: [Persistent-profile encryption v1.0](m1-persistent-profile-encryption-specification.md), [Keychain/independent recovery v1.0](m1-keychain-and-independent-recovery-specification.md), [Readiness/downstream update v1.0](m1-validation-readiness-remediation.md), [EXP-01 diagnosis v1.0](m1-exp-01-cleanup-diagnosis.md), [Remediation report v1.0](m1-validation-remediation-report.md). These own detailed existing SPEC contracts, not competing product/owner decisions. Original canonical Developer Specification1.1 header said1.0 while its body/catalog said1.1; maintained header now correctly identifies1.2 focused remediation. Validation Plan/charters1.2 and matrix1.3 carry only focused references/authority metadata; IDs/mappings/outcomes unchanged. Source paths/versions/hashes before edits are in ../../evidence/20261108T103813Z-m1-validation-remediation/sources/canonical-source-inventory.json; baseline HEAD and every tracked hash are retained.\n\n## Provider and fixture qualification checkpoint \u2014 2026-11-08\n\n[Canonical qualification-readiness report v1.0](m1-provider-and-fixture-qualification.md) is the focused checkpoint for static source/build and synthetic fixture evidence. It supplements existing specs without replacing owner decisions or altering historical EXP/case outcomes. Evidence: ../../evidence/20261108T113403Z-m1-provider-fixture-qualification/. Original inputs/version hashes and archive/build records are retained; no production dependency selected/installed and no signing/release.\n\n## Provider trust/runtime gate \u2014 2026-11-08\n\n[Canonical trust/runtime assessment v1.0](m1-provider-trust-and-runtime-qualification.md) owns the subsequent authenticity stop decision at baseline 7fb95f769f9af0000997c2d193b3d3675d0ca6a6. Evidence: ../../evidence/20261108T123527Z-m1-provider-trust-runtime-gate/. Prior source/build hashes still agree; independent publisher authenticity remains BLOCKED, so runtime/storage/interruption qualification was NOT EXECUTED. Prior source versions, outcomes, owner decisions and ADR statuses are preserved.\n\n## Publisher authenticity evidence acquisition \u2014 2026-11-08\n\n[Canonical publisher evidence report v1.0](m1-sqlcipher-publisher-authenticity-evidence.md) records fresh official signing instructions, published key and 4.20.0 detached signature at baseline 9118f89930a738c5e9d4711c7718a1e373e49761. Evidence: ../../evidence/20261108T130406Z-m1-publisher-authenticity-acquisition/. Exact Git tag\u2192pin relationship still agrees; independent authenticity remains BLOCKED pending maintained verification and complete publisher/artifact/pin binding. An inquiry draft is unsent. Prior evidence/report bodies, ADR/owner decisions and all acceptance outcomes remain unchanged.\n\n## Vendor archive verification \u2014 2026-11-08 (latest source checkpoint)\n\n[Publisher evidence \u00a78, current verification](m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint) at baseline 0139c80a519f1b90c2d06bacea9d2af2620b16cc supplies the maintained-verifier signature and complete signed-archive-to-pin comparison. Source authenticity PASS via the vendor archive; the previous BLOCKED acquisition snapshot is preserved, not rewritten. Evidence: ../../evidence/20261108T142421Z-m1-vendor-archive-verification/. No pinned-source change, source execution/build, runtime qualification, owner/ADR change or release. GnuPG and required host-tool dependencies were installed only after explicit owner approval; browser dependencies are unchanged.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "HEAD:docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md"
+      ],
+      "exit_code": 0,
+      "stdout": "# M1 Validation Readiness and Downstream Remediation\n\nVersion 1.0,2026-11-08. D04/D05. Normative specifications are refined; execution readiness is separately assessed. Sources: [encryption](m1-persistent-profile-encryption-specification.md), [key/recovery](m1-keychain-and-independent-recovery-specification.md), [SDK/provider inventory](../../evidence/20261108T103813Z-m1-validation-remediation/results/candidate-availability.json), [EXP-01 diagnosis](m1-exp-01-cleanup-diagnosis.md).\n\n## 1. EXP-03 prerequisite checklist\n\n**Overall: Blocked. No EXP-03 execution authorized by readiness alone or performed here.**\n\n| Prerequisite | Current position | Required evidence before execution |\n|---|---|---|\n| Qualified encryption provider | Blocked: SQLCipher 4.20.0/CommonCrypto is a documented candidate, not installed/digest-pinned/license-reviewed/qualified | Exact artifact/source/build/toolchain/SQLite/crypto-provider versions, checksums, license/provenance review and real settings |\n| Key-management interface | Contract specified:32-byte per-scope input, protected normal/recovery slots, no String/log exposure | Reviewed isolated binding/key ownership and failure/zeroization limitations; no production implementation |\n| Disposable databases | Not created | Owned isolated paths/IDs and fixture manifest; no personal data or old WebKit stores |\n| Main/WAL/journal/SHM/temp | Required matrix/configuration specified | Each actual artifact produced/observed; memory-temp compile/runtime proof; header leakage assessed; no plaintext staging |\n| Authentication/corruption | Oracles specified, fixtures absent | Correct/missing/wrong profile key; ciphertext/tag/page/truncation controls, functioning plaintext detector control |\n| Rotation/recovery | Copy-and-promote/key-ring contract specified, fixtures absent | Interrupted before/after each retained-generation/promotion boundary; no sole source/key deletion |\n| Pass/fail/review | Existing CRYPTO-001/AC05/14/15 routes retained | Case-specific complete artifact/expected-result inventory and engineering/security disposition |\n| Platform/resources | SDK declarations present; no macOS 26 qualification | Named authorized environment and bounded storage/memory faults; no filling user disk |\n\nEXP-03 PASS requires all mandatory declared configurations/artifacts to meet protected-data/integrity/failure outcomes. FAIL includes accepted wrong key/tamper, plaintext spill, destructive fallback or false commit. Missing provider/artifact visibility is BLOCKED/INCONCLUSIVE, not PASS. Successful database open alone never qualifies encryption.\n\n## 2. EXP-04 prerequisite checklist\n\n**Overall: Blocked.** Key/format specification closure does not create a tested recovery stack.\n\n| Prerequisite | Current position | Required evidence before execution |\n|---|---|---|\n| Keychain API availability | Installed SDK declares selected access-control/data-protection APIs | Actual isolated app identity/access-group/ACL/userPresence tests; fresh context, deny/cancel/unavailable handling |\n| Independent recovery format | Proposed VXKE/VXRF/print-kit contract specified | Independent implementation/parser/encoding/AAD/AEAD vectors and interoperability review; no secrets in artifacts |\n| Fixture generation | Not executed; no keys/kits created | Disposable per-scope key rings/capsules and encrypted profile fixture from qualified EXP-03 configuration |\n| Offline recovery | Sequence defined | Network-isolated restoration without source Keychain/cloud and with explicit destination preservation |\n| Wrong/corrupt material | Failure behavior specified | Wrong R/profile/version/slot; malformed/truncated/tag-changed capsule; missing files; no guessed/reset key |\n| Data verification | Expected authenticated reopen required | Known synthetic records/key versions, integrity/identity and exact restored content |\n| Key isolation | Separate DEK/KEK/R per profile/catalog defined | Profile A/B wrong-key and scope-binding controls; no normal-access bypass while locked |\n| Independent destination | Not provisioned or identified | Second Mac for KEY-002/cross-Mac claim; source Keychain demonstrably absent |\n| Custody verification | Full readback/decrypt/kit reconstruction required | Native export/print/input procedure and verified receipt, with OS spool limits disclosed |\n\nProvider-independent Keychain subset preparation is **Conditionally ready as a design only**, once exact identity/ACL fixtures/native access are provisioned. It is not a Ready verdict for EXP-04, does not execute now and cannot qualify independent encrypted-profile recovery.\n\nNo permission/signing or fixture-generation action is inferred from documentation. EXP-04 cannot PASS without correct recovered data/key isolation and failure preservation; no-device/source-Keychain fallback cannot replace independent destination evidence.\n\n## 3. Downstream dependencies\n\n| Activity | Newly specified dependencies | Remaining blockers/prerequisite change | Existing procedure/revision |\n|---|---|---|---|\n| EXP-05 | Single protected KEK path, real lock states/generations, key lease/reacquisition and inflight outcomes | Actual OS trigger and key/view/DB barrier; native identity/Keychain and release proof; EXP-01 crash unresolved | Broad procedure valid; bind exact new state/AAD/key tests before execution; **Blocked** |\n| EXP-07 | Archive key wrapping, independent recovery authority, catalog encryption, no plaintext staging and rotation preservation | Qualified provider/key stack; coherent archive/promotion/migration/selection/ledger implementation; independent Mac; WebKit categories still unqualified | Broad procedure valid; update exact format/fixture/checkpoints; **Blocked** |\n| EXP-08 | Protected key/data scopes and explicit unknown-deletion handling; old-key/backup limits | Actual independent deletion ledger/lineage/propagation/confirmation and qualified archive | Existing known/unknown hypothesis valid; refine versions/confirmation binding; **Blocked** |\n| SVC-04 | Catalog/profile normal and recovery key paths do not require cloud/server | Integrated product/Core/repositories/UI and real offline operation absent | Existing offline charter valid; key-unavailable/normal-prompt outcomes need fixture details; **Blocked** |\n| SVC-05 | Restart/rotation/locked state and per-store cleanup failures specified | Actual durable host/content/profile/DB/file recovery, scope release, crash checkpoints; EXP-01 unresolved | Broad charter valid; add precise checkpoints without new IDs; **Blocked** |\n\nNo downstream experiment/campaign ran. New crypto framing does not finish SPEC-12 coherent backup or SPEC-13 deletion propagation. Private-session/website-data/TLS/permission and full functional coverage remain open. macOS 26 runtime and Stage C remain separately scheduled, not waived.\n\n## 4. Existing traceability retained\n\n| Existing route | New supporting specification/evidence | Status impact |\n|---|---|---|\n| REQ-05/06 \u2192 SPEC-04 \u2192 AC05/14/15 \u2192 EXP-03/CRYPTO-001 | Encryption\u00a7\u00a72\u20136, provider/API inventory | BLOCKED unchanged |\n| REQ-07 \u2192 SPEC-05 \u2192 AC06 \u2192 EXP-04/KEY-001/002 | Key/recovery\u00a7\u00a71\u20134/6\u20137 | BLOCKED unchanged |\n| REQ-08/18 \u2192 SPEC-07/14/15 \u2192 AC07/14/15 \u2192 EXP-05/LOCK-001; RECOVERY-006 | Key/recovery\u00a75 and diagnosis reference-release findings | BLOCKED unchanged |\n| REQ-14/16/19 \u2192 SPEC-05/12/13 \u2192 AC12/13/15 \u2192 EXP-07/08/BACKUP/DELETE routes | Key/recovery, encryption backup/delete boundaries | BLOCKED unchanged; no complete archive/ledger claim |\n| REQ-22 \u2192 SPEC-08 \u2192 AC08 \u2192 EXP-01/02/05/07 | Diagnosis and encryption\u00a77 | Original ISO-001 FAIL/PRIV-001 INCONCLUSIVE and other blockers unchanged |\n| REQ-21 | Separate mandatory final Stage C; no AC01\u201315 assignment | Deferred, not run; no release authorization |\n\nPERM-016 remains AC09/AC14; RECOVERY-010 remains OP-04. No new REQ/AC/EXP/SVC/case IDs. Existing154 validation cases plus11 experiment references remain165 rows, with unchanged outcomes. Additional diagnostic checkpoint granularity or format vectors are proposed refinements, not silently numbered new cases.\n\n## 5. Next bounded engineering checkpoint\n\nFirst provision a pinned/provider-reviewed isolated SQLCipher candidate and audited crypto/CBOR/key interface fixtures, then review the finite EXP-03/04 prerequisites. Obtain safe noncreating registry/lifecycle observability for the original stores; do not delete them based on absence/no-handle snapshots. Once original states and safe prerequisites are understood, newly minted store IDs may be used for a distinct release-order/completion diagnostic. Do not sign/launch/retry or run downstream campaigns as an automatic consequence of this document. Production implementation and release remain Not Authorized.\n\n## Subsequent provider/fixture checkpoint \u2014 2026-11-08\n\n[Qualification report](m1-provider-and-fixture-qualification.md) supplies pinned source/tree verification, two identical arm64 static archives, compile-setting evidence, plaintext detector controls, syntax-only binary-key binding and bounded synthetic CryptoKit/format observations. No full EXP-03/04 campaign ran; runtime artifact protection/binding, provider trust/security qualification, native Keychain identity/ACL and independent destination remain Blocked. WebKit enumeration remains designed/blocked under the signing boundary. This update adds evidence links without changing existing mappings/outcomes or treating the source Mac as cross-Mac recovery.\n\n## Subsequent provider trust/runtime gate \u2014 2026-11-08\n\n[Current gate assessment](m1-provider-trust-and-runtime-qualification.md) records a fresh unchanged-pin/source/archive check and bounded publisher-key/license/security review. Workstream A is BLOCKED on independently authenticated release provenance and signature verification. Workstreams B\u2013D were NOT EXECUTED; encrypted main/WAL/SHM/journal/temp, key-binding and interruption outcomes remain unqualified. This supplies the missing trust-readiness detail without changing any historical EXP-03/04 or downstream status, owner decision or authorization boundary.\n\n## Publisher authenticity evidence \u2014 2026-11-08\n\n[Publisher evidence acquisition](m1-sqlcipher-publisher-authenticity-evidence.md) adds an official vendor package-signing publication and 4.20.0 detached source signature. It does not supply cryptographic verification or exact signed-archive-to-pin binding: a maintained verifier must be separately authorized/provisioned, and the tag-signing-key or signed-archive correspondence route remains open. EXP-03/readiness remains BLOCKED; no provider build/runtime, native qualification, install or communication occurred. Historical outcomes and mappings are unchanged.\n\n## Vendor archive verification \u2014 2026-11-08\n\n[Latest source-authenticity addendum, publisher evidence \u00a78](m1-sqlcipher-publisher-authenticity-evidence.md#8-vendor-archive-cryptographic-verification--2026-11-08-current-checkpoint) supersedes only the earlier source-authenticity blocker: approved GnuPG verified the vendor ZIP signature under its published primary-bound subkey, and all 2,325 files/Git executable bits match the unchanged pin exactly. Bounded source authenticity is PASS. Remaining EXP-03 provider/runtime/key-binding/artifact/fault/readiness prerequisites and all EXP-04/native/downstream blockers remain open; no full EXP-03 execution or acceptance is authorized or inferred. Earlier checklist positions/results remain historical. Source-only verification is not browser implementation, platform/release qualification or cloud/identity integration.\n\n## SQLCipher provider runtime readiness \u2014 2026-11-08\n\nThe static candidate and its source evidence are recorded. The 50 proposed scenarios await an isolated worker, key-binding adapter, encrypted fixtures and controlled faults. EXP-03 remains BLOCKED. [Provider runtime readiness](m1-sqlcipher-provider-runtime-readiness.md)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "HEAD:docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md"
+      ],
+      "exit_code": 0,
+      "stdout": "# M1 SQLCipher provider runtime readiness\n\n**NOT READY \u2013 BLOCKED** \u00b7 8 November 2026 \u00b7 Baseline `670bebd4b4f7e878674e7588ddcb7e6aa4a86d32` on `timeline`.\n\nSource authenticity passed at the preceding checkpoint. The signed SQLCipher 4.20.0 source matches the pinned commit across all 2,325 files. The team can reuse that evidence and the two matching static archives. The missing link is an isolated native worker that can authenticate a store, enforce profile ownership and expose the actual file and transaction behavior. All 50 runtime scenarios remain proposed. EXP-03 remains blocked.\n\n## Candidate freeze\n\n| Field | Frozen value or evidence limit |\n|---|---|\n| Source | sqlcipher/sqlcipher v4.20.0, annotated tag object `52252487a5cada9b430e8d4b20025790c5a6ba20`, commit `355d4db92d3404e71faa8088d071a71d767807f4` |\n| Authentication | Vendor ZIP SHA-256 `a1417a5a672a2342de6ae44e08ccd68487fa3d0a43212331f4226a0d00b51b9c`. The vendor archive signature and complete source comparison establish the source binding. The separate Git tag signature remains unverified. |\n| Toolchain | SQLCipher Community 4.20.0, SQLite 3.54.1, Apple clang 21.0.0 (clang-2100.4.1.1), arm64, SDK 27.2, deployment target 26.0. The observed host is macOS 27.2 build 26B123. |\n| Static build | Apple CommonCrypto with Security and CoreFoundation linker flags. Both 1,651,288-byte archives have SHA-256 `ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c`. A future worker must link the recorded archive and matching header and demonstrate actual symbol and library identity. |\n| Compile settings | Codec enabled, CommonCrypto selected, SQLCipher extra initialization/shutdown hooks, load extensions omitted, TEMP_STORE=3 and THREADSAFE=1. The exact CFLAGS, configure arguments, paths, tool versions and reproducibility environment are in the configuration record. |\n| Required suite | SQLCipher 4 compatibility, AES-256-CBC, 4,096-byte pages, HMAC-SHA512, zero plaintext header bytes and PBKDF2-HMAC-SHA512 at 256,000 iterations. Runtime settings still require measurement. |\n| Connection targets | WAL, synchronous FULL, foreign keys enabled, memory temporary storage. DELETE journaling is a separate diagnostic configuration. Close and key rotation require serialization and reconciliation. |\n\nThe retained build record has an empty configure-settings summary. Its command logs and static inspection support the recorded build, and all six retained archive, header and amalgamation hashes matched on inspection. Final worker linkage, connection-setting order, memory-security activation, macOS sync settings, copy primitive and fixture schema remain open. Two identical local builds establish local repeatability. Cross-machine reproducibility and macOS 26 runtime validation remain pending.\n\nThe earlier plaintext SQLite fixtures provide detector controls. The later encryption specification governs sensitive catalog data and requires an independent catalog key. The existing engineering license review requires notice retention. Previous upstream issue records flag integrity checks with preallocation, error handling after page corruption and rekey behavior for review against this pin. These are reported risks without a local runtime reproduction. [Provider and fixture review](m1-provider-and-fixture-qualification.md) \u00b7 [Publisher verification, \u00a78](m1-sqlcipher-publisher-authenticity-evidence.md) \u00b7 [Complete configuration](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/provider-configuration.json)\n\n## Key binding and ownership\n\n| Boundary | Contract for the proposed worker |\n|---|---|\n| Native host and key service | Generate independent 32-byte inputs for each persistent profile and the catalog using the platform CSPRNG. Normal access unwraps the scoped DEK through the Keychain-protected KEK. Recovery uses independently held recovery material. The synthetic supervisor supplies disposable keys through a private memory channel. |\n| BrowserDomain and BrowserPorts | Domain values carry scope, generation and revision. Typed ports carry bounded native leases, operations and coarse outcomes. Secret bytes and provider handles stay with their native owners. |\n| BrowserCore | Validate the native caller, immutable scope and lease generation before scheduling work. Check generation and receipts again before publishing results. Refuse private persistence before resolving a path or opening a connection. |\n| BrowserPersistence | A serialized worker distinguishes exclusive creation from opening an existing store. It validates the scope and key input, applies the 32-byte binary passphrase through the length-explicit C API before database reads, then authenticates the schema, scope identity, suite and key version before releasing data. Existing-file failure preserves ciphertext. |\n| Failure and close | A successful key-binding call alone leaves authentication pending. Wrong keys and malformed files may yield overlapping provider errors. Return a coarse access/corruption outcome while preserving the input. Finalize cursors, reconcile commits, close connections and retire leases before reporting closure. A reopen requires fresh authority. |\n| Memory and storage | The syntax fixture calls `memset_s` after binding. Its early invalid-input branch leaves cleanup ownership to be specified. Observe eligible scratch buffers before releasing them and record only a zeroization result. Provider copies, cached plaintext and OS artifacts limit erasure claims. WAL, rollback/statement journals, SHM and transient files each need their own observation. |\n\nThe proposed four targets define ownership. The inspected app contains the foundation host. Its source inventory and the syntax-only helper provide no implementation evidence for a linked persistence worker, failure supervisor or protected close barrier. A scoped adapter test can establish private-request refusal. Integrated private browsing, Keychain custody and WebKit data protection have separate validation routes. [Core contracts](core-boundary-contracts.md) \u00b7 [Encryption specification](m1-persistent-profile-encryption-specification.md) \u00b7 [Key lifecycle](m1-keychain-and-independent-recovery-specification.md)\n\n## Synthetic matrix and evidence\n\nThe matrix defines **50 scenarios** under the existing EXP-03 / CRYPTO-001 route. There are 12 encryption and confidentiality cases, 16 key-binding cases, 10 tamper/corruption cases and 12 interruption/recovery cases. Each row gives its local identifier, grounded requirement and AC mapping, prerequisites, fixture, operation, expected result, failure oracle, requested artifacts and cleanup. The principal mappings are REQ-05/06/19 and AC05/14/15. Each case supports only its declared portion. The matrix proposes experimental resource caps and workload sizes for review before execution. [Case matrix](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/synthetic-test-matrix.md) \u00b7 [Machine-readable cases](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/synthetic-test-matrix.json) \u00b7 [Canonical case traceability](m1-case-level-traceability.md)\n\n| Claim | Evidence needed for a future disposition |\n|---|---|\n| Encryption at rest | Bind the exact native image and effective settings to each run. Reopen with the correct key in a fresh worker and compare all expected records and identity fields. Exercise wrong-key and occupied-page tamper controls. A changed header alone supplies insufficient evidence. |\n| Sidecars and temporary data | Exercise actual WAL, SHM, rollback journal, statement journal, TEMP/sort/index and vacuum paths. Capture bounded file-open/write observations including transient and unlinked files. Classify structural metadata separately from payload. Prove the marker detector works on known plaintext controls. Missing visibility leaves the surface inconclusive. |\n| Profile isolation and private refusal | Apply A/B/catalog keys and native leases independently. Record rejection points and provider call counts. A private request must produce zero persistent opens, receipts and records. |\n| Integrity | Use untouched controls, disposable mutated copies and fresh readers. Record page authentication results alongside structural checks and full logical data. Distinguish a poisoned connection from independent corruption. |\n| Interruption and rotation | Freeze the last committed revision and receipt. Inject faults at named pre-commit, post-commit/pre-acknowledgement, checkpoint and promotion boundaries. Reopen with the correct key and reconcile the ledger. Preserve old ciphertext and required key generations until destination verification and durable promotion succeed. |\n| Key retirement and cleanup | Record handle/cursor ownership, actual close results, generation fences and scope retirement. Capture only safe identifiers, booleans, sizes and artifact hashes. Unknown commit state, incomplete cleanup or missing artifacts must be reported explicitly. |\n\nSQLCipher supplies configuration and integrity interfaces. SQLite can silently ignore unknown PRAGMAs, so the worker must assert the expected returned rows and values. TEMP_STORE=3 alone cannot qualify journals or every transient write path. [SQLCipher API](https://www.zetetic.net/sqlcipher/sqlcipher-api/) \u00b7 [SQLite PRAGMAs](https://sqlite.org/pragma.html) \u00b7 [SQLite temporary files](https://sqlite.org/tempfiles.html)\n\n## Prerequisite assessment\n\n| Prerequisite | Status | Basis and remaining limit |\n|---|---|---|\n| Authenticated source | PASS | Existing signed vendor ZIP and complete 2,325-file correspondence; all 56 prior manifest entries match now. No signature/source comparison repeated; separate Git tag signature remains unverified. |\n| Frozen build configuration | INCONCLUSIVE | Static recipe/source/header/archive identities frozen and current toolchain matches. Final native link/connection ordering and explicit memory/macOS sync/copy settings remain G01/G03/G07. |\n| Reproducible build | PASS | Existing two identical local arm64 static builds; six current archive/amalgamation/header hash checks match. Narrow local repeatability only; no rebuild or independent-machine/platform reproducibility claim. |\n| Provider runtime availability | BLOCKED | Retained libsqlite3.a exists; source expected version is 4.20.0 community/SQLite3.54.1. No linked/executed isolated worker or actual runtime settings/version observation; G01. |\n| Key-binding implementation/test adapter | BLOCKED | Existing helper syntax-checked historically; exact 32-byte binary-passphrase contract already specified. Bare-pointer helper is not the full scope/authentication/close/key-lifetime adapter; G02. |\n| Synthetic fixtures | BLOCKED | Historical plaintext detector controls/descriptors exist; current 50 scenario definitions prepared. No encrypted profile/catalog, corruption, journal/fault or copy/promotion fixtures; G05. |\n| Test harness | BLOCKED | Native serialized-worker/supervisor design requirements are documented. No runtime executable/orchestrator or reviewed lifecycle/control implementation; G01/G02/G08. |\n| File inspection tools | INCONCLUSIVE | Python/file/xxd/hash/lsof/xcrun tools found; previous static artifact proof retained. No complete native transient/unlinked I/O and safe memory observations; G04. |\n| Failure injection | BLOCKED | 50-case matrix defines required finite fault families and preservation rules. No implemented deterministic barrier/VFS/supervisor or fixed terminal-state oracles; G06/G07. |\n| Cleanup and preservation | INCONCLUSIVE | All previous repository/evidence inputs hash-matched; owned cleanup rules proposed. Future worker/cursor/key/sidecar quiescence and fault cleanup remain untested; G02/G08. |\n| Test environment isolation | INCONCLUSIVE | macOS27.2 arm64 host/SDK27.2 inspected; future minos26 candidate and owned-only policy fixed. No reviewed/exercised runtime path/process/resource/secrets manifest; G08. macOS26 and release remain separate. |\n| Acceptance mapping | PASS | 50 local PQR checks explicitly decompose existing EXP-03/CRYPTO-001 routes to REQ05/06/19 and AC05/14/15. Mapping readiness only; no AC pass, new canonical case or full Keychain/lock/private-engine/backup/release claim. |\n\nThere are **3 PASS, 0 FAIL, 5 BLOCKED and 4 INCONCLUSIVE** prerequisites. The PASS entries cover authenticated source, local static repeatability and acceptance mapping. Runtime executions total zero.\n\n## Work before runtime authorization\n\n- **G01 \u00b7 Exact native worker and link identity** \u2014 Specify exact retained archive/header, entry point, initialization hooks and link closure; review image/symbol/version probes before separately authorized adapter construction.\n- **G02 \u00b7 Owned key/scope/handle lifecycle and failure contract** \u2014 Define exact native ownership/lease protocol, open-existing/create split, key-before-access sequence, authenticated identity gate, typed coarse error mapping, real close barrier and scratch/provider cleanup semantics. No raw key in Domain/Ports/Core/UI.\n- **G03 \u00b7 Connection settings and readback oracles** \u2014 Record a reviewed setting/order/readback table per normal-WAL and rollback-diagnostic worker. Recommend memory security ON in a fresh worker; do not silently promote this recommendation to the existing contract. Reject missing required getter results, not just nonzero setter errors.\n- **G04 \u00b7 Complete artifact/temp observation and controls** \u2014 Review a bounded native I/O/VFS observation design covering named and unnamed files, operation phases and encryption boundaries, with functioning public-marker controls and cleanup traces. Do not capture key bytes or raw sensitive buffers.\n- **G05 \u00b7 Synthetic database identity and expected-state ledger** \u2014 Freeze test-only schema/version, full expected records, scope mismatch controls, source-audited mutation offsets and typed result/error oracles; preserve canonical product schema decisions.\n- **G06 \u00b7 Failure injection, cancellation and terminal outcomes** \u2014 Specify exact before/after commit/checkpoint/write/promotion hooks, PID/start-token ownership, emitted durable/acknowledged ledger states, bounded fault ordinals and per-cutpoint acceptable outcomes. Ambiguity prevents a PASS.\n- **G07 \u00b7 Encrypted snapshot/copy-and-promote primitive** \u2014 Specify and review a public provider-supported copy mechanism and its encrypted output, identity/key-generation checks, retained old branch and promotion checkpoints. Multi-resource backups, custody and second-Mac recovery remain EXP-04/07 work.\n- **G08 \u00b7 Owned environment, secrets channel and safe cleanup** \u2014 Review per-case owned paths/processes, exclusive scope, finite resource guards, no core dumps/key logs, failure retention and quiescent cleanup. No personal stores, real Keychain, WebKit/native prompts or host-disk exhaustion.\n\nFirst freeze the build-to-worker link, open sequence, settings readback and the synthetic identity/receipt schema. Next prepare the isolated adapter, observable file operations, process barriers, fault injection and cleanup under a separately scoped engineering task. Review the resulting executable, fixtures and stop conditions before requesting bounded runtime execution. After authorization, begin with identity and detector controls, then key and scope controls, storage surfaces, tamper cases and finally interruption and rotation. An unexpected path, secret disclosure, incorrect library or destructive recovery stops the run and preserves the evidence.\n\nThis assessment used document inspection, retained-file hashes and toolchain metadata. Source authentication and static builds are prior evidence. The proposed matrix, configuration reconciliation and prerequisite assessment are the new readiness deliverables. EXP-03 remains BLOCKED. Runtime execution, product integration and final release validation require their respective authorizations. [Evidence directory](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/) \u00b7 [Detailed gaps](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/readiness-gaps.json) \u00b7 [Prerequisite records](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/prerequisite-assessment.json)\n\n**NOT READY \u2013 BLOCKED**\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "ls-files",
+        "--others",
+        "--exclude-standard",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/baseline.json\u0000docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/design-crosswalk.json\u0000docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/link-plan.json\u0000docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/results/input-integrity.json\u0000docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/sources/input-inventory.json\u0000docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/sources/owner-task.txt\u0000docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/sources/pinned-source-inspection.json\u0000docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "exit_code": 0,
+      "stdout": "## timeline...origin/timeline\n M docs/architecture/phase-5/reports/M1/README.md\n M docs/architecture/phase-5/reports/M1/m1-source-catalog.md\n M docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md\n M docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md\n?? docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/\n?? docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md\n",
+      "stderr": ""
+    }
+  ],
+  "final_status": "## timeline...origin/timeline\n M docs/architecture/phase-5/reports/M1/README.md\n M docs/architecture/phase-5/reports/M1/m1-source-catalog.md\n M docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md\n M docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md\n?? docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/\n?? docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md\n",
+  "runtime_cases_executed": 0,
+  "original_browser_stores": "No inspection or access in this design task"
+}

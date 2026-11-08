@@ -1,0 +1,72 @@
+{
+  "files": [
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/baseline.json",
+      "sha256": "9ae1ca4bdb7430a511f199aceed26d9d6436e7933f3bf527fb6b719023c7b335",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/design-crosswalk.json",
+      "sha256": "3211f4225de45dc9bfba6e6289f11e106f8a2c33b58ca918b4ea01971d47055f",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/link-plan.json",
+      "sha256": "ae5ca6a320d1d02b02f89754c735057d79928dbd27060aa0793adac225908aed",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/results/input-integrity.json",
+      "sha256": "a75f465165d1a6b3f6360bd51760dfa61cbb19b7abfc96ac716f0117699fba19",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/sources/input-inventory.json",
+      "sha256": "0fba4c43a03f0978e4d56744852c3770a502dfadc0d3f24b19b53bcd20bf45fc",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/sources/owner-task.txt",
+      "sha256": "4403a3e0489ed9cd2183ff0dc3e0705384ae0c35cca2efd4ad106a478f7b12a3",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/sources/pinned-source-inspection.json",
+      "sha256": "ddafa023414f25f8dab5d7d7513fb8d96cf187a0e863fb050ed2c0eebb19afd8",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-worker-and-key-binding-design.md",
+      "sha256": "28c1b22bed2ec0941a024dbc17dc0ac701766275a3e7dd6203e658f77474f308",
+      "change": "created"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "030584382c4cfe94cbb09317c1019ee0578e40512665768684d51604c2b0a541",
+      "change": "append-only reference"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "83b9ce5674bc9c743bcc5f0aa7d215eabc47fa062d1dbf8d1966969b8a08129c",
+      "change": "append-only reference"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md",
+      "sha256": "7b578c4b8b962ae636f4f218ddfd7cba83681cb6b8a5624d6eda19db087bd412",
+      "change": "append-only reference"
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-validation-readiness-remediation.md",
+      "sha256": "62a511c643a7f72c46cad73eb2556e3db99bf7e98393ad0e8952e88ea2285021",
+      "change": "append-only reference"
+    }
+  ],
+  "additional_finalizer_outputs": [
+    "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/SHA256SUMS",
+    "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/artifact-index.json",
+    "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/changed-files.json",
+    "docs/architecture/phase-5/evidence/20261108T160235Z-m1-sqlcipher-worker-design/preservation-audit.json"
+  ],
+  "hashing": "SHA256SUMS covers all new evidence except its own bytes. Report and canonical hashes above.",
+  "staged_committed_pushed": false
+}

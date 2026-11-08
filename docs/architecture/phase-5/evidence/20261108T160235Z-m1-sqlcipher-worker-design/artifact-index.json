@@ -1,0 +1,24 @@
+{
+  "report": "../../reports/M1/m1-sqlcipher-worker-and-key-binding-design.md",
+  "source_inventory": "sources/input-inventory.json",
+  "pinned_source_excerpts": "sources/pinned-source-inspection.json",
+  "link_recipe": "link-plan.json",
+  "case_gap_traceability": "design-crosswalk.json",
+  "preservation": "preservation-audit.json",
+  "hash_manifest": "SHA256SUMS",
+  "changes": "changed-files.json",
+  "work_executed": [
+    "Read-only Git baseline/status and documentation/code inspection",
+    "Selected pinned source/header/backup/provider inspection, no source execution",
+    "Previous readiness evidence manifest and retained archive/header hash comparisons",
+    "Design document and JSON link/crosswalk preparation",
+    "Append-only canonical references",
+    "Repository/link/Markdown/traceability/hash preservation checks"
+  ],
+  "proposed_only": [
+    "Worker and supervisor C source files in link command",
+    "Every link/build/identity-probe execution in design",
+    "Key acquisition/transfer, encrypted fixtures, VFS faults and runtime PQR cases"
+  ],
+  "provider_runtime_cases_executed": 0
+}

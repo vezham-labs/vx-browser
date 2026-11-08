@@ -83,3 +83,7 @@ First freeze the build-to-worker link, open sequence, settings readback and the 
 This assessment used document inspection, retained-file hashes and toolchain metadata. Source authentication and static builds are prior evidence. The proposed matrix, configuration reconciliation and prerequisite assessment are the new readiness deliverables. EXP-03 remains BLOCKED. Runtime execution, product integration and final release validation require their respective authorizations. [Evidence directory](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/) · [Detailed gaps](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/readiness-gaps.json) · [Prerequisite records](../../evidence/20261108T150828Z-m1-sqlcipher-runtime-readiness/prerequisite-assessment.json)
 
 **NOT READY – BLOCKED**
+
+## SQLCipher worker and key-binding design — 2026-11-08
+
+The proposed design supplies the scoped native qualification worker, exact static link plan, key lifecycle, settings sequence, synthetic fixture contracts and controlled fault barriers. All 50 PQR scenarios remain unexecuted. The design is ready for owner review, while implementation and runtime prerequisites remain pending. The private-refusal mapping correction is recorded for the future executable procedure. [Worker and key-binding design](m1-sqlcipher-worker-and-key-binding-design.md)

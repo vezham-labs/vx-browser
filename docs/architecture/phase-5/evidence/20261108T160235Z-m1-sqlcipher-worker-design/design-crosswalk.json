@@ -1,0 +1,3394 @@
+{
+  "design_status": "DESIGN READY FOR OWNER REVIEW",
+  "readiness_historical_counts": {
+    "PASS": 3,
+    "FAIL": 0,
+    "BLOCKED": 5,
+    "INCONCLUSIVE": 4
+  },
+  "existing_case_count": 50,
+  "cases": [
+    {
+      "existing_local_case_id": "PQR-E01",
+      "description": "Candidate identity and effective settings",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E02",
+      "description": "Create a new encrypted profile database",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E03",
+      "description": "Main database protection",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E04",
+      "description": "Live WAL protection",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E05",
+      "description": "SHM classification and isolation",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E06",
+      "description": "Rollback journal protection",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E07",
+      "description": "Statement-journal protection",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E08",
+      "description": "Memory-only temporary workload",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E09",
+      "description": "VACUUM/rebuild transient protection",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E10",
+      "description": "Checkpoint and normal close",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E11",
+      "description": "Correct-key fresh-process reopen",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-E12",
+      "description": "Plaintext-detector positive and negative controls",
+      "design_sections": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K01",
+      "description": "Correct profile-key binding",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K02",
+      "description": "Wrong-profile key rejection",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K03",
+      "description": "Catalog/profile key separation",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K04",
+      "description": "Independent incorrect key",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K05",
+      "description": "Missing key input",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K06",
+      "description": "Null key pointer",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K07",
+      "description": "31-byte malformed key",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K08",
+      "description": "33-byte malformed key",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K09",
+      "description": "Native scope/lease mismatch",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K10",
+      "description": "Authenticated database identity mismatch",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K11",
+      "description": "Repeated open and close",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K12",
+      "description": "Close with outstanding cursor",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K13",
+      "description": "Retired lease and late completion",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K14",
+      "description": "Private context refused by persistence",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-09"
+        ],
+        "acceptance": [
+          "AC04",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-06"
+        ],
+        "owner": [
+          "OD-R05",
+          "OD-R06"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required",
+      "mapping_correction_reason": "Direct private-persistence refusal grounds this row in REQ09/AC04/14. Preserve historical matrix; correct executable procedure before a separately authorized run."
+    },
+    {
+      "existing_local_case_id": "PQR-K15",
+      "description": "Caller-buffer retirement on bind failure",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-K16",
+      "description": "Key lifetime after successful bind and close",
+      "design_sections": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T01",
+      "description": "First-page/salt mutation",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T02",
+      "description": "Nonheader ciphertext mutation",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T03",
+      "description": "Authentication-tag mutation",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T04",
+      "description": "Same-file page swap",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05"
+        ],
+        "acceptance": [
+          "AC05"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T05",
+      "description": "Cross-profile page substitution",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T06",
+      "description": "Truncated encrypted database",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T07",
+      "description": "Malformed non-database input",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T08",
+      "description": "Corrupt committed WAL frame",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T09",
+      "description": "Corrupt hot rollback journal",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-T10",
+      "description": "Integrity-oracle interpretation after corruption",
+      "design_sections": [
+        "5",
+        "6",
+        "7"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R01",
+      "description": "Transaction rollback before commit",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R02",
+      "description": "Process termination before commit call",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R03",
+      "description": "Termination after commit before acknowledgement",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R04",
+      "description": "Incorrect-key reopen after interruption",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R05",
+      "description": "Checkpoint interruption",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R06",
+      "description": "Bounded SQLITE_BUSY handling",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R07",
+      "description": "Injected write I/O failure",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R08",
+      "description": "Injected SQLITE_FULL",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R09",
+      "description": "Single-database encrypted snapshot",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R10",
+      "description": "Copy-and-promote rotation interrupted before promotion",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R11",
+      "description": "Copy-and-promote interruption at promotion boundary",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-19"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC15"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    },
+    {
+      "existing_local_case_id": "PQR-R12",
+      "description": "Post-rotation key separation and retained old branch",
+      "design_sections": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "prior_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "proposed_mapping": {
+        "requirements": [
+          "REQ-05",
+          "REQ-06"
+        ],
+        "acceptance": [
+          "AC05",
+          "AC14"
+        ],
+        "specifications": [
+          "SPEC-03",
+          "SPEC-04"
+        ],
+        "owner": [
+          "OD-R04",
+          "OD-R05",
+          "OD-R07"
+        ],
+        "parent_experiment": "EXP-03",
+        "parent_reference": "CRYPTO-001",
+        "mapping_scope": "Supporting local provider check only; no whole AC or experiment pass",
+        "grounding": [
+          "m1-case-level-traceability.md:220",
+          "m1-validation-plan.md:178-219",
+          "m1-developer-specification.md:665-694",
+          "m1-persistent-profile-encryption-specification.md:56-101"
+        ]
+      },
+      "status": "Proposed / Not Executed",
+      "implementation_and_runtime_evidence": "Required"
+    }
+  ],
+  "gap_design_dispositions": [
+    {
+      "prior_gap": "G01",
+      "topic": "Exact native worker and link identity",
+      "design_sections": [
+        "2",
+        "3"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": null
+    },
+    {
+      "prior_gap": "G02",
+      "topic": "Owned key/scope/handle lifecycle and failure contract",
+      "design_sections": [
+        "4",
+        "5"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": null
+    },
+    {
+      "prior_gap": "G03",
+      "topic": "Connection settings and readback oracles",
+      "design_sections": [
+        "5",
+        "7"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": null
+    },
+    {
+      "prior_gap": "G04",
+      "topic": "Complete artifact/temp observation and controls",
+      "design_sections": [
+        "7"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": null
+    },
+    {
+      "prior_gap": "G05",
+      "topic": "Synthetic database identity and expected-state ledger",
+      "design_sections": [
+        "6"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": null
+    },
+    {
+      "prior_gap": "G06",
+      "topic": "Failure injection, cancellation and terminal outcomes",
+      "design_sections": [
+        "4",
+        "7"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": "Genuine provider-internal bind-failure instrumentation still needs feasibility evidence"
+    },
+    {
+      "prior_gap": "G07",
+      "topic": "Encrypted snapshot/copy-and-promote primitive",
+      "design_sections": [
+        "8"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": null
+    },
+    {
+      "prior_gap": "G08",
+      "topic": "Owned environment, secrets channel and safe cleanup",
+      "design_sections": [
+        "2",
+        "4",
+        "7"
+      ],
+      "design_disposition": "Specified for owner review",
+      "runtime_readiness": "Implementation and runtime validation required",
+      "conditional_limit": null
+    }
+  ],
+  "new_technical_proposals": [
+    "C11 per-scope qualification worker and supervisor",
+    "explicit compile/link argv and provider identity checks",
+    "inherited 133-byte key frame with existing 32-byte key semantics",
+    "memory security and macOS sync ON, mmap/busy/auto-checkpoint settings",
+    "synthetic identity/state/rows/receipt schema",
+    "encrypted-to-encrypted public backup candidate and versioned synthetic promotion"
+  ],
+  "owner_decisions_changed": false,
+  "native_worker_implemented": false,
+  "runtime_cases_executed": 0,
+  "EXP03": "BLOCKED",
+  "design_review_is_execution_authorization": false
+}

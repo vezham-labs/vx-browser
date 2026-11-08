@@ -47,3 +47,7 @@ ADR0001 Proposed;0002 Accepted;0003–0005 Proposed. Conditional WKWebView; CEF 
 ## SQLCipher provider runtime readiness — 2026-11-08
 
 The static candidate and its source evidence are recorded. The 50 proposed scenarios await an isolated worker, key-binding adapter, encrypted fixtures and controlled faults. EXP-03 remains BLOCKED. [Provider runtime readiness](m1-sqlcipher-provider-runtime-readiness.md)
+
+## SQLCipher worker and key-binding design — 2026-11-08
+
+The proposed design supplies the scoped native qualification worker, exact static link plan, key lifecycle, settings sequence, synthetic fixture contracts and controlled fault barriers. All 50 PQR scenarios remain unexecuted. The design is ready for owner review, while implementation and runtime prerequisites remain pending. The private-refusal mapping correction is recorded for the future executable procedure. [Worker and key-binding design](m1-sqlcipher-worker-and-key-binding-design.md)

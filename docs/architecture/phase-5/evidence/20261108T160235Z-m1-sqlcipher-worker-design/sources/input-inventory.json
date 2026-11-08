@@ -1,0 +1,102 @@
+[
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-runtime-readiness.md",
+    "sha256": "1b53e95f2a35fa36a5201bdbbdd43a9963668c77d856e525773bbe5b382db1bb",
+    "line_count": 85
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+    "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af",
+    "line_count": 115
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+    "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c",
+    "line_count": 156
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/browser-core-architecture.md",
+    "sha256": "709b21bc4b9941e545f5cde8e8910deb9fe6a8a1d23a64a61c29dbd991c19182",
+    "line_count": 85
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+    "sha256": "21d101f7d3fda53ebe9f89e720dddb7fa47de636d333013f246fa27893382d6a",
+    "line_count": 119
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/local-persistence-architecture.md",
+    "sha256": "5b42269946ba15871e87924f2369081cca936055e1a78a3ee967b902bd1bd11c",
+    "line_count": 57
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-provider-and-fixture-qualification.md",
+    "sha256": "2d32164ddc3082dfa8b6c27c0e3ead5e95a43de16ff0a62a70dd365464a0e279",
+    "line_count": 211
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-developer-specification.md",
+    "sha256": "e846fadee7694ef575a2f45f98bc4e0d280dd70fa7e4cbcd9a61f8fcd173afc3",
+    "line_count": 1328
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-validation-plan.md",
+    "sha256": "f9bbcc42121a22c4d30f160397bb47a0f3c0a5e6376182ecf0c34eba47be747f",
+    "line_count": 786
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-register.md",
+    "sha256": "db3b84a90e51e527e0ecb834a4e028d6543b20820527cefdeeef6b28c8683a22",
+    "line_count": 574
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-case-level-traceability.md",
+    "sha256": "3498aeab5fcac840ca08f7f47cf94395a93d30a9a568b5f5c4b9b9c6cdc712ae",
+    "line_count": 438
+  },
+  {
+    "path": "docs/decisions/0001-browser-engine-strategy.md",
+    "sha256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5",
+    "line_count": 164
+  },
+  {
+    "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+    "sha256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2",
+    "line_count": 63
+  },
+  {
+    "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+    "sha256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e",
+    "line_count": 44
+  },
+  {
+    "path": "docs/decisions/0004-browser-local-persistence.md",
+    "sha256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3",
+    "line_count": 39
+  },
+  {
+    "path": "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md",
+    "sha256": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17",
+    "line_count": 47
+  },
+  {
+    "path": "apps/browser-macos/Sources/Host/MainWindowController.swift",
+    "sha256": "9ecf5c6ba614f9de2886967bb2e901e8d92bf48e09fa6414cea1a566d796baa4",
+    "line_count": 44
+  },
+  {
+    "path": "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "sha256": "ad30d63933810fa259b7b85303bcf520eebaada8e069f450e800c8a6b61e60b6",
+    "line_count": 43
+  },
+  {
+    "path": "apps/browser-macos/Sources/App/ApplicationMain.swift",
+    "sha256": "fa6487c530fb0d47e57ee921c0c212c26cf563fc11db9e537b38d018c56e173d",
+    "line_count": 14
+  },
+  {
+    "path": "apps/browser-macos/Config/Base.xcconfig",
+    "sha256": "5fcbd66ec5347d763a495273f8d048fbbc055f52aa788499b99c111ce6460d97",
+    "line_count": 19
+  }
+]

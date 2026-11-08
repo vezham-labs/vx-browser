@@ -1,0 +1,73 @@
+{
+  "prior_readiness_manifest": [
+    {
+      "path": "baseline.json",
+      "matches": true
+    },
+    {
+      "path": "prerequisite-assessment.json",
+      "matches": true
+    },
+    {
+      "path": "preservation-audit.json",
+      "matches": true
+    },
+    {
+      "path": "provider-configuration.json",
+      "matches": true
+    },
+    {
+      "path": "readiness-gaps.json",
+      "matches": true
+    },
+    {
+      "path": "results/prior-authenticity-evidence-check.json",
+      "matches": true
+    },
+    {
+      "path": "results/static-environment-and-inputs.json",
+      "matches": true
+    },
+    {
+      "path": "sources/canonical-inputs.json",
+      "matches": true
+    },
+    {
+      "path": "sources/owner-authorization.txt",
+      "matches": true
+    },
+    {
+      "path": "synthetic-test-matrix.json",
+      "matches": true
+    },
+    {
+      "path": "synthetic-test-matrix.md",
+      "matches": true
+    }
+  ],
+  "all_readiness_entries_match": true,
+  "static_archives_and_headers": [
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/libsqlite3.a",
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+      "matches_prior": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1/sqlite3.h",
+      "sha256": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec",
+      "matches_prior": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-2/libsqlite3.a",
+      "sha256": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+      "matches_prior": true
+    },
+    {
+      "path": "/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-2/sqlite3.h",
+      "sha256": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec",
+      "matches_prior": true
+    }
+  ],
+  "all_static_match": true,
+  "build_or_runtime_executed": false
+}
