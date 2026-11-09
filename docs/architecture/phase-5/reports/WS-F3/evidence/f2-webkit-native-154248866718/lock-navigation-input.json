@@ -1,0 +1,11 @@
+{
+  "namespace": "002125f5-4f2f-4ad4-8ca3-296748da95b6",
+  "profile": "c22687a9-954c-43d1-a234-038ac8d4a903",
+  "store": "f46b0263-8110-41f1-9f2b-9ed1d0848359",
+  "keyID": "a16c2e2b-23bb-45cb-926f-b80e52826dd8",
+  "origin": "http://127.0.0.1:58877",
+  "cacheID": "0f9afca6-77a0-418f-899d-e5f97d609369",
+  "checkpoint": null,
+  "cutpoint": null,
+  "action": "lock-navigation"
+}

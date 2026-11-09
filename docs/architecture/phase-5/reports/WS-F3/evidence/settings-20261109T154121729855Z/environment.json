@@ -1,0 +1,9 @@
+{
+  "binarySHA256": "12a8fd738b539b979deb7953a3927b34ee0defff20971f4d0440ca82606ec5c1",
+  "sources": {
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/GlobalAppearanceSettings.swift": "63d585c45f19f46a9e8aa591d129aee540f65a9d62a398453d09a8161877750f",
+    "qualification/sqlcipher-wsf3/GlobalAppearanceProbe.swift": "9d8b25bcf9798de0895ca637dfca1419fc49e0ae383d73fdf7be62f59f9d0267"
+  },
+  "provider": "System SQLite, plaintext low-sensitivity tier",
+  "cli": true
+}

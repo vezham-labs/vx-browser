@@ -38,6 +38,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         let configuration: WKWebViewConfiguration
         var descriptor: StorageDescriptor
         var published = false
+        var permissionDocument = UUID()
     }
     public struct Event: Codable, Sendable {
         public let sequence: Int
@@ -359,8 +360,15 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         navigations.removeValue(forKey: ObjectIdentifier(webView))?(false); record("content-process", "terminated-fenced")
     }
     public func webView(_ webView: WKWebView, decidePolicyFor action: WKNavigationAction, decisionHandler: @escaping @MainActor @Sendable (WKNavigationActionPolicy) -> Void) {
-        let owned = views.values.contains { $0.object === webView && $0.published && !fenced.contains($0.identity.scope) }
-        decisionHandler(owned && action.request.url.map(permitted) == true ? .allow : .cancel)
+        guard let pair = views.first(where: { $0.value.object === webView }), pair.value.published,
+              !fenced.contains(pair.value.identity.scope), action.request.url.map(permitted) == true else {
+            decisionHandler(.cancel)
+            return
+        }
+        if action.targetFrame?.isMainFrame == true {
+            views[pair.key]?.permissionDocument = UUID()
+        }
+        decisionHandler(.allow)
     }
     public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? { nil }
     public func webView(_ webView: WKWebView, decidePolicyFor response: WKNavigationResponse, decisionHandler: @escaping @MainActor @Sendable (WKNavigationResponsePolicy) -> Void) {
@@ -372,20 +380,38 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     public func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping @MainActor @Sendable (Bool) -> Void) { completionHandler(false) }
     public func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping @MainActor @Sendable (String?) -> Void) { completionHandler(nil) }
     public func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor @Sendable (WKPermissionDecision) -> Void) {
+        record("permission", "delegate-entered")
         guard let pair = views.first(where: { $0.value.object === webView }), pair.value.published,
               !fenced.contains(pair.value.identity.scope), frame.isMainFrame,
               let url = webView.url, url.host == origin.host, url.scheme == origin.protocol,
               let verified = try? VerifiedOrigin(scheme: origin.protocol, host: origin.host, port: origin.port == 0 ? (origin.protocol == "https" ? 443 : 80) : origin.port),
-              verified.port == UInt16(url.port ?? (url.scheme == "https" ? 443 : 80)), let mediator = permissionMediator else { decisionHandler(.deny); return }
+              let port = UInt16(exactly: url.port ?? (url.scheme == "https" ? 443 : 80)),
+              verified.port == port, let mediator = permissionMediator else {
+            record("permission", "denied-unverified-context")
+            decisionHandler(.deny)
+            return
+        }
         let kind: PermissionKind
-        switch type { case .camera: kind = .camera; case .microphone: kind = .microphone; case .cameraAndMicrophone: kind = .cameraAndMicrophone; @unknown default: decisionHandler(.deny); return }
+        switch type {
+        case .camera: kind = .camera
+        case .microphone: kind = .microphone
+        case .cameraAndMicrophone: kind = .cameraAndMicrophone
+        @unknown default:
+            record("permission", "denied-unsupported")
+            decisionHandler(.deny)
+            return
+        }
         let id = pair.key, generation = pair.value.generation, scope = pair.value.identity.scope
+        let document = pair.value.permissionDocument
         Task { @MainActor [weak self, weak webView] in
             guard let self, let webView else { decisionHandler(.deny); return }
-            let decision = await mediator.request(scope: scope, view: id, generation: generation, origin: verified, kind: kind, surface: webView) { [weak self] in
-                self?.views[id]?.generation == generation && self?.views[id]?.published == true && self?.fenced.contains(scope) == false
+            let decision = await mediator.request(scope: scope, view: id, generation: generation, origin: verified, kind: kind, surface: webView) { [weak self, weak webView] in
+                self?.views[id]?.generation == generation && self?.views[id]?.published == true &&
+                    self?.views[id]?.permissionDocument == document && self?.fenced.contains(scope) == false &&
+                    webView?.url == url
             }
-            self.record("permission", decision == .grant ? "granted-scoped" : "denied-closed"); decisionHandler(decision)
+            self.record("permission", decision == .grant ? "granted-scoped" : "denied-closed")
+            decisionHandler(decision)
         }
     }
     @available(macOS 27.0, *)

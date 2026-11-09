@@ -1,0 +1,14 @@
+{
+  "name": "sqlcipher-wsf3",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "qualification/sqlcipher-wsf3",
+  "projectType": "library",
+  "tags": ["scope:qualification", "type:native"],
+  "targets": {
+    "verify": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {"command": "python3 qualification/sqlcipher-wsf3/run_native.py"}
+    }
+  }
+}

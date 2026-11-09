@@ -1,0 +1,49 @@
+[
+  {
+    "label": "build",
+    "argv": [
+      "xcrun",
+      "swiftc",
+      "-swift-version",
+      "6",
+      "-module-cache-path",
+      "/private/tmp/vx-wsf3-settings-sb9qmhw2/cache",
+      "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/GlobalAppearanceSettings.swift",
+      "qualification/sqlcipher-wsf3/GlobalAppearanceProbe.swift",
+      "-o",
+      "/private/tmp/vx-wsf3-settings-sb9qmhw2/probe"
+    ],
+    "startedUTC": "2026-11-09T15:41:21.732919+00:00",
+    "exit": 0
+  },
+  {
+    "label": "signature",
+    "argv": [
+      "codesign",
+      "-dvv",
+      "--entitlements",
+      ":-",
+      "/private/tmp/vx-wsf3-settings-sb9qmhw2/probe"
+    ],
+    "startedUTC": "2026-11-09T15:41:46.968429+00:00",
+    "exit": 0
+  },
+  {
+    "label": "attempt-1",
+    "argv": [
+      "/private/tmp/vx-wsf3-settings-sb9qmhw2/probe",
+      "/private/tmp/vx-wsf3-settings-sb9qmhw2/fixture-1"
+    ],
+    "startedUTC": "2026-11-09T15:41:47.104209+00:00",
+    "exit": 0
+  },
+  {
+    "label": "attempt-2",
+    "argv": [
+      "/private/tmp/vx-wsf3-settings-sb9qmhw2/probe",
+      "/private/tmp/vx-wsf3-settings-sb9qmhw2/fixture-2"
+    ],
+    "startedUTC": "2026-11-09T15:41:47.640376+00:00",
+    "exit": 0
+  }
+]

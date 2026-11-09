@@ -1,0 +1,3531 @@
+[
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-seed",
+    "recordPersistedUTC": "2026-11-09T15:45:27.156065+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-seed",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-seed-result.json",
+      "f2-webkit-native-154509919762/cache-A-seed-input.json",
+      "f2-webkit-native-154509919762/cache-A-seed.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-B-seed",
+    "recordPersistedUTC": "2026-11-09T15:45:39.669472+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "15de1942-872c-4446-bb26-d41655d4f5a1",
+      "426df796-e91f-48f9-9df7-749a14538ad1"
+    ],
+    "operation": "cache-seed",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-B-seed-result.json",
+      "f2-webkit-native-154509919762/cache-B-seed-input.json",
+      "f2-webkit-native-154509919762/cache-B-seed.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-restart",
+    "recordPersistedUTC": "2026-11-09T15:45:47.034110+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-read",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-restart-result.json",
+      "f2-webkit-native-154509919762/cache-A-restart-input.json",
+      "f2-webkit-native-154509919762/cache-A-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-RECONSTRUCTION-POSITIVE",
+    "attempt": "cache-A-reconstruct",
+    "recordPersistedUTC": "2026-11-09T15:45:57.294975+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-reconstruct",
+    "expected": "F2-CACHE-RECONSTRUCTION-POSITIVE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-reconstruct-result.json",
+      "f2-webkit-native-154509919762/cache-A-reconstruct-input.json",
+      "f2-webkit-native-154509919762/cache-A-reconstruct.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-reconstruct",
+    "recordPersistedUTC": "2026-11-09T15:45:57.294975+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-reconstruct",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-reconstruct-result.json",
+      "f2-webkit-native-154509919762/cache-A-reconstruct-input.json",
+      "f2-webkit-native-154509919762/cache-A-reconstruct.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-abrupt",
+    "recordPersistedUTC": "2026-11-09T15:46:20.530915+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-read",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-abrupt-result.json",
+      "f2-webkit-native-154509919762/cache-A-abrupt-input.json",
+      "f2-webkit-native-154509919762/cache-A-abrupt.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-after-abrupt",
+    "recordPersistedUTC": "2026-11-09T15:46:27.947991+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-read",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-after-abrupt-result.json",
+      "f2-webkit-native-154509919762/cache-A-after-abrupt-input.json",
+      "f2-webkit-native-154509919762/cache-A-after-abrupt.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-CLEAR-CALLBACK",
+    "attempt": "cache-A-selected-clear",
+    "recordPersistedUTC": "2026-11-09T15:46:36.880601+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-selected-clear",
+    "expected": "F2-CACHE-CLEAR-CALLBACK assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-selected-clear-result.json",
+      "f2-webkit-native-154509919762/cache-A-selected-clear-input.json",
+      "f2-webkit-native-154509919762/cache-A-selected-clear.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+    "attempt": "cache-A-selected-clear",
+    "recordPersistedUTC": "2026-11-09T15:46:36.880601+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-selected-clear",
+    "expected": "F2-CACHE-CLEAR-POSITIVE-CONTROL assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-selected-clear-result.json",
+      "f2-webkit-native-154509919762/cache-A-selected-clear-input.json",
+      "f2-webkit-native-154509919762/cache-A-selected-clear.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-selected-clear",
+    "recordPersistedUTC": "2026-11-09T15:46:36.880601+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-selected-clear",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-selected-clear-result.json",
+      "f2-webkit-native-154509919762/cache-A-selected-clear-input.json",
+      "f2-webkit-native-154509919762/cache-A-selected-clear.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-CLEAR-CALLBACK",
+    "attempt": "cache-A-full-clear",
+    "recordPersistedUTC": "2026-11-09T15:47:00.923392+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-full-clear",
+    "expected": "F2-CACHE-CLEAR-CALLBACK assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-full-clear-result.json",
+      "f2-webkit-native-154509919762/cache-A-full-clear-input.json",
+      "f2-webkit-native-154509919762/cache-A-full-clear.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+    "attempt": "cache-A-full-clear",
+    "recordPersistedUTC": "2026-11-09T15:47:00.923392+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-full-clear",
+    "expected": "F2-CACHE-CLEAR-POSITIVE-CONTROL assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-full-clear-result.json",
+      "f2-webkit-native-154509919762/cache-A-full-clear-input.json",
+      "f2-webkit-native-154509919762/cache-A-full-clear.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-full-clear",
+    "recordPersistedUTC": "2026-11-09T15:47:00.923392+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-full-clear",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-full-clear-result.json",
+      "f2-webkit-native-154509919762/cache-A-full-clear-input.json",
+      "f2-webkit-native-154509919762/cache-A-full-clear.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-remove",
+    "recordPersistedUTC": "2026-11-09T15:47:12.703843+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-remove",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-remove-result.json",
+      "f2-webkit-native-154509919762/cache-A-remove-input.json",
+      "f2-webkit-native-154509919762/cache-A-remove.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-REMOVE",
+    "attempt": "cache-A-remove",
+    "recordPersistedUTC": "2026-11-09T15:47:12.703843+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+      "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+    ],
+    "operation": "cache-remove",
+    "expected": "F2-CACHE-REMOVE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-A-remove-result.json",
+      "f2-webkit-native-154509919762/cache-A-remove-input.json",
+      "f2-webkit-native-154509919762/cache-A-remove.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "cache-B-remove",
+    "recordPersistedUTC": "2026-11-09T15:47:17.544064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "15de1942-872c-4446-bb26-d41655d4f5a1",
+      "426df796-e91f-48f9-9df7-749a14538ad1"
+    ],
+    "operation": "cache-remove",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-B-remove-result.json",
+      "f2-webkit-native-154509919762/cache-B-remove-input.json",
+      "f2-webkit-native-154509919762/cache-B-remove.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-REMOVE",
+    "attempt": "cache-B-remove",
+    "recordPersistedUTC": "2026-11-09T15:47:17.544064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "15de1942-872c-4446-bb26-d41655d4f5a1",
+      "426df796-e91f-48f9-9df7-749a14538ad1"
+    ],
+    "operation": "cache-remove",
+    "expected": "F2-CACHE-REMOVE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/cache-B-remove-result.json",
+      "f2-webkit-native-154509919762/cache-B-remove-input.json",
+      "f2-webkit-native-154509919762/cache-B-remove.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-MULTIWINDOW",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-MULTIWINDOW assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-REAL-RESOURCES",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-REAL-RESOURCES assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-NO-VIEWS",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-NO-VIEWS assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-NAVIGATION-DENIED",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-NAVIGATION-DENIED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-NO-KEY-LEASE",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-NO-KEY-LEASE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-REPEATED",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-REPEATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-OTHER-PROFILE",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-OTHER-PROFILE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-OTHER-CLEANUP",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-LOCK-OTHER-CLEANUP assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-UNLOCK-PRODUCTION",
+    "attempt": "lock",
+    "recordPersistedUTC": "2026-11-09T15:47:22.315073+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cf92e4ae-c57d-47af-8d8e-d94ac507b236",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock",
+    "expected": "F2-UNLOCK-PRODUCTION assertion in linked qualification source",
+    "actual": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-result.json",
+      "f2-webkit-native-154509919762/lock-input.json",
+      "f2-webkit-native-154509919762/lock.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-MULTIWINDOW",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-MULTIWINDOW assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-DURING-NAVIGATION",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-DURING-NAVIGATION assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-REAL-RESOURCES",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-REAL-RESOURCES assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-NO-VIEWS",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-NO-VIEWS assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-NAVIGATION-DENIED",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-NAVIGATION-DENIED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-NO-KEY-LEASE",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-NO-KEY-LEASE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-REPEATED",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-REPEATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-OTHER-PROFILE",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-OTHER-PROFILE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-OTHER-CLEANUP",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-LOCK-OTHER-CLEANUP assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-UNLOCK-PRODUCTION",
+    "attempt": "lock-navigation",
+    "recordPersistedUTC": "2026-11-09T15:47:26.198569+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7bf99a1a-b611-4bd2-8396-a05ac9e83272",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-navigation",
+    "expected": "F2-UNLOCK-PRODUCTION assertion in linked qualification source",
+    "actual": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-navigation-result.json",
+      "f2-webkit-native-154509919762/lock-navigation-input.json",
+      "f2-webkit-native-154509919762/lock-navigation.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-RESTART-DEFAULT-FENCED",
+    "attempt": "lock-restart",
+    "recordPersistedUTC": "2026-11-09T15:47:32.155111+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cc04ca9c-d739-41bf-9f4e-a4efa31e2de6",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-restart",
+    "expected": "F2-LOCK-RESTART-DEFAULT-FENCED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-restart-result.json",
+      "f2-webkit-native-154509919762/lock-restart-input.json",
+      "f2-webkit-native-154509919762/lock-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-RESTART-NO-FACTORY",
+    "attempt": "lock-restart",
+    "recordPersistedUTC": "2026-11-09T15:47:32.155111+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cc04ca9c-d739-41bf-9f4e-a4efa31e2de6",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-restart",
+    "expected": "F2-LOCK-RESTART-NO-FACTORY assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-restart-result.json",
+      "f2-webkit-native-154509919762/lock-restart-input.json",
+      "f2-webkit-native-154509919762/lock-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-LOCK-DURABLE-RECEIPT",
+    "attempt": "lock-restart",
+    "recordPersistedUTC": "2026-11-09T15:47:32.155111+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "cc04ca9c-d739-41bf-9f4e-a4efa31e2de6",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "lock-restart",
+    "expected": "F2-LOCK-DURABLE-RECEIPT assertion in linked qualification source",
+    "actual": "Synthetic checkpoint plus conservative default lock, not persisted protected lock-state qualification",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/lock-restart-result.json",
+      "f2-webkit-native-154509919762/lock-restart-input.json",
+      "f2-webkit-native-154509919762/lock-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-PERM-NATIVE-DENIAL",
+    "attempt": "permission",
+    "recordPersistedUTC": "2026-11-09T15:47:38.303123+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "f568ea60-aef1-48b0-b5a7-73ed3adc589f",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "permission",
+    "expected": "Matching native terminal denial and page denial",
+    "actual": "No bounded terminal native delegate and page denial pair",
+    "status": "INCONCLUSIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/permission-result.json",
+      "f2-webkit-native-154509919762/permission-input.json",
+      "f2-webkit-native-154509919762/permission.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-PERM-GEOLOCATION-DENIAL",
+    "attempt": "permission",
+    "recordPersistedUTC": "2026-11-09T15:47:38.303123+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "f568ea60-aef1-48b0-b5a7-73ed3adc589f",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "permission",
+    "expected": "Matching native unsupported denial and page denial",
+    "actual": "No bounded terminal native delegate and page denial pair",
+    "status": "INCONCLUSIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/permission-result.json",
+      "f2-webkit-native-154509919762/permission-input.json",
+      "f2-webkit-native-154509919762/permission.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-PERM-POSITIVE-ASK-ALLOW",
+    "attempt": "permission",
+    "recordPersistedUTC": "2026-11-09T15:47:38.303123+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "f568ea60-aef1-48b0-b5a7-73ed3adc589f",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "permission",
+    "expected": "F2-PERM-POSITIVE-ASK-ALLOW assertion in linked qualification source",
+    "actual": "Positive native media/Ask path lacks purpose strings/entitlements; policy-only allow tests do not qualify native support",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/permission-result.json",
+      "f2-webkit-native-154509919762/permission-input.json",
+      "f2-webkit-native-154509919762/permission.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-POPULATED",
+    "attempt": "permission-cleanup",
+    "recordPersistedUTC": "2026-11-09T15:47:43.202964+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "f568ea60-aef1-48b0-b5a7-73ed3adc589f",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "cache-remove",
+    "expected": "F2-CACHE-POPULATED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/permission-cleanup-result.json",
+      "f2-webkit-native-154509919762/permission-cleanup-input.json",
+      "f2-webkit-native-154509919762/permission-cleanup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-webkit-native-154509919762",
+    "testID": "F2-CACHE-REMOVE",
+    "attempt": "permission-cleanup",
+    "recordPersistedUTC": "2026-11-09T15:47:43.202964+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "f568ea60-aef1-48b0-b5a7-73ed3adc589f",
+      "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+    ],
+    "operation": "cache-remove",
+    "expected": "F2-CACHE-REMOVE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-webkit-native-154509919762/permission-cleanup-result.json",
+      "f2-webkit-native-154509919762/permission-cleanup-input.json",
+      "f2-webkit-native-154509919762/permission-cleanup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-WRONG-SCOPE",
+    "attempt": "keychain-create",
+    "recordPersistedUTC": "2026-11-09T15:45:21.067654+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-create",
+    "expected": "F2-KEY-WRONG-SCOPE assertion in linked qualification source",
+    "actual": "Adapter denied foreign profile before OS call",
+    "status": "PASS_CONTRACT",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-create-result.json",
+      "f2-security-native-154509919813/keychain-create-input.json",
+      "f2-security-native-154509919813/keychain-create.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-MISSING",
+    "attempt": "keychain-create",
+    "recordPersistedUTC": "2026-11-09T15:45:21.067654+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-create",
+    "expected": "F2-KEY-MISSING assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-create-result.json",
+      "f2-security-native-154509919813/keychain-create-input.json",
+      "f2-security-native-154509919813/keychain-create.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-CREATE",
+    "attempt": "keychain-create",
+    "recordPersistedUTC": "2026-11-09T15:45:21.067654+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-create",
+    "expected": "Successful positive signed item creation",
+    "actual": "unavailable",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-create-result.json",
+      "f2-security-native-154509919813/keychain-create-input.json",
+      "f2-security-native-154509919813/keychain-create.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-ACQUIRE",
+    "attempt": "keychain-create",
+    "recordPersistedUTC": "2026-11-09T15:45:21.067654+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-create",
+    "expected": "Successful scoped key retrieval",
+    "actual": "missing",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-create-result.json",
+      "f2-security-native-154509919813/keychain-create-input.json",
+      "f2-security-native-154509919813/keychain-create.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-WRONG-SCOPE",
+    "attempt": "keychain-restart",
+    "recordPersistedUTC": "2026-11-09T15:45:25.033412+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-restart",
+    "expected": "F2-KEY-WRONG-SCOPE assertion in linked qualification source",
+    "actual": "Adapter denied foreign profile before OS call",
+    "status": "PASS_CONTRACT",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-restart-result.json",
+      "f2-security-native-154509919813/keychain-restart-input.json",
+      "f2-security-native-154509919813/keychain-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-RESTART-MISSING-CONTROL",
+    "attempt": "keychain-restart",
+    "recordPersistedUTC": "2026-11-09T15:45:25.033412+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-restart",
+    "expected": "F2-KEY-RESTART-MISSING-CONTROL assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-restart-result.json",
+      "f2-security-native-154509919813/keychain-restart-input.json",
+      "f2-security-native-154509919813/keychain-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-RESTART-EXISTS",
+    "attempt": "keychain-restart",
+    "recordPersistedUTC": "2026-11-09T15:45:25.033412+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-restart",
+    "expected": "Expected protected key remains available after restart",
+    "actual": "Creation prerequisite did not succeed; no persisted-key pass",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-restart-result.json",
+      "f2-security-native-154509919813/keychain-restart-input.json",
+      "f2-security-native-154509919813/keychain-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-ACQUIRE",
+    "attempt": "keychain-restart",
+    "recordPersistedUTC": "2026-11-09T15:45:25.033412+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-restart",
+    "expected": "Successful scoped key retrieval",
+    "actual": "missing",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-restart-result.json",
+      "f2-security-native-154509919813/keychain-restart-input.json",
+      "f2-security-native-154509919813/keychain-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-KEY-DELETE",
+    "attempt": "keychain-restart",
+    "recordPersistedUTC": "2026-11-09T15:45:25.033412+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "keychain-restart",
+    "expected": "Successful authorized item deletion",
+    "actual": "unavailable",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/keychain-restart-result.json",
+      "f2-security-native-154509919813/keychain-restart-input.json",
+      "f2-security-native-154509919813/keychain-restart.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-AEAD-ROUNDTRIP",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-AEAD-ROUNDTRIP assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-NONCE-FRESH",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-NONCE-FRESH assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-TAMPER",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-TAMPER assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-TRUNCATE",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-TRUNCATE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-TRAILING",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-TRAILING assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-WRONG-RECOVERY",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-WRONG-RECOVERY assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-WRONG-PROFILE",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-WRONG-PROFILE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-DELETION-FILTER",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-DELETION-FILTER assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-UNKNOWN-LINEAGE",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-UNKNOWN-LINEAGE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-NO-OVERWRITE",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-NO-OVERWRITE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-NO-PRIVATE",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-NO-PRIVATE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-FILE-ROUNDTRIP",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-FILE-ROUNDTRIP assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-FILE-NO-OVERWRITE",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-FILE-NO-OVERWRITE assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-INTERRUPTED",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-INTERRUPTED assertion in linked qualification source",
+    "actual": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "f2-security-native-154509919813",
+    "testID": "F2-BACKUP-PRODUCTION-CATALOG",
+    "attempt": "backup",
+    "recordPersistedUTC": "2026-11-09T15:45:27.983901+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "1d789bd7-f896-468b-a9d1-ffc2fda62707",
+      "4935fbe9-fb63-4110-8d9d-06a7cf83bbd2"
+    ],
+    "operation": "backup",
+    "expected": "F2-BACKUP-PRODUCTION-CATALOG assertion in linked qualification source",
+    "actual": "Actual source snapshot/import and independent recovery custody blocked by protected catalog/key prerequisites; synthetic records only",
+    "status": "BLOCKED",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "f2-security-native-154509919813/backup-result.json",
+      "f2-security-native-154509919813/backup-input.json",
+      "f2-security-native-154509919813/backup.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-DIAG-001",
+    "attempt": "00-original-observation",
+    "recordPersistedUTC": "2026-11-09T15:45:20.941527+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "94747744d0bc9ab7ba34a34b7a1b027e2370ae964bad77742f25b631b31b7960",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "enumerate-original",
+    "expected": "F1-DIAG-001 assertion in linked qualification source",
+    "actual": "Noncreating public enumeration only; logical prior removal remains unknown",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": false,
+    "artifacts": [
+      "native-154509919727/00-original-observation-result.json",
+      "native-154509919727/00-original-observation-input.json",
+      "native-154509919727/00-original-observation.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-local",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INITIAL-EMPTY-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-POSITIVE-cookie",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-POSITIVE-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-POSITIVE-local",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-POSITIVE-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-POSITIVE-idb",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-POSITIVE-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INDEPENDENT-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INDEPENDENT-local",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INDEPENDENT-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INDEPENDENT-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-SHARED-cookie",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-SHARED-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-SHARED-local",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-SHARED-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-SHARED-idb",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-SHARED-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-NONLAST",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-NONLAST assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-LAST-A",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-LAST-A assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-LAST-B",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-LAST-B assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-FRESH-cookie",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-FRESH-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-FRESH-local",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-FRESH-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-FRESH-idb",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-FRESH-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-LAST-C",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-LAST-C assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA",
+    "attempt": "private-only",
+    "recordPersistedUTC": "2026-11-09T15:45:47.129112+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA assertion in linked qualification source",
+    "actual": "Private-only run writes no catalog or journal records",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-result.json",
+      "native-154509919727/private-only-input.json",
+      "native-154509919727/private-only.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-local",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INITIAL-EMPTY-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-POSITIVE-cookie",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-POSITIVE-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-POSITIVE-local",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-POSITIVE-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-POSITIVE-idb",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-POSITIVE-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INDEPENDENT-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INDEPENDENT-local",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INDEPENDENT-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-INDEPENDENT-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-SHARED-cookie",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-SHARED-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-SHARED-local",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-SHARED-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-SHARED-idb",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-SHARED-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-NONLAST",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-NONLAST assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-LAST-A",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-LAST-A assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-LAST-B",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-LAST-B assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-FRESH-cookie",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-FRESH-cookie assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-FRESH-local",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-FRESH-local assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-FRESH-idb",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-FRESH-idb assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-LAST-C",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-LAST-C assertion in linked qualification source",
+    "actual": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  },
+  {
+    "runID": "native-154509919727",
+    "testID": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA",
+    "attempt": "private-only-restart",
+    "recordPersistedUTC": "2026-11-09T15:46:35.035064+00:00",
+    "timestampKind": "evidence result write; harness does not timestamp individual operations",
+    "os": "macOS 27.2 (26B123)",
+    "architecture": "arm64",
+    "swift": "6.4.2",
+    "sdk": "27.2",
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "signing": "ad-hoc",
+    "entitlements": [
+      "App Sandbox",
+      "outgoing network client"
+    ],
+    "backend": "WebKit 22625.2.8.11.9, Security.framework or CryptoKit depending on case",
+    "fixtureIDs": [
+      "7b8fe7cf-ba37-4153-b8bb-7a54d0c2c4ed",
+      "1408b42d-ce30-4633-a5b9-cfccfd92b663",
+      "e51eaf38-ff6f-4279-81a4-473028dd6335"
+    ],
+    "operation": "private-only",
+    "expected": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA assertion in linked qualification source",
+    "actual": "Private-only run writes no catalog or journal records",
+    "status": "PASS_NATIVE",
+    "includedInCurrentCandidate": true,
+    "artifacts": [
+      "native-154509919727/private-only-restart-result.json",
+      "native-154509919727/private-only-restart-input.json",
+      "native-154509919727/private-only-restart.stdout"
+    ]
+  }
+]

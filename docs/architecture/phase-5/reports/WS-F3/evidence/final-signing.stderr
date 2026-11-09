@@ -1,0 +1,20 @@
+Executable=/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser
+Identifier=internal.vezham.browser.wsf1.qualification
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20500 size=7147 flags=0x10002(adhoc,runtime) hashes=212+7 location=embedded
+Hash type=sha256 size=32
+CandidateCDHash sha256=d45ba94b78906e947af8b35f7cc359582b938a9d
+CandidateCDHashFull sha256=d45ba94b78906e947af8b35f7cc359582b938a9d237724391641a0e738675405
+Hash choices=sha256
+CMSDigest=d45ba94b78906e947af8b35f7cc359582b938a9d237724391641a0e738675405
+CMSDigestType=2
+CDHash=d45ba94b78906e947af8b35f7cc359582b938a9d
+Signature=adhoc
+Info.plist entries=21
+TeamIdentifier=not set
+Runtime Version=27.2.0
+Sealed Resources version=2 rules=13 files=0
+Internal requirements count=0 size=12
+warning: Specifying ':' in the path is deprecated and will not work in a future release
+Total signatures=1
+Chosen signature=1

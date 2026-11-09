@@ -1,0 +1,197 @@
+[
+  {
+    "label": "keychain-create",
+    "pid": 73181,
+    "argv": [
+      "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+      "--wsf2-qualification"
+    ],
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "returncode": 0,
+    "intentionalKill": false,
+    "cutpointObserved": false,
+    "timeout": false,
+    "status": "PASS_NATIVE",
+    "result": {
+      "cases": [
+        {
+          "status": "PASS_CONTRACT",
+          "detail": "Adapter denied foreign profile before OS call",
+          "id": "F2-KEY-WRONG-SCOPE"
+        },
+        {
+          "status": "PASS_NATIVE",
+          "detail": "Bounded synthetic native observation",
+          "id": "F2-KEY-MISSING"
+        },
+        {
+          "status": "BLOCKED",
+          "detail": "unavailable",
+          "id": "F2-KEY-CREATE"
+        },
+        {
+          "status": "BLOCKED",
+          "detail": "missing",
+          "id": "F2-KEY-ACQUIRE"
+        }
+      ],
+      "environment": {
+        "WebKit": "22625.2.8.11.9",
+        "macOS": "Version 27.2 (Build 26B123)"
+      },
+      "observations": {
+        "createOSStatus": "-34018",
+        "acquireOSStatus": "-25300"
+      }
+    }
+  },
+  {
+    "label": "keychain-restart",
+    "pid": 73205,
+    "argv": [
+      "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+      "--wsf2-qualification"
+    ],
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "returncode": 0,
+    "intentionalKill": false,
+    "cutpointObserved": false,
+    "timeout": false,
+    "status": "PASS_NATIVE",
+    "result": {
+      "environment": {
+        "WebKit": "22625.2.8.11.9",
+        "macOS": "Version 27.2 (Build 26B123)"
+      },
+      "observations": {
+        "deleteOSStatus": "-34018",
+        "acquireOSStatus": "-25300"
+      },
+      "cases": [
+        {
+          "detail": "Adapter denied foreign profile before OS call",
+          "status": "PASS_CONTRACT",
+          "id": "F2-KEY-WRONG-SCOPE"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-KEY-RESTART-MISSING-CONTROL"
+        },
+        {
+          "detail": "Creation prerequisite did not succeed; no persisted-key pass",
+          "status": "BLOCKED",
+          "id": "F2-KEY-RESTART-EXISTS"
+        },
+        {
+          "detail": "missing",
+          "status": "BLOCKED",
+          "id": "F2-KEY-ACQUIRE"
+        },
+        {
+          "detail": "unavailable",
+          "status": "BLOCKED",
+          "id": "F2-KEY-DELETE"
+        }
+      ]
+    }
+  },
+  {
+    "label": "backup",
+    "pid": 73218,
+    "argv": [
+      "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+      "--wsf2-qualification"
+    ],
+    "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+    "returncode": 0,
+    "intentionalKill": false,
+    "cutpointObserved": false,
+    "timeout": false,
+    "status": "PASS_NATIVE",
+    "result": {
+      "observations": {},
+      "environment": {
+        "macOS": "Version 27.2 (Build 26B123)",
+        "WebKit": "22625.2.8.11.9"
+      },
+      "cases": [
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-AEAD-ROUNDTRIP"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-NONCE-FRESH"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-TAMPER"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-TRUNCATE"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-TRAILING"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-WRONG-RECOVERY"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-WRONG-PROFILE"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-DELETION-FILTER"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-UNKNOWN-LINEAGE"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-NO-OVERWRITE"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-NO-PRIVATE"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-FILE-ROUNDTRIP"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-FILE-NO-OVERWRITE"
+        },
+        {
+          "detail": "Bounded synthetic native observation",
+          "status": "PASS_NATIVE",
+          "id": "F2-BACKUP-INTERRUPTED"
+        },
+        {
+          "detail": "Actual source snapshot/import and independent recovery custody blocked by protected catalog/key prerequisites; synthetic records only",
+          "status": "BLOCKED",
+          "id": "F2-BACKUP-PRODUCTION-CATALOG"
+        }
+      ]
+    }
+  }
+]

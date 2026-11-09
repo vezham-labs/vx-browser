@@ -22,7 +22,9 @@ def digest(p):
 class Run:
     def __init__(self, evidence, action):
         self.evidence = evidence.resolve()
-        if ROOT / "docs/architecture/phase-5/evidence" not in self.evidence.parents or not (self.evidence / "baseline.json").is_file():
+        phase = ROOT / "docs/architecture/phase-5"
+        registered = phase / "evidence" in self.evidence.parents or self.evidence == phase / "reports/WS-F3/evidence"
+        if not registered or not (self.evidence / "baseline.json").is_file():
             raise SystemExit("Registered evidence directory required")
         self.out = self.evidence / (action + "-" + datetime.datetime.now(datetime.timezone.utc).strftime("%H%M%S%f"))
         self.out.mkdir()

@@ -1,0 +1,146 @@
+[
+  {
+    "status": "PASS_CONTRACT",
+    "detail": "Adapter denied foreign profile before OS call",
+    "id": "F2-KEY-WRONG-SCOPE",
+    "attempt": "keychain-create"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-KEY-MISSING",
+    "attempt": "keychain-create"
+  },
+  {
+    "status": "BLOCKED",
+    "detail": "unavailable",
+    "id": "F2-KEY-CREATE",
+    "attempt": "keychain-create"
+  },
+  {
+    "status": "BLOCKED",
+    "detail": "missing",
+    "id": "F2-KEY-ACQUIRE",
+    "attempt": "keychain-create"
+  },
+  {
+    "detail": "Adapter denied foreign profile before OS call",
+    "status": "PASS_CONTRACT",
+    "id": "F2-KEY-WRONG-SCOPE",
+    "attempt": "keychain-restart"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-KEY-RESTART-MISSING-CONTROL",
+    "attempt": "keychain-restart"
+  },
+  {
+    "detail": "Creation prerequisite did not succeed; no persisted-key pass",
+    "status": "BLOCKED",
+    "id": "F2-KEY-RESTART-EXISTS",
+    "attempt": "keychain-restart"
+  },
+  {
+    "detail": "missing",
+    "status": "BLOCKED",
+    "id": "F2-KEY-ACQUIRE",
+    "attempt": "keychain-restart"
+  },
+  {
+    "detail": "unavailable",
+    "status": "BLOCKED",
+    "id": "F2-KEY-DELETE",
+    "attempt": "keychain-restart"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-AEAD-ROUNDTRIP",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-NONCE-FRESH",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-TAMPER",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-TRUNCATE",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-TRAILING",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-WRONG-RECOVERY",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-WRONG-PROFILE",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-DELETION-FILTER",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-UNKNOWN-LINEAGE",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-NO-OVERWRITE",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-NO-PRIVATE",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-FILE-ROUNDTRIP",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-FILE-NO-OVERWRITE",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-BACKUP-INTERRUPTED",
+    "attempt": "backup"
+  },
+  {
+    "detail": "Actual source snapshot/import and independent recovery custody blocked by protected catalog/key prerequisites; synthetic records only",
+    "status": "BLOCKED",
+    "id": "F2-BACKUP-PRODUCTION-CATALOG",
+    "attempt": "backup"
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "detail": "Noncreating public enumeration only; logical prior removal remains unknown",
+    "status": "PASS_NATIVE",
+    "id": "F1-DIAG-001",
+    "attempt": "00-original-observation"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-local",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-POSITIVE-cookie",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-POSITIVE-local",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-POSITIVE-idb",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-local",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-SHARED-cookie",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-SHARED-local",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-SHARED-idb",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-NONLAST",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-LAST-A",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-LAST-B",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-FRESH-cookie",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-FRESH-local",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-FRESH-idb",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-LAST-C",
+    "attempt": "private-only"
+  },
+  {
+    "detail": "Private-only run writes no catalog or journal records",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA",
+    "attempt": "private-only"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-local",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-POSITIVE-cookie",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-POSITIVE-local",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-POSITIVE-idb",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-local",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-SHARED-cookie",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-SHARED-local",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-SHARED-idb",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-NONLAST",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-LAST-A",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-LAST-B",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-FRESH-cookie",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-FRESH-local",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-FRESH-idb",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-LAST-C",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "attempt": "private-only-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA",
+    "detail": "Private-only run writes no catalog or journal records",
+    "attempt": "private-only-restart"
+  }
+]

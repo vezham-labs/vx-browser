@@ -1,0 +1,75 @@
+◇ Test run started.
+↳ Testing Library Version: 2403
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test "F2-CON-007 canonical CBOR rejects duplicate noncanonical indefinite and trailing input" started.
+✔ Test "F2-CON-007 canonical CBOR rejects duplicate noncanonical indefinite and trailing input" passed after 0.010 seconds.
+◇ Test "F2-CON-008 backup rejects private duplicate oversized future or conflicting records" started.
+✔ Test "F2-CON-008 backup rejects private duplicate oversized future or conflicting records" passed after 0.001 seconds.
+◇ Test "F2-CON-009 restore omits native grants respects deletion and requires explicit unknown lineage" started.
+✔ Test "F2-CON-009 restore omits native grants respects deletion and requires explicit unknown lineage" passed after 0.001 seconds.
+◇ Test "F2-CON-010 catalog descriptor scope label and publication gates" started.
+✔ Test "F2-CON-010 catalog descriptor scope label and publication gates" passed after 0.001 seconds.
+◇ Test "F1-FAKE-001 concurrent close and clear exclude one another without effects" started.
+✔ Test "F1-FAKE-001 concurrent close and clear exclude one another without effects" passed after 0.002 seconds.
+◇ Test "F1-MOD-001 persistent descriptor roundtrip" started.
+✔ Test "F1-MOD-001 persistent descriptor roundtrip" passed after 0.001 seconds.
+◇ Test "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "missing" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "corrupt" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "old" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "future" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "adapter" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "platform" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "zero" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "equal" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "generation" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "time" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+✔ Test "F1-MOD-002 missing corrupt old future adapter and platform versions reject" with 10 test cases passed after 0.011 seconds.
+◇ Test "F1-MOD-003 private encoding forbidden" started.
+✔ Test "F1-MOD-003 private encoding forbidden" passed after 0.001 seconds.
+◇ Test "F1-MOD-004 all creation publication retirement transitions and replay" started.
+✔ Test "F1-MOD-004 all creation publication retirement transitions and replay" passed after 0.001 seconds.
+◇ Test "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .intent to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .resolved to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .registered to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .configured to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .constructed to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .published to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .navigationAuthorized to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .retiring to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .retired to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .removalPending to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .removed to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+✔ Test "F1-MOD-005 every interrupted transition quarantines without publication" with 11 test cases passed after 0.002 seconds.
+◇ Test "F1-MOD-006 no premature publish navigation or foreign replay" started.
+✔ Test "F1-MOD-006 no premature publish navigation or foreign replay" passed after 0.001 seconds.
+◇ Test "F1-MOD-007 stable present is reusable absent conflicting and unknown fence" started.
+✔ Test "F1-MOD-007 stable present is reusable absent conflicting and unknown fence" passed after 0.001 seconds.
+◇ Test "F1-MOD-008 invalid bounds and mixed private persistent reject" started.
+✔ Test "F1-MOD-008 invalid bounds and mixed private persistent reject" passed after 0.001 seconds.
+◇ Test "F1-GUARD-001 host grants are scoped current and revocable" started.
+✔ Test "F1-GUARD-001 host grants are scoped current and revocable" passed after 0.001 seconds.
+◇ Test "F1-GUARD-002 unresolved and wrong scope construction have no native effect" started.
+✔ Test "F1-GUARD-002 unresolved and wrong scope construction have no native effect" passed after 0.001 seconds.
+◇ Test "F1-GUARD-003 catalog namespace duplicate profile and store rejected before WebKit" started.
+✔ Test "F1-GUARD-003 catalog namespace duplicate profile and store rejected before WebKit" passed after 0.001 seconds.
+◇ Test "F1-GUARD-004 normal composition cannot publish or navigate unresolved views" started.
+✔ Test "F1-GUARD-004 normal composition cannot publish or navigate unresolved views" passed after 0.003 seconds.
+◇ Test "F2-CON-001 protected catalog refuses every operation without provider IO" started.
+✔ Test "F2-CON-001 protected catalog refuses every operation without provider IO" passed after 0.001 seconds.
+◇ Test "F2-CON-002 catalog migration plans reject unauthenticated interrupted and future schema" started.
+✔ Test "F2-CON-002 catalog migration plans reject unauthenticated interrupted and future schema" passed after 0.001 seconds.
+◇ Test "F2-CON-003 verified origins reject ambiguous identity" started.
+✔ Test "F2-CON-003 verified origins reject ambiguous identity" passed after 0.001 seconds.
+◇ Test "F2-CON-004 permission Ask allow deny revoke and OS independence" started.
+✔ Test "F2-CON-004 permission Ask allow deny revoke and OS independence" passed after 0.001 seconds.
+◇ Test "F2-CON-005 private permission no persistence and lock fences stale prompt" started.
+✔ Test "F2-CON-005 private permission no persistence and lock fences stale prompt" passed after 0.001 seconds.
+◇ Test "F2-FAKE-001 lock retires keys and resources before Locked; unlock needs auth and recovery" started.
+✔ Test "F2-FAKE-001 lock retires keys and resources before Locked; unlock needs auth and recovery" passed after 0.001 seconds.
+◇ Test "F2-CON-006 key errors remain distinct and contain no native secret objects" started.
+✔ Test "F2-CON-006 key errors remain distinct and contain no native secret objects" passed after 0.001 seconds.
+◇ Test "F2-CON-011 cross-component missing corrupt denied mismatch and interrupted recovery fence" started.
+✔ Test "F2-CON-011 cross-component missing corrupt denied mismatch and interrupted recovery fence" passed after 0.001 seconds.
+✔ Test run with 25 tests in 0 suites passed after 0.043 seconds.

@@ -1,0 +1,87 @@
+{
+  "label": "lock-restart",
+  "pid": 73531,
+  "argv": [
+    "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "cases": [
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-RESTART-DEFAULT-FENCED"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-RESTART-NO-FACTORY"
+      },
+      {
+        "detail": "Synthetic checkpoint plus conservative default lock, not persisted protected lock-state qualification",
+        "status": "BLOCKED",
+        "id": "F2-LOCK-DURABLE-RECEIPT"
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "observations": {},
+    "checkpoint": {
+      "snapshot": {
+        "previousRun": "641609b4-b1d8-46a6-af12-f9de104c4fa6",
+        "version": 1,
+        "records": [
+          {
+            "store": "7c6ce884-1d28-4709-bfc9-1191dedeafcd",
+            "generation": 1,
+            "profile": "4069ef41-1fd9-4290-9445-0f6d167179db",
+            "operation": "cf68c47a-7745-41e7-9753-fae678c8311d",
+            "phase": {
+              "stable": {
+                "_0": "active"
+              }
+            },
+            "namespace": "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+          },
+          {
+            "store": "35a2a92d-0967-4577-ae4d-27467950ad16",
+            "generation": 4,
+            "profile": "cc04ca9c-d739-41bf-9f4e-a4efa31e2de6",
+            "operation": "629610d6-d889-4ad9-995e-1c3ed249c4a9",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "namespace": "a17cd305-7d8e-4bec-b70a-5a611be9cc5f"
+          }
+        ]
+      },
+      "rows": [
+        {
+          "profile": "4069ef41-1fd9-4290-9445-0f6d167179db",
+          "store": "7c6ce884-1d28-4709-bfc9-1191dedeafcd",
+          "resourceGeneration": 1,
+          "status": "active",
+          "origin": "fresh",
+          "revision": 3
+        },
+        {
+          "profile": "cc04ca9c-d739-41bf-9f4e-a4efa31e2de6",
+          "store": "35a2a92d-0967-4577-ae4d-27467950ad16",
+          "resourceGeneration": 1,
+          "status": "retired",
+          "origin": "fresh",
+          "revision": 6
+        }
+      ]
+    }
+  }
+}

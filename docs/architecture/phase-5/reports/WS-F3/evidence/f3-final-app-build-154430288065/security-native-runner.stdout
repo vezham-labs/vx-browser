@@ -1,0 +1,4 @@
+{"label": "keychain-create", "status": "PASS_NATIVE", "cases": 4}
+{"label": "keychain-restart", "status": "PASS_NATIVE", "cases": 5}
+{"label": "backup", "status": "PASS_NATIVE", "cases": 15}
+{"attempt": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F3/evidence/f2-security-native-154509919813", "status": "PASS_NATIVE", "host": "27.2", "mode": "security-native", "nativePassed": 16, "contractPassed": 2, "blocked": 6, "inconclusive": 0, "failed": 0, "appProcesses": 3, "buildRecord": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F3/evidence/f3-final-app-build-154430288065/result.json", "qualification": "Bounded cases only; essential catalog/unlock/Keychain/backup gates may remain blocked"}

@@ -1,0 +1,27 @@
+[
+  {
+    "label": "build",
+    "argv": [
+      "xcrun",
+      "clang",
+      "-std=c17",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DSQLITE_HAS_CODEC",
+      "-I",
+      "/private/tmp/vx-wsf3-provider-qsosz6mf/provider",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-wsf3/descriptor_vfs.c",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-wsf3/native_probe.c",
+      "/private/tmp/vx-wsf3-provider-qsosz6mf/provider/libsqlite3.a",
+      "-framework",
+      "Security",
+      "-framework",
+      "CoreFoundation",
+      "-o",
+      "/private/tmp/vx-wsf3-provider-qsosz6mf/wsf3-native-probe"
+    ],
+    "startedUTC": "2026-11-09T15:35:38.215991+00:00",
+    "exit": 1
+  }
+]

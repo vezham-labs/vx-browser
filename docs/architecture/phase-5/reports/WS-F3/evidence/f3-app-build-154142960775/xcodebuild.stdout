@@ -1,0 +1,376 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj -scheme VezhamBrowser -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath /private/tmp/vx-wsf1-2x6pm2zx/DerivedData -clonedSourcePackagesDirPath /private/tmp/vx-wsf1-2x6pm2zx/packages -skipPackageUpdates build PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf1.qualification ARCHS=arm64 ONLY_ACTIVE_ARCH=YES MACOSX_DEPLOYMENT_TARGET=26.0
+
+Build settings from command line:
+    ARCHS = arm64
+    MACOSX_DEPLOYMENT_TARGET = 26.0
+    ONLY_ACTIVE_ARCH = YES
+    PRODUCT_BUNDLE_IDENTIFIER = internal.vezham.browser.wsf1.qualification
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  WSF0Qualification: /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0 @ local
+  BrowserStorageRuntime: /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime @ local
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (11 targets)
+    Target 'VezhamBrowser' in project 'VezhamBrowser'
+        ➜ Explicit dependency on target 'BrowserNativeStorage-product' in project 'BrowserStorageRuntime'
+    Target 'BrowserNativeStorage-product' in project 'BrowserStorageRuntime'
+        ➜ Explicit dependency on target 'BrowserNativeStorage' in project 'BrowserStorageRuntime'
+        ➜ Explicit dependency on target 'BrowserDomain-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPorts-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserCore-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPersistence-product' in project 'WSF0Qualification'
+    Target 'BrowserNativeStorage' in project 'BrowserStorageRuntime'
+        ➜ Explicit dependency on target 'BrowserDomain-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPorts-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserCore-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPersistence-product' in project 'WSF0Qualification'
+    Target 'BrowserPersistence-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPersistence' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserDomain' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPorts' in project 'WSF0Qualification'
+    Target 'BrowserPersistence' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserDomain' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPorts' in project 'WSF0Qualification'
+    Target 'BrowserCore-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserCore' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserDomain' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPorts' in project 'WSF0Qualification'
+    Target 'BrowserCore' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserDomain' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPorts' in project 'WSF0Qualification'
+    Target 'BrowserPorts-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserPorts' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserDomain' in project 'WSF0Qualification'
+    Target 'BrowserPorts' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserDomain' in project 'WSF0Qualification'
+    Target 'BrowserDomain-product' in project 'WSF0Qualification'
+        ➜ Explicit dependency on target 'BrowserDomain' in project 'WSF0Qualification'
+    Target 'BrowserDomain' in project 'WSF0Qualification' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: e68cc6c8913210bfdec504b5a9fcdede
+Build description path: /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/XCBuildData/e68cc6c8913210bfdec504b5a9fcdede.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -o /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache
+
+SwiftDriver BrowserNativeStorage normal arm64 com.apple.xcode.tools.swift.compiler (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name BrowserNativeStorage -Onone @/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name storageruntime -emit-const-values -const-gather-protocols-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage_const_extract_protocols.json -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/include -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ BrowserNativeStorage (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftCompile normal arm64 (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ NativePermissionMediator.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativePermissionMediator.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativePermissionMediator.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-SwiftPerFileCompile NativePermissionMediator.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for BrowserNativeStorage (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftDriver\ Compilation\ Requirements BrowserNativeStorage normal arm64 com.apple.xcode.tools.swift.compiler (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name BrowserNativeStorage -Onone @/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name storageruntime -emit-const-values -const-gather-protocols-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage_const_extract_protocols.json -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/include -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.swiftmodule/arm64-apple-macos.abi.json /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.abi.json (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.abi.json /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.swiftsourceinfo (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.swiftsourceinfo /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+SwiftDriver VezhamBrowser normal arm64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList -DDEBUG -DWSF1_QUALIFICATION -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Index.noindex/DataStore -swift-version 6 -I /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser-59dd96fca2f3d562c876cb73ed0a9978-VFS/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/include -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling NativePermissionMediator.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftCompile normal arm64 Compiling\ NativeWebKitStorage.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-SwiftPerFileCompile NativeWebKitStorage.swift
+
+SwiftCompile normal arm64 Compiling\ NativeStorageSession.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-SwiftPerFileCompile NativeStorageSession.swift
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreServices-122VP1MFZJL3TZ4I9NENQHXJ6.pcm
+
+SwiftDriverJobDiscovery normal arm64 Compiling NativeStorageSession.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/Foundation-5M93380YH1FWOZTE5ZYX87FMX.pcm
+
+SwiftDriverJobDiscovery normal arm64 Compiling NativeWebKitStorage.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+
+SwiftDriver\ Compilation BrowserNativeStorage normal arm64 com.apple.xcode.tools.swift.compiler (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name BrowserNativeStorage -Onone @/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name storageruntime -emit-const-values -const-gather-protocols-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage_const_extract_protocols.json -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/include -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.o normal (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos26.0 -r -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -O0 -Xlinker -no_warn_duplicate_libraries -F/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage_lto.o -Xlinker -no_deduplicate -Xlinker -dependency_info -Xlinker /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.swiftmodule -o /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.o
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/LocalAuthentication-1H9R1DCATDP9N781G112QL3SW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/JavaScriptCore-7J9IQLU01C74HN6LULBQOLSAE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/Symbols-E4QSYRBL5QBFTMIPZ8GBFYN3N.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/OSLog-1E61WCB8T5GUYA0WY1YFH8J8Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/Accessibility-9D4W6E5YCR7DW6NGOL87TWO05.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-DQ5U01LKTNP6WR8YSKFBJFD77.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/Network-6QCZVHLFDKMKXUQQFLH7GL4U1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/DataDetection-C4VVGP9FXYMWEEQO3M59TYIGX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreAudio-9QV6NLWDGUZ1TCKBC73EQ0K15.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreData-A2N0Q3YZN0SUEF2J5ZJPJNI4J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/IOSurface-762QZMW3A6WULRWQUJUKNJ48Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreTransferable-3O16ZSKNWEBTVR82B20LMJFW1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/ApplicationServices-5P6NPK6A5005ZFAQRHESEC0D0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreMIDI-84SRRKJWFTCKXQZ3X6KZL0R44.pcm
+
+ExtractAppIntentsMetadata (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name BrowserNativeStorage --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk --xcode-version 27B52 --platform-family macOS --deployment-target 26.0 --bundle-identifier internal.vezham.browser.wsf1.qualification --output /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.appintents --target-triple arm64-apple-macos26.0 --binary-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/BrowserNativeStorage.o --dependency-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage_dependency_info.dat --stringsdata-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.SwiftFileList --metadata-file-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/BrowserNativeStorage.DependencyMetadataFileList --static-metadata-file-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/BrowserNativeStorage.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.SwiftConstValuesFileList --force --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-11-09 21:12:30.387 appintentsmetadataprocessor[72598:2637389] Starting App Intents metadata extraction
+2026-11-09 21:12:30.885 appintentsmetadataprocessor[72598:2637389] Extracted no relevant App Intents symbols, skipping writing output
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/Metal-3SZH5OP77LXDZ30M12IWWDO2X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/OpenGL-BDEQ9UHGP1DO3UVKSAH2XMTNJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/Carbon-5PWIY89U9EY9N0411WFD3G970.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreVideo-6Y3JXANSHQF68DWZSZRAJRP2G.pcm
+
+ProcessInfoPlistFile /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Info.plist /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Config/Info.plist (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-infoPlistUtility /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Config/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Info.plist
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreImage-VFPE96CJXAZ93MF1D2GXQTPU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/QuartzCore-C7HDKMBFFKCNSVVJR690BM6TQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/CoreMedia-437LW9BR8G6LRV4UDC01ZWIRZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/AudioToolbox-7XZVZBR8POC0V99RTG5ZTB76U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/SwiftUICore-C7O6KBO4V61FLAMZOGYU1MLP1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/VideoToolbox-7PWQGKK1KYXRPWLIAIRZ8YP3B.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/AppKit-AA238R7OSDPRJC9NGXC4X6KPL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/MediaToolbox-AXXL8ZE1D7687Q35GNGJOTD61.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/AVFAudio-95GWBHZJO94F7ZP0VPAWZHSZW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/AVFoundation-BPQJJEJGBZ2VPMPYAITO0PYY4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules/WebKit-2HJ6H30Q7JN7FXP7KQTEVGFPJ.pcm
+
+SwiftCompile normal arm64 Compiling\ ApplicationDelegate.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile ApplicationDelegate.swift
+
+SwiftCompile normal arm64 Compiling\ SecurityQualificationHost.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile SecurityQualificationHost.swift
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift:66:42: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+ 64 |                 do {
+ 65 |                     let lease = try await broker.acquire(ref,context:context,interactive:false)
+ 66 |                     add("F2-KEY-ACQUIRE",await broker.hasActiveLease(input.profile))
+    |                                          `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+ 67 |                     await broker.revoke(input.profile)
+ 68 |                     add("F2-KEY-REVOKE",!(await broker.hasActiveLease(input.profile)))
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift:67:21: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+ 65 |                     let lease = try await broker.acquire(ref,context:context,interactive:false)
+ 66 |                     add("F2-KEY-ACQUIRE",await broker.hasActiveLease(input.profile))
+ 67 |                     await broker.revoke(input.profile)
+    |                     `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+ 68 |                     add("F2-KEY-REVOKE",!(await broker.hasActiveLease(input.profile)))
+ 69 |                     _ = lease
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift:68:43: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+ 66 |                     add("F2-KEY-ACQUIRE",await broker.hasActiveLease(input.profile))
+ 67 |                     await broker.revoke(input.profile)
+ 68 |                     add("F2-KEY-REVOKE",!(await broker.hasActiveLease(input.profile)))
+    |                                           `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+ 69 |                     _ = lease
+ 70 |                 } catch { blocked("F2-KEY-ACQUIRE",(error as? KeyFailure)?.rawValue ?? "unavailable") }
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift:204:50: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+202 |                     add("F2-LOCK-NO-VIEWS",session.adapter.ownedViews(scope).isEmpty && session.adapter.surface(view) == nil)
+203 |                     add("F2-LOCK-NAVIGATION-DENIED",await session.adapter.navigate(view,url:URL(string:origin+"/fixture")!) == .failed(.unauthorized))
+204 |                     add("F2-LOCK-NO-KEY-LEASE",!(await session.keys.hasActiveLease(input.profile)))
+    |                                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+205 |                     let repeated = await session.security.lock(input.profile,cause:.manual)
+206 |                     observations["repeatedLockState"] = repeated.rawValue
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift:208:37: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+206 |                     observations["repeatedLockState"] = repeated.rawValue
+207 |                     let noResources = await session.adapter.inventory(scope).isEmpty
+208 |                     let noLease = !(await session.keys.hasActiveLease(input.profile))
+    |                                     `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+209 |                     add("F2-LOCK-REPEATED",repeated == state || (repeated == .locked && noResources && noLease))
+210 |                     let otherSummary = await session.core.summary(otherScope)
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+SwiftEmitModule normal arm64 Emitting\ module\ for\ VezhamBrowser (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    
+
+SwiftCompile normal arm64 Compiling\ StorageQualificationHost.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/StorageQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/StorageQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile StorageQualificationHost.swift
+
+SwiftCompile normal arm64 Compiling\ MainWindowController.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Host/MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile MainWindowController.swift
+
+SwiftCompile normal arm64 Compiling\ ApplicationMain.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/App/ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/App/ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile ApplicationMain.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for VezhamBrowser (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriver\ Compilation\ Requirements VezhamBrowser normal arm64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList -DDEBUG -DWSF1_QUALIFICATION -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Index.noindex/DataStore -swift-version 6 -I /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser-59dd96fca2f3d562c876cb73ed0a9978-VFS/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/include -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/VezhamBrowser-Swift.h /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-swiftHeaderTool -arch arm64 /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -o /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/VezhamBrowser-Swift.h
+
+Copy /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftmodule /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftdoc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftdoc (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftdoc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.swiftdoc
+
+Copy /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.abi.json /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.abi.json (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.abi.json /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftsourceinfo (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftsourceinfo /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling ApplicationMain.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal arm64 Compiling MainWindowController.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ApplicationDelegate.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal arm64 Compiling StorageQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SecurityQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+
+SwiftDriver\ Compilation VezhamBrowser normal arm64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VezhamBrowser -Onone @/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList -DDEBUG -DWSF1_QUALIFICATION -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -target arm64-apple-macos26.0 -g -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Index.noindex/DataStore -swift-version 6 -I /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKStatCaches.noindex/macosx27.2-26B118-a7ff82d74745d5ef33555b35c4238456.sdkstatcache -output-file-map /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-generated-files.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-own-target-headers.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser-59dd96fca2f3d562c876cb73ed0a9978-VFS/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser-project-headers.hmap -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/include -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources-normal/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources/arm64 -Xcc -I/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser-Swift.h -working-directory /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser normal (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos26.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -F/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -F/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug -filelist /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.LinkFileList -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/PackageFrameworks -Xlinker -object_path_lto -Xlinker /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_lto.o -Xlinker -dependency_info -Xlinker /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.swiftmodule -Xlinker -no_adhoc_codesign -o /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser
+
+CopySwiftLibs /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-swiftStdLibTool --copy --verbose --sign - --Xcodesign --options --Xcodesign runtime --scan-executable /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser --scan-folder /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Frameworks --scan-folder /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/PlugIns --scan-folder /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Library/SystemExtensions --scan-folder /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name VezhamBrowser --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk --xcode-version 27B52 --platform-family macOS --deployment-target 26.0 --bundle-identifier internal.vezham.browser.wsf1.qualification --output /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/Resources --target-triple arm64-apple-macos26.0 --binary-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser --dependency-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser_dependency_info.dat --stringsdata-file /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftFileList --metadata-file-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyMetadataFileList --static-metadata-file-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/Objects-normal/arm64/VezhamBrowser.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-11-09 21:12:46.696 appintentsmetadataprocessor[72635:2637681] Starting App Intents metadata extraction
+2026-11-09 21:12:46.734 appintentsmetadataprocessor[72635:2637681] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CodeSign /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --options runtime --entitlements /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/VezhamBrowser.build/Debug/VezhamBrowser.build/VezhamBrowser.app.xcent --timestamp\=none --generate-entitlement-der --strip-disallowed-xattrs /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+RegisterExecutionPolicyException /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-RegisterExecutionPolicyException /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+Validate /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-validationUtility /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-lsregisterurl --record-path /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+Touch /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app (in target 'VezhamBrowser' from project 'VezhamBrowser')
+    cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    /usr/bin/touch -c /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app
+
+PruneExplicitPrecompiledModules /tmp/vx-wsf1-2x6pm2zx/DerivedData/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+note: Disabling hardened runtime with ad-hoc codesigning. (in target 'VezhamBrowser' from project 'VezhamBrowser')
+** BUILD SUCCEEDED **
+

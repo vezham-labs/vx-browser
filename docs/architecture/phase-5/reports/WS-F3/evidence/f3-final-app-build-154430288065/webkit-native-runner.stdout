@@ -1,0 +1,17 @@
+{"label": "cache-A-seed", "status": "PASS_NATIVE", "cases": 1}
+{"label": "cache-B-seed", "status": "PASS_NATIVE", "cases": 1}
+{"label": "cache-A-restart", "status": "PASS_NATIVE", "cases": 1}
+{"label": "cache-A-reconstruct", "status": "PASS_NATIVE", "cases": 2}
+{"label": "cache-A-abrupt", "status": "PASS_NATIVE", "cases": 1}
+{"label": "cache-A-after-abrupt", "status": "PASS_NATIVE", "cases": 1}
+{"label": "cache-A-selected-clear", "status": "PASS_NATIVE", "cases": 3}
+{"label": "cache-A-full-clear", "status": "PASS_NATIVE", "cases": 3}
+{"label": "cache-A-remove", "status": "PASS_NATIVE", "cases": 2}
+{"label": "cache-B-remove", "status": "PASS_NATIVE", "cases": 2}
+{"label": "lock", "status": "PASS_NATIVE", "cases": 9}
+{"label": "lock-navigation", "status": "PASS_NATIVE", "cases": 10}
+{"label": "lock-interrupted", "status": "PASS_NATIVE", "cases": 0}
+{"label": "lock-restart", "status": "PASS_NATIVE", "cases": 3}
+{"label": "permission", "status": "PASS_NATIVE", "cases": 3}
+{"label": "permission-cleanup", "status": "PASS_NATIVE", "cases": 2}
+{"attempt": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F3/evidence/f2-webkit-native-154509919762", "status": "PASS_NATIVE", "host": "27.2", "mode": "webkit-native", "nativePassed": 38, "contractPassed": 0, "blocked": 4, "inconclusive": 2, "failed": 0, "appProcesses": 16, "buildRecord": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F3/evidence/f3-final-app-build-154430288065/result.json", "qualification": "Bounded cases only; essential catalog/unlock/Keychain/backup gates may remain blocked"}

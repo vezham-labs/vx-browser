@@ -1,0 +1,219 @@
+[
+  {
+    "path": "/fixture",
+    "requestOrdinal": 1,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 2,
+    "cacheCount": 1,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 3,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 4,
+    "cacheCount": 2,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 5,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 6,
+    "cacheCount": 3,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 7,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 8,
+    "cacheCount": 4,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 9,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 10,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 11,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 12,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 13,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 14,
+    "cacheCount": 5,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 15,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 16,
+    "cacheCount": 6,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 17,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 18,
+    "cacheCount": 7,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 19,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 20,
+    "cacheCount": 8,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 21,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+    "requestOrdinal": 22,
+    "cacheCount": 9,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 23,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 24,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 25,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 26,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 27,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 28,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 29,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 30,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/01590a7f-0570-47d8-a05a-559599674f97",
+    "requestOrdinal": 31,
+    "cacheCount": 1,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  }
+]

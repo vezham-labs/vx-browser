@@ -24,7 +24,12 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         }
         #endif
         // Composition only: durable catalog/keys are not ready. No implicit persistent store.
-        storageSession = try? NativeStorageSession.protectedFoundation()
+        do {
+            storageSession = try NativeStorageSession.protectedFoundation()
+        } catch {
+            logger.error("protected-foundation-unavailable")
+        }
+        applyGlobalAppearance()
         if let storageSession { securityLifecycle = NativeSecurityLifecycle(session: storageSession) }
         configureMenu()
         showMainWindow()
@@ -58,6 +63,21 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         logger.info("native-host-terminating")
         mainWindow = nil
         securityLifecycle?.stop();securityLifecycle = nil
+    }
+
+    private func applyGlobalAppearance() {
+        do {
+            let support = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask,
+                                                       appropriateFor: nil, create: false)
+            let settings = GlobalAppearanceSettings(applicationSupport: support.appendingPathComponent("VezhamBrowser"))
+            switch try settings.read() {
+            case .system: NSApp.appearance = nil
+            case .light: NSApp.appearance = NSAppearance(named: .aqua)
+            case .dark: NSApp.appearance = NSAppearance(named: .darkAqua)
+            }
+        } catch {
+            logger.error("global-appearance-unavailable")
+        }
     }
 
     private func showMainWindow() {

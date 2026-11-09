@@ -20,7 +20,9 @@ def main():
     parser.add_argument("--evidence", type=Path, required=True)
     args = parser.parse_args()
     evidence = args.evidence.resolve()
-    if ROOT / "docs/architecture/phase-5/evidence" not in evidence.parents or not (evidence / "baseline.json").is_file():
+    phase = ROOT / "docs/architecture/phase-5"
+    registered = phase / "evidence" in evidence.parents or evidence == phase / "reports/WS-F3/evidence"
+    if not registered or not (evidence / "baseline.json").is_file():
         raise SystemExit("A registered evidence directory is required")
     attempt = evidence / ("attempt-" + datetime.datetime.now(datetime.timezone.utc).strftime("%H%M%S%f"))
     attempt.mkdir()

@@ -1,0 +1,72 @@
+{
+  "label": "cache-A-selected-clear",
+  "pid": 72737,
+  "argv": [
+    "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "7ae409473cdc7d4e5db579f4ea16d5ead3aaa25d7515c7cc095cf15ddbb044f1",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "snapshot": {
+        "previousRun": "6aa97b7b-452b-401d-96c7-26691fcd57e4",
+        "records": [
+          {
+            "store": "75819223-fb0e-4c3d-8598-409da9360521",
+            "generation": 18,
+            "namespace": "106153a9-469b-46a6-981e-4e1e3f7dd293",
+            "profile": "1dcb361d-38d4-4a41-8ebe-58d516b14130",
+            "operation": "9e400397-8f83-4faa-b72f-a871af0535bb",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            }
+          }
+        ],
+        "version": 1
+      },
+      "rows": [
+        {
+          "store": "75819223-fb0e-4c3d-8598-409da9360521",
+          "status": "retired",
+          "origin": "fresh",
+          "revision": 21,
+          "resourceGeneration": 1,
+          "profile": "1dcb361d-38d4-4a41-8ebe-58d516b14130"
+        }
+      ]
+    },
+    "observations": {
+      "first": "cache-8",
+      "second": "cache-8",
+      "beforeClear": "cache-7"
+    },
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "id": "F2-CACHE-CLEAR-CALLBACK",
+        "detail": "Bounded synthetic native observation"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+        "detail": "Bounded synthetic native observation"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "id": "F2-CACHE-POPULATED",
+        "detail": "Bounded synthetic native observation"
+      }
+    ],
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)"
+    }
+  }
+}

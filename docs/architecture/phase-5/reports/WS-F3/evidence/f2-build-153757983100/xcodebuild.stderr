@@ -1,0 +1,8 @@
+** BUILD FAILED **
+
+
+The following build commands failed:
+	SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativePermissionMediator.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+	SwiftCompile normal arm64 Compiling\ NativePermissionMediator.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativePermissionMediator.swift (in target 'BrowserNativeStorage' from project 'BrowserStorageRuntime')
+	Building project VezhamBrowser with scheme VezhamBrowser and configuration Debug
+(3 failures)

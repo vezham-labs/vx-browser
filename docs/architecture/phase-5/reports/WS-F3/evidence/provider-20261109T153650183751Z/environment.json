@@ -1,0 +1,10 @@
+{
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123",
+  "arch": "arm64",
+  "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0",
+  "sdk": "27.2",
+  "binarySHA256": "005837e84cf3a9dac6a178e9ac656f247058317077b45c70f345ac90af13d90a",
+  "signature": "Executable=/private/tmp/vx-wsf3-provider-ocwppmjx/wsf3-native-probe\nIdentifier=wsf3-native-probe\nFormat=Mach-O thin (arm64)\nCodeDirectory v=20400 size=10026 flags=0x20002(adhoc,linker-signed) hashes=310+0 location=embedded\nSignature=adhoc\nInfo.plist=not bound\nTeamIdentifier=not set\nSealed Resources=none\nInternal requirements=none\nwarning: Specifying ':' in the path is deprecated and will not work in a future release",
+  "entitlements": "Standalone CLI; no application/Keychain entitlement claim",
+  "provider": "SQLCipher 4.20.0 Community / CommonCrypto / SQLite 3.54.1"
+}

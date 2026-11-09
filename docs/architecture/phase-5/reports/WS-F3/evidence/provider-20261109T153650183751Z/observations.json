@@ -1,0 +1,2174 @@
+[
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "valid",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:52.706222+00:00",
+    "testProfile": "1-valid",
+    "expected": "Authenticate expected identity and become read-only ready",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "read_only_ready"
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": true,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "valid",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-valid.stdout",
+      "1-valid.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-key",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:53.806435+00:00",
+    "testProfile": "1-wrong-key",
+    "expected": "Reject incorrect 32-byte key with source unchanged",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-key",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-wrong-key.stdout",
+      "1-wrong-key.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "foreign",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:54.305347+00:00",
+    "testProfile": "1-foreign",
+    "expected": "Reject foreign profile with source unchanged",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "foreign",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-foreign.stdout",
+      "1-foreign.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-store",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:55.017640+00:00",
+    "testProfile": "1-wrong-store",
+    "expected": "Reject mismatched store identity",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-store",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-wrong-store.stdout",
+      "1-wrong-store.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-schema",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:55.516701+00:00",
+    "testProfile": "1-wrong-schema",
+    "expected": "Reject mismatched schema identity",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-schema",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-wrong-schema.stdout",
+      "1-wrong-schema.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-suite",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:55.866020+00:00",
+    "testProfile": "1-wrong-suite",
+    "expected": "Reject mismatched suite identity",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-suite",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-wrong-suite.stdout",
+      "1-wrong-suite.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-version",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:56.197140+00:00",
+    "testProfile": "1-wrong-version",
+    "expected": "Reject mismatched key version",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-version",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-wrong-version.stdout",
+      "1-wrong-version.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "corrupt",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:56.525974+00:00",
+    "testProfile": "1-corrupt",
+    "expected": "Reject corrupted encrypted page",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "corrupt",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-corrupt.stdout",
+      "1-corrupt.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "invalid-header",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:56.860230+00:00",
+    "testProfile": "1-invalid-header",
+    "expected": "Reject truncated encrypted file",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "invalid-header",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-invalid-header.stdout",
+      "1-invalid-header.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "missing",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:57.195564+00:00",
+    "testProfile": "1-missing",
+    "expected": "Refuse missing file without recreation",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "admission_refused",
+        "reason": "file_open_failed"
+      },
+      {
+        "event": "result",
+        "case": "missing",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-missing.stdout",
+      "1-missing.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "missing-key",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:57.206062+00:00",
+    "testProfile": "1-missing-key",
+    "expected": "Refuse missing scoped key before open",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "admission_refused",
+        "reason": "key_absent"
+      },
+      {
+        "event": "result",
+        "case": "missing-key",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-missing-key.stdout",
+      "1-missing-key.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "sidecar",
+    "attempt": 1,
+    "startedUTC": "2026-11-09T15:36:57.376901+00:00",
+    "testProfile": "1-sidecar",
+    "expected": "Refuse WAL sidecar before open",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "admission_refused",
+        "reason": "sidecar_present_or_unknown"
+      },
+      {
+        "event": "result",
+        "case": "sidecar",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "1-sidecar.stdout",
+      "1-sidecar.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "valid",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:57.583449+00:00",
+    "testProfile": "2-valid",
+    "expected": "Authenticate expected identity and become read-only ready",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "read_only_ready"
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": true,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "valid",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-valid.stdout",
+      "2-valid.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-key",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:58.000298+00:00",
+    "testProfile": "2-wrong-key",
+    "expected": "Reject incorrect 32-byte key with source unchanged",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-key",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-wrong-key.stdout",
+      "2-wrong-key.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "foreign",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:58.334485+00:00",
+    "testProfile": "2-foreign",
+    "expected": "Reject foreign profile with source unchanged",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "foreign",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-foreign.stdout",
+      "2-foreign.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-store",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:58.663697+00:00",
+    "testProfile": "2-wrong-store",
+    "expected": "Reject mismatched store identity",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-store",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-wrong-store.stdout",
+      "2-wrong-store.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-schema",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:58.992098+00:00",
+    "testProfile": "2-wrong-schema",
+    "expected": "Reject mismatched schema identity",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-schema",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-wrong-schema.stdout",
+      "2-wrong-schema.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-suite",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:59.321428+00:00",
+    "testProfile": "2-wrong-suite",
+    "expected": "Reject mismatched suite identity",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-suite",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-wrong-suite.stdout",
+      "2-wrong-suite.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "wrong-version",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:59.647585+00:00",
+    "testProfile": "2-wrong-version",
+    "expected": "Reject mismatched key version",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "wrong-version",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-wrong-version.stdout",
+      "2-wrong-version.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "corrupt",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:36:59.977584+00:00",
+    "testProfile": "2-corrupt",
+    "expected": "Reject corrupted encrypted page",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 4,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 5,
+        "phase": "authenticating",
+        "offset": 24,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 6,
+        "phase": "authenticating",
+        "offset": 4096,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "corrupt",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-corrupt.stdout",
+      "2-corrupt.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "invalid-header",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:37:00.408542+00:00",
+    "testProfile": "2-invalid-header",
+    "expected": "Reject truncated encrypted file",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "construction"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 1,
+        "phase": "construction",
+        "offset": 0,
+        "length": 100,
+        "forwarded": true
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "binding"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "key_applied"
+      },
+      {
+        "event": "fingerprint",
+        "phase": "key_applied",
+        "database": "main"
+      },
+      {
+        "event": "phase",
+        "database": "main",
+        "phase": "authenticating"
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 2,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 4096,
+        "forwarded": true
+      },
+      {
+        "event": "xRead",
+        "database": "main",
+        "sequence": 3,
+        "phase": "authenticating",
+        "offset": 0,
+        "length": 16,
+        "forwarded": true
+      },
+      {
+        "event": "fence",
+        "bound": true,
+        "configured": true,
+        "ready": false,
+        "write_authorized": false,
+        "content_preserved": true,
+        "policy_violation": false
+      },
+      {
+        "event": "result",
+        "case": "invalid-header",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-invalid-header.stdout",
+      "2-invalid-header.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "missing",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:37:00.983789+00:00",
+    "testProfile": "2-missing",
+    "expected": "Refuse missing file without recreation",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "admission_refused",
+        "reason": "file_open_failed"
+      },
+      {
+        "event": "result",
+        "case": "missing",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-missing.stdout",
+      "2-missing.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "missing-key",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:37:00.993900+00:00",
+    "testProfile": "2-missing-key",
+    "expected": "Refuse missing scoped key before open",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "admission_refused",
+        "reason": "key_absent"
+      },
+      {
+        "event": "result",
+        "case": "missing-key",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-missing-key.stdout",
+      "2-missing-key.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  },
+  {
+    "runID": "provider-20261109T153650183751Z",
+    "testID": "sidecar",
+    "attempt": 2,
+    "startedUTC": "2026-11-09T15:37:01.193108+00:00",
+    "testProfile": "2-sidecar",
+    "expected": "Refuse WAL sidecar before open",
+    "operation": "Pinned provider synthetic fixture / native reopen",
+    "actual": [
+      {
+        "event": "fixture_generation",
+        "result": "ready",
+        "policy_violation": false
+      },
+      {
+        "event": "admission_refused",
+        "reason": "sidecar_present_or_unknown"
+      },
+      {
+        "event": "result",
+        "case": "sidecar",
+        "pass": true
+      }
+    ],
+    "exit": 0,
+    "environment": "environment.json",
+    "artifacts": [
+      "2-sidecar.stdout",
+      "2-sidecar.stderr"
+    ],
+    "status": "PASS_NATIVE"
+  }
+]

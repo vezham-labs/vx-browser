@@ -38,6 +38,11 @@ public actor PermissionCoordinator {
         }
         return choice
     }
+    public func cancel(_ ticket: PermissionTicket) {
+        guard let item = pending[ticket.id], item.request.context.scope == ticket.scope,
+              item.epoch == ticket.epoch else { return }
+        pending.removeValue(forKey: ticket.id)
+    }
     public func invalidate(_ scope: Scope, lock: Bool) {
         epochs[scope, default: 1] += 1
         grants = grants.filter { $0.key.scope != scope }; pending = pending.filter { $0.value.request.context.scope != scope }

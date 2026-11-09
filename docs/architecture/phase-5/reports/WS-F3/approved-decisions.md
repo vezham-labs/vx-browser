@@ -1,0 +1,11 @@
+# WS-F3 owner approval record
+
+Authority: Product Owner, in the WS-F3 execution brief. This is the current disposition. The earlier proposals and their then-current status remain in the preserved [handoff](../WS-F2R-owner-handoff/d2a-01-owner-decision.md) and [reassessment](../WS-F2R-A/d2a-01-impact-analysis.md).
+
+- **Option D — Approved.** WebKit owns website storage. Vezham owns product records and protects persistent profiles and the sensitive catalog. macOS supplies native security. Ordinary SQLite is eligible only for explicitly allowlisted low-sensitivity global settings.
+- **D2A-01 Option 2 — Approved.** The owner selected the exact bounded exception below for the pinned qualification path. All other pre-key access and pre-authentication prohibitions remain in force. Existing database failure preserves the source. An unexpected request or mutation stops the affected path.
+- [ADR 0001](../../../../decisions/0001-browser-engine-strategy.md) remains Proposed with conditional WKWebView acceptance. OD-R01–OD-R20 remain authoritative. Chromium/CEF stays evaluation-only. macOS 26.0 and latest 26.x runtime and distribution signing/notarization remain deferred. Public distribution is unauthorized.
+
+## Exact approved exception
+
+> For the pinned qualification path, permit the truthful encrypted-header request at main-database offset 0, length 100, during connection construction before the length-explicit key call. This 100-byte bound is the application/VFS read-request bound, not a bound on block-device transfers: OS caching, sector reads and read-ahead may fetch more ciphertext before key application. No zero-physical-device-read guarantee is retained by this exception. The scoped 32-byte key must already have been validated in worker-owned memory. This exception permits no schema/row SQL, decrypted content publication, key in a URI/SQL string, persistent mutation, recovery/checkpoint write, additional application/VFS pre-key data-read request, or DatabaseReady/write grant. Apply the approved suite before authentication; all original protected files remain fenced until authenticated native scope/store/schema/suite/key-version identity is verified. An unexpected pre-key read range or any persistent mutation stops and preserves the run. Re-review the bound on provider/VFS upgrades.

@@ -1,0 +1,13 @@
+{
+  "binarySHA256": "49b3c66d760fa72ddca6abd8575d2d5ddbd16e7ccdc2bb2eef5633b166c54deb",
+  "sources": {
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/GlobalAppearanceSettings.swift": "fcb3b9fc32f5d3257f9eb7cd88677021a08485a9f8c4ebf266fceccec073c09b",
+    "qualification/sqlcipher-wsf3/GlobalAppearanceProbe.swift": "9d8b25bcf9798de0895ca637dfca1419fc49e0ae383d73fdf7be62f59f9d0267"
+  },
+  "provider": "System SQLite, plaintext low-sensitivity tier",
+  "cli": true,
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123",
+  "arch": "arm64",
+  "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0",
+  "sdk": "27.2"
+}

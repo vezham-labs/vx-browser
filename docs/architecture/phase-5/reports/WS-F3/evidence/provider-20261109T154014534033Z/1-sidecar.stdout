@@ -1,0 +1,3 @@
+{"event":"fixture_generation","result":"ready","policy_violation":false}
+{"event":"admission_refused","reason":"sidecar_present_or_unknown"}
+{"event":"result","case":"sidecar","pass":true}

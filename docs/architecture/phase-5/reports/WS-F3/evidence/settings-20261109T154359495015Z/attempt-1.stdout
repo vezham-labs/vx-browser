@@ -1,0 +1,4 @@
+{"expected":"System appearance without creating a database","status":"PASS_NATIVE","testID":"LOW-MISSING"}
+{"expected":"Typed global appearance round-trips through native SQLite","status":"PASS_NATIVE","testID":"LOW-ROUNDTRIP"}
+{"expected":"SQLite rejects values and slots outside the allowlist","status":"PASS_NATIVE","testID":"LOW-ALLOWLIST"}
+{"expected":"Read refuses a symlink instead of following it or replacing it","status":"PASS_NATIVE","testID":"LOW-SYMLINK"}

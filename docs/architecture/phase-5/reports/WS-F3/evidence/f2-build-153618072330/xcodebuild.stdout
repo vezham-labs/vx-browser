@@ -1,0 +1,13 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj -scheme VezhamBrowser -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath /private/tmp/vx-wsf1-hd3_i0uf/DerivedData -clonedSourcePackagesDirPath /private/tmp/vx-wsf1-hd3_i0uf/packages -skipPackageUpdates build PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf1.qualification ARCHS=arm64 ONLY_ACTIVE_ARCH=YES MACOSX_DEPLOYMENT_TARGET=26.0
+
+Build settings from command line:
+    ARCHS = arm64
+    MACOSX_DEPLOYMENT_TARGET = 26.0
+    ONLY_ACTIVE_ARCH = YES
+    PRODUCT_BUNDLE_IDENTIFIER = internal.vezham.browser.wsf1.qualification
+
+Resolve Package Graph
+
+Package: unknown
+

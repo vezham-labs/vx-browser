@@ -1,0 +1,1498 @@
+{
+  "counts": {
+    "PASS_NATIVE": 126,
+    "PASS_CONTRACT": 25,
+    "PASS_FAKE_ONLY": 84,
+    "FAIL": 0,
+    "INCONCLUSIVE": 2,
+    "BLOCKED": 10,
+    "NOT_EXECUTED": 18
+  },
+  "earlierAttemptsExcluded": true,
+  "archivedDiagnosticPassesExcluded": 1,
+  "observations": [
+    {
+      "group": "SQLCipher fixture",
+      "testID": "valid",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-key",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "foreign",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-store",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-schema",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-suite",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-version",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "corrupt",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "invalid-header",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "missing",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "missing-key",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "sidecar",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "valid",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-key",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "foreign",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-store",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-schema",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-suite",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "wrong-version",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "corrupt",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "invalid-header",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "missing",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "missing-key",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "SQLCipher fixture",
+      "testID": "sidecar",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-MISSING",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-ROUNDTRIP",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-ALLOWLIST",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-SYMLINK",
+      "attempt": 1,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-MISSING",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-ROUNDTRIP",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-ALLOWLIST",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "System SQLite settings",
+      "testID": "LOW-SYMLINK",
+      "attempt": 2,
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-seed",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-B-seed",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-RECONSTRUCTION-POSITIVE",
+      "attempt": "cache-A-reconstruct",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-reconstruct",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-abrupt",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-after-abrupt",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-CLEAR-CALLBACK",
+      "attempt": "cache-A-selected-clear",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+      "attempt": "cache-A-selected-clear",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-selected-clear",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-CLEAR-CALLBACK",
+      "attempt": "cache-A-full-clear",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+      "attempt": "cache-A-full-clear",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-full-clear",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-A-remove",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-REMOVE",
+      "attempt": "cache-A-remove",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "cache-B-remove",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-REMOVE",
+      "attempt": "cache-B-remove",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-MULTIWINDOW",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-REAL-RESOURCES",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-NO-VIEWS",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-NAVIGATION-DENIED",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-NO-KEY-LEASE",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-REPEATED",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-OTHER-PROFILE",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-OTHER-CLEANUP",
+      "attempt": "lock",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-UNLOCK-PRODUCTION",
+      "attempt": "lock",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-MULTIWINDOW",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-DURING-NAVIGATION",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-REAL-RESOURCES",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-NO-VIEWS",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-NAVIGATION-DENIED",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-NO-KEY-LEASE",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-REPEATED",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-OTHER-PROFILE",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-OTHER-CLEANUP",
+      "attempt": "lock-navigation",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-UNLOCK-PRODUCTION",
+      "attempt": "lock-navigation",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-RESTART-DEFAULT-FENCED",
+      "attempt": "lock-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-RESTART-NO-FACTORY",
+      "attempt": "lock-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-LOCK-DURABLE-RECEIPT",
+      "attempt": "lock-restart",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-PERM-NATIVE-DENIAL",
+      "attempt": "permission",
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-PERM-GEOLOCATION-DENIAL",
+      "attempt": "permission",
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-PERM-POSITIVE-ASK-ALLOW",
+      "attempt": "permission",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-POPULATED",
+      "attempt": "permission-cleanup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-webkit-native-154509919762",
+      "testID": "F2-CACHE-REMOVE",
+      "attempt": "permission-cleanup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-WRONG-SCOPE",
+      "attempt": "keychain-create",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-MISSING",
+      "attempt": "keychain-create",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-CREATE",
+      "attempt": "keychain-create",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-ACQUIRE",
+      "attempt": "keychain-create",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-WRONG-SCOPE",
+      "attempt": "keychain-restart",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-RESTART-MISSING-CONTROL",
+      "attempt": "keychain-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-RESTART-EXISTS",
+      "attempt": "keychain-restart",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-ACQUIRE",
+      "attempt": "keychain-restart",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-KEY-DELETE",
+      "attempt": "keychain-restart",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-AEAD-ROUNDTRIP",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-NONCE-FRESH",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-TAMPER",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-TRUNCATE",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-TRAILING",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-WRONG-RECOVERY",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-WRONG-PROFILE",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-DELETION-FILTER",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-UNKNOWN-LINEAGE",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-NO-OVERWRITE",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-NO-PRIVATE",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-FILE-ROUNDTRIP",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-FILE-NO-OVERWRITE",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-INTERRUPTED",
+      "attempt": "backup",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "f2-security-native-154509919813",
+      "testID": "F2-BACKUP-PRODUCTION-CATALOG",
+      "attempt": "backup",
+      "status": "BLOCKED"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-local",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-POSITIVE-cookie",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-POSITIVE-local",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-POSITIVE-idb",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INDEPENDENT-local",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-SHARED-cookie",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-SHARED-local",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-SHARED-idb",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-NONLAST",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-LAST-A",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-LAST-B",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-FRESH-cookie",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-FRESH-local",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-FRESH-idb",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-LAST-C",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA",
+      "attempt": "private-only",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-local",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-POSITIVE-cookie",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-POSITIVE-local",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-POSITIVE-idb",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INDEPENDENT-local",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-SHARED-cookie",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-SHARED-local",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-SHARED-idb",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-NONLAST",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-LAST-A",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-LAST-B",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-FRESH-cookie",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-FRESH-local",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-FRESH-idb",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-LAST-C",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "native-154509919727",
+      "testID": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA",
+      "attempt": "private-only-restart",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-007 canonical CBOR rejects duplicate noncanonical indefinite and trailing input",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-008 backup rejects private duplicate oversized future or conflicting records",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-009 restore omits native grants respects deletion and requires explicit unknown lineage",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-010 catalog descriptor scope label and publication gates",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-FAKE-001 concurrent close and clear exclude one another without effects",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-001 persistent descriptor roundtrip",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-002 missing corrupt old future adapter and platform versions reject",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-003 private encoding forbidden",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-004 all creation publication retirement transitions and replay",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-005 every interrupted transition quarantines without publication",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-006 no premature publish navigation or foreign replay",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-007 stable present is reusable absent conflicting and unknown fence",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-MOD-008 invalid bounds and mixed private persistent reject",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-GUARD-001 host grants are scoped current and revocable",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-GUARD-002 unresolved and wrong scope construction have no native effect",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-GUARD-003 catalog namespace duplicate profile and store rejected before WebKit",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F1-GUARD-004 normal composition cannot publish or navigate unresolved views",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-001 protected catalog refuses every operation without provider IO",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-002 catalog migration plans reject unauthenticated interrupted and future schema",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-003 verified origins reject ambiguous identity",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-004 permission Ask allow deny revoke and OS independence",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-005 private permission no persistence and lock fences stale prompt",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-FAKE-001 lock retires keys and resources before Locked; unlock needs auth and recovery",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-006 key errors remain distinct and contain no native secret objects",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "Swift contract suite",
+      "testID": "F2-CON-011 cross-component missing corrupt denied mismatch and interrupted recovery fence",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-001 validated identities are canonical and type-separated",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-002 stable mapping and noncreating deterministic enumeration",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-003 duplicate store insertion preserves original mapping",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-004 malformed catalog record is explicit corruption",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-005 duplicate raw profile/store records cannot be adopted",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-006 missing lookup never creates or replaces a store",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-007 namespace mismatch and corrupt catalog block fresh insertion",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-008 revision and capacity are enforced without overwrite",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-009 catalog unavailable and failed write do not invoke engine",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-010 store identity alone never authorizes cross-profile actions",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-011 malformed identity shapes never become valid IDs",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CAT-012 fresh binding does not silently adopt an orphaned existing store",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-001 resolution and assignment precede construction and activation",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-002 missing assignment and default resolution fail closed",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-003 failed provider resolution cannot construct",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-004 wrong identity and conflict are rejected before constructor",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-005 construction failure is explicit and has no ghost view",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-006 activation failure retires the constructed fake view",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-007 operation replay does not construct twice; payload mismatch fails",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-008 private-to-persistent and persistent-to-private assignments are invalid",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-CON-009 duplicate view identity cannot cross profiles",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-001 clear selected types preserves store and unselected data",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-002 clear has same-operation idempotency and payload mismatch rejection",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-003 explicit retirement required before whole-store removal",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-004 retired store removal retains a deleted catalog tombstone",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-005 resources reappearing after retirement block removal",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-006 partial removal remains partial and quarantined",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-007 unknown removal after effects never becomes success",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-008 failed removal never rolls mapping back to active",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-009 clear failure and partial outcomes are not successful clears",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-010 catalog commit failure after provider effect remains unknown",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-011 zero selected data types is refused without a provider call",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DEL-012 successful clear of one profile leaves another profile unchanged",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DIA-001 diagnostic events are bounded with reserved terminal capacity",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DIA-002 diagnostics have only typed classifications and opaque operations",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DIA-003 failure scripts are FIFO deterministic and exhaust once",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DIA-004 held close references cannot produce successful cleanup",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DIA-005 limits reject invalid coordinator configurations",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-DIA-006 in-flight events reserve space under diagnostic pressure",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-ID-001 malformed and zero identifiers are rejected",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-INT-001 persistent create activate switch clear retire remove lifecycle",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-INT-002 independent private session opens closes and never enters restart state",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-INT-003 interrupted activation restart cannot replay views or requests",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-INT-004 ambiguity in one profile preserves another active profile",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-INT-005 cross-profile and default fallback adversarial attempts have no construction effect",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-001 illegal activation and removal transitions are deterministic",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-002 references prevent quiescence and retirement",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-003 quiescence timeout is not reported as success",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-004 one pending lifecycle operation excludes concurrent requests",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-005 quarantine fences a late constructor and cleans its resources",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-006 authority revoked during activation cannot publish success",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-007 switch requires released source and creates new destination ownership",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-008 quarantine stays sticky through cleanup and never activates",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-009 explicit fail fences access and retains failure classification",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-010 retirement provider failure does not destroy the fake persistent store",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-011 source reactivation during switch rejects destination success",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-LIF-012 quiescence fences subsequent fake resource acquisition",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-001 private scope never enters persistent catalog or restart journal",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-002 same private group shares one fake ephemeral identity",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-003 independent private groups and persistent scopes do not share fake data",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-004 non-last private owner closure preserves its sibling",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-005 last private owner triggers quiescence and retirement",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-006 pending private participant blocks successful last-owner cleanup",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-007 private context cannot request persistent removal or receive persistent assignment",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PRI-008 new process snapshots contain no private data or sessions",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PUB-001 missing or duplicate member blocks publication",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PUB-002 generation and privacy lineage must match",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-PUB-003 active destination and unknown deletion coverage never silently restore",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-001 fresh coordinator reconciles established mapping without recreation",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-002 missing established store is quarantined and never recreated",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-003 unavailable conflicting and invalid provider observations fail closed",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-004 interrupted removal stays unknown after simulated restart",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-005 unknown removal with absent provider data cannot become removed success",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-006 corrupt metadata and mismatched store identity quarantine",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-007 duplicate recovery identities and same-run snapshots reject",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-008 quarantine write failure is explicit and restart fails closed",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-009 write-ahead failure denies provider operation",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-010 missing catalog and orphan provider never auto-adopt",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-011 recovery generation advances and never restores view authority",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-012 quarantine does not vanish when a stable-looking snapshot is offered",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-013 stale journal generations cannot overwrite a quarantine record",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "WS-F0 fake",
+      "testID": "F0-REC-014 terminal journal write failure cannot publish activation success",
+      "status": "PASS_FAKE_ONLY"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERSIST-CREATE-INTERRUPTED",
+      "expected": "Protected profile create interrupted before durable publication",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERSIST-DELETE-INTERRUPTED",
+      "expected": "Protected profile deletion interruption and durable reconcile",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERSIST-CONCURRENT-PROFILES",
+      "expected": "Concurrent authenticated protected stores and switching",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERSIST-WRITE-CRASH",
+      "expected": "Application crash during committed or pending metadata write",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERSIST-DISK-FULL",
+      "expected": "ENOSPC during durable transaction and archive staging",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERSIST-WAL-RECOVERY",
+      "expected": "Recovery of actual WAL/SHM inconsistency with pre-authentication fences",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERSIST-MIGRATION-INTERRUPTED",
+      "expected": "Protected schema migration interruption and rollback",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "CUSTODY-UNAVAILABLE",
+      "expected": "Keychain availability loss with active protected workflow",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "CUSTODY-INTERRUPTED",
+      "expected": "Actual signed create/delete interruption and rotation",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "LOCK-PENDING-PROTECTED-WRITE",
+      "expected": "Lock with loaded key and actual pending write",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "LOCK-UNLOCK-FAILURE",
+      "expected": "Protected reopen after denied/interrupted unlock",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "LIFECYCLE-SLEEP-RESTART",
+      "expected": "Actual sleep/wake, logout and macOS restart with live protected state",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "SESSION-CRASH-RECOVERY",
+      "expected": "Real session data recovery and safe navigation replay controls",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "BACKUP-PRODUCTION-INTERRUPTED",
+      "expected": "Interrupted coherent production backup and deletion consistency",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "RESTORE-PRODUCTION-INTERRUPTED",
+      "expected": "Interrupted authenticated separate-profile import and conflict preservation",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "RESTORE-CROSS-MAC",
+      "expected": "Offline independent recovery on separate authorized Mac",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "PERMISSION-PERSISTENCE-REVOCATION",
+      "expected": "Persisted native approval, cross-profile isolation, revoke and restart",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "group": "Unexecuted production and release",
+      "testID": "RELEASE-CANDIDATE",
+      "expected": "Actual macOS 26.0/latest 26.x runtime and signed distribution gates",
+      "status": "NOT_EXECUTED"
+    }
+  ]
+}

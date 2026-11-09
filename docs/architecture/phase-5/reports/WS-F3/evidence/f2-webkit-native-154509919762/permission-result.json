@@ -1,0 +1,77 @@
+{
+  "label": "permission",
+  "pid": 73535,
+  "argv": [
+    "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "cases": [
+      {
+        "status": "INCONCLUSIVE",
+        "id": "F2-PERM-NATIVE-DENIAL",
+        "detail": "No bounded terminal native delegate and page denial pair"
+      },
+      {
+        "status": "INCONCLUSIVE",
+        "id": "F2-PERM-GEOLOCATION-DENIAL",
+        "detail": "No bounded terminal native delegate and page denial pair"
+      },
+      {
+        "status": "BLOCKED",
+        "id": "F2-PERM-POSITIVE-ASK-ALLOW",
+        "detail": "Positive native media/Ask path lacks purpose strings/entitlements; policy-only allow tests do not qualify native support"
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "observations": {
+      "geolocationDelegateObserved": "no",
+      "microphonePurposeConfigured": "no",
+      "result": "unavailable",
+      "nativeMediaOutcome": "no-terminal-delegate",
+      "secureContext": "true",
+      "delegateObserved": "no",
+      "osMicrophoneStatus": "notDetermined",
+      "geolocationResult": "timeout"
+    },
+    "checkpoint": {
+      "snapshot": {
+        "records": [
+          {
+            "operation": "ee191f96-dc25-450c-bce2-7db2e43ac88d",
+            "generation": 3,
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "namespace": "a17cd305-7d8e-4bec-b70a-5a611be9cc5f",
+            "profile": "f568ea60-aef1-48b0-b5a7-73ed3adc589f",
+            "store": "fa9db3e3-6f29-4735-b3b4-d238ca252e67"
+          }
+        ],
+        "previousRun": "0b52002b-744e-4aed-8874-3e66cee9521c",
+        "version": 1
+      },
+      "rows": [
+        {
+          "resourceGeneration": 1,
+          "status": "retired",
+          "origin": "fresh",
+          "profile": "f568ea60-aef1-48b0-b5a7-73ed3adc589f",
+          "revision": 5,
+          "store": "fa9db3e3-6f29-4735-b3b4-d238ca252e67"
+        }
+      ]
+    }
+  }
+}

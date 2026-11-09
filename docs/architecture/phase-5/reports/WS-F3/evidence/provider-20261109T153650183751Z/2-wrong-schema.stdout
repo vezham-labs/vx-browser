@@ -1,0 +1,14 @@
+{"event":"fixture_generation","result":"ready","policy_violation":false}
+{"event":"phase","database":"main","phase":"construction"}
+{"event":"xRead","database":"main","sequence":1,"phase":"construction","offset":0,"length":100,"forwarded":true}
+{"event":"phase","database":"main","phase":"binding"}
+{"event":"phase","database":"main","phase":"key_applied"}
+{"event":"fingerprint","phase":"key_applied","database":"main"}
+{"event":"phase","database":"main","phase":"authenticating"}
+{"event":"xRead","database":"main","sequence":2,"phase":"authenticating","offset":0,"length":4096,"forwarded":true}
+{"event":"xRead","database":"main","sequence":3,"phase":"authenticating","offset":0,"length":16,"forwarded":true}
+{"event":"xRead","database":"main","sequence":4,"phase":"authenticating","offset":24,"length":16,"forwarded":true}
+{"event":"xRead","database":"main","sequence":5,"phase":"authenticating","offset":24,"length":16,"forwarded":true}
+{"event":"xRead","database":"main","sequence":6,"phase":"authenticating","offset":4096,"length":4096,"forwarded":true}
+{"event":"fence","bound":true,"configured":true,"ready":false,"write_authorized":false,"content_preserved":true,"policy_violation":false}
+{"event":"result","case":"wrong-schema","pass":true}

@@ -1,0 +1,40 @@
+{
+  "namespace": "426df796-e91f-48f9-9df7-749a14538ad1",
+  "profile": "15de1942-872c-4446-bb26-d41655d4f5a1",
+  "store": "d6949c28-a2e5-4c49-9aec-321e74b5902b",
+  "keyID": "c8739d00-9cf3-4bc6-ac4a-14a697a280b6",
+  "origin": "http://127.0.0.1:58962",
+  "cacheID": "ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+  "checkpoint": {
+    "rows": [
+      {
+        "profile": "15de1942-872c-4446-bb26-d41655d4f5a1",
+        "store": "d6949c28-a2e5-4c49-9aec-321e74b5902b",
+        "resourceGeneration": 1,
+        "revision": 5,
+        "origin": "fresh",
+        "status": "retired"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "4b7f4626-325c-48c1-b46e-3b919309be5d",
+      "version": 1,
+      "records": [
+        {
+          "operation": "14b6bdc5-272b-4bde-904d-34440dba6c48",
+          "profile": "15de1942-872c-4446-bb26-d41655d4f5a1",
+          "namespace": "426df796-e91f-48f9-9df7-749a14538ad1",
+          "store": "d6949c28-a2e5-4c49-9aec-321e74b5902b",
+          "generation": 3,
+          "phase": {
+            "stable": {
+              "_0": "retired"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "cutpoint": null,
+  "action": "cache-remove"
+}

@@ -1,0 +1,7 @@
+sw_vers
+uname -m
+xcrun swift --version
+xcrun --show-sdk-version
+xcodebuild -version
+security find-identity -v -p codesigning
+codesign -dvvv --entitlements :- <final disposable qualification bundle>

@@ -1,0 +1,71 @@
+{
+  "label": "lock-interrupted",
+  "pid": 73518,
+  "argv": [
+    "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+  "returncode": -9,
+  "intentionalKill": true,
+  "cutpointObserved": true,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "environment": {},
+    "cases": [],
+    "observations": {
+      "cutpoint": "lock-fence"
+    },
+    "checkpoint": {
+      "rows": [
+        {
+          "origin": "fresh",
+          "status": "active",
+          "store": "7c6ce884-1d28-4709-bfc9-1191dedeafcd",
+          "profile": "4069ef41-1fd9-4290-9445-0f6d167179db",
+          "revision": 3,
+          "resourceGeneration": 1
+        },
+        {
+          "origin": "fresh",
+          "status": "active",
+          "store": "35a2a92d-0967-4577-ae4d-27467950ad16",
+          "profile": "cc04ca9c-d739-41bf-9f4e-a4efa31e2de6",
+          "revision": 4,
+          "resourceGeneration": 1
+        }
+      ],
+      "snapshot": {
+        "records": [
+          {
+            "generation": 1,
+            "profile": "4069ef41-1fd9-4290-9445-0f6d167179db",
+            "store": "7c6ce884-1d28-4709-bfc9-1191dedeafcd",
+            "namespace": "a17cd305-7d8e-4bec-b70a-5a611be9cc5f",
+            "phase": {
+              "stable": {
+                "_0": "active"
+              }
+            },
+            "operation": "cf68c47a-7745-41e7-9753-fae678c8311d"
+          },
+          {
+            "generation": 1,
+            "profile": "cc04ca9c-d739-41bf-9f4e-a4efa31e2de6",
+            "store": "35a2a92d-0967-4577-ae4d-27467950ad16",
+            "namespace": "a17cd305-7d8e-4bec-b70a-5a611be9cc5f",
+            "phase": {
+              "stable": {
+                "_0": "active"
+              }
+            },
+            "operation": "4248d92b-a211-4440-a0f9-f5404f06ebf0"
+          }
+        ],
+        "version": 1,
+        "previousRun": "7e15d29c-f289-4ab8-ba5c-dc4c73e62701"
+      }
+    }
+  }
+}

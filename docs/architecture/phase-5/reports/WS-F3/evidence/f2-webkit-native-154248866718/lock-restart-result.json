@@ -1,0 +1,87 @@
+{
+  "label": "lock-restart",
+  "pid": 72799,
+  "argv": [
+    "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "7ae409473cdc7d4e5db579f4ea16d5ead3aaa25d7515c7cc095cf15ddbb044f1",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "cases": [
+      {
+        "id": "F2-LOCK-RESTART-DEFAULT-FENCED",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F2-LOCK-RESTART-NO-FACTORY",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F2-LOCK-DURABLE-RECEIPT",
+        "detail": "Synthetic checkpoint plus conservative default lock, not persisted protected lock-state qualification",
+        "status": "BLOCKED"
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "observations": {},
+    "checkpoint": {
+      "rows": [
+        {
+          "revision": 3,
+          "resourceGeneration": 1,
+          "profile": "26ab88c6-383c-45d0-903f-ddea7ae3526b",
+          "status": "active",
+          "store": "724340d2-6b99-4677-b741-3c31dd76a88e",
+          "origin": "fresh"
+        },
+        {
+          "revision": 6,
+          "resourceGeneration": 1,
+          "profile": "a731bf01-84b9-4fc2-bd76-4aaa80d76052",
+          "status": "retired",
+          "store": "d99c7976-dbd7-4bab-b7dc-6df2fdefd124",
+          "origin": "fresh"
+        }
+      ],
+      "snapshot": {
+        "previousRun": "1ced259d-3455-4892-ad1a-72afeee3d0b9",
+        "records": [
+          {
+            "phase": {
+              "stable": {
+                "_0": "active"
+              }
+            },
+            "operation": "25891092-a0c6-4687-8afa-d39955766c17",
+            "store": "724340d2-6b99-4677-b741-3c31dd76a88e",
+            "profile": "26ab88c6-383c-45d0-903f-ddea7ae3526b",
+            "namespace": "002125f5-4f2f-4ad4-8ca3-296748da95b6",
+            "generation": 1
+          },
+          {
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "operation": "9a408d2b-08ac-487a-8334-5e8c08ec544e",
+            "store": "d99c7976-dbd7-4bab-b7dc-6df2fdefd124",
+            "profile": "a731bf01-84b9-4fc2-bd76-4aaa80d76052",
+            "namespace": "002125f5-4f2f-4ad4-8ca3-296748da95b6",
+            "generation": 4
+          }
+        ],
+        "version": 1
+      }
+    }
+  }
+}

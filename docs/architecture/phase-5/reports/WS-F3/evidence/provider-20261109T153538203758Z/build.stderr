@@ -1,0 +1,8 @@
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-wsf3/descriptor_vfs.c:49:57: error: use of undeclared identifier 'INT64_MAX'
+   49 |     bool allowed = size > 0 && offset >= 0 && offset <= INT64_MAX - size &&
+      |                                                         ^~~~~~~~~
+1 error generated.
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-wsf3/native_probe.c:211:5: error: call to undeclared function 'explicit_bzero'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  211 |     explicit_bzero(key, sizeof(key));
+      |     ^
+1 error generated.

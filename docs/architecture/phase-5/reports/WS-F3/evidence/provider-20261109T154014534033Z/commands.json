@@ -1,0 +1,315 @@
+[
+  {
+    "label": "build",
+    "argv": [
+      "xcrun",
+      "clang",
+      "-std=c17",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DSQLITE_HAS_CODEC",
+      "-I",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/provider",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-wsf3/descriptor_vfs.c",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/sqlcipher-wsf3/native_probe.c",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/provider/libsqlite3.a",
+      "-framework",
+      "Security",
+      "-framework",
+      "CoreFoundation",
+      "-o",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe"
+    ],
+    "startedUTC": "2026-11-09T15:40:14.559795+00:00",
+    "exit": 0
+  },
+  {
+    "label": "signature",
+    "argv": [
+      "codesign",
+      "-dvv",
+      "--entitlements",
+      ":-",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe"
+    ],
+    "startedUTC": "2026-11-09T15:40:17.974677+00:00",
+    "exit": 0
+  },
+  {
+    "label": "os",
+    "argv": [
+      "sw_vers"
+    ],
+    "startedUTC": "2026-11-09T15:40:18.062477+00:00",
+    "exit": 0
+  },
+  {
+    "label": "arch",
+    "argv": [
+      "uname",
+      "-m"
+    ],
+    "startedUTC": "2026-11-09T15:40:18.107934+00:00",
+    "exit": 0
+  },
+  {
+    "label": "swift",
+    "argv": [
+      "xcrun",
+      "swift",
+      "--version"
+    ],
+    "startedUTC": "2026-11-09T15:40:18.126843+00:00",
+    "exit": 0
+  },
+  {
+    "label": "sdk",
+    "argv": [
+      "xcrun",
+      "--show-sdk-version"
+    ],
+    "startedUTC": "2026-11-09T15:40:20.298929+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-valid",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-valid",
+      "valid"
+    ],
+    "startedUTC": "2026-11-09T15:40:20.375625+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-wrong-key",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-wrong-key",
+      "wrong-key"
+    ],
+    "startedUTC": "2026-11-09T15:40:21.909418+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-foreign",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-foreign",
+      "foreign"
+    ],
+    "startedUTC": "2026-11-09T15:40:22.623691+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-wrong-store",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-wrong-store",
+      "wrong-store"
+    ],
+    "startedUTC": "2026-11-09T15:40:23.252061+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-wrong-schema",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-wrong-schema",
+      "wrong-schema"
+    ],
+    "startedUTC": "2026-11-09T15:40:23.945272+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-wrong-suite",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-wrong-suite",
+      "wrong-suite"
+    ],
+    "startedUTC": "2026-11-09T15:40:25.160900+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-wrong-version",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-wrong-version",
+      "wrong-version"
+    ],
+    "startedUTC": "2026-11-09T15:40:26.049648+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-corrupt",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-corrupt",
+      "corrupt"
+    ],
+    "startedUTC": "2026-11-09T15:40:27.035795+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-invalid-header",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-invalid-header",
+      "invalid-header"
+    ],
+    "startedUTC": "2026-11-09T15:40:28.495393+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-missing",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-missing",
+      "missing"
+    ],
+    "startedUTC": "2026-11-09T15:40:31.013628+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-missing-key",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-missing-key",
+      "missing-key"
+    ],
+    "startedUTC": "2026-11-09T15:40:31.384088+00:00",
+    "exit": 0
+  },
+  {
+    "label": "1-sidecar",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/1-sidecar",
+      "sidecar"
+    ],
+    "startedUTC": "2026-11-09T15:40:32.080678+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-valid",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-valid",
+      "valid"
+    ],
+    "startedUTC": "2026-11-09T15:40:32.626101+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-wrong-key",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-wrong-key",
+      "wrong-key"
+    ],
+    "startedUTC": "2026-11-09T15:40:33.180979+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-foreign",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-foreign",
+      "foreign"
+    ],
+    "startedUTC": "2026-11-09T15:40:35.836926+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-wrong-store",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-wrong-store",
+      "wrong-store"
+    ],
+    "startedUTC": "2026-11-09T15:40:38.757625+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-wrong-schema",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-wrong-schema",
+      "wrong-schema"
+    ],
+    "startedUTC": "2026-11-09T15:40:40.001424+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-wrong-suite",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-wrong-suite",
+      "wrong-suite"
+    ],
+    "startedUTC": "2026-11-09T15:40:40.727646+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-wrong-version",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-wrong-version",
+      "wrong-version"
+    ],
+    "startedUTC": "2026-11-09T15:40:41.745685+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-corrupt",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-corrupt",
+      "corrupt"
+    ],
+    "startedUTC": "2026-11-09T15:40:42.828161+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-invalid-header",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-invalid-header",
+      "invalid-header"
+    ],
+    "startedUTC": "2026-11-09T15:40:43.555135+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-missing",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-missing",
+      "missing"
+    ],
+    "startedUTC": "2026-11-09T15:40:44.277115+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-missing-key",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-missing-key",
+      "missing-key"
+    ],
+    "startedUTC": "2026-11-09T15:40:44.302692+00:00",
+    "exit": 0
+  },
+  {
+    "label": "2-sidecar",
+    "argv": [
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe",
+      "/private/tmp/vx-wsf3-provider-nqfi3hfn/2-sidecar",
+      "sidecar"
+    ],
+    "startedUTC": "2026-11-09T15:40:44.678822+00:00",
+    "exit": 0
+  }
+]

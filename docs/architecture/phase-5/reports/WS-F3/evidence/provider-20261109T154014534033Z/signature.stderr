@@ -1,0 +1,10 @@
+Executable=/private/tmp/vx-wsf3-provider-nqfi3hfn/wsf3-native-probe
+Identifier=wsf3-native-probe
+Format=Mach-O thin (arm64)
+CodeDirectory v=20400 size=10026 flags=0x20002(adhoc,linker-signed) hashes=310+0 location=embedded
+Signature=adhoc
+Info.plist=not bound
+TeamIdentifier=not set
+Sealed Resources=none
+Internal requirements=none
+warning: Specifying ':' in the path is deprecated and will not work in a future release

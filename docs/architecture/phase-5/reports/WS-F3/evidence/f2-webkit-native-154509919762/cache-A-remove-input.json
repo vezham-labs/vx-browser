@@ -1,0 +1,40 @@
+{
+  "namespace": "ea8b8daf-bf8f-4444-ad92-11722a6a44a0",
+  "profile": "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+  "store": "d37a0f5e-6a64-48ec-a563-0dc52d316191",
+  "keyID": "c8739d00-9cf3-4bc6-ac4a-14a697a280b6",
+  "origin": "http://127.0.0.1:58962",
+  "cacheID": "ab19b6a4-39ff-461c-a9b1-97e3b9fa1546",
+  "checkpoint": {
+    "snapshot": {
+      "previousRun": "8b7dc393-c252-4cc9-bde5-7d654bf89be4",
+      "records": [
+        {
+          "phase": {
+            "stable": {
+              "_0": "retired"
+            }
+          },
+          "generation": 23,
+          "operation": "f73e5dbb-3964-4681-a030-31e3faa38a99",
+          "profile": "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+          "store": "d37a0f5e-6a64-48ec-a563-0dc52d316191",
+          "namespace": "ea8b8daf-bf8f-4444-ad92-11722a6a44a0"
+        }
+      ],
+      "version": 1
+    },
+    "rows": [
+      {
+        "origin": "fresh",
+        "store": "d37a0f5e-6a64-48ec-a563-0dc52d316191",
+        "profile": "0ca79ab0-f1b4-471f-b08a-53fdab231699",
+        "resourceGeneration": 1,
+        "revision": 26,
+        "status": "retired"
+      }
+    ]
+  },
+  "cutpoint": null,
+  "action": "cache-remove"
+}

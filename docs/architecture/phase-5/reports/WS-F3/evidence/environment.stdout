@@ -1,0 +1,10 @@
+ProductName:		macOS
+ProductVersion:		27.2
+BuildVersion:		26B123
+arm64
+Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+Target: arm64-apple-macosx27.2.0
+27.2
+Xcode 27.2
+Build version 27B52
+     0 valid identities found

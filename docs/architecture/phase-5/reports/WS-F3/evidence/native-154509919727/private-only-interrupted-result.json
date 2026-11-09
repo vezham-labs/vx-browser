@@ -1,0 +1,15 @@
+{
+  "label": "private-only-interrupted",
+  "pid": 73281,
+  "action": "private-only",
+  "cutpoint": "private-active",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": null,
+  "binarySHA256": "1d2578587f90cc1d73ac1febf0072b7db279a971128f0350ffb7b2782caddf6b",
+  "observations": []
+}

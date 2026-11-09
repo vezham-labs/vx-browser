@@ -1,0 +1,72 @@
+{
+  "label": "cache-A-full-clear",
+  "pid": 72749,
+  "argv": [
+    "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "7ae409473cdc7d4e5db579f4ea16d5ead3aaa25d7515c7cc095cf15ddbb044f1",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-CLEAR-CALLBACK"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-POPULATED"
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "observations": {
+      "second": "cache-10",
+      "first": "cache-10",
+      "beforeClear": "cache-9"
+    },
+    "checkpoint": {
+      "rows": [
+        {
+          "revision": 26,
+          "resourceGeneration": 1,
+          "status": "retired",
+          "store": "75819223-fb0e-4c3d-8598-409da9360521",
+          "profile": "1dcb361d-38d4-4a41-8ebe-58d516b14130",
+          "origin": "fresh"
+        }
+      ],
+      "snapshot": {
+        "version": 1,
+        "previousRun": "cf4823f1-961c-4161-aa3a-4c52402d8e1b",
+        "records": [
+          {
+            "store": "75819223-fb0e-4c3d-8598-409da9360521",
+            "generation": 23,
+            "namespace": "106153a9-469b-46a6-981e-4e1e3f7dd293",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "profile": "1dcb361d-38d4-4a41-8ebe-58d516b14130",
+            "operation": "50b90c26-ca9b-4287-9b13-ddc49ea554d4"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "expected": "System appearance without creating a database",
+    "status": "FAIL",
+    "testID": "LOW-MISSING",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 1,
+    "profile": "global-fixture-1",
+    "timestamp": "2026-11-09T15:41:47.104209+00:00",
+    "artifact": "attempt-1.stdout",
+    "environment": "environment.json"
+  },
+  {
+    "expected": "Typed global appearance round-trips through native SQLite",
+    "status": "PASS_NATIVE",
+    "testID": "LOW-ROUNDTRIP",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 1,
+    "profile": "global-fixture-1",
+    "timestamp": "2026-11-09T15:41:47.104209+00:00",
+    "artifact": "attempt-1.stdout",
+    "environment": "environment.json"
+  },
+  {
+    "expected": "SQLite rejects values and slots outside the allowlist",
+    "status": "PASS_NATIVE",
+    "testID": "LOW-ALLOWLIST",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 1,
+    "profile": "global-fixture-1",
+    "timestamp": "2026-11-09T15:41:47.104209+00:00",
+    "artifact": "attempt-1.stdout",
+    "environment": "environment.json"
+  },
+  {
+    "expected": "Read refuses a symlink instead of following it or replacing it",
+    "status": "PASS_NATIVE",
+    "testID": "LOW-SYMLINK",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 1,
+    "profile": "global-fixture-1",
+    "timestamp": "2026-11-09T15:41:47.104209+00:00",
+    "artifact": "attempt-1.stdout",
+    "environment": "environment.json"
+  },
+  {
+    "expected": "System appearance without creating a database",
+    "status": "FAIL",
+    "testID": "LOW-MISSING",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 2,
+    "profile": "global-fixture-2",
+    "timestamp": "2026-11-09T15:41:47.640376+00:00",
+    "artifact": "attempt-2.stdout",
+    "environment": "environment.json"
+  },
+  {
+    "expected": "Typed global appearance round-trips through native SQLite",
+    "status": "PASS_NATIVE",
+    "testID": "LOW-ROUNDTRIP",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 2,
+    "profile": "global-fixture-2",
+    "timestamp": "2026-11-09T15:41:47.640376+00:00",
+    "artifact": "attempt-2.stdout",
+    "environment": "environment.json"
+  },
+  {
+    "expected": "SQLite rejects values and slots outside the allowlist",
+    "status": "PASS_NATIVE",
+    "testID": "LOW-ALLOWLIST",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 2,
+    "profile": "global-fixture-2",
+    "timestamp": "2026-11-09T15:41:47.640376+00:00",
+    "artifact": "attempt-2.stdout",
+    "environment": "environment.json"
+  },
+  {
+    "expected": "Read refuses a symlink instead of following it or replacing it",
+    "status": "PASS_NATIVE",
+    "testID": "LOW-SYMLINK",
+    "runID": "settings-20261109T154121729855Z",
+    "attempt": 2,
+    "profile": "global-fixture-2",
+    "timestamp": "2026-11-09T15:41:47.640376+00:00",
+    "artifact": "attempt-2.stdout",
+    "environment": "environment.json"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "providerPin": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "providerArtifacts": {
+    "libsqlite3.a": "ac0fed4b3c47b6259a87504b318fd4546018c880b0d60331a47e92c3f7a9856c",
+    "sqlite3.h": "e36eb6ed4de77e56a633866a8f84ed339785662d0cf79cf099f420b638bf28ec"
+  },
+  "sources": {
+    "descriptor_vfs.c": "7d411ea228a84b4a4b8578f3a3ab01d0c87c5236f4c40483057bc46fa2b84892",
+    "native_probe.c": "3cdc2646d6514daa09122e3a74773f005e53f9cae230b8db89712c9e0293d74d",
+    "descriptor_vfs.h": "d86b39143a5d67b0fe4c5642f1338ecbc37a79fde98e30d4d8d6b24d61a3ee91",
+    "run_native.py": "5de2ed336325b8397462c7872f0b1439cbf97031f7114c6441f1d8ae03794ef5"
+  }
+}

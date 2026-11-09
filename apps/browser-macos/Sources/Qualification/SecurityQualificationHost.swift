@@ -216,16 +216,34 @@ import BrowserNativeStorage
                     blocked("F2-UNLOCK-PRODUCTION","Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification")
                 } else if input.action == "permission" {
                     emit(Output(cases:[],environment:[:],observations:["phase":"before-media-request"]))
-                    observations = try await evaluate(session,view,"const attempt=navigator.mediaDevices.getUserMedia({audio:true}).then(s=>{s.getTracks().forEach(t=>t.stop());return 'unexpected-stream'},e=>e.name);return JSON.stringify({result:await Promise.race([attempt,new Promise(r=>setTimeout(()=>r('timeout'),3000))])})")
-                    if observations["result"] == "timeout" { cases.append(Case(id:"F2-PERM-NATIVE-DENIAL",status:"INCONCLUSIVE",detail:"No native/page completion within bounded script deadline")) }
-                    else { add("F2-PERM-NATIVE-DENIAL",observations["result"] == "NotAllowedError" || observations["result"] == "SecurityError") }
-                    observations["delegateObserved"] = session.adapter.trace().contains { $0.kind == "permission" } ? "yes" : "no"
+                    observations = try await evaluate(session,view,"if (!navigator.mediaDevices?.getUserMedia) return JSON.stringify({result:'unavailable',secureContext:String(isSecureContext)});const attempt=navigator.mediaDevices.getUserMedia({audio:true}).then(s=>{s.getTracks().forEach(t=>t.stop());return 'unexpected-stream'},e=>e.name);return JSON.stringify({secureContext:String(isSecureContext),result:await Promise.race([attempt,new Promise(r=>setTimeout(()=>r('timeout'),3000))])})")
+                    let mediaEvents = session.adapter.trace().filter { $0.kind == "permission" }
+                    let mediaTerminal = mediaEvents.last { $0.outcome != "delegate-entered" }?.outcome
+                    let mediaResult = observations["result"]
+                    if mediaResult == "unexpected-stream" || mediaResult == "script-error" {
+                        add("F2-PERM-NATIVE-DENIAL", false)
+                    } else if mediaTerminal == nil || mediaResult == "timeout" {
+                        cases.append(Case(id:"F2-PERM-NATIVE-DENIAL",status:"INCONCLUSIVE",detail:"No bounded terminal native delegate and page denial pair"))
+                    } else {
+                        add("F2-PERM-NATIVE-DENIAL", mediaTerminal?.hasPrefix("denied-") == true &&
+                            (mediaResult == "NotAllowedError" || mediaResult == "SecurityError"))
+                    }
+                    observations["delegateObserved"] = mediaEvents.contains { $0.outcome == "delegate-entered" } ? "yes" : "no"
+                    observations["nativeMediaOutcome"] = mediaTerminal ?? "no-terminal-delegate"
+                    observations["osMicrophoneStatus"] = String(describing: NativePermissionMediator.nativeStatus(.microphone))
+                    observations["microphonePurposeConfigured"] = Bundle.main.object(forInfoDictionaryKey: "NSMicrophoneUsageDescription") != nil ? "yes" : "no"
                     emit(Output(cases:[],environment:[:],observations:["phase":"before-geolocation-request"]))
-                    let geo = try await evaluate(session,view,"return JSON.stringify(await new Promise(resolve=>{if(!navigator.geolocation){resolve({result:'unavailable'});return}navigator.geolocation.getCurrentPosition(()=>resolve({result:'unexpected-location'}),()=>resolve({result:'denied'}),{timeout:1000})}))")
-                    if geo["result"] == "timeout" || geo["result"] == "unavailable" { cases.append(Case(id:"F2-PERM-GEOLOCATION-DENIAL",status:"INCONCLUSIVE",detail:"No qualified page denial result")) }
-                    else { add("F2-PERM-GEOLOCATION-DENIAL",geo["result"] == "denied") }
+                    let geo = try await evaluate(session,view,"const attempt=new Promise(resolve=>{if(!navigator.geolocation){resolve('unavailable');return}navigator.geolocation.getCurrentPosition(()=>resolve('unexpected-location'),e=>resolve(e.code===1?'denied':e.code===3?'timeout':'unavailable'),{timeout:1000})});return JSON.stringify({result:await Promise.race([attempt,new Promise(r=>setTimeout(()=>r('timeout'),3000))])})")
+                    let geoTerminal = session.adapter.trace().last { $0.kind == "geolocation-permission" }?.outcome
+                    if geo["result"] == "unexpected-location" || geo["result"] == "script-error" {
+                        add("F2-PERM-GEOLOCATION-DENIAL", false)
+                    } else if geoTerminal == "denied-unsupported" && geo["result"] == "denied" {
+                        add("F2-PERM-GEOLOCATION-DENIAL", true)
+                    } else {
+                        cases.append(Case(id:"F2-PERM-GEOLOCATION-DENIAL",status:"INCONCLUSIVE",detail:"No bounded terminal native delegate and page denial pair"))
+                    }
                     observations["geolocationResult"] = geo["result"]
-                    observations["geolocationDelegateObserved"] = session.adapter.trace().contains { $0.kind == "geolocation-permission" } ? "yes" : "no"
+                    observations["geolocationDelegateObserved"] = geoTerminal == nil ? "no" : "yes"
                     blocked("F2-PERM-POSITIVE-ASK-ALLOW","Positive native media/Ask path lacks purpose strings/entitlements; policy-only allow tests do not qualify native support")
                 }
                 if !input.action.hasPrefix("lock") {

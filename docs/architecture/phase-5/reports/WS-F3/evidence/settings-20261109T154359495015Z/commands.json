@@ -1,0 +1,85 @@
+[
+  {
+    "label": "build",
+    "argv": [
+      "xcrun",
+      "swiftc",
+      "-swift-version",
+      "6",
+      "-module-cache-path",
+      "/private/tmp/vx-wsf3-settings-o4s9jk5o/cache",
+      "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/GlobalAppearanceSettings.swift",
+      "qualification/sqlcipher-wsf3/GlobalAppearanceProbe.swift",
+      "-o",
+      "/private/tmp/vx-wsf3-settings-o4s9jk5o/probe"
+    ],
+    "startedUTC": "2026-11-09T15:43:59.496396+00:00",
+    "exit": 0
+  },
+  {
+    "label": "signature",
+    "argv": [
+      "codesign",
+      "-dvv",
+      "--entitlements",
+      ":-",
+      "/private/tmp/vx-wsf3-settings-o4s9jk5o/probe"
+    ],
+    "startedUTC": "2026-11-09T15:44:06.872734+00:00",
+    "exit": 0
+  },
+  {
+    "label": "os",
+    "argv": [
+      "sw_vers"
+    ],
+    "startedUTC": "2026-11-09T15:44:06.916426+00:00",
+    "exit": 0
+  },
+  {
+    "label": "arch",
+    "argv": [
+      "uname",
+      "-m"
+    ],
+    "startedUTC": "2026-11-09T15:44:06.937340+00:00",
+    "exit": 0
+  },
+  {
+    "label": "swift",
+    "argv": [
+      "xcrun",
+      "swift",
+      "--version"
+    ],
+    "startedUTC": "2026-11-09T15:44:06.945220+00:00",
+    "exit": 0
+  },
+  {
+    "label": "sdk",
+    "argv": [
+      "xcrun",
+      "--show-sdk-version"
+    ],
+    "startedUTC": "2026-11-09T15:44:07.689471+00:00",
+    "exit": 0
+  },
+  {
+    "label": "attempt-1",
+    "argv": [
+      "/private/tmp/vx-wsf3-settings-o4s9jk5o/probe",
+      "/private/tmp/vx-wsf3-settings-o4s9jk5o/fixture-1"
+    ],
+    "startedUTC": "2026-11-09T15:44:07.702818+00:00",
+    "exit": 0
+  },
+  {
+    "label": "attempt-2",
+    "argv": [
+      "/private/tmp/vx-wsf3-settings-o4s9jk5o/probe",
+      "/private/tmp/vx-wsf3-settings-o4s9jk5o/fixture-2"
+    ],
+    "startedUTC": "2026-11-09T15:44:08.440766+00:00",
+    "exit": 0
+  }
+]

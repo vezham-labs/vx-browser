@@ -1,0 +1,77 @@
+{
+  "label": "permission",
+  "pid": 72804,
+  "argv": [
+    "/private/tmp/vx-wsf1-2x6pm2zx/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "7ae409473cdc7d4e5db579f4ea16d5ead3aaa25d7515c7cc095cf15ddbb044f1",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "rows": [
+        {
+          "store": "7b85ef07-5755-4122-a8fa-9a5d1a9e6484",
+          "profile": "26eade2e-d4fb-43c5-889d-e9f68f0097d6",
+          "revision": 5,
+          "resourceGeneration": 1,
+          "status": "retired",
+          "origin": "fresh"
+        }
+      ],
+      "snapshot": {
+        "records": [
+          {
+            "generation": 3,
+            "namespace": "002125f5-4f2f-4ad4-8ca3-296748da95b6",
+            "profile": "26eade2e-d4fb-43c5-889d-e9f68f0097d6",
+            "store": "7b85ef07-5755-4122-a8fa-9a5d1a9e6484",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "operation": "63edd876-97c5-4dbc-b259-4ca3e1c06b4a"
+          }
+        ],
+        "version": 1,
+        "previousRun": "098ed445-c3f3-44e8-896c-b49837310e5f"
+      }
+    },
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "cases": [
+      {
+        "id": "F2-PERM-NATIVE-DENIAL",
+        "status": "INCONCLUSIVE",
+        "detail": "No bounded terminal native delegate and page denial pair"
+      },
+      {
+        "id": "F2-PERM-GEOLOCATION-DENIAL",
+        "status": "INCONCLUSIVE",
+        "detail": "No bounded terminal native delegate and page denial pair"
+      },
+      {
+        "id": "F2-PERM-POSITIVE-ASK-ALLOW",
+        "status": "BLOCKED",
+        "detail": "Positive native media/Ask path lacks purpose strings/entitlements; policy-only allow tests do not qualify native support"
+      }
+    ],
+    "observations": {
+      "delegateObserved": "no",
+      "nativeMediaOutcome": "no-terminal-delegate",
+      "secureContext": "true",
+      "osMicrophoneStatus": "notDetermined",
+      "microphonePurposeConfigured": "no",
+      "result": "unavailable",
+      "geolocationResult": "timeout",
+      "geolocationDelegateObserved": "no"
+    }
+  }
+}
