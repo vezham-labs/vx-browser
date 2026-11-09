@@ -1,0 +1,22 @@
+{
+  "baselineCommit": "609e8bfb73cd5f28e8594e6e8177f8808fe4b4a7",
+  "branch": "timeline",
+  "trackedDifferencesFromHEAD": [],
+  "stagedChanges": [],
+  "onlyUntrackedDirectory": "docs/architecture/phase-5/reports/WS-F5R",
+  "historicalEvidence": {
+    "WS-F4R": {
+      "manifest": "docs/architecture/phase-5/reports/WS-F4R/evidence/SHA256SUMS",
+      "sha256": "e149866e36a35cc236282ef46f0b59d92b4f288c9b28aef62b202f0b76a5f452",
+      "entriesVerified": 423,
+      "mismatches": 0
+    },
+    "WS-F5": {
+      "manifest": "docs/architecture/phase-5/reports/WS-F5/evidence/SHA256SUMS",
+      "sha256": "8c75350fabc19e13d56822ef5e1281f0bc88dfe96d396bfc45a6b168ecf4a3e7",
+      "entriesVerified": 223,
+      "mismatches": 0
+    }
+  },
+  "gitOperations": "Read-only status, revision and diff inspection"
+}

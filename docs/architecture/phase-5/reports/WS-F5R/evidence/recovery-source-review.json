@@ -1,0 +1,125 @@
+{
+  "kind": "Source and historical evidence inspection",
+  "recordedUTC": "2026-11-09T20:41:28.693394+00:00",
+  "sourceCommit": "609e8bfb73cd5f28e8594e6e8177f8808fe4b4a7",
+  "sourceFiles": [
+    {
+      "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+      "sha256": "d20c53710b69e606efa4137b880272f70ff94c45a0d91485e8013e3ad69a49dd",
+      "lineAnchors": [
+        146,
+        168,
+        214,
+        237,
+        280,
+        289,
+        293,
+        316,
+        402,
+        444
+      ]
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift",
+      "sha256": "3d3d4603285b52b5d1cf88a2f514a26a236e296603565f19926dfb5e4f8f3e8f",
+      "lineAnchors": [
+        50,
+        56,
+        65
+      ]
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserCore/LifecycleCoordinator.swift",
+      "sha256": "acbb6bb8bba795e560bdb8493b659f48a26ca8cbe9de3b561d05d75b380a4485",
+      "lineAnchors": [
+        92,
+        103,
+        138,
+        217,
+        269,
+        319
+      ]
+    },
+    {
+      "path": "apps/browser-macos/Sources/Host/MainWindowController.swift",
+      "sha256": "c31b1476b0c339fe6c2966d2f2a118d3cec52f86eea218b2e71fbce02770ec29",
+      "lineAnchors": [
+        31,
+        188,
+        272,
+        313,
+        328,
+        419,
+        434,
+        526
+      ]
+    },
+    {
+      "path": "apps/browser-macos/Chrome/src/Browser.tsx",
+      "sha256": "86210d35de9952fee3aa6428730568ffeca0bd88ddf20ba157c37b2290755e42",
+      "lineAnchors": [
+        106,
+        335,
+        452
+      ]
+    },
+    {
+      "path": "apps/browser-macos/Tools/wsf5.py",
+      "sha256": "10cad51c68c25939ec0d943bcc68fba2a22a2e0d962a605c56d29fd397689e9e",
+      "lineAnchors": [
+        176,
+        215,
+        226,
+        258
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-3/phase-3-exit-review.md",
+      "sha256": "47e0a55519b466078374b6fb7fe2298fbf63c24e5ef5f17810cd7ff9e0695326",
+      "lineAnchors": [
+        21,
+        22,
+        63
+      ]
+    },
+    {
+      "path": "prototype/wkwebview/Evidence/recovery-ui-20261107T135156Z-15341/host-runner-executed.py",
+      "sha256": "c08d40591e01c5dd97474d2d7ed8303ccc99744ee4693cd58ed59fd4facce59e",
+      "lineAnchors": [
+        54,
+        56,
+        61,
+        62
+      ]
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/WS-F5/lifecycle-report.md",
+      "sha256": "f7da77cbc16e44faf29208e855c6cf3814fb5bc2d482151b2d4c2e9b4240e38d",
+      "lineAnchors": [
+        3,
+        7
+      ]
+    }
+  ],
+  "host": {
+    "swVers": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123",
+    "architecture": "arm64"
+  },
+  "historicalWSF5BinarySHA256": "6af85394d6e5883a689adc0542d40547c2dbccde6f1fb883afbfe244bc0fe342",
+  "candidateUnderTest": null,
+  "builds": 0,
+  "launches": 0,
+  "signalsSent": 0,
+  "runtimePasses": {
+    "PASS_NATIVE": 0,
+    "PASS_CONTRACT": 0,
+    "PASS_FAKE_ONLY": 0
+  },
+  "cases": {
+    "PR-01": "REVIEWED (static finding)",
+    "PR-02": "BLOCKED (current helper attribution unestablished)",
+    "PR-03 through PR-10": "NOT_EXECUTED"
+  },
+  "terminationReportLimitation": "terminated-fenced is also emitted for a foreign view, so the line alone is insufficient evidence",
+  "recommendedBoundary": "Keep the old scope fenced. Require a successful retirement postcondition before considering a fresh private scope."
+}
