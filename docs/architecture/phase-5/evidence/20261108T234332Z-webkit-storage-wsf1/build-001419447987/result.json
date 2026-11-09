@@ -1,0 +1,8 @@
+{
+  "status": "PASS_CONTRACT",
+  "bundle": "/private/tmp/vx-wsf1-tlzl7q_b/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+  "bundleID": "internal.vezham.browser.wsf1.qualification",
+  "returncode": 0,
+  "runtimeExecuted": false,
+  "binarySHA256": "04313e4a4bace682adb24e9e9fa0ca93d20b3cf37d58cc19458e688ab0c76a4a"
+}

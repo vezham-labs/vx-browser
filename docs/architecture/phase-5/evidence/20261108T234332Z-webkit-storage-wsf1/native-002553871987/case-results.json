@@ -1,0 +1,456 @@
+[
+  {
+    "id": "F1-DIAG-001",
+    "status": "PASS_NATIVE",
+    "detail": "Noncreating public enumeration only; logical prior removal remains unknown",
+    "attempt": "00-original-observation"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-A-cookie",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-A-local",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-A-idb",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-A-cache",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-A-worker",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-A-session",
+    "detail": "New browsing context does not restore sessionStorage",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-B-cookie",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-B-local",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-B-idb",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-B-cache",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-B-worker",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RESTART-B-session",
+    "detail": "New browsing context does not restore sessionStorage",
+    "attempt": "02-restart"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-local",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-A-session",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-local",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-B-session",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Two views share only their intended profile",
+    "id": "F1-NAT-MULTIVIEW-SHARE",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Two NSWindows consume owned surfaces and release them before close",
+    "id": "F1-NAT-MULTIWINDOW",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Other view remains usable",
+    "id": "F1-NAT-NONLAST-PERSISTENT",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Fresh immutable view ownership",
+    "id": "F1-NAT-SWITCH-A-B",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-B-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-B-local",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-B-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-B-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Fresh immutable view ownership",
+    "id": "F1-NAT-SWITCH-B-A",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-A-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-A-local",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-A-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Destination data remains scoped",
+    "id": "F1-NAT-SWITCH-A-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "02b-switch"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-A-session",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-B-session",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-NONLAST",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-A",
+    "status": "FAIL",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-B",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03-private"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-http",
+    "status": "INCONCLUSIVE",
+    "detail": "HTTP cache response identity across actual process restart; eviction/persistence may differ"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-http",
+    "status": "INCONCLUSIVE",
+    "detail": "HTTP cache response identity across actual process restart; eviction/persistence may differ"
+  }
+]

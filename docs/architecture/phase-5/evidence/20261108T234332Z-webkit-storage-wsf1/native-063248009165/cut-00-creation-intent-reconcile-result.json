@@ -1,0 +1,138 @@
+{
+  "label": "cut-00-creation-intent-reconcile",
+  "pid": 41481,
+  "action": "reconcile-uncertain",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "trace": [
+      {
+        "sequence": 1,
+        "kind": "framework-configuration",
+        "outcome": "public-init-no-store-getter"
+      },
+      {
+        "sequence": 2,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 3,
+        "kind": "fence",
+        "outcome": "installed"
+      },
+      {
+        "sequence": 4,
+        "kind": "fence",
+        "outcome": "installed"
+      },
+      {
+        "sequence": 5,
+        "kind": "fence",
+        "outcome": "installed"
+      }
+    ],
+    "cases": [
+      {
+        "id": "F1-NAT-RECOVERY-A",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-REPEATED-A",
+        "detail": "Repeated reconciliation grants no factory/publication",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-B",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-REPEATED-B",
+        "detail": "Repeated reconciliation grants no factory/publication",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-NOCREATE",
+        "detail": "Noncreating reconciliation",
+        "status": "PASS_NATIVE"
+      }
+    ],
+    "environment": {
+      "qualification": "discovery-only",
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)",
+      "bundle": "internal.vezham.browser.wsf1.qualification"
+    },
+    "event": "result",
+    "checkpoint": {
+      "rows": [
+        {
+          "revision": 1,
+          "status": "registered",
+          "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+          "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2",
+          "origin": "fresh",
+          "resourceGeneration": 1
+        }
+      ],
+      "snapshot": {
+        "records": [
+          {
+            "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2",
+            "namespace": "960e4604-c3c6-4da2-ad2b-36fae6ef9cd7",
+            "phase": {
+              "quarantined": {
+                "_0": "storeMissing"
+              }
+            },
+            "generation": 3,
+            "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+            "interruptedAction": "reconcile",
+            "operation": "4823f4fb-a6f6-41fb-8c70-7e388061b21a"
+          }
+        ],
+        "previousRun": "a8fee2e9-a393-46d0-b1d7-1e39c672ebff",
+        "version": 1
+      }
+    }
+  },
+  "checkpoint": {
+    "rows": [
+      {
+        "revision": 1,
+        "status": "registered",
+        "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+        "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2",
+        "origin": "fresh",
+        "resourceGeneration": 1
+      }
+    ],
+    "snapshot": {
+      "records": [
+        {
+          "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2",
+          "namespace": "960e4604-c3c6-4da2-ad2b-36fae6ef9cd7",
+          "phase": {
+            "quarantined": {
+              "_0": "storeMissing"
+            }
+          },
+          "generation": 3,
+          "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+          "interruptedAction": "reconcile",
+          "operation": "4823f4fb-a6f6-41fb-8c70-7e388061b21a"
+        }
+      ],
+      "previousRun": "a8fee2e9-a393-46d0-b1d7-1e39c672ebff",
+      "version": 1
+    }
+  },
+  "binarySHA256": "28ad7f6042186d502cdd242008491927418188547ae67421f5711e40bb56c23f",
+  "observations": []
+}

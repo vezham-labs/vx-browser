@@ -1,0 +1,191 @@
+{
+  "label": "publication-failure",
+  "pid": 41476,
+  "action": "publication-failure",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "snapshot": {
+        "version": 1,
+        "previousRun": "2ff751cc-91d3-42ca-b14a-225be3420c2c",
+        "records": [
+          {
+            "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+            "operation": "4349cc9c-9921-4ecb-abf1-a47167f180a6",
+            "generation": 3,
+            "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+            "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4",
+            "phase": {
+              "stable": {
+                "_0": "quiescent"
+              }
+            }
+          },
+          {
+            "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+            "operation": "685d4582-d175-4534-8a53-a3d73514edd6",
+            "generation": 4,
+            "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+            "store": "5070837e-4be5-465f-aa24-ad16624138a7",
+            "phase": {
+              "quarantined": {
+                "_0": "journalUnavailable"
+              }
+            }
+          }
+        ]
+      },
+      "rows": [
+        {
+          "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+          "resourceGeneration": 1,
+          "origin": "fresh",
+          "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4",
+          "status": "quiescent",
+          "revision": 4
+        },
+        {
+          "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+          "resourceGeneration": 1,
+          "origin": "fresh",
+          "store": "5070837e-4be5-465f-aa24-ad16624138a7",
+          "status": "active",
+          "revision": 5
+        }
+      ]
+    },
+    "event": "result",
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "id": "F1-NAT-PUBLICATION-FAILURE",
+        "detail": "Real construction with synthetic injected metadata-write failure"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "id": "F1-NAT-PUBLICATION-FENCED",
+        "detail": "No publication/navigation after unavailable journal"
+      }
+    ],
+    "environment": {
+      "bundle": "internal.vezham.browser.wsf1.qualification",
+      "WebKit": "22625.2.8.11.9",
+      "qualification": "discovery-only",
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "trace": [
+      {
+        "outcome": "public-init-no-store-getter",
+        "kind": "framework-configuration",
+        "sequence": 1
+      },
+      {
+        "outcome": "observed",
+        "kind": "enumeration",
+        "sequence": 2
+      },
+      {
+        "outcome": "observed",
+        "kind": "enumeration",
+        "sequence": 3
+      },
+      {
+        "outcome": "observed",
+        "kind": "enumeration",
+        "sequence": 4
+      },
+      {
+        "outcome": "observed",
+        "kind": "enumeration",
+        "sequence": 5
+      },
+      {
+        "outcome": "observed-first",
+        "kind": "existing-factory",
+        "sequence": 6
+      },
+      {
+        "outcome": "verified-before-construction",
+        "kind": "assignment",
+        "sequence": 7
+      },
+      {
+        "outcome": "unpublished",
+        "kind": "construction",
+        "sequence": 8
+      },
+      {
+        "outcome": "installed",
+        "kind": "fence",
+        "sequence": 9
+      },
+      {
+        "outcome": "installed",
+        "kind": "fence",
+        "sequence": 10
+      },
+      {
+        "outcome": "released-owned-references",
+        "kind": "close",
+        "sequence": 11
+      }
+    ]
+  },
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "previousRun": "2ff751cc-91d3-42ca-b14a-225be3420c2c",
+      "records": [
+        {
+          "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+          "operation": "4349cc9c-9921-4ecb-abf1-a47167f180a6",
+          "generation": 3,
+          "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+          "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          }
+        },
+        {
+          "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+          "operation": "685d4582-d175-4534-8a53-a3d73514edd6",
+          "generation": 4,
+          "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+          "store": "5070837e-4be5-465f-aa24-ad16624138a7",
+          "phase": {
+            "quarantined": {
+              "_0": "journalUnavailable"
+            }
+          }
+        }
+      ]
+    },
+    "rows": [
+      {
+        "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4",
+        "status": "quiescent",
+        "revision": 4
+      },
+      {
+        "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "store": "5070837e-4be5-465f-aa24-ad16624138a7",
+        "status": "active",
+        "revision": 5
+      }
+    ]
+  },
+  "binarySHA256": "28ad7f6042186d502cdd242008491927418188547ae67421f5711e40bb56c23f",
+  "observations": []
+}

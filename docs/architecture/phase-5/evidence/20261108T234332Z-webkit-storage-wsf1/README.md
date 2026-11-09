@@ -1,0 +1,21 @@
+# WS-F1 evidence index
+
+Authorized native implementation/qualification milestone,2026-11-09. [Primary closeout](../../reports/M1/m1-wsf1-closeout.md) and [actual results](../../reports/M1/m1-wsf1-qualification-results.md) explain the scope. Baseline `timeline` at `cb60a5428d4e66f2058865b54121abf64377acc4`, initially clean. [Owner task](sources/owner-task.txt) is retained verbatim.
+
+**Disposition: implemented; supported-platform native qualification BLOCKED.** Host macOS27.2/26B123, arm64, Swift6.4.2, SDK27.2, WebKit22625.2.8.11.9. A26.0 build target does not replace actual26.0/latest26.x execution. No release/public distribution is authorized.
+
+Canonical records:
+
+- [Full native run](native-063248009165/result.json), [477 observations](native-063248009165/case-results.json), [39 process outcomes/checkpoints](native-063248009165/attempts.json):475 PASS_NATIVE,2 HTTP-cache INCONCLUSIVE,0 FAIL;12 deliberate terminations.98 distinct case labels, repeated setup observations disambiguated by process attempt. These are27.2 discoveries, not WKS/platform qualification passes.
+- [Native build/binary](build-062812696387/result.json), [source hashes](build-062812696387/sources.json), compiler output, entitlements, signature and minimum-OS/load records. [Final signature](results/final-signature.json) preserves the actual ad-hoc/runtime identity. Diagnostic-only original-namespace binary is separately pinned by `diagnostic-build-001154431303`.
+- [Final model/admission/additional-fake suite](models-063737711735/result.json):12 PASS_CONTRACT plus1 additional PASS_FAKE_ONLY,0 failures;13 named tests. [Retained WS-F0 suite](attempt-001707035860/result.json):82 PASS_FAKE_ONLY,0 failures/skips/uncompleted. Counts stay separate.
+- [Canonical attempt map](results/canonical-attempts.json), [every earlier attempt](results/attempt-history.json), including cold enumeration SIGSEGV, compile/parser findings and immediate/2-second private retirement failures. Their outcomes/hashes are not rewritten or aggregated with the final candidate.
+- [Original launch crash extract](results/launch-crash-extract.json), exact IPS and bounded PID-specific log. `sources/` retains installed SDK declarations and pinned upstream initialization source; upstream is not shipping-engine source-to-binary attestation.
+- [40 WKS overlay](wks-dispositions.json), [22 failure categories](failure-matrix.json), [qualification summary](results/qualification-summary.json), [selected public-API audit](results/public-api-audit.json), [resource dispositions and all fixture inputs](results/resource-dispositions.json), [scope/non-execution](results/non-execution-and-boundaries.json).
+- Final preservation/static-review, changed-file and implementation/artifact manifests are retained alongside this index. `SHA256SUMS` covers evidence except itself; `artifact-index.json` additionally covers implementation/reports/index files while excluding its own entry and the checksum manifest to avoid self-reference. Existing historical evidence is checked against baseline hashes.
+
+Each attempt records expanded commands/output or exact child identity/input/binary hash. Reproduce using the uncached `browser-macos:storage-*` Nx targets and a new registered run directory; pass exact build/diagnostic result records. Temporary signed bundles are rebuildable, not committed binaries. Interrupted/staged stores remain registered/quarantined; no automatic sweep or creating existence probe is approved.
+
+Private lifecycle observations use explicit private purge and an observed-release deadline of15seconds. Earlier2-second failures remain FAIL at their original revision/budget. The owner-requested targeted retry passed before a new complete final suite. This is not a2-second performance pass, secure erasure, portable backup, at-rest encryption or all-engine-resource disappearance guarantee.
+
+No direct SQLCipher/provider/PQR execution, Vezham database creation/open, Vezham Keychain API, original-store removal, private API/default-store remedy, website export/import or release activity occurred. WebKit internally manages website databases/credential services; their activity is not claimed absent. ADRs, owner decisions, Phase3 and WS-F0 historical evidence remain preserved. No push.

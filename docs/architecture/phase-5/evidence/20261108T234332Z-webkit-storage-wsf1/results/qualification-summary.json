@@ -1,0 +1,17 @@
+{
+  "host": "macOS27.2/26B123 arm64; Swift6.4.2 SDK27.2 WebKit22625.2.8.11.9",
+  "source_native_binary": "28ad7f6042186d502cdd242008491927418188547ae67421f5711e40bb56c23f",
+  "observations": 477,
+  "native_discovery_statuses": {
+    "PASS_NATIVE": 475,
+    "INCONCLUSIVE": 2
+  },
+  "distinct_case_labels": 98,
+  "app_launches": 39,
+  "intentional_terminations": 12,
+  "retained_fake": 82,
+  "additional_fake": 1,
+  "contracts": 12,
+  "macos26_qualification": "BLOCKED",
+  "release_authorized": false
+}

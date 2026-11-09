@@ -1,0 +1,51 @@
+<!doctype html><meta charset="utf-8"><title>WS-F1 synthetic storage fixture</title>
+<p>Controlled loopback fixture. Public synthetic markers only.</p>
+<script>
+const db = () => new Promise((resolve, reject) => {
+  const r = indexedDB.open('wsf1', 1);
+  r.onupgradeneeded = () => r.result.createObjectStore('values');
+  r.onsuccess = () => resolve(r.result); r.onerror = () => reject(Error('idb'));
+});
+const idb = async value => {
+  const d = await db();
+  try { return await new Promise((resolve, reject) => {
+    const t = d.transaction('values', value === undefined ? 'readonly' : 'readwrite');
+    const s = t.objectStore('values'); const r = value === undefined ? s.get('marker') : s.put(value, 'marker');
+    let result; r.onsuccess = () => result = r.result;
+    t.oncomplete = () => resolve(value === undefined ? (result || '') : value);
+    t.onerror = t.onabort = () => reject(Error('idb'));
+  }); } finally { d.close(); }
+};
+async function workerValue() {
+  if (!('serviceWorker' in navigator)) return 'unsupported';
+  const registrations = await navigator.serviceWorker.getRegistrations();
+  if (!registrations.length || !navigator.serviceWorker.controller) return '';
+  const result = await (await fetch('/sw-probe')).text();
+  return result === 'network' ? 'unsupported' : result;
+}
+window.fixture = {
+  async get() {
+    const cookie = document.cookie.split(';').map(s => s.trim()).find(s => s.startsWith('wsf1='));
+    let cache = 'unsupported';
+    if ('caches' in window) { const c = await caches.open('wsf1'); const r = await c.match('/marker'); cache = r ? await r.text() : ''; }
+    return {cookie: cookie ? cookie.slice(5) : '', local: localStorage.getItem('wsf1') || '',
+      idb: await idb(), cache, session: sessionStorage.getItem('wsf1') || '',
+      worker: await workerValue(), http: await (await fetch('/cacheable')).text()};
+  },
+  async set(value) {
+    document.cookie = 'wsf1=' + value + '; Path=/; Max-Age=86400; SameSite=Lax';
+    localStorage.setItem('wsf1', value); sessionStorage.setItem('wsf1', value); await idb(value);
+    if ('caches' in window) await (await caches.open('wsf1')).put('/marker', new Response(value));
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator.serviceWorker.register('/sw.js'); await navigator.serviceWorker.ready;
+        if (!navigator.serviceWorker.controller) await new Promise((resolve, reject) => {
+          const timer = setTimeout(() => reject(Error('worker-timeout')), 5000);
+          navigator.serviceWorker.addEventListener('controllerchange', () => { clearTimeout(timer); resolve(); }, {once:true});
+        });
+      } catch (_) { /* get() reports the observed capability; never manufacture support */ }
+    }
+    return await this.get();
+  }
+};
+</script>

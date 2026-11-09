@@ -1,0 +1,372 @@
+{
+  "label": "private-only",
+  "pid": 41248,
+  "action": "private-only",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "event": "result",
+    "trace": [
+      {
+        "outcome": "nonpersistent",
+        "sequence": 1,
+        "kind": "private-factory"
+      },
+      {
+        "outcome": "verified-before-construction",
+        "sequence": 2,
+        "kind": "assignment"
+      },
+      {
+        "outcome": "unpublished",
+        "sequence": 3,
+        "kind": "construction"
+      },
+      {
+        "outcome": "host-confirmed",
+        "sequence": 4,
+        "kind": "publication"
+      },
+      {
+        "outcome": "finished",
+        "sequence": 5,
+        "kind": "navigation"
+      },
+      {
+        "outcome": "nonpersistent",
+        "sequence": 6,
+        "kind": "private-factory"
+      },
+      {
+        "outcome": "verified-before-construction",
+        "sequence": 7,
+        "kind": "assignment"
+      },
+      {
+        "outcome": "unpublished",
+        "sequence": 8,
+        "kind": "construction"
+      },
+      {
+        "outcome": "host-confirmed",
+        "sequence": 9,
+        "kind": "publication"
+      },
+      {
+        "outcome": "finished",
+        "sequence": 10,
+        "kind": "navigation"
+      },
+      {
+        "outcome": "verified-before-construction",
+        "sequence": 11,
+        "kind": "assignment"
+      },
+      {
+        "outcome": "unpublished",
+        "sequence": 12,
+        "kind": "construction"
+      },
+      {
+        "outcome": "host-confirmed",
+        "sequence": 13,
+        "kind": "publication"
+      },
+      {
+        "outcome": "finished",
+        "sequence": 14,
+        "kind": "navigation"
+      },
+      {
+        "outcome": "released-owned-references",
+        "sequence": 15,
+        "kind": "close"
+      },
+      {
+        "outcome": "released-owned-references",
+        "sequence": 16,
+        "kind": "close"
+      },
+      {
+        "outcome": "installed",
+        "sequence": 17,
+        "kind": "fence"
+      },
+      {
+        "outcome": "no-observed-owned-resources",
+        "sequence": 18,
+        "kind": "quiesce"
+      },
+      {
+        "outcome": "before-call",
+        "sequence": 19,
+        "kind": "clear-request"
+      },
+      {
+        "outcome": "received-no-error-channel",
+        "sequence": 20,
+        "kind": "clear-callback"
+      },
+      {
+        "outcome": "callback-and-records-empty",
+        "sequence": 21,
+        "kind": "clear"
+      },
+      {
+        "outcome": "callback-and-records-empty",
+        "sequence": 22,
+        "kind": "private-retirement-purge"
+      },
+      {
+        "outcome": "observed-reference-present",
+        "sequence": 23,
+        "kind": "retire-wait"
+      },
+      {
+        "outcome": "weak-observation-clear",
+        "sequence": 24,
+        "kind": "retire"
+      },
+      {
+        "outcome": "released-owned-references",
+        "sequence": 25,
+        "kind": "close"
+      },
+      {
+        "outcome": "installed",
+        "sequence": 26,
+        "kind": "fence"
+      },
+      {
+        "outcome": "no-observed-owned-resources",
+        "sequence": 27,
+        "kind": "quiesce"
+      },
+      {
+        "outcome": "before-call",
+        "sequence": 28,
+        "kind": "clear-request"
+      },
+      {
+        "outcome": "received-no-error-channel",
+        "sequence": 29,
+        "kind": "clear-callback"
+      },
+      {
+        "outcome": "callback-and-records-empty",
+        "sequence": 30,
+        "kind": "clear"
+      },
+      {
+        "outcome": "callback-and-records-empty",
+        "sequence": 31,
+        "kind": "private-retirement-purge"
+      },
+      {
+        "outcome": "observed-reference-present",
+        "sequence": 32,
+        "kind": "retire-wait"
+      },
+      {
+        "outcome": "weak-observation-clear",
+        "sequence": 33,
+        "kind": "retire"
+      },
+      {
+        "outcome": "nonpersistent",
+        "sequence": 34,
+        "kind": "private-factory"
+      },
+      {
+        "outcome": "verified-before-construction",
+        "sequence": 35,
+        "kind": "assignment"
+      },
+      {
+        "outcome": "unpublished",
+        "sequence": 36,
+        "kind": "construction"
+      },
+      {
+        "outcome": "host-confirmed",
+        "sequence": 37,
+        "kind": "publication"
+      },
+      {
+        "outcome": "finished",
+        "sequence": 38,
+        "kind": "navigation"
+      },
+      {
+        "outcome": "released-owned-references",
+        "sequence": 39,
+        "kind": "close"
+      },
+      {
+        "outcome": "installed",
+        "sequence": 40,
+        "kind": "fence"
+      },
+      {
+        "outcome": "no-observed-owned-resources",
+        "sequence": 41,
+        "kind": "quiesce"
+      },
+      {
+        "outcome": "before-call",
+        "sequence": 42,
+        "kind": "clear-request"
+      },
+      {
+        "outcome": "received-no-error-channel",
+        "sequence": 43,
+        "kind": "clear-callback"
+      },
+      {
+        "outcome": "callback-and-records-empty",
+        "sequence": 44,
+        "kind": "clear"
+      },
+      {
+        "outcome": "callback-and-records-empty",
+        "sequence": 45,
+        "kind": "private-retirement-purge"
+      },
+      {
+        "outcome": "weak-observation-clear",
+        "sequence": 46,
+        "kind": "retire"
+      }
+    ],
+    "checkpoint": {
+      "rows": [],
+      "snapshot": {
+        "previousRun": "e49327cf-6311-4ce8-a2fe-09a5ba28117e",
+        "records": [],
+        "version": 1
+      }
+    },
+    "environment": {
+      "qualification": "discovery-only",
+      "WebKit": "22625.2.8.11.9",
+      "bundle": "internal.vezham.browser.wsf1.qualification",
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-cookie"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-local"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-INITIAL-EMPTY-idb"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-POSITIVE-cookie"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-POSITIVE-local"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-POSITIVE-idb"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-INDEPENDENT-cookie"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-INDEPENDENT-local"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-INDEPENDENT-idb"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-SHARED-cookie"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-SHARED-local"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-SHARED-idb"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-NONLAST"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-LAST-A"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-LAST-B"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-FRESH-cookie"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-FRESH-local"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-FRESH-idb"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+        "id": "F1-NAT-PRIVATE-LAST-C"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Private-only run writes no catalog or journal records",
+        "id": "F1-NAT-PRIVATE-NO-PERSISTENT-METADATA"
+      }
+    ]
+  },
+  "checkpoint": {
+    "rows": [],
+    "snapshot": {
+      "previousRun": "e49327cf-6311-4ce8-a2fe-09a5ba28117e",
+      "records": [],
+      "version": 1
+    }
+  },
+  "binarySHA256": "28ad7f6042186d502cdd242008491927418188547ae67421f5711e40bb56c23f",
+  "observations": []
+}

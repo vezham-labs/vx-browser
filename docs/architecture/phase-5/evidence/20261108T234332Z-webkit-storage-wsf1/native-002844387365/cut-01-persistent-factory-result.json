@@ -1,0 +1,44 @@
+{
+  "label": "cut-01-persistent-factory",
+  "pid": 38750,
+  "action": "seed",
+  "cutpoint": "persistent-factory",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "rows": [
+      {
+        "resourceGeneration": 1,
+        "profile": "b1dffde1-6f31-4aea-aae2-77e787ae10b7",
+        "status": "accessStarted",
+        "origin": "fresh",
+        "store": "9afa300b-812b-4a6f-b53d-b2626b94b61b",
+        "revision": 2
+      }
+    ],
+    "snapshot": {
+      "records": [
+        {
+          "operation": "5fbbca8a-2637-4045-97d4-e1fbfbc4ed3d",
+          "phase": {
+            "pending": {
+              "_0": "resolve"
+            }
+          },
+          "namespace": "7a30f6fb-b687-4941-adbe-d3897be8e0db",
+          "store": "9afa300b-812b-4a6f-b53d-b2626b94b61b",
+          "generation": 1,
+          "profile": "b1dffde1-6f31-4aea-aae2-77e787ae10b7"
+        }
+      ],
+      "version": 1,
+      "previousRun": "c181c14c-764d-4cce-96db-37579c3fd841"
+    }
+  },
+  "binarySHA256": "a6547f59b251c0c802dde776c30a7d33b8b3f21f6a500ec6b756fcf65d036b7b",
+  "observations": []
+}

@@ -1,0 +1,34 @@
+{
+  "authored_source_config_reports_check": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "raw_complete_check_returncode": 2,
+  "raw_warning_files": [
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/swift-version.stderr",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/swift-version.stderr",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235517261748/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235614539427/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235822500643/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/xcodebuild.stdout",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/APIObject.cpp",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/APIObject.h",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKUIDelegate.h",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKWebView.h",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKWebView.mm",
+    "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/owner-task.txt"
+  ],
+  "disposition": "Only preserved tool output, official source/SDK snapshots and verbatim owner input have whitespace warnings. Keep their original bytes/hashes; no source/report warning is waived.",
+  "staged_scope_count": 723
+}

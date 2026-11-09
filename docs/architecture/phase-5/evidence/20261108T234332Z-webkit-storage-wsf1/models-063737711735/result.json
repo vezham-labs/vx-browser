@@ -1,0 +1,25 @@
+{
+  "status": "PASS_CONTRACT",
+  "passed": [
+    "F1-FAKE-001 concurrent close and clear exclude one another without effects",
+    "F1-MOD-001 persistent descriptor roundtrip",
+    "F1-MOD-002 missing corrupt old future adapter and platform versions reject",
+    "F1-MOD-003 private encoding forbidden",
+    "F1-MOD-004 all creation publication retirement transitions and replay",
+    "F1-MOD-005 every interrupted transition quarantines without publication",
+    "F1-MOD-006 no premature publish navigation or foreign replay",
+    "F1-MOD-007 stable present is reusable absent conflicting and unknown fence",
+    "F1-MOD-008 invalid bounds and mixed private persistent reject",
+    "F1-GUARD-001 host grants are scoped current and revocable",
+    "F1-GUARD-002 unresolved and wrong scope construction have no native effect",
+    "F1-GUARD-003 catalog namespace duplicate profile and store rejected before WebKit",
+    "F1-GUARD-004 normal composition cannot publish or navigate unresolved views"
+  ],
+  "count": 13,
+  "contractCount": 12,
+  "additionalFakeCount": 1,
+  "sourceUnchanged": true,
+  "macOS": "27.2",
+  "nativeExecution": false,
+  "returncode": 0
+}

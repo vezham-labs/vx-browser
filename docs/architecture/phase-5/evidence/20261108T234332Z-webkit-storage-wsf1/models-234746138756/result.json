@@ -1,0 +1,18 @@
+{
+  "status": "PASS_CONTRACT",
+  "passed": [
+    "F1-MOD-001 persistent descriptor roundtrip",
+    "F1-MOD-002 missing corrupt old future adapter and platform versions reject",
+    "F1-MOD-003 private encoding forbidden",
+    "F1-MOD-004 all creation publication retirement transitions and replay",
+    "F1-MOD-005 every interrupted transition quarantines without publication",
+    "F1-MOD-006 no premature publish navigation or foreign replay",
+    "F1-MOD-007 stable present is reusable absent conflicting and unknown fence",
+    "F1-MOD-008 invalid bounds and mixed private persistent reject"
+  ],
+  "count": 8,
+  "sourceUnchanged": true,
+  "macOS": "27.2",
+  "nativeExecution": false,
+  "returncode": 0
+}

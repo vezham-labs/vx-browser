@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "dwarfdump",
+    "--uuid",
+    "/private/tmp/vx-wsf1-en247zq_/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser"
+  ],
+  "returncode": 0,
+  "stdout": "UUID: 71D03238-941B-35F9-8E43-7AF3D1B30171 (arm64) /private/tmp/vx-wsf1-en247zq_/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser\n",
+  "stderr": ""
+}

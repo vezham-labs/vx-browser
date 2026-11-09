@@ -1,0 +1,72 @@
+[
+  {
+    "label": "xcodebuild",
+    "argv": [
+      "xcodebuild",
+      "-project",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj",
+      "-scheme",
+      "VezhamBrowser",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=macOS,arch=arm64",
+      "-derivedDataPath",
+      "/private/tmp/vx-wsf1-en247zq_/DerivedData",
+      "-clonedSourcePackagesDirPath",
+      "/private/tmp/vx-wsf1-en247zq_/packages",
+      "-skipPackageUpdates",
+      "build",
+      "PRODUCT_BUNDLE_IDENTIFIER=internal.vx.M1Validation.run20261108T094414Z",
+      "ARCHS=arm64",
+      "ONLY_ACTIVE_ARCH=YES",
+      "MACOSX_DEPLOYMENT_TARGET=26.0"
+    ],
+    "startedUTC": "2026-11-09T00:03:24.546581+00:00",
+    "returncode": 0
+  },
+  {
+    "label": "signature",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=2",
+      "/private/tmp/vx-wsf1-en247zq_/DerivedData/Build/Products/Debug/VezhamBrowser.app"
+    ],
+    "startedUTC": "2026-11-09T00:04:05.442338+00:00",
+    "returncode": 0
+  },
+  {
+    "label": "entitlements",
+    "argv": [
+      "codesign",
+      "-d",
+      "--entitlements",
+      ":-",
+      "/private/tmp/vx-wsf1-en247zq_/DerivedData/Build/Products/Debug/VezhamBrowser.app"
+    ],
+    "startedUTC": "2026-11-09T00:04:05.464271+00:00",
+    "returncode": 0
+  },
+  {
+    "label": "linkage",
+    "argv": [
+      "otool",
+      "-L",
+      "/private/tmp/vx-wsf1-en247zq_/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser"
+    ],
+    "startedUTC": "2026-11-09T00:04:05.481654+00:00",
+    "returncode": 0
+  },
+  {
+    "label": "minimum-os",
+    "argv": [
+      "otool",
+      "-l",
+      "/private/tmp/vx-wsf1-en247zq_/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser"
+    ],
+    "startedUTC": "2026-11-09T00:04:05.554248+00:00",
+    "returncode": 0
+  }
+]

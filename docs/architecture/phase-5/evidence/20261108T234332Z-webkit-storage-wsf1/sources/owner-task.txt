@@ -1,0 +1,938 @@
+# WS-F1 — Native WebKit Integration & Qualification
+## Comprehensive Implementation Authorization
+
+**Repository:** `vezham-labs/vx-browser`  
+**Milestone:** WS-F1  
+**Platform:** macOS 26+  
+**Engine:** Apple WebKit (`WKWebView` / `WKWebsiteDataStore`)  
+**Language:** Swift 6  
+**Execution model:** One coordinated milestone, internally staged, with mandatory gates  
+**Authorization:** Approved by Product Owner
+
+---
+
+# 1. Mission
+
+Implement and qualify the real native WebKit website-storage integration for Vezham Browser.
+
+WS-F0 established engine-independent domain contracts, fake adapters, lifecycle state machines, deletion/recovery behavior and deterministic fault-injection coverage.
+
+WS-F1 must take the next step:
+
+1. Complete the descriptor, creation/publication and restore models.
+2. Implement the actual native WebKit adapter.
+3. Integrate it with the existing BrowserCore lifecycle coordinator and BrowserPorts contracts.
+4. Execute native qualification on an actual supported macOS 26 environment.
+5. Qualify persistent profiles, private sessions, profile isolation, website-data clearing, store retirement/removal and recovery.
+6. Preserve fake providers as deterministic test doubles.
+7. Produce traceable implementation, test evidence, limitations and a formal closeout.
+
+Do not stop after producing design documents, abstractions, stubs, mocks or a native adapter skeleton.
+
+**The intended result is an implemented native integration with actual WebKit execution evidence.**
+
+Do not claim successful native qualification unless the corresponding tests have run against real WebKit on macOS 26.
+
+---
+
+# 2. Mandatory repository reconnaissance
+
+Before changing code:
+
+1. Inspect the current repository HEAD, branch, working-tree state and recent commit history.
+2. Inspect the WS-F0 implementation and its three reports:
+   - `docs/architecture/phase-5/reports/M1/m1-wsf0-closeout.md`
+   - `docs/architecture/phase-5/reports/M1/m1-wsf0-state-machines-and-contracts.md`
+   - `docs/architecture/phase-5/reports/M1/m1-wsf0-wks-traceability.md`
+3. Inspect:
+   - `qualification/webkit-storage-f0/`
+   - Existing BrowserDomain, BrowserPorts, BrowserCore and BrowserPersistence boundaries.
+   - Existing owner decisions OD-R01–OD-R20.
+   - OP-01 through OP-04.
+   - Existing ADRs and WebKit storage architecture reports.
+   - WKS qualification definitions and evidence conventions.
+4. Identify the actual existing native macOS application target, deployment target, build configuration and available macOS 26 test environment.
+5. Inspect the existing build and Nx test workflows.
+6. Identify existing native integration points before designing replacements.
+
+Do not duplicate or replace established contracts merely to make the new implementation easier.
+
+Do not renumber owner decisions, alter their meaning, or reinterpret Proposed decisions as approved.
+
+Record the actual starting commit SHA in the WS-F1 evidence.
+
+If repository state differs from the expected WS-F0 baseline, reconcile the difference before proceeding.
+
+---
+
+# 3. Non-negotiable ownership boundaries
+
+Preserve the approved ownership model.
+
+## 3.1 WebKit owns website storage
+
+WebKit is authoritative for:
+
+- Cookies.
+- localStorage.
+- IndexedDB.
+- HTTP cache.
+- Service-worker registrations and associated website data.
+- WebKit website-data formats and internal paths.
+
+Use public WebKit APIs.
+
+Never:
+- Open, parse, modify or migrate WebKit's internal storage databases.
+- Wrap WebKit-owned files with SQLCipher.
+- Copy WebKit internal files into Vezham's database.
+- Invent a WebKit storage directory layout.
+- Assume a particular storage format or on-disk structure.
+- Use private or undocumented WebKit APIs.
+- Treat a Vezham profile database as the owner of website storage.
+
+## 3.2 BrowserCore owns browser policy and lifecycle
+
+BrowserCore remains responsible for:
+
+- Profile identity and lifecycle.
+- Persistent-profile versus private-session intent.
+- Session state.
+- Permission policy.
+- Lifecycle coordination.
+- Resource ownership and retirement.
+- Recovery intent and reconciliation.
+- Clear/remove operation intent and state.
+
+BrowserCore must remain engine-independent.
+
+## 3.3 BrowserPorts owns typed contracts
+
+BrowserPorts defines the engine-independent interfaces used by BrowserCore.
+
+Do not expose WebKit implementation types through BrowserDomain or BrowserCore.
+
+The native adapter may implement WebKit-specific protocols and types behind the port boundary.
+
+## 3.4 BrowserPersistence owns Vezham metadata
+
+Vezham-owned persistence may store:
+
+- Profile catalog and stable identity.
+- Website-data-store identifier mapping.
+- Creation and lifecycle intent.
+- Tombstone and retirement metadata.
+- History, bookmarks and preferences.
+- Session descriptors.
+- Permission grants.
+- Download metadata.
+- Approved user-created archives.
+
+These are not WebKit website-storage contents.
+
+## 3.5 Native macOS host owns WebKit objects
+
+The Swift/AppKit host and native adapter own:
+
+- `WKWebsiteDataStore` resolution.
+- `WKWebViewConfiguration` construction.
+- `WKWebView` construction.
+- Explicit website-data-store assignment.
+- WebKit object registry and lifetime.
+- Public WebKit API calls.
+- Native lifecycle callbacks.
+- Main-thread and actor-isolation correctness.
+
+## 3.6 Key management
+
+Vezham-owned secrets and encryption keys remain in macOS Keychain under the approved design.
+
+Do not introduce a new key-management mechanism or change SQLCipher boundaries as part of WS-F1.
+
+**D2A-01 remains unresolved and is not implicitly approved by this milestone.**
+
+It concerns Vezham-owned SQLCipher database initialization. It does not prevent native WebKit integration or qualification.
+
+---
+
+# 4. Required implementation stages
+
+Complete all stages in this single milestone. Use internal stage gates; do not ask the product owner to approve routine implementation details between stages.
+
+## Stage A — Complete the domain and lifecycle models
+
+Review WS-F0 contracts and implement the remaining model gaps.
+
+At minimum, address the following.
+
+### A1. Complete profile/store descriptors
+
+Create or complete a typed descriptor that can represent:
+
+- Vezham profile identity.
+- Persistent versus private-session storage mode.
+- Stable WebKit store UUID for persistent profiles.
+- Private-session identity for nonpersistent sessions.
+- Descriptor/schema version.
+- Creation lifecycle state.
+- Publication state.
+- Restore/reconciliation state.
+- Retirement/removal state.
+- Relevant timestamps and operation identity.
+- Compatibility and migration information where applicable.
+
+Requirements:
+
+- Persistent profiles must map to stable, nonzero `WKWebsiteDataStore` UUIDs.
+- Private sessions must use `WKWebsiteDataStore.nonPersistent()`.
+- Private-session state must not become a persistent profile-store mapping.
+- A stable store UUID is an identifier, not a capability or authorization token.
+- Descriptors must not expose native WebKit objects.
+- Invalid or incomplete descriptors must fail closed.
+- Version changes must be explicit and testable.
+- Do not silently reinterpret older descriptors.
+
+Document the compatibility behavior for missing, unsupported, corrupt and future descriptor versions.
+
+### A2. Creation and publication model
+
+Implement a clear separation between:
+
+1. Creation intent.
+2. Native store resolution or creation.
+3. Native resource registration.
+4. Web-view configuration.
+5. Web-view construction.
+6. Publication to the browser/application.
+7. Navigation authorization.
+
+The lifecycle must not make a profile visible or navigable before its required storage assignment and safety checks are complete.
+
+Creation must be idempotent where the existing operation model requires it.
+
+A retry must not create duplicate profile mappings or accidentally publish a partially constructed resource.
+
+### A3. Restore and recovery model
+
+Implement a recoverable restore process that handles:
+
+- Clean application restart.
+- Interrupted profile creation.
+- Interrupted publication.
+- Interrupted profile activation.
+- Incomplete WebKit resource retirement.
+- Interrupted website-data clearing.
+- Interrupted store removal.
+- Missing or inconsistent catalog entries.
+- Unknown or uncertain native outcomes.
+
+Restore must distinguish:
+
+- Desired state.
+- Recorded state.
+- Observed native state.
+- Reconciliation action.
+- Final reconciled state.
+
+Do not treat an uncertain native operation as success.
+
+Do not automatically recreate or publish a store when the previous operation's outcome is unknown.
+
+Recovery must be idempotent and must preserve quarantine/fencing behavior.
+
+### Stage A gate
+
+Before proceeding, demonstrate:
+
+- Descriptor serialization/deserialization tests.
+- Version compatibility tests.
+- Invalid descriptor rejection.
+- Creation/publication transition tests.
+- Restore/reconciliation tests.
+- Idempotency tests.
+- Fault-injection tests for each new transition.
+- No weakening of WS-F0 safety invariants.
+
+Update the architecture and state-machine documentation to match the implemented behavior.
+
+---
+
+## Stage B — Implement the real native WebKit adapter
+
+This is a required implementation stage, not an optional spike.
+
+Create the native adapter in the existing native macOS application architecture. Use the actual repository structure and existing target conventions.
+
+Do not create an unrelated standalone implementation that is never consumed by the application.
+
+### B1. Persistent website-data stores
+
+For each persistent Vezham profile:
+
+1. Resolve its stable, nonzero `WKWebsiteDataStore` UUID.
+2. Construct or resolve the persistent store through the public WebKit API.
+3. Associate the store with the correct Vezham profile.
+4. Register the native resource in the lifecycle registry.
+5. Preserve the association across normal application restarts.
+6. Verify the store is the intended store before constructing a web view.
+
+Do not fall back to `WKWebsiteDataStore.default()` when profile resolution fails.
+
+Do not silently substitute a default store.
+
+Do not read an unset `WKWebViewConfiguration.websiteDataStore` getter to discover its value. The getter may lazily instantiate the default store.
+
+### B2. Private sessions
+
+Private sessions must use:
+
+`WKWebsiteDataStore.nonPersistent()`
+
+Requirements:
+
+- A fresh, nonpersistent store for each intended private-session lifecycle.
+- No persistent WebKit website-data-store mapping.
+- No restoration of private website data after application restart.
+- No private browsing history, snapshots or persistent session state.
+- Explicit separation from normal persistent profiles.
+- Private-session resources must be retired and released when the session closes.
+- Do not accidentally reuse a persistent store for a private session.
+- Do not claim protection against OS swap, crash diagnostics, process memory inspection or other platform-level artifacts.
+
+Private sessions must follow the existing owner-approved private-data policy.
+
+### B3. Web-view construction
+
+For every `WKWebView`:
+
+1. Create a fresh `WKWebViewConfiguration`.
+2. Resolve the intended store.
+3. Assign `configuration.websiteDataStore` explicitly.
+4. Validate the assignment through safe observable means.
+5. Construct the `WKWebView` only after the assignment is complete.
+6. Register the web view and configuration with the lifecycle registry.
+7. Ensure no navigation or script execution can occur before the profile/session association is established.
+
+No navigation, JavaScript execution or web-view publication may occur before the storage assignment is complete.
+
+Use Swift 6-safe concurrency and correct WebKit actor/main-thread isolation.
+
+### B4. Resource registry and lifetime
+
+Implement or complete native resource tracking for:
+
+- Website-data stores.
+- Web-view configurations.
+- Web views.
+- Active navigation tasks or other relevant in-flight operations.
+- Clear-data operations.
+- Store-removal operations.
+- Outstanding references that can prevent retirement.
+
+The registry must support the lifecycle coordinator's fencing and retirement requirements.
+
+A profile must not be considered safely retired while associated native resources remain active or referenced.
+
+Do not claim that setting a Swift reference to `nil` proves that all WebKit resources have been released.
+
+Use explicit lifecycle instrumentation and observable evidence.
+
+### B5. Public WebKit API usage
+
+Use supported public WebKit APIs for:
+
+- Store resolution.
+- Website-data enumeration.
+- Website-data clearing.
+- Store removal where supported.
+- Web-view lifecycle.
+- Native callbacks.
+
+Document the precise API availability and behavior for the actual macOS deployment target.
+
+Do not infer runtime guarantees from headers or documentation alone.
+
+If an operation is unavailable, partially supported or returns an uncertain outcome, surface that outcome through the typed adapter contract.
+
+Never report a successful deletion merely because an API call was initiated.
+
+---
+
+## Stage C — Persistent profile qualification
+
+Execute actual native tests using real WebKit and isolated synthetic test data.
+
+At minimum, qualify:
+
+### C1. Store assignment
+
+- Two independent persistent profiles resolve to distinct stores.
+- Each web view is constructed with its intended store.
+- No profile falls back to the default store.
+- Profile identity remains correctly associated after restart.
+
+### C2. Persistence across restart
+
+For each test profile:
+
+1. Navigate to a controlled test origin.
+2. Set synthetic cookies.
+3. Set localStorage data.
+4. Create IndexedDB data.
+5. Exercise cache and service-worker behavior where supported by the controlled origin and test environment.
+6. Close the application cleanly.
+7. Relaunch the native test host.
+8. Resolve the same persistent profile.
+9. Reconstruct the web view with the same store identity.
+10. Verify expected data persistence through page-visible behavior and public APIs.
+
+Separate each data category in the test results.
+
+Do not claim that all website data is persistent simply because one cookie survives.
+
+Record unavailable or inconclusive categories explicitly.
+
+### C3. Profile isolation
+
+Create two or more independent profiles.
+
+Use the same controlled origin and write distinguishable synthetic values in each profile.
+
+Verify:
+
+- Cookies do not leak across profiles.
+- localStorage does not leak across profiles.
+- IndexedDB does not leak across profiles.
+- Other testable website data remains correctly isolated.
+- Switching profiles does not silently reuse the previous profile's store.
+
+Capture enough evidence to establish which profile and store each test exercised.
+
+### C4. Profile switching
+
+Exercise:
+
+- Profile A to Profile B.
+- Profile B to Profile A.
+- Multiple web views within one profile.
+- Multiple windows where supported by the host architecture.
+- Closing one web view while another remains active.
+- Profile shutdown with outstanding resources.
+
+Verify that profile switches do not cause cross-profile store assignment or unintended data clearing.
+
+---
+
+## Stage D — Private-session qualification
+
+Run actual tests using real `WKWebsiteDataStore.nonPersistent()` stores.
+
+At minimum:
+
+1. Create a private session.
+2. Construct its web view using the nonpersistent store.
+3. Navigate to the controlled test origin.
+4. Set synthetic cookies, localStorage and IndexedDB data.
+5. Verify the data is available within the active private session as expected.
+6. Close the private session.
+7. Release its web views and associated resources.
+8. Create a fresh private session.
+9. Verify that prior private website data is not available in the new session.
+
+Also test:
+
+- Private and persistent profile separation.
+- Multiple independent private sessions.
+- Closing a private web view without prematurely closing another active private web view.
+- Application termination while private sessions are active.
+- Restart behavior.
+- Private-session descriptor and metadata handling.
+
+Do not interpret nonpersistent WebKit storage as a universal forensic-erasure guarantee.
+
+Clearly distinguish:
+- WebKit nonpersistent website-data behavior.
+- Vezham's decision not to persist private browser metadata.
+- OS-level memory, swap, crash and diagnostic behavior.
+
+---
+
+## Stage E — Website-data clearing and store removal
+
+These operations must remain distinct.
+
+### E1. Selected website-data clearing
+
+Use supported public WebKit APIs to clear selected website-data types and/or records.
+
+Qualify:
+
+- Clearing selected data categories.
+- Clearing selected origin records where supported.
+- Clearing all selected website data for a profile.
+- A clear operation while a profile has active web views.
+- A clear operation with multiple windows.
+- A clear operation interrupted by application termination.
+- Retry and reconciliation behavior.
+- Partial or uncertain outcomes.
+
+Do not assume that requesting deletion proves the underlying data has been physically erased.
+
+Record the API's completion result and verify observable postconditions.
+
+### E2. Store removal
+
+Qualify the supported public store-removal API.
+
+Before removal:
+
+- Fence the profile.
+- Block new web-view construction and navigation.
+- Retire associated web views and configurations.
+- Account for in-flight work.
+- Verify the resource registry's retirement conditions.
+- Record the removal operation intent.
+
+After removal:
+
+- Observe the API result.
+- Record confirmed, failed, partial or uncertain outcomes.
+- Update the catalog only according to the verified outcome.
+- Preserve tombstone/quarantine state when necessary.
+- Do not reuse an uncertain store identity as though removal succeeded.
+
+A removal callback may be partial or uncertain.
+
+Do not claim complete secure erasure.
+
+### E3. Deletion and recovery tests
+
+Inject termination or controlled failures at relevant lifecycle cutpoints:
+
+- Before clear request.
+- After clear request, before completion.
+- After clear completion, before catalog update.
+- Before store-removal request.
+- After removal request, before callback.
+- After callback, before catalog finalization.
+- During resource retirement.
+- During restart reconciliation.
+
+Use actual native WebKit operations wherever the test scenario requires them.
+
+The fake provider may supplement these tests with deterministic failure injection, but it must not replace native qualification.
+
+---
+
+## Stage F — Native recovery and lifecycle qualification
+
+Use an isolated native test host and real WebKit stores.
+
+Qualify:
+
+- Clean shutdown and relaunch.
+- Abrupt application termination at controlled cutpoints.
+- Relaunch after interrupted creation.
+- Relaunch after interrupted publication.
+- Relaunch after interrupted clearing.
+- Relaunch after interrupted removal.
+- Missing store or descriptor reconciliation.
+- Unknown native outcomes.
+- Duplicate operation requests.
+- Repeated reconciliation.
+- Resource release and re-registration.
+
+Where destructive termination is required, run it only against the dedicated qualification host and synthetic data.
+
+Do not use the user's normal browser profile, real website data or production profile.
+
+A restart test must actually terminate and relaunch the relevant process. Merely reconstructing objects in the same process does not qualify as a restart test.
+
+For each test, distinguish:
+- Process restart.
+- Native object reconstruction.
+- WebKit store resolution.
+- Website-data persistence.
+- Browser-owned catalog recovery.
+
+Do not infer one from another.
+
+---
+
+# 5. Test infrastructure and execution requirements
+
+## 5.1 Real native test host
+
+Provide a reproducible native qualification harness that:
+
+- Runs on macOS 26.
+- Uses actual WebKit.
+- Uses synthetic, isolated profiles and stores.
+- Uses controlled test origins.
+- Produces machine-readable test results.
+- Records macOS version, WebKit/runtime environment and build identity.
+- Captures lifecycle events and operation outcomes.
+- Cleans up test resources safely.
+- Never touches the user's real browser profile.
+
+Use a local controlled HTTP/HTTPS test origin where practical. If a network-dependent test is unavoidable, document its dependency and failure mode.
+
+Do not rely on uncontrolled public websites as the primary qualification environment.
+
+## 5.2 CI and local testing
+
+Retain WS-F0 fake tests for:
+
+- Deterministic lifecycle testing.
+- Fault injection.
+- State-machine coverage.
+- Cross-platform contract validation.
+- Fast regression testing.
+
+Add actual native WebKit tests to the supported macOS 26 execution path.
+
+A non-macOS CI job may run fake/contract tests, but it must not report native WebKit qualification as passed.
+
+If the available execution environment is not macOS 26, implement the native integration and harness as far as possible, run all available tests, and explicitly report native qualification as BLOCKED. Do not simulate a native pass.
+
+## 5.3 Evidence integrity
+
+For every test suite, record:
+
+- Test identifier.
+- Requirement or WKS case.
+- Test type: fake, native unit, native integration or native restart/recovery.
+- Platform and macOS version.
+- Runtime/build identity.
+- Test fixture identity.
+- Execution result.
+- Relevant logs or evidence references.
+- Limitations and unresolved observations.
+
+Never merge fake and native test totals into a single unqualified pass count.
+
+---
+
+# 6. Preserve and extend WS-F0
+
+WS-F0 is accepted within its fake-only scope.
+
+Retain its fake providers and deterministic tests.
+
+Do not:
+- Delete the fake implementation.
+- Replace all fake tests with expensive native tests.
+- Mark fake passes as native passes.
+- Change historical WS-F0 evidence to make it appear native-qualified.
+- Weaken previously established lifecycle safety contracts.
+
+Where practical, run the same contract scenarios against both fake and native adapters.
+
+Clearly report:
+- Fake-only coverage.
+- Native-only coverage.
+- Shared contract coverage.
+- Native cases that remain blocked or untested.
+
+Update the traceability model without rewriting historical evidence.
+
+---
+
+# 7. Security and privacy requirements
+
+The following constraints are mandatory:
+
+1. WebKit website storage remains WebKit-managed.
+2. Never SQLCipher-wrap WebKit-owned files.
+3. No default-store fallback.
+4. No navigation before explicit store assignment.
+5. No private-session persistent metadata.
+6. No private history or snapshots.
+7. No profile cross-contamination.
+8. No publication of incomplete or uncertain native resources.
+9. No deletion-success claim without an observable completion result.
+10. No secure-erasure guarantee.
+11. No unsupported WebKit API or private API dependency.
+12. No real user data in qualification.
+13. No website URLs, credentials, cookies or private contents in ordinary diagnostic logs.
+14. No key material or secrets in logs.
+15. Fail closed when profile/store identity or lifecycle state is ambiguous.
+
+Keep diagnostics bounded and structured. Use synthetic identifiers and redact sensitive content.
+
+Document the limits of WebKit's native storage isolation and lifecycle guarantees rather than overstating them.
+
+---
+
+# 8. Required failure-injection matrix
+
+Extend the existing WS-F0 fault-injection model.
+
+At minimum, test:
+
+| Area | Required failure |
+|---|---|
+| Descriptor | Missing, corrupt, unsupported version |
+| Creation | Store resolution failure |
+| Creation | Duplicate creation request |
+| Assignment | Store assignment failure |
+| Construction | Web-view construction failure |
+| Publication | Publication interrupted |
+| Restore | Missing native resource |
+| Restore | Conflicting catalog/native state |
+| Restore | Unknown operation outcome |
+| Private | Session termination during use |
+| Clear | API failure |
+| Clear | Partial/uncertain completion |
+| Clear | Process termination before finalization |
+| Removal | Outstanding web-view reference |
+| Removal | API failure |
+| Removal | Callback not observed |
+| Removal | Process termination before finalization |
+| Isolation | Wrong-store assignment attempt |
+| Isolation | Profile switch during outstanding work |
+| Concurrency | Duplicate lifecycle operation |
+| Concurrency | Concurrent close and clear |
+| Recovery | Repeated reconciliation |
+
+Each scenario must specify:
+
+- Initial state.
+- Injected failure or interruption.
+- Expected state transition.
+- Required fencing behavior.
+- Observable result.
+- Recovery expectation.
+- Whether it is tested against fake, native or both.
+
+---
+
+# 9. Documentation and evidence deliverables
+
+Create a WS-F1 report set under:
+
+`docs/architecture/phase-5/reports/M1/`
+
+At minimum:
+
+1. `m1-wsf1-closeout.md`
+   - Scope and implementation summary.
+   - Starting and final commit references.
+   - Actual build/test results.
+   - Native qualification status.
+   - Accepted and blocked requirements.
+   - Outstanding risks.
+   - Explicit non-claims.
+
+2. `m1-wsf1-native-webkit-architecture.md`
+   - Adapter architecture.
+   - Ownership boundaries.
+   - Store resolution and assignment.
+   - Resource registry.
+   - Concurrency model.
+   - Native API usage and availability.
+
+3. `m1-wsf1-descriptor-and-lifecycle.md`
+   - Descriptor schema/version.
+   - Creation/publication lifecycle.
+   - Restore/reconciliation model.
+   - Failure and quarantine behavior.
+
+4. `m1-wsf1-qualification-plan.md`
+   - Native test host.
+   - Test origins and fixtures.
+   - Test scenarios.
+   - Platform requirements.
+   - Execution instructions.
+
+5. `m1-wsf1-qualification-results.md`
+   - Actual executed results.
+   - Fake versus native separation.
+   - Per-case outcomes.
+   - Evidence references.
+   - Blocked and inconclusive cases.
+
+6. `m1-wsf1-wks-traceability.md`
+   - Map existing WKS qualification cases to implementation and evidence.
+   - Preserve original case IDs.
+   - Preserve historical WS-F0 dispositions.
+   - Identify new cases where necessary.
+
+7. `m1-wsf1-risks-and-limitations.md`
+   - WebKit limitations.
+   - Store-removal uncertainty.
+   - Recovery limitations.
+   - Backup/portability limitations.
+   - Nonpersistent-store limitations.
+   - macOS/runtime dependencies.
+   - Remaining qualification gaps.
+
+8. Update the M1 index and relevant architecture references.
+
+Maintain the repository's existing evidence naming, structure and conventions.
+
+Do not invent evidence or mark tests passed without execution.
+
+Preserve historical reports. Add WS-F1 evidence rather than rewriting WS-F0 history.
+
+---
+
+# 10. Backup, portability and secure-erasure boundaries
+
+WS-F1 must not silently expand the approved backup or security guarantees.
+
+Explicitly document:
+
+- WebKit-owned website data is not part of the Vezham-owned SQLCipher database.
+- WebKit internal storage is not automatically a portable Vezham backup format.
+- Do not promise complete backup coverage for WebKit-managed data.
+- Do not infer backup completeness from a successful application snapshot.
+- Do not promise physical or forensic erasure after clearing/removing website data.
+- Do not promise cryptographic per-profile lock or revocation for WebKit-owned files.
+- Do not treat a nonpersistent store as a universal guarantee against OS-level artifacts.
+
+If the native runtime demonstrates behavior beyond these boundaries, record the observation without upgrading the product guarantee automatically.
+
+---
+
+# 11. Completion gates
+
+WS-F1 is complete only when all of the following have been addressed.
+
+## Gate 1 — Model completion
+- Descriptor model complete and versioned.
+- Creation/publication model complete.
+- Restore/reconciliation model complete.
+- New model tests passing.
+
+## Gate 2 — Native implementation
+- Actual native WebKit adapter implemented.
+- Connected to the real application architecture.
+- Persistent store resolution works.
+- Private nonpersistent store creation works.
+- Explicit assignment before web-view construction.
+- Resource registry and lifecycle integration implemented.
+- No default-store fallback.
+
+## Gate 3 — Native qualification
+- Actual macOS 26 execution completed.
+- Persistent storage across actual process restart tested.
+- Private-session lifecycle tested.
+- Profile isolation tested.
+- Website-data clearing tested.
+- Store removal tested.
+- Recovery/interruption scenarios tested.
+- Results and limitations recorded.
+
+## Gate 4 — Regression and safety
+- WS-F0 fake tests remain passing.
+- New descriptor/lifecycle tests pass.
+- Native tests pass or have explicit case-level blocked dispositions.
+- No existing owner decision silently changed.
+- No WebKit-owned data enters SQLCipher.
+- No private-data persistence regression.
+- No unsafe fallback or publication path.
+
+## Gate 5 — Evidence and closeout
+- Reports complete.
+- WKS traceability updated.
+- Evidence is reproducible.
+- Native and fake results clearly separated.
+- Known limitations documented.
+- Final commit and repository state recorded.
+
+A test that could not run must be marked BLOCKED or NOT EXECUTED, not PASS.
+
+If an essential native test fails, investigate and fix it where possible within the milestone. If it cannot be resolved safely, document the failure and its implications. Do not conceal it behind fake test results.
+
+---
+
+# 12. Execution and change-management rules
+
+Execute the full WS-F1 milestone in one coordinated Codex run.
+
+Work through the internal stages in sequence, but do not pause for routine product-owner decisions.
+
+You may make normal implementation decisions consistent with the approved architecture.
+
+If a genuine product/security decision is required that cannot be resolved within existing owner decisions, preserve the safe behavior, document the exact decision required and continue independent work.
+
+Do not:
+- Change unrelated browser features.
+- Introduce CEF or another browser engine.
+- Add cloud sync or account dependencies.
+- Add autonomous Tamizhi browser actions.
+- Introduce extensions or dynamic plugins.
+- Change the SQLCipher security decision.
+- Modify historical owner decisions to make implementation easier.
+- Modify unrelated packages or applications.
+- Claim release readiness.
+
+Keep changes scoped to WS-F1.
+
+Before committing:
+
+1. Run the full relevant test matrix.
+2. Inspect the complete diff.
+3. Verify no generated or unrelated files were accidentally included.
+4. Verify evidence and reports match actual results.
+5. Verify the working tree and commit contents.
+6. Record the final commit SHA.
+
+Commit the completed WS-F1 work using the repository's established commit conventions.
+
+Do not push unless the existing repository workflow or explicit user instruction authorizes pushing.
+
+---
+
+# 13. Final response required from Codex
+
+At completion, provide a concise but substantive engineering handoff containing:
+
+1. Starting commit and final commit SHA.
+2. Implemented components and their actual repository paths.
+3. Descriptor, creation/publication and restore model changes.
+4. Native WebKit adapter implementation details.
+5. Actual macOS version and runtime environment used.
+6. Persistent profile test results.
+7. Private-session test results.
+8. Profile-isolation results.
+9. Clear and remove results.
+10. Restart and recovery results.
+11. Fake regression results.
+12. Native versus fake test counts, separately.
+13. WKS case dispositions.
+14. Tests not executed and why.
+15. Known limitations and remaining risks.
+16. Reports and evidence locations.
+17. Working-tree, commit and push status.
+
+Use explicit labels:
+
+- `PASS_NATIVE`
+- `PASS_FAKE_ONLY`
+- `PASS_CONTRACT`
+- `BLOCKED`
+- `NOT_EXECUTED`
+- `FAIL`
+- `INCONCLUSIVE`
+
+Do not use an overall PASS label if essential native qualification remains blocked.
+
+End with one of these honest milestone dispositions:
+
+- **WS-F1 COMPLETE — Native qualification passed within documented scope.**
+- **WS-F1 IMPLEMENTED — Native qualification partially blocked or incomplete.**
+- **WS-F1 INCOMPLETE — Implementation or safety gates remain unmet.**
+
+A successful WS-F1 closeout is not automatic release approval. Product-owner review remains required.
+
+---
+
+# Final instruction
+
+Prioritize real native WebKit behavior over additional simulation.
+
+The fake implementation is a valuable deterministic test double, not the product implementation and not evidence of native WebKit correctness.
+
+Implement the actual adapter, run the actual macOS 26 qualification, preserve the established safety boundaries, and report exactly what the evidence proves.

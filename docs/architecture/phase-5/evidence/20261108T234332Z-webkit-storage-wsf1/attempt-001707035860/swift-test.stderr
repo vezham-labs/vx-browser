@@ -1,0 +1,50 @@
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 327]
+[Planning deferred tasks]
+[56 / 116]
+[57 / 117] BrowserDomain
+[62 / 155]
+[66 / 155]
+[67 / 155]
+[69 / 155]
+[74 / 155]
+[75 / 155]
+[76 / 155]
+[79 / 155]
+[80 / 155]
+[82 / 155]
+[83 / 155]
+[85 / 155]
+[88 / 155]
+[90 / 155]
+[91 / 155]
+[94 / 155] BrowserDomain
+[96 / 155] BrowserDomain
+[104 / 156]
+[105 / 156] BrowserPorts
+[107 / 158] BrowserPorts
+[117 / 160]
+[120 / 166] BrowserPersistence
+[135 / 166] BrowserPersistence
+[137 / 167] BrowserPersistence-product
+[141 / 167]
+[142 / 167] BrowserCore
+[144 / 170] BrowserCore
+[153 / 170] BrowserCore
+[158 / 170] BrowserCore-product
+[160 / 171] BrowserCore-product
+[160 / 171] WSF0Tests-product
+[161 / 182]
+[162 / 182]
+[165 / 182] WSF0Tests-product
+[166 / 182] WSF0Tests-product
+[168 / 182] WSF0Tests-product
+[173 / 182] WSF0Tests-product
+[176 / 182] WSF0Tests-product
+[176 / 182] AllIncludingTests
+[176 / 182] WSF0Tests-product
+[178 / 182] WSF0Tests-product
+[179 / 182] WSF0Tests-product
+[181 / 182] WSF0Tests-product
+Build complete! (24.29 secs)

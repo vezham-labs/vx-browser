@@ -1,0 +1,110 @@
+[
+  {
+    "path": "/fixture",
+    "ordinal": 1
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 2
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 3
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 4
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 5
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 6
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 7
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 8
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 9
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 10
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 11
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 12
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 13
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 14
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 15
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 16
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 17
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 18
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 19
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 20
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 21
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 22
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 23
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 24
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 25
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 26
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 27
+  }
+]

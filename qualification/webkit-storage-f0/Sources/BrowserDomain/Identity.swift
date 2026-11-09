@@ -1,6 +1,6 @@
 import Foundation
 
-public enum FailureCode: String, Error, Sendable, CaseIterable {
+public enum FailureCode: String, Codable, Error, Sendable, CaseIterable {
     case invalidIdentity, invalidConfiguration, invalidRevision, duplicateIdentity, conflictingMapping
     case missingCatalog, corruptCatalog, catalogUnavailable, catalogWriteFailed, staleRevision
     case unauthorized, staleAuthority, staleCompletion, illegalTransition, busy, operationConflict
@@ -43,6 +43,17 @@ public typealias CallerID = ID<CallerTag>
 public typealias OperationID = ID<OperationTag>
 public typealias ViewID = ID<ViewTag>
 public typealias ResourceID = ID<ResourceTag>
+
+extension ID: Codable {
+    public init(from decoder: any Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        try self.init(container.decode(String.self))
+    }
+    public func encode(to encoder: any Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(rawValue)
+    }
+}
 
 public enum Scope: Hashable, Sendable {
     case persistent(ProfileID)

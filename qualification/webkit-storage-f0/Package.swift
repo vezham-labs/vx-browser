@@ -4,7 +4,13 @@ import PackageDescription
 let package = Package(
     name: "WSF0Qualification",
     platforms: [.macOS("26.0")],
-    products: [.library(name: "WSF0Qualification", targets: ["BrowserCore", "BrowserPersistence", "WSF0Fakes"])],
+    products: [
+        .library(name: "WSF0Qualification", targets: ["BrowserCore", "BrowserPersistence", "WSF0Fakes"]),
+        .library(name: "BrowserDomain", targets: ["BrowserDomain"]),
+        .library(name: "BrowserPorts", targets: ["BrowserPorts"]),
+        .library(name: "BrowserCore", targets: ["BrowserCore"]),
+        .library(name: "BrowserPersistence", targets: ["BrowserPersistence"])
+    ],
     targets: [
         .target(name: "BrowserDomain"),
         .target(name: "BrowserPorts", dependencies: ["BrowserDomain"]),

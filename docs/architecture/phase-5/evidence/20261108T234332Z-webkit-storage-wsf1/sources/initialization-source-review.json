@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/WebKit/WebKit/75dff6dba87fafb94367ddb5bb155a110963ba80/Source/WebKit/UIProcess/API/Cocoa/WKWebView.mm",
+    "pin": "75dff6dba87fafb94367ddb5bb155a110963ba80",
+    "sha256": "bb575326efc117e83986c0fd0b1d0ef5f5f68523f82bbd9344166ba8d2091001",
+    "excerpts": [
+      "1875: }\n1876: \n1877: + (BOOL)handlesURLScheme:(NSString *)urlScheme\n1878: {\n1879:     return WebCore::LegacySchemeRegistry::isBuiltinScheme(urlScheme);\n1880: }\n1881: \n1882: - (void)setMediaType:(NSString *)mediaStyle\n1883: {\n1884:     THROW_IF_SUSPENDED;\n1885:     _page->setOverriddenMediaType(mediaStyle);\n1886: }\n1887: \n1888: - (NSString *)mediaType"
+    ],
+    "scope": "Upstream source, not installed engine source-to-binary proof"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/WebKit/WebKit/75dff6dba87fafb94367ddb5bb155a110963ba80/Source/WebKit/UIProcess/API/Cocoa/WKProcessPool.mm",
+    "pin": "75dff6dba87fafb94367ddb5bb155a110963ba80",
+    "sha256": "b89a6877d032da78b49100a1b841abcc768ed0baa300a80bd9b34182d5c2ae2c",
+    "excerpts": [],
+    "scope": "Upstream source, not installed engine source-to-binary proof"
+  }
+]

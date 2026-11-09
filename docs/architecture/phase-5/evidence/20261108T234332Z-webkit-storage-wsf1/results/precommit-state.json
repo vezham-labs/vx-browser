@@ -1,0 +1,10 @@
+{
+  "HEAD": "cb60a5428d4e66f2058865b54121abf64377acc4",
+  "branch": "timeline",
+  "staged_before_task": false,
+  "commit_requested": true,
+  "push_authorized": false,
+  "reviewed_modified_count": 12,
+  "reviewed_new_non_evidence_count": 20,
+  "validation": "See canonical-attempts, preservation/static checks; native macOS26 BLOCKED"
+}

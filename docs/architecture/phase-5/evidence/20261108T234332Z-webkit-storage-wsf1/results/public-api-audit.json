@@ -1,0 +1,154 @@
+{
+  "status": "PASS_CONTRACT",
+  "selected_public_calls": [
+    {
+      "header": "WKWebsiteDataStore.h",
+      "selector": "nonPersistentDataStore",
+      "declarations": [
+        {
+          "line": 53,
+          "text": "+ (WKWebsiteDataStore *)nonPersistentDataStore;"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebsiteDataStore.h",
+      "selector": "fetchAllDataStoreIdentifiers",
+      "declarations": [
+        {
+          "line": 123,
+          "text": "+ (void)fetchAllDataStoreIdentifiers:(WK_SWIFT_UI_ACTOR void(^)(NSArray<NSUUID *> *))completionHandler WK_SWIFT_ASYNC_NAME(getter:allDataStoreIdentifiers()) API_AVAILABLE(macos(14.0), ios(17.0));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebsiteDataStore.h",
+      "selector": "dataStoreForIdentifier:",
+      "declarations": [
+        {
+          "line": 109,
+          "text": "+ (WKWebsiteDataStore *)dataStoreForIdentifier:(NSUUID *)identifier API_AVAILABLE(macos(14.0), ios(17.0));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebsiteDataStore.h",
+      "selector": "removeDataStoreForIdentifier:",
+      "declarations": [
+        {
+          "line": 117,
+          "text": "+ (void)removeDataStoreForIdentifier:(NSUUID *)identifier completionHandler:(WK_SWIFT_UI_ACTOR void(^)(NSError * _Nullable))completionHandler API_AVAILABLE(macos(14.0), ios(17.0));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebsiteDataStore.h",
+      "selector": "removeDataOfTypes:",
+      "declarations": [
+        {
+          "line": 75,
+          "text": "- (void)removeDataOfTypes:(NSSet<NSString *> *)dataTypes forDataRecords:(NSArray<WKWebsiteDataRecord *> *)dataRecords completionHandler:(WK_SWIFT_UI_ACTOR void (^)(void))completionHandler;"
+        },
+        {
+          "line": 82,
+          "text": "- (void)removeDataOfTypes:(NSSet<NSString *> *)dataTypes modifiedSince:(NSDate *)date completionHandler:(WK_SWIFT_UI_ACTOR void (^)(void))completionHandler;"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebsiteDataStore.h",
+      "selector": "fetchDataRecordsOfTypes:",
+      "declarations": [
+        {
+          "line": 68,
+          "text": "- (void)fetchDataRecordsOfTypes:(NSSet<NSString *> *)dataTypes completionHandler:(WK_SWIFT_UI_ACTOR void (^)(NSArray<WKWebsiteDataRecord *> *))completionHandler WK_SWIFT_ASYNC_NAME(dataRecords(ofTypes:));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebView.h",
+      "selector": "initWithFrame:",
+      "declarations": [
+        {
+          "line": 118,
+          "text": " @link -initWithFrame: @/link to initialize an instance with the default"
+        },
+        {
+          "line": 123,
+          "text": "- (instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration *)configuration NS_DESIGNATED_INITIALIZER;"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebView.h",
+      "selector": "callAsyncJavaScript:",
+      "declarations": [
+        {
+          "line": 289,
+          "text": " Once your global state is set up, consider using callAsyncJavaScript: for more flexible interaction with the JavaScript programming model."
+        },
+        {
+          "line": 363,
+          "text": "- (void)callAsyncJavaScript:(NSString *)functionBody arguments:(nullable NSDictionary<NSString *, id> *)arguments inFrame:(nullable WKFrameInfo *)frame inContentWorld:(WKContentWorld *)contentWorld completionHandler:(WK_SWIFT_UI_ACTOR void (^ _Nullable)(id WK_NULLABLE_RESULT result, NSError * _Nullable error))completionHandler NS_REFINED_FOR_SWIFT API_AVAILABLE(macos(11.0), ios(14.0));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKWebViewConfiguration.h",
+      "selector": "websiteDataStore",
+      "declarations": [
+        {
+          "line": 126,
+          "text": "@property (nonatomic, strong) WKWebsiteDataStore *websiteDataStore API_AVAILABLE(macos(10.11), ios(9.0));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKUIDelegate.h",
+      "selector": "requestMediaCapturePermissionForOrigin",
+      "declarations": [
+        {
+          "line": 165,
+          "text": "- (void)webView:(WKWebView *)webView requestMediaCapturePermissionForOrigin:(WKSecurityOrigin *)origin initiatedByFrame:(WKFrameInfo *)frame type:(WKMediaCaptureType)type decisionHandler:(WK_SWIFT_UI_ACTOR void (^)(WKPermissionDecision decision))decisionHandler WK_SWIFT_ASYNC_NAME(webView(_:decideMediaCapturePermissionsFor:initiatedBy:type:)) WK_SWIFT_ASYNC(5) API_AVAILABLE(macos(12.0), ios(15.0));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKUIDelegate.h",
+      "selector": "runOpenPanelWithParameters",
+      "declarations": [
+        {
+          "line": 295,
+          "text": "- (void)webView:(WKWebView *)webView runOpenPanelWithParameters:(WKOpenPanelParameters *)parameters initiatedByFrame:(WKFrameInfo *)frame completionHandler:(WK_SWIFT_UI_ACTOR void (^)(NSArray<NSURL *> * _Nullable URLs))completionHandler API_AVAILABLE(macos(10.12), ios(18.4), visionos(2.4));"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    },
+    {
+      "header": "WKUIDelegate.h",
+      "selector": "createWebViewWithConfiguration",
+      "declarations": [
+        {
+          "line": 97,
+          "text": "- (nullable WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures;"
+        }
+      ],
+      "assessment": "Public installed SDK declaration; selected call compiles with26.0 deployment. No runtime availability guarantee."
+    }
+  ],
+  "minimum_os": "26.0",
+  "native_source": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+  "native_sourceSHA256": "bb16b819d3412a0ef13d977a89250366086266110485c8d4b256761546ee5df5",
+  "default_or_private_API_dependency": false,
+  "limitation": "Static selected surface only; macOS26 runtime and complete platform behavior not qualified"
+}

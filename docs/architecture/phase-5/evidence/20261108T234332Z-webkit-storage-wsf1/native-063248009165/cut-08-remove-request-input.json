@@ -1,0 +1,68 @@
+{
+  "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+      "store": "a583a085-9505-4f54-b6b8-30650bb833e2"
+    },
+    {
+      "name": "B",
+      "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+      "store": "f67c484d-e534-4e73-a454-9f9f8def14d6"
+    }
+  ],
+  "origin": "http://127.0.0.1:59265",
+  "checkpoint": {
+    "rows": [
+      {
+        "store": "a583a085-9505-4f54-b6b8-30650bb833e2",
+        "revision": 4,
+        "origin": "fresh",
+        "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+        "resourceGeneration": 1,
+        "status": "quiescent"
+      },
+      {
+        "store": "f67c484d-e534-4e73-a454-9f9f8def14d6",
+        "revision": 4,
+        "origin": "fresh",
+        "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+        "resourceGeneration": 1,
+        "status": "quiescent"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "456f417d-e257-4ca2-a9fe-0bff1e615417",
+      "records": [
+        {
+          "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+          "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+          "store": "a583a085-9505-4f54-b6b8-30650bb833e2",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "92c73edc-7a8a-4866-a2f8-f1be6eadb087",
+          "generation": 2
+        },
+        {
+          "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+          "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+          "store": "f67c484d-e534-4e73-a454-9f9f8def14d6",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "86edf81e-bee3-4ea1-89fc-b0c6238bf857",
+          "generation": 2
+        }
+      ],
+      "version": 1
+    }
+  },
+  "cutpoint": "remove-request",
+  "action": "remove"
+}

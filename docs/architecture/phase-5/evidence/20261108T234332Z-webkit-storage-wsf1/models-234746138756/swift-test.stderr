@@ -1,0 +1,47 @@
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 185]
+[Planning deferred tasks]
+[51 / 106]
+[52 / 107] BrowserDomain
+[54 / 145]
+[57 / 145]
+[59 / 145]
+[62 / 145]
+[64 / 145]
+[67 / 145]
+[69 / 145]
+[70 / 145]
+[71 / 145]
+[74 / 145]
+[75 / 145]
+[76 / 145]
+[77 / 145]
+[78 / 145]
+[80 / 145]
+[82 / 145]
+[84 / 145]
+[85 / 145]
+[86 / 145]
+[89 / 145] BrowserDomain
+[91 / 145] BrowserDomain
+[99 / 146]
+[99 / 146] BrowserPorts
+[101 / 148] BrowserPorts
+[111 / 150]
+[114 / 156] BrowserPersistence
+[128 / 156] BrowserPorts
+[129 / 156] BrowserPorts
+[131 / 157]
+[134 / 157] BrowserCore
+[137 / 160] BrowserCore
+[145 / 160] BrowserCore
+[150 / 161]
+[150 / 161] StorageModelTests-product
+[151 / 166]
+[152 / 166]
+[155 / 166] StorageModelTests-product
+[160 / 166] StorageModelTests-product
+[162 / 166] StorageModelTests-product
+[164 / 166] StorageModelTests-product
+Build complete! (22.06 secs)

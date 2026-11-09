@@ -5,6 +5,23 @@
   "projectType": "application",
   "tags": ["scope:browser", "type:native-host"],
   "targets": {
+    "storage-native": {
+      "executor": "nx:run-commands", "cache": false,
+      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py native" }
+    },
+    "storage-build": {
+      "executor": "nx:run-commands", "cache": false,
+      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py build" }
+    },
+    "storage-diagnostic-build": {
+      "executor": "nx:run-commands", "cache": false,
+      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py diagnostic-build" }
+    },
+    "storage-models": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py models" }
+    },
     "build": {
       "executor": "nx:run-commands",
       "outputs": ["{workspaceRoot}/apps/browser-macos/build"],

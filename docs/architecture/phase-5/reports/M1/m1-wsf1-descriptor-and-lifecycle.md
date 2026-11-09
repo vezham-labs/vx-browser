@@ -1,0 +1,19 @@
+# WS-F1 descriptors and lifecycle
+
+2026-11-09. [Native architecture](m1-wsf1-native-webkit-architecture.md) · [Actual results](m1-wsf1-qualification-results.md).
+
+`BrowserDomain/StorageDescriptor.swift` implements schema1/adapter1, namespace, distinct profile/store IDs or private-session identity, resource generation, operation identity, creation/update timestamps, platform-major26, lifecycle phase and restoration state. The value owns no WK object, URL, cookie, engine path or permission. This bounded schema is not the final protected production catalog file format.
+
+Persistent descriptors encode/decode through validated Codable; bytes are capped8192. Missing/corrupt fields, zero/equal IDs, unknown old/future/schema/adapter/platform versions, generation/time violations and mixed modes reject. There is no implicit migration/reinterpretation. Private descriptors stay memory-only and reject all encoding/serialized restoration, including direct JSONEncoder. Future compatibility/migrations require explicit new parsers, vectors and evidence.
+
+Creation order is Intent → Resolved → Registered → Configured → Constructed → Published → NavigationAuthorized. Exact same-operation/same-phase replay is a no-op. Skipping steps, foreign operation or backward time rejects. Retirement continues Retiring → Retired → RemovalPending → Removed. Nonremoved phases can enter sticky Quarantined/Unknown; they cannot reactivate. Domain transition tests cover each cutpoint, independently of native execution.
+
+Core's existing binding/catalog states and write-ahead RecoveryRecord remain authoritative for scope-level lifecycle, while the native descriptor tracks an individual view's construction/publication. No claim is made that every descriptor field is durably persisted by a production backend. The qualification `CheckpointPorts` mirrors persistent catalog/journal metadata to its parent over stdout; the next actual app process receives that exact metadata through stdin. It does not implement encrypted catalog persistence. Private operations never enter this checkpoint.
+
+Native provisioning records Core's binding and access intent before a named factory. Native construction registers an unpublished view with explicit assignment. After Core activation, host publication records a new pending activation checkpoint before exposing the view and commits stable metadata afterward. A crash at publication leaves a conservative pending record; returning factory/configuration/view is never itself navigation authority.
+
+`StorageReconciliation` distinguishes desired available/retired/removed, recorded phase, observed present/absent/unknown/conflicting, proposed action and final reconciled/unknown classification. Only declared stable/present or confirmed tombstone/absent combinations qualify for a noncreating action. It grants no factory capability. Existing Core reconciliation compares exact binding, namespace, generation and journal; pending/deleting/quarantined/conflicting/missing outcomes fence rather than recreate. New run grants are minted separately; no view, active grant, form/POST action or private data is restored.
+
+Restore here means lifecycle/catalog reconciliation, not importing website contents. No opaque backup blobs, archive keys, external-file restoration, engine-directory copy or production migration is implemented. Existing snapshot-publication policy remains a metadata-only guard. WKS-031–034/039–040 and EXP-07 retain their remaining backup requirements.
+
+Native crash/restart evidence must come from separate processes. Reconstructing the coordinator in a fake test is `PASS_FAKE_ONLY`; serializer/state-model/native-admission checks are `PASS_CONTRACT`; neither is native restart qualification. Actual qualified classes/platforms/cutpoints and unresolved observations are recorded separately.

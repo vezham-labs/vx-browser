@@ -1,0 +1,34 @@
+{
+  "status": "PASS_CONTRACT",
+  "tracked_baseline_files": 1328,
+  "unchanged": 1316,
+  "reviewed_modified": [
+    "apps/browser-macos/Config/Debug.xcconfig",
+    "apps/browser-macos/Config/VezhamBrowser.entitlements",
+    "apps/browser-macos/README.md",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "apps/browser-macos/Tools/native_host.py",
+    "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj",
+    "apps/browser-macos/project.json",
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "qualification/webkit-storage-f0/Package.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserDomain/Identity.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserDomain/Models.swift"
+  ],
+  "unexpected_changes": [],
+  "index_prefixes_preserved": true,
+  "protected_group_counts": {
+    "docs/decisions/": 5,
+    "prototype/wkwebview/": 363,
+    "docs/architecture/phase-3/": 9,
+    "qualification/sqlcipher-phase1/": 10,
+    "qualification/webkit-storage-f0/Tests/": 11,
+    "qualification/webkit-storage-f0/Sources/WSF0Fakes/": 3,
+    "docs/architecture/phase-5/evidence/": 696
+  },
+  "historical_hashes_preserved": true,
+  "WKS40_original_definitions_equal": true,
+  "all_original_PQR_definitions_and_outcomes_byte_preserved": true,
+  "ADR_owner_status_changes": false
+}

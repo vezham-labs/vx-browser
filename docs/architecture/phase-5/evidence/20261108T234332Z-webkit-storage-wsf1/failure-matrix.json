@@ -1,0 +1,399 @@
+{
+  "required_categories": 22,
+  "rows": [
+    {
+      "id": "F1-FI-01",
+      "area": "Descriptor missing/corrupt/unsupported",
+      "initial_state": "Raw descriptor before native admission",
+      "injection": "Contract rejection before effects",
+      "expected_transition": "Decode rejects invalid fields/version before effect; no implicit migration",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Rejected descriptor/no constructed resource",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F1-MOD-002",
+        "F1-GUARD-003"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735",
+      "limitation": "No macOS26 qualification. Contract rejection before effects"
+    },
+    {
+      "id": "F1-FI-02",
+      "area": "Store resolution failure",
+      "initial_state": "Registered profile entering resolution",
+      "injection": "Fake provider unavailable",
+      "expected_transition": "Unavailable provider result fences scope; never construct",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Typed failure and zero constructors",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-CON-003"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Fake provider unavailable"
+    },
+    {
+      "id": "F1-FI-03",
+      "area": "Duplicate creation",
+      "initial_state": "Registered mapping with retained operation receipt",
+      "injection": "Receipt replay; no second factory",
+      "expected_transition": "Exact replay returns receipt; duplicate/conflicting mapping rejected",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Same receipt and no second factory",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-CAT-003",
+        "F0-CON-007"
+      ],
+      "native_route": "F1-NAT-IDEMPOTENT-*",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Receipt replay; no second factory"
+    },
+    {
+      "id": "F1-FI-04",
+      "area": "Assignment failure",
+      "initial_state": "Resolved claim with wrong/foreign/missing assignment",
+      "injection": "Contract/fake wrong assignment rejects before constructor",
+      "expected_transition": "Reject before constructor and publication",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Assignment rejection/no view",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-CON-004",
+        "F1-GUARD-002"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Contract/fake wrong assignment rejects before constructor"
+    },
+    {
+      "id": "F1-FI-05",
+      "area": "Construction failure",
+      "initial_state": "Resolved scope awaiting constructor",
+      "injection": "Fake constructor failure; forced native exception not executed",
+      "expected_transition": "Constructor failure quarantines; no ghost view",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Construction failure and zero live fake views",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-CON-005"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Fake constructor failure; forced native exception not executed"
+    },
+    {
+      "id": "F1-FI-06",
+      "area": "Publication interrupted",
+      "initial_state": "Constructed view with pending publication journal",
+      "injection": "Host death after publication, before journal finalization",
+      "expected_transition": "Host dies after native publication effect; restart pending intent quarantines",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Actual SIGKILL then fenced noncreating reconciliation",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F1-MOD-005"
+      ],
+      "native_route": "cut-04-publication",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Host death after publication, before journal finalization"
+    },
+    {
+      "id": "F1-FI-07",
+      "area": "Missing native resource",
+      "initial_state": "Established mapping but provider resource missing",
+      "injection": "Fake missing established resource; no native established-missing fixture",
+      "expected_transition": "Missing result never invokes creating factory",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Missing/fenced result and no recreation",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-REC-002"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Fake missing established resource; no native established-missing fixture"
+    },
+    {
+      "id": "F1-FI-08",
+      "area": "Conflicting catalog/native state",
+      "initial_state": "Catalog/journal/provider identity or namespace disagreement",
+      "injection": "Fake conflicts plus native unfinished/missing mapping",
+      "expected_transition": "Reject inconsistent metadata; do not adopt orphan",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Quarantined/failed reconciliation, no sweep",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-REC-006",
+        "F0-REC-010"
+      ],
+      "native_route": "cut-00-creation-intent-reconcile",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Fake conflicts plus native unfinished/missing mapping"
+    },
+    {
+      "id": "F1-FI-09",
+      "area": "Unknown outcome",
+      "initial_state": "Deleting scope after uncertain provider effect",
+      "injection": "Completion lost to Core by host death",
+      "expected_transition": "Unknown outcome never becomes Removed/Active by absence alone",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Unknown/quarantine and preserved pending intent",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-DEL-007",
+        "F0-REC-005"
+      ],
+      "native_route": "cut-09-remove-callback-reconcile",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Completion lost to Core by host death"
+    },
+    {
+      "id": "F1-FI-10",
+      "area": "Private termination during use",
+      "initial_state": "Active seeded private session",
+      "injection": "Actual child termination/relaunch, no private restoration",
+      "expected_transition": "Owned host dies; fresh process uses fresh nonpersistent session",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Actual kill/relaunch, empty fresh data and later positive controls",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-PRI-008"
+      ],
+      "native_route": "03b-private-interrupted;03c-private-restart",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Actual child termination/relaunch, no private restoration"
+    },
+    {
+      "id": "F1-FI-11",
+      "area": "Clear API failure",
+      "initial_state": "Quiescent fake scope with selected clear",
+      "injection": "Fake only; public native clear has no error parameter",
+      "expected_transition": "Configured failure is not clear success; never invoke remove",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Failure/quarantine, remove call count zero",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-DEL-009"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Fake only; public native clear has no error parameter"
+    },
+    {
+      "id": "F1-FI-12",
+      "area": "Clear partial/uncertain",
+      "initial_state": "Quiescent fake scope with partial/unknown clear effect",
+      "injection": "Fake partial/error; native interrupted finalization",
+      "expected_transition": "Partial/unknown remains distinct and quarantined",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Typed partial/unknown, no rollback or success",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-DEL-009"
+      ],
+      "native_route": "cut-06-clear-callback-reconcile",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Fake partial/error; native interrupted finalization"
+    },
+    {
+      "id": "F1-FI-13",
+      "area": "Clear termination before finalization",
+      "initial_state": "Quiescent persistent scope with clear intent; callback before catalog finalization",
+      "injection": "Native before-call/after-callback, not issued-before-callback",
+      "expected_transition": "Actual host death preserves pending clear; reconcile fences it",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Native cut-05 before call and cut-06 after callback, then actual restart",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [],
+      "native_route": "cut-05-clear-request;cut-06-clear-callback",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Native before-call/after-callback, not issued-before-callback",
+      "native_supporting_cases": [
+        {
+          "attempt": "cut-06-clear-callback-reconcile",
+          "id": "F1-NAT-RECOVERY-A"
+        },
+        {
+          "attempt": "cut-05-clear-request-reconcile",
+          "id": "F1-NAT-RECOVERY-A"
+        }
+      ]
+    },
+    {
+      "id": "F1-FI-14",
+      "area": "Removal outstanding view reference",
+      "initial_state": "Live/retained view or injected owner before removal",
+      "injection": "Fake held owner; no forced real in-use API error",
+      "expected_transition": "Refuse before removal while resources remain",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Outstanding-reference/transition rejection and zero remove effect",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-LIF-002",
+        "F0-DEL-005"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Fake held owner; no forced real in-use API error"
+    },
+    {
+      "id": "F1-FI-15",
+      "area": "Removal API failure",
+      "initial_state": "Retired scope with deleting tombstone",
+      "injection": "Fake error; historical errors not new qualification",
+      "expected_transition": "Provider error cannot roll mapping back to Active",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Failed/quarantined result with tombstone preserved",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-DEL-008"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Fake error; historical errors not new qualification"
+    },
+    {
+      "id": "F1-FI-16",
+      "area": "Callback not observed",
+      "initial_state": "Pending removal whose completion cannot reach Core",
+      "injection": "Caller completion lost after host death; platform callback-drop timeout unexecuted",
+      "expected_transition": "Lost caller completion stays unknown even if native callback fired",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Host death at callback checkpoint; missing final receipt",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-DEL-007",
+        "F0-REC-005"
+      ],
+      "native_route": "cut-09-remove-callback",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Caller completion lost after host death; platform callback-drop timeout unexecuted"
+    },
+    {
+      "id": "F1-FI-17",
+      "area": "Removal termination before finalization",
+      "initial_state": "Deleting intent before call or after callback, before finalization",
+      "injection": "Pending tombstone stays fenced",
+      "expected_transition": "Crash never fabricates successful catalog finalization",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Actual child kill/relaunch, pending state quarantined",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-REC-004"
+      ],
+      "native_route": "cut-08-remove-request;cut-09-remove-callback",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Pending tombstone stays fenced"
+    },
+    {
+      "id": "F1-FI-18",
+      "area": "Wrong-store attempt",
+      "initial_state": "Wrong/foreign/default resolution presented to constructor",
+      "injection": "Contract/fake reject before API effect",
+      "expected_transition": "Reject mismatched identity before any view effect",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Guard/fake rejection; no native wrong-object exception claim",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-CON-004",
+        "F0-INT-005",
+        "F1-GUARD-002"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Contract/fake reject before API effect"
+    },
+    {
+      "id": "F1-FI-19",
+      "area": "Switch during outstanding work",
+      "initial_state": "Quiescent source; destination activation suspended",
+      "injection": "Fake source-generation changes; suspended native switch not executed",
+      "expected_transition": "Source generation/authority change invalidates late destination result",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Fake stale/source-not-retired outcome and destination cleanup",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-LIF-011",
+        "F0-LIF-012"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+      "limitation": "No macOS26 qualification. Fake source-generation changes; suspended native switch not executed"
+    },
+    {
+      "id": "F1-FI-20",
+      "area": "Duplicate lifecycle operation",
+      "initial_state": "Operation pending or same terminal request replayed",
+      "injection": "Busy while pending; terminal replay has no native effect",
+      "expected_transition": "Pending duplicate is Busy; terminal exact replay has no new effect",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Fake Busy plus native replay after navigation with unchanged trace count",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-LIF-004",
+        "F0-CON-007"
+      ],
+      "native_route": "F1-NAT-ACTIVATE-REPLAY-*",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. Busy while pending; terminal replay has no native effect"
+    },
+    {
+      "id": "F1-FI-21",
+      "area": "Concurrent close/clear",
+      "initial_state": "First active-view close suspended, then quiescent clear suspended",
+      "injection": "Both deterministic orderings reject opposing work with Busy and zero effects",
+      "expected_transition": "Each opposing operation is Busy without provider effect",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "F1-FAKE-001 verifies both orderings and effect counters",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F1-FAKE-001"
+      ],
+      "native_route": "NOT_EXECUTED",
+      "coverage": "contract/fake",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735",
+      "limitation": "No macOS26 qualification. Both deterministic orderings reject opposing work with Busy and zero effects"
+    },
+    {
+      "id": "F1-FI-22",
+      "area": "Repeated reconciliation",
+      "initial_state": "New process with pending/unknown or independently stable checkpoint",
+      "injection": "New process, interrupted scope fenced, no creating factory",
+      "expected_transition": "Repeated reconciliation fences interrupted scope; stable scope may resolve without creating",
+      "fence": "No acquisition/navigation/publication or stale completion after fence; independent valid scopes stay separate",
+      "observable_result": "Native repeated results and no factory/publication",
+      "recovery": "Pending/conflicting/unknown state never recreates or silently reactivates; repeated reconciliation remains noncreating",
+      "supporting_tests": [
+        "F0-REC-001"
+      ],
+      "native_route": "cut-*-reconcile/F1-NAT-RECOVERY-REPEATED-*",
+      "coverage": "contract/fake plus native discovery",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+      "limitation": "No macOS26 qualification. New process, interrupted scope fenced, no creating factory"
+    }
+  ],
+  "scope": "Support coverage, not22 native passes"
+}

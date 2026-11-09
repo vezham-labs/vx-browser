@@ -1,0 +1,173 @@
+{
+  "label": "cut-05-clear-request-reconcile",
+  "pid": 38783,
+  "action": "reconcile-uncertain",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "event": "result",
+    "checkpoint": {
+      "snapshot": {
+        "version": 1,
+        "records": [
+          {
+            "store": "f7ed7217-cc6b-44bc-af9c-64023665c87a",
+            "generation": 5,
+            "phase": {
+              "stable": {
+                "_0": "active"
+              }
+            },
+            "profile": "7f627284-f79c-4669-b08d-3b1601dbf503",
+            "namespace": "481d13a0-7060-4755-8679-a4ee95bf726e",
+            "operation": "4f85d6d8-1ed9-4285-8a9a-d21314a8cbac"
+          },
+          {
+            "interruptedAction": "clear",
+            "profile": "d2231946-3fa9-44d4-ba28-5b71eddc2d01",
+            "generation": 6,
+            "store": "2852a8af-20ea-4aab-b402-fbc4bc5539d2",
+            "phase": {
+              "quarantined": {
+                "_0": "interruptedOperation"
+              }
+            },
+            "namespace": "481d13a0-7060-4755-8679-a4ee95bf726e",
+            "operation": "c3da2ecf-f162-4273-977d-3e12d09225ac"
+          }
+        ],
+        "previousRun": "2c402a7a-2b43-467c-9128-ea9b9cec52ef"
+      },
+      "rows": [
+        {
+          "revision": 5,
+          "status": "active",
+          "profile": "7f627284-f79c-4669-b08d-3b1601dbf503",
+          "resourceGeneration": 1,
+          "store": "f7ed7217-cc6b-44bc-af9c-64023665c87a",
+          "origin": "fresh"
+        },
+        {
+          "revision": 6,
+          "status": "quiescent",
+          "profile": "d2231946-3fa9-44d4-ba28-5b71eddc2d01",
+          "resourceGeneration": 1,
+          "store": "2852a8af-20ea-4aab-b402-fbc4bc5539d2",
+          "origin": "fresh"
+        }
+      ]
+    },
+    "trace": [
+      {
+        "kind": "fence",
+        "outcome": "installed",
+        "sequence": 1
+      },
+      {
+        "kind": "framework-configuration",
+        "outcome": "public-init-no-store-getter",
+        "sequence": 2
+      },
+      {
+        "kind": "enumeration",
+        "outcome": "observed",
+        "sequence": 3
+      },
+      {
+        "kind": "enumeration",
+        "outcome": "observed",
+        "sequence": 4
+      }
+    ],
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "bundle": "internal.vezham.browser.wsf1.qualification",
+      "qualification": "discovery-only",
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+        "id": "F1-NAT-RECOVERY-A"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Repeated reconciliation grants no factory/publication",
+        "id": "F1-NAT-RECOVERY-REPEATED-A"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+        "id": "F1-NAT-RECOVERY-B"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Repeated reconciliation grants no factory/publication",
+        "id": "F1-NAT-RECOVERY-REPEATED-B"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Noncreating reconciliation",
+        "id": "F1-NAT-RECOVERY-NOCREATE"
+      }
+    ]
+  },
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "store": "f7ed7217-cc6b-44bc-af9c-64023665c87a",
+          "generation": 5,
+          "phase": {
+            "stable": {
+              "_0": "active"
+            }
+          },
+          "profile": "7f627284-f79c-4669-b08d-3b1601dbf503",
+          "namespace": "481d13a0-7060-4755-8679-a4ee95bf726e",
+          "operation": "4f85d6d8-1ed9-4285-8a9a-d21314a8cbac"
+        },
+        {
+          "interruptedAction": "clear",
+          "profile": "d2231946-3fa9-44d4-ba28-5b71eddc2d01",
+          "generation": 6,
+          "store": "2852a8af-20ea-4aab-b402-fbc4bc5539d2",
+          "phase": {
+            "quarantined": {
+              "_0": "interruptedOperation"
+            }
+          },
+          "namespace": "481d13a0-7060-4755-8679-a4ee95bf726e",
+          "operation": "c3da2ecf-f162-4273-977d-3e12d09225ac"
+        }
+      ],
+      "previousRun": "2c402a7a-2b43-467c-9128-ea9b9cec52ef"
+    },
+    "rows": [
+      {
+        "revision": 5,
+        "status": "active",
+        "profile": "7f627284-f79c-4669-b08d-3b1601dbf503",
+        "resourceGeneration": 1,
+        "store": "f7ed7217-cc6b-44bc-af9c-64023665c87a",
+        "origin": "fresh"
+      },
+      {
+        "revision": 6,
+        "status": "quiescent",
+        "profile": "d2231946-3fa9-44d4-ba28-5b71eddc2d01",
+        "resourceGeneration": 1,
+        "store": "2852a8af-20ea-4aab-b402-fbc4bc5539d2",
+        "origin": "fresh"
+      }
+    ]
+  },
+  "binarySHA256": "a6547f59b251c0c802dde776c30a7d33b8b3f21f6a500ec6b756fcf65d036b7b",
+  "observations": []
+}

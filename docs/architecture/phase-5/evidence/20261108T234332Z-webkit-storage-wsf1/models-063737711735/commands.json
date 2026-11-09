@@ -1,0 +1,30 @@
+[
+  {
+    "label": "swift-test",
+    "argv": [
+      "swift",
+      "test",
+      "--package-path",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime",
+      "--scratch-path",
+      "/private/tmp/vx-wsf1-pie99v6l/build",
+      "--cache-path",
+      "/private/tmp/vx-wsf1-pie99v6l/cache",
+      "--config-path",
+      "/private/tmp/vx-wsf1-pie99v6l/config",
+      "--security-path",
+      "/private/tmp/vx-wsf1-pie99v6l/security",
+      "--disable-keychain",
+      "--disable-netrc",
+      "--manifest-cache",
+      "local",
+      "--jobs",
+      "2",
+      "--disable-xctest",
+      "--enable-swift-testing",
+      "--no-parallel"
+    ],
+    "startedUTC": "2026-11-09T06:37:37.722249+00:00",
+    "returncode": 0
+  }
+]

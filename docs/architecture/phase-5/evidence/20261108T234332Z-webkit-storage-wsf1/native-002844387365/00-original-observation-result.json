@@ -1,0 +1,77 @@
+{
+  "label": "00-original-observation",
+  "pid": 38716,
+  "action": "enumerate-original",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "originalPresence": {
+      "9ec735a8-b9eb-416c-994b-4b299c5ee5f5": true,
+      "abb4ca2d-33dc-4d25-9c16-d135202c03e3": false
+    },
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Noncreating public enumeration only; logical prior removal remains unknown",
+        "id": "F1-DIAG-001"
+      }
+    ],
+    "event": "result"
+  },
+  "checkpoint": {
+    "rows": [
+      {
+        "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+        "status": "quiescent",
+        "origin": "fresh",
+        "revision": 20,
+        "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+        "resourceGeneration": 1
+      },
+      {
+        "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+        "status": "quiescent",
+        "origin": "fresh",
+        "revision": 18,
+        "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+        "resourceGeneration": 1
+      }
+    ],
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+          "generation": 14,
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "639cc989-e0f1-426c-9df9-7527554d2694",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a"
+        },
+        {
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+          "generation": 14,
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "54588969-b936-4b38-9938-c19e35f38f16",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a"
+        }
+      ],
+      "previousRun": "e89d0054-b413-4472-933d-1c3984851432"
+    }
+  },
+  "binarySHA256": "94747744d0bc9ab7ba34a34b7a1b027e2370ae964bad77742f25b631b31b7960",
+  "observations": []
+}

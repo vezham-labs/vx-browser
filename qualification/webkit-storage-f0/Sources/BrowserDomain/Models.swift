@@ -1,5 +1,5 @@
-public enum CatalogStatus: String, Sendable { case registered, accessStarted, active, quiescent, retired, deleting, deleted, quarantined }
-public enum BindingOrigin: String, Sendable { case fresh, established }
+public enum CatalogStatus: String, Codable, Sendable { case registered, accessStarted, active, quiescent, retired, deleting, deleted, quarantined }
+public enum BindingOrigin: String, Codable, Sendable { case fresh, established }
 public struct ProfileBinding: Equatable, Sendable {
     public let profile: ProfileID
     public let store: StoreID
@@ -75,7 +75,7 @@ public enum LifecycleState: String, Hashable, Sendable {
     case registered, resolving, resolved, activating, active, quiescing, quiescent, retiring, retired
     case clearing, removing, removed, reconciling, failed, quarantined
 }
-public enum Action: String, Hashable, Sendable, CaseIterable {
+public enum Action: String, Codable, Hashable, Sendable, CaseIterable {
     case register, resolve, activate, closeView, quiesce, retire, switchScope, clear, remove, reconcile, fail, quarantine
 }
 public enum Success: Equatable, Sendable {
@@ -95,8 +95,8 @@ public struct ScopeSummary: Equatable, Sendable {
         self.state = state; self.generation = generation; self.viewCount = viewCount; self.pending = pending; self.failure = failure
     }
 }
-public enum RecoveryPhase: Equatable, Sendable { case stable(CatalogStatus), pending(Action), quarantined(FailureCode), removed }
-public struct RecoveryRecord: Equatable, Sendable {
+public enum RecoveryPhase: Codable, Equatable, Sendable { case stable(CatalogStatus), pending(Action), quarantined(FailureCode), removed }
+public struct RecoveryRecord: Codable, Equatable, Sendable {
     public let profile: ProfileID
     public let store: StoreID
     public let namespace: NamespaceID
@@ -110,7 +110,7 @@ public struct RecoveryRecord: Equatable, Sendable {
         self.phase = phase; self.operation = operation; self.interruptedAction = interruptedAction
     }
 }
-public struct RestartSnapshot: Equatable, Sendable {
+public struct RestartSnapshot: Codable, Equatable, Sendable {
     public let version: UInt16
     public let previousRun: RunID
     public let records: [RecoveryRecord]

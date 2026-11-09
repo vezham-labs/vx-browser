@@ -1,0 +1,120 @@
+{
+  "pid": 35736,
+  "procName": "VezhamBrowser",
+  "procPath": "/private/tmp/*/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+  "exception": {
+    "codes": "0x0000000000000001, 0x0000000000000048",
+    "rawCodes": [
+      1,
+      72
+    ],
+    "type": "EXC_BAD_ACCESS",
+    "signal": "SIGSEGV",
+    "subtype": "KERN_INVALID_ADDRESS at 0x0000000000000048"
+  },
+  "termination": {
+    "flags": 0,
+    "code": 11,
+    "namespace": "SIGNAL",
+    "indicator": "Segmentation fault: 11",
+    "byProc": "exc handler",
+    "byPid": 35736
+  },
+  "faultingThread": 1,
+  "captureTime": "2026-11-09 05:36:27.0592 +0530",
+  "procLaunch": "2026-11-09 05:36:24.4251 +0530",
+  "frames": [
+    {
+      "imageOffset": 3188,
+      "symbol": "os_unfair_lock_lock",
+      "symbolLocation": 12,
+      "imageIndex": 8
+    },
+    {
+      "imageOffset": 91428,
+      "symbol": "WTF::RunLoop::dispatch(WTF::Function<void ()>&&)",
+      "symbolLocation": 56,
+      "imageIndex": 9
+    },
+    {
+      "imageOffset": 11671452,
+      "symbol": "WTF::Detail::CallableWrapper<WebKit::WebsiteDataStore::fetchAllDataStoreIdentifiers(WTF::CompletionHandler<void (WTF::Vector<WTF::UUID, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc>&&)>&&)::$_0, void>::call()",
+      "symbolLocation": 376,
+      "imageIndex": 10
+    },
+    {
+      "imageOffset": 106872,
+      "symbol": "void WTF::dispatchWorkItem<WTF::(anonymous namespace)::DispatchWorkItem>(void*)",
+      "symbolLocation": 52,
+      "imageIndex": 9
+    },
+    {
+      "imageOffset": 112032,
+      "symbol": "_dispatch_client_callout",
+      "symbolLocation": 16,
+      "imageIndex": 11
+    },
+    {
+      "imageOffset": 40896,
+      "symbol": "_dispatch_lane_serial_drain",
+      "symbolLocation": 744,
+      "imageIndex": 11
+    },
+    {
+      "imageOffset": 43708,
+      "symbol": "_dispatch_lane_invoke",
+      "symbolLocation": 392,
+      "imageIndex": 11
+    },
+    {
+      "imageOffset": 85848,
+      "symbol": "_dispatch_root_queue_drain_deferred_wlh",
+      "symbolLocation": 284,
+      "imageIndex": 11
+    },
+    {
+      "imageOffset": 84060,
+      "symbol": "_dispatch_workloop_worker_thread",
+      "symbolLocation": 720,
+      "imageIndex": 11
+    },
+    {
+      "imageOffset": 12160,
+      "symbol": "_pthread_wqthread",
+      "symbolLocation": 292,
+      "imageIndex": 12
+    },
+    {
+      "imageOffset": 7364,
+      "symbol": "start_wqthread",
+      "symbolLocation": 8,
+      "imageIndex": 12
+    }
+  ],
+  "images": [
+    {
+      "source": "P",
+      "arch": "arm64",
+      "base": 4374249472,
+      "CFBundleShortVersionString": "0.1.0",
+      "CFBundleIdentifier": "internal.vx.M1Validation.run20261108T094414Z",
+      "size": 1130496,
+      "uuid": "71d03238-941b-35f9-8e43-7af3d1b30171",
+      "path": "/private/tmp/*/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+      "name": "VezhamBrowser",
+      "CFBundleVersion": "1"
+    },
+    {
+      "source": "P",
+      "arch": "arm64e",
+      "base": 7353679872,
+      "CFBundleShortVersionString": "22625",
+      "CFBundleIdentifier": "com.apple.WebKit",
+      "size": 25661104,
+      "uuid": "0371268e-f270-3ab5-b51a-e81f4807f0ba",
+      "path": "/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit",
+      "name": "WebKit",
+      "CFBundleVersion": "22625.2.8.11.9"
+    }
+  ]
+}

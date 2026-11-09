@@ -1,0 +1,75 @@
+Building for debugging...
+[Computing dependencies]
+[Constructing description]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[58 / 122]
+[59 / 123] BrowserDomain
+[62 / 161]
+[66 / 161]
+[68 / 161]
+[69 / 161]
+[71 / 161]
+[74 / 161]
+[76 / 161]
+[78 / 161]
+[81 / 161]
+[82 / 161]
+[84 / 161]
+[85 / 161]
+[87 / 161]
+[89 / 161]
+[90 / 161]
+[92 / 161]
+[93 / 161]
+[96 / 161] BrowserDomain
+[104 / 162]
+[106 / 164] BrowserPorts
+[109 / 164] BrowserPorts
+[116 / 165]
+[117 / 166]
+[119 / 170] WSF0Fakes
+[119 / 170] BrowserPersistence
+[121 / 172] BrowserPersistence
+[134 / 172] BrowserPersistence
+[135 / 172] BrowserPersistence-product
+[137 / 173] BrowserPersistence
+[140 / 173] BrowserPorts-product
+[141 / 173] BrowserCore
+[144 / 176] BrowserCore
+[151 / 177]
+[153 / 212]
+[154 / 212]
+[155 / 212]
+[156 / 212]
+[157 / 212]
+[158 / 212]
+[159 / 212]
+[161 / 212]
+[162 / 212]
+[165 / 212]
+[167 / 212]
+[169 / 212]
+[170 / 212]
+[171 / 212]
+[172 / 212]
+[173 / 212]
+[176 / 212]
+[178 / 212]
+[180 / 212]
+[181 / 212]
+[184 / 212] BrowserCore
+[184 / 212]
+[185 / 212]
+[188 / 212] BrowserNativeStorage
+[196 / 212] BrowserNativeStorage
+[200 / 212] BrowserNativeStorage-product
+[202 / 213] StorageModelTests-product
+[203 / 219]
+[204 / 219]
+[207 / 219] StorageModelTests-product
+[213 / 219] StorageModelTests-product
+[215 / 219] StorageModelTests-product
+[216 / 219] StorageModelTests-product
+[218 / 219] StorageModelTests-product
+Build complete! (32.74 secs)

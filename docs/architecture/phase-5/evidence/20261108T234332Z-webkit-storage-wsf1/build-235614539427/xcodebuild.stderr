@@ -1,0 +1,7 @@
+** BUILD FAILED **
+
+
+The following build commands failed:
+	SwiftDriver VezhamBrowser normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'VezhamBrowser' from project 'VezhamBrowser')
+	Building project VezhamBrowser with scheme VezhamBrowser and configuration Debug
+(2 failures)

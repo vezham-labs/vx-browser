@@ -1,0 +1,28 @@
+[
+  {
+    "label": "xcodebuild",
+    "argv": [
+      "xcodebuild",
+      "-project",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj",
+      "-scheme",
+      "VezhamBrowser",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=macOS,arch=arm64",
+      "-derivedDataPath",
+      "/private/tmp/vx-wsf1-xd66ho9v/DerivedData",
+      "-clonedSourcePackagesDirPath",
+      "/private/tmp/vx-wsf1-xd66ho9v/packages",
+      "-skipPackageUpdates",
+      "build",
+      "PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf1.qualification",
+      "ARCHS=arm64",
+      "ONLY_ACTIVE_ARCH=YES",
+      "MACOSX_DEPLOYMENT_TARGET=26.0"
+    ],
+    "startedUTC": "2026-11-08T23:58:22.510686+00:00",
+    "returncode": 65
+  }
+]

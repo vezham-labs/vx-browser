@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""M0 local build/bundle audit/launch only; no engine or privileged bridge."""
+"""Native host build/bundle audit/launch. WS-F1 adds an explicitly assigned engine adapter."""
 import argparse
 import hashlib
 import json
@@ -26,7 +26,8 @@ def build():
     run([
         "xcodebuild", "-project", str(APP_ROOT / "VezhamBrowser.xcodeproj"),
         "-scheme", "VezhamBrowser", "-configuration", "Debug", "-destination",
-        "platform=macOS,arch=" + platform.machine(), "-derivedDataPath", str(DERIVED_DATA), "build"
+        "platform=macOS,arch=" + platform.machine(), "-derivedDataPath", str(DERIVED_DATA), "build",
+        "ARCHS=" + platform.machine(), "ONLY_ACTIVE_ARCH=YES", "MACOSX_DEPLOYMENT_TARGET=26.0"
     ])
 
 
@@ -50,18 +51,21 @@ def audit():
         "bundleMinimumOS26": info.get("LSMinimumSystemVersion") == "26.0",
         "hardenedRuntimeEnabled": "runtime" in signature,
         "adHocDevelopmentSignature": "Signature=adhoc" in signature,
-        "sandboxOnlyEntitlement": entitlements == {"com.apple.security.app-sandbox": True},
-        "noWebKitRuntimeLink": "WebKit.framework" not in linked_libraries,
-        "nativeSourceNoWebsiteBridge": not any(value in source for value in ["import WebKit", "WKWebView", "WKScriptMessageHandler", "evaluateJavaScript"]),
+        "boundedSandboxEntitlements": entitlements == {"com.apple.security.app-sandbox": True, "com.apple.security.network.client": True},
+        "nativeWebKitLinked": "WebKit.framework" in linked_libraries,
+        "noPrivilegedWebsiteMessageBridge": "WKScriptMessageHandler" not in source,
+        "engineIndependentCore": all("import WebKit" not in p.read_text() and "import AppKit" not in p.read_text()
+            for target in ["BrowserDomain", "BrowserPorts", "BrowserCore"]
+            for p in (APP_ROOT.parents[1] / "qualification/webkit-storage-f0/Sources" / target).glob("*.swift")),
         "noMediaPurposeStrings": not any(key in info for key in ["NSCameraUsageDescription", "NSMicrophoneUsageDescription"])
     }
     result = {
         "status": "passed" if all(checks.values()) else "failed", "checks": checks,
         "executableSHA256": hashlib.sha256(executable.read_bytes()).hexdigest(),
         "entitlements": entitlements, "minimumOS": minimum, "minimumOSValuesAcrossArchitectures": minimums, "linkedLibraries": linked_libraries,
-        "method": "M0 development bundle/static boundary audit, not proof of future browser or release security. No macOS 26 runtime or Developer ID/notarization claim."
+        "method": "WS-F1 development bundle/static boundary audit, not runtime/release security qualification. No macOS26 runtime or Developer ID/notarization claim."
     }
-    output = APP_ROOT / "build/bundle-audit.json"
+    output = APP_ROOT / "build/wsf1-bundle-audit.json"
     output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps(result, indent=2, sort_keys=True))
     if not all(checks.values()):

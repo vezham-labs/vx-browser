@@ -1,0 +1,2 @@
+{"event":"diagnostic-before-enumeration"}
+{"event":"result","originalPresence":{"9ec735a8-b9eb-416c-994b-4b299c5ee5f5":true,"abb4ca2d-33dc-4d25-9c16-d135202c03e3":false},"cases":[{"detail":"Noncreating public enumeration only; logical prior removal remains unknown","status":"PASS_NATIVE","id":"F1-DIAG-001"}]}

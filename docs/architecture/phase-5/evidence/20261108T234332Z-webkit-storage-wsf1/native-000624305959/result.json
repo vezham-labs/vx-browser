@@ -1,0 +1,13 @@
+{
+  "hostMacOS": "27.2",
+  "nativeQualification": "BLOCKED",
+  "reason": "Actual macOS26 required; host discovery cannot substitute",
+  "discoveryAttempts": 1,
+  "discoveryPassedObservations": 0,
+  "discoveryFailedObservations": 0,
+  "essentialDiscoveryFailure": true,
+  "buildRecord": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/result.json",
+  "diagnosticBuildRecord": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/result.json",
+  "cleanup": "See explicit remove result; incomplete/uncertain resources preserved",
+  "limitation": "Per-case results require WKS/release review; one host or completed subset cannot auto-pass the full native matrix"
+}

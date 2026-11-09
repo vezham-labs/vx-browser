@@ -1,0 +1,19 @@
+{
+  "namespace": "e2fccdec-2d0a-40c2-ba06-8da4ab465c90",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "3c2a981d-38ac-4d1c-b9d5-ade6fe4c9140",
+      "store": "84be3033-4a4e-47e5-848f-b031f77cdd04"
+    },
+    {
+      "name": "B",
+      "profile": "c4412bef-908a-4a6c-89de-4b47652bb5a9",
+      "store": "7760ba4a-3702-421e-b0a9-8acfa5ac8001"
+    }
+  ],
+  "origin": "http://127.0.0.1:59265",
+  "checkpoint": null,
+  "cutpoint": null,
+  "action": "seed"
+}

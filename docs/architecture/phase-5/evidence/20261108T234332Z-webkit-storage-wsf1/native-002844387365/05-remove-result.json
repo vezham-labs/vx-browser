@@ -1,0 +1,233 @@
+{
+  "label": "05-remove",
+  "pid": 38736,
+  "action": "remove",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "rows": [
+        {
+          "status": "deleted",
+          "origin": "fresh",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+          "revision": 30,
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "resourceGeneration": 1
+        },
+        {
+          "status": "deleted",
+          "origin": "fresh",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+          "revision": 26,
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "resourceGeneration": 1
+        }
+      ],
+      "snapshot": {
+        "previousRun": "1c044a9c-da15-4f02-a87d-54a3d39bb137",
+        "records": [
+          {
+            "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+            "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+            "phase": {
+              "removed": {}
+            },
+            "generation": 24,
+            "operation": "0b3f4186-27d8-487e-8ca3-aed87a64bbb8",
+            "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f"
+          },
+          {
+            "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+            "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+            "phase": {
+              "removed": {}
+            },
+            "generation": 22,
+            "operation": "82313754-2448-44f8-818d-28dc849398da",
+            "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f"
+          }
+        ],
+        "version": 1
+      }
+    },
+    "event": "result",
+    "trace": [
+      {
+        "kind": "framework-configuration",
+        "sequence": 1,
+        "outcome": "public-init-no-store-getter"
+      },
+      {
+        "kind": "enumeration",
+        "sequence": 2,
+        "outcome": "observed"
+      },
+      {
+        "kind": "enumeration",
+        "sequence": 3,
+        "outcome": "observed"
+      },
+      {
+        "kind": "fence",
+        "sequence": 4,
+        "outcome": "installed"
+      },
+      {
+        "kind": "quiesce",
+        "sequence": 5,
+        "outcome": "no-observed-owned-resources"
+      },
+      {
+        "kind": "fence",
+        "sequence": 6,
+        "outcome": "installed"
+      },
+      {
+        "kind": "retire",
+        "sequence": 7,
+        "outcome": "weak-observation-clear"
+      },
+      {
+        "kind": "fence",
+        "sequence": 8,
+        "outcome": "installed"
+      },
+      {
+        "kind": "remove-request",
+        "sequence": 9,
+        "outcome": "before-call"
+      },
+      {
+        "kind": "remove-callback",
+        "sequence": 10,
+        "outcome": "no-error"
+      },
+      {
+        "kind": "enumeration",
+        "sequence": 11,
+        "outcome": "observed"
+      },
+      {
+        "kind": "remove",
+        "sequence": 12,
+        "outcome": "callback-and-absence"
+      },
+      {
+        "kind": "fence",
+        "sequence": 13,
+        "outcome": "installed"
+      },
+      {
+        "kind": "quiesce",
+        "sequence": 14,
+        "outcome": "no-observed-owned-resources"
+      },
+      {
+        "kind": "fence",
+        "sequence": 15,
+        "outcome": "installed"
+      },
+      {
+        "kind": "retire",
+        "sequence": 16,
+        "outcome": "weak-observation-clear"
+      },
+      {
+        "kind": "fence",
+        "sequence": 17,
+        "outcome": "installed"
+      },
+      {
+        "kind": "remove-request",
+        "sequence": 18,
+        "outcome": "before-call"
+      },
+      {
+        "kind": "remove-callback",
+        "sequence": 19,
+        "outcome": "no-error"
+      },
+      {
+        "kind": "enumeration",
+        "sequence": 20,
+        "outcome": "observed"
+      },
+      {
+        "kind": "remove",
+        "sequence": 21,
+        "outcome": "callback-and-absence"
+      }
+    ],
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "id": "F1-NAT-REMOVE-A",
+        "detail": "Public callback plus noncreating absence; no secure-erasure claim"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "id": "F1-NAT-REMOVE-B",
+        "detail": "Public callback plus noncreating absence; no secure-erasure claim"
+      }
+    ],
+    "environment": {
+      "bundle": "internal.vezham.browser.wsf1.qualification",
+      "qualification": "discovery-only",
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)"
+    }
+  },
+  "checkpoint": {
+    "rows": [
+      {
+        "status": "deleted",
+        "origin": "fresh",
+        "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+        "revision": 30,
+        "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+        "resourceGeneration": 1
+      },
+      {
+        "status": "deleted",
+        "origin": "fresh",
+        "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+        "revision": 26,
+        "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+        "resourceGeneration": 1
+      }
+    ],
+    "snapshot": {
+      "previousRun": "1c044a9c-da15-4f02-a87d-54a3d39bb137",
+      "records": [
+        {
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+          "phase": {
+            "removed": {}
+          },
+          "generation": 24,
+          "operation": "0b3f4186-27d8-487e-8ca3-aed87a64bbb8",
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f"
+        },
+        {
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+          "phase": {
+            "removed": {}
+          },
+          "generation": 22,
+          "operation": "82313754-2448-44f8-818d-28dc849398da",
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f"
+        }
+      ],
+      "version": 1
+    }
+  },
+  "binarySHA256": "a6547f59b251c0c802dde776c30a7d33b8b3f21f6a500ec6b756fcf65d036b7b",
+  "observations": []
+}

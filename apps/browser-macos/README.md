@@ -1,9 +1,10 @@
-# Browser macOS Host — M0
+# Browser macOS Host
 
-This is a new Swift/AppKit application foundation in the existing Browser fork.
-It owns only application lifetime, a native window and normal quit/reopen policy.
-It contains no WKWebView, browser core/store, React UI, bridge, profiles,
-permissions, transfers, optional services or CEF implementation.
+The Swift/AppKit foundation now consumes the WS-F1 native storage runtime through
+the existing Domain/Ports/Core boundaries. Normal startup creates a memory-backed
+private-only composition without creating a website store/view; the native window
+remains the foundation surface. Persistent product operations await the protected
+catalog. No React chrome, privileged website bridge, CEF or optional service is wired.
 
 ## Local Commands
 
@@ -21,9 +22,10 @@ A restricted command sandbox may prevent LaunchServices access (`-10827`); use a
 authorized normal local terminal rather than changing app/OS protections. See the
 M0 report for the failed sandboxed attempt and successful authorized retry.
 Development output is ignored under `build/DerivedData`; audit writes
-`build/bundle-audit.json`. Capture run-specific review evidence separately.
-Debug is ad-hoc signed with App Sandbox/Hardened Runtime and only the sandbox
-entitlement. No network, media or user-selected-file grant is needed. Release
+`build/wsf1-bundle-audit.json`; the historical M0 audit is not overwritten.
+Capture run-specific review evidence separately.
+Debug is ad-hoc signed with App Sandbox/Hardened Runtime and outbound network-client
+entitlement. No media or user-selected-file entitlement is added. Release
 signing is deliberately unconfigured; no keys/provisioning or release artifact
 are prepared. A newer host build with minimum target 26.0 is not runtime evidence
 for macOS 26 or notarization/distribution qualification.
@@ -34,5 +36,16 @@ for macOS 26 or notarization/distribution qualification.
 - [M0 Report](../../docs/architecture/phase-5/reports/M0/README.md)
 - [Browser Handbook](../../vx/handbooks/browser/README.md)
 
-Stop after M0. Core/engine/React integration belongs to later separately scoped
-milestones; do not turn the preserved Phase 3 prototype into this application.
+## WS-F1 integration and qualification
+
+[Runtime package](StorageRuntime/README.md) and [WS-F1 closeout](../../docs/architecture/phase-5/reports/M1/m1-wsf1-closeout.md)
+describe implemented code and remaining gates. `storage-models`, `storage-build`,
+`storage-diagnostic-build` and `storage-native` Nx targets take `--evidence` pointing
+to a registered run. Native execution also requires exact build/diagnostic result
+records; qualification mode is explicit and Debug-only. `--phase=persistent-lifecycle`
+records a separate independent subset without waiving private failures;
+`--phase=private-only` uses only nonpersistent stores. See the plan for resume rules.
+
+Native discovery on27.2 is not mandatory26.0/latest26.x qualification or release
+approval. Preserve the Phase3 prototype and all historical evidence; do not use a
+normal user profile as a fixture. No further product milestone starts implicitly.

@@ -1,0 +1,77 @@
+{
+  "label": "00-original-observation",
+  "pid": 37776,
+  "action": "enumerate-original",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "event": "result",
+    "originalPresence": {
+      "9ec735a8-b9eb-416c-994b-4b299c5ee5f5": true,
+      "abb4ca2d-33dc-4d25-9c16-d135202c03e3": false
+    },
+    "cases": [
+      {
+        "detail": "Noncreating public enumeration only; logical prior removal remains unknown",
+        "status": "PASS_NATIVE",
+        "id": "F1-DIAG-001"
+      }
+    ]
+  },
+  "checkpoint": {
+    "rows": [
+      {
+        "revision": 12,
+        "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+        "origin": "fresh",
+        "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+        "resourceGeneration": 1,
+        "status": "quiescent"
+      },
+      {
+        "revision": 11,
+        "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+        "origin": "fresh",
+        "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+        "resourceGeneration": 1,
+        "status": "quiescent"
+      }
+    ],
+    "snapshot": {
+      "records": [
+        {
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "2e89b534-7837-4835-ae41-41d0962712ac",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "generation": 8
+        },
+        {
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "5c3b3193-a406-4195-8854-106a74e0a9d4",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "generation": 8
+        }
+      ],
+      "previousRun": "c9722e04-c0dd-4902-b4d3-01a953fd2efc",
+      "version": 1
+    }
+  },
+  "binarySHA256": "94747744d0bc9ab7ba34a34b7a1b027e2370ae964bad77742f25b631b31b7960",
+  "observations": []
+}

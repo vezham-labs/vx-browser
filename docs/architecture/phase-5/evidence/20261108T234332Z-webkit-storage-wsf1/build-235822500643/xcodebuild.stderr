@@ -1,0 +1,8 @@
+** BUILD FAILED **
+
+
+The following build commands failed:
+	SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/StorageQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+	SwiftCompile normal arm64 Compiling\ StorageQualificationHost.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Sources/Qualification/StorageQualificationHost.swift (in target 'VezhamBrowser' from project 'VezhamBrowser')
+	Building project VezhamBrowser with scheme VezhamBrowser and configuration Debug
+(3 failures)

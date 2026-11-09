@@ -1,0 +1,242 @@
+[
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/result.json",
+    "status": "PASS_FAKE_ONLY",
+    "phase": null,
+    "count": 82,
+    "returncode": null,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/result.json",
+    "status": "PASS_FAKE_ONLY",
+    "phase": null,
+    "count": 82,
+    "returncode": null,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235517261748/result.json",
+    "status": "FAIL",
+    "phase": null,
+    "count": null,
+    "returncode": 65,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235614539427/result.json",
+    "status": "FAIL",
+    "phase": null,
+    "count": null,
+    "returncode": 65,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235822500643/result.json",
+    "status": "FAIL",
+    "phase": null,
+    "count": null,
+    "returncode": 65,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": null,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-000828124907/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": 12,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-001735176441/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": 12,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-002600247510/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": 12,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063434886457/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": 12,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": 13,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234631267252/result.json",
+    "status": "FAIL",
+    "phase": null,
+    "count": 6,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234746138756/result.json",
+    "status": "PASS_CONTRACT",
+    "phase": null,
+    "count": 8,
+    "returncode": 0,
+    "failedNativeObservations": null
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/result.json",
+    "status": "BLOCKED",
+    "phase": null,
+    "count": 0,
+    "returncode": null,
+    "failedNativeObservations": 0
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/result.json",
+    "status": "BLOCKED",
+    "phase": null,
+    "count": 100,
+    "returncode": null,
+    "failedNativeObservations": 2
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/result.json",
+    "status": "BLOCKED",
+    "phase": null,
+    "count": 67,
+    "returncode": null,
+    "failedNativeObservations": 1
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/result.json",
+    "status": "BLOCKED",
+    "phase": null,
+    "count": 73,
+    "returncode": null,
+    "failedNativeObservations": 1
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/result.json",
+    "status": "BLOCKED",
+    "phase": "persistent-lifecycle",
+    "count": 346,
+    "returncode": null,
+    "failedNativeObservations": 0
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/result.json",
+    "status": "BLOCKED",
+    "phase": "private-only",
+    "count": 41,
+    "returncode": null,
+    "failedNativeObservations": 0
+  },
+  {
+    "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/result.json",
+    "status": "BLOCKED",
+    "phase": "all",
+    "count": 475,
+    "returncode": null,
+    "failedNativeObservations": 0
+  }
+]

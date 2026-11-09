@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "codesign",
+    "-d",
+    "--verbose=4",
+    "/private/tmp/vx-wsf1-dttn_k9w/DerivedData/Build/Products/Debug/VezhamBrowser.app"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Executable=/private/tmp/vx-wsf1-dttn_k9w/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser\nIdentifier=internal.vezham.browser.wsf1.qualification\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=4651 flags=0x10002(adhoc,runtime) hashes=134+7 location=embedded\nVersionPlatform=1\nVersionMin=1703936\nVersionSDK=1769984\nHash type=sha256 size=32\nCandidateCDHash sha256=094c73a0de09da4154ef2ee479571447326e2a75\nCandidateCDHashFull sha256=094c73a0de09da4154ef2ee479571447326e2a756acfa6bd25b455f247083fed\nHash choices=sha256\nCMSDigest=094c73a0de09da4154ef2ee479571447326e2a756acfa6bd25b455f247083fed\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=1196032\nExecutable Segment flags=0x1\nPage size=16384\nCDHash=094c73a0de09da4154ef2ee479571447326e2a75\nSignature=adhoc\nInfo.plist entries=21\nTeamIdentifier=not set\nRuntime Version=27.2.0\nSealed Resources version=2 rules=13 files=0\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n"
+}

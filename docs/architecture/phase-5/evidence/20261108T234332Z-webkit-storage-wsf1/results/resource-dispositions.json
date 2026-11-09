@@ -1,0 +1,2220 @@
+{
+  "original_historical_stores": {
+    "A": "Absent in noncreating enumeration; original logical completion unknown",
+    "B": "Present in enumeration; intactness/original cleanup unknown",
+    "modified": false
+  },
+  "registered_states": [
+    {
+      "scope": "canonical primary profiles",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "status": "Callback and noncreating absence confirmed for both; tombstones retained",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove-result.json"
+    },
+    {
+      "scope": "cut-00-creation-intent-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+          "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2"
+        },
+        {
+          "name": "B",
+          "profile": "18300a92-801f-4662-9353-d2fede8fe124",
+          "store": "9eff5607-1a75-4b35-af54-ca0aef0ba4d3"
+        }
+      ],
+      "namespace": "960e4604-c3c6-4da2-ad2b-36fae6ef9cd7",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-input.json"
+    },
+    {
+      "scope": "cut-00-creation-intent-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+          "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2"
+        },
+        {
+          "name": "B",
+          "profile": "18300a92-801f-4662-9353-d2fede8fe124",
+          "store": "9eff5607-1a75-4b35-af54-ca0aef0ba4d3"
+        }
+      ],
+      "namespace": "960e4604-c3c6-4da2-ad2b-36fae6ef9cd7",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-reconcile-input.json"
+    },
+    {
+      "scope": "cut-01-persistent-factory-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b8b2f99c-1a82-43ad-9941-9fe792dfde95",
+          "store": "9c67313b-c3a2-420e-9f8e-d2c9122d3071"
+        },
+        {
+          "name": "B",
+          "profile": "10740fd8-c3a5-40bf-91dc-e17ba547000a",
+          "store": "7f4a36b7-0b18-4039-9090-13d648e06f3a"
+        }
+      ],
+      "namespace": "c8c6d46a-2d6a-45f3-a156-9c84ac0f1574",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-input.json"
+    },
+    {
+      "scope": "cut-01-persistent-factory-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b8b2f99c-1a82-43ad-9941-9fe792dfde95",
+          "store": "9c67313b-c3a2-420e-9f8e-d2c9122d3071"
+        },
+        {
+          "name": "B",
+          "profile": "10740fd8-c3a5-40bf-91dc-e17ba547000a",
+          "store": "7f4a36b7-0b18-4039-9090-13d648e06f3a"
+        }
+      ],
+      "namespace": "c8c6d46a-2d6a-45f3-a156-9c84ac0f1574",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-reconcile-input.json"
+    },
+    {
+      "scope": "cut-02-assignment-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9c879ac6-da5e-44c8-be5d-3eac8a3cbfaf",
+          "store": "03589129-c507-44a1-ac1e-e52d71efc1ee"
+        },
+        {
+          "name": "B",
+          "profile": "b8b7d23d-67ea-4e2c-b480-9d1bbdda0ba4",
+          "store": "b7cd5f72-4b8d-48db-bae2-cf0cd499c5e1"
+        }
+      ],
+      "namespace": "d9d072a9-f8ee-4f74-8a38-c60b2267994f",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-input.json"
+    },
+    {
+      "scope": "cut-02-assignment-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9c879ac6-da5e-44c8-be5d-3eac8a3cbfaf",
+          "store": "03589129-c507-44a1-ac1e-e52d71efc1ee"
+        },
+        {
+          "name": "B",
+          "profile": "b8b7d23d-67ea-4e2c-b480-9d1bbdda0ba4",
+          "store": "b7cd5f72-4b8d-48db-bae2-cf0cd499c5e1"
+        }
+      ],
+      "namespace": "d9d072a9-f8ee-4f74-8a38-c60b2267994f",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-reconcile-input.json"
+    },
+    {
+      "scope": "cut-03-construction-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "807a8f9e-f711-4ccf-8a6a-2c819060cd68",
+          "store": "a0d6feb4-489f-47b4-b07e-feb8a3d8d6fe"
+        },
+        {
+          "name": "B",
+          "profile": "f7fe94cc-2c4d-49a8-b812-eacc85b08624",
+          "store": "06e03ae0-6bc4-4eeb-be37-822d0ee34438"
+        }
+      ],
+      "namespace": "9087afc8-079d-437e-9803-81a47bff7ce3",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-input.json"
+    },
+    {
+      "scope": "cut-03-construction-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "807a8f9e-f711-4ccf-8a6a-2c819060cd68",
+          "store": "a0d6feb4-489f-47b4-b07e-feb8a3d8d6fe"
+        },
+        {
+          "name": "B",
+          "profile": "f7fe94cc-2c4d-49a8-b812-eacc85b08624",
+          "store": "06e03ae0-6bc4-4eeb-be37-822d0ee34438"
+        }
+      ],
+      "namespace": "9087afc8-079d-437e-9803-81a47bff7ce3",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-reconcile-input.json"
+    },
+    {
+      "scope": "cut-04-publication-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "45b60c43-fed4-476f-926a-3b775df0626c",
+          "store": "9f05ff08-0cc1-435d-a210-13ff6109df53"
+        },
+        {
+          "name": "B",
+          "profile": "33c1ac34-422e-4754-8c5d-33b483d2998a",
+          "store": "8c0ed200-513a-4671-b0fd-8727da47d736"
+        }
+      ],
+      "namespace": "c8d5f24b-eb69-4231-8772-5680f7c71555",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-input.json"
+    },
+    {
+      "scope": "cut-04-publication-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "45b60c43-fed4-476f-926a-3b775df0626c",
+          "store": "9f05ff08-0cc1-435d-a210-13ff6109df53"
+        },
+        {
+          "name": "B",
+          "profile": "33c1ac34-422e-4754-8c5d-33b483d2998a",
+          "store": "8c0ed200-513a-4671-b0fd-8727da47d736"
+        }
+      ],
+      "namespace": "c8d5f24b-eb69-4231-8772-5680f7c71555",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-reconcile-input.json"
+    },
+    {
+      "scope": "cut-05-clear-request-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "86075c4a-d800-4157-b6f9-96ad9a64d58b",
+          "store": "3b734fb3-a8d0-44b8-8a07-c93e60fb4465"
+        },
+        {
+          "name": "B",
+          "profile": "7a1b2e75-6976-48ad-b376-d464cef5aed9",
+          "store": "c0273d39-eda0-494e-893b-784fdb5dd4dd"
+        }
+      ],
+      "namespace": "3217c690-415f-4816-abd0-ab05eb4284d8",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-input.json"
+    },
+    {
+      "scope": "cut-05-clear-request-prepare-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "86075c4a-d800-4157-b6f9-96ad9a64d58b",
+          "store": "3b734fb3-a8d0-44b8-8a07-c93e60fb4465"
+        },
+        {
+          "name": "B",
+          "profile": "7a1b2e75-6976-48ad-b376-d464cef5aed9",
+          "store": "c0273d39-eda0-494e-893b-784fdb5dd4dd"
+        }
+      ],
+      "namespace": "3217c690-415f-4816-abd0-ab05eb4284d8",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-prepare-input.json"
+    },
+    {
+      "scope": "cut-05-clear-request-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "86075c4a-d800-4157-b6f9-96ad9a64d58b",
+          "store": "3b734fb3-a8d0-44b8-8a07-c93e60fb4465"
+        },
+        {
+          "name": "B",
+          "profile": "7a1b2e75-6976-48ad-b376-d464cef5aed9",
+          "store": "c0273d39-eda0-494e-893b-784fdb5dd4dd"
+        }
+      ],
+      "namespace": "3217c690-415f-4816-abd0-ab05eb4284d8",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-reconcile-input.json"
+    },
+    {
+      "scope": "cut-06-clear-callback-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "3c2a981d-38ac-4d1c-b9d5-ade6fe4c9140",
+          "store": "84be3033-4a4e-47e5-848f-b031f77cdd04"
+        },
+        {
+          "name": "B",
+          "profile": "c4412bef-908a-4a6c-89de-4b47652bb5a9",
+          "store": "7760ba4a-3702-421e-b0a9-8acfa5ac8001"
+        }
+      ],
+      "namespace": "e2fccdec-2d0a-40c2-ba06-8da4ab465c90",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-input.json"
+    },
+    {
+      "scope": "cut-06-clear-callback-prepare-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "3c2a981d-38ac-4d1c-b9d5-ade6fe4c9140",
+          "store": "84be3033-4a4e-47e5-848f-b031f77cdd04"
+        },
+        {
+          "name": "B",
+          "profile": "c4412bef-908a-4a6c-89de-4b47652bb5a9",
+          "store": "7760ba4a-3702-421e-b0a9-8acfa5ac8001"
+        }
+      ],
+      "namespace": "e2fccdec-2d0a-40c2-ba06-8da4ab465c90",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-prepare-input.json"
+    },
+    {
+      "scope": "cut-06-clear-callback-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "3c2a981d-38ac-4d1c-b9d5-ade6fe4c9140",
+          "store": "84be3033-4a4e-47e5-848f-b031f77cdd04"
+        },
+        {
+          "name": "B",
+          "profile": "c4412bef-908a-4a6c-89de-4b47652bb5a9",
+          "store": "7760ba4a-3702-421e-b0a9-8acfa5ac8001"
+        }
+      ],
+      "namespace": "e2fccdec-2d0a-40c2-ba06-8da4ab465c90",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-reconcile-input.json"
+    },
+    {
+      "scope": "cut-07-retire-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a75b95ae-a29f-44d0-8f7e-d42b946a9683",
+          "store": "85e1951f-2389-4c42-aa5e-f922dcf8a378"
+        },
+        {
+          "name": "B",
+          "profile": "6762f287-f9d8-4b1a-bf06-e3dfd64070d4",
+          "store": "778f7ed5-2168-46e6-b43c-08840e93a15b"
+        }
+      ],
+      "namespace": "523a0526-e1b1-4fa2-bd6b-6f38d4fd4d1f",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-input.json"
+    },
+    {
+      "scope": "cut-07-retire-prepare-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a75b95ae-a29f-44d0-8f7e-d42b946a9683",
+          "store": "85e1951f-2389-4c42-aa5e-f922dcf8a378"
+        },
+        {
+          "name": "B",
+          "profile": "6762f287-f9d8-4b1a-bf06-e3dfd64070d4",
+          "store": "778f7ed5-2168-46e6-b43c-08840e93a15b"
+        }
+      ],
+      "namespace": "523a0526-e1b1-4fa2-bd6b-6f38d4fd4d1f",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-prepare-input.json"
+    },
+    {
+      "scope": "cut-07-retire-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a75b95ae-a29f-44d0-8f7e-d42b946a9683",
+          "store": "85e1951f-2389-4c42-aa5e-f922dcf8a378"
+        },
+        {
+          "name": "B",
+          "profile": "6762f287-f9d8-4b1a-bf06-e3dfd64070d4",
+          "store": "778f7ed5-2168-46e6-b43c-08840e93a15b"
+        }
+      ],
+      "namespace": "523a0526-e1b1-4fa2-bd6b-6f38d4fd4d1f",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-reconcile-input.json"
+    },
+    {
+      "scope": "cut-08-remove-request-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+          "store": "a583a085-9505-4f54-b6b8-30650bb833e2"
+        },
+        {
+          "name": "B",
+          "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+          "store": "f67c484d-e534-4e73-a454-9f9f8def14d6"
+        }
+      ],
+      "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-input.json"
+    },
+    {
+      "scope": "cut-08-remove-request-prepare-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+          "store": "a583a085-9505-4f54-b6b8-30650bb833e2"
+        },
+        {
+          "name": "B",
+          "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+          "store": "f67c484d-e534-4e73-a454-9f9f8def14d6"
+        }
+      ],
+      "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-prepare-input.json"
+    },
+    {
+      "scope": "cut-08-remove-request-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+          "store": "a583a085-9505-4f54-b6b8-30650bb833e2"
+        },
+        {
+          "name": "B",
+          "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+          "store": "f67c484d-e534-4e73-a454-9f9f8def14d6"
+        }
+      ],
+      "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-reconcile-input.json"
+    },
+    {
+      "scope": "cut-09-remove-callback-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300"
+        },
+        {
+          "name": "B",
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc"
+        }
+      ],
+      "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-input.json"
+    },
+    {
+      "scope": "cut-09-remove-callback-prepare-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300"
+        },
+        {
+          "name": "B",
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc"
+        }
+      ],
+      "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-prepare-input.json"
+    },
+    {
+      "scope": "cut-09-remove-callback-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300"
+        },
+        {
+          "name": "B",
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc"
+        }
+      ],
+      "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-reconcile-input.json"
+    },
+    {
+      "scope": "cut-10-enumeration-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4936c8a4-f76c-48b4-b1fb-ed299b6fcf64",
+          "store": "ac302c08-8c61-4daf-bb9e-c209a4feaf80"
+        },
+        {
+          "name": "B",
+          "profile": "3093e8c4-2895-48be-851a-3ff6e928b110",
+          "store": "7d5f588b-2d82-44d4-acb1-0b045a0ca2bb"
+        }
+      ],
+      "namespace": "2733d6b6-4dfc-41bc-a21c-8708a8d097da",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-input.json"
+    },
+    {
+      "scope": "cut-10-enumeration-prepare-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4936c8a4-f76c-48b4-b1fb-ed299b6fcf64",
+          "store": "ac302c08-8c61-4daf-bb9e-c209a4feaf80"
+        },
+        {
+          "name": "B",
+          "profile": "3093e8c4-2895-48be-851a-3ff6e928b110",
+          "store": "7d5f588b-2d82-44d4-acb1-0b045a0ca2bb"
+        }
+      ],
+      "namespace": "2733d6b6-4dfc-41bc-a21c-8708a8d097da",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-prepare-input.json"
+    },
+    {
+      "scope": "cut-10-enumeration-reconcile-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4936c8a4-f76c-48b4-b1fb-ed299b6fcf64",
+          "store": "ac302c08-8c61-4daf-bb9e-c209a4feaf80"
+        },
+        {
+          "name": "B",
+          "profile": "3093e8c4-2895-48be-851a-3ff6e928b110",
+          "store": "7d5f588b-2d82-44d4-acb1-0b045a0ca2bb"
+        }
+      ],
+      "namespace": "2733d6b6-4dfc-41bc-a21c-8708a8d097da",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-reconcile-input.json"
+    },
+    {
+      "scope": "publication-failure-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+          "store": "5070837e-4be5-465f-aa24-ad16624138a7"
+        },
+        {
+          "name": "B",
+          "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+          "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4"
+        }
+      ],
+      "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-input.json"
+    },
+    {
+      "scope": "publication-failure-prepare-input",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+          "store": "5070837e-4be5-465f-aa24-ad16624138a7"
+        },
+        {
+          "name": "B",
+          "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+          "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4"
+        }
+      ],
+      "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+      "status": "Interrupted/staged fixture preserved; no automatic sweep/reuse or deletion-success claim",
+      "evidence": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-prepare-input.json"
+    }
+  ],
+  "private": "No persistent mapping; final owned wrappers observed released within15seconds. No forensic/OS artifact claim.",
+  "all_native_fixture_provenance": [
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "namespace": "f044b5bd-b4e5-4102-958e-f495bfe78a58",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f63afb6f-165d-4578-91c1-1256b021aa95",
+          "store": "51db7bae-ff7b-4a8c-8fb8-44f8d4e72f01"
+        },
+        {
+          "name": "B",
+          "profile": "5ed32cc5-a33b-4a41-ba1a-af3485514ada",
+          "store": "b03da7fc-af3a-43c8-8d23-49fbc1abe7c3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/01-seed-input.json",
+      "action": "seed",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02-restart-input.json",
+      "action": "verify",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02b-switch-input.json",
+      "action": "switch",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/03-private-input.json",
+      "action": "private",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02-restart-input.json",
+      "action": "verify",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02b-switch-input.json",
+      "action": "switch",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/03-private-input.json",
+      "action": "private",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02-restart-input.json",
+      "action": "verify",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02b-switch-input.json",
+      "action": "switch",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/03-private-input.json",
+      "action": "private",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/02-restart-input.json",
+      "action": "verify",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/04-clear-input.json",
+      "action": "clear",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/05-remove-input.json",
+      "action": "remove",
+      "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17"
+        },
+        {
+          "name": "B",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-input.json",
+      "action": "seed",
+      "namespace": "c28f6b6b-2998-4d2b-bb29-67ec1c8e0bc3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "d29033da-18eb-494a-83dc-4f0419cd1b04",
+          "store": "3666f722-e6bd-4148-ac46-f09f30c3fb00"
+        },
+        {
+          "name": "B",
+          "profile": "08739ad1-786e-461d-b1f3-059af244465b",
+          "store": "001deea2-5e69-4945-a13d-b60a4dd515a1"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "c28f6b6b-2998-4d2b-bb29-67ec1c8e0bc3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "d29033da-18eb-494a-83dc-4f0419cd1b04",
+          "store": "3666f722-e6bd-4148-ac46-f09f30c3fb00"
+        },
+        {
+          "name": "B",
+          "profile": "08739ad1-786e-461d-b1f3-059af244465b",
+          "store": "001deea2-5e69-4945-a13d-b60a4dd515a1"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-input.json",
+      "action": "seed",
+      "namespace": "7a30f6fb-b687-4941-adbe-d3897be8e0db",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b1dffde1-6f31-4aea-aae2-77e787ae10b7",
+          "store": "9afa300b-812b-4a6f-b53d-b2626b94b61b"
+        },
+        {
+          "name": "B",
+          "profile": "088ad053-da8a-4d01-9c7c-31edecef7704",
+          "store": "c723800a-b49e-4d20-b11c-95269c4a3ac5"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "7a30f6fb-b687-4941-adbe-d3897be8e0db",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b1dffde1-6f31-4aea-aae2-77e787ae10b7",
+          "store": "9afa300b-812b-4a6f-b53d-b2626b94b61b"
+        },
+        {
+          "name": "B",
+          "profile": "088ad053-da8a-4d01-9c7c-31edecef7704",
+          "store": "c723800a-b49e-4d20-b11c-95269c4a3ac5"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-input.json",
+      "action": "seed",
+      "namespace": "62693da5-b863-466f-a2ae-d0a3902d957a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "6daeb1f6-1b1f-41e7-9d47-2c162e2328de",
+          "store": "e9aebc3a-7269-41f9-abba-14b959563bbf"
+        },
+        {
+          "name": "B",
+          "profile": "0a3d7c18-3376-4636-85a3-fb376f47d67d",
+          "store": "9e77e275-2c91-456b-9bba-6d7c0fe73214"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "62693da5-b863-466f-a2ae-d0a3902d957a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "6daeb1f6-1b1f-41e7-9d47-2c162e2328de",
+          "store": "e9aebc3a-7269-41f9-abba-14b959563bbf"
+        },
+        {
+          "name": "B",
+          "profile": "0a3d7c18-3376-4636-85a3-fb376f47d67d",
+          "store": "9e77e275-2c91-456b-9bba-6d7c0fe73214"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-input.json",
+      "action": "seed",
+      "namespace": "b5751080-5b2c-43dd-8f03-e744903191df",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a772eaf6-fa58-4dd3-80c7-a4afdc474d59",
+          "store": "79a090a2-6587-4fd5-bf0e-be9cf5c77498"
+        },
+        {
+          "name": "B",
+          "profile": "4c21b26e-c759-4f0d-9b6f-20ad786f9601",
+          "store": "5d28b832-9542-47a0-9e3c-d144040f3cc3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "b5751080-5b2c-43dd-8f03-e744903191df",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a772eaf6-fa58-4dd3-80c7-a4afdc474d59",
+          "store": "79a090a2-6587-4fd5-bf0e-be9cf5c77498"
+        },
+        {
+          "name": "B",
+          "profile": "4c21b26e-c759-4f0d-9b6f-20ad786f9601",
+          "store": "5d28b832-9542-47a0-9e3c-d144040f3cc3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-input.json",
+      "action": "seed",
+      "namespace": "43d79444-23be-4ca3-bd92-db7042d3a2f7",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49dc1b16-8897-4d61-88f8-394200aa95a1",
+          "store": "07f81f6d-ad81-4bfb-b2e4-93fff8a07cce"
+        },
+        {
+          "name": "B",
+          "profile": "99acda07-5573-4c62-b239-186df1d08deb",
+          "store": "8d054e63-c97f-4590-94dd-9ee395401094"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "43d79444-23be-4ca3-bd92-db7042d3a2f7",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49dc1b16-8897-4d61-88f8-394200aa95a1",
+          "store": "07f81f6d-ad81-4bfb-b2e4-93fff8a07cce"
+        },
+        {
+          "name": "B",
+          "profile": "99acda07-5573-4c62-b239-186df1d08deb",
+          "store": "8d054e63-c97f-4590-94dd-9ee395401094"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-input.json",
+      "action": "clear",
+      "namespace": "481d13a0-7060-4755-8679-a4ee95bf726e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "d2231946-3fa9-44d4-ba28-5b71eddc2d01",
+          "store": "2852a8af-20ea-4aab-b402-fbc4bc5539d2"
+        },
+        {
+          "name": "B",
+          "profile": "7f627284-f79c-4669-b08d-3b1601dbf503",
+          "store": "f7ed7217-cc6b-44bc-af9c-64023665c87a"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-prepare-input.json",
+      "action": "seed",
+      "namespace": "481d13a0-7060-4755-8679-a4ee95bf726e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "d2231946-3fa9-44d4-ba28-5b71eddc2d01",
+          "store": "2852a8af-20ea-4aab-b402-fbc4bc5539d2"
+        },
+        {
+          "name": "B",
+          "profile": "7f627284-f79c-4669-b08d-3b1601dbf503",
+          "store": "f7ed7217-cc6b-44bc-af9c-64023665c87a"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "481d13a0-7060-4755-8679-a4ee95bf726e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "d2231946-3fa9-44d4-ba28-5b71eddc2d01",
+          "store": "2852a8af-20ea-4aab-b402-fbc4bc5539d2"
+        },
+        {
+          "name": "B",
+          "profile": "7f627284-f79c-4669-b08d-3b1601dbf503",
+          "store": "f7ed7217-cc6b-44bc-af9c-64023665c87a"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-input.json",
+      "action": "clear",
+      "namespace": "b3f59212-0663-43cb-a53b-6ce5bc233fdc",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "672c777e-daec-41db-b278-f0519726f589",
+          "store": "176447ff-6c9f-42fa-877b-a9190c0bfcc3"
+        },
+        {
+          "name": "B",
+          "profile": "d71aa5ec-011b-44f5-996b-9f9631295b11",
+          "store": "2523a761-f707-4a87-9f82-148e50d4e23b"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-prepare-input.json",
+      "action": "seed",
+      "namespace": "b3f59212-0663-43cb-a53b-6ce5bc233fdc",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "672c777e-daec-41db-b278-f0519726f589",
+          "store": "176447ff-6c9f-42fa-877b-a9190c0bfcc3"
+        },
+        {
+          "name": "B",
+          "profile": "d71aa5ec-011b-44f5-996b-9f9631295b11",
+          "store": "2523a761-f707-4a87-9f82-148e50d4e23b"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "b3f59212-0663-43cb-a53b-6ce5bc233fdc",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "672c777e-daec-41db-b278-f0519726f589",
+          "store": "176447ff-6c9f-42fa-877b-a9190c0bfcc3"
+        },
+        {
+          "name": "B",
+          "profile": "d71aa5ec-011b-44f5-996b-9f9631295b11",
+          "store": "2523a761-f707-4a87-9f82-148e50d4e23b"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-input.json",
+      "action": "remove",
+      "namespace": "744a8ed6-0254-46e2-a89d-2e1044401767",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "ba2a6f77-ca62-4ca8-8b61-afa9a2464188",
+          "store": "2ab065a9-c68f-44dc-bbd2-b78247664b0c"
+        },
+        {
+          "name": "B",
+          "profile": "cd39d981-8abb-498c-8115-aeef62d01b99",
+          "store": "dc09d14f-b119-4164-9760-b5b7183d9934"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-prepare-input.json",
+      "action": "seed",
+      "namespace": "744a8ed6-0254-46e2-a89d-2e1044401767",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "ba2a6f77-ca62-4ca8-8b61-afa9a2464188",
+          "store": "2ab065a9-c68f-44dc-bbd2-b78247664b0c"
+        },
+        {
+          "name": "B",
+          "profile": "cd39d981-8abb-498c-8115-aeef62d01b99",
+          "store": "dc09d14f-b119-4164-9760-b5b7183d9934"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "744a8ed6-0254-46e2-a89d-2e1044401767",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "ba2a6f77-ca62-4ca8-8b61-afa9a2464188",
+          "store": "2ab065a9-c68f-44dc-bbd2-b78247664b0c"
+        },
+        {
+          "name": "B",
+          "profile": "cd39d981-8abb-498c-8115-aeef62d01b99",
+          "store": "dc09d14f-b119-4164-9760-b5b7183d9934"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-input.json",
+      "action": "remove",
+      "namespace": "04d83ed2-23a9-4bb0-9485-fd78f3574ffe",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "2b24ca17-bc9a-41b2-986f-a8c0984d6601",
+          "store": "0bb28896-f130-4132-bffe-3f8e1efe11ab"
+        },
+        {
+          "name": "B",
+          "profile": "5692f515-c27f-46da-918c-df7ee1264618",
+          "store": "67019410-3fd9-4b8d-be84-5617558f8570"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-prepare-input.json",
+      "action": "seed",
+      "namespace": "04d83ed2-23a9-4bb0-9485-fd78f3574ffe",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "2b24ca17-bc9a-41b2-986f-a8c0984d6601",
+          "store": "0bb28896-f130-4132-bffe-3f8e1efe11ab"
+        },
+        {
+          "name": "B",
+          "profile": "5692f515-c27f-46da-918c-df7ee1264618",
+          "store": "67019410-3fd9-4b8d-be84-5617558f8570"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "04d83ed2-23a9-4bb0-9485-fd78f3574ffe",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "2b24ca17-bc9a-41b2-986f-a8c0984d6601",
+          "store": "0bb28896-f130-4132-bffe-3f8e1efe11ab"
+        },
+        {
+          "name": "B",
+          "profile": "5692f515-c27f-46da-918c-df7ee1264618",
+          "store": "67019410-3fd9-4b8d-be84-5617558f8570"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-input.json",
+      "action": "remove",
+      "namespace": "18ffc15b-3ed7-4766-b61c-7816f7a9d8f8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "59cf704e-db55-4749-972b-49174692cb6f",
+          "store": "6a995304-1316-4ca2-bb01-0366cb993ce1"
+        },
+        {
+          "name": "B",
+          "profile": "e672a561-0229-4a4b-8cdb-fbf02acd8132",
+          "store": "c40f53a2-7ed3-42ec-ab2f-e27b917b690d"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-prepare-input.json",
+      "action": "seed",
+      "namespace": "18ffc15b-3ed7-4766-b61c-7816f7a9d8f8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "59cf704e-db55-4749-972b-49174692cb6f",
+          "store": "6a995304-1316-4ca2-bb01-0366cb993ce1"
+        },
+        {
+          "name": "B",
+          "profile": "e672a561-0229-4a4b-8cdb-fbf02acd8132",
+          "store": "c40f53a2-7ed3-42ec-ab2f-e27b917b690d"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "18ffc15b-3ed7-4766-b61c-7816f7a9d8f8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "59cf704e-db55-4749-972b-49174692cb6f",
+          "store": "6a995304-1316-4ca2-bb01-0366cb993ce1"
+        },
+        {
+          "name": "B",
+          "profile": "e672a561-0229-4a4b-8cdb-fbf02acd8132",
+          "store": "c40f53a2-7ed3-42ec-ab2f-e27b917b690d"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-input.json",
+      "action": "verify",
+      "namespace": "39a3e1a7-5d7b-41e4-a8b1-a939140f13b6",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "35e7521d-f41b-4b74-a350-559ea578a66d",
+          "store": "7fb39d12-77a3-4b5b-86b3-938991d1b4e6"
+        },
+        {
+          "name": "B",
+          "profile": "77fe3c89-d12d-4770-aef5-de09ac5c1e11",
+          "store": "7363e028-8a2d-4287-8ec8-38bd9b78767d"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-prepare-input.json",
+      "action": "seed",
+      "namespace": "39a3e1a7-5d7b-41e4-a8b1-a939140f13b6",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "35e7521d-f41b-4b74-a350-559ea578a66d",
+          "store": "7fb39d12-77a3-4b5b-86b3-938991d1b4e6"
+        },
+        {
+          "name": "B",
+          "profile": "77fe3c89-d12d-4770-aef5-de09ac5c1e11",
+          "store": "7363e028-8a2d-4287-8ec8-38bd9b78767d"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "39a3e1a7-5d7b-41e4-a8b1-a939140f13b6",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "35e7521d-f41b-4b74-a350-559ea578a66d",
+          "store": "7fb39d12-77a3-4b5b-86b3-938991d1b4e6"
+        },
+        {
+          "name": "B",
+          "profile": "77fe3c89-d12d-4770-aef5-de09ac5c1e11",
+          "store": "7363e028-8a2d-4287-8ec8-38bd9b78767d"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-input.json",
+      "action": "publication-failure",
+      "namespace": "c59b772f-a253-4962-80a9-731b7784f587",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "1d5a08cd-6e17-483c-92a1-a4388d110d4e",
+          "store": "76508d2a-4f8e-42b3-a9b9-1041c2b6557b"
+        },
+        {
+          "name": "B",
+          "profile": "1fc7facb-d2c3-427d-88fa-328f8af48e9b",
+          "store": "7e4a72d1-298a-4c5e-b1bc-9e317d5081ad"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-prepare-input.json",
+      "action": "seed",
+      "namespace": "c59b772f-a253-4962-80a9-731b7784f587",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "1d5a08cd-6e17-483c-92a1-a4388d110d4e",
+          "store": "76508d2a-4f8e-42b3-a9b9-1041c2b6557b"
+        },
+        {
+          "name": "B",
+          "profile": "1fc7facb-d2c3-427d-88fa-328f8af48e9b",
+          "store": "7e4a72d1-298a-4c5e-b1bc-9e317d5081ad"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "namespace": "81ba2c02-9b58-4e69-a370-c23f893a2cfb",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c3c31bef-9d66-4d2c-87e2-d5b7a0696e49",
+          "store": "7640ddfb-81f1-4694-8abd-57e7b24f780b"
+        },
+        {
+          "name": "B",
+          "profile": "c72d2a57-d100-4512-b564-c0eebf342b75",
+          "store": "31c4967b-ba91-4f6e-a1af-52af9aa07a29"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-input.json",
+      "action": "private-only",
+      "namespace": "81ba2c02-9b58-4e69-a370-c23f893a2cfb",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c3c31bef-9d66-4d2c-87e2-d5b7a0696e49",
+          "store": "7640ddfb-81f1-4694-8abd-57e7b24f780b"
+        },
+        {
+          "name": "B",
+          "profile": "c72d2a57-d100-4512-b564-c0eebf342b75",
+          "store": "31c4967b-ba91-4f6e-a1af-52af9aa07a29"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-interrupted-input.json",
+      "action": "private-only",
+      "namespace": "81ba2c02-9b58-4e69-a370-c23f893a2cfb",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c3c31bef-9d66-4d2c-87e2-d5b7a0696e49",
+          "store": "7640ddfb-81f1-4694-8abd-57e7b24f780b"
+        },
+        {
+          "name": "B",
+          "profile": "c72d2a57-d100-4512-b564-c0eebf342b75",
+          "store": "31c4967b-ba91-4f6e-a1af-52af9aa07a29"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-restart-input.json",
+      "action": "private-only",
+      "namespace": "81ba2c02-9b58-4e69-a370-c23f893a2cfb",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c3c31bef-9d66-4d2c-87e2-d5b7a0696e49",
+          "store": "7640ddfb-81f1-4694-8abd-57e7b24f780b"
+        },
+        {
+          "name": "B",
+          "profile": "c72d2a57-d100-4512-b564-c0eebf342b75",
+          "store": "31c4967b-ba91-4f6e-a1af-52af9aa07a29"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/01-seed-input.json",
+      "action": "seed",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02-restart-input.json",
+      "action": "verify",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02b-switch-input.json",
+      "action": "switch",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03-private-input.json",
+      "action": "private",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03b-private-interrupted-input.json",
+      "action": "private",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03c-private-restart-input.json",
+      "action": "private",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/04-clear-input.json",
+      "action": "clear",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove-input.json",
+      "action": "remove",
+      "namespace": "bec8cabd-57bf-4667-b169-b565d249f770",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "49b149a5-6923-4bab-b7e9-5b426ed02a1e",
+          "store": "13906aa9-eb61-4ef3-9470-87424cdaf398"
+        },
+        {
+          "name": "B",
+          "profile": "d9321e92-a9dc-468f-b770-4162c27758a8",
+          "store": "713c7635-95a9-4244-b0fa-9e93dc24c624"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-input.json",
+      "action": "seed",
+      "namespace": "960e4604-c3c6-4da2-ad2b-36fae6ef9cd7",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+          "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2"
+        },
+        {
+          "name": "B",
+          "profile": "18300a92-801f-4662-9353-d2fede8fe124",
+          "store": "9eff5607-1a75-4b35-af54-ca0aef0ba4d3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "960e4604-c3c6-4da2-ad2b-36fae6ef9cd7",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "729c8905-bae7-4a42-bc9e-d8747259428f",
+          "store": "b60e4e2e-acb7-4937-814e-640a3a8891d2"
+        },
+        {
+          "name": "B",
+          "profile": "18300a92-801f-4662-9353-d2fede8fe124",
+          "store": "9eff5607-1a75-4b35-af54-ca0aef0ba4d3"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-input.json",
+      "action": "seed",
+      "namespace": "c8c6d46a-2d6a-45f3-a156-9c84ac0f1574",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b8b2f99c-1a82-43ad-9941-9fe792dfde95",
+          "store": "9c67313b-c3a2-420e-9f8e-d2c9122d3071"
+        },
+        {
+          "name": "B",
+          "profile": "10740fd8-c3a5-40bf-91dc-e17ba547000a",
+          "store": "7f4a36b7-0b18-4039-9090-13d648e06f3a"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "c8c6d46a-2d6a-45f3-a156-9c84ac0f1574",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b8b2f99c-1a82-43ad-9941-9fe792dfde95",
+          "store": "9c67313b-c3a2-420e-9f8e-d2c9122d3071"
+        },
+        {
+          "name": "B",
+          "profile": "10740fd8-c3a5-40bf-91dc-e17ba547000a",
+          "store": "7f4a36b7-0b18-4039-9090-13d648e06f3a"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-input.json",
+      "action": "seed",
+      "namespace": "d9d072a9-f8ee-4f74-8a38-c60b2267994f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9c879ac6-da5e-44c8-be5d-3eac8a3cbfaf",
+          "store": "03589129-c507-44a1-ac1e-e52d71efc1ee"
+        },
+        {
+          "name": "B",
+          "profile": "b8b7d23d-67ea-4e2c-b480-9d1bbdda0ba4",
+          "store": "b7cd5f72-4b8d-48db-bae2-cf0cd499c5e1"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "d9d072a9-f8ee-4f74-8a38-c60b2267994f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9c879ac6-da5e-44c8-be5d-3eac8a3cbfaf",
+          "store": "03589129-c507-44a1-ac1e-e52d71efc1ee"
+        },
+        {
+          "name": "B",
+          "profile": "b8b7d23d-67ea-4e2c-b480-9d1bbdda0ba4",
+          "store": "b7cd5f72-4b8d-48db-bae2-cf0cd499c5e1"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-input.json",
+      "action": "seed",
+      "namespace": "9087afc8-079d-437e-9803-81a47bff7ce3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "807a8f9e-f711-4ccf-8a6a-2c819060cd68",
+          "store": "a0d6feb4-489f-47b4-b07e-feb8a3d8d6fe"
+        },
+        {
+          "name": "B",
+          "profile": "f7fe94cc-2c4d-49a8-b812-eacc85b08624",
+          "store": "06e03ae0-6bc4-4eeb-be37-822d0ee34438"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "9087afc8-079d-437e-9803-81a47bff7ce3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "807a8f9e-f711-4ccf-8a6a-2c819060cd68",
+          "store": "a0d6feb4-489f-47b4-b07e-feb8a3d8d6fe"
+        },
+        {
+          "name": "B",
+          "profile": "f7fe94cc-2c4d-49a8-b812-eacc85b08624",
+          "store": "06e03ae0-6bc4-4eeb-be37-822d0ee34438"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-input.json",
+      "action": "seed",
+      "namespace": "c8d5f24b-eb69-4231-8772-5680f7c71555",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "45b60c43-fed4-476f-926a-3b775df0626c",
+          "store": "9f05ff08-0cc1-435d-a210-13ff6109df53"
+        },
+        {
+          "name": "B",
+          "profile": "33c1ac34-422e-4754-8c5d-33b483d2998a",
+          "store": "8c0ed200-513a-4671-b0fd-8727da47d736"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "c8d5f24b-eb69-4231-8772-5680f7c71555",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "45b60c43-fed4-476f-926a-3b775df0626c",
+          "store": "9f05ff08-0cc1-435d-a210-13ff6109df53"
+        },
+        {
+          "name": "B",
+          "profile": "33c1ac34-422e-4754-8c5d-33b483d2998a",
+          "store": "8c0ed200-513a-4671-b0fd-8727da47d736"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-input.json",
+      "action": "clear",
+      "namespace": "3217c690-415f-4816-abd0-ab05eb4284d8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "86075c4a-d800-4157-b6f9-96ad9a64d58b",
+          "store": "3b734fb3-a8d0-44b8-8a07-c93e60fb4465"
+        },
+        {
+          "name": "B",
+          "profile": "7a1b2e75-6976-48ad-b376-d464cef5aed9",
+          "store": "c0273d39-eda0-494e-893b-784fdb5dd4dd"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-prepare-input.json",
+      "action": "seed",
+      "namespace": "3217c690-415f-4816-abd0-ab05eb4284d8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "86075c4a-d800-4157-b6f9-96ad9a64d58b",
+          "store": "3b734fb3-a8d0-44b8-8a07-c93e60fb4465"
+        },
+        {
+          "name": "B",
+          "profile": "7a1b2e75-6976-48ad-b376-d464cef5aed9",
+          "store": "c0273d39-eda0-494e-893b-784fdb5dd4dd"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "3217c690-415f-4816-abd0-ab05eb4284d8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "86075c4a-d800-4157-b6f9-96ad9a64d58b",
+          "store": "3b734fb3-a8d0-44b8-8a07-c93e60fb4465"
+        },
+        {
+          "name": "B",
+          "profile": "7a1b2e75-6976-48ad-b376-d464cef5aed9",
+          "store": "c0273d39-eda0-494e-893b-784fdb5dd4dd"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-input.json",
+      "action": "clear",
+      "namespace": "e2fccdec-2d0a-40c2-ba06-8da4ab465c90",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "3c2a981d-38ac-4d1c-b9d5-ade6fe4c9140",
+          "store": "84be3033-4a4e-47e5-848f-b031f77cdd04"
+        },
+        {
+          "name": "B",
+          "profile": "c4412bef-908a-4a6c-89de-4b47652bb5a9",
+          "store": "7760ba4a-3702-421e-b0a9-8acfa5ac8001"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-prepare-input.json",
+      "action": "seed",
+      "namespace": "e2fccdec-2d0a-40c2-ba06-8da4ab465c90",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "3c2a981d-38ac-4d1c-b9d5-ade6fe4c9140",
+          "store": "84be3033-4a4e-47e5-848f-b031f77cdd04"
+        },
+        {
+          "name": "B",
+          "profile": "c4412bef-908a-4a6c-89de-4b47652bb5a9",
+          "store": "7760ba4a-3702-421e-b0a9-8acfa5ac8001"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "e2fccdec-2d0a-40c2-ba06-8da4ab465c90",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "3c2a981d-38ac-4d1c-b9d5-ade6fe4c9140",
+          "store": "84be3033-4a4e-47e5-848f-b031f77cdd04"
+        },
+        {
+          "name": "B",
+          "profile": "c4412bef-908a-4a6c-89de-4b47652bb5a9",
+          "store": "7760ba4a-3702-421e-b0a9-8acfa5ac8001"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-input.json",
+      "action": "remove",
+      "namespace": "523a0526-e1b1-4fa2-bd6b-6f38d4fd4d1f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a75b95ae-a29f-44d0-8f7e-d42b946a9683",
+          "store": "85e1951f-2389-4c42-aa5e-f922dcf8a378"
+        },
+        {
+          "name": "B",
+          "profile": "6762f287-f9d8-4b1a-bf06-e3dfd64070d4",
+          "store": "778f7ed5-2168-46e6-b43c-08840e93a15b"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-prepare-input.json",
+      "action": "seed",
+      "namespace": "523a0526-e1b1-4fa2-bd6b-6f38d4fd4d1f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a75b95ae-a29f-44d0-8f7e-d42b946a9683",
+          "store": "85e1951f-2389-4c42-aa5e-f922dcf8a378"
+        },
+        {
+          "name": "B",
+          "profile": "6762f287-f9d8-4b1a-bf06-e3dfd64070d4",
+          "store": "778f7ed5-2168-46e6-b43c-08840e93a15b"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "523a0526-e1b1-4fa2-bd6b-6f38d4fd4d1f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a75b95ae-a29f-44d0-8f7e-d42b946a9683",
+          "store": "85e1951f-2389-4c42-aa5e-f922dcf8a378"
+        },
+        {
+          "name": "B",
+          "profile": "6762f287-f9d8-4b1a-bf06-e3dfd64070d4",
+          "store": "778f7ed5-2168-46e6-b43c-08840e93a15b"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-input.json",
+      "action": "remove",
+      "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+          "store": "a583a085-9505-4f54-b6b8-30650bb833e2"
+        },
+        {
+          "name": "B",
+          "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+          "store": "f67c484d-e534-4e73-a454-9f9f8def14d6"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-prepare-input.json",
+      "action": "seed",
+      "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+          "store": "a583a085-9505-4f54-b6b8-30650bb833e2"
+        },
+        {
+          "name": "B",
+          "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+          "store": "f67c484d-e534-4e73-a454-9f9f8def14d6"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "1493d02f-9bca-437b-86e8-34aef3d9f06a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "057a27a1-cec5-4a12-912e-b8ca4e3c8616",
+          "store": "a583a085-9505-4f54-b6b8-30650bb833e2"
+        },
+        {
+          "name": "B",
+          "profile": "dbc7e575-00d7-4e4f-9d2f-7ff32b23832c",
+          "store": "f67c484d-e534-4e73-a454-9f9f8def14d6"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-input.json",
+      "action": "remove",
+      "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300"
+        },
+        {
+          "name": "B",
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-prepare-input.json",
+      "action": "seed",
+      "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300"
+        },
+        {
+          "name": "B",
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300"
+        },
+        {
+          "name": "B",
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-input.json",
+      "action": "verify",
+      "namespace": "2733d6b6-4dfc-41bc-a21c-8708a8d097da",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4936c8a4-f76c-48b4-b1fb-ed299b6fcf64",
+          "store": "ac302c08-8c61-4daf-bb9e-c209a4feaf80"
+        },
+        {
+          "name": "B",
+          "profile": "3093e8c4-2895-48be-851a-3ff6e928b110",
+          "store": "7d5f588b-2d82-44d4-acb1-0b045a0ca2bb"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-prepare-input.json",
+      "action": "seed",
+      "namespace": "2733d6b6-4dfc-41bc-a21c-8708a8d097da",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4936c8a4-f76c-48b4-b1fb-ed299b6fcf64",
+          "store": "ac302c08-8c61-4daf-bb9e-c209a4feaf80"
+        },
+        {
+          "name": "B",
+          "profile": "3093e8c4-2895-48be-851a-3ff6e928b110",
+          "store": "7d5f588b-2d82-44d4-acb1-0b045a0ca2bb"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "namespace": "2733d6b6-4dfc-41bc-a21c-8708a8d097da",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4936c8a4-f76c-48b4-b1fb-ed299b6fcf64",
+          "store": "ac302c08-8c61-4daf-bb9e-c209a4feaf80"
+        },
+        {
+          "name": "B",
+          "profile": "3093e8c4-2895-48be-851a-3ff6e928b110",
+          "store": "7d5f588b-2d82-44d4-acb1-0b045a0ca2bb"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-input.json",
+      "action": "publication-failure",
+      "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+          "store": "5070837e-4be5-465f-aa24-ad16624138a7"
+        },
+        {
+          "name": "B",
+          "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+          "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-prepare-input.json",
+      "action": "seed",
+      "namespace": "56e174c1-65d6-48f0-bac1-84d2971837f3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9aed2495-b1d6-4352-b1f4-142532a69f8f",
+          "store": "5070837e-4be5-465f-aa24-ad16624138a7"
+        },
+        {
+          "name": "B",
+          "profile": "24244656-9c6d-4850-a562-20101238fc5a",
+          "store": "f548127d-1e2e-46a8-ba7a-e81040617bd4"
+        }
+      ],
+      "note": "Registered IDs only; native creation/materialization and current state require the associated trace. Private-only creates no persistent mapping."
+    }
+  ],
+  "confirmed_normal_removals": [
+    {
+      "result": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/05-remove-result.json",
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/05-remove-input.json",
+      "status": "Both normal remove callbacks and noncreating absence confirmed; tombstones preserved"
+    },
+    {
+      "result": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove-result.json",
+      "input": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove-input.json",
+      "status": "Both normal remove callbacks and noncreating absence confirmed; tombstones preserved"
+    }
+  ],
+  "automatic_cleanup_of_uncertain_stages": false
+}

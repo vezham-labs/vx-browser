@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "swift",
+    "--version"
+  ],
+  "returncode": 0,
+  "stdout": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "stderr": "swift-driver version: 1.168.6 "
+}

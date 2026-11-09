@@ -1,0 +1,15 @@
+{
+  "label": "00-original-observation",
+  "pid": 35736,
+  "action": "enumerate-original",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": -11,
+  "timeout": false,
+  "status": "FAIL",
+  "result": {},
+  "checkpoint": null,
+  "binarySHA256": "6938a838e007eeed15e217a69b330a9b596425f54d99599e0d93fcf02fa0c090",
+  "observations": []
+}

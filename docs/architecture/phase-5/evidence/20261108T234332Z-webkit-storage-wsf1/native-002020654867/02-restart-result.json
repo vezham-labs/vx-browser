@@ -1,0 +1,326 @@
+{
+  "label": "02-restart",
+  "pid": 37777,
+  "action": "verify",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "event": "result",
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-A-cookie"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-A-local"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-A-idb"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-A-cache"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-A-worker"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "New browsing context does not restore sessionStorage",
+        "id": "F1-NAT-RESTART-A-session"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-B-cookie"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-B-local"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-B-idb"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-B-cache"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Actual new app process / stable mapping",
+        "id": "F1-NAT-RESTART-B-worker"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "New browsing context does not restore sessionStorage",
+        "id": "F1-NAT-RESTART-B-session"
+      }
+    ],
+    "checkpoint": {
+      "rows": [
+        {
+          "origin": "fresh",
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+          "resourceGeneration": 1,
+          "revision": 14,
+          "status": "quiescent"
+        },
+        {
+          "origin": "fresh",
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+          "resourceGeneration": 1,
+          "revision": 13,
+          "status": "quiescent"
+        }
+      ],
+      "snapshot": {
+        "previousRun": "05ff11be-49b9-4266-bfd3-80e3ed0168e1",
+        "version": 1,
+        "records": [
+          {
+            "operation": "0f8daf5f-8abf-4396-8407-d346e5b2d409",
+            "phase": {
+              "stable": {
+                "_0": "quiescent"
+              }
+            },
+            "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+            "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+            "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+            "generation": 10
+          },
+          {
+            "operation": "e64d5376-6dd5-4689-a234-8dfbac189bac",
+            "phase": {
+              "stable": {
+                "_0": "quiescent"
+              }
+            },
+            "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+            "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+            "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+            "generation": 10
+          }
+        ]
+      }
+    },
+    "trace": [
+      {
+        "sequence": 1,
+        "kind": "framework-configuration",
+        "outcome": "public-init-no-store-getter"
+      },
+      {
+        "sequence": 2,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 3,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 4,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 5,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 6,
+        "kind": "existing-factory",
+        "outcome": "observed-first"
+      },
+      {
+        "sequence": 7,
+        "kind": "assignment",
+        "outcome": "verified-before-construction"
+      },
+      {
+        "sequence": 8,
+        "kind": "construction",
+        "outcome": "unpublished"
+      },
+      {
+        "sequence": 9,
+        "kind": "publication",
+        "outcome": "host-confirmed"
+      },
+      {
+        "sequence": 10,
+        "kind": "navigation",
+        "outcome": "finished"
+      },
+      {
+        "sequence": 11,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 12,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 13,
+        "kind": "existing-factory",
+        "outcome": "observed-first"
+      },
+      {
+        "kind": "assignment",
+        "outcome": "verified-before-construction",
+        "sequence": 14
+      },
+      {
+        "kind": "construction",
+        "outcome": "unpublished",
+        "sequence": 15
+      },
+      {
+        "kind": "publication",
+        "outcome": "host-confirmed",
+        "sequence": 16
+      },
+      {
+        "kind": "navigation",
+        "outcome": "finished",
+        "sequence": 17
+      },
+      {
+        "kind": "close",
+        "outcome": "released-owned-references",
+        "sequence": 18
+      },
+      {
+        "kind": "fence",
+        "outcome": "installed",
+        "sequence": 19
+      },
+      {
+        "kind": "quiesce",
+        "outcome": "no-observed-owned-resources",
+        "sequence": 20
+      },
+      {
+        "kind": "close",
+        "outcome": "released-owned-references",
+        "sequence": 21
+      },
+      {
+        "kind": "fence",
+        "outcome": "installed",
+        "sequence": 22
+      },
+      {
+        "kind": "quiesce",
+        "outcome": "no-observed-owned-resources",
+        "sequence": 23
+      }
+    ],
+    "environment": {
+      "qualification": "discovery-only",
+      "WebKit": "22625.2.8.11.9",
+      "bundle": "internal.vezham.browser.wsf1.qualification",
+      "macOS": "Version 27.2 (Build 26B123)"
+    }
+  },
+  "checkpoint": {
+    "rows": [
+      {
+        "origin": "fresh",
+        "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+        "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+        "resourceGeneration": 1,
+        "revision": 14,
+        "status": "quiescent"
+      },
+      {
+        "origin": "fresh",
+        "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+        "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+        "resourceGeneration": 1,
+        "revision": 13,
+        "status": "quiescent"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "05ff11be-49b9-4266-bfd3-80e3ed0168e1",
+      "version": 1,
+      "records": [
+        {
+          "operation": "0f8daf5f-8abf-4396-8407-d346e5b2d409",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "profile": "280526db-61bb-4467-bcdd-41e8c9d2091a",
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+          "store": "dd397e55-0ced-4e4c-a019-28d3aab92e17",
+          "generation": 10
+        },
+        {
+          "operation": "e64d5376-6dd5-4689-a234-8dfbac189bac",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "profile": "3b50735e-bb7b-468c-9e0b-a83632354a9a",
+          "namespace": "f4733161-39bc-40a0-ae00-ed2105d1da3f",
+          "store": "6315d616-07fa-424a-a776-314c95e35ba3",
+          "generation": 10
+        }
+      ]
+    }
+  },
+  "binarySHA256": "f833f23b938134c14e8224b4c41555baf16ee9f407bd1bdd2e2eb8b8340e3bc6",
+  "observations": [
+    {
+      "environment": {
+        "worker": "A",
+        "cache": "A",
+        "cookie": "A",
+        "http": "response-2",
+        "session": "",
+        "idb": "A",
+        "local": "A"
+      },
+      "event": "restart-values-A"
+    },
+    {
+      "environment": {
+        "cookie": "B",
+        "local": "B",
+        "http": "response-4",
+        "session": "",
+        "worker": "B",
+        "cache": "B",
+        "idb": "B"
+      },
+      "event": "restart-values-B"
+    }
+  ]
+}

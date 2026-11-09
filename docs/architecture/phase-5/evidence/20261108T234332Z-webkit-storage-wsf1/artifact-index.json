@@ -1,0 +1,3625 @@
+{
+  "scope": "Final reviewed implementation/report/index/evidence; self and final checksum excluded",
+  "artifacts": [
+    {
+      "path": "apps/browser-macos/Config/Debug.xcconfig",
+      "sha256": "32b2c910a9740dd2dc5a58127c972a29ba6cef37213f20e2f638b73ab91d10f6",
+      "bytes": 274
+    },
+    {
+      "path": "apps/browser-macos/Config/VezhamBrowser.entitlements",
+      "sha256": "34e335c436f4ecc8e81a900e42953f040be06e4cb13e5226a8fba4d12cdf9c98",
+      "bytes": 284
+    },
+    {
+      "path": "apps/browser-macos/README.md",
+      "sha256": "ffab63ee492840a78174bf7ccaf9a5f1bbbc83987b7dc519ae634f301832bae3",
+      "bytes": 2740
+    },
+    {
+      "path": "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+      "sha256": "eb105678e16f725ece95e563d5d611c3f32268bc6a7f678abb612abb32b35f6a",
+      "bytes": 2215
+    },
+    {
+      "path": "apps/browser-macos/Sources/Qualification/StorageQualificationHost.swift",
+      "sha256": "161e061e0e6bc639f0c11f6d01c5d6a70c1c7276bb80e0a7b4a8cd966aec351e",
+      "bytes": 27119
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Package.swift",
+      "sha256": "d09985d055e5f4e27753aafb530a4d714dc96f780cf9733f8ad8f95bac27ef20",
+      "bytes": 1054
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/README.md",
+      "sha256": "b70bd144a9fb55e43dd958d3558e972aa102c1afe4246a7db4e3f05cd1cbda3a",
+      "bytes": 1197
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift",
+      "sha256": "2052e2897c9443518c015a3c47db646d8f3c744b2b688f1a13c6af7ac217b34c",
+      "bytes": 5254
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+      "sha256": "bb16b819d3412a0ef13d977a89250366086266110485c8d4b256761546ee5df5",
+      "bytes": 23969
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/CloseClearRaceTests.swift",
+      "sha256": "aa022489f61c805b919b431c2f094e7baea7c2e232d6fa97f18e0b66aed1f253",
+      "bytes": 2699
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/DescriptorTests.swift",
+      "sha256": "2c91af1058854803d156c944e12459dbc0c048c5d1a4ec1a0fdf593300f71748",
+      "bytes": 4951
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/NativeAdmissionTests.swift",
+      "sha256": "0fe070280dba1cb4bf8ad16116fe46ae55d72924d441bd4ba902f0ca3db8922a",
+      "bytes": 2530
+    },
+    {
+      "path": "apps/browser-macos/Tools/fixtures/storage.html",
+      "sha256": "5fdd5925ad0f56c2d78475a09cfbee26ec25a773ffe09b0e741f1e059d030e8f",
+      "bytes": 2763
+    },
+    {
+      "path": "apps/browser-macos/Tools/fixtures/sw.js",
+      "sha256": "df74c4e25a5a9c5c3ecf945e00e92c5120c21e865b84c9e1e368716b3767c6f9",
+      "bytes": 403
+    },
+    {
+      "path": "apps/browser-macos/Tools/native_host.py",
+      "sha256": "a49df80b34a6f2e726d7da1c518a721fe5f16e40852aa0414e7dc99ebae0c609",
+      "bytes": 4209
+    },
+    {
+      "path": "apps/browser-macos/Tools/wsf1.py",
+      "sha256": "073b0f0adc360d2c7a4c1ced7d696cf080d58e327781258ffc21afdf7990db50",
+      "bytes": 6412
+    },
+    {
+      "path": "apps/browser-macos/Tools/wsf1_native.py",
+      "sha256": "5e856052e428eb014c73be9223b7ba726f9037a016df2553807e71521f74f236",
+      "bytes": 12722
+    },
+    {
+      "path": "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj",
+      "sha256": "b03848146368e9a0895c9ac2daf542d9e5364fe55fb24c955c7ee91c0ea80925",
+      "bytes": 5471
+    },
+    {
+      "path": "apps/browser-macos/project.json",
+      "sha256": "9518ee047c948ca86411c599964810c4633e55a35ecd490db28f984fa7a15147",
+      "bytes": 1544
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/README.md",
+      "sha256": "91e17b395003a7755b189e361f8868632f47872089b6b7bde69584b3e2c0272a",
+      "bytes": 4265
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/commands.json",
+      "sha256": "55388f786250f474df9634c4cc9ea9ab830fb241678f9f4d5ac1c7a8c7f06861",
+      "bytes": 1401
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/linkage-0.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/linkage-0.stdout",
+      "sha256": "0c3618a9958b4e24814f614b4637d551ecdad4d2ec50678300597507f7e09c7b",
+      "bytes": 1474
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/result.json",
+      "sha256": "2047d1a5f0953bc53cb1b7ea2f56847f17d471c8fc55cfa8e91d10f394aa4064",
+      "bytes": 8208
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/source-hashes.json",
+      "sha256": "9de6ef1d93a79d9d0a47aa910ecd7f57c455d89e2bee7f2936d07cfa404f243e",
+      "bytes": 3842
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/swift-test.stderr",
+      "sha256": "6c1b49add7cba2a7d251eb35878e7e6350822fddb36640393d299b3b0e228728",
+      "bytes": 1241
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/swift-test.stdout",
+      "sha256": "02782be394a73c5046ad10f1a278b1d6d1a2b09b93cbca2618366dfe64b61ffb",
+      "bytes": 17666
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/swift-version.stderr",
+      "sha256": "bbc8b176d3c74d4c5a7fd00b40280f98168e116d5272273bfe8e71407625540e",
+      "bytes": 30
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860/swift-version.stdout",
+      "sha256": "f5a9367b595a6387113a7e391ad6212ba30254c8052fbc620f99f9dd67b9c1e3",
+      "bytes": 98
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/commands.json",
+      "sha256": "1d588be7c1f5107518e31a30cef7936498a956ed0f85d30156cd9f218b7df7ca",
+      "bytes": 1401
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/linkage-0.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/linkage-0.stdout",
+      "sha256": "5a25a81b1454063c318dee1962c24b078c706dc23b1d291f64b66ed7442bc7ec",
+      "bytes": 1474
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/result.json",
+      "sha256": "44be6b1acd850f71c74350a47424d1d465263ad8cb1b4c4cc1b4848d49e95e0d",
+      "bytes": 8208
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/source-hashes.json",
+      "sha256": "c2ad439ef36ef870370f4c526b34a34d9c6a4d733d13f8c499558a2f799cfebd",
+      "bytes": 3842
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/swift-test.stderr",
+      "sha256": "6d9104e88318ceb6958caabe86e8896bdda2c8c6dae81c713876391d06de15b5",
+      "bytes": 1157
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/swift-test.stdout",
+      "sha256": "9c044707501a578eced09b5e2a543b175d8c83aff74d155189a8d38fe7b61ff6",
+      "bytes": 17666
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/swift-version.stderr",
+      "sha256": "bbc8b176d3c74d4c5a7fd00b40280f98168e116d5272273bfe8e71407625540e",
+      "bytes": 30
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-234802696148/swift-version.stdout",
+      "sha256": "f5a9367b595a6387113a7e391ad6212ba30254c8052fbc620f99f9dd67b9c1e3",
+      "bytes": 98
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/baseline.json",
+      "sha256": "ae6e47991dbf7007848010a2e78397467cedbd7d943a757392f4496b1d6a434a",
+      "bytes": 223333
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/commands.json",
+      "sha256": "1c8c2df7e164342754ee17354039f78b073e485ed4336c0ea2590df4a1529262",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/entitlements.stderr",
+      "sha256": "809242c5a3a2f14dad107fd115902b9c36d9c3f1a70912ac5de2430789dae740",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/linkage.stdout",
+      "sha256": "089f4187c3801afbb9e5419047704418428bf2cf41bd101cd4f9ee23a38f8716",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/minimum-os.stdout",
+      "sha256": "11f7d9dd6296ad6cdcd020a74186c605d88cfbf086f555498e1fec81c87a55ab",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/result.json",
+      "sha256": "0ef8d327055d5b766208079be7de1918f5c82846297f2c71d5bba55e1f5ef888",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/signature.stderr",
+      "sha256": "f033ad81ae5b311531b0ea29f683b33e6b437b4c48ee523b5b0a63538316f31c",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/sources.json",
+      "sha256": "b53cdb50a1a1a74de27d80ae0d5e6c4d4125bf9d04016e617fcfd60c4d406303",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000156041055/xcodebuild.stdout",
+      "sha256": "31890082e63e841ead4e06987baa19ffc3d32bd057c1e6d80e9faec3ab2b8661",
+      "bytes": 207849
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/commands.json",
+      "sha256": "c732abdba82a971b6268717049edbb8cdf9fdbe9ff811ab412c744d7dfd3978a",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/entitlements.stderr",
+      "sha256": "3e69cd3e24dd1302b2f3d1649c6c3c6002c5a5c683a8720c32ff94ac02ccec97",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/linkage.stdout",
+      "sha256": "22f0e98ff47d11679727494921a11cce75656bd2efe8c2e4bceeedf737ca9dd5",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/minimum-os.stdout",
+      "sha256": "93b76513052d806315e8a390cc2d9f3a74f16c0caf3bebad8ab09f50b1f8f5db",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/result.json",
+      "sha256": "36701c859efea053695373bcfead682408a32456e2f9d69462cdf34d32f3f394",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/signature.stderr",
+      "sha256": "254cf7ffaec560790322b97ec97e9a99dbe9305ef05b6238a4dce13f310cc4fd",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/sources.json",
+      "sha256": "0d8bbc49c7b6dde502d7008235a0dd4057b04f77192cd11bc0bbbb90c35fcb85",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-000505379934/xcodebuild.stdout",
+      "sha256": "6926bc208eebfcd41cf6205ddea51983e632a71e4c49b446b7386d7f0ae6e454",
+      "bytes": 207847
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/commands.json",
+      "sha256": "6688fd0147fdf614947c682ae23e909da889688cf2b4f679a5695f15a716447f",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/entitlements.stderr",
+      "sha256": "a1f16e3e98a3ea00445506023f5f739971d169593e65d6249e047fed5a4da676",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/linkage.stdout",
+      "sha256": "6dc96591ca6a0fafa0f206bc3ad1aa6956cf543167d8d6819793d042413a7a8d",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/minimum-os.stdout",
+      "sha256": "8eff824a18bfebeee95dcdd32453d999e18f10033004daccee999c76c13c80f9",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/result.json",
+      "sha256": "440c6022e0185aa54c7239dfada8d5f8060fc832f9a791c97c7cfc67b122df60",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/signature.stderr",
+      "sha256": "a82a15de71e5a0c7d8f33ee33dcef52054769ead93ec7611f147f1f7699c573b",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/sources.json",
+      "sha256": "993b726bfe101d5305f49c6b5db697c49c3ecb886404bcb33f34c413301c8049",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001259921360/xcodebuild.stdout",
+      "sha256": "09ba4ee913b3718293bc491df432d2b5438c60c837180d787620bda0dc28190e",
+      "bytes": 207844
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/commands.json",
+      "sha256": "f997e50b54cbb43d8d892fc65d54c6af65f8d6d89b8ee4cda98287c51ebf2d26",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/entitlements.stderr",
+      "sha256": "370dd4df20fb38bf6c357e93ba8d2981f16217ce9093719b92788e36a03aead2",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/linkage.stdout",
+      "sha256": "0723f2302c2b186885e93b834355b859240793b6eb4b2eb2df588c611bd65358",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/minimum-os.stdout",
+      "sha256": "b25e2b391486f0c887c36dce92daadd8511112d8cbb32866adf630e0cff7412a",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/result.json",
+      "sha256": "528689387bfc274348b044725e82fe023f76d316178476ff1a875394e2519387",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/signature.stderr",
+      "sha256": "746336e2b1c12ef86f00db2d5a10ed84ed612b87f2fdc96e85d46935465883ac",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/sources.json",
+      "sha256": "e1e68b7f0a748eaefeec43021cb74a46cc7e1896429ba3d61b801c318f00599d",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001419447987/xcodebuild.stdout",
+      "sha256": "21623015d911c774a39a647bca653e5100e11cd32bc4dd199b03ed5b0a545f93",
+      "bytes": 207847
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/commands.json",
+      "sha256": "65ce8b75a3b12cc44835ec8b731c1113fe924f2e299fa08d5c8594eafcd6b562",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/entitlements.stderr",
+      "sha256": "17b82493f8e767183195fec2f478976ba60ae0bf118866d3b4dbb07bfa3ec24a",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/linkage.stdout",
+      "sha256": "b29fc2e9dae8fd2d969e9aa86e155e9037892839904b4937e04e5a8fcdf94424",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/minimum-os.stdout",
+      "sha256": "e84642c75fd52a322e57cf984b3cbaaff401624e7fd6d2d2666e2cbbc14fa9e8",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/result.json",
+      "sha256": "34c63ff9aed8aa0af2d97dde6e427dc824ecbb9f5244f833201a137c651168cf",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/signature.stderr",
+      "sha256": "a86ca2c70304375820ac1f4877e7e0ef65ee97dd29f531a9bb7da4bb484b7bc3",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/sources.json",
+      "sha256": "4944de9eace53dd85a8149d93ca48ba85ae75fdb55a7bf6a78b45682d3e59b61",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-001857776767/xcodebuild.stdout",
+      "sha256": "0eb2d6bb199e8c8429189e7be8cc0d938cadc0b5b2a88ad2237a23992bc4c761",
+      "bytes": 207847
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/commands.json",
+      "sha256": "4dbd49efb1635639017b71b830cfbfa63a76b16455d6518e228292f9898d95a4",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/entitlements.stderr",
+      "sha256": "39e377d6fe8f14b777f57ac41f1005c82096a04f0fa0a41488babb7327af3187",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/linkage.stdout",
+      "sha256": "672fea3c1c659a3f435d38414b728f526582daceaffa1fe1eec7a94ab261da29",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/minimum-os.stdout",
+      "sha256": "f0aef56e176d6c726c4e3593df8a565be4f66acaa0d0bb3a6616f0e89f1fb537",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/result.json",
+      "sha256": "cb764b9ee79d37dbf0106ef570ac0a2b9259dfb74e409b5e15ddc6724eff1dc4",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/signature.stderr",
+      "sha256": "5d970f647badedd81801a53b4d0e46ec53e1dc944f5680b0f34f602f48466848",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/sources.json",
+      "sha256": "c424c4afebc7f98e6c998f9f49bb4eb7f7445a6b64e8a8c13857db9003ad72a7",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002149930664/xcodebuild.stdout",
+      "sha256": "75301e0e2bc9b14e9a67b150a578dbdfe99e0ff88aae6ccf29022212b6e1a3fa",
+      "bytes": 207847
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/commands.json",
+      "sha256": "1e0171c501db2a7733464483283fcba0df2155da5fc8ee03c64947bd48a225c8",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/entitlements.stderr",
+      "sha256": "680507b340d62db331e35ef0ea1c38591d76316f07bf620f519681904b5807fb",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/linkage.stdout",
+      "sha256": "9529691148b399466b6a04a3ee693fd96d282294e1942c914e8f0b1099645335",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/minimum-os.stdout",
+      "sha256": "46a8078c6c1ca06f083665f95c19f19f3a3f46fa65310c8463365025482711c7",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/result.json",
+      "sha256": "8169d3d00736eb9ce5955961a01e3cb7ab652cd5280c60feaf3507e2defcac77",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/signature.stderr",
+      "sha256": "845897c025f2b7e4394625106a5be4634560891113e86069cda2aad96f114b72",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/sources.json",
+      "sha256": "ab903310c7a4c6025f875ee5cafc440c674d263de8431b4f331b9cfb46e67ee4",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-002426054103/xcodebuild.stdout",
+      "sha256": "11b476d6e088066e386231c6e4f1df71256181cd41677c49609f5564f260bc41",
+      "bytes": 207852
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/commands.json",
+      "sha256": "e7193f190223553845fa1db4fe687bf2d3a7a4e7495ea240193e7b26c3f851c1",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/entitlements.stderr",
+      "sha256": "d0f1545361ef4841b3e317c08a1ee895d154d3b4606bd5b45b1016e78e7afbbc",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/linkage.stdout",
+      "sha256": "42cb4ee20aab0a917ada4e75d28a41edf1f09eee4cfd3722415ef0233782cb3c",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/minimum-os.stdout",
+      "sha256": "b8c520ce1dfc36524afe09448d285f261506ad059ab340301f983241af791d9e",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/result.json",
+      "sha256": "56c9ea327342c6b595fad5efbc4ac529d43f2f9aba7c4b591fce6d576d2a6519",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/signature.stderr",
+      "sha256": "57f9ea2ca348688e577ae6eeec6b5230ce0b338162b21a9cf7229939c576549a",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/sources.json",
+      "sha256": "8634cefaba75a99550f44ec6308bba583e99c30b91406d914a200a65978c8a63",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387/xcodebuild.stdout",
+      "sha256": "41c0549cf513085f3b5d96b87ac03f530a711063ba52b2d97920bdb2dd918b2b",
+      "bytes": 207848
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235517261748/commands.json",
+      "sha256": "48d0e0e81d12fd93f97ccabb7185eed066f07a4702723f950cf9f0229b8c0a3d",
+      "bytes": 700
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235517261748/result.json",
+      "sha256": "2274c4c353b5a777d553c8a02e7956480d2d965d28f094e22af4b7184be8577d",
+      "bytes": 227
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235517261748/sources.json",
+      "sha256": "5bdf35ff8a628d0ff7953083d83eccbcfcf988943ae35a57d0e67a8a143caaac",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235517261748/xcodebuild.stderr",
+      "sha256": "b62b674df781391f3fb623be9d772d59965f69c8cd0de367c60e2805041be001",
+      "bytes": 369
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235517261748/xcodebuild.stdout",
+      "sha256": "2269efb56800861969a9b3adc3c432b25e1eb75e6b64480e915089f2fff80270",
+      "bytes": 63844
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235614539427/commands.json",
+      "sha256": "f61ea7290a9eafbd34a622fcad5a172aa81131adf729f7748e7bb5b5a64d90d8",
+      "bytes": 700
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235614539427/result.json",
+      "sha256": "eec88b41f4a0f4915be20e1e771fcae68dea3f4b348b87012a679356c551eec6",
+      "bytes": 227
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235614539427/sources.json",
+      "sha256": "5b06110c657e5e4540cadd6627dd8d25b4c245238ec8ccb7c5b446ffb893e083",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235614539427/xcodebuild.stderr",
+      "sha256": "81cb02d1e2ed2630aa1bd73afee7cb0fdba952fd55e6834c74db194879be361b",
+      "bytes": 288
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235614539427/xcodebuild.stdout",
+      "sha256": "63c6e2aa0017365606ecac501707168aeb8015da17635ba2343642dfb99a4f08",
+      "bytes": 174103
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235822500643/commands.json",
+      "sha256": "8b5362b8eb516d04ef969fe3eb3bb6793c91111e366cf43ab7be4cb50d07c644",
+      "bytes": 790
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235822500643/result.json",
+      "sha256": "eb735ef0073b3ed8ab0fff5532a34e5863dcce47a944ee319b8068eb34160a85",
+      "bytes": 227
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235822500643/sources.json",
+      "sha256": "5b06110c657e5e4540cadd6627dd8d25b4c245238ec8ccb7c5b446ffb893e083",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235822500643/xcodebuild.stderr",
+      "sha256": "393cb8e5a8e849c15ea025cddcb43820cafba40d1fa911f2a90cfdd9ab8a8489",
+      "bytes": 617
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235822500643/xcodebuild.stdout",
+      "sha256": "b72de07f6514591e41886959838303395ce146ace0e0867da3b6eb3e40ed7776",
+      "bytes": 205659
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/commands.json",
+      "sha256": "65f56077692786790c057dcae967b3112bac1f55b82230711b71adbd6965c7df",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/entitlements.stderr",
+      "sha256": "cb376610271c84a8b96f15bdfadd998c80cf33f9c7639fb854324678042c181c",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/linkage.stdout",
+      "sha256": "574b8c062a1719fbc2df5daa1c286b55c1ae096d823ffdc38cbd30d7fb04b637",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/minimum-os.stdout",
+      "sha256": "8aa63564ffef29471632925bcdae3c093a4cf4df7bf15b7f2e847e7c8fba863a",
+      "bytes": 16371
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/result.json",
+      "sha256": "c5ae0ad2571dac577e7f2e89b2e93952fdda0e83381666cbc39dabcefb77512b",
+      "bytes": 321
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/signature.stderr",
+      "sha256": "316e8cecd1826ca7f1cc571c61581d3f8d64d155baffc5fe99a2707b59b453b4",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/sources.json",
+      "sha256": "b9c34b9ece06a865e901ebef8907c2a33838dc8adb71f2155c842123fc66a74d",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-235939328667/xcodebuild.stdout",
+      "sha256": "c8cb1b7052f0380ecc22697398f0481705e715f166a82c4c9078fea294520c13",
+      "bytes": 207852
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/changed-files.json",
+      "sha256": "748cd5696311dd5282930cfd73dc1758e4c9f346f4dff93b372035419893942f",
+      "bytes": 2457
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/commands.json",
+      "sha256": "b2dd023c09232e5d54a831dd123dc8b1fefb3d5bac2d32a6c80353c0bb450cb0",
+      "bytes": 1922
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/entitlements.stderr",
+      "sha256": "789bcf0dedb1811dd33f9e52234b9e736706086aec7fc8e659ef313be707df3a",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/linkage.stdout",
+      "sha256": "cccef18934ae972eebbff7ce8bf0f3fcb74a31661ddd9c7dfc2f1cb1ccec78ec",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/minimum-os.stdout",
+      "sha256": "c389bf159d88fb2e9438be5d2b70651ebef76c4ca4d496b74b253297faa3bcf7",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/result.json",
+      "sha256": "dcfeb736e2f4d19c7c1d3267a71954c491cd6f28ba1be7a682802ccbc4fc39f2",
+      "bytes": 323
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/signature.stderr",
+      "sha256": "bbfb50f29a4b652c25362050476e1b6287e60eac01cc4935cb834fa09a459288",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/sources.json",
+      "sha256": "b53cdb50a1a1a74de27d80ae0d5e6c4d4125bf9d04016e617fcfd60c4d406303",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-000324535386/xcodebuild.stdout",
+      "sha256": "933491e01c6089ae4057b550dd30f88dc9196204070fd6877b59b264085fb659",
+      "bytes": 207867
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/commands.json",
+      "sha256": "a7ca490c038ed3fd4ea05ecc1a671aa8ab95c54cfa0ac6b037bc182dbc039a57",
+      "bytes": 1922
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/entitlements.stderr",
+      "sha256": "4774f88402e74100ac4fc0e623a14c7639a140dd9a62ddf39bb63807a1b47256",
+      "bytes": 209
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/entitlements.stdout",
+      "sha256": "1f9c848c1aed2c26cb106a88930d0e5f77f71b7a26b737f8f09babe9778867de",
+      "bytes": 283
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/linkage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/linkage.stdout",
+      "sha256": "78bce551c7a6382df4e61afc15e592f50c57b454ba47022aa946e5c876c2b56e",
+      "bytes": 2220
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/minimum-os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/minimum-os.stdout",
+      "sha256": "ea014b7211330df47074cab5f133a8321dc6a8914027c89d4b2cec5f5a69ab90",
+      "bytes": 16396
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/result.json",
+      "sha256": "2136f5abf2f09bba86e0854d208c6417515ac1c60faffab783f9164fe6f34152",
+      "bytes": 323
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/signature.stderr",
+      "sha256": "d8bdcbe825549654113d68a74cd556a01767160ed75a335d57787e3afde5ba87",
+      "bytes": 215
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/signature.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/sources.json",
+      "sha256": "3c66fcfee9f0df5f715d07efe90bd45dbfc090270efb7d4e42469b19a645d5ab",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/xcodebuild.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/diagnostic-build-001154431303/xcodebuild.stdout",
+      "sha256": "eeaf93d61b558daae0e19b837e2490fd8de6bce19c2de3c85d7c84c82a0cf8a4",
+      "bytes": 207857
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/failure-matrix.json",
+      "sha256": "fa9e1b19c89e867d43e0db2355e0e3ea1ace9270977b7654503433c0d2de87ea",
+      "bytes": 23511
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-000828124907/commands.json",
+      "sha256": "3bd8a8d5e91dc6bb879e473042870df4ad727b15f1d2113301083faa483e7ef4",
+      "bytes": 764
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-000828124907/result.json",
+      "sha256": "25b49a9d687f65a9824ed7140b88cad3a3d9275d0adfdef434b097bb437aa956",
+      "bytes": 1029
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-000828124907/sources.json",
+      "sha256": "4975334525ce7e1e84ff168fb19a737673b7bf8c2a1ae4f8e8e5f5502a17b071",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-000828124907/swift-test.stderr",
+      "sha256": "7642eafd10f00aef53ce12d9fe04ce6926c83aa746d898a4a2874b77520d6870",
+      "bytes": 1530
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-000828124907/swift-test.stdout",
+      "sha256": "2a679b584dfc10f9c47acf8f40d246f9b95d175d07d0019929f51c89fe08f177",
+      "bytes": 5448
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-001735176441/commands.json",
+      "sha256": "8f0428b5a93f1672d6ed7f4564fa965cfe414af87c07ccf8bdf06469bd400ff6",
+      "bytes": 764
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-001735176441/result.json",
+      "sha256": "25b49a9d687f65a9824ed7140b88cad3a3d9275d0adfdef434b097bb437aa956",
+      "bytes": 1029
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-001735176441/sources.json",
+      "sha256": "e1e68b7f0a748eaefeec43021cb74a46cc7e1896429ba3d61b801c318f00599d",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-001735176441/swift-test.stderr",
+      "sha256": "bd8617da992ea8a39498fbe9231d8e67760dab5d19c77bea68bfac352035b092",
+      "bytes": 1706
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-001735176441/swift-test.stdout",
+      "sha256": "8652a9dca5e7b7bad3a3a8e0fbbb9a1d01e86537c2fcc7506ede4048d25e1da7",
+      "bytes": 5448
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-002600247510/commands.json",
+      "sha256": "c1a0d73b294ef940dfa14bc499d21d5da287223b404817526b7eaca9fa6e2653",
+      "bytes": 764
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-002600247510/result.json",
+      "sha256": "25b49a9d687f65a9824ed7140b88cad3a3d9275d0adfdef434b097bb437aa956",
+      "bytes": 1029
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-002600247510/sources.json",
+      "sha256": "ab903310c7a4c6025f875ee5cafc440c674d263de8431b4f331b9cfb46e67ee4",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-002600247510/swift-test.stderr",
+      "sha256": "01d55b6ca23a9d663b8fff6470a6a8e8f88d5f751b1a8b64005ae85b136113a8",
+      "bytes": 1695
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-002600247510/swift-test.stdout",
+      "sha256": "0008f8bbadd3867ccbd12586710b7aee1f2053f7d04944d84e47fb35dd2bd95b",
+      "bytes": 5448
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063434886457/commands.json",
+      "sha256": "523dfbde55fca391f9d5f2da63906acc7d3362049658aaf080b1d1c6e447efc4",
+      "bytes": 764
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063434886457/result.json",
+      "sha256": "25b49a9d687f65a9824ed7140b88cad3a3d9275d0adfdef434b097bb437aa956",
+      "bytes": 1029
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063434886457/sources.json",
+      "sha256": "8634cefaba75a99550f44ec6308bba583e99c30b91406d914a200a65978c8a63",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063434886457/swift-test.stderr",
+      "sha256": "ff5fe9112ba24dce4fb52ccda5881a1d36b7a3c6205a855098b2122a4cbbe7b7",
+      "bytes": 1512
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063434886457/swift-test.stdout",
+      "sha256": "8f5ee1b227cddaf0bbc788590193de79ad922401f306cd9903f4df4d9d8931ed",
+      "bytes": 5448
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735/commands.json",
+      "sha256": "041ec562d3981523c4b5774745013f74f0f80322ce907b348bfa9f311bcecd02",
+      "bytes": 764
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735/result.json",
+      "sha256": "1ee36cadb30b8949d366fc7150a6637199f5e1023d9497a341d55f382e0674bd",
+      "bytes": 1162
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735/sources.json",
+      "sha256": "7f1a4aa7a120fafa25130903bd9012129d823cddda504dcc34cebb551a2de354",
+      "bytes": 4586
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735/swift-test.stderr",
+      "sha256": "53cee245353e292a67de35b90204dfeb602efa0f655285ab47376803e62c7ff7",
+      "bytes": 1498
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735/swift-test.stdout",
+      "sha256": "e008867eea23d89a6b21ba0f496eab3d90629acc5c41911eec3539289dd64857",
+      "bytes": 5657
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234631267252/commands.json",
+      "sha256": "1bec8b9c4f023dce831fbbb97adcc99ff1033f9f83ac96da5f4384c47c96e6cc",
+      "bytes": 764
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234631267252/result.json",
+      "sha256": "8ac218a3a04ca2bf44ebb1adfb22ef692e4cb333bc48a5442e4bf3e2e93f4e09",
+      "bytes": 539
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234631267252/sources.json",
+      "sha256": "28346897bbc61a59ef597ebd12a45aabe215658898579fbbfb584aa2ee9c6f6f",
+      "bytes": 3801
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234631267252/swift-test.stderr",
+      "sha256": "f0d2c17bf10bf3823603edcc43ece0beed6647fb4b0abd3991edb58a2f377f3d",
+      "bytes": 1166
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234631267252/swift-test.stdout",
+      "sha256": "20f0e04de313c8755702bf0b148ec1c417ca32d48552c668bf40513a849072eb",
+      "bytes": 4629
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234746138756/commands.json",
+      "sha256": "adad5fffd874edef211a84aa3f434cdd72354b845a0b46086361005d5bc56d3d",
+      "bytes": 764
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234746138756/result.json",
+      "sha256": "565d003ea6912e47d54a07a8f36266a3e941eb73e466157a0d22bb94ccf3abaf",
+      "bytes": 709
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234746138756/sources.json",
+      "sha256": "28346897bbc61a59ef597ebd12a45aabe215658898579fbbfb584aa2ee9c6f6f",
+      "bytes": 3801
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234746138756/swift-test.stderr",
+      "sha256": "7403a2e96cbe224637eb30a9de78074db33f689bcd5dbd5fe5fcb5d304ad9e37",
+      "bytes": 1059
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-234746138756/swift-test.stdout",
+      "sha256": "0ebf0606e6a6b40217eb04a39a08ceaf810ce4ac2f74131ae5763ee5fed7ae5d",
+      "bytes": 4629
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/00-original-observation-input.json",
+      "sha256": "62d119207f0d0cb3b912848be77c903909017dde395cc7c7228bd120e8b7c205",
+      "bytes": 478
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/00-original-observation-result.json",
+      "sha256": "e644f43c0d103b21a9694c2a6ebf4afc979882058e7b67e294fb6e576e8abf9a",
+      "bytes": 372
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/00-original-observation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/00-original-observation.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/attempts.json",
+      "sha256": "741140091b2d66e0b707b0c528509ce709ada7270d6cc3545ab9abe16f6a19c3",
+      "bytes": 406
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/blocker.json",
+      "sha256": "0cdf3dc954e6d866daf86dd2fc4d542056ce64d1cb85bdf5e38ab8dccd89e217",
+      "bytes": 131
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/case-results.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/fixtures.json",
+      "sha256": "5652a768b932027c2bc225d000cab9d33abca9301275e6cebea189118ec56d67",
+      "bytes": 668
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/http-requests.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/result.json",
+      "sha256": "1fa5b255499e9cb5d9df757913f6a32d17ac61d0e1954e16bcb1744c409d4330",
+      "bytes": 865
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-000624305959/sources.json",
+      "sha256": "0d8bbc49c7b6dde502d7008235a0dd4057b04f77192cd11bc0bbbb90c35fcb85",
+      "bytes": 4271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/00-original-observation-input.json",
+      "sha256": "67db84a6485db6f4aac0c87ce0bd95b3a34e9ae13b3530e1b5e2d757768043d4",
+      "bytes": 478
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/00-original-observation-result.json",
+      "sha256": "a18283c5734a88d50a86437fec60d92032957a8e2df00e62086ee696e8d253eb",
+      "bytes": 734
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/00-original-observation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/00-original-observation.stdout",
+      "sha256": "282ff5d44b1e4017f267b4b560d9cb78ba73771f41d1ea120627b7c08338e5f8",
+      "bytes": 311
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/01-seed-input.json",
+      "sha256": "70484fc13cfec82d051f4b057667131f900b6a6845e48c033770794436de30e7",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/01-seed-result.json",
+      "sha256": "301f0172119f615abf97d3df32cfc81ebde1cc95b258a72a4f1b8942562d00df",
+      "bytes": 11376
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/01-seed.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/01-seed.stdout",
+      "sha256": "cd94ce1026f81257b33cb2c5b2c27642980c8f90ada78142a834a41f6f05db7f",
+      "bytes": 33503
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02-restart-input.json",
+      "sha256": "35215186c305c62f1f4e7b7f37b173e8cc8ffaedb781051d714dac9c3583b360",
+      "bytes": 1904
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02-restart-result.json",
+      "sha256": "d6088bc5d069c0276ea246533320a72f9f4527766bbffdb3a9075d63a60f477d",
+      "bytes": 8431
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02-restart.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02-restart.stdout",
+      "sha256": "71cfa80c3c779b6b14e2c369d8cf3a0ba72e38c5f21a9fd3cb787ab4844ceac3",
+      "bytes": 28555
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02b-switch-input.json",
+      "sha256": "392870118dd0307b4d33596172eaed4d2b0527745da1503322bda35a9b23916b",
+      "bytes": 1904
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02b-switch-result.json",
+      "sha256": "dc3e2a4d6ff8d2e1f3ee5f65bfdbb5f7f04cd16c358e4583c47b91e2b30f9028",
+      "bytes": 11932
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02b-switch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/02b-switch.stdout",
+      "sha256": "643df59c5f43f982cebd5d122d5cb58616d34a891edf1813d72d85039003016a",
+      "bytes": 51787
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/03-private-input.json",
+      "sha256": "e3a78e06d26125f0c438e4d52c1168142cc1d33ae3b78dd199b8e7c7d098ce6f",
+      "bytes": 1900
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/03-private-result.json",
+      "sha256": "501b4689fdf4f61a1fcfb97ed413427277ef4ff4e4f8de62de10954332d90cd8",
+      "bytes": 15314
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/03-private.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/03-private.stdout",
+      "sha256": "c4290b02d96c1b6d576929c4468764ae4a101631b5e51af224d7c9b1cf48ffae",
+      "bytes": 34005
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/attempts.json",
+      "sha256": "2080c4c5e4e5639b2574735962548d5bb50af95f6782327accee54714c73fbe5",
+      "bytes": 51439
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/blocker.json",
+      "sha256": "82e1f99d636ed168cd63db79fc43de9e1451f5eea9ddccb8d81af558902088fc",
+      "bytes": 118
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/case-results.json",
+      "sha256": "ae8df2989f781e27056c5fa1395e18104ba41cf670c841a2466a69721ce7c82d",
+      "bytes": 17145
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/fixtures.json",
+      "sha256": "12fb24140f5db64489cd3a0acca7256ecc74e2b6c277ad8510ce539a50c0e984",
+      "bytes": 668
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/http-cache-results.json",
+      "sha256": "beabdb594860290a328daa227e025041cf11e1c39249b37278bf57bba9c66b53",
+      "bytes": 367
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/http-requests.json",
+      "sha256": "4aa9a6d1a90c1d0f130d7ebdaedf8cbe97a66905be1472b071bb47ada2580a0f",
+      "bytes": 2015
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/result.json",
+      "sha256": "ad2799962613f5e4eb01668b9dc914b123ed9c5709a1eb37b978d6508ca24995",
+      "bytes": 867
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-001659018868/sources.json",
+      "sha256": "e1e68b7f0a748eaefeec43021cb74a46cc7e1896429ba3d61b801c318f00599d",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/00-original-observation-input.json",
+      "sha256": "4f4cf9b1b0cd7229f8c00ab5e3ad8d50a18ec7f1f2cd514c187561f477eabd16",
+      "bytes": 1918
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/00-original-observation-result.json",
+      "sha256": "54c0ed9d4bf7f04c875464e072f343c392e9c25be0c4855532ac6e97934a878a",
+      "bytes": 2174
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/00-original-observation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/00-original-observation.stdout",
+      "sha256": "39f2fad96b1e5cd39bbac2455696db19cd2264b6b6e874be11890abf42fd3bd7",
+      "bytes": 311
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02-restart-input.json",
+      "sha256": "08b3f62027aa9c3f4bf91aef759156c387b56dcc1e45f4d43461075f77c6e992",
+      "bytes": 1906
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02-restart-result.json",
+      "sha256": "bb98758f53b93d257534fdb6a02bed445932a55f52ded3d24e250d96333766c5",
+      "bytes": 8437
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02-restart.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02-restart.stdout",
+      "sha256": "4b5276728797433027aaa0163b4180f2bcb5002a609ceda494b64f7ffd7a76c0",
+      "bytes": 28616
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02b-switch-input.json",
+      "sha256": "8259de591788e0e5685be8dee98f36cccfa03514e32f9889a7b5725add1b863f",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02b-switch-result.json",
+      "sha256": "530f1c259f41a04a62bfa0fac3f5c45f4bc12aa53611a1a7042dfafdff5148ea",
+      "bytes": 11936
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02b-switch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/02b-switch.stdout",
+      "sha256": "74e6fb5eb9e7a2d3ab4623e928a87e3acc53c32a324288f6c52ec54dfc05b375",
+      "bytes": 51962
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/03-private-input.json",
+      "sha256": "61af7395dae1c0d8d2e23c4b7998140733f0d38a09ae87433d670c6263b2eb78",
+      "bytes": 1903
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/03-private-result.json",
+      "sha256": "9120b506937943a6854ddacc7f45d0204ff24267987e41d7897b25e73cea5f09",
+      "bytes": 15828
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/03-private.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/03-private.stdout",
+      "sha256": "555cd5cc14ff2f3ded8e6f03fe5cdaaf2f1ff86e62b1cde190e7904f69df6269",
+      "bytes": 34492
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/attempts.json",
+      "sha256": "0f4574310908c8cbddebfe92f3f6f9258f6bfe39aa07c592a4d403033a971e12",
+      "bytes": 41312
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/blocker.json",
+      "sha256": "82e1f99d636ed168cd63db79fc43de9e1451f5eea9ddccb8d81af558902088fc",
+      "bytes": 118
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/case-results.json",
+      "sha256": "cd616dbe96177934fac9ebc70eed93bf6cb465b4bc6e8636468e1cf46ef9d057",
+      "bytes": 11950
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/fixtures.json",
+      "sha256": "41a50c6acce394d3e9d6a855ba9d1534a6dbed8d06a3c00f09359a06068878df",
+      "bytes": 2131
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/http-cache-results.json",
+      "sha256": "beabdb594860290a328daa227e025041cf11e1c39249b37278bf57bba9c66b53",
+      "bytes": 367
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/http-requests.json",
+      "sha256": "ea3fcd8db7efb09c70056bd2d9ed18be2378618f27f5142a0eff45128ecff8bc",
+      "bytes": 1644
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/result.json",
+      "sha256": "ad34780b1a9838f9f435ef5e7224d658ec2089ad155386febfd93a4be6a4e3d1",
+      "bytes": 866
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002020654867/sources.json",
+      "sha256": "4944de9eace53dd85a8149d93ca48ba85ae75fdb55a7bf6a78b45682d3e59b61",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/00-original-observation-input.json",
+      "sha256": "4f4cf9b1b0cd7229f8c00ab5e3ad8d50a18ec7f1f2cd514c187561f477eabd16",
+      "bytes": 1918
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/00-original-observation-result.json",
+      "sha256": "7554a4cb9f0eab2b3369aa77f414544ec80bac0e7935efb30a15ed643b629937",
+      "bytes": 2174
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/00-original-observation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/00-original-observation.stdout",
+      "sha256": "bd196060438d460894e28b658c5fdafa85156cc5709057221cc4415964fbdde3",
+      "bytes": 311
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02-restart-input.json",
+      "sha256": "08b3f62027aa9c3f4bf91aef759156c387b56dcc1e45f4d43461075f77c6e992",
+      "bytes": 1906
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02-restart-result.json",
+      "sha256": "63a79aa57041b1698b81712ef216b275a36790213442879a5070db1314050fa5",
+      "bytes": 8813
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02-restart.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02-restart.stdout",
+      "sha256": "6f18c81319be76d9a56ef8b87f99fe055052f58661c41fe0798944890284b9af",
+      "bytes": 28904
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02b-switch-input.json",
+      "sha256": "a296f98243f17f752470a2ddd23d036d189405f1a6b3f5c605f62cb127ab6923",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02b-switch-result.json",
+      "sha256": "849ef63b7ec91a26652419fea99449078102fc03e6720e00e423fcc9ca2dec5b",
+      "bytes": 12312
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02b-switch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/02b-switch.stdout",
+      "sha256": "009a86e3e6cc2d99e57131121a80b53a8f6ee24f064cd2a7116276dfe8507459",
+      "bytes": 52250
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/03-private-input.json",
+      "sha256": "152ca34608445ae44831cde182413802f63dc97b00180cda2ddc1f51c0d4e079",
+      "bytes": 1903
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/03-private-result.json",
+      "sha256": "c30cd2b0750a918677cb69d05689c4c165e1d1a568a1635b4e9fa1e1cd75b49e",
+      "bytes": 17512
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/03-private.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/03-private.stdout",
+      "sha256": "f082fc2c153f14c7ea8d2abba6dac9b2eb4b844de1f0845735cd7e95bf8a7c85",
+      "bytes": 35904
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/attempts.json",
+      "sha256": "cc38c65d65b26e8ed8a093679cd04c547441c0572fb314f9e01f8c02890d75f5",
+      "bytes": 43918
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/blocker.json",
+      "sha256": "82e1f99d636ed168cd63db79fc43de9e1451f5eea9ddccb8d81af558902088fc",
+      "bytes": 118
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/case-results.json",
+      "sha256": "1b8b6e011360e2b71f4f695d603e66deb588f37c7abff5d64c41c6d1e62ae216",
+      "bytes": 13132
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/fixtures.json",
+      "sha256": "41a50c6acce394d3e9d6a855ba9d1534a6dbed8d06a3c00f09359a06068878df",
+      "bytes": 2131
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/http-cache-results.json",
+      "sha256": "beabdb594860290a328daa227e025041cf11e1c39249b37278bf57bba9c66b53",
+      "bytes": 367
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/http-requests.json",
+      "sha256": "fb966edd760d6ebbacab86856aea4234c31bf5372bd2addb34d4fb9a218d3e14",
+      "bytes": 1693
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/result.json",
+      "sha256": "d506f883258f7d6c3fcaab2dbac8bde709378a39448be0d43c4c3f01eef01d2b",
+      "bytes": 866
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002553871987/sources.json",
+      "sha256": "ab903310c7a4c6025f875ee5cafc440c674d263de8431b4f331b9cfb46e67ee4",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/00-original-observation-input.json",
+      "sha256": "deb66463f9c69def55341c2ecb7c4a3ab5245da0101ddac7a4724ebdf518fc83",
+      "bytes": 1920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/00-original-observation-result.json",
+      "sha256": "d71569c63f648e80da175848d098e2202584eec591d08559a17feadef613af21",
+      "bytes": 2176
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/00-original-observation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/00-original-observation.stdout",
+      "sha256": "bcc8c23405cf7c748e8b1ef200c81debf49437d3682a6664e5e0b6f66c899811",
+      "bytes": 311
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/02-restart-input.json",
+      "sha256": "c7c4e5420e5b5c969a3f11bb32808384844eaa230ed4b8bce5f61bcd302ff9c0",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/02-restart-result.json",
+      "sha256": "d71853ffd77c3b6f5862deb06dd1656a8c22281e0e951fa196ab16dba7af0bea",
+      "bytes": 8813
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/02-restart.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/02-restart.stdout",
+      "sha256": "b4fdafbb3d2e95cd15796a38b5daa1a742bf844817af10f87db6a29874fef20e",
+      "bytes": 28941
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/04-clear-input.json",
+      "sha256": "ce03fe7961cfc7263f3f9a95c4826cc16c39a43b69d7a93aa3346261ea5bbdfe",
+      "bytes": 1907
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/04-clear-result.json",
+      "sha256": "28254554451c8084671319bf35dda45ea219b5fbdc44dba1717362bb488e034e",
+      "bytes": 10944
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/04-clear.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/04-clear.stdout",
+      "sha256": "9550bf7af5594855d80a6126e9a941e3a47257966e30b4e74c011ebce8c463d6",
+      "bytes": 42378
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/05-remove-input.json",
+      "sha256": "d99f3a2b3a99bea96e97bb494d23d08b43a929ef2f0801547289d68a00f6b46c",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/05-remove-result.json",
+      "sha256": "41558d4cd428937ebf16077c1a7b3db6b58b259e48038825d77db4c63d173ae4",
+      "bytes": 5996
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/05-remove.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/05-remove.stdout",
+      "sha256": "ab6d36c6eda11adb3a5ff597cf1ae0b9bebee19eb95f1f833748aac4c4ad3b7c",
+      "bytes": 26947
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/attempts.json",
+      "sha256": "ebae0566ca2e2247938ad82c102e65f4a25e5d575418e3bfbcb677b943f6cc66",
+      "bytes": 194897
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/case-results.json",
+      "sha256": "1cc2db01baea32bc74016bb2897c1749cb622529a8b737933848a995f36bfd96",
+      "bytes": 61916
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-fixture.json",
+      "sha256": "9b0cf039cfbb3f06a51c4c09e50b95b28c77df18400c858c7d260a98b9b3a8b1",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-input.json",
+      "sha256": "fed036c1db01a7159bf51c39381b7416658b477904761acb57912a4d79287112",
+      "bytes": 477
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-reconcile-input.json",
+      "sha256": "e26f7bc185db7883ff2732f9bcb3ddb0c6bfee69efb95f51f5bd3c1b30ea86d4",
+      "bytes": 1276
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-reconcile-result.json",
+      "sha256": "bd6598420b23f48f1b7323b65c733e0f06eb5e93753d8c782f34697abb92d565",
+      "bytes": 3804
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-reconcile.stdout",
+      "sha256": "ad10e218bf7f5f43e47f3ba97578f34041eda3c6476d69ce92a51ce0914bc22d",
+      "bytes": 3202
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent-result.json",
+      "sha256": "14dda5a48d0ed154a421254df66e653a431ed975dbd89cfb9a88497f16607aba",
+      "bytes": 1171
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-00-creation-intent.stdout",
+      "sha256": "ed2714cc36669f7a29b69e083931b3844e45b7ef9bee83019cf14d562f432326",
+      "bytes": 1730
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-fixture.json",
+      "sha256": "06498f8e6fc6c9d78146dd16193e6a645339748b2f92732a740bdd9570baa4c0",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-input.json",
+      "sha256": "eb5f7876fbe2bd07c45bce07f4230f3f3b57ebdd644ba8a7449cbcc12a174dd5",
+      "bytes": 480
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-reconcile-input.json",
+      "sha256": "7fc82d365492cea26cdd0c005883b2992497c14c6f755c3bfbccfc8f1d106684",
+      "bytes": 1277
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-reconcile-result.json",
+      "sha256": "4a6d37c064c34787c5b7e9daee30f52947ec0f07f3a76468930971f4240ff9e2",
+      "bytes": 3592
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-reconcile.stdout",
+      "sha256": "43a4e94d9ff1522766220c638f3334cdf17570b283b08b86f72ba3cb1d95325d",
+      "bytes": 3049
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory-result.json",
+      "sha256": "481bbd6f6ef51a142366b823afc7659e082002758be8645784447d489412f203",
+      "bytes": 1178
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-01-persistent-factory.stdout",
+      "sha256": "6fc81124fafbe47d292613d8b9d41d124339cf25a6d4db0adf9056b08662d57c",
+      "bytes": 2972
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-fixture.json",
+      "sha256": "be68b77f633625f7eee75042ab758dd932d8fb5c67ad330178aad6252c4769dc",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-input.json",
+      "sha256": "19b6ed7cb00f2ff4eb5d62fd8bfcd6e217195cb684e2ce6b69141b28cfed1c89",
+      "bytes": 472
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-reconcile-input.json",
+      "sha256": "382b86b98edad30d18acd9a49bebf8dcf17f5ee3c06bfd684513257a865dfff3",
+      "bytes": 1278
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-reconcile-result.json",
+      "sha256": "333f9967a408a4fccfff1b39cfb6ff84f926dfbb0f93fe664c573d5f0a0cb2a2",
+      "bytes": 3586
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-reconcile.stdout",
+      "sha256": "30814acef78438afd705c6666427e3cd74542f4ef6e07d67eded79dfbffa8f64",
+      "bytes": 3052
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment-result.json",
+      "sha256": "a416343733f424f423f33d43076e4c7e95712ae9716e85eff740ef79e61802c2",
+      "bytes": 1163
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-02-assignment.stdout",
+      "sha256": "7e60068cd99387af8dad39d999c27028b8194b2d98b2facd060b3689e01c0cda",
+      "bytes": 4131
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-fixture.json",
+      "sha256": "3a9a80c7b715187d9b749de17c4295c9b3af0aa40e4da124451ee54c5d824ea2",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-input.json",
+      "sha256": "bd85ef32565d39cd9cadee6615c345c6907e88d9fa5b8cfbfff8e010e4e40946",
+      "bytes": 474
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-reconcile-input.json",
+      "sha256": "62cbd9bab9d59c97ad7892fc91212a8421da0c8150e7a5e138a4624bc32cd1ad",
+      "bytes": 1278
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-reconcile-result.json",
+      "sha256": "fc2bd29c8e0fe3fbed0b4ec819f9a2e05f8fbcacd0f5fdba4bbd601fb1583465",
+      "bytes": 3588
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-reconcile.stdout",
+      "sha256": "394b27e6c5a846ee8c00f213aed8900e9aa6a128f479848dad6415cf6eb0ae10",
+      "bytes": 3052
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction-result.json",
+      "sha256": "f7303b01ff47ec6d089589d6192cd0ffb81a9a05c27b2358b3037dcc2c899237",
+      "bytes": 1167
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-03-construction.stdout",
+      "sha256": "562647f394d33a3432fc9004698260f3b8f754ad3e6f22902450400b754a9170",
+      "bytes": 4156
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-fixture.json",
+      "sha256": "3d5e17cd0330fbca29c21b72eff9326c5a11e1308658f5236145e0346a323544",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-input.json",
+      "sha256": "6074f97a77c91e9ea452945b680513d2e82fd09de6b4b74e03c6cb89e768411f",
+      "bytes": 473
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-reconcile-input.json",
+      "sha256": "a06e1b1f6e847ffab99f34ae517308380f778f84c25d7fa95d3795dee2ee2baf",
+      "bytes": 1271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-reconcile-result.json",
+      "sha256": "e271483f7ccfaeb247a64fc2e577da766b9719803a65907f5c31b2d1fdb1cfc6",
+      "bytes": 3573
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-reconcile.stdout",
+      "sha256": "322c40ff02e76d38e3623e021b62d1db58b12c458dba55b2976c72a18eec667d",
+      "bytes": 3031
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication-result.json",
+      "sha256": "917e73ee200f42bbbeb3823a5419f71d049f7df0f1cd857e22c9be2a1aa52d81",
+      "bytes": 1158
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-04-publication.stdout",
+      "sha256": "68703a9e7f630289927d71a8c0cc133cce1829a8c48d38142b1c3c054d888426",
+      "bytes": 5854
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-fixture.json",
+      "sha256": "7c43e26dcf7bc41d7b6aac645535428a623f2ed65218d205ca611346a4d6db84",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-input.json",
+      "sha256": "57303ab6d2d1a1a45eaa7db6bfa19737e8230aeea7d59307c938ef90363add55",
+      "bytes": 1914
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-prepare-input.json",
+      "sha256": "1cbceee592a15f75b915223e93e14e64e194b6d442dea0f6cf224aa322538dce",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-prepare-result.json",
+      "sha256": "e3b2ff3d9cf107750b969cdffdbc800dde0076758b17f79ccd1c21e13cf6105f",
+      "bytes": 11775
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-prepare.stdout",
+      "sha256": "094e71c4b6e58343e5e694802b044c15179e2c724971cb18f6be1563b763c376",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-reconcile-input.json",
+      "sha256": "a26a44efa67a86392ae2e6ccfad19cfc0420129de451eddc53e0596184ad4bde",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-reconcile-result.json",
+      "sha256": "081954044ca80fd432e7a06959f02c98986c540daccec5158d7e56e11f07c5f8",
+      "bytes": 5031
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-reconcile.stdout",
+      "sha256": "ac175d65575ea8b3941c2e57716d445322516dd35b32f36d50059299ad7a97b9",
+      "bytes": 8542
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request-result.json",
+      "sha256": "63efd05b678995fbadcee311ba3634681d65f9a667458b2febee66be24a8dd00",
+      "bytes": 2286
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-05-clear-request.stdout",
+      "sha256": "c85804575bc49b4b704ba4d2f2657945b11ff7fa4002def7ce585f56fb711342",
+      "bytes": 20639
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-fixture.json",
+      "sha256": "11a04ec538961ddf49e887acb71aa2a162783f9a125c0c2548d1ede3e3073168",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-input.json",
+      "sha256": "ae6eb14bc2cbbb80b330edd283937123ac296467ec88d0b07012a16a5df5bc69",
+      "bytes": 1915
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-prepare-input.json",
+      "sha256": "c1f0de559ea9466da1ff30ffc1c57ebcaddbeec4d091fd7f210b37ecac45d992",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-prepare-result.json",
+      "sha256": "053277f744cb5243ac471ab8cd853d36511d9f4df284e008db5f4669735965d6",
+      "bytes": 11776
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-prepare.stdout",
+      "sha256": "f65ab711824195332157b05c86a088719f48d2344a8c0f266b3ac5b8063115e4",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-reconcile-input.json",
+      "sha256": "98e65ba0893bfc5aef5cf4f0af0f152b27d6edd077ac062933ea858a5e2a62a5",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-reconcile-result.json",
+      "sha256": "be0a84f67a6c7c2a0c3234a25d956c59a501c3f9a8f5f3b011025f096ecf8b23",
+      "bytes": 5032
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-reconcile.stdout",
+      "sha256": "b00a84e573b9365ac4b491e32c96d1a4f5b969151b7969b1c4cca0545b18d395",
+      "bytes": 8542
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback-result.json",
+      "sha256": "4ced117099913e872b60575e806433eb2a7bab91408d78b765ae79c9b8f39e54",
+      "bytes": 2288
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-06-clear-callback.stdout",
+      "sha256": "8ca77ac3b2e7bc049d9790e57c84e883ccbe2194c5e5a5a058e493f94e67381b",
+      "bytes": 20666
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-fixture.json",
+      "sha256": "ddc8273b68999f36ed21d14f75e18d6d0ff1f3cbd877514a2d03ba60e4bac078",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-input.json",
+      "sha256": "f5a0501b21ed982794e76e24cd4e0b791c74fa4d043402de7481e130ab37fa88",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-prepare-input.json",
+      "sha256": "00f910cedb1bea963c29da954d13610cb82caa3a143877e6bfcd14a7ca1cb6bc",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-prepare-result.json",
+      "sha256": "2c695110a8e6c3bea9984f68a952e5d483a4029fa251dacad3b9481d2b367481",
+      "bytes": 11768
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-prepare.stdout",
+      "sha256": "097de175f351b3b773612e64bb91d384b570b0ab8d20a3fb8512df9655be4e1d",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-reconcile-input.json",
+      "sha256": "bcddc3ec6c1437e89a1b2666c6ff9ad454f1a8eefa8d52bf1111fcb1d8fbc9cd",
+      "bytes": 1915
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-reconcile-result.json",
+      "sha256": "cb93f84815cc117e65ee7855b97c59a2db74440dd1b9cd6e1f84a5d626a40a8d",
+      "bytes": 5038
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-reconcile.stdout",
+      "sha256": "710a8a442fe09d9e003a7c2b78d5871500fc166ada6c2257481de4ec29b7732c",
+      "bytes": 8585
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire-result.json",
+      "sha256": "91ea50e452fe9c5e30dd3157458ce17124fa6ee89c51240c0152f3e76783ec8c",
+      "bytes": 1794
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-07-retire.stdout",
+      "sha256": "9d887e751d55d8e2856a345ac06a66993474979e3a1394028f77fe03c7ebae40",
+      "bytes": 8237
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-fixture.json",
+      "sha256": "9042afe44900e9f53feed7d68f03cb3391ef3442b3928671371f2328b92d5e98",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-input.json",
+      "sha256": "60ea7123acf5ebbfa19710b7c9869b4404d56c9f6ca6d09d9f9519f806f4618d",
+      "bytes": 1916
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-prepare-input.json",
+      "sha256": "2bc9e74ffff9943e7ee69485509c0f14a06a3db77b96fae1a5b665fa91a76629",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-prepare-result.json",
+      "sha256": "eebf5a28ae0dd7e2bff516b6dbea6cb244491f3462cd5329fa38ba3ab2c7472f",
+      "bytes": 11776
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-prepare.stdout",
+      "sha256": "f71ccbacb67aef7b9eedaadf331ee60d2c5b614741bf827ce57d776b5e0b7008",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-reconcile-input.json",
+      "sha256": "ad1e6d6c17fa5a9215513d20da08a136d5ef79db3b795203160e77547998dda7",
+      "bytes": 1914
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-reconcile-result.json",
+      "sha256": "3fafa0fc632ede16f6e859cc53e2e734d44e961eb0a42d7c1ca46c507110e294",
+      "bytes": 5044
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-reconcile.stdout",
+      "sha256": "adcdbcdefff9b2ba97a9e9bb0da28671e2595b79ef3321d6dd11db3bac7c59cb",
+      "bytes": 8578
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request-result.json",
+      "sha256": "6cccf760383fe7d16eeea12c29b13ab42bc8d5c7e062cf2fe2e2658b154076f3",
+      "bytes": 1809
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-08-remove-request.stdout",
+      "sha256": "f88fbff866ff69b1bbaa88069bbb051da81286722de3f0efccb24fdb00f81f50",
+      "bytes": 12241
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-fixture.json",
+      "sha256": "cb0f5a123b5c36aae936d495af34509729889e8af0a143596c2ea0c797f0a9bf",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-input.json",
+      "sha256": "4387a61a8feedf67597ced928384c106615d759d017663f3e361d767ece996d2",
+      "bytes": 1917
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-prepare-input.json",
+      "sha256": "a03645cb5a315bf722877ddf40a6e3c6d4ccf4f597e3fe7c050b73c15cb37756",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-prepare-result.json",
+      "sha256": "768f4452d1a98187e9a6d32c6408a9c53125082e458dd1384f482924b00e2c3a",
+      "bytes": 11777
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-prepare.stdout",
+      "sha256": "9a58cb0135ad83ba130bd5a5b251bb00e7c129200a2c9c6d5b52cad09ec940b1",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-reconcile-input.json",
+      "sha256": "1fab234d59f2816bd9f273ba84eb4c3738e2153c40c0120873e9d3b12497bf72",
+      "bytes": 1914
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-reconcile-result.json",
+      "sha256": "e6775d20a775a55f64ed852dfd965d42c1da969fda4ec8c83ae48f37e985063d",
+      "bytes": 5045
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-reconcile.stdout",
+      "sha256": "d1d646c03964e6b28790154b7eb48cdf7bb149c7b71bfaaa564c84ed0f201a04",
+      "bytes": 8578
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback-result.json",
+      "sha256": "46f9ac52dcf0f26098d79c42906daeaf006311754a82cbea088d2274162f77f0",
+      "bytes": 1811
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-09-remove-callback.stdout",
+      "sha256": "88c65cc29a6ec8eb10c4f861d5f8a748c5204681d41a41fafd41b7f1855176ea",
+      "bytes": 12269
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-fixture.json",
+      "sha256": "94b4f2937074168d47bd173172def92b9012343036069d6535a22bbe5f51e7e9",
+      "bytes": 467
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-input.json",
+      "sha256": "17bfe7545b8e0845119d8d5cb7862c68e619291a615ef5a467a704f765c8da41",
+      "bytes": 1913
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-prepare-input.json",
+      "sha256": "2b67ab5a0ed803c550379f6d1fd0ae925948fc8dc440ab5f228831747d3800f2",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-prepare-result.json",
+      "sha256": "39ef7968ec1cfb9c28a4bfb6af86ff4938f1f255a68c4261511640bf42220c1f",
+      "bytes": 11773
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-prepare.stdout",
+      "sha256": "f4233d85f8302f393958d40962147d66bb0225a235cd464d57b7ffc8de9c6496",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-reconcile-input.json",
+      "sha256": "f0f0723323d4569b2c17106d5e6a01f076c84c71e295aaafaede51cdfd48d699",
+      "bytes": 1918
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-reconcile-result.json",
+      "sha256": "52ccbd8defc3520b2e0a3cae3ca3f579715760d549644dfa7281d88c8a84448a",
+      "bytes": 5049
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-reconcile.stdout",
+      "sha256": "be4f19d989ef74c001c667f4edb358d348ec8c37c1adad2cf097dd3e40b37a6e",
+      "bytes": 8606
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration-result.json",
+      "sha256": "cf1ee69b2b359f63b77531b058363712ce6b3d265f2baaa3b752631b35a1832e",
+      "bytes": 1807
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/cut-10-enumeration.stdout",
+      "sha256": "7eee7d2d35fe94825d9f28b9e706e31a935d1cfc69a5d69ecdcf206346c291a1",
+      "bytes": 1232
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/fixtures.json",
+      "sha256": "60e2f9f43649a3a8d78c719111215e4f130ab2a57b29800f97743eddc20579f4",
+      "bytes": 2133
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/http-cache-results.json",
+      "sha256": "beabdb594860290a328daa227e025041cf11e1c39249b37278bf57bba9c66b53",
+      "bytes": 367
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/http-requests.json",
+      "sha256": "870d27c8c182e0085ba26cb1d64e05e94fd6203d44c2598d7156dffac73088be",
+      "bytes": 4556
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/private-gate-not-waived.json",
+      "sha256": "767582959dfe7ecb961d0dc8c112b2e4504893cfb1877ab99278feac5ae95a56",
+      "bytes": 303
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-input.json",
+      "sha256": "3631892764fd7d2793f7371e96f9eb8177c3d2c1dd197a5a79fae3d7aba2caf6",
+      "bytes": 1917
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-prepare-input.json",
+      "sha256": "513b8b47316623fdb26fdf35b31daa993a1ecc457c245231c23a873b077590af",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-prepare-result.json",
+      "sha256": "794ab8b97261bb166743b20addde47334fe548a3ac6e4884091ede5119dbf5af",
+      "bytes": 11774
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-prepare.stdout",
+      "sha256": "5249ff4bd9c30b6d020764c2bb4d5f069330b5de2521af8bdccab963f7090ae5",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure-result.json",
+      "sha256": "037afd6dc8440dbdc7a2e68bdf78417ae847d234929003afbd9318afbec050b5",
+      "bytes": 5194
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/publication-failure.stdout",
+      "sha256": "f34e778c99b83092f47e83fbde683ee52cd8b833e8a10632b8dfb1dd551b1867",
+      "bytes": 13636
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/result.json",
+      "sha256": "557b556ab99fac8724aeaccda34bce907fdcda7b1011b68fc1d83758ae23f225",
+      "bytes": 947
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-002844387365/sources.json",
+      "sha256": "ab903310c7a4c6025f875ee5cafc440c674d263de8431b4f331b9cfb46e67ee4",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/00-original-observation-input.json",
+      "sha256": "23a7094030adf9489e406b6f1e9e433cee79b1e6f16663647909a8259eb1d930",
+      "bytes": 478
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/00-original-observation-result.json",
+      "sha256": "23e91ce5e1e21d940cb90bc3b79f7ac9629ae90771bc9a32b21f0dbbf1f1d3d8",
+      "bytes": 734
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/00-original-observation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/00-original-observation.stdout",
+      "sha256": "475236d0aff90694f5a9d7cbcdffd3a7f113e4b448ef57ad4a66f46fc4f83607",
+      "bytes": 311
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/attempts.json",
+      "sha256": "902676ab3fdf7f56dfec18ff3f96b7ecf053fa4e3db26475073b09ab5652d791",
+      "bytes": 22512
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/case-results.json",
+      "sha256": "6da02b804f37832a6fdab56ed0a0263c621f6897a8bbc3f6fb967bb27433994e",
+      "bytes": 8361
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/fixtures.json",
+      "sha256": "29e8d4e421ca0725f672db7449e9aa0da8c4c8df9818e8ce4f4321c21157052d",
+      "bytes": 668
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/http-requests.json",
+      "sha256": "1ed88640197606a0fbec0df15b9a00c095e9e401ad49679071f7d862be9fe56f",
+      "bytes": 1385
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-input.json",
+      "sha256": "559970c724516f2fc7e259dff29bc9dda1a8dcd64192236f652303cfd80a1c36",
+      "bytes": 472
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-interrupted-input.json",
+      "sha256": "44beac15fd06c08dea01ee7cd01693168feb0a714a73e69bb18010cf2ecd802d",
+      "bytes": 484
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-interrupted-result.json",
+      "sha256": "395ca46caa2c9c296e9fe64b87f601ed5de4a74086c4ce4a8307c80f948e1991",
+      "bytes": 383
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-interrupted.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-interrupted.stdout",
+      "sha256": "1c5e6580a3e324d28a10019bbc726b94de922c91bc09a2316935185ecd463c8a",
+      "bytes": 457
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-restart-input.json",
+      "sha256": "559970c724516f2fc7e259dff29bc9dda1a8dcd64192236f652303cfd80a1c36",
+      "bytes": 472
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-restart-result.json",
+      "sha256": "49f835d8cd6b2b390c222c77a4af997c63e8c3645440e2700e978975ecc8a413",
+      "bytes": 9911
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-restart.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-restart.stdout",
+      "sha256": "403fb59c9ae97bea595e3ed30350181f278f9bfe5c14a83c3c9ab2626443979c",
+      "bytes": 7671
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only-result.json",
+      "sha256": "596ff852f19562ccc8f57e563ca0b8ae0334eb7b599c2ac99f4b952df85314e3",
+      "bytes": 9903
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/private-only.stdout",
+      "sha256": "d430fc831769cbaa7af7f4f49f1abeec4807337067fbbca6dc532db3523e625a",
+      "bytes": 7671
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/result.json",
+      "sha256": "d91bf40a701b039b62dda5a8fb0204a6f4c14fc1fd5f0e7d1d194027d7c78dab",
+      "bytes": 937
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063003266421/sources.json",
+      "sha256": "8634cefaba75a99550f44ec6308bba583e99c30b91406d914a200a65978c8a63",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/00-original-observation-input.json",
+      "sha256": "84af68599ad580f729130a52ba3edc43a0788a8a69f257966a2023a8fe2ebf47",
+      "bytes": 478
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/00-original-observation-result.json",
+      "sha256": "ba288ad2ce1f5a1c6c38d2b1cf8a80afc3306f94385d2d536dffccc1ea3ca033",
+      "bytes": 734
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/00-original-observation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/00-original-observation.stdout",
+      "sha256": "54f9efcdc04bb0a849382a6d3de12d9b5636c1a6ab638cbfde08d3d965f6a40d",
+      "bytes": 311
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/01-seed-input.json",
+      "sha256": "a2f2cbd476db32b2a6c669ea45d3e57a649e6b16768b5a4c1d58a56c971d6009",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/01-seed-result.json",
+      "sha256": "dd3862cf0b4cfadbb717e6a43a883aff270965b1e968e0fe567a4703216ea49f",
+      "bytes": 11752
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/01-seed.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/01-seed.stdout",
+      "sha256": "61080249bdce2a25fda8072dc10c1782aef9de6173811021072733dd666aa79c",
+      "bytes": 33791
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02-restart-input.json",
+      "sha256": "3b2eb3b76a084eecba95bbe33374469a1f84e62341306f111a03f6ee260fd339",
+      "bytes": 1904
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02-restart-result.json",
+      "sha256": "25c5495afc4f982a00ca89f94d15d8180596471443b74042273548f3dda693c8",
+      "bytes": 8807
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02-restart.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02-restart.stdout",
+      "sha256": "c36454a68cdb0cde95ed081cb752dfdf1924cd1de55bc78558f2f8cc410f8761",
+      "bytes": 28843
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02b-switch-input.json",
+      "sha256": "3947b8737c8c04195fda5ee3392e63dddea4b8f6496d58e41a7b1222ec8da7ff",
+      "bytes": 1904
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02b-switch-result.json",
+      "sha256": "634fc975ed585dfd9550e46e569c98b66507670bcaa080b529f6955954d1042f",
+      "bytes": 12308
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02b-switch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/02b-switch.stdout",
+      "sha256": "c8cb061b7bbb085f32c4137479fc9e83f39ae4afda04e3985524e6cb60fcba8f",
+      "bytes": 52075
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03-private-input.json",
+      "sha256": "7d0df352b88edd3c79744f7a594a1193398510b6537f7960797d7e06b170e9cc",
+      "bytes": 1900
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03-private-result.json",
+      "sha256": "634ae678dc50649f35b749a89e0ba721f9a05b0d17b43e86611465cc31d70541",
+      "bytes": 17604
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03-private.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03-private.stdout",
+      "sha256": "334d612642f4965a75aefeb8312dc5dc3e0af505837fbd01c7846db701244130",
+      "bytes": 35916
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03b-private-interrupted-input.json",
+      "sha256": "94739ed378530ba86fdb6d416bcc9b24b95103997c0309bca9a400445615fa80",
+      "bytes": 1919
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03b-private-interrupted-result.json",
+      "sha256": "7a79dcd228a83486297211c147196e97f9a43637aced979daa0a703b5475a289",
+      "bytes": 2291
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03b-private-interrupted.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03b-private-interrupted.stdout",
+      "sha256": "d69932f5d4969325d68e7cc55fa4d6e59d96f7c54b1023c96602963481946aa9",
+      "bytes": 14945
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03c-private-restart-input.json",
+      "sha256": "3a228bf355e0358f463d6bfbbf1b316604ca7a512fd8f24a2d873be7d5e82d5f",
+      "bytes": 1895
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03c-private-restart-result.json",
+      "sha256": "49b713fc037b18f514e10a42f7ba85142729d60c28d62aa3d12da05bb79d9d6a",
+      "bytes": 17617
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03c-private-restart.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/03c-private-restart.stdout",
+      "sha256": "8b09574083ffe9ffe58793ff78e4c905e5c8873a336496babb05604edafa7582",
+      "bytes": 35920
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/04-clear-input.json",
+      "sha256": "2a2595b552a41602a43e849e4b63fede51bcaab75eb43a54c9a64f8a44b034c0",
+      "bytes": 1907
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/04-clear-result.json",
+      "sha256": "25e073e8c9bc012a6292a7f393b3b9576ecb70d8b22208031d81ed17f3e4499a",
+      "bytes": 10946
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/04-clear.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/04-clear.stdout",
+      "sha256": "bbd0dd78e589c09410a41a32f20e2d91f9dc08883fcf8070c2bfb8c840ddd0b6",
+      "bytes": 42380
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove-input.json",
+      "sha256": "177c8e7911c03b113136df40f99f51c68caa16f6478c1ec46c8e295103735ee2",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove-result.json",
+      "sha256": "d72d00fec2b3882cb15efc0fed9d5f4a64f86f2e155ee23070e64110f22ea383",
+      "bytes": 5996
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/05-remove.stdout",
+      "sha256": "3081f32c70834e6fd738256807c6df4f390279ddf37d56d84f295352348fe5e0",
+      "bytes": 26947
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/attempts.json",
+      "sha256": "c7db2ea16345ce65cc5473cba741457973eca968e57955d3e568e47986ab30eb",
+      "bytes": 259588
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/case-results.json",
+      "sha256": "8b1a116d861de5b509be3784d77cce0b43b17f4f04c789f1c07e5e6ddfb9ae9b",
+      "bytes": 84362
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-fixture.json",
+      "sha256": "c1df236269932c08b16ef40b8f7429b6b38cb6604b89e2aa8e9c89188262aef8",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-input.json",
+      "sha256": "71a2fea284d272a932dc09ad23351fd48bfae4eea3a299e8e169fce423d05682",
+      "bytes": 477
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-reconcile-input.json",
+      "sha256": "909df2983cf76cd7788d922806fa56cbdfba539c9c550961dd4dd53fd2a80cff",
+      "bytes": 1276
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-reconcile-result.json",
+      "sha256": "57f7c26e20149dea8f9347d5e38b648530820eef8c2627af7ba83925d4573cba",
+      "bytes": 3804
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-reconcile.stdout",
+      "sha256": "b6675757ce1546ae4294ba05aba21429347cc3b5829c853606c2eda2eed2d088",
+      "bytes": 3202
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent-result.json",
+      "sha256": "9c102c5185a63ed3781b9f7beee443321f6553e46aa5bf1b87da1185f7a74b87",
+      "bytes": 1171
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-00-creation-intent.stdout",
+      "sha256": "926f6c16f25d59543e5935e21339d0e82d2da8ca7972cff52df34332fb5e01a6",
+      "bytes": 1730
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-fixture.json",
+      "sha256": "46389536ffd259916dcb278f7d973e2ee80012cc39d4ce9bebffd2f075d048f1",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-input.json",
+      "sha256": "91d64284f50b3ce6e488f93f0c9a8a0d3302270de0bfa80e9d56d5e422097a04",
+      "bytes": 480
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-reconcile-input.json",
+      "sha256": "ca80da4d85eee7ff0f93db2a6e57597cadf97d13baaefdeeb29a7b09b67d4be5",
+      "bytes": 1277
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-reconcile-result.json",
+      "sha256": "ae63eb0ce4b5c223ae4f1f6e2ad49cfe5c509d1c82a0cd9893c2f2d2e3da9071",
+      "bytes": 3592
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-reconcile.stdout",
+      "sha256": "6a6fce133c2c8f8e91ddde0b653a7d641b113bbcee04c7d8eadc76cc43c7b90f",
+      "bytes": 3049
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory-result.json",
+      "sha256": "c37fef627aa338baf26ed1f371812ef0542e7c9d820908fbfb5fbf2fa1b4e1d4",
+      "bytes": 1178
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-01-persistent-factory.stdout",
+      "sha256": "6fcf10d47c5d2cd369cd11f29946e7998914d23679f28d40522a71f03a080b0b",
+      "bytes": 2972
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-fixture.json",
+      "sha256": "21b2ea68ca0d64850e260153e05571c412624bda0a50993ef3538c453676b7b2",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-input.json",
+      "sha256": "8ee79c38994ba77fd90e7eba56974c13a6d6645217b62d14026c1fb3c76a290d",
+      "bytes": 472
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-reconcile-input.json",
+      "sha256": "4bfd280416121b8263df06ccbfb5c21a1a920074b0cde3b582ee77b5861fbd0d",
+      "bytes": 1278
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-reconcile-result.json",
+      "sha256": "baeb4cb421778e30199b78bb250a9d8bde1bdaed02a77a1e3be7ff3f891a5ac9",
+      "bytes": 3586
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-reconcile.stdout",
+      "sha256": "ca04a28b390eb8affdea76bc5ad83cb4e0bba2b50bbf58c69a66b276fe9f0670",
+      "bytes": 3052
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment-result.json",
+      "sha256": "1119993141a487236f254db9d54c2de39c63fc7ab4206f06a22c484a33b86a1a",
+      "bytes": 1163
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-02-assignment.stdout",
+      "sha256": "1a54e7b0dbc3bd21d9dcbc56e901c53d435572b0ae33c1bf6bd7551b0e5d30cc",
+      "bytes": 4131
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-fixture.json",
+      "sha256": "800e8b1d8678727b2ab847ec425e8b3b41501ba6bc700bbaf5796eed3b21f295",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-input.json",
+      "sha256": "34a1b01d233b2dced5e5a1d7f19a519d1887a51fd605f90b41f53dda31d5cc6b",
+      "bytes": 474
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-reconcile-input.json",
+      "sha256": "78f20e15418eef91e1c5e383713856a01901f0ec6a9dd4b244ea053f25c05491",
+      "bytes": 1278
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-reconcile-result.json",
+      "sha256": "2357a7c7b55135cb2836a30d2b49f8452eaba3bc870c4dcb91a3aaa291bebe4b",
+      "bytes": 3588
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-reconcile.stdout",
+      "sha256": "26ed696ab483c770c595bfa26e14ce97fa45456fed879efccdeb9bb2e0ab5eea",
+      "bytes": 3052
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction-result.json",
+      "sha256": "723c32d721cf3e51d5d876f0f50bb52c4ff0fd2c87f126cac9f586e83282bff4",
+      "bytes": 1167
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-03-construction.stdout",
+      "sha256": "71c65c8c2da16c8e1a1e6f5c4e25d2a9659f3d02b720eacb2f2e126c035384f4",
+      "bytes": 4156
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-fixture.json",
+      "sha256": "2918f9320465319d7f183f370faae832fdc628fa2227e3099de7356f4ee390a8",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-input.json",
+      "sha256": "5ee7740189f153b2ffb858f3af9f0b4f6437b71dfa42055b08d466c8d630296f",
+      "bytes": 473
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-reconcile-input.json",
+      "sha256": "0de7f62ce09c4011702f9e72466a3d68e9423a703efdcf8cc8b93c41944eb263",
+      "bytes": 1271
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-reconcile-result.json",
+      "sha256": "eacc9a67b5582d06c5121df9ba4695ccd8cd0c4c50f4a2965f840ae6bcad1789",
+      "bytes": 3573
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-reconcile.stdout",
+      "sha256": "394b2643237a95d924e82dc12285022b2d42702c28e9ecb31c8855c12dbe374f",
+      "bytes": 3031
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication-result.json",
+      "sha256": "91c31607586d81249907b2e47c6d479b113368519d81ece82bba074a3cde6e7a",
+      "bytes": 1158
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-04-publication.stdout",
+      "sha256": "9c871959830e535b0835a34ddd57433d561989122d8efa3a0a0f52ea394d2285",
+      "bytes": 5854
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-fixture.json",
+      "sha256": "8cbbdbaad027e38bfd7406b4d2b73b211c24a2d3967e943983c1d529404db985",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-input.json",
+      "sha256": "04a974e51951e84b0e9fffca0c58c59735bcbec79ea4c962354c445871298881",
+      "bytes": 1914
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-prepare-input.json",
+      "sha256": "1d74a294141e00630d103f78e5f6f057995425592177a0c4f2a29a8af5093972",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-prepare-result.json",
+      "sha256": "195294b88d08e50ae8a1fb97cbdfb3bd03267bd16c234ed12fb1f22eac7fabd8",
+      "bytes": 11775
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-prepare.stdout",
+      "sha256": "affec47e1f4e424f9451badd9d82d5088f27e99f2a3e688aea46527da6959b13",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-reconcile-input.json",
+      "sha256": "80612015d63c354a6ae0e1b5924cca747b735634de121ed7847b06f2dd842a7b",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-reconcile-result.json",
+      "sha256": "8402360d2d7117d8dac37842a3e99a5766484afcfebbdd17b781fda793064fdb",
+      "bytes": 5031
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-reconcile.stdout",
+      "sha256": "afa037f02d0992539f87428767b22ce060abae597316d8447f353d03d012ee47",
+      "bytes": 8542
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request-result.json",
+      "sha256": "51a3ff1150a669ae6b6718945a406d34240d8a216ee65c6e00214867ab580fde",
+      "bytes": 2286
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-05-clear-request.stdout",
+      "sha256": "1d5e79fc68e2f638e603207af68513577319466d9de0936a1ae6d6ae5c448457",
+      "bytes": 20639
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-fixture.json",
+      "sha256": "aee33b108e21516e5c8487ff5c39d818cc31fa618dc0f91e853fa2690d60cfeb",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-input.json",
+      "sha256": "cf4ff85d81b9fd2f547922d3ed09a8a956e9dad97a9c911095465345236018ba",
+      "bytes": 1915
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-prepare-input.json",
+      "sha256": "ff3db1c84960b811a52c0adf4c5f232755c8dd9dee4e880c6b2bf18d05aefa3e",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-prepare-result.json",
+      "sha256": "8a08f00773c94e3305a65dd484357c3a30d10b727b9d04d77eb882e292f2f567",
+      "bytes": 11778
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-prepare.stdout",
+      "sha256": "474ca02627c10949983f21b1a6c632003634c2d78fb6f99f81ae0c56f450cc3d",
+      "bytes": 33795
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-reconcile-input.json",
+      "sha256": "5d62f2ec53ad0976e03b7cc93ebbac07cc681a80ac58fe48a3934ae689a8bb86",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-reconcile-result.json",
+      "sha256": "b81bdf1467f7122f1ff049fe14e6b4523d889c7f28e9f1e15d800cc03680da87",
+      "bytes": 5032
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-reconcile.stdout",
+      "sha256": "e934bd35a047a7cb7e37f41f42a6542c85f5f680f56c3a1d2f490bb938072d00",
+      "bytes": 8542
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback-result.json",
+      "sha256": "c3521c32075655670bf1600949932444fe006a9d875daf2bf01830192b36eb7c",
+      "bytes": 2290
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-06-clear-callback.stdout",
+      "sha256": "591547393f338ecf834fe53e5f5206950f4d8f2f1112643baade0da7d22366b2",
+      "bytes": 20668
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-fixture.json",
+      "sha256": "5e153eff8de320f993fac2a41f6bcfbdd394a8bd42ca38c8377e02abc2ae1561",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-input.json",
+      "sha256": "f6d9224506205d196d4ced8d6ca5bb5024124f9d748d5345cd62af484544431d",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-prepare-input.json",
+      "sha256": "5395840f83ba433fa0d99c846f3430aa2b07a0f6161f501bc995d0c59df7b09a",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-prepare-result.json",
+      "sha256": "97e5824a6ba4ecb3a13bece837443a5204c4a77d9624316d578d6d3f7e3be00f",
+      "bytes": 11770
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-prepare.stdout",
+      "sha256": "351512757e7cf1ed75a5f0144badb46c62a8df6c5e0595e334ec2eefc0d0d002",
+      "bytes": 33795
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-reconcile-input.json",
+      "sha256": "8ba90d50e187be690feb6cf9232ffc89367c2a1df63012a84eddac3542e2cde1",
+      "bytes": 1915
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-reconcile-result.json",
+      "sha256": "ad79a9f87adf6a108007d1a301911cfbe5f0e903c5e118cfbfe83991b852bac7",
+      "bytes": 5038
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-reconcile.stdout",
+      "sha256": "3f6a44287d6b5437082d60f7505afafb79c83ce09b6e517b995678255f7673d3",
+      "bytes": 8585
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire-result.json",
+      "sha256": "5b0857c0d83a59429dc40c98261658f68f55605234e3dcdf39fae46690b70e0d",
+      "bytes": 1794
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-07-retire.stdout",
+      "sha256": "4c11b044a47caff48ec6dd78edab57d47b029af634b90bc1bc48ec51d08c6a44",
+      "bytes": 8237
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-fixture.json",
+      "sha256": "d4d160e0c399c03a7d93ce67bc3ac8fac21d941d1b2d8c841258e6456bf083e5",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-input.json",
+      "sha256": "3bb61f0ad32ea37173c13c8c1b65134389e162be5afa055598ffdde31cb551a8",
+      "bytes": 1916
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-prepare-input.json",
+      "sha256": "2e4727ab7820f9f0f7de8bc2c9064215094097fb05da91736be6cdce47b09fc7",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-prepare-result.json",
+      "sha256": "907940db922d9c794b3d3fe6a79ca897df8e52b86b9e57448939607d0827bc57",
+      "bytes": 11778
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-prepare.stdout",
+      "sha256": "1973be2144f1af4a35f949e81eaf293e8b75aa5c40426691ff8a1bdb8ecabb90",
+      "bytes": 33795
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-reconcile-input.json",
+      "sha256": "713b8ae04eb2e891b8d2f287a8fb0726461b2ccc3b86430b0eb4b883947b5cdc",
+      "bytes": 1914
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-reconcile-result.json",
+      "sha256": "b9a08488a4cd778a5ba4bbddfa0dc6920fa6a7143c930f9950a9cc542de9bd97",
+      "bytes": 5044
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-reconcile.stdout",
+      "sha256": "2c91f24a0b580224a1cd12ddabd992a80fa2299a48a40f328f5b07f305d95265",
+      "bytes": 8578
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request-result.json",
+      "sha256": "37685b5054f53e902f4b8cd3debd0b337dbe6835e26b51ad434c651339ac4f3f",
+      "bytes": 1809
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-08-remove-request.stdout",
+      "sha256": "1ba320a7eaee4dbcd6e5c1f92163dfa2434de39da67caf1733956bf388f0c970",
+      "bytes": 12241
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-fixture.json",
+      "sha256": "71f5f913175e16d10309914cb9dea9f685dcd0d4248b82e2b4fd09edd8ba0c88",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-input.json",
+      "sha256": "d3f822930a7fd26549aeb0caa7aa67f2d7b87dd95068ad8f94f07865fe2717a1",
+      "bytes": 1917
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-prepare-input.json",
+      "sha256": "e5f01c163180a6ba7d1557f8b389aaa4544e3521bd25477cbff455678655f3b0",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-prepare-result.json",
+      "sha256": "7e52c81b1e79af979120c6ba9cddbca225e6b6c444076c8cc1ff8a601775ab9e",
+      "bytes": 11779
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-prepare.stdout",
+      "sha256": "ed652f4bfadb5754716c812dd04bdf6bc2fd44943918808748610fe95f8e08c1",
+      "bytes": 33795
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-reconcile-input.json",
+      "sha256": "03bcdca371b013b6cf3f3aa6ca36906fa690abccf1dce5c9efbbec411ba3677b",
+      "bytes": 1914
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-reconcile-result.json",
+      "sha256": "2024c8e077adcb98d023b943acc30183d77df2f57b4682d409adcc7f84fc05f5",
+      "bytes": 5045
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-reconcile.stdout",
+      "sha256": "3770c31781edf521d79d52053b61753dcc1c43a492c5e20fd4e9c62892de181d",
+      "bytes": 8578
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback-result.json",
+      "sha256": "1938a9ec161a42771815904210e8650fd5901fcc21eb568457426d952c431213",
+      "bytes": 1811
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-09-remove-callback.stdout",
+      "sha256": "f53bbc779fb6281a791bcd07e59022e0eda8cc03c6a5b31fb4ef017b75703e48",
+      "bytes": 12269
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-fixture.json",
+      "sha256": "12488149fbc9bd6d652949c53ef7176fddec677e14bd64964124729c6d9ab68b",
+      "bytes": 444
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-input.json",
+      "sha256": "9feb0adf694f3df6d408913184d7a419567ac68d5298285711ca4fbfd76156e3",
+      "bytes": 1913
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-prepare-input.json",
+      "sha256": "6404548ad87937478c8bf4391d298fc8f52a5da035f0a8576db2050b6d153577",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-prepare-result.json",
+      "sha256": "9e7f13258641409e15b77cc8658da7cda589564745b3e804c17ce0ed86f575d3",
+      "bytes": 11775
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-prepare.stdout",
+      "sha256": "bd9299b83e4e0b030f7238e2e813381ea9b4d910bcc4d4f18f9a6f52f74254b7",
+      "bytes": 33795
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-reconcile-input.json",
+      "sha256": "837b25cebc49c608e83ed52f324eacfb4bf1448b29bac8643aec2bb3c64195b0",
+      "bytes": 1918
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-reconcile-result.json",
+      "sha256": "4c44dabefe9d3b9f98143bdd64b08cc5b7b1b72dfc28db959d5753725b3a37de",
+      "bytes": 5049
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-reconcile.stdout",
+      "sha256": "c107b271ee8e64607248d2932a3cf623d5450386fd9a392cbf55c56bbed1493f",
+      "bytes": 8606
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration-result.json",
+      "sha256": "f1102be7315f664f8da4eccd7f00218bb6017efc81a2375b95ee91b7d5273ef9",
+      "bytes": 1807
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/cut-10-enumeration.stdout",
+      "sha256": "36bd1d0220b9e9909725878bed2ffbd8d5217dbdff2ff618c7fe49313f997cb3",
+      "bytes": 1232
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/fixtures.json",
+      "sha256": "0396de0d34d705eb0650795a0d318b8f14c23dfed99ecd33b9366c7558ae228a",
+      "bytes": 668
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/http-cache-results.json",
+      "sha256": "beabdb594860290a328daa227e025041cf11e1c39249b37278bf57bba9c66b53",
+      "bytes": 367
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/http-requests.json",
+      "sha256": "8400f33aa93c7f1dfe0660970a0a7dcecebdad93a76597451a00d67bfa68f624",
+      "bytes": 7907
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-input.json",
+      "sha256": "ccf80c5b2f208d8cb6f4a39ec6228dd9a9a04c938fb1466c829128b548415937",
+      "bytes": 1917
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-prepare-input.json",
+      "sha256": "d175abc2daae0497f78be3abab3d9745935fe184c320ce94786ba42cf37bc03e",
+      "bytes": 464
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-prepare-result.json",
+      "sha256": "a4e45db1086bbbd9b3095679bcc69daf29c6b59aa09a4b035d85c1cc67cd2a7f",
+      "bytes": 11774
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-prepare.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-prepare.stdout",
+      "sha256": "527db6eef890d48c64ffd7e5524fe18536e5b3563f4f5f2c08e17461a838d612",
+      "bytes": 33793
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure-result.json",
+      "sha256": "3904e3f7ff4b89b9ca1f0c58f9d3773ac4d92b9731a84aeeed7ccdf5ed2c3b38",
+      "bytes": 5194
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/publication-failure.stdout",
+      "sha256": "d561f9ad242ca470054a05108c56896f56c3d48086006e009043d02acd8116d4",
+      "bytes": 13636
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/result.json",
+      "sha256": "0a757229eaffea7ff6939b59b1c31889271ff16fa714e8e6da009c7461a1841e",
+      "bytes": 982
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165/sources.json",
+      "sha256": "8634cefaba75a99550f44ec6308bba583e99c30b91406d914a200a65978c8a63",
+      "bytes": 4429
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/attempt-history.json",
+      "sha256": "88cd444bda2fdc46d695ef49696d06449b1cdcd9b027435950dd6a12d68bd492",
+      "bytes": 7593
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/canonical-attempts.json",
+      "sha256": "a17c31b4eeee433803bba147048e266b0664f0a942412be86903d18e4c8df2df",
+      "bytes": 565
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/complete-change-review.json",
+      "sha256": "71f079b580d3cd608cd5fa533b7b114b5e9e699092ef37065852d18f0bb86465",
+      "bytes": 2489
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/crash-binary-uuid.json",
+      "sha256": "2d8602fe42c9cf284632344fdf9292d2c4083472e1ebf37962ff46f73c774e2a",
+      "bytes": 380
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/diagnostic-launch-unified-log.json",
+      "sha256": "41e921469245469e9bc41818b0a03da21df0a8fdb1bd87428fc5a0e4b29323c1",
+      "bytes": 154987
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/environment.json",
+      "sha256": "0f86dee2bf42f746a111d05e6b64ddfef3e38dd1c17a8a68ebb20d1b04f6de86",
+      "bytes": 158
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/final-owned-process-check.json",
+      "sha256": "b6eeccb64a6ca9707dc7869f5c8b6afb962c2d2974a0229cd7537e576890c86e",
+      "bytes": 474
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/final-signature.json",
+      "sha256": "dbed80320626120884515bf76471ec9f4a04c68eb355fe7afa3b5ca0478b28ad",
+      "bytes": 1243
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/final-symbols.json",
+      "sha256": "0d21002f5450f5f9aca0ff3b22de2c84c675065354937050f91a0f4a2cdca1b4",
+      "bytes": 18839
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/launch-crash-VezhamBrowser-2026-11-09-053722.ips",
+      "sha256": "1d84fa07d4a4415aa69b5c67565ba3036e0a1fa4e54828b48a2d8bb3c006cc97",
+      "bytes": 18446
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/launch-crash-extract.json",
+      "sha256": "99e1d17ab72bde6a9492a6e18e5f5afc274808f99047539f7475d8ab33e2fc1d",
+      "bytes": 3287
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/native-destinations.json",
+      "sha256": "67ea76a7d2f46940e3711d8670880cff459e56e0b197c8a5818fe7faf36d5864",
+      "bytes": 12626
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/native-signature-details.json",
+      "sha256": "3789d7f13243c7cbe9c3f11ec3b74f80f3e7972a6388bedcb18581d767d7e9ba",
+      "bytes": 1094
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/non-execution-and-boundaries.json",
+      "sha256": "88136e04711e6ab21f8e721782af64120ba9382161155a2686827c5f7437b9b3",
+      "bytes": 524
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/precommit-state.json",
+      "sha256": "fcf784ae83f68571f5217ab42439ca60721752734ed5e553eb6bc8cbaed019a6",
+      "bytes": 336
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/preservation-audit.json",
+      "sha256": "f90c4e994461e88ecdf5edca875f661d89a79d37dc3b98d6a767e676246cf0f8",
+      "bytes": 1383
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/prestage-SHA256SUMS",
+      "sha256": "966639ad1ea41416a0ab79141a7b96b60668211240cda69e0355f3ac658e062c",
+      "bytes": 76340
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/prestage-artifact-index.json",
+      "sha256": "83b6880d45f2c96c8e645d7497b8c20dcad0cba39014c22082191ed71fe0c095",
+      "bytes": 178609
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/public-api-audit.json",
+      "sha256": "a5db0ecbbabbf5b244b7a9a473ca5d657a2e039b474f66264c9c696cee72cbf1",
+      "bytes": 7408
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/qualification-summary.json",
+      "sha256": "3b33347b072688c6fad54c72d70c1692c31b594c1698bd16fec73ba00dc7ea59",
+      "bytes": 502
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/resource-dispositions.json",
+      "sha256": "5b20c126a94e21f6f94045fc1bf5af0ebd2f5e702ae6c7b68f59d9eb98a046fa",
+      "bytes": 93078
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/staged-review.json",
+      "sha256": "8c5d15dc2e6148aed8dac59199850599a97482901897823309720fe0fbe98d9a",
+      "bytes": 2894
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/static-consistency-review.json",
+      "sha256": "a592066a58801eb0a306d50d7308a5ac2f294dd5d5c7e47fbbd9499bfc7435ee",
+      "bytes": 10494
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/swift.json",
+      "sha256": "26017544a5ef3ed9ee1fc002c1f76ec9761e7d5b552c5a77304fd329a22809c4",
+      "bytes": 230
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/results/xcode.json",
+      "sha256": "ac6dff73b3fb7e2058dc78329ce6699ee02a01ce80b887189a2e50054db1f794",
+      "bytes": 137
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/APIObject.cpp",
+      "sha256": "8a832f5fdf23dc934e5d3f291f67316101366aa3afaddb5c8f9f2cc5c09f037e",
+      "bytes": 2276
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/APIObject.h",
+      "sha256": "a6bfa45adf4785ddd8d54d24a5d186080efe41986d075a9049df52363a9bcedd",
+      "bytes": 9605
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKProcessPool.mm",
+      "sha256": "b89a6877d032da78b49100a1b841abcc768ed0baa300a80bd9b34182d5c2ae2c",
+      "bytes": 27737
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKUIDelegate.h",
+      "sha256": "738ce572c46d1967a2d7f2f639c87405e526ac7f8d47fc47bf3e32776996452f",
+      "bytes": 18351
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKWebView.h",
+      "sha256": "951f69d51f00727949afe339ec4369c58ad312b5661de03506f276289cd3e2ce",
+      "bytes": 43553
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKWebView.mm",
+      "sha256": "bb575326efc117e83986c0fd0b1d0ef5f5f68523f82bbd9344166ba8d2091001",
+      "bytes": 283614
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKWebViewConfiguration.h",
+      "sha256": "ad689fa5f7fba5830111dd6d953b5fb69eedec3275ae51b8f2672597f23ec766",
+      "bytes": 13731
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/WKWebsiteDataStore.h",
+      "sha256": "416940fc49e703de57c6da8ef372f98493503fb9d6cffe9d2b3479c6c62f4b9a",
+      "bytes": 8029
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/finish-metadata.py",
+      "sha256": "465e386afccf11c1c8bb63bf4b4d6a2b1c31240fcc29209e76ed65a5430bb49c",
+      "bytes": 9691
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/implementation-manifest.json",
+      "sha256": "042dff19c05f8e6a8075596df1e8135e2c2c27519a233fd36aa309e8f3bce615",
+      "bytes": 5879
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/initialization-source-review.json",
+      "sha256": "8a740240d66b06ed451bfeb34ce26932bbe055353dddc43bed756c58e5f515d5",
+      "bytes": 1170
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/owner-task.txt",
+      "sha256": "9dc92dd8ac567c25eb821e7451c374356fd9f419f7b7c5b79153cfce81927ea4",
+      "bytes": 32279
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/sources/sdk-inventory.json",
+      "sha256": "1fe6536f838b3b15426f5fc2eeb072b7ad3d9d63f5f497a82ab3a5757604f917",
+      "bytes": 1088
+    },
+    {
+      "path": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/wks-dispositions.json",
+      "sha256": "bb106545b03c0773853c1be58ab216bdfb5cb66967a9f9bd1d229d50eeb984d3",
+      "bytes": 184729
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/README.md",
+      "sha256": "84d7ef8603eb06106e3b31b727c297d67257a9bef52351057042a5fd1a80f561",
+      "bytes": 12341
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+      "sha256": "572dadfcef239f5090ea1d9bb70ba566e51eeb2a32ac4a56633e23d41d2034d6",
+      "bytes": 14017
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-closeout.md",
+      "sha256": "9e79d777f4b8897481a6e98a704e6bddfdc51c3523526c73ab877daebd05e508",
+      "bytes": 7873
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-descriptor-and-lifecycle.md",
+      "sha256": "846c4b68fc5497a9f3c4a7dedbcfecb22a425da549316ffe502fe018a9b0f55f",
+      "bytes": 3857
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-native-webkit-architecture.md",
+      "sha256": "894f76127fa921dc31f572adf202571479146805617c6410c8b90acd541c4db0",
+      "bytes": 8476
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-qualification-plan.md",
+      "sha256": "8d7a3e386396d5bf6184aa49bc5e747ca3647fa240bc40d3efbe8a77933d068c",
+      "bytes": 7738
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-qualification-results.md",
+      "sha256": "cab5418cb8056bf69e7f7cece0d2207eca9be5ad9d8c580c0634ec4852c23c8a",
+      "bytes": 8024
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-risks-and-limitations.md",
+      "sha256": "b8eaa8dfcfafe01c232a1d938d00cae3410a13277d0c1521a269dd11caa6cc3f",
+      "bytes": 4392
+    },
+    {
+      "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-wks-traceability.md",
+      "sha256": "af0381e8e71a9f526398fe511de68e6f34917cc35354b0886157094e8e4a8302",
+      "bytes": 8709
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Package.swift",
+      "sha256": "c7d1bae8042a687f5686d98efd273fcb7c77aae046b8356e792dc7232ef88702",
+      "bytes": 1120
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/Identity.swift",
+      "sha256": "332d0b3098260ae7f6ca04f0da83c782230a288f150733d5f5f128063787db27",
+      "bytes": 3613
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/Models.swift",
+      "sha256": "8436abbb072f2a2653883b76c2b4c50cc9fb7bd7990deac65f5829dd04c1d4c9",
+      "bytes": 7821
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/StorageDescriptor.swift",
+      "sha256": "ea17f9c09a0ba71fc6bdffe5d7c2b64d6f4c2282774b081b2721e1d106044cf8",
+      "bytes": 7949
+    }
+  ]
+}

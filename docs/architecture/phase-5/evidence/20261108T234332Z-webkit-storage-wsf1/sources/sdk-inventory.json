@@ -1,0 +1,18 @@
+[
+  {
+    "source": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers/WKWebsiteDataStore.h",
+    "sha256": "416940fc49e703de57c6da8ef372f98493503fb9d6cffe9d2b3479c6c62f4b9a"
+  },
+  {
+    "source": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers/WKWebView.h",
+    "sha256": "951f69d51f00727949afe339ec4369c58ad312b5661de03506f276289cd3e2ce"
+  },
+  {
+    "source": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers/WKWebViewConfiguration.h",
+    "sha256": "ad689fa5f7fba5830111dd6d953b5fb69eedec3275ae51b8f2672597f23ec766"
+  },
+  {
+    "source": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers/WKUIDelegate.h",
+    "sha256": "738ce572c46d1967a2d7f2f639c87405e526ac7f8d47fc47bf3e32776996452f"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "path": "apps/browser-macos/Config/Debug.xcconfig",
+    "sha256": "32b2c910a9740dd2dc5a58127c972a29ba6cef37213f20e2f638b73ab91d10f6",
+    "bytes": 274
+  },
+  {
+    "path": "apps/browser-macos/Config/VezhamBrowser.entitlements",
+    "sha256": "34e335c436f4ecc8e81a900e42953f040be06e4cb13e5226a8fba4d12cdf9c98",
+    "bytes": 284
+  },
+  {
+    "path": "apps/browser-macos/README.md",
+    "sha256": "ffab63ee492840a78174bf7ccaf9a5f1bbbc83987b7dc519ae634f301832bae3",
+    "bytes": 2740
+  },
+  {
+    "path": "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "sha256": "eb105678e16f725ece95e563d5d611c3f32268bc6a7f678abb612abb32b35f6a",
+    "bytes": 2215
+  },
+  {
+    "path": "apps/browser-macos/Sources/Qualification/StorageQualificationHost.swift",
+    "sha256": "161e061e0e6bc639f0c11f6d01c5d6a70c1c7276bb80e0a7b4a8cd966aec351e",
+    "bytes": 27119
+  },
+  {
+    "path": "apps/browser-macos/StorageRuntime/Package.swift",
+    "sha256": "d09985d055e5f4e27753aafb530a4d714dc96f780cf9733f8ad8f95bac27ef20",
+    "bytes": 1054
+  },
+  {
+    "path": "apps/browser-macos/StorageRuntime/README.md",
+    "sha256": "b70bd144a9fb55e43dd958d3558e972aa102c1afe4246a7db4e3f05cd1cbda3a",
+    "bytes": 1197
+  },
+  {
+    "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift",
+    "sha256": "2052e2897c9443518c015a3c47db646d8f3c744b2b688f1a13c6af7ac217b34c",
+    "bytes": 5254
+  },
+  {
+    "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+    "sha256": "bb16b819d3412a0ef13d977a89250366086266110485c8d4b256761546ee5df5",
+    "bytes": 23969
+  },
+  {
+    "path": "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/CloseClearRaceTests.swift",
+    "sha256": "aa022489f61c805b919b431c2f094e7baea7c2e232d6fa97f18e0b66aed1f253",
+    "bytes": 2699
+  },
+  {
+    "path": "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/DescriptorTests.swift",
+    "sha256": "2c91af1058854803d156c944e12459dbc0c048c5d1a4ec1a0fdf593300f71748",
+    "bytes": 4951
+  },
+  {
+    "path": "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/NativeAdmissionTests.swift",
+    "sha256": "0fe070280dba1cb4bf8ad16116fe46ae55d72924d441bd4ba902f0ca3db8922a",
+    "bytes": 2530
+  },
+  {
+    "path": "apps/browser-macos/Tools/fixtures/storage.html",
+    "sha256": "5fdd5925ad0f56c2d78475a09cfbee26ec25a773ffe09b0e741f1e059d030e8f",
+    "bytes": 2763
+  },
+  {
+    "path": "apps/browser-macos/Tools/fixtures/sw.js",
+    "sha256": "df74c4e25a5a9c5c3ecf945e00e92c5120c21e865b84c9e1e368716b3767c6f9",
+    "bytes": 403
+  },
+  {
+    "path": "apps/browser-macos/Tools/native_host.py",
+    "sha256": "a49df80b34a6f2e726d7da1c518a721fe5f16e40852aa0414e7dc99ebae0c609",
+    "bytes": 4209
+  },
+  {
+    "path": "apps/browser-macos/Tools/wsf1.py",
+    "sha256": "073b0f0adc360d2c7a4c1ced7d696cf080d58e327781258ffc21afdf7990db50",
+    "bytes": 6412
+  },
+  {
+    "path": "apps/browser-macos/Tools/wsf1_native.py",
+    "sha256": "5e856052e428eb014c73be9223b7ba726f9037a016df2553807e71521f74f236",
+    "bytes": 12722
+  },
+  {
+    "path": "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj",
+    "sha256": "b03848146368e9a0895c9ac2daf542d9e5364fe55fb24c955c7ee91c0ea80925",
+    "bytes": 5471
+  },
+  {
+    "path": "apps/browser-macos/project.json",
+    "sha256": "9518ee047c948ca86411c599964810c4633e55a35ecd490db28f984fa7a15147",
+    "bytes": 1544
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/README.md",
+    "sha256": "84d7ef8603eb06106e3b31b727c297d67257a9bef52351057042a5fd1a80f561",
+    "bytes": 12341
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "sha256": "572dadfcef239f5090ea1d9bb70ba566e51eeb2a32ac4a56633e23d41d2034d6",
+    "bytes": 14017
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-closeout.md",
+    "sha256": "9e79d777f4b8897481a6e98a704e6bddfdc51c3523526c73ab877daebd05e508",
+    "bytes": 7873
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-descriptor-and-lifecycle.md",
+    "sha256": "846c4b68fc5497a9f3c4a7dedbcfecb22a425da549316ffe502fe018a9b0f55f",
+    "bytes": 3857
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-native-webkit-architecture.md",
+    "sha256": "894f76127fa921dc31f572adf202571479146805617c6410c8b90acd541c4db0",
+    "bytes": 8476
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-qualification-plan.md",
+    "sha256": "8d7a3e386396d5bf6184aa49bc5e747ca3647fa240bc40d3efbe8a77933d068c",
+    "bytes": 7738
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-qualification-results.md",
+    "sha256": "cab5418cb8056bf69e7f7cece0d2207eca9be5ad9d8c580c0634ec4852c23c8a",
+    "bytes": 8024
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-risks-and-limitations.md",
+    "sha256": "b8eaa8dfcfafe01c232a1d938d00cae3410a13277d0c1521a269dd11caa6cc3f",
+    "bytes": 4392
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-wsf1-wks-traceability.md",
+    "sha256": "af0381e8e71a9f526398fe511de68e6f34917cc35354b0886157094e8e4a8302",
+    "bytes": 8709
+  },
+  {
+    "path": "qualification/webkit-storage-f0/Package.swift",
+    "sha256": "c7d1bae8042a687f5686d98efd273fcb7c77aae046b8356e792dc7232ef88702",
+    "bytes": 1120
+  },
+  {
+    "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/Identity.swift",
+    "sha256": "332d0b3098260ae7f6ca04f0da83c782230a288f150733d5f5f128063787db27",
+    "bytes": 3613
+  },
+  {
+    "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/Models.swift",
+    "sha256": "8436abbb072f2a2653883b76c2b4c50cc9fb7bd7990deac65f5829dd04c1d4c9",
+    "bytes": 7821
+  },
+  {
+    "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/StorageDescriptor.swift",
+    "sha256": "ea17f9c09a0ba71fc6bdffe5d7c2b64d6f4c2282774b081b2721e1d106044cf8",
+    "bytes": 7949
+  }
+]

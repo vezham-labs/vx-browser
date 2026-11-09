@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "xcodebuild",
+    "-version"
+  ],
+  "returncode": 0,
+  "stdout": "Xcode 27.2\nBuild version 27B52\n",
+  "stderr": ""
+}

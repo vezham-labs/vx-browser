@@ -1,0 +1,42 @@
+{
+  "modified": [
+    "apps/browser-macos/Config/Debug.xcconfig",
+    "apps/browser-macos/Config/VezhamBrowser.entitlements",
+    "apps/browser-macos/README.md",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "apps/browser-macos/Tools/native_host.py",
+    "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj",
+    "apps/browser-macos/project.json",
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "qualification/webkit-storage-f0/Package.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserDomain/Identity.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserDomain/Models.swift"
+  ],
+  "created_non_evidence": [
+    "apps/browser-macos/Sources/Qualification/StorageQualificationHost.swift",
+    "apps/browser-macos/StorageRuntime/Package.swift",
+    "apps/browser-macos/StorageRuntime/README.md",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+    "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/CloseClearRaceTests.swift",
+    "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/DescriptorTests.swift",
+    "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/NativeAdmissionTests.swift",
+    "apps/browser-macos/Tools/fixtures/storage.html",
+    "apps/browser-macos/Tools/fixtures/sw.js",
+    "apps/browser-macos/Tools/wsf1.py",
+    "apps/browser-macos/Tools/wsf1_native.py",
+    "docs/architecture/phase-5/reports/M1/m1-wsf1-closeout.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf1-descriptor-and-lifecycle.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf1-native-webkit-architecture.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf1-qualification-plan.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf1-qualification-results.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf1-risks-and-limitations.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf1-wks-traceability.md",
+    "qualification/webkit-storage-f0/Sources/BrowserDomain/StorageDescriptor.swift"
+  ],
+  "evidence_root": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1",
+  "new_evidence_files": "All files under evidence_root, indexed by SHA256SUMS",
+  "removed_or_renamed": [],
+  "status": "Reviewed scoped WS-F1 changes; no prior work discarded"
+}

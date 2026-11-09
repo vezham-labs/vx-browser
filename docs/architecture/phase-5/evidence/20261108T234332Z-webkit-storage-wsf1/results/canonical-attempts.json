@@ -1,0 +1,8 @@
+{
+  "native": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/native-063248009165",
+  "native_build": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/build-062812696387",
+  "diagnostic_revision": "diagnostic-build-001154431303",
+  "contract_and_additional_fake": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/models-063737711735",
+  "retained_f0": "docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/attempt-001707035860",
+  "no_aggregation_across_revisions": true
+}

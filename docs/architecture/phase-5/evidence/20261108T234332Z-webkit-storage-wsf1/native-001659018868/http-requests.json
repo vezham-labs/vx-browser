@@ -1,0 +1,158 @@
+[
+  {
+    "path": "/fixture",
+    "ordinal": 1
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 2
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 3
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 4
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 5
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 6
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 7
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 8
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 9
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 10
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 11
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 12
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 13
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 14
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 15
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 16
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 17
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 18
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 19
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 20
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 21
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 22
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 23
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 24
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 25
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 26
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 27
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 28
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 29
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 30
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 31
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 32
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 33
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 34
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 35
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 36
+  },
+  {
+    "path": "/fixture",
+    "ordinal": 37
+  },
+  {
+    "path": "/cacheable",
+    "ordinal": 38
+  },
+  {
+    "path": "/sw.js",
+    "ordinal": 39
+  }
+]

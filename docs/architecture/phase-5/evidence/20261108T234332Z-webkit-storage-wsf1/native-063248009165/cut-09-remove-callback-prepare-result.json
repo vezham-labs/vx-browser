@@ -1,0 +1,436 @@
+{
+  "label": "cut-09-remove-callback-prepare",
+  "pid": 41540,
+  "action": "seed",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "environment": {
+      "bundle": "internal.vezham.browser.wsf1.qualification",
+      "macOS": "Version 27.2 (Build 26B123)",
+      "qualification": "discovery-only",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "cases": [
+      {
+        "id": "F1-NAT-REGISTER-A",
+        "status": "PASS_NATIVE",
+        "detail": "Synthetic catalog only"
+      },
+      {
+        "id": "F1-NAT-IDEMPOTENT-A",
+        "status": "PASS_NATIVE",
+        "detail": "Exact registration receipt replay"
+      },
+      {
+        "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+        "status": "PASS_NATIVE",
+        "detail": "Terminal same-operation replay after navigation performs no native effect"
+      },
+      {
+        "id": "F1-NAT-EMPTY-A-cookie",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-EMPTY-A-local",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-EMPTY-A-idb",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-EMPTY-A-cache",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-SEED-A-cookie",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-A-local",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-A-idb",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-A-cache",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-A-session",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-A-worker",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-A-http",
+        "status": "PASS_NATIVE",
+        "detail": "HTTP cache fixture response; persistence compared by orchestrator"
+      },
+      {
+        "id": "F1-NAT-REGISTER-B",
+        "status": "PASS_NATIVE",
+        "detail": "Synthetic catalog only"
+      },
+      {
+        "id": "F1-NAT-IDEMPOTENT-B",
+        "status": "PASS_NATIVE",
+        "detail": "Exact registration receipt replay"
+      },
+      {
+        "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+        "status": "PASS_NATIVE",
+        "detail": "Terminal same-operation replay after navigation performs no native effect"
+      },
+      {
+        "id": "F1-NAT-EMPTY-B-cookie",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-EMPTY-B-local",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-EMPTY-B-idb",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-EMPTY-B-cache",
+        "status": "PASS_NATIVE",
+        "detail": "Fresh store positive API availability checked during set"
+      },
+      {
+        "id": "F1-NAT-SEED-B-cookie",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-B-local",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-B-idb",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-B-cache",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-B-session",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-B-worker",
+        "status": "PASS_NATIVE",
+        "detail": "Page-visible positive control"
+      },
+      {
+        "id": "F1-NAT-SEED-B-http",
+        "status": "PASS_NATIVE",
+        "detail": "HTTP cache fixture response; persistence compared by orchestrator"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-A-cookie",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-A-local",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-A-idb",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-A-cache",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-B-cookie",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-B-local",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-B-idb",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      },
+      {
+        "id": "F1-NAT-ISOLATION-B-cache",
+        "status": "PASS_NATIVE",
+        "detail": "Concurrent same-origin profiles"
+      }
+    ],
+    "checkpoint": {
+      "snapshot": {
+        "version": 1,
+        "previousRun": "4765a36e-4be5-439a-a520-3e79b16c5a11",
+        "records": [
+          {
+            "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+            "store": "1b67c300-60db-4c96-82f3-2c336f7356dc",
+            "generation": 2,
+            "phase": {
+              "stable": {
+                "_0": "quiescent"
+              }
+            },
+            "operation": "a5386090-5155-4506-bea4-0aad0c13b63f",
+            "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8"
+          },
+          {
+            "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+            "store": "bb0d26bb-638e-475f-ae09-346870f92300",
+            "generation": 2,
+            "phase": {
+              "stable": {
+                "_0": "quiescent"
+              }
+            },
+            "operation": "fbd663ae-0d66-43d2-bba1-3f5429ec2900",
+            "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8"
+          }
+        ]
+      },
+      "rows": [
+        {
+          "status": "quiescent",
+          "revision": 4,
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc",
+          "resourceGeneration": 1,
+          "origin": "fresh",
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350"
+        },
+        {
+          "status": "quiescent",
+          "revision": 4,
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300",
+          "resourceGeneration": 1,
+          "origin": "fresh",
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c"
+        }
+      ]
+    },
+    "event": "result",
+    "trace": [
+      {
+        "sequence": 1,
+        "kind": "framework-configuration",
+        "outcome": "public-init-no-store-getter"
+      },
+      {
+        "sequence": 2,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 3,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 4,
+        "kind": "persistent-factory",
+        "outcome": "explicit"
+      },
+      {
+        "sequence": 5,
+        "kind": "assignment",
+        "outcome": "verified-before-construction"
+      },
+      {
+        "sequence": 6,
+        "kind": "construction",
+        "outcome": "unpublished"
+      },
+      {
+        "sequence": 7,
+        "kind": "publication",
+        "outcome": "host-confirmed"
+      },
+      {
+        "sequence": 8,
+        "kind": "navigation",
+        "outcome": "finished"
+      },
+      {
+        "sequence": 9,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 10,
+        "kind": "enumeration",
+        "outcome": "observed"
+      },
+      {
+        "sequence": 11,
+        "kind": "persistent-factory",
+        "outcome": "explicit"
+      },
+      {
+        "sequence": 12,
+        "kind": "assignment",
+        "outcome": "verified-before-construction"
+      },
+      {
+        "sequence": 13,
+        "kind": "construction",
+        "outcome": "unpublished"
+      },
+      {
+        "sequence": 14,
+        "kind": "publication",
+        "outcome": "host-confirmed"
+      },
+      {
+        "sequence": 15,
+        "kind": "navigation",
+        "outcome": "finished"
+      },
+      {
+        "sequence": 16,
+        "kind": "close",
+        "outcome": "released-owned-references"
+      },
+      {
+        "sequence": 17,
+        "kind": "fence",
+        "outcome": "installed"
+      },
+      {
+        "sequence": 18,
+        "kind": "quiesce",
+        "outcome": "no-observed-owned-resources"
+      },
+      {
+        "sequence": 19,
+        "kind": "close",
+        "outcome": "released-owned-references"
+      },
+      {
+        "sequence": 20,
+        "kind": "fence",
+        "outcome": "installed"
+      },
+      {
+        "sequence": 21,
+        "kind": "quiesce",
+        "outcome": "no-observed-owned-resources"
+      }
+    ]
+  },
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "previousRun": "4765a36e-4be5-439a-a520-3e79b16c5a11",
+      "records": [
+        {
+          "profile": "76b875a2-f898-4125-a020-cbba2dace350",
+          "store": "1b67c300-60db-4c96-82f3-2c336f7356dc",
+          "generation": 2,
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "a5386090-5155-4506-bea4-0aad0c13b63f",
+          "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8"
+        },
+        {
+          "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c",
+          "store": "bb0d26bb-638e-475f-ae09-346870f92300",
+          "generation": 2,
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "fbd663ae-0d66-43d2-bba1-3f5429ec2900",
+          "namespace": "5f68ee09-3f6b-4adc-81d0-b314f61cb6b8"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "status": "quiescent",
+        "revision": 4,
+        "store": "1b67c300-60db-4c96-82f3-2c336f7356dc",
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "profile": "76b875a2-f898-4125-a020-cbba2dace350"
+      },
+      {
+        "status": "quiescent",
+        "revision": 4,
+        "store": "bb0d26bb-638e-475f-ae09-346870f92300",
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "profile": "f29dae17-4fa6-4802-8958-fa49b323e83c"
+      }
+    ]
+  },
+  "binarySHA256": "28ad7f6042186d502cdd242008491927418188547ae67421f5711e40bb56c23f",
+  "observations": [
+    {
+      "environment": {
+        "http": "response-136",
+        "idb": "A",
+        "cookie": "A",
+        "worker": "A",
+        "session": "A",
+        "cache": "A",
+        "local": "A"
+      },
+      "event": "seed-values-A"
+    },
+    {
+      "environment": {
+        "cookie": "B",
+        "cache": "B",
+        "idb": "B",
+        "session": "B",
+        "http": "response-140",
+        "local": "B",
+        "worker": "B"
+      },
+      "event": "seed-values-B"
+    }
+  ]
+}
