@@ -1,0 +1,36 @@
+# Product direction
+
+**Classification: PROPOSED.** The assessment separates source observations and historical tests from planned launch behavior.
+
+## Product identity
+
+Vezham is a local-first Mac browser for work that spans several websites. The most important workflow is returning to an organized project and continuing to work. A Space gives a project context within a workspace, pins keep useful pages within reach, and groups organize related unpinned tabs. The command bar finds the right tab, Space or action without taking over a website's typing shortcuts. Native AppKit owns windows, responder transitions and Split Screen. System WebKit provides the engine through the macOS integration and public API surface Vezham is qualifying. The platform choice gives Vezham a smaller engine packaging obligation and a clear OS compatibility matrix. It does not establish a performance lead. [Architecture assessment](current-state-assessment.md) · [Engine ADR](../../../../decisions/0001-browser-engine-strategy.md)
+
+| Workflow                   | Success from the user's perspective                                                                                                                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Resume a project           | See the right workspace, Space, tab order, pins, groups and selection before page loads. Inspect the current profile or private-session indicator separately.                                                       |
+| Read and work side by side | Pair a reference with a working page. Know which pane receives navigation commands. Resize or switch Space and recover the pair without re-creating the project layout.                                             |
+| Triage a link              | Open a small private Mini, inspect the page, then close it or explicitly open an eligible link in the selected destination. See when the destination has loaded enough to commit and when further action is needed. |
+| Find and move              | Find scoped actions and tabs by keyboard or sidebar, with readable Space labels and native focus feedback. Move or reorder without requiring a drag gesture.                                                        |
+
+A **workspace** is a named collection of Spaces and their layout. A **Space** is an organizational section within one workspace. A **profile** is a separately authorized website-data and protected-metadata context. Tabs in different Spaces can share a profile. A private workspace-shaped layout is volatile and session-owned. Flat groups and pins are separate presentations of tabs, and a split pairs two tabs in one Space. [Workspace model](workspace-data-model.md)
+
+## Competitive choices
+
+| Reference          | Learn from                                                                                           | Vezham decision                                                                                                                                                 |
+| ------------------ | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Arc                | Clear sidebar hierarchy, strong command discovery and deliberate pinning                             | Preserve familiar intent and offer keyboard movement. Skip Today auto-archiving, nested folders, replicated aesthetics and a separate Favorites tier at launch. |
+| Little Arc and Cra | Temporary window and explicit destination. Published Arc fixes show why destination mistakes matter  | Show destination and privacy context. Treat handoff as a fresh URL request in the receiver and keep Mini available until confirmed.                             |
+| SigmaOS and Flecha | Search across context and actions, with cues for the active target                                   | Prioritize keyboard discovery and pane target clarity. Keep single-key takeover, task snoozing and developer automation outside launch scope.                   |
+| Zen                | Spaces and account isolation can be explained separately. Compact UI needs deliberate focus handling | Keep Space labels organizational. Provide a narrow split fallback with clear active pane and privacy cues.                                                      |
+| Search             | Saved layout can exist before a WebKit page. Split intent can survive restart                        | Adopt lazy logical restore and persist split intent only in an eligible protected workspace.                                                                    |
+| Stedding and Vela  | Migration highlights the value of structural ordering and honest preview                             | Keep general import and sync out of first release. Revisit metadata-only import after format and authority gates.                                               |
+| Refrax             | Distinct storage and engine contracts show the cost of coupling workspace UI to data authority       | Keep one engine and explicitly model the workspace/profile relationship.                                                                                        |
+
+[Research comparison](../cross-browser-research/browser-feature-comparison.md) · [Research UX](../cross-browser-research/workspace-and-tab-ux.md) · [Research opportunity matrix](../cross-browser-research/feature-opportunity-matrix.md)
+
+## First stable internal release
+
+Subject to WS-F5R, WS-F7 and WS-F8 qualification and release authority, the workspace design targets one mounted workspace per main host, multiple locally organized workspaces, visible Spaces, flat groups, pins, keyboard and contextual movement, bounded two-pane split, and independent Mini. Resume layout and selection safely. Normal restart is layout-only until a reviewed destination retention/replay policy, a protected write path and permission to enable it exist. Keep command actions local and usable without identity/cloud. The single mounted workspace used by F6 fixtures does not narrow the separate multiple-profile window gate for release. Supported downloads, external compatibility and accessibility remain qualification gates with their existing scope; the design does not narrow them by omission. [Implementation sequence](implementation-plan.md) · [Distribution ADR](../../../../decisions/0002-browser-distribution-and-platform.md)
+
+Explicit exclusions include Chromium/Gecko/CEF/Electron embedding, mandatory sync or login, copied branding or UI assets, cross-engine state or secret migration, inline Peek/Glance, arbitrary site injection and agent control, extension marketplace parity, nested folders, auto-discard of live pages, more than two split panes, cross-workspace live tab moves and restoration of private tabs across app restart.
