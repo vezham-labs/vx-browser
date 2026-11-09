@@ -1,0 +1,64 @@
+{
+  "label": "cut-10-enumeration",
+  "pid": 85394,
+  "action": "verify",
+  "cutpoint": "enumeration",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "profile": "6347e880-f775-4bc6-9243-b5e9cc281d39",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "81936fc4-0c5f-4f48-a648-01c54c928baa",
+          "generation": 2,
+          "store": "8439124f-86e5-4d5d-8173-60716281b8ea",
+          "namespace": "cc0486c7-ae8c-413b-9eb5-c25f99ec780e"
+        },
+        {
+          "profile": "7efe9a59-9ba8-4b91-927f-f1ae7fecf5cf",
+          "phase": {
+            "pending": {
+              "_0": "reconcile"
+            }
+          },
+          "operation": "a097cb95-c4c7-450c-b202-e0c43e9147ea",
+          "generation": 3,
+          "store": "42de5167-7219-4c42-a7dc-582a70f6a31c",
+          "namespace": "cc0486c7-ae8c-413b-9eb5-c25f99ec780e"
+        }
+      ],
+      "previousRun": "a1d31f84-d119-492a-b29f-2e9225f797d5"
+    },
+    "rows": [
+      {
+        "store": "8439124f-86e5-4d5d-8173-60716281b8ea",
+        "status": "quiescent",
+        "revision": 4,
+        "profile": "6347e880-f775-4bc6-9243-b5e9cc281d39",
+        "resourceGeneration": 1,
+        "origin": "fresh"
+      },
+      {
+        "store": "42de5167-7219-4c42-a7dc-582a70f6a31c",
+        "status": "quiescent",
+        "revision": 4,
+        "profile": "7efe9a59-9ba8-4b91-927f-f1ae7fecf5cf",
+        "resourceGeneration": 1,
+        "origin": "fresh"
+      }
+    ]
+  },
+  "binarySHA256": "a06f616c1bbe0677344043706fe0261c2b1c1f4c29c51af3cc470234967d7513",
+  "observations": []
+}

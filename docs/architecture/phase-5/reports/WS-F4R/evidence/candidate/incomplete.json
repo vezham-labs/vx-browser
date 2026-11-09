@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "stage": "evidence-runner",
+  "reason": "Output directory variable overwritten by external URL string; screenshot write raised TypeError",
+  "browserDisposition": "Prefix observations only. No complete run result. Preserved raw stdout/stderr and runner exception."
+}

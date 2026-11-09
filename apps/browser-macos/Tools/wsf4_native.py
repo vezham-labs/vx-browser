@@ -22,12 +22,13 @@ main{max-width:740px;margin:auto;padding:55px 38px}small{color:#526b58;text-tran
 h1{font:64px Georgia,serif;letter-spacing:-.055em;margin:14px 0}p{line-height:1.6;max-width:500px}
 a{color:#155943} hr{border:0;border-top:1px solid #dadbd0;margin:34px 0}
 </style>"""
+FAVICON = b'<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">'
 PAGES = {
-    "/guide": (b"<title>Coastal Field Guide</title>" + STYLE +
+    "/guide": (b"<title>Coastal Field Guide</title>" + FAVICON + STYLE +
                b"<header>COASTAL FIELD GUIDE</header><main><small>Field notes / 01</small>"
                b"<h1>Along the<br>water's edge.</h1><p>A short walk through the salt meadows, tidal pools and dunes of the north coast.</p>"
                b"<hr><a id='next' href='/notes'>Read the trail notes &rarr;</a></main>"),
-    "/notes": b"<title>Trail Notes</title>" + STYLE + b"<main><h1>Trail notes</h1><p>Stay on the marked paths.</p></main>",
+    "/notes": b"<title>Trail Notes</title>" + FAVICON + STYLE + b"<main><h1>Trail notes</h1><p>Stay on the marked paths.</p><a id=mini-link target=_blank href=/guide>Open field guide</a></main>",
     "/state": (b"<title>Waiting</title><script>document.title = document.cookie.includes('fixture=') "
                b"? 'Prior Session' : 'Fresh Session';</script>"),
 }
@@ -56,7 +57,7 @@ class Fixture(BaseHTTPRequestHandler):
         pass
 
 
-def run(evidence, attempt, origin):
+def run(evidence, attempt, origin, refinement=False):
     target = evidence / f"native-{attempt}"
     target.mkdir()
     binary = APP / "Contents/MacOS/VezhamBrowser"
@@ -64,7 +65,7 @@ def run(evidence, attempt, origin):
     screenshots = {}
     started = datetime.now(timezone.utc).isoformat()
     with (target / "stderr.log").open("wb") as errors:
-        process = subprocess.Popen([binary, "--wsf4-qualification", origin], stdout=subprocess.PIPE, stderr=errors)
+        process = subprocess.Popen([binary, "--wsf4-qualification", origin, *(["--wsf4r-qualification"] if refinement else [])], stdout=subprocess.PIPE, stderr=errors)
         lines = queue.Queue()
 
         def read():
@@ -73,7 +74,7 @@ def run(evidence, attempt, origin):
             lines.put(None)
 
         threading.Thread(target=read, daemon=True).start()
-        deadline = time.monotonic() + 95
+        deadline = time.monotonic() + (180 if refinement else 95)
         try:
             with (target / "stdout.log").open("wb") as raw:
                 while time.monotonic() < deadline:
@@ -89,6 +90,16 @@ def run(evidence, attempt, origin):
                         event = json.loads(line)
                     except (ValueError, UnicodeError):
                         continue
+                    if "externalURL" in event and refinement:
+                        from urllib.parse import urlparse, parse_qs
+                        wrapper = urlparse(event["externalURL"])
+                        destination = parse_qs(wrapper.query).get("url", [""])[0]
+                        parsed = urlparse(destination)
+                        if wrapper.scheme != "vezham" or wrapper.netloc != "open" or parsed.hostname != "127.0.0.1":
+                            raise RuntimeError("Unowned external fixture URL")
+                        launch = subprocess.run(["open", "-a", str(APP), event["externalURL"]], capture_output=True, timeout=8)
+                        (evidence / f"external-{attempt}.json").write_text(
+                            json.dumps({"exit": launch.returncode, "stderr": launch.stderr.decode(errors="replace")}, indent=2) + "\n")
                     if "testID" in event:
                         events.append(event)
                     if event.get("testID") == "qualification":
@@ -119,6 +130,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--evidence", type=Path, required=True)
     parser.add_argument("--run-name", required=True)
+    parser.add_argument("--refinement", action="store_true")
     args = parser.parse_args()
     if not args.run_name.isascii() or not args.run_name.replace("-", "").isalnum():
         parser.error("Run name must use ASCII letters, digits and hyphens.")
@@ -132,7 +144,7 @@ def main():
         thread.start()
         origin = f"http://127.0.0.1:{server.server_port}"
         try:
-            results = [run(evidence, i, origin) for i in (1, 2)]
+            results = [run(evidence, i, origin, args.refinement) for i in (1, 2)]
         finally:
             server.shutdown()
     return 0 if all(results) else 1

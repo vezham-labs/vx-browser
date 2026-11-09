@@ -1,0 +1,48 @@
+{
+  "namespace": "21825872-c5f2-46fd-b656-aab47e349851",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "9c8ddb6a-f9e0-48f7-8169-90f5c95ea9af",
+      "store": "c0ae256a-291b-4c66-89b1-6c7a8bcde6a1"
+    },
+    {
+      "name": "B",
+      "profile": "fde7aba1-a209-4efa-a3a7-a477e3f9e70d",
+      "store": "a99459e9-f505-4181-a1f8-912253f97600"
+    }
+  ],
+  "origin": "http://127.0.0.1:62404",
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "previousRun": "cbdec91d-4c61-447a-b719-640f64cdfbf1",
+      "records": [
+        {
+          "operation": "b7f934a8-2e61-4814-82f3-a04c70dc72dc",
+          "generation": 1,
+          "phase": {
+            "pending": {
+              "_0": "activate"
+            }
+          },
+          "profile": "9c8ddb6a-f9e0-48f7-8169-90f5c95ea9af",
+          "store": "c0ae256a-291b-4c66-89b1-6c7a8bcde6a1",
+          "namespace": "21825872-c5f2-46fd-b656-aab47e349851"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "store": "c0ae256a-291b-4c66-89b1-6c7a8bcde6a1",
+        "revision": 2,
+        "status": "accessStarted",
+        "origin": "fresh",
+        "resourceGeneration": 1,
+        "profile": "9c8ddb6a-f9e0-48f7-8169-90f5c95ea9af"
+      }
+    ]
+  },
+  "cutpoint": null,
+  "action": "reconcile-uncertain"
+}

@@ -1,0 +1,30 @@
+{
+  "startHead": "7e537468a4feb4c8eb3d728375139c5a7d134bd2",
+  "endHead": "7e537468a4feb4c8eb3d728375139c5a7d134bd2",
+  "branch": "timeline",
+  "workingTree": "local WS-F4R application changes and new reports only",
+  "initialWorkingTree": "clean",
+  "trackedChanges": [
+    "apps/browser-macos/Chrome/src/Browser.tsx",
+    "apps/browser-macos/Chrome/src/bridge.ts",
+    "apps/browser-macos/Chrome/src/icons.tsx",
+    "apps/browser-macos/Chrome/src/styles.css",
+    "apps/browser-macos/Chrome/tests/shell.spec.ts",
+    "apps/browser-macos/Config/Info.plist",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "apps/browser-macos/Sources/Host/BrowserChromeContract.swift",
+    "apps/browser-macos/Sources/Host/MainWindowController.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+    "apps/browser-macos/Tools/wsf1.py",
+    "apps/browser-macos/Tools/wsf1_native.py",
+    "apps/browser-macos/Tools/wsf4_native.py"
+  ],
+  "historicalReportsChanged": false,
+  "historicalEvidenceChanged": false,
+  "decisionsChanged": false,
+  "entitlementsChanged": false,
+  "dependenciesChanged": false,
+  "staged": false,
+  "committed": false,
+  "pushed": false
+}

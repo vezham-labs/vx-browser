@@ -1,0 +1,423 @@
+{
+  "startedUTC": "2026-11-09T18:06:21.483975+00:00",
+  "binarySHA256": "40be949ca4086caceb8f906e97ec5799dc59a2a5abeef26bf02b71e3d7392ab0",
+  "attempt": 1,
+  "exit": 0,
+  "screenshots": {
+    "01-main-default": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "07-new-tab-private": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "02-vertical-tabs": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "05-pinned-tabs": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "06-group-expanded": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "06-group-collapsed": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "04-spaces": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "03-sidebar-collapsed": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "08-command-bar": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "09-tab-context": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "10-split-screen": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "11-split-second-focused": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "18-narrow-window": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "12-mini-browser": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "13-mini-navigation": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "14-mini-transfer-action": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "16-dark": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "15-light": {
+      "status": "captured",
+      "stderr": ""
+    },
+    "17-private-session": {
+      "status": "captured",
+      "stderr": ""
+    }
+  },
+  "events": [
+    {
+      "testID": "R-SHELL",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-PRIVATE-START",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-PRIVATE-STORE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-URL",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-RENDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-FAVICON",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-PIN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NEW-TAB",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SECOND-PAGE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SECOND-RENDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-CREATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-ASSIGN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-COLLAPSE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-EXPAND",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-RENAME",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-ORDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-MOVE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-CREATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-RENAME",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-SWITCH",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NONEMPTY-SPACE-GUARD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COLLAPSE-SIDEBAR",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COLLAPSED-LAYOUT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-EXPAND-SIDEBAR",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COMMAND-BAR",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COMMAND-FOCUS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-TAB-CONTEXT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-TAB-CONTEXT-VISIBLE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-CONTEXT-ACTION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-CONTEXT-DISMISSED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-SELECT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-CREATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-NATIVE-VIEWS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-DISTINCT-IDENTITY",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-FOCUS-SECOND",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-FOCUS-FIRST",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-INDEPENDENT-NAVIGATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-STATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-OTHER-NAVIGATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-OTHER-STATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-CONTENT-BRIDGE-ISOLATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NARROW-FALLBACK",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-RESTORED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-EXIT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-DUPLICATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-REORDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-CLOSE-SELECT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-CLOSE-SETUP",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-CLOSE-READY",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-DIVIDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-CLOSE-PANE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-ISOLATION-CONTROL",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-OPEN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-RENDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-STRUCTURE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-SEPARATE-STORE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-STORAGE-ISOLATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-NAVIGATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-NAVIGATED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-BACK",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-BACK-STATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-FORWARD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-FORWARD-STATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-RELOAD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-RELOADED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-TRANSFER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-TRANSFER-URL",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-TRANSFER-URL-ONLY",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-CLOSE-SECOND",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-SECOND-LOADED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-CLOSE-CLEANUP",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-LINK-ENTRY",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-LINK-CLEANUP",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NATIVE-URL-ENTRY",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NATIVE-URL-CLEANUP",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-DARK",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-LIGHT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-UNPIN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-UNGROUP",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-TAB-MOVE-SPACE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-DELETE-EMPTY",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-DELETED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-END",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "qualification",
+      "status": "PASS_NATIVE"
+    }
+  ],
+  "passed": true
+}

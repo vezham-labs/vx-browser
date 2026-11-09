@@ -1,0 +1,94 @@
+Building for debugging...
+[Computing dependencies]
+[Constructing description]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[58 / 122]
+[59 / 123] BrowserDomain
+[59 / 140]
+[61 / 162]
+[66 / 162]
+[69 / 162]
+[71 / 162]
+[73 / 162]
+[76 / 162]
+[77 / 162]
+[78 / 162]
+[81 / 162]
+[82 / 162]
+[84 / 162]
+[85 / 162]
+[87 / 162]
+[89 / 162]
+[90 / 162]
+[92 / 162]
+[93 / 162]
+[95 / 162] BrowserDomain
+[96 / 162] BrowserDomain
+[99 / 162] BrowserDomain
+[105 / 163]
+[107 / 163] BrowserDomain
+[107 / 163] BrowserPorts
+[110 / 166] BrowserPorts
+[117 / 167]
+[119 / 168] WSF0Fakes
+[122 / 172] WSF0Fakes
+[123 / 176] BrowserPersistence
+[137 / 176] BrowserPorts
+[139 / 176] BrowserPersistence
+[141 / 176] BrowserPersistence-product
+[144 / 177] BrowserPorts-product
+[145 / 177] BrowserCore
+[148 / 183] BrowserCore
+[150 / 183] BrowserCore
+[157 / 183] BrowserCore
+[158 / 184] BrowserNativeStorage
+[160 / 237]
+[161 / 237]
+[164 / 237]
+[167 / 237]
+[169 / 237]
+[172 / 237]
+[174 / 237]
+[176 / 237]
+[178 / 237]
+[180 / 237]
+[183 / 237]
+[185 / 237]
+[187 / 237]
+[188 / 237]
+[189 / 237]
+[190 / 237]
+[193 / 237] BrowserCore
+[193 / 237]
+[194 / 237]
+[197 / 237]
+[199 / 237]
+[200 / 237]
+[201 / 237]
+[202 / 237]
+[203 / 237]
+[204 / 237]
+[207 / 237] BrowserNativeStorage
+[208 / 237] BrowserNativeStorage
+[210 / 237] BrowserNativeStorage
+[216 / 237] BrowserNativeStorage
+[217 / 237] BrowserNativeStorage
+[218 / 237] BrowserNativeStorage
+[219 / 237] BrowserNativeStorage
+[221 / 237] BrowserNativeStorage
+[223 / 237] BrowserNativeStorage
+[227 / 238] StorageModelTests-product
+[228 / 247]
+[229 / 247]
+[231 / 247] StorageModelTests-product
+[232 / 247] StorageModelTests-product
+[234 / 247] StorageModelTests-product
+[239 / 247] StorageModelTests-product
+[241 / 247] StorageModelTests-product
+[241 / 247] AllIncludingTests
+[241 / 247] StorageModelTests-product
+[243 / 247] StorageModelTests-product
+[244 / 247] StorageModelTests-product
+[246 / 247] StorageModelTests-product
+Build complete! (49.45 secs)

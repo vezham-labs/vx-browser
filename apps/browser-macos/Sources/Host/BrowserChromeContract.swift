@@ -4,6 +4,9 @@ struct ChromeCommand: Decodable {
     enum Kind: String, Decodable {
         case snapshot, startPrivate, endPrivate, newTab, activate, close, duplicate, move
         case navigate, back, forward, reload, stop, copy, paste, appearance, presentation
+        case spaceCreate, spaceRename, spaceSwitch, spaceDelete, tabSpace, pin
+        case groupCreate, groupRename, groupToggle, groupMove, groupDelete, tabGroup
+        case split, unsplit, miniOpen, miniTransfer
     }
 
     let version: Int
@@ -13,6 +16,8 @@ struct ChromeCommand: Decodable {
     let url: String?
     let value: ChromeAppearance?
     let offset: Int?
+    let target: UUID?
+    let name: String?
     let visible: Bool?
     let left: Double?
     let top: Double?
@@ -31,7 +36,22 @@ struct ChromeTab: Encodable, Equatable {
     let back: Bool
     let forward: Bool
     let connection: String
+    let favicon: String?
     let failure: String?
+    let space: String
+    let pinned: Bool
+    let group: String?
+}
+
+struct ChromeSpace: Encodable, Equatable {
+    let id: String
+    var name: String
+}
+struct ChromeGroup: Encodable, Equatable {
+    let id: String
+    let space: String
+    var name: String
+    var collapsed = false
 }
 
 struct ChromeState: Encodable, Equatable {
@@ -42,6 +62,12 @@ struct ChromeState: Encodable, Equatable {
     let tabs: [ChromeTab]
     let selected: String?
     let appearance: ChromeAppearance
+    let spaces: [ChromeSpace]
+    let activeSpace: String
+    let groups: [ChromeGroup]
+    let split: [String]
+    let splitCompact: Bool
+    let mini: Bool
 }
 
 struct ChromeResult: Encodable {

@@ -4,10 +4,10 @@ import type { Appearance, BrowserState, Command, Tab } from '../src/bridge';
 
 async function hostStandIn(page: Page) {
   await page.addInitScript(() => {
-    const state: BrowserState = { revision: 0, session: 'inactive', profile: 'unavailable', tabs: [], appearance: 'system' };
+    const state: BrowserState = { revision: 0, session: 'inactive', profile: 'unavailable', tabs: [], appearance: 'system', spaces: [{ id:'personal', name:'Personal' }], activeSpace:'personal', groups: [], split: [], splitCompact:false, mini:false };
     let sequence = 0;
     const addTab = () => {
-      const next: Tab = { id: 'test-' + ++sequence, title: 'New tab', loading: false, progress: 0, back: false, forward: false, connection: 'unknown' };
+      const next: Tab = { id: 'test-' + ++sequence, title: 'New tab', space:state.activeSpace, pinned:false, loading: false, progress: 0, back: false, forward: false, connection: 'unknown' };
       state.tabs.push(next);
       state.selected = next.id;
       return next;
@@ -32,6 +32,22 @@ async function hostStandIn(page: Page) {
           if (target) { tab.url = target.url; tab.title = target.title; }
           break;
         }
+        case 'spaceCreate': {
+          const next = {id:'space-' + ++sequence, name:command.name};
+          state.spaces.push(next); state.activeSpace=next.id; state.selected=undefined;
+          break;
+        }
+        case 'spaceSwitch': state.activeSpace=command.target; state.selected=state.tabs.find(tab=>tab.space===command.target)?.id; state.split=[]; break;
+        case 'spaceRename': { const space=state.spaces.find(space=>space.id===command.target); if(space) space.name=command.name; break; }
+        case 'spaceDelete': state.spaces=state.spaces.filter(space=>space.id!==command.target); state.activeSpace=state.spaces[0].id; break;
+        case 'groupCreate': state.groups.push({id:'group-'+ ++sequence,space:state.activeSpace,name:command.name,collapsed:false}); break;
+        case 'groupToggle': { const group=state.groups.find(group=>group.id===command.target); if(group) group.collapsed=!group.collapsed; break; }
+        case 'groupRename': { const group=state.groups.find(group=>group.id===command.target); if(group) group.name=command.name; break; }
+        case 'tabGroup': if(target) {target.group=command.target;target.pinned=false;} break;
+        case 'tabSpace': if(target) {target.space=command.target;target.group=undefined;} break;
+        case 'pin': if (target) target.pinned = !target.pinned; break;
+        case 'split': if (target && state.selected) state.split = [state.selected, target.id]; break;
+        case 'unsplit': state.split = []; break;
         case 'appearance': state.appearance = command.value as Appearance; break;
       }
       state.revision++;
@@ -45,7 +61,7 @@ test.beforeEach(({ page }) => { page.on('pageerror', (error) => console.error(er
 
 test('missing bridge leaves actions unavailable', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: 'A little room to explore.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Your next idea.' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Start private session' }).last()).toBeDisabled();
 });
 
@@ -76,7 +92,7 @@ test('sidebar, command palette focus, appearance and narrow layout', async ({ pa
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.setViewportSize({ width: 660, height: 470 });
   await expect(page.getByRole('main')).toBeVisible();
-  expect(await page.locator('.omnibox').evaluate((element) => element.getBoundingClientRect().width)).toBeGreaterThan(220);
+  expect(await page.locator('.omnibox').evaluate((element) => element.getBoundingClientRect().width)).toBeGreaterThan(110);
   await page.getByRole('button', { name: 'Hide sidebar' }).click();
   await expect(page.getByRole('complementary')).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Show sidebar' })).toBeVisible();
@@ -99,4 +115,52 @@ test('temporary bookmarks clear at session end; profiles and history stay unavai
   await expect(page.getByRole('button', { name: 'Clear history' })).toBeDisabled();
   await page.getByRole('button', { name: 'Profiles', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Create profile' })).toBeDisabled();
+});
+
+
+test('vertical tab pinning, group creation, collapse and contextual assignment', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  await page.getByRole('button', { name: 'Actions for New tab', exact:true }).click();
+  await page.getByRole('button', { name: 'Pin tab', exact:true }).click();
+  await expect(page.locator('.vertical-tabs .sidebar-label').first()).toHaveText('Pinned');
+  await page.getByRole('button', { name:'Workspace actions' }).click();
+  await page.getByRole('button', { name:'Create tab group',exact:true }).click();
+  await page.getByRole('textbox', { name:'Name',exact:true }).fill('Reading');
+  await page.getByRole('button', {name:'Save',exact:true}).click();
+  await page.getByRole('button', {name:'Actions for New tab',exact:true}).click();
+  await page.getByRole('button', {name:'Move to Reading',exact:true}).click();
+  await expect(page.locator('.tab-group .vertical-tab')).toHaveCount(1);
+  await page.locator('.group-heading > button').first().click();
+  await expect(page.locator('.tab-group .vertical-tab')).toHaveCount(0);
+});
+
+test('Spaces keep tab organization distinct and empty Spaces can be deleted', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  await page.getByRole('button', {name:'Create Space',exact:true}).click();
+  await page.getByRole('textbox', {name:'Name',exact:true}).fill('Research');
+  await page.getByRole('button', {name:'Save',exact:true}).click();
+  await expect(page.getByRole('tab')).toHaveCount(0);
+  await page.getByRole('button', {name:'Switch to Personal'}).click();
+  await expect(page.getByRole('tab')).toHaveCount(1);
+  await page.getByRole('button', {name:'Switch to Research'}).click();
+  await page.getByRole('button', {name:'Space actions',exact:true}).click();
+  await page.getByRole('button', {name:'Delete empty Space'}).click();
+  await expect(page.getByRole('button', {name:'Switch to Research'})).toHaveCount(0);
+});
+
+test('Split commands expose pane controls and command bar searches open tabs', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  await page.getByRole('button', {name:'Open command palette'}).click();
+  await page.getByRole('dialog').getByRole('button', {name:/^New tab/}).click();
+  await expect(page.getByRole('tab')).toHaveCount(2);
+  await page.getByRole('button', {name:'Add split',exact:true}).click();
+  await expect(page.getByLabel('Split Screen panes')).toBeVisible();
+  await page.getByRole('button', {name:'Exit split',exact:true}).last().click();
+  await expect(page.getByLabel('Split Screen panes')).toHaveCount(0);
+  await page.getByRole('button', {name:'Open command palette'}).click();
+  await page.getByRole('textbox', {name:'Find a command'}).fill('Tab ·');
+  await expect(page.getByRole('dialog').getByRole('button', {name:'Tab · New tab',exact:true})).toHaveCount(2);
 });

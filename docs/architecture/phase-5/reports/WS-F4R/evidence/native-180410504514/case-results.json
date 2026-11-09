@@ -1,0 +1,2862 @@
+[
+  {
+    "id": "F1-DIAG-001",
+    "detail": "Noncreating public enumeration only; logical prior removal remains unknown",
+    "status": "PASS_NATIVE",
+    "attempt": "00-original-observation"
+  },
+  {
+    "detail": "Synthetic catalog only",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-REGISTER-A",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Exact registration receipt replay",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-local",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-idb",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-cache",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-cookie",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-local",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-idb",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-cache",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-session",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-worker",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-http",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Synthetic catalog only",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-REGISTER-B",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Exact registration receipt replay",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-local",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-idb",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-cache",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-cookie",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-local",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-idb",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-cache",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-session",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-worker",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-http",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-local",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-local",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "attempt": "01-seed"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "attempt": "01-seed"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-session",
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-session",
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "attempt": "02-restart"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-session",
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-session",
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-MULTIVIEW-SHARE",
+    "status": "PASS_NATIVE",
+    "detail": "Two views share only their intended profile",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-MULTIWINDOW",
+    "status": "PASS_NATIVE",
+    "detail": "Two NSWindows consume owned surfaces and release them before close",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-NONLAST-PERSISTENT",
+    "status": "PASS_NATIVE",
+    "detail": "Other view remains usable",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-A-B",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh immutable view ownership",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-B-A",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh immutable view ownership",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "id": "F1-NAT-SWITCH-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Destination data remains scoped",
+    "attempt": "02b-switch"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cookie",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-local",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-idb",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cache",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-worker",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-A-session",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cookie",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-local",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-idb",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cache",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-worker",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-B-session",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-cookie",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-local",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-idb",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-cookie",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-local",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-idb",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-local",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-cookie",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-local",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-idb",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-NONLAST",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-A",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-B",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-cookie",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-local",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-idb",
+    "attempt": "03-private"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-C",
+    "attempt": "03-private"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-A-session",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-B-session",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-PERSISTENT-SEPARATE-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-POSITIVE-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-INDEPENDENT-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-SHARED-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-NONLAST",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-A",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-B",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-local",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-FRESH-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "detail": "Private in-session/fresh-session page-visible behavior; no forensic claim",
+    "id": "F1-NAT-PRIVATE-LAST-C",
+    "status": "PASS_NATIVE",
+    "attempt": "03c-private-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cookie",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-local",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-idb",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-cache",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-A-worker",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-A-session",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cookie",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-local",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-idb",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-cache",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Actual new app process / stable mapping",
+    "id": "F1-NAT-RESTART-B-worker",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "New browsing context does not restore sessionStorage",
+    "id": "F1-NAT-RESTART-B-session",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Selected localStorage only",
+    "id": "F1-NAT-CLEAR-CALLBACK",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-3-A",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Observable selected-class absence",
+    "id": "F1-NAT-CLEAR-LOCAL",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Unselected class positive control retained",
+    "id": "F1-NAT-CLEAR-RETAIN-cookie",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Unselected class positive control retained",
+    "id": "F1-NAT-CLEAR-RETAIN-idb",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Unselected class positive control retained",
+    "id": "F1-NAT-CLEAR-RETAIN-cache",
+    "attempt": "04-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-REMOVE-A",
+    "detail": "Public callback plus noncreating absence; no secure-erasure claim",
+    "attempt": "05-remove"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-REMOVE-B",
+    "detail": "Public callback plus noncreating absence; no secure-erasure claim",
+    "attempt": "05-remove"
+  },
+  {
+    "id": "F1-NAT-REGISTER-A",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-REGISTER-B",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "publication-failure-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PUBLICATION-FAILURE",
+    "detail": "Real construction with synthetic injected metadata-write failure",
+    "attempt": "publication-failure"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-PUBLICATION-FENCED",
+    "detail": "No publication/navigation after unavailable journal",
+    "attempt": "publication-failure"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-A",
+    "attempt": "cut-00-creation-intent-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "attempt": "cut-00-creation-intent-reconcile"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-B",
+    "attempt": "cut-00-creation-intent-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "attempt": "cut-00-creation-intent-reconcile"
+  },
+  {
+    "detail": "Noncreating reconciliation",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "attempt": "cut-00-creation-intent-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-A",
+    "status": "PASS_NATIVE",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "attempt": "cut-01-persistent-factory-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "status": "PASS_NATIVE",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "attempt": "cut-01-persistent-factory-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-B",
+    "status": "PASS_NATIVE",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "attempt": "cut-01-persistent-factory-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "status": "PASS_NATIVE",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "attempt": "cut-01-persistent-factory-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "status": "PASS_NATIVE",
+    "detail": "Noncreating reconciliation",
+    "attempt": "cut-01-persistent-factory-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-A",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-02-assignment-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-02-assignment-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-B",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-02-assignment-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-02-assignment-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "detail": "Noncreating reconciliation",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-02-assignment-reconcile"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-A",
+    "attempt": "cut-03-construction-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "attempt": "cut-03-construction-reconcile"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-B",
+    "attempt": "cut-03-construction-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "attempt": "cut-03-construction-reconcile"
+  },
+  {
+    "detail": "Noncreating reconciliation",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "attempt": "cut-03-construction-reconcile"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "id": "F1-NAT-RECOVERY-A",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-04-publication-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-04-publication-reconcile"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "id": "F1-NAT-RECOVERY-B",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-04-publication-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-04-publication-reconcile"
+  },
+  {
+    "detail": "Noncreating reconciliation",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-04-publication-reconcile"
+  },
+  {
+    "id": "F1-NAT-REGISTER-A",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-REGISTER-B",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-05-clear-request-prepare"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-A",
+    "attempt": "cut-05-clear-request-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "attempt": "cut-05-clear-request-reconcile"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-B",
+    "attempt": "cut-05-clear-request-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "attempt": "cut-05-clear-request-reconcile"
+  },
+  {
+    "detail": "Noncreating reconciliation",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "attempt": "cut-05-clear-request-reconcile"
+  },
+  {
+    "id": "F1-NAT-REGISTER-A",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-REGISTER-B",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-06-clear-callback-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-A",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "attempt": "cut-06-clear-callback-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "attempt": "cut-06-clear-callback-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-B",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "attempt": "cut-06-clear-callback-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "attempt": "cut-06-clear-callback-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "detail": "Noncreating reconciliation",
+    "attempt": "cut-06-clear-callback-reconcile"
+  },
+  {
+    "detail": "Synthetic catalog only",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-REGISTER-A",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Exact registration receipt replay",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-local",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-idb",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-A-cache",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-cookie",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-local",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-idb",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-cache",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-session",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-worker",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-A-http",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Synthetic catalog only",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-REGISTER-B",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Exact registration receipt replay",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-local",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-idb",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-EMPTY-B-cache",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-cookie",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-local",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-idb",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-cache",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-session",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-worker",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-SEED-B-http",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-local",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-local",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "attempt": "cut-07-retire-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-A",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "attempt": "cut-07-retire-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "attempt": "cut-07-retire-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-B",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "attempt": "cut-07-retire-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "attempt": "cut-07-retire-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "detail": "Noncreating reconciliation",
+    "attempt": "cut-07-retire-reconcile"
+  },
+  {
+    "id": "F1-NAT-REGISTER-A",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-A-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-REGISTER-B",
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-EMPTY-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-session",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-worker",
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-SEED-B-http",
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-local",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "attempt": "cut-08-remove-request-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "id": "F1-NAT-RECOVERY-A",
+    "attempt": "cut-08-remove-request-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "attempt": "cut-08-remove-request-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "id": "F1-NAT-RECOVERY-B",
+    "attempt": "cut-08-remove-request-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "attempt": "cut-08-remove-request-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Noncreating reconciliation",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "attempt": "cut-08-remove-request-reconcile"
+  },
+  {
+    "detail": "Synthetic catalog only",
+    "id": "F1-NAT-REGISTER-A",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Exact registration receipt replay",
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-local",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-local",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-session",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "id": "F1-NAT-SEED-A-http",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Synthetic catalog only",
+    "id": "F1-NAT-REGISTER-B",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Exact registration receipt replay",
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-local",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-local",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-session",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-worker",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "id": "F1-NAT-SEED-B-http",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-local",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-local",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-prepare"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-A",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-B",
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-reconcile"
+  },
+  {
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "detail": "Noncreating reconciliation",
+    "status": "PASS_NATIVE",
+    "attempt": "cut-09-remove-callback-reconcile"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "id": "F1-NAT-REGISTER-A",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "id": "F1-NAT-IDEMPOTENT-A",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-1-A",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-cookie",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-local",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-idb",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-A-cache",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-cookie",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-local",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-idb",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-cache",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-session",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-A-worker",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "id": "F1-NAT-SEED-A-http",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Synthetic catalog only",
+    "id": "F1-NAT-REGISTER-B",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Exact registration receipt replay",
+    "id": "F1-NAT-IDEMPOTENT-B",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Terminal same-operation replay after navigation performs no native effect",
+    "id": "F1-NAT-ACTIVATE-REPLAY-2-B",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-cookie",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-local",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-idb",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Fresh store positive API availability checked during set",
+    "id": "F1-NAT-EMPTY-B-cache",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-cookie",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-local",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-idb",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-cache",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-session",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Page-visible positive control",
+    "id": "F1-NAT-SEED-B-worker",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "HTTP cache fixture response; persistence compared by orchestrator",
+    "id": "F1-NAT-SEED-B-http",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-cookie",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-local",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-idb",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-A-cache",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-cookie",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-local",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-idb",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Concurrent same-origin profiles",
+    "id": "F1-NAT-ISOLATION-B-cache",
+    "attempt": "cut-10-enumeration-prepare"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-A",
+    "attempt": "cut-10-enumeration-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-A",
+    "attempt": "cut-10-enumeration-reconcile"
+  },
+  {
+    "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-B",
+    "attempt": "cut-10-enumeration-reconcile"
+  },
+  {
+    "detail": "Repeated reconciliation grants no factory/publication",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-REPEATED-B",
+    "attempt": "cut-10-enumeration-reconcile"
+  },
+  {
+    "detail": "Noncreating reconciliation",
+    "status": "PASS_NATIVE",
+    "id": "F1-NAT-RECOVERY-NOCREATE",
+    "attempt": "cut-10-enumeration-reconcile"
+  },
+  {
+    "id": "F1-NAT-RESTART-A-http",
+    "status": "INCONCLUSIVE",
+    "detail": "HTTP cache response identity across actual process restart; eviction/persistence may differ"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-http",
+    "status": "INCONCLUSIVE",
+    "detail": "HTTP cache response identity across actual process restart; eviction/persistence may differ"
+  }
+]

@@ -16,7 +16,8 @@ def execute(run, build_record, diagnostic_record, resume_record=None, phase="all
     build = json.loads(build_record.read_text())
     diagnostic = json.loads(diagnostic_record.read_text())
     accepted = {"internal.vezham.browser.wsf1.qualification"}
-    if run.evidence == run.evidence.parents[2] / "reports/WS-F4/evidence":
+    if run.evidence in {run.evidence.parents[2] / "reports/WS-F4/evidence",
+                        run.evidence.parents[2] / "reports/WS-F4R/evidence"}:
         accepted.add("internal.vezham.browser.wsf4.qualification")
     for record, bundle_ids in [(build, accepted), (diagnostic, {"internal.vx.M1Validation.run20261108T094414Z"})]:
         if record["status"] != "PASS_CONTRACT" or record["bundleID"] not in bundle_ids:

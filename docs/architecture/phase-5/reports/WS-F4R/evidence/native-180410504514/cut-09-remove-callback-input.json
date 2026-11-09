@@ -1,0 +1,68 @@
+{
+  "namespace": "5ee77bf5-0877-49b7-9205-612b9ac40747",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "7acc0064-b413-41f1-b77b-2d214fba5e01",
+      "store": "4de9c877-ce6a-4ce1-b7b0-aaf2d5a4c506"
+    },
+    {
+      "name": "B",
+      "profile": "a8916888-29fa-454b-b32a-a6cb84231163",
+      "store": "ed1d7950-690f-40cf-8efc-c60537cf5549"
+    }
+  ],
+  "origin": "http://127.0.0.1:62404",
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "previousRun": "b1994ff5-de73-46e9-a96b-4a836e7cae42",
+      "records": [
+        {
+          "profile": "7acc0064-b413-41f1-b77b-2d214fba5e01",
+          "namespace": "5ee77bf5-0877-49b7-9205-612b9ac40747",
+          "generation": 2,
+          "store": "4de9c877-ce6a-4ce1-b7b0-aaf2d5a4c506",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "caa026ae-6e32-4c2e-9061-2d9526b9c3f6"
+        },
+        {
+          "profile": "a8916888-29fa-454b-b32a-a6cb84231163",
+          "namespace": "5ee77bf5-0877-49b7-9205-612b9ac40747",
+          "generation": 2,
+          "store": "ed1d7950-690f-40cf-8efc-c60537cf5549",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "cf6cd217-cade-43e8-99c2-779354621332"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "status": "quiescent",
+        "profile": "7acc0064-b413-41f1-b77b-2d214fba5e01",
+        "store": "4de9c877-ce6a-4ce1-b7b0-aaf2d5a4c506",
+        "resourceGeneration": 1,
+        "revision": 4,
+        "origin": "fresh"
+      },
+      {
+        "status": "quiescent",
+        "profile": "a8916888-29fa-454b-b32a-a6cb84231163",
+        "store": "ed1d7950-690f-40cf-8efc-c60537cf5549",
+        "resourceGeneration": 1,
+        "revision": 4,
+        "origin": "fresh"
+      }
+    ]
+  },
+  "cutpoint": "remove-callback",
+  "action": "remove"
+}

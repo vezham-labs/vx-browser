@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
 
 const marks: Record<string, ReactNode> = {
+  split: <><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M12 4v16"/></>,
+  pin: <path d="m8 3 8 0-1 6 3 4H6l3-4zm4 10v8"/>,
   logo: <><path d="M3 5h6l3 10 3-10h6L14 20h-4z"/><path d="M5 10h4m6 0h4"/></>,
   back: <><path d="m14 6-6 6 6 6"/><path d="M8 12h11"/></>,
   forward: <><path d="m10 6 6 6-6 6"/><path d="M5 12h11"/></>,

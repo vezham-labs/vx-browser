@@ -24,7 +24,7 @@ class Run:
         self.evidence = evidence.resolve()
         phase = ROOT / "docs/architecture/phase-5"
         registered = phase / "evidence" in self.evidence.parents or self.evidence in {
-            phase / "reports/WS-F3/evidence", phase / "reports/WS-F4/evidence",
+            phase / "reports/WS-F3/evidence", phase / "reports/WS-F4/evidence", phase / "reports/WS-F4R/evidence",
         }
         if not registered or not (self.evidence / "baseline.json").is_file():
             raise SystemExit("Registered evidence directory required")

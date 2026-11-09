@@ -1,0 +1,51 @@
+{
+  "currentCandidate": {
+    "binarySHA256": "db9c3492a3088a6fa9dcdbeea01aa6877a939a7f07967052545b1c9816bebd2b",
+    "attempts": 2,
+    "counts": {
+      "PASS_NATIVE": 174
+    },
+    "assertionsPerLaunch": 87
+  },
+  "storageRegression": {
+    "build": "build.json",
+    "counts": {
+      "PASS_NATIVE": 474,
+      "INCONCLUSIVE": 2
+    },
+    "diagnosticSeparate": 1,
+    "processes": 39,
+    "os26": "BLOCKED"
+  },
+  "swift": {
+    "PASS_CONTRACT": 23,
+    "PASS_FAKE_ONLY": 2
+  },
+  "typescript": {
+    "PASS_CONTRACT": 3
+  },
+  "frontend": {
+    "PASS_FAKE_ONLY": 7
+  },
+  "finalFailures": 0,
+  "externalDelivery": {
+    "attempts": 2,
+    "macOSOpenExit": [
+      0,
+      0
+    ]
+  },
+  "notExecuted": [
+    "Default HTTP/HTTPS routing",
+    "VoiceOver",
+    "Automated native drag gestures",
+    "Broad public-site compatibility"
+  ],
+  "inheritedBlocked": [
+    "Protected profiles and Keychain",
+    "Durable unlock and permission persistence",
+    "Production backup/restore",
+    "macOS26 and release qualification"
+  ],
+  "earlierAttempts": "Kept separately, including failures and incomplete evidence run"
+}

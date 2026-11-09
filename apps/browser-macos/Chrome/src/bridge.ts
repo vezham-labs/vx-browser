@@ -1,6 +1,9 @@
 export type Appearance = 'system' | 'light' | 'dark';
 export type Tab = {
   id: string;
+  space: string;
+  group?: string;
+  pinned: boolean;
   title: string;
   url?: string;
   loading: boolean;
@@ -8,6 +11,7 @@ export type Tab = {
   back: boolean;
   forward: boolean;
   connection: 'encrypted' | 'unencrypted' | 'unknown';
+  favicon?: string;
   failure?: 'load-failed' | 'content-unavailable';
 };
 export type BrowserState = {
@@ -18,6 +22,12 @@ export type BrowserState = {
   tabs: Tab[];
   selected?: string;
   appearance: Appearance;
+  spaces: { id: string; name: string }[];
+  activeSpace: string;
+  groups: { id: string; space: string; name: string; collapsed: boolean }[];
+  split: string[];
+  splitCompact: boolean;
+  mini: boolean;
 };
 export type Command =
   | { type: 'snapshot' | 'startPrivate' | 'endPrivate' | 'newTab' }
@@ -25,6 +35,15 @@ export type Command =
   | { type: 'move'; tab: string; offset: number }
   | { type: 'navigate'; tab: string; url: string }
   | { type: 'appearance'; value: Appearance }
+  | { type: 'spaceCreate' | 'groupCreate'; name: string }
+  | { type: 'spaceRename' | 'groupRename'; target: string; name: string }
+  | { type: 'spaceSwitch' | 'spaceDelete' | 'groupToggle' | 'groupDelete'; target: string }
+  | { type: 'groupMove'; target: string; offset: number }
+  | { type: 'pin' | 'split'; tab: string }
+  | { type: 'tabSpace'; tab: string; target: string }
+  | { type: 'tabGroup'; tab: string; target?: string }
+  | { type: 'unsplit' | 'miniTransfer' }
+  | { type: 'miniOpen'; tab?: string; url?: string }
   | { type: 'presentation'; visible: boolean; left: number; top: number };
 
 type Failure = 'busy' | 'unavailable' | 'invalid' | 'failed' | 'disconnected';
@@ -35,7 +54,7 @@ type HostWindow = Window & {
 };
 
 export const initialState: BrowserState = {
-  revision: 0, session: 'inactive', profile: 'unavailable', tabs: [], appearance: 'system',
+  revision: 0, session: 'inactive', profile: 'unavailable', tabs: [], appearance: 'system', spaces: [], groups: [], activeSpace: '', split: [], splitCompact: false, mini: false,
 };
 
 let requestNumber = 0;

@@ -1,0 +1,138 @@
+{
+  "startedUTC": "2026-11-09T17:54:55.294373+00:00",
+  "binarySHA256": "f2941690ac71234e704daa7c94f851e6fc9679daf338131704f34899887fad8f",
+  "attempt": 2,
+  "exit": 0,
+  "screenshots": {},
+  "events": [
+    {
+      "testID": "R-SHELL",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-PRIVATE-START",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-PRIVATE-STORE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-URL",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-RENDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-PIN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NEW-TAB",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SECOND-PAGE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SECOND-RENDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-CREATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-ASSIGN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-COLLAPSE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-EXPAND",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-RENAME",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-ORDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-GROUP-MOVE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-CREATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-RENAME",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPACE-SWITCH",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NONEMPTY-SPACE-GUARD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COLLAPSE-SIDEBAR",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COLLAPSED-LAYOUT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-EXPAND-SIDEBAR",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COMMAND-BAR",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-COMMAND-FOCUS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-TAB-CONTEXT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-CONTEXT-ACTION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-CONTEXT-DISMISSED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-SELECT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-CREATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-NATIVE-VIEWS",
+      "status": "FAIL"
+    },
+    {
+      "testID": "qualification",
+      "status": "FAIL"
+    }
+  ],
+  "passed": false
+}

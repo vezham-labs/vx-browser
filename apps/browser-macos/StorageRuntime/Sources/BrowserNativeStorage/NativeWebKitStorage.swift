@@ -40,6 +40,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         var published = false
         var permissionDocument = UUID()
         var navigationFailed = false
+        var favicon: String?
         var requestedURL: URL?
     }
     public struct Event: Codable, Sendable {
@@ -56,6 +57,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     private var fenced: Set<Scope> = []
     private var poisoned: Set<Scope> = []
     private var securityLocked: Set<Scope> = []
+    public var openExternalLink: (@MainActor (URL) -> Void)?
     public var permissionMediator: NativePermissionMediator?
     public func ownedViews(_ scope: Scope) -> [ViewID] { views.filter { $0.value.identity.scope == scope }.map(\.key) }
     public func securityFence(_ profile: ProfileID) {
@@ -256,6 +258,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         case .stop: surface.stopLoading(); return true
         }
     }
+    public func favicon(in view: ViewID) -> String? { views[view]?.favicon }
     public func requestedURL(in view: ViewID) -> URL? { views[view]?.requestedURL }
     public func navigationFailed(in view: ViewID) -> Bool { views[view]?.navigationFailed ?? false }
     private func permitted(_ url: URL, scope: Scope? = nil) -> Bool {
@@ -387,9 +390,41 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         record("remove", "callback-and-absence"); return .completed
     }
     public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        if let id = views.first(where: { $0.value.object === webView })?.key { views[id]?.navigationFailed = false }
+        if let id = views.first(where: { $0.value.object === webView })?.key { views[id]?.navigationFailed = false; views[id]?.favicon = nil }
     }
-    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) { navigations.removeValue(forKey: ObjectIdentifier(webView))?(true) }
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        navigations.removeValue(forKey: ObjectIdentifier(webView))?(true)
+        guard interactivePrivateBrowsing, let id = views.first(where: { $0.value.object === webView })?.key,
+              let url = webView.url else { return }
+        let document = views[id]?.permissionDocument
+        Task { @MainActor [weak self, weak webView] in
+            guard let self, let webView else { return }
+            let script = """
+            const icon = document.querySelector('link[rel~="icon"]');
+            if (!icon) return null;
+            const url = new URL(icon.href, location.href);
+            if (!(url.origin === location.origin || url.protocol === 'data:')) return null;
+            const response = await fetch(url.href, {signal: AbortSignal.timeout(2000)});
+            if (!response.ok) return null;
+            const blob = await response.blob();
+            if (blob.size > 32768 || !blob.type.startsWith('image/')) return null;
+            return await new Promise(resolve => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = () => resolve(null);
+              reader.readAsDataURL(blob);
+            });
+            """
+            guard let value = try? await webView.callAsyncJavaScript(script, arguments: [:], in: nil, contentWorld: .page) as? String,
+                  self.views[id]?.permissionDocument == document, webView.url == url,
+                  value.utf8.count < 45000, let separator = value.firstIndex(of: ","),
+                  let data = Data(base64Encoded: String(value[value.index(after: separator)...])),
+                  data.count <= 32768, let image = NSBitmapImageRep(data: data),
+                  image.pixelsWide <= 256, image.pixelsHigh <= 256,
+                  let png = image.representation(using: .png, properties: [:]), png.count <= 32768 else { return }
+            self.views[id]?.favicon = "data:image/png;base64," + png.base64EncodedString()
+        }
+    }
     private func navigationFailure(_ webView: WKWebView, error: any Error) {
         if (error as? URLError)?.code != .cancelled,
            let id = views.first(where: { $0.value.object === webView })?.key {
@@ -419,7 +454,14 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         }
         decisionHandler(.allow)
     }
-    public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? { nil }
+    public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if interactivePrivateBrowsing, navigationAction.targetFrame == nil,
+           let entry = views.values.first(where: { $0.object === webView && $0.published && !fenced.contains($0.identity.scope) }),
+           let url = navigationAction.request.url, permitted(url, scope: entry.identity.scope) {
+            openExternalLink?(url)
+        }
+        return nil
+    }
     public func webView(_ webView: WKWebView, decidePolicyFor response: WKNavigationResponse, decisionHandler: @escaping @MainActor @Sendable (WKNavigationResponsePolicy) -> Void) {
         let owned = views.values.contains { $0.object === webView && $0.published && !fenced.contains($0.identity.scope) }
         decisionHandler(owned && response.canShowMIMEType ? .allow : .cancel)

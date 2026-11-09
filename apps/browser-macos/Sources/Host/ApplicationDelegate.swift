@@ -40,9 +40,28 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
            let flag = arguments.firstIndex(of: "--wsf4-qualification"),
            arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
            let mainWindow {
-            Task { @MainActor in await mainWindow.qualifyLoopback(origin) }
+            Task { @MainActor in
+                if arguments.contains("--wsf4r-qualification") { await mainWindow.qualifyRefinement(origin) }
+                else { await mainWindow.qualifyLoopback(origin) }
+            }
         }
         #endif
+    }
+
+    func application(_ application: NSApplication, open urls: [URL]) {
+        showMainWindow()
+        for wrapper in urls.prefix(6) {
+            guard wrapper.scheme == "vezham", wrapper.host == "open",
+                  let parts = URLComponents(url: wrapper, resolvingAgainstBaseURL: false),
+                  parts.queryItems?.count == 1,
+                  let query = parts.queryItems?.first, query.name == "url",
+                  let value = query.value, value.utf8.count <= 8192, let url = URL(string: value),
+                  let mainWindow else { continue }
+            Task { @MainActor in
+                do { try await mainWindow.openMini(url) }
+                catch { NSSound.beep() }
+            }
+        }
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
