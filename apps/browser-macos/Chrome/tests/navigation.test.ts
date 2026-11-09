@@ -17,3 +17,9 @@ test('generates a local suggestion and submits search through the provider', () 
   assert.equal(destination('seaside trail'), 'https://duckduckgo.com/?q=seaside+trail');
   assert.equal(destination('sea & sun', { name: 'Test', suggestions: () => [], destination: (query) => '/search?term=' + encodeURIComponent(query) }), '/search?term=sea%20%26%20sun');
 });
+
+test('preserves HTTPS and loopback-only HTTP policy', () => {
+  assert.equal(destination('http://example.com/'), undefined);
+  assert.equal(destination('http://localhost:5000/'), 'http://localhost:5000/');
+  assert.equal(destination('http://[::1]:5000/'), 'http://[::1]:5000/');
+});

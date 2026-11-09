@@ -1,0 +1,88 @@
+{
+  "recordedUTC": "2026-11-09T19:50:39.162275+00:00",
+  "observation": {
+    "chromeDiagnostic": {
+      "events": [],
+      "focused": "\u2318LPrivate sessionVezham1PersonalPersonalNew tab\u2318TTodayAlphaBetaGamma Drop a tab "
+    },
+    "observation": {
+      "busy": false,
+      "chromeReady": true,
+      "closing": false,
+      "minis": [],
+      "state": {
+        "activeSpace": "1264d77f-f58e-4846-b431-1a1f9061b561",
+        "appearance": "system",
+        "groups": [],
+        "mini": false,
+        "profile": "unavailable",
+        "revision": 1,
+        "selected": "9e668315-14ec-4046-acd7-f75894b7813b",
+        "session": "private",
+        "sessionID": "0a59a080-6d29-4cad-b7bd-25cdfb5e3462",
+        "spaces": [
+          {
+            "id": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "name": "Personal"
+          }
+        ],
+        "split": [],
+        "splitCompact": false,
+        "tabs": [
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "b6b555aa-77df-4f6e-936c-716b096a88a9",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:49305/alpha"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "2ae43a43-6f24-4318-b990-51418b51d8b8",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Beta",
+            "url": "http://127.0.0.1:49305/beta"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "9e668315-14ec-4046-acd7-f75894b7813b",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Gamma",
+            "url": "http://127.0.0.1:49305/gamma"
+          }
+        ]
+      },
+      "visible": true,
+      "window": 9600
+    },
+    "uptime": 164340.06608170836
+  },
+  "binarySHA256": "6af85394d6e5883a689adc0542d40547c2dbccde6f1fb883afbfe244bc0fe342",
+  "screenshot": {
+    "command": [
+      "screencapture",
+      "-x",
+      "-o",
+      "-l",
+      "9600",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/observations/primary-reorder-after.png"
+    ],
+    "exit": 0,
+    "stderr": ""
+  }
+}

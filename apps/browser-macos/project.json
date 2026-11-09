@@ -87,6 +87,28 @@
       "options": {
         "command": "python3 apps/browser-macos/Tools/wsf2.py webkit-native"
       }
+    },
+    "reliability-contracts": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "node_modules/.bin/tsx --test apps/browser-macos/Chrome/tests/navigation.test.ts"
+      }
+    },
+    "reliability-typecheck": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "node_modules/.bin/tsc --noEmit -p apps/browser-macos/Chrome/tsconfig.json"
+      }
+    },
+    "reliability-ui": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "../../../node_modules/.bin/playwright test",
+        "cwd": "apps/browser-macos/Chrome"
+      }
     }
   }
 }

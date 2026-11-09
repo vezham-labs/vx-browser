@@ -1,0 +1,128 @@
+[
+  {
+    "id": "URL-OS-COLD",
+    "case": "Cold launch through macOS Open URL",
+    "evidenceRequired": "Native handler observation and rendered destination",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "URL-OS-WARM",
+    "case": "Warm external URL delivery",
+    "evidenceRequired": "Native model and destination",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "URL-DEFAULT-HTTP",
+    "case": "Temporary default HTTP loopback delivery",
+    "evidenceRequired": "Before/selected/restored handlers plus rendered fixture",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "URL-DEFAULT-HTTPS",
+    "case": "Temporary default HTTPS delivery",
+    "evidenceRequired": "Before/selected/restored handlers plus rendered public page",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "URL-WRAPPER-OS",
+    "case": "Custom wrapper through macOS Open",
+    "evidenceRequired": "Mini observation and destination",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "DRAG-REORDER",
+    "case": "Actual pointer reorder",
+    "evidenceRequired": "Before/after native order and screenshot",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "DRAG-GROUP",
+    "case": "Actual pointer group movement",
+    "evidenceRequired": "Native membership and visible row placement",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "DRAG-SPACE",
+    "case": "Actual pointer Space movement",
+    "evidenceRequired": "Native Space assignment and visible selection",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "DRAG-PIN",
+    "case": "Pinned drag behavior",
+    "evidenceRequired": "Stable pin/membership/order observations",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "DRAG-SPLIT",
+    "case": "Native pointer split drop",
+    "evidenceRequired": "Two actual native view IDs and visible panes",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "DRAG-CANCEL",
+    "case": "No-drop cancellation",
+    "evidenceRequired": "No mutation after invalid/unaccepted drop",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "DRAG-INVALID",
+    "case": "Invalid drop target",
+    "evidenceRequired": "No native state corruption or stale drag state",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "AX-KEYBOARD",
+    "case": "Native keyboard traversal",
+    "evidenceRequired": "OS keyboard input and focused native/AX element",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "AX-MODALS",
+    "case": "Native modal/menu focus",
+    "evidenceRequired": "AX roles, focus containment and return",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "AX-VOICEOVER",
+    "case": "Actual VoiceOver navigation",
+    "evidenceRequired": "Observed assistive output and traversable controls",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "COMP-PUBLIC",
+    "case": "Representative public websites",
+    "evidenceRequired": "Actual WebKit committed URL/title and visible content",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "COMP-AUTH",
+    "case": "Authorized authenticated workflows",
+    "evidenceRequired": "Blocked: public-pages-only restriction; no accounts",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "COMP-DOWNLOAD",
+    "case": "Successful file download",
+    "evidenceRequired": "Blocked: native download lifecycle unsupported; denial can be observed",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PLATFORM-26-BASE",
+    "case": "Actual macOS26.0 runtime",
+    "evidenceRequired": "Unavailable runtime; mandatory gate remains",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PLATFORM-26-LATEST",
+    "case": "Latest supported26.x runtime",
+    "evidenceRequired": "Unavailable runtime; mandatory gate remains",
+    "status": "NOT_EXECUTED"
+  },
+  {
+    "id": "RELEASE-SECURITY",
+    "case": "Signing/notarization/distribution/updater",
+    "evidenceRequired": "Separate mandatory final release gates",
+    "status": "NOT_EXECUTED"
+  }
+]

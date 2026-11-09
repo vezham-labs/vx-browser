@@ -34,9 +34,11 @@ def build_chrome():
     shutil.copyfile(CHROME / "index.html", CHROME_OUTPUT / "index.html")
 
 
-def build(qualification=False):
+def build(qualification=False, reliability=False):
     build_chrome()
     settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf4.qualification"] if qualification else []
+    if reliability:
+        settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf5.qualification"]
     run([
         "xcodebuild", "-project", str(APP_ROOT / "VezhamBrowser.xcodeproj"),
         "-scheme", "VezhamBrowser", "-configuration", "Debug", "-destination",
@@ -92,10 +94,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["build", "chrome", "audit", "launch"])
     parser.add_argument("--qualification", action="store_true")
+    parser.add_argument("--wsf5-qualification", action="store_true")
     args = parser.parse_args()
     action = args.action
     if action == "build":
-        build(args.qualification)
+        build(args.qualification, args.wsf5_qualification)
     elif action == "chrome":
         build_chrome()
     elif action == "audit":

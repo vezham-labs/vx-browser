@@ -1,0 +1,18 @@
+{
+  "startedUTC": "2026-11-09T19:49:06.271120+00:00",
+  "app": null,
+  "bundleID": null,
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "mode": "serve-only",
+  "attemptsRequested": 1,
+  "timeoutSeconds": 240,
+  "serveLimitSeconds": 1800,
+  "attempts": [],
+  "status": "FAIL",
+  "nativePassed": 0,
+  "contractPassed": 0,
+  "caseStatusCounts": {},
+  "countScope": "Non-qualification test-event observations across attempts",
+  "reason": "Interrupted",
+  "finishedUTC": "2026-11-09T20:13:06.010915+00:00"
+}

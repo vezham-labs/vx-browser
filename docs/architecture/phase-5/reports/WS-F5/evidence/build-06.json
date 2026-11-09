@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node_modules/.bin/nx",
+    "run",
+    "browser-macos:build",
+    "--wsf5-qualification",
+    "--output-style=static"
+  ],
+  "exit": 0,
+  "reason": "Native drag failure: explicit WebKit drag/drop styling and debug-only DOM event observation."
+}

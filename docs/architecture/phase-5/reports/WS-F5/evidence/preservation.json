@@ -1,0 +1,89 @@
+{
+  "head": "0e6f6d2deee99052322062df0397ccdd146d2b64",
+  "branch": "timeline",
+  "baselineTrackedFiles": 4101,
+  "unchangedTrackedFiles": 4087,
+  "missingTrackedFiles": [],
+  "changedTrackedFiles": {
+    "apps/browser-macos/Chrome/playwright.config.ts": {
+      "before": "77c96764dbbc3dfb3ee79aad3e3a0120007503985836ad756f6c1467b5664d9a",
+      "after": "97d3a2462aa40437074adccc928ee333d0051deba6bdd582fd953a8d2e5db8e9"
+    },
+    "apps/browser-macos/Chrome/src/Browser.tsx": {
+      "before": "af4b8a8cf3473fa0b7029f5734e8062202ce677311cb9bdf150c5363649da1b4",
+      "after": "86210d35de9952fee3aa6428730568ffeca0bd88ddf20ba157c37b2290755e42"
+    },
+    "apps/browser-macos/Chrome/src/navigation.ts": {
+      "before": "cd9b7f57d52081dd14c24d2506c4c087d87bab3fa4cfd6cf25cef8912c13228c",
+      "after": "1d8a7d397ab305f4da3b3f4a7d789cb9fb4852c9307bc190cd72419b53692903"
+    },
+    "apps/browser-macos/Chrome/src/styles.css": {
+      "before": "83ecc1bde2beb0dec4e1d8018dfeb2d08c211a1ac2268a18d27b795722250626",
+      "after": "38ef07412760add65f8fb2a1ef944a46959eb476e77b214c60c0da7d270265fa"
+    },
+    "apps/browser-macos/Chrome/tests/navigation.test.ts": {
+      "before": "c89cf743795221cce617805723476672118623554cc6547104911e50ccb16305",
+      "after": "4bceb5512bd9ef7dae1f0ee1c1fa7cde29ff09d2ee6c257d51d98e8f0a229ba3"
+    },
+    "apps/browser-macos/Chrome/tests/shell.spec.ts": {
+      "before": "b43fe6978cf067f6fdc99f037f961c087096a76b9a2e3b5021d9c719f60c6242",
+      "after": "56cf185018fb0ca8e4ab5e722c9e8e48470ec6afd32bc95db45341ce9e26d785"
+    },
+    "apps/browser-macos/Config/Info.plist": {
+      "before": "acc5ceaa58be172e29f851efb4328769465415e3214e7df90e5d275772bf9e55",
+      "after": "e20d4add75b6417af301c2ec5b1e284e0e05e26db1cd13d8c66ef6a6ef341ca7"
+    },
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift": {
+      "before": "8f18f3f9049c16fce91b672d178b7c974f1396db457e2370efd572e5e91b40f6",
+      "after": "9c087b95d3ebb910019ddd5a0de22cab1fb9b46f5811825caef5d17b61d70328"
+    },
+    "apps/browser-macos/Sources/Host/BrowserChromeContract.swift": {
+      "before": "54c55644fcee96a9d8dc74d921ae7742761d3d756561da57d30242d3963ff51f",
+      "after": "b1fddf3805952f737bd1b1aae0b507df6edd9110559efd7fa3616309d534b920"
+    },
+    "apps/browser-macos/Sources/Host/MainWindowController.swift": {
+      "before": "58c3dfaf58a4345c920c0adfe1baacfc20cd513e4a41be6167d551139a0e4237",
+      "after": "c31b1476b0c339fe6c2966d2f2a118d3cec52f86eea218b2e71fbce02770ec29"
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift": {
+      "before": "18f75eae1a534539233ff2096a27ccaa799ffa647c624389066e6ab790cee0e9",
+      "after": "d20c53710b69e606efa4137b880272f70ff94c45a0d91485e8013e3ad69a49dd"
+    },
+    "apps/browser-macos/Tools/native_host.py": {
+      "before": "4c4a440c9179f900bf22b2b82f2fe1ddabde37015a3c0dbf2657fa2de89d03ea",
+      "after": "a789075370640a029292d866831ebe27f6bf40fbc58c9f9e5285ec02045fef51"
+    },
+    "apps/browser-macos/Tools/wsf1.py": {
+      "before": "38f499f149eb95edbbe18b1510156cb0c8fcf6f5ac3f23de4781a2de8ec3f237",
+      "after": "7119cf536a29a9c8aa802f0fd0ae148c171decdc16a2b31abc966dc6890bdd23"
+    },
+    "apps/browser-macos/project.json": {
+      "before": "d159b14c45b0b3430afd314f480bb78eb18b4d267c26de227acb9334e1ec5283",
+      "after": "0d5ebd4c2e8d8600a19e6a37e54e7a5e506094a0d09174bc95431564f8805b84"
+    }
+  },
+  "newToolFiles": [
+    "apps/browser-macos/Tools/wsf5.py",
+    "apps/browser-macos/Tools/wsf5_handlers.swift",
+    "apps/browser-macos/Tools/wsf5_pointer.swift"
+  ],
+  "reports": [
+    "README.md",
+    "accessibility-report.md",
+    "compatibility-report.md",
+    "current-state-audit.md",
+    "drag-drop-report.md",
+    "final-disposition.md",
+    "known-limitations.md",
+    "lifecycle-report.md",
+    "platform-qualification.md",
+    "qualification-plan.md",
+    "test-matrix.md",
+    "url-routing-report.md"
+  ],
+  "historicalF4RChecksumsVerified": 423,
+  "historicalF4RTrackedFilesChanged": [],
+  "qualifiedSourceHashesVerified": 62,
+  "finalBinarySHA256": "6af85394d6e5883a689adc0542d40547c2dbccde6f1fb883afbfe244bc0fe342",
+  "stagedFiles": []
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node_modules/.bin/nx",
+    "run",
+    "browser-macos:build",
+    "--wsf5-qualification",
+    "--output-style=static"
+  ],
+  "startedUTC": "2026-11-09T19:01:48.389360+00:00",
+  "derivedData": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData",
+  "exit": 0
+}

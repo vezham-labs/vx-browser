@@ -1,0 +1,16 @@
+{
+  "command": [
+    "open",
+    "-a",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+    "https://example.com/",
+    "https://www.wikipedia.org/",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "https://github.com/",
+    "https://www.notion.com/",
+    "https://developer.apple.com/"
+  ],
+  "exit": 0,
+  "stderr": "",
+  "scope": "Public-page smoke; no account or authentication workflow qualification"
+}

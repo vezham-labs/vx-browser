@@ -1,0 +1,8 @@
+{
+  "pid": 90670,
+  "command": [
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf5-observe"
+  ],
+  "startedUTC": "2026-11-09T19:08:59.395963+00:00"
+}

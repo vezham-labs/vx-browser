@@ -1,0 +1,21 @@
+[
+  {
+    "scheme": "http",
+    "exit": 0,
+    "stdout": "{\"result\":\"completed\",\"scheme\":\"http\"}\n",
+    "stderr": ""
+  },
+  {
+    "scheme": "https",
+    "exit": 0,
+    "stdout": "{\"result\":\"completed\",\"scheme\":\"https\"}\n",
+    "stderr": ""
+  },
+  {
+    "actualAfter": {
+      "http": "/Applications/Arc.app",
+      "https": "/Applications/Arc.app"
+    },
+    "restoredExactly": true
+  }
+]

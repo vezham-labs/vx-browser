@@ -1,0 +1,9 @@
+# URL routing
+
+**PASS_NATIVE for scoped HTTP/HTTPS default delivery on macOS 27.2.** Cold launch with an explicit app path delivered three loopback destinations. Warm delivery added tabs in the workspace. An external Gamma URL replaced a stale address draft. A macOS Open event carrying a valid `vezham://open` wrapper opened a separate private Mini. The corrected Mini shortcut closed the last tab and its window.
+
+For the final default test, the initial HTTP and HTTPS handlers were Arc. The approved temporary HTTP selection coupled both schemes on this host. Two plain `open` calls delivered the owned loopback HTTP page and public Example Domain HTTPS page. The native model recorded both committed destinations. Both handlers were restored to Arc and queried again. [Default selection, delivery and restoration](evidence/final-default-routing.json) · [Cold open](evidence/final-interactive-open.json) · [Address edit](evidence/observations/final-external-edit.json) · [Mini closure](evidence/observations/final-mini-shortcut-closed.json)
+
+The external parser shares the native HTTPS and loopback HTTP admission policy. It rejects credentials, unsupported schemes, malformed wrappers and oversized inputs. The 13 policy assertions per run are PASS_CONTRACT. Loopback redirect and back/forward commits are PASS_NATIVE. Public cleartext HTTP remains denied. Exhaustive OS dispatch of malicious URL schemes and cross-scheme redirect injection were NOT_EXECUTED. [Native cases](evidence/native-04/attempt-1/result.json)
+
+The URL type declaration uses Apple's [bundle URL type keys](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html). The separate probe uses [NSWorkspace's scheme handler API](https://developer.apple.com/documentation/appkit/nsworkspace/setdefaultapplication%28at%3Atoopenurlswithscheme%3Acompletion%3A%29).

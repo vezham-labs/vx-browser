@@ -47,7 +47,11 @@ export function Browser() {
   const [bookmarkForm, setBookmarkForm] = useState<Bookmark>();
   const address = useRef<HTMLInputElement>(null);
   const commands = useRef<HTMLInputElement>(null);
-  const previousFocus = useRef<HTMLElement | null>(null);
+  const paletteDialog = useRef<HTMLDialogElement>(null);
+  const editorDialog = useRef<HTMLDialogElement>(null);
+  const contextDialog = useRef<HTMLDialogElement>(null);
+  const editorTrigger = useRef<HTMLElement | null>(null);
+  const skipFocusRestore = useRef(false);
   const content = useRef<HTMLElement>(null);
   const dragged = useRef<string>(undefined);
   const active = browser.tabs.find((tab) => tab.id === browser.selected);
@@ -58,6 +62,8 @@ export function Browser() {
   const spaceGroups = browser.groups.filter((group) => group.space === browser.activeSpace);
   const currentSpace = browser.spaces.find((space) => space.id === browser.activeSpace);
   const splitTabs = browser.split.map((id) => browser.tabs.find((tab) => tab.id === id)).filter((tab): tab is Tab => Boolean(tab));
+  const renderedTabs = [...spaceTabs.filter(tab => tab.pinned), ...spaceGroups.filter(group => !group.collapsed).flatMap(group => spaceTabs.filter(tab => !tab.pinned && tab.group === group.id)), ...spaceTabs.filter(tab => !tab.pinned && !tab.group)].filter(tab => !tabFilter || tab.title.toLowerCase().includes(tabFilter.toLowerCase()));
+  const keyboardTab = renderedTabs.find(tab => tab.id === browser.selected) ?? renderedTabs[0];
   const canSplit = !browser.mini && spaceTabs.some((tab) => tab.id !== active?.id);
 
   const accept = useCallback((response: Result) => {
@@ -89,6 +95,11 @@ export function Browser() {
   }, [accept]);
 
   useEffect(() => {
+    setEditing(false);
+    setSection('Tabs');
+  }, [browser.selected]);
+
+  useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
 
@@ -111,23 +122,46 @@ export function Browser() {
   }, [connected, isWeb, sidebar, sideWidth, section, browser.split.length, browser.mini]);
 
   useEffect(() => {
-    if (palette) commands.current?.focus();
-  }, [palette]);
+    const dialog = palette ? paletteDialog.current : editor ? editorDialog.current : menu ? contextDialog.current : null;
+    if (!dialog) return;
+    const previous = editor ? editorTrigger.current : document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    if (!dialog.open) dialog.showModal();
+    dialog.querySelector<HTMLElement>('input, button:not([disabled])')?.focus();
+    return () => {
+      dialog.close();
+      if (skipFocusRestore.current) { skipFocusRestore.current = false; return; }
+      requestAnimationFrame(() => {
+        if (previous?.isConnected) previous.focus();
+        else document.querySelector<HTMLElement>('[aria-label="Workspace actions"], [aria-label="Address and search"]')?.focus();
+      });
+    };
+  }, [palette, Boolean(editor), menu]);
 
+  function openEditor(value: NonNullable<typeof editor>) {
+    editorTrigger.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setEditor(value);
+  }
+  function containModalFocus(event: KeyboardEvent<HTMLDialogElement>) {
+    if (event.key !== 'Tab') return;
+    const items = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('input, button:not([disabled])'));
+    const edge = event.shiftKey ? items[0] : items.at(-1);
+    if (items.length && document.activeElement === edge) {
+      event.preventDefault(); (event.shiftKey ? items.at(-1) : items[0])?.focus();
+    }
+  }
   function choose(value: Section) { setSection(value); setMenu(undefined); }
   function focusAddress() {
+    if (palette || menu || editor) skipFocusRestore.current = true;
     choose('Tabs');
     setDraft(active?.url ?? '');
     setEditing(true);
     requestAnimationFrame(() => { address.current?.focus(); address.current?.select(); });
   }
   function openPalette() {
-    previousFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     setQuery(''); setMenu(undefined); setPalette(true);
   }
   function closePalette() {
     setPalette(false);
-    requestAnimationFrame(() => previousFocus.current?.focus());
   }
   function tabAction(type: 'close' | 'duplicate' | 'back' | 'forward' | 'reload' | 'stop' | 'copy' | 'paste', tab = active) {
     if (!tab) return;
@@ -190,8 +224,8 @@ export function Browser() {
     { name: inPrivate ? 'New tab' : 'Start private session', key: '⌘T', run: createTab },
     { name: 'Focus address', key: '⌘L', run: focusAddress, disabled: !active },
     { name: 'Reload tab', key: '⌘R', run: () => tabAction('reload'), disabled: !active?.url },
-    { name: 'Create Space', key: '', run: () => setEditor({ type: 'spaceCreate', name: '' }), disabled: !inPrivate },
-    { name: 'Create tab group', key: '', run: () => setEditor({ type: 'groupCreate', name: '' }), disabled: !inPrivate },
+    { name: 'Create Space', key: '', run: () => openEditor({ type: 'spaceCreate', name: '' }), disabled: !inPrivate },
+    { name: 'Create tab group', key: '', run: () => openEditor({ type: 'groupCreate', name: '' }), disabled: !inPrivate },
     { name: 'Add Split Screen', key: '', run: () => {
       const other = spaceTabs.find((tab) => tab.id !== active?.id);
       if (other) void send({ type: 'split', tab: other.id });
@@ -270,7 +304,7 @@ export function Browser() {
     if (tabFilter && !tab.title.toLowerCase().includes(tabFilter.toLowerCase())) return null;
     return <div key={tab.id} className={tab.id === browser.selected ? 'vertical-tab current' : 'vertical-tab'}
       onContextMenu={(event) => { event.preventDefault(); setMenu(tab.id); }}
-      onDragOver={(event) => event.preventDefault()}
+      onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = 'move'; }}
       onDrop={(event) => {
         event.preventDefault();
         const from = browser.tabs.findIndex((item) => item.id === dragged.current);
@@ -279,14 +313,15 @@ export function Browser() {
         }
         dragged.current = undefined;
       }}>
-      <button className="tab" role="tab" aria-selected={tab.id === browser.selected} draggable
-        onDragStart={(event) => { dragged.current = tab.id; event.dataTransfer.effectAllowed = 'move'; }}
+      <button className="tab" role="tab" aria-selected={tab.id === browser.selected} tabIndex={tab.id === keyboardTab?.id ? 0 : -1} draggable
+        onDragStart={(event) => { dragged.current = tab.id; event.dataTransfer.effectAllowed = 'move'; event.dataTransfer.setData('application/x-vezham-tab', tab.id); }}
         onDragEnd={() => { dragged.current = undefined; }}
         onKeyDown={(event) => {
           if (event.key === 'ContextMenu' || (event.shiftKey && event.key === 'F10')) { event.preventDefault(); setMenu(tab.id); }
           if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-            const next = spaceTabs[(spaceTabs.indexOf(tab) + (event.key === 'ArrowUp' ? spaceTabs.length - 1 : 1)) % spaceTabs.length];
-            if (next) { event.preventDefault(); selectTab(next); }
+            const rendered = Array.from(event.currentTarget.closest('[role="tablist"]')?.querySelectorAll<HTMLButtonElement>('[role="tab"]') ?? []);
+            const next = rendered[(rendered.indexOf(event.currentTarget) + (event.key === 'ArrowUp' ? rendered.length - 1 : 1)) % rendered.length];
+            if (next) { event.preventDefault(); next.focus(); next.click(); }
           }
         }} onClick={() => selectTab(tab)}>
         {tab.loading ? <span className="spinner" aria-label="Loading"/> : tab.favicon ? <img className="favicon" src={tab.favicon} alt=""/> : <Icon name={tab.failure ? 'info' : tab.pinned ? 'pin' : tab.url ? 'globe' : 'logo'} size={16}/>}
@@ -347,11 +382,6 @@ export function Browser() {
         <Tool icon="command" label="Open command palette" action={openPalette}/>
         <div className="nav-menu">
           <Tool icon="menu" label="Navigation actions" action={() => setMenu(menu === 'navigation' ? undefined : 'navigation')}/>
-          {menu === 'navigation' && <div className="popover">
-            <Button size="sm" variant="ghost" isDisabled={!active?.url} onPress={() => tabAction('copy')}>Copy address</Button>
-            <Button size="sm" variant="ghost" isDisabled={!active} onPress={() => tabAction('paste')}>Paste and navigate</Button>
-            <Button size="sm" variant="ghost" onPress={() => choose('Settings')}>Settings</Button>
-          </div>}
         </div>
         <span className={inPrivate ? 'session-tag private' : 'session-tag'}><span className="session-dot"/>{inPrivate ? 'Private session' : 'Workspace'}</span>
       </div>
@@ -362,11 +392,11 @@ export function Browser() {
       {sidebar && <aside className="sidebar" aria-label="Workspace sidebar">
         <div className="wordmark"><span className="brandmark"><Icon name="logo" size={20}/></span><strong>Vezham</strong><Tool icon="menu" label="Workspace actions" action={() => setMenu(menu === 'workspace' ? undefined : 'workspace')}/></div>
         <div className="spaces" aria-label="Spaces">{browser.spaces.map((space, index) => <button key={space.id} aria-label={'Switch to ' + space.name} aria-pressed={space.id === browser.activeSpace}
-          onDragOver={(event) => event.preventDefault()}
+          onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = 'move'; }}
           onDrop={(event) => { event.preventDefault(); if (dragged.current) void send({ type: 'tabSpace', tab: dragged.current, target: space.id }); dragged.current = undefined; }}
           onContextMenu={(event) => { event.preventDefault(); setMenu('space:' + space.id); }}
           onClick={() => { choose('Tabs'); void send({ type: 'spaceSwitch', target: space.id }); }}><span>{index + 1}</span>{space.name}</button>)}
-          <Tool icon="plus" label="Create Space" disabled={!inPrivate} action={() => setEditor({ type: 'spaceCreate', name: '' })}/>
+          <Tool icon="plus" label="Create Space" disabled={!inPrivate} action={() => openEditor({ type: 'spaceCreate', name: '' })}/>
         </div>
         <div className="space-heading"><strong>{currentSpace?.name || 'Your workspace'}</strong>
           <Tool icon="menu" label="Space actions" disabled={!inPrivate} action={() => setMenu('space:' + browser.activeSpace)}/></div>
@@ -375,7 +405,7 @@ export function Browser() {
         <div className="vertical-tabs" role="tablist" aria-label="Browser tabs" aria-orientation="vertical">
           {spaceTabs.some((tab) => tab.pinned) && <><div className="sidebar-label">Pinned</div>{spaceTabs.filter((tab) => tab.pinned).map(verticalTab)}</>}
           {spaceGroups.map((group) => <div className="tab-group" key={group.id}>
-            <div className="group-heading" onDragOver={(event) => event.preventDefault()}
+            <div className="group-heading" onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = 'move'; }}
               onDrop={(event) => { event.preventDefault(); if (dragged.current) void send({ type: 'tabGroup', tab: dragged.current, target: group.id }); dragged.current = undefined; }}
               onContextMenu={(event) => { event.preventDefault(); setMenu('group:' + group.id); }}>
               <Button variant="ghost" size="sm" aria-expanded={!group.collapsed} onPress={() => void send({ type: 'groupToggle', target: group.id })}><Icon name={group.collapsed ? 'forward' : 'down'} size={14}/>{group.name}<span>{spaceTabs.filter((tab) => tab.group === group.id && !tab.pinned).length}</span></Button>
@@ -386,7 +416,7 @@ export function Browser() {
           <div className="sidebar-label">Today</div>{spaceTabs.filter((tab) => !tab.pinned && !tab.group).map(verticalTab)}
           {inPrivate && !spaceTabs.length && <p className="side-empty">A clear space. Open a tab to begin.</p>}
         </div>
-        {spaceTabs.length > 1 && <div className="sidebar-split-target" onDragOver={(event) => event.preventDefault()} onDrop={(event) => {
+        {spaceTabs.length > 1 && <div className="sidebar-split-target" onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = 'move'; }} onDrop={(event) => {
           event.preventDefault(); if (dragged.current && dragged.current !== active?.id) void send({ type: 'split', tab: dragged.current }); dragged.current = undefined;
         }}><Icon name="split" size={14}/> Drop a tab to split</div>}
         <div className="library-links">{sections.slice(1).map((item) => <Button variant="ghost" size="sm" key={item} aria-current={section === item ? 'page' : undefined} onPress={() => choose(item)}><Icon name={item.toLowerCase()} size={15}/>{item}</Button>)}</div>
@@ -452,19 +482,24 @@ export function Browser() {
       </div>
     </div>
     {menu && <div className="context-shade" onPointerDown={(event) => { if (event.target === event.currentTarget) setMenu(undefined); }}>
-      <div className="workspace-context">
+      <dialog ref={contextDialog} className="workspace-context" aria-label="Workspace actions" onKeyDown={containModalFocus} onCancel={() => setMenu(undefined)}>
+        {menu === 'navigation' && <div className="popover">
+          <Button size="sm" variant="ghost" isDisabled={!active?.url} onPress={() => tabAction('copy')}>Copy address</Button>
+          <Button size="sm" variant="ghost" isDisabled={!active} onPress={() => tabAction('paste')}>Paste and navigate</Button>
+          <Button size="sm" variant="ghost" onPress={() => choose('Settings')}>Settings</Button>
+        </div>}
         {browser.tabs.filter((tab) => tab.id === menu).map((tab) => <div key={tab.id}>{tabMenu(tab)}</div>)}
-        {menu.startsWith('space:') && <div className="popover"><Button variant="ghost" onPress={() => { setEditor({ type: 'spaceRename', target: menu.slice(6), name: browser.spaces.find((space) => space.id === menu.slice(6))?.name ?? '' }); setMenu(undefined); }}>Rename Space</Button><Button variant="ghost" isDisabled={browser.spaces.length <= 1 || browser.tabs.some((tab) => tab.space === menu.slice(6))} onPress={() => { void send({ type: 'spaceDelete', target: menu.slice(6) }); setMenu(undefined); }}>Delete empty Space</Button></div>}
+        {menu.startsWith('space:') && <div className="popover"><Button variant="ghost" onPress={() => { openEditor({ type: 'spaceRename', target: menu.slice(6), name: browser.spaces.find((space) => space.id === menu.slice(6))?.name ?? '' }); setMenu(undefined); }}>Rename Space</Button><Button variant="ghost" isDisabled={browser.spaces.length <= 1 || browser.tabs.some((tab) => tab.space === menu.slice(6))} onPress={() => { void send({ type: 'spaceDelete', target: menu.slice(6) }); setMenu(undefined); }}>Delete empty Space</Button></div>}
         {menu.startsWith('group:') && <div className="popover">
-          <Button variant="ghost" onPress={() => { setEditor({ type: 'groupRename', target: menu.slice(6), name: browser.groups.find((group) => group.id === menu.slice(6))?.name ?? '' }); setMenu(undefined); }}>Rename group</Button>
+          <Button variant="ghost" onPress={() => { openEditor({ type: 'groupRename', target: menu.slice(6), name: browser.groups.find((group) => group.id === menu.slice(6))?.name ?? '' }); setMenu(undefined); }}>Rename group</Button>
           <Button variant="ghost" onPress={() => { void send({ type: 'groupMove', target: menu.slice(6), offset: -1 }); setMenu(undefined); }}>Move group up</Button>
           <Button variant="ghost" onPress={() => { void send({ type: 'groupMove', target: menu.slice(6), offset: 1 }); setMenu(undefined); }}>Move group down</Button>
           <Button variant="ghost" onPress={() => { void send({ type: 'groupDelete', target: menu.slice(6) }); setMenu(undefined); }}>Ungroup tabs</Button>
         </div>}
-        {menu === 'workspace' && <div className="popover"><Button variant="ghost" isDisabled={!inPrivate} onPress={() => { setEditor({ type: 'spaceCreate', name: '' }); setMenu(undefined); }}>Create Space</Button><Button variant="ghost" isDisabled={!inPrivate} onPress={() => { setEditor({ type: 'groupCreate', name: '' }); setMenu(undefined); }}>Create tab group</Button><Button variant="ghost" onPress={() => { choose('Settings'); setMenu(undefined); }}>Settings</Button></div>}
-      </div>
+        {menu === 'workspace' && <div className="popover"><Button variant="ghost" isDisabled={!inPrivate} onPress={() => { openEditor({ type: 'spaceCreate', name: '' }); setMenu(undefined); }}>Create Space</Button><Button variant="ghost" isDisabled={!inPrivate} onPress={() => { openEditor({ type: 'groupCreate', name: '' }); setMenu(undefined); }}>Create tab group</Button><Button variant="ghost" onPress={() => { choose('Settings'); setMenu(undefined); }}>Settings</Button></div>}
+      </dialog>
     </div>}
-    {editor && <div className="palette-layer"><dialog open className="palette" aria-modal="true" aria-label="Organize workspace"><form className="organization-editor" onSubmit={(event) => {
+    {editor && <div className="palette-layer"><dialog ref={editorDialog} className="palette" aria-label="Organize workspace" onKeyDown={containModalFocus} onCancel={() => setEditor(undefined)}><form className="organization-editor" onSubmit={(event) => {
       event.preventDefault();
       const command = editor.target ? { type: editor.type as 'spaceRename' | 'groupRename', target: editor.target, name: editor.name } : { type: editor.type as 'spaceCreate' | 'groupCreate', name: editor.name };
       void send(command).then((result) => { if (!result.error) setEditor(undefined); });
@@ -473,9 +508,9 @@ export function Browser() {
       <span>{notice || (connected ? active?.loading ? 'Loading page…' : inPrivate ? 'Session data is temporary' : 'Ready for a private session' : 'Connecting to native browser…')}</span>
       <Button variant="ghost" size="sm" onPress={openPalette}><Icon name="command" size={14}/> Commands <kbd>⌘K</kbd></Button>
     </footer>
-    {palette && <div className="palette-layer" onPointerDown={(event) => { if (event.target === event.currentTarget) closePalette(); }}><dialog open aria-modal="true" aria-label="Browser commands" className="palette" onKeyDown={paletteKey}>
+    {palette && <div className="palette-layer" onPointerDown={(event) => { if (event.target === event.currentTarget) closePalette(); }}><dialog ref={paletteDialog} aria-label="Browser commands" className="palette" onCancel={() => closePalette()} onKeyDown={paletteKey}>
       <div className="palette-search"><Icon name="search"/><Input ref={commands} value={query} aria-label="Find a command" placeholder="Find a command…" onChange={(event) => setQuery(event.target.value)}/><Tool icon="close" label="Close commands" action={closePalette}/></div>
-      <div className="palette-items">{paletteActions.map((item) => <Button key={'id' in item ? item.id : item.name} variant="ghost" isDisabled={'disabled' in item && item.disabled}
+      <div className="palette-items">{paletteActions.map((item) => <Button key={'id' in item && typeof item.id === 'string' ? item.id : item.name} variant="ghost" isDisabled={'disabled' in item && item.disabled}
         onPress={() => { closePalette(); void item.run(); }}>{item.name}{item.key && <kbd>{item.key}</kbd>}</Button>)}{!paletteActions.length && <p>No commands found.</p>}</div>
     </dialog></div>}
   </div>;

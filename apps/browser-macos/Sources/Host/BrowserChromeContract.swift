@@ -1,4 +1,26 @@
 import Foundation
+import BrowserNativeStorage
+
+/// External deliveries share the adapter's existing HTTPS/loopback-HTTP policy.
+enum ExternalBrowserRoute {
+    case workspace(URL), mini(URL)
+
+    static func parse(_ input: URL) -> Self? {
+        guard input.absoluteString.utf8.count <= 12_288 else { return nil }
+        if NativeWebKitStorage.permitsInteractiveURL(input) { return .workspace(input) }
+        guard input.scheme?.lowercased() == "vezham", input.host?.lowercased() == "open",
+              input.user == nil, input.password == nil, input.port == nil,
+              input.path.isEmpty, input.fragment == nil,
+              let parts = URLComponents(url: input, resolvingAgainstBaseURL: false),
+              parts.queryItems?.count == 1, let query = parts.queryItems?.first,
+              query.name == "url", let value = query.value,
+              value.utf8.count <= 8192,
+              !value.unicodeScalars.contains(where: { CharacterSet.controlCharacters.contains($0) }),
+              let destination = URL(string: value),
+              NativeWebKitStorage.permitsInteractiveURL(destination) else { return nil }
+        return .mini(destination)
+    }
+}
 
 struct ChromeCommand: Decodable {
     enum Kind: String, Decodable {

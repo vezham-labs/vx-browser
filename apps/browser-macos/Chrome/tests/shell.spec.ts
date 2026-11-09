@@ -164,3 +164,72 @@ test('Split commands expose pane controls and command bar searches open tabs', a
   await page.getByRole('textbox', {name:'Find a command'}).fill('Tab ·');
   await expect(page.getByRole('dialog').getByRole('button', {name:'Tab · New tab',exact:true})).toHaveCount(2);
 });
+
+
+test('tab arrows advance real focus through the rendered tab order', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  for (let n = 0; n < 2; n++) {
+    await page.getByRole('button', { name: 'Open command palette' }).click();
+    await page.getByRole('dialog', { name: 'Browser commands' }).getByRole('button', { name: /^New tab/ }).click();
+  }
+  const tabs = page.getByRole('tab');
+  await tabs.first().focus();
+  await page.keyboard.press('ArrowDown');
+  await expect(tabs.nth(1)).toBeFocused();
+  await page.keyboard.press('ArrowDown');
+  await expect(tabs.nth(2)).toBeFocused();
+});
+
+test('workspace editor and action dialog contain focus and cancel with Escape', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  await page.getByRole('button', { name: 'Workspace actions', exact: true }).click();
+  const actions = page.getByRole('dialog', { name: 'Workspace actions', exact: true });
+  await expect(actions.getByRole('button').first()).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(actions).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Workspace actions', exact: true })).toBeFocused();
+  await page.getByRole('button', { name: 'Create Space', exact: true }).click();
+  const editor = page.getByRole('dialog', { name: 'Organize workspace', exact: true });
+  await expect(editor.getByRole('textbox')).toBeFocused();
+  for (let n = 0; n < 6; n++) {
+    await page.keyboard.press('Tab');
+    expect(await editor.evaluate(el => el.contains(document.activeElement))).toBe(true);
+  }
+  await page.keyboard.press('Escape');
+  await expect(editor).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Create Space', exact: true })).toBeFocused();
+});
+
+
+test('navigation actions stay inside the active dialog', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  await page.getByRole('button', { name: 'Navigation actions', exact: true }).click();
+  const dialog = page.getByRole('dialog', { name: 'Workspace actions', exact: true });
+  await expect(dialog.getByRole('button', { name: 'Settings', exact: true })).toBeVisible();
+  await dialog.getByRole('button', { name: 'Settings', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'Settings', exact: true })).toBeVisible();
+});
+
+test('command focus-address intent survives dialog dismissal', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  await page.getByRole('button', { name: 'Open command palette', exact: true }).click();
+  await page.getByRole('textbox', { name: 'Find a command' }).fill('Focus address');
+  await page.getByRole('dialog').getByRole('button', { name: /^Focus address/ }).click();
+  await expect(page.getByRole('textbox', { name: 'Address and search' })).toBeFocused();
+});
+
+
+test('native-selected tab changes dismiss an unfinished address draft', async ({ page }) => {
+  await hostStandIn(page);
+  await page.getByRole('button', { name: 'Start private session' }).last().click();
+  await page.getByRole('textbox', { name: 'Address and search' }).fill('unfinished.invalid');
+  await page.evaluate(async () => {
+    const host = window as Window & { webkit: { messageHandlers: { browserChrome: { postMessage(value: object): Promise<unknown> } } } };
+    await host.webkit.messageHandlers.browserChrome.postMessage({ id: 'external-selection-fixture', version: 1, type: 'newTab' });
+  });
+  await expect(page.getByRole('textbox', { name: 'Address and search' })).toHaveValue('');
+});

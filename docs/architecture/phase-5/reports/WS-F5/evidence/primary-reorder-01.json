@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/pointer",
+    "93787",
+    "9600",
+    "65",
+    "357",
+    "65",
+    "288"
+  ],
+  "exit": 78,
+  "stdout": "BLOCKED: existing OS input permission unavailable; no prompt or security-setting change requested\n",
+  "stderr": "",
+  "startedUTC": "2026-11-09T19:50:25.913665+00:00"
+}

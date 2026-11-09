@@ -8,6 +8,10 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
     private var mainWindow: MainWindowController?
     private var storageSession: NativeStorageSession?
     private var securityLifecycle: NativeSecurityLifecycle?
+    private var terminating = false
+    private var routingReady = false
+    private var routing = false
+    private var pendingRoutes: [ExternalBrowserRoute] = []
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         #if WSF1_QUALIFICATION
@@ -33,9 +37,34 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         if let storageSession { securityLifecycle = NativeSecurityLifecycle(session: storageSession) }
         configureMenu()
         showMainWindow()
+        routingReady = true
+        drainRoutes()
         logger.info("native-host-ready")
         #if DEBUG
         let arguments = ProcessInfo.processInfo.arguments
+        if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf5.qualification", arguments.contains("--wsf5-observe") {
+            Task { @MainActor in
+                for _ in 0..<1800 {
+                    if let current = self.mainWindow {
+                        let dom = await current.reliabilityDOMObservation()
+                        let event: [String: Any] = ["observation": current.reliabilityObservation(), "chromeDiagnostic": dom, "uptime": ProcessInfo.processInfo.systemUptime]
+                        if let data = try? JSONSerialization.data(withJSONObject: event, options: [.sortedKeys]) {
+                            FileHandle.standardOutput.write(data + Data([10]))
+                        }
+                    }
+                    try? await Task.sleep(for: .seconds(1))
+                }
+            }
+        }
+        if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf5.qualification",
+           let flag = arguments.firstIndex(of: "--wsf5-qualification"),
+           arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
+           origin.scheme == "http", origin.host == "127.0.0.1", let mainWindow {
+            Task { @MainActor in
+                await mainWindow.qualifyReliability(origin)
+                NSApp.terminate(nil)
+            }
+        }
         if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf4.qualification",
            let flag = arguments.firstIndex(of: "--wsf4-qualification"),
            arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
@@ -49,22 +78,48 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
     }
 
     func application(_ application: NSApplication, open urls: [URL]) {
-        showMainWindow()
-        for wrapper in urls.prefix(6) {
-            guard wrapper.scheme == "vezham", wrapper.host == "open",
-                  let parts = URLComponents(url: wrapper, resolvingAgainstBaseURL: false),
-                  parts.queryItems?.count == 1,
-                  let query = parts.queryItems?.first, query.name == "url",
-                  let value = query.value, value.utf8.count <= 8192, let url = URL(string: value),
-                  let mainWindow else { continue }
-            Task { @MainActor in
-                do { try await mainWindow.openMini(url) }
-                catch { NSSound.beep() }
+        guard !terminating else { return }
+        for input in urls.prefix(6) {
+            guard pendingRoutes.count < 12, let route = ExternalBrowserRoute.parse(input) else {
+                logger.notice("external-url-rejected")
+                continue
+            }
+            pendingRoutes.append(route)
+        }
+        drainRoutes()
+    }
+
+    private func drainRoutes() {
+        guard routingReady, !routing, !pendingRoutes.isEmpty else { return }
+        routing = true
+        Task { @MainActor in
+            defer { routing = false }
+            while !pendingRoutes.isEmpty && !terminating {
+                showMainWindow()
+                guard let mainWindow else { break }
+                var waits = 0
+                while mainWindow.isPerformingBrowserAction && !terminating && waits < 400 {
+                    waits += 1
+                    try? await Task.sleep(for: .milliseconds(50))
+                }
+                guard !terminating else { break }
+                let route = pendingRoutes.removeFirst()
+                guard !mainWindow.isPerformingBrowserAction else {
+                    logger.notice("external-url-admission-timeout")
+                    continue
+                }
+                do {
+                    switch route {
+                    case .workspace(let url): try await mainWindow.openExternal(url)
+                    case .mini(let url): try await mainWindow.openMini(url)
+                    }
+                } catch { logger.notice("external-url-unavailable") }
             }
         }
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        guard !terminating else { return false }
         if !flag { showMainWindow() }
         return true
     }
@@ -79,9 +134,13 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         #if WSF1_QUALIFICATION
         if ProcessInfo.processInfo.arguments.contains(where: { ["--wsf1-qualification", "--wsf2-qualification", "--wsf4-qualification"].contains($0) }) { return .terminateNow }
         #endif
-        guard let storageSession else { return .terminateNow }
+        terminating = true
+        routingReady = false
+        pendingRoutes.removeAll()
+        let closingWindow = mainWindow
         Task { @MainActor in
-            await storageSession.security.lockAll(cause: .shutdown)
+            await closingWindow?.shutdown()
+            if let storageSession { await storageSession.security.lockAll(cause: .shutdown) }
             sender.reply(toApplicationShouldTerminate: true)
         }
         return .terminateLater
@@ -109,7 +168,14 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func showMainWindow() {
-        if mainWindow == nil { mainWindow = MainWindowController() }
+        guard !terminating else { return }
+        if mainWindow?.acceptsExternalNavigation != true {
+            let controller = MainWindowController()
+            controller.didClose = { [weak self, weak controller] in
+                if self?.mainWindow === controller { self?.mainWindow = nil }
+            }
+            mainWindow = controller
+        }
         mainWindow?.showWindow(nil)
         mainWindow?.window?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
@@ -122,6 +188,14 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         applicationMenu.addItem(withTitle: "Quit Vezham Browser", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         applicationItem.submenu = applicationMenu
         menu.addItem(applicationItem)
+        let editItem = NSMenuItem()
+        let edit = NSMenu(title: "Edit")
+        edit.addItem(withTitle: "Cut", action: #selector(NSText.cut(_:)), keyEquivalent: "x")
+        edit.addItem(withTitle: "Copy", action: #selector(NSText.copy(_:)), keyEquivalent: "c")
+        edit.addItem(withTitle: "Paste", action: #selector(NSText.paste(_:)), keyEquivalent: "v")
+        edit.addItem(withTitle: "Select All", action: #selector(NSText.selectAll(_:)), keyEquivalent: "a")
+        editItem.submenu = edit
+        menu.addItem(editItem)
         NSApp.mainMenu = menu
     }
 }

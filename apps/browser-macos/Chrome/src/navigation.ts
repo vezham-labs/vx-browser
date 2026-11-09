@@ -21,6 +21,7 @@ export function destination(value: string, provider: SearchProvider = search): s
   try {
     const url = new URL(hasScheme ? input : `https://${input}`);
     if (['https:', 'http:'].includes(url.protocol) && url.hostname && !url.username && !url.password) {
+      if (url.protocol === 'http:' && !['localhost', '127.0.0.1', '[::1]'].includes(url.hostname)) return;
       return url.href;
     }
   } catch {

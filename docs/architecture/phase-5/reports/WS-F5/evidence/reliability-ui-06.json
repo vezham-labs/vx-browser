@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node_modules/.bin/nx",
+    "run",
+    "browser-macos:reliability-ui",
+    "--output-style=static"
+  ],
+  "exit": 0,
+  "reason": "Serial rerun: previous unchanged assertion timed out while final native suite ran; failure snapshot already contained Settings heading. No timeout/assertion changes."
+}

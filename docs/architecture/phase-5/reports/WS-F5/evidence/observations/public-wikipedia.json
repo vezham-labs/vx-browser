@@ -1,0 +1,212 @@
+{
+  "recordedUTC": "2026-11-09T19:34:29.285710+00:00",
+  "observation": {
+    "chromeDiagnostic": {
+      "events": [
+        {
+          "buttons": 2,
+          "target": "",
+          "type": "mousedown",
+          "x": 65,
+          "y": 325
+        },
+        {
+          "buttons": 2,
+          "target": "",
+          "type": "mousemove",
+          "x": 65,
+          "y": 256
+        },
+        {
+          "buttons": 0,
+          "dropEffect": "none",
+          "target": "tab",
+          "type": "dragstart",
+          "x": 65,
+          "y": 325
+        },
+        {
+          "buttons": 1,
+          "target": "button button--md button--ghost",
+          "type": "mousedown",
+          "x": 407,
+          "y": 238
+        },
+        {
+          "buttons": 0,
+          "target": "",
+          "type": "mousedown",
+          "x": 48,
+          "y": 71
+        },
+        {
+          "buttons": 0,
+          "target": "",
+          "type": "mousedown",
+          "x": 94,
+          "y": 393
+        }
+      ],
+      "focused": "Wikipedia"
+    },
+    "observation": {
+      "busy": false,
+      "chromeReady": true,
+      "closing": false,
+      "minis": [],
+      "state": {
+        "activeSpace": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+        "appearance": "system",
+        "groups": [],
+        "mini": false,
+        "profile": "unavailable",
+        "revision": 44,
+        "selected": "1af40ba2-f890-43d3-b281-9945c0240292",
+        "session": "private",
+        "sessionID": "07879317-1a8c-4739-aa50-39126c228877",
+        "spaces": [
+          {
+            "id": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "name": "Personal"
+          },
+          {
+            "id": "fbddb93e-d9e2-428e-bd24-dda985b3e1b0",
+            "name": "Research"
+          }
+        ],
+        "split": [],
+        "splitCompact": false,
+        "tabs": [
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "27129bd4-c941-4dc9-b5b4-d3f263536a04",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:64679/alpha"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "9b5f7e5d-de63-4068-9a2e-1fd5f083de47",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Beta",
+            "url": "http://127.0.0.1:64679/beta"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "ca80ac4a-e8b2-4df7-a6e8-0ab42908c802",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Gamma",
+            "url": "http://127.0.0.1:64679/gamma"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "forward": false,
+            "id": "330fa14b-0782-4c43-bcfb-101a48ed2c63",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Example Domain",
+            "url": "https://example.com/"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "favicon": "data:image/png;base64,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",
+            "forward": false,
+            "id": "1af40ba2-f890-43d3-b281-9945c0240292",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Wikipedia",
+            "url": "https://www.wikipedia.org/"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAABX1BMVEX///9HR0tTU1chICZGRUpDQkdEQ0gVFBrOzs/My80eHSNRUFT+/v4YFx0WFRvw8PE7Oj/29vb8/PwuLTLl5eZLSk8aGR6Uk5be3t8kIyh0c3b5+fkzMjhzcnaEhIeIh4pWVVrNzM68vL3Av8H5+fo/PkNnZmqvr7HQ0NF3d3p9fH83NjtjYmYjIierq601NDmfnqGOjpHr6+vX1tcnJiykpKZcW1+Qj5LFxcbW1tdsbG+1tLbg4ODY2NmgoKI8PEGYmJpYV1xSUlYxMDVQT1MbGiA/P0Sbm53S0tM8O0CsrK5xcHRpaGx5eHzj4+SxsbPs7OxgYGTCwcM2NTpOTVKpqKu5ubvy8vLt7e1/f4L6+vtIR0ynp6mDg4ZCQUaurq9MS1D09PTIyMleXmKKio23t7lHRkqrqqzT09T9/f2ysrTNzc5iYWVvbnJpaW0sKzC7u70pKC56eX3CwsQmJitiaC63AAAARGVYSWZNTQAqAAAACAABh2kABAAAAAEAAAAaAAAAAAADoAEAAwAAAAEAAQAAoAIABAAAAAEAAAAwoAMABAAAAAEAAAAwAAAAANs3bAwAAAGfSURBVEgN7dTZUxNBEMfx727irrlJosFogqigIF54IJd44A1eHIqCgoIniIr8/8VMZioTU9ku8kL5kH3JdtKf2t6u34SwzYs2+8MO2M/GDn5LMd/311KpmJ2uy/cXUqmgYdbmkWbg4ybEbctjWIXDAngNPxJ1MJ2G4yJI5mHbgWeQ+yKCV1DYdWAOvh4SwSL8Deug/A62RJBZgh0HZuFETAT3gYoDL+B3KII78C2sgwdvoCqDSdhw4C58/yWCfjXRBwemIBGK4CQ8z9ZB9gi8l8EAPFIpsGv11PO6RFBUQbjnwE04piphS4MqCCUHbkG3DM7AJdVhR5pXEx0VwcU+uODAW7iaEcFZHQQHPsENXUW/wzk4rTvMSH8KMKKrSFDKqcOiOwz4CfmkriJBL6SLusOAzzBRqyLBFThV66gBffTGRaCD0OPAujp610UQN0HQPToaKzBqeNRIwyYIFiy/hPMyuGaCYEFVPW9IBJdtECx4CmOmP2qt5SAIdBD09cTzHgZBxRRh0vNu21v90fxX2fBT69sOaL2Xf7/9D7e0B2gdUVP8rTdHAAAAAElFTkSuQmCC",
+            "forward": false,
+            "id": "c282a0a1-6d81-4115-9336-bb8e34710bc0",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "JavaScript | MDN",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "forward": false,
+            "id": "a6f4253f-196c-4350-b135-1ef58b18e6d0",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "GitHub \u00b7 Change is constant. GitHub keeps you ahead. \u00b7 GitHub \u00b7 GitHub",
+            "url": "https://github.com/"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "favicon": "data:image/png;base64,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",
+            "forward": false,
+            "id": "dd2e6860-707a-4c1b-bf0b-be1de85206ae",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "The AI workspace that works for you. | Notion",
+            "url": "https://www.notion.com/"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAAHXElEQVR4AeVba2wUVRg9u2CpoKW8KgGEBoEWlUgsRF4SH6j4ggRCjI9IfERBGkOCmmDiH0nkh5LwA1QSEq0QMUEb6g9EYxQlNJsYUAlIWwiUUI1Q3iJUhK7nzE6Hnd3Z3dl5bLtykm9n5s69373nm/v67r0bQYjYfyKOaBwjmMUUSg2lmlJJqaCUU0opQgflDOU4pZXSRNlFiXVG0DZ+cIS34SBwzc3H41FEDMILWORHKON8Fr2F6bdSNiOOWFVFpNOnPlvywAzQ3B7XF32R8jJljC2X4B4OUtU6yvqqIRHVGN/wbQASH8hSLKPUUsp8l8idgnOMtoayioY45S6JcyzPBiDxKFUuoqygyAjdAZF/i/IhDeGpaXgyAMmrXX9EmUbpCWhkIZ6jEdRf5AV9RdeIx+Mg+WeYQD10TyGv8qssu1Q2lTEfuK4BZu++isqX5pNBN8RdzdFimdvRwpUBaNkSEtlEmdcNhLxkWc9ET7JJXMqVOKcBTPINVDQ7l7Ie9n4byzM3lxGy9gFGtU98+WIjr2+hMm8yOejZERkNYHQmEajNF0u1dyI4j7PSVdk6xowGaDkB9fYF7/DOs9X+2Aq0nXXi4ylsqcnFMbFjH8B2r3FeQ90NjqlCCDx9kVO7GPDFPuDiv8B7DwOPVweW0XlqqnGaJ6TVAJJXWB2lYOT3/EmyG4CNvyTIi3ZFP/0GBnGpM7nZlKYZgG8XUeS+FgQHTwLPc9Bq//tqdn16AxOGXn0O6E6cxM0GmwFoIc3pNbcvCK5w0vbaV8Bf/9ize7QK6HudPSygpxUmR0udzQAMlVdXMMfm6xZgf7tVFuNGxGvDq3/iJo4WLAPQMuUMlUtbMDQ02bPqxS555YPA8DJ7eMBPtSZXQ61lAD5pMSPcrFOY7GXn14UB1wNr53D2ovEnXIijuBowhkHT0WlmSFgrOWZ29stjn3BRkB3e/bcAT90B9C+1vw/x6SAdpio5TAkDtMflTu4MMkNNaHa0Ar9xmfNsB6AvfOcwYOpIoKRXek6K8/0hYPcfwDGOCL1ZN0fwW03mkurMSuc06VryCpnOeUEj7W9AC5iB4AInMWtjwKe/ArpPRTkNMbeaq6Xs6W/uD+w9BmzZD3zL1b5LV1JjAx/vBgb1BV6dCjwxAYgYnyw9nocQcW6MmEvXqv6+W99RTl9f2gIcOuWhOC6SyGjvzk7UDhfRc0VpYf2viprr9r7Jn7gALPw8PPJis5Wf6Z3tugsE48Rdo0Ago+6b3wC/nwukYBmVVA4Anp6Y8bWXF1PUB2jHxhd2HgF+OOxLRc7EmhtsZKsdEqyPUKMawC7JHzbQiQkT6vjkHQZMXkWulgEqdecV6ulVA8LELM4TNISGgEoZQBuVnrGPw5jT8OVZoUPCOeMdAoMJqpAB5AN4xpEznpO6TjhxqOuo+UYslwFK802VHF8zuDAhB0mTp5BQKgP4Qn77MPln1ckMwmxiMoCvb9ivJH9S+aSQgQ+fzidFXnE7ZABfrfimAqwcykkKCWdkAB1L8YzRnJ2Fjc/2APIuQ8BxGaDVj+KRHEPC9uNP0s94+zvQhQ8crTJAkx+1UfbSk4f70eAubQNd5pXbAXWKAaJJBtAGiC/cx5laIVD3M/AsPc7mlIVUH3nvkgFiPhQYSR8YA2gtvxD4qY0npHx/MquksajO4fGxxQrycFPWhys8vlcU3Gc8/zb3cbPE1IJIW9Q8hKhzeL7wwiRA/UHYuJWey11cJwwAW8VdTUDYnLh4/x07CAjRabEKprXBgNYFDc4JA/AEJnPgsqQ/vD6D83ZfnkX2/GdWAveOzh7H5Vstixt9n2EA80DROpeJM0Yb3I/j9Sx+oYwxvL+QYVdQd0BY13WIqqsJSO96iu9VvYfGJjY5AiqooUZVXltmQ28MRKs4iqsBywDcJJBPoOOnvrH8HmD6KN9qLAXLpgMBzjXWmFwN/bbaam4dH+CbgVbuHm86LgPLuVKspexkjOLUef7twAwaSAudl7kZcoD7CNs4EH/J2V7yZoq2zd6YyZVgbpsFBO1YjKUBdDVgM4BCaIRXeFlrvA3gR1tdsaOJIbJmGDCJ0+ZMvbjOCew4AhxlXVSb11cPeCF0Ccm/n0zLyQBqFjso05Ij/g/uG8nhbhqgM5lLmgH0krVA8zpNOAvg7SvH0OH+kJSKQiuxRWJx6MUqXAaLTU5pOVqjQOqbcYOxkWGrU8OL8Hm1ycWx6BkNEFFPxVPXTFXvmLI4AuvFweCSobyOfUByXPYHJXxuoMxODi+C+20so7/D0iLJtnNJiijFVBNU1pzkGcfyBnWfEYYR4tCJimLoE/SHiQXmh8vIqetFzibQFVFXnbo2Dx5/wMeeNkRqqFusDi9bmxePZORlgK6E5jyhjs9TusK6+SrXdmGmoS5b2TKOAtkSmRnRRcESijWvzpYmpHfKW2XQiS/NXfKGpxqQnAtrgxwnDZe1lLLkdyHey6WV59p9f5xMJUdD0M+7Bv86m2aIa/XP06mG0HMx/H3+PxV03lB5onlPAAAAAElFTkSuQmCC",
+            "forward": false,
+            "id": "4db18da1-615d-4930-8585-9fe05b021dbe",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Apple Developer",
+            "url": "https://developer.apple.com/"
+          }
+        ]
+      },
+      "visible": true,
+      "window": 9402
+    },
+    "uptime": 163370.33061770836
+  },
+  "binarySHA256": "fd59aa63a9ea2e7859b94878a4d734940f5e61e17a5cc8ad1eeb8de5576da411",
+  "screenshot": {
+    "command": [
+      "screencapture",
+      "-x",
+      "-o",
+      "-l",
+      "9402",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/observations/public-wikipedia.png"
+    ],
+    "exit": 0,
+    "stderr": ""
+  }
+}

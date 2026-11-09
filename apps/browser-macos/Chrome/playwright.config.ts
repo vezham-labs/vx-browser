@@ -2,6 +2,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
+  outputDir: process.env.VEZHAM_UI_EVIDENCE || '../build/playwright',
   testMatch: '*.spec.ts',
   workers: 1,
   timeout: 15000,

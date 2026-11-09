@@ -1,0 +1,9 @@
+{
+  "command": [
+    "node_modules/.bin/nx",
+    "run",
+    "browser-macos:reliability-contracts",
+    "--output-style=static"
+  ],
+  "exit": 0
+}

@@ -58,8 +58,12 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     private var browsing: PrivateSession?
     private var tabs: [ViewID] = []
     private var selected: ViewID?
+    private var focusContent = false
     private var busy = false
     private var closing = false
+    private var cleanupTask: Task<Void, Never>?
+    var acceptsExternalNavigation: Bool { !closing }
+    var isPerformingBrowserAction: Bool { busy }
     private var lastState: ChromeState?
     private var presentation = (visible: false, left: 0.0, top: 86.0)
     private static var sharedAppearance = ChromeAppearance.system
@@ -378,7 +382,10 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
             splitTabs = [first, id]
             selected = id
             return nil
-        case .close: try await closeTab(id); return nil
+        case .close:
+            try await closeTab(id)
+            if mini && tabs.isEmpty { window?.close() }
+            return nil
         case .duplicate:
             let source = adapter.surface(id)?.url
             let new = try await addTab()
@@ -414,6 +421,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         default: throw ChromeResult.Failure.invalid
         }
         guard adapter.perform(navigation, in: id) else { throw ChromeResult.Failure.unavailable }
+        if command.type == .navigate { focusContent = true }
         return nil
     }
 
@@ -448,6 +456,9 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         }
         updateBorders()
         page.isHidden = false
+        if focusContent, let surface = browsing?.storage.adapter.surface(selected), window?.makeFirstResponder(surface) == true {
+            focusContent = false
+        }
     }
 
     private func updateBorders() {
@@ -513,7 +524,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     }
 
     func openMini(_ url: URL) async throws {
-        guard validWebURL(url), minis.count < 6 else { throw ChromeResult.Failure.unavailable }
+        guard !closing, validWebURL(url), minis.count < 6 else { throw ChromeResult.Failure.unavailable }
         let id = UUID()
         let child = MainWindowController(mini: true)
         child.busy = true
@@ -541,18 +552,25 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     }
 
     private func validWebURL(_ url: URL) -> Bool {
-        guard let host = url.host, url.user == nil, url.password == nil else { return false }
-        return url.scheme == "https" || (url.scheme == "http" && ["127.0.0.1", "localhost", "::1"].contains(host))
+        NativeWebKitStorage.permitsInteractiveURL(url)
+    }
+
+    func openExternal(_ url: URL) async throws {
+        guard !busy else { throw ChromeResult.Failure.busy }
+        guard await receive(url) else { throw ChromeResult.Failure.unavailable }
     }
 
     private func receive(_ url: URL) async -> Bool {
         guard !closing, !busy, validWebURL(url) else { return false }
         busy = true
-        defer { busy = false; updateSurface() }
+        defer {
+            busy = false
+            if closing { scheduleCleanup() } else { updateSurface() }
+        }
         do {
             if browsing == nil { try await startPrivate() }
             else { _ = try await addTab() }
-            guard let selected, browsing?.storage.adapter.perform(.load(url), in: selected) == true else { return false }
+            guard !closing, let selected, browsing?.storage.adapter.perform(.load(url), in: selected) == true else { return false }
             window?.makeKeyAndOrderFront(nil)
             return true
         } catch { return false }
@@ -576,11 +594,27 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     }
 
     private func scheduleCleanup() {
-        Task { @MainActor in
+        guard cleanupTask == nil else { return }
+        let children = Array(minis.values)
+        cleanupTask = Task { @MainActor in
+            for child in children { await child.shutdown() }
             do { try await endPrivate() }
             catch { await discard() }
+            chrome?.stopLoading()
+            chrome?.navigationDelegate = nil
+            chrome?.removeFromSuperview()
+            chrome = nil
             didClose?()
         }
+    }
+
+    func shutdown() async {
+        let children = Array(minis.values)
+        window?.close()
+        for child in children { await child.shutdown() }
+        while busy { try? await Task.sleep(for: .milliseconds(20)) }
+        scheduleCleanup()
+        await cleanupTask?.value
     }
 }
 
@@ -910,6 +944,177 @@ extension MainWindowController {
             _ = await command("appearance", fields: ["value":"system"])
             Self.emit("qualification", status:"PASS_NATIVE")
         } catch { Self.emit("qualification", status:"FAIL") }
+    }
+}
+
+
+@MainActor
+private final class ReliabilityReferences {
+    weak var controller: MainWindowController?
+    weak var surface: WKWebView?
+    weak var mini: MainWindowController?
+    weak var miniSurface: WKWebView?
+}
+
+extension MainWindowController {
+    func reliabilityDOMObservation() async -> Any {
+        guard let chrome else { return NSNull() }
+        let code = """
+        if (!window.__wsf5DragEvents) {
+          window.__wsf5DragEvents = [];
+          for (const type of ['mousedown','mousemove','dragstart','dragenter','dragover','drop','dragend']) {
+            document.addEventListener(type, e => {
+              if (type === 'mousemove' && !e.buttons) return;
+              const log = window.__wsf5DragEvents;
+              log.push({type, x:e.clientX, y:e.clientY, buttons:e.buttons, target:e.target.className, dropEffect:e.dataTransfer?.dropEffect});
+              if (log.length > 100) log.shift();
+            }, true);
+          }
+        }
+        return {events:window.__wsf5DragEvents, focused:document.activeElement?.getAttribute('aria-label') || document.activeElement?.textContent?.slice(0,80)};
+        """
+        return (try? await chrome.callAsyncJavaScript(code, arguments: [:], in: nil, contentWorld: .page)) ?? NSNull()
+    }
+
+    func reliabilityObservation() -> [String: Any] {
+        let command = try! JSONDecoder().decode(ChromeCommand.self, from: Data("{\"version\":1,\"id\":\"observation\",\"type\":\"snapshot\"}".utf8))
+        let encoded = try! JSONEncoder().encode(result(command).state)
+        return ["window": window?.windowNumber ?? -1, "visible": window?.isVisible ?? false,
+                "closing": closing, "busy": busy, "chromeReady": chrome?.isLoading == false,
+                "state": try! JSONSerialization.jsonObject(with: encoded),
+                "minis": minis.values.map { $0.reliabilityObservation() }]
+    }
+
+    func qualifyReliability(_ origin: URL) async {
+        func emit(_ id: String, _ status: String, _ detail: String = "") {
+            let data = try! JSONSerialization.data(withJSONObject: ["testID": id, "status": status, "detail": detail], options: [.sortedKeys])
+            FileHandle.standardOutput.write(data + Data([10]))
+        }
+        func check(_ id: String, _ value: Bool, status: String = "PASS_NATIVE") throws {
+            emit(id, value ? status : "FAIL")
+            if !value { throw ChromeResult.Failure.failed }
+        }
+        func wait(_ condition: () async -> Bool) async -> Bool {
+            for _ in 0..<100 {
+                if await condition() { return true }
+                try? await Task.sleep(for: .milliseconds(100))
+            }
+            return false
+        }
+        func title(_ expected: String, on controller: MainWindowController? = nil) -> Bool {
+            let c = controller ?? self
+            guard let id = c.selected, let surface = c.browsing?.storage.adapter.surface(id) else { return false }
+            return !surface.isLoading && surface.title == expected
+        }
+        func js(_ code: String, on controller: MainWindowController? = nil) async -> Bool {
+            let c = controller ?? self
+            guard let id = c.selected, let surface = c.browsing?.storage.adapter.surface(id) else { return false }
+            return ((try? await surface.callAsyncJavaScript(code, arguments: [:], in: nil, contentWorld: .page)) as? Bool) == true
+        }
+        func closedCycle() async throws -> ReliabilityReferences {
+            let references = ReliabilityReferences()
+            let c = MainWindowController()
+            references.controller = c
+            c.showWindow(nil)
+            try await c.openExternal(origin.appendingPathComponent("alpha"))
+            guard let id = c.selected else { throw ChromeResult.Failure.failed }
+            references.surface = c.browsing?.storage.adapter.surface(id)
+            try await c.openMini(origin.appendingPathComponent("beta"))
+            if let mini = c.minis.values.first, let selected = mini.selected {
+                references.mini = mini
+                references.miniSurface = mini.browsing?.storage.adapter.surface(selected)
+            }
+            await c.shutdown()
+            return references
+        }
+        do {
+            try check("URL-POLICY-HTTPS", ExternalBrowserRoute.parse(URL(string: "https://example.com/")!) != nil, status: "PASS_CONTRACT")
+            try check("URL-POLICY-LOOPBACK", ExternalBrowserRoute.parse(origin) != nil, status: "PASS_CONTRACT")
+            for (index, input) in ["http://example.com/", "javascript:alert(1)", "file:///tmp/private", "data:text/html,test", "https://u:p@example.com/", "vezham://open?url=javascript%3Aalert(1)", "vezham://open?url=https%3A%2F%2Fexample.com&url=https%3A%2F%2Fexample.org", "vezham://u@open?url=https%3A%2F%2Fexample.com", "vezham://open/extra?url=https%3A%2F%2Fexample.com", "vezham://open?url=https%3A%2F%2Fexample.com#ignored"].enumerated() {
+                try check("URL-REJECT-\(index + 1)", ExternalBrowserRoute.parse(URL(string: input)!) == nil, status: "PASS_CONTRACT")
+            }
+            try check("URL-IPV6-LOOPBACK", NativeWebKitStorage.permitsInteractiveURL(URL(string: "http://[::1]:1234/")!), status: "PASS_CONTRACT")
+            try check("LIFE-CHROME-READY", await wait { self.chrome?.isLoading == false })
+            try await openExternal(origin.appendingPathComponent("alpha"))
+            try check("URL-MAIN-LOAD", await wait { title("Alpha") })
+            let first = selected!
+            guard let browsing else { throw ChromeResult.Failure.failed }
+            let a = browsing.storage.adapter
+            try check("LIFE-NATIVE-VIEW", a.surface(first) != nil && a.ownedViews(browsing.scope).count == 1)
+            try check("COMP-MAIN-STORAGE-SET", await js("localStorage.setItem('main-only','synthetic');document.cookie='mainOnly=synthetic;path=/';return true;"))
+            try check("URL-REDIRECT-ISSUED", a.perform(.load(origin.appendingPathComponent("redirect")), in: first))
+            try check("URL-REDIRECT-COMMITTED", await wait { title("Beta") })
+            try check("URL-BACK-ISSUED", a.perform(.back, in: first))
+            try check("URL-BACK-COMMITTED", await wait { title("Alpha") })
+            try check("URL-FORWARD-ISSUED", a.perform(.forward, in: first))
+            try check("URL-FORWARD-COMMITTED", await wait { title("Beta") })
+            try check("LIFE-FAILURE-ISSUED", a.perform(.load(origin.appendingPathComponent("failure")), in: first))
+            try check("LIFE-FAILURE-OBSERVED", await wait { a.navigationFailed(in: first) })
+            try check("LIFE-RECOVERY-ISSUED", a.perform(.load(origin.appendingPathComponent("alpha")), in: first))
+            try check("LIFE-RECOVERY-COMMITTED", await wait { title("Alpha") && !a.navigationFailed(in: first) })
+            try await openMini(origin.appendingPathComponent("alpha"))
+            var miniController: MainWindowController? = minis.values.first
+            guard let child = miniController else { throw ChromeResult.Failure.failed }
+            try check("LIFE-MINI-LOADED", await wait { title("Alpha", on: child) })
+            try check("COMP-MINI-STORAGE-ISOLATION", await js("return localStorage.getItem('main-only')===null && !document.cookie.includes('mainOnly=');", on: child))
+            try check("COMP-MINI-STORAGE-SET", await js("localStorage.setItem('mini-only','synthetic');return true;", on: child))
+            try check("COMP-MAIN-STORAGE-ISOLATION", await js("return localStorage.getItem('mini-only')===null && localStorage.getItem('main-only')==='synthetic';"))
+            let miniURL = child.browsing?.storage.adapter.surface(child.selected!)?.url
+            let received = if let miniURL { await receive(miniURL) } else { false }
+            try check("URL-MINI-TRANSFER-DESTINATION", received)
+            await child.shutdown()
+            miniController = nil
+            try check("LIFE-MINI-CLEANUP", await wait { minis.isEmpty && child.browsing == nil && child.chrome == nil })
+            try check("COMP-TRANSFER-URL-ONLY", await wait { title("Alpha") })
+            try check("COMP-TRANSFER-STORAGE-UNCHANGED", await js("return localStorage.getItem('mini-only')===null && localStorage.getItem('main-only')==='synthetic';"))
+            // Real WebKit target-blank delegate path; DOM click is not a pointer qualification.
+            let current = selected!
+            try check("COMP-TARGET-LOAD", a.perform(.load(origin.appendingPathComponent("target")), in: current))
+            try check("COMP-TARGET-READY", await wait { a.surface(current)?.isLoading == false && a.surface(current)?.url?.path == "/target" })
+            try check("COMP-TARGET-CLICK", await js("document.querySelector('#popup').click(); return true;"))
+            try check("COMP-TARGET-MINI", await wait { minis.values.first.map { title("Beta", on: $0) } == true })
+            for child in Array(minis.values) { await child.shutdown() }
+            try check("LIFE-POPUP-CLEANUP", minis.isEmpty)
+            try await openMini(origin.appendingPathComponent("beta"))
+            guard let lastTabMini = minis.values.first, let lastTab = lastTabMini.selected else { throw ChromeResult.Failure.failed }
+            let closePayload: [String: Any] = ["version": 1, "id": "last-mini-tab", "type": "close", "tab": lastTab.rawValue]
+            let closeCommand = try JSONDecoder().decode(ChromeCommand.self, from: JSONSerialization.data(withJSONObject: closePayload))
+            let closedLast = await lastTabMini.run(closeCommand)
+            try check("LIFE-MINI-LAST-TAB-COMMAND", closedLast.error == nil)
+            try check("LIFE-MINI-LAST-TAB-WINDOW", await wait { minis.isEmpty && lastTabMini.window?.isVisible == false && lastTabMini.chrome == nil })
+
+            try await openExternal(origin.appendingPathComponent("gamma"))
+            let second = selected!
+            try check("LIFE-SECOND-VIEW", await wait { title("Gamma") })
+            splitTabs = [first, second]
+            presentation = (true, 236, 126)
+            updateSurface()
+            try check("LIFE-SPLIT-TWO-NATIVE-VIEWS", page.arrangedSubviews.count == 2 && a.surface(first) !== a.surface(second))
+            try await closeTab(second)
+            updateSurface()
+            try check("LIFE-SPLIT-CLOSE", splitTabs.isEmpty && a.surface(second) == nil && tabs.contains(first))
+            for index in 1...4 {
+                let refs = try await closedCycle()
+                try check("LIFE-RELEASE-\(index)", await wait { refs.controller == nil && refs.surface == nil && refs.mini == nil && refs.miniSurface == nil })
+            }
+            // Close races a suspended external-navigation admission; cleanup must eventually win.
+            let racer = MainWindowController()
+            racer.showWindow(nil)
+            let receiveTask = Task { @MainActor in await racer.receive(origin.appendingPathComponent("alpha")) }
+            await Task.yield()
+            await racer.shutdown()
+            _ = await receiveTask.value
+            try check("LIFE-CLOSE-DURING-RECEIVE", racer.browsing == nil && racer.tabs.isEmpty && racer.chrome == nil && racer.closing)
+            try await endPrivate()
+            try check("LIFE-END-SESSION", self.browsing == nil && tabs.isEmpty && minis.isEmpty && page.arrangedSubviews.isEmpty)
+            try await startPrivate()
+            try check("COMP-NEW-PRIVATE-LOAD", self.browsing?.storage.adapter.perform(.load(origin.appendingPathComponent("alpha")), in: selected!) == true)
+            try check("COMP-NEW-PRIVATE-READY", await wait { title("Alpha") })
+            try check("COMP-NEW-PRIVATE-CLEAN", await js("return localStorage.getItem('main-only')===null && localStorage.getItem('mini-only')===null && !document.cookie.includes('mainOnly=');"))
+            await shutdown()
+            try check("LIFE-MAIN-SHUTDOWN", self.browsing == nil && chrome == nil && tabs.isEmpty)
+            emit("qualification", "PASS_NATIVE")
+        } catch { emit("qualification", "FAIL", "See preceding case and preserved native stderr") }
     }
 }
 #endif

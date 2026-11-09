@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node_modules/.bin/nx",
+    "run",
+    "browser-macos:build",
+    "--wsf5-qualification"
+  ],
+  "startedUTC": "2026-11-09T18:59:50.854343+00:00",
+  "derivedData": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData",
+  "launcherLimitation": "pnpm nx query stalled; direct local Nx shim succeeds outside restricted command sandbox",
+  "exit": 1
+}

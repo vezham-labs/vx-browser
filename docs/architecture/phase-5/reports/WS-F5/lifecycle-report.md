@@ -1,0 +1,7 @@
+# Browser lifecycle
+
+The final isolated binary passed 42 native assertions per launch across two launches. The lifecycle subset covers real window and WebKit view creation, two native split surfaces, pane closure, Mini construction and cleanup, last-tab Mini closure, interruption of an external navigation admission, private-session cleanup, and quit. Four bounded create/shutdown cycles per launch observed weak-reference release of parent and Mini controllers and their website views. Navigation failure and recovery used an owned TCP failure fixture followed by a successful navigation. [Final native suite](evidence/native-04/summary.json) · [Case events](evidence/native-04/attempt-1/events.jsonl)
+
+The earlier ⌘W observation left an empty Mini window. The corrected binary closed the Mini, returned focus to the workspace, and reported zero Mini windows. The shutdown path joins child cleanup and fences external routing during termination. Final app quit was observed separately. [Empty Mini failure](evidence/observations/mini-shortcut-empty-failure.json) · [Final shortcut state](evidence/observations/final-mini-shortcut-closed.json) · [Interactive closeout](evidence/interactive-closeout.json)
+
+Process-crash recovery on this revision, prolonged resource usage, and all focus combinations across split panes are NOT_EXECUTED. Weak-reference checks cover the observed objects and cycles. The prior Phase 3 and WS-F4R evidence retains its own revision boundaries.

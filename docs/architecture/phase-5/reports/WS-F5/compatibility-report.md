@@ -1,0 +1,7 @@
+# Website compatibility
+
+The final binary recorded six loaded public HTTPS tabs with titles, expected URLs, and no recorded navigation failure. Example Domain, Wikipedia, MDN JavaScript, GitHub, Notion and Apple Developer were sampled. The final screenshot shows the Apple Developer landing page. Earlier public screenshots and accessibility observations cover individual sites on a separate diagnostic revision. [Final public sample](evidence/observations/final-public-pages.json) · [Screenshot](evidence/observations/final-public-pages.png)
+
+Owned fixtures verified redirect commit, back/forward navigation, target-blank Mini routing, URL-only transfer and two-way LocalStorage isolation. Cookie absence was observed in the separate Mini and the replacement private session. An actual primary-button target-blank link opened Mini on build 06. The final binary exercised the same WebKit delegate path via a fixture link click. [Pointer link](evidence/observations/target-blank-pointer.json) · [Final fixtures](evidence/native-04/attempt-1/result.json)
+
+The synthetic Basic challenge and attachment produced no successful authentication or download. The earlier native snapshot records URL and loading state only, so the exact denial path is INCONCLUSIVE. Successful downloads remain unsupported in this candidate. Authenticated product workflows, MFA, federated popups, upload panels, and real account compatibility remain BLOCKED or NOT_EXECUTED. Public pages were the authorized scope. [Synthetic probes](evidence/observations/unsupported-auth-download.json)

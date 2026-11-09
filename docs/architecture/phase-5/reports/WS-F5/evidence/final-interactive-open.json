@@ -1,0 +1,19 @@
+{
+  "command": [
+    "open",
+    "-n",
+    "-a",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+    "--stdout",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/interactive-04.stdout",
+    "--stderr",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/interactive-04.stderr",
+    "http://127.0.0.1:49305/alpha",
+    "http://127.0.0.1:49305/beta",
+    "http://127.0.0.1:49305/gamma",
+    "--args",
+    "--wsf5-observe"
+  ],
+  "exit": 0,
+  "stderr": ""
+}

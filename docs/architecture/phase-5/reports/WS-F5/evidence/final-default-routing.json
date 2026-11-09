@@ -1,0 +1,156 @@
+{
+  "before": {
+    "http": "/Applications/Arc.app",
+    "https": "/Applications/Arc.app"
+  },
+  "commands": [
+    {
+      "command": [
+        "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/handlers",
+        "set",
+        "http",
+        "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app"
+      ],
+      "exit": 0,
+      "stdout": "{\"result\":\"completed\",\"scheme\":\"http\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "open",
+        "http://127.0.0.1:49305/alpha?wsf5-final-default=1"
+      ],
+      "exit": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "open",
+        "https://example.com/"
+      ],
+      "exit": 0,
+      "stderr": ""
+    }
+  ],
+  "startedUTC": "2026-11-09T19:53:05.990894+00:00",
+  "selected": {
+    "http": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+    "https": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app"
+  },
+  "nativeObservation": {
+    "chromeDiagnostic": {
+      "events": [],
+      "focused": "\u2318LPrivate sessionVezham1PersonalPersonalNew tab\u2318TTodayAlphaBetaGammaAlphaExample"
+    },
+    "observation": {
+      "busy": false,
+      "chromeReady": true,
+      "closing": false,
+      "minis": [],
+      "state": {
+        "activeSpace": "1264d77f-f58e-4846-b431-1a1f9061b561",
+        "appearance": "system",
+        "groups": [],
+        "mini": false,
+        "profile": "unavailable",
+        "revision": 7,
+        "selected": "5f1425dd-a6ad-4582-891e-a24b8e661b40",
+        "session": "private",
+        "sessionID": "0a59a080-6d29-4cad-b7bd-25cdfb5e3462",
+        "spaces": [
+          {
+            "id": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "name": "Personal"
+          }
+        ],
+        "split": [],
+        "splitCompact": false,
+        "tabs": [
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "b6b555aa-77df-4f6e-936c-716b096a88a9",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:49305/alpha"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "2ae43a43-6f24-4318-b990-51418b51d8b8",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Beta",
+            "url": "http://127.0.0.1:49305/beta"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "9e668315-14ec-4046-acd7-f75894b7813b",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Gamma",
+            "url": "http://127.0.0.1:49305/gamma"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "bc4817a1-89a3-4ccd-9630-484aca5ca750",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:49305/alpha?wsf5-final-default=1"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "forward": false,
+            "id": "5f1425dd-a6ad-4582-891e-a24b8e661b40",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Example Domain",
+            "url": "https://example.com/"
+          }
+        ]
+      },
+      "visible": true,
+      "window": 9600
+    },
+    "uptime": 164498.23596229168
+  },
+  "deliveryStatus": "PASS_NATIVE",
+  "restoration": [
+    {
+      "scheme": "http",
+      "exit": 0,
+      "stdout": "{\"result\":\"completed\",\"scheme\":\"http\"}\n",
+      "stderr": ""
+    },
+    {
+      "scheme": "https",
+      "exit": 0,
+      "stdout": "{\"result\":\"completed\",\"scheme\":\"https\"}\n",
+      "stderr": ""
+    }
+  ],
+  "after": {
+    "http": "/Applications/Arc.app",
+    "https": "/Applications/Arc.app"
+  },
+  "restoredExactly": true
+}

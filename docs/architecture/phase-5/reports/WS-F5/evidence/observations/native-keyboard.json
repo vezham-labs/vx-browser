@@ -1,0 +1,111 @@
+{
+  "recordedUTC": "2026-11-09T19:26:27.751807+00:00",
+  "observation": {
+    "chromeDiagnostic": {
+      "events": [
+        {
+          "buttons": 2,
+          "target": "",
+          "type": "mousedown",
+          "x": 65,
+          "y": 325
+        },
+        {
+          "buttons": 2,
+          "target": "",
+          "type": "mousemove",
+          "x": 65,
+          "y": 256
+        },
+        {
+          "buttons": 0,
+          "dropEffect": "none",
+          "target": "tab",
+          "type": "dragstart",
+          "x": 65,
+          "y": 325
+        }
+      ],
+      "focused": "Beta"
+    },
+    "observation": {
+      "busy": false,
+      "chromeReady": true,
+      "closing": false,
+      "minis": [],
+      "state": {
+        "activeSpace": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+        "appearance": "system",
+        "groups": [],
+        "mini": false,
+        "profile": "unavailable",
+        "revision": 3,
+        "selected": "9b5f7e5d-de63-4068-9a2e-1fd5f083de47",
+        "session": "private",
+        "sessionID": "07879317-1a8c-4739-aa50-39126c228877",
+        "spaces": [
+          {
+            "id": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "name": "Personal"
+          }
+        ],
+        "split": [],
+        "splitCompact": false,
+        "tabs": [
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "27129bd4-c941-4dc9-b5b4-d3f263536a04",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:64679/alpha"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "9b5f7e5d-de63-4068-9a2e-1fd5f083de47",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Beta",
+            "url": "http://127.0.0.1:64679/beta"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "ca80ac4a-e8b2-4df7-a6e8-0ab42908c802",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "a933aa73-f3d3-4cd5-bc4a-c19be1bfdb91",
+            "title": "Gamma",
+            "url": "http://127.0.0.1:64679/gamma"
+          }
+        ]
+      },
+      "visible": true,
+      "window": 9402
+    },
+    "uptime": 162888.59703629167
+  },
+  "binarySHA256": "fd59aa63a9ea2e7859b94878a4d734940f5e61e17a5cc8ad1eeb8de5576da411",
+  "screenshot": {
+    "command": [
+      "screencapture",
+      "-x",
+      "-o",
+      "-l",
+      "9402",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/observations/native-keyboard.png"
+    ],
+    "exit": 0,
+    "stderr": ""
+  }
+}

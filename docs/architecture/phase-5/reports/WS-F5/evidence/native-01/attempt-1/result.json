@@ -1,0 +1,298 @@
+{
+  "startedUTC": "2026-11-09T19:04:31.987024+00:00",
+  "status": "PASS_NATIVE",
+  "reasons": [],
+  "timeout": false,
+  "events": [
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-POLICY-HTTPS"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-POLICY-LOOPBACK"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-1"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-2"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-3"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-4"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-5"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-6"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-7"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-8"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-9"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-REJECT-10"
+    },
+    {
+      "detail": "",
+      "status": "PASS_CONTRACT",
+      "testID": "URL-IPV6-LOOPBACK"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-CHROME-READY"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-MAIN-LOAD"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-NATIVE-VIEW"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-MAIN-STORAGE-SET"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-REDIRECT-ISSUED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-REDIRECT-COMMITTED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-BACK-ISSUED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-BACK-COMMITTED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-FORWARD-ISSUED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-FORWARD-COMMITTED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-FAILURE-ISSUED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-FAILURE-OBSERVED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-RECOVERY-ISSUED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-RECOVERY-COMMITTED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-MINI-LOADED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-MINI-STORAGE-ISOLATION"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-MINI-STORAGE-SET"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-MAIN-STORAGE-ISOLATION"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "URL-MINI-TRANSFER-DESTINATION"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-MINI-CLEANUP"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-TRANSFER-URL-ONLY"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-TRANSFER-STORAGE-UNCHANGED"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-TARGET-LOAD"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-TARGET-READY"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-TARGET-CLICK"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-TARGET-MINI"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-POPUP-CLEANUP"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-SECOND-VIEW"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-SPLIT-TWO-NATIVE-VIEWS"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-SPLIT-CLOSE"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-RELEASE-1"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-RELEASE-2"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-RELEASE-3"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-RELEASE-4"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-CLOSE-DURING-RECEIVE"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-END-SESSION"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-NEW-PRIVATE-LOAD"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-NEW-PRIVATE-READY"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "COMP-NEW-PRIVATE-CLEAN"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "LIFE-MAIN-SHUTDOWN"
+    },
+    {
+      "detail": "",
+      "status": "PASS_NATIVE",
+      "testID": "qualification"
+    }
+  ],
+  "screenshots": [],
+  "argv": [
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf5-qualification",
+    "http://127.0.0.1:63834"
+  ],
+  "pid": 90166,
+  "exit": 0,
+  "nativeFinal": {
+    "detail": "",
+    "status": "PASS_NATIVE",
+    "testID": "qualification"
+  },
+  "caseStatusCounts": {
+    "PASS_CONTRACT": 13,
+    "PASS_NATIVE": 40
+  },
+  "nativePassed": 40,
+  "contractPassed": 13,
+  "finishedUTC": "2026-11-09T19:04:49.527568+00:00"
+}

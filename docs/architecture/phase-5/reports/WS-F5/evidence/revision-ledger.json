@@ -1,0 +1,38 @@
+[
+  {
+    "run": "native-01",
+    "binarySHA256": "0832be700f8885ae529da9114e2e9868e40afa3882d57248e78c1a9f6f68cd6e",
+    "sourceSHA256": "1731df6fdc343f9261d4c8fff58fc106f0528d855bae6b9cf098d1f40599890a",
+    "status": "PASS_NATIVE",
+    "nativePassed": 40,
+    "contractPassed": 13,
+    "attempts": 1
+  },
+  {
+    "run": "native-02",
+    "binarySHA256": "2060e3e2235352615a772da85e93eea8ca0742dd170012323e730feaa963c4f5",
+    "sourceSHA256": "ce84ba9fd3c4f0cafdf384f707ded7e6399aa3a01d2972fb3d3a865ea81471a9",
+    "status": "PASS_NATIVE",
+    "nativePassed": 80,
+    "contractPassed": 26,
+    "attempts": 2
+  },
+  {
+    "run": "native-03",
+    "binarySHA256": "ac5610e937514644b3b5d55215b8beeb119d872c46e7cc3ca39ef34bfe7abd7c",
+    "sourceSHA256": "7cf4b7ab3996d79b80781e48836df8cd39e49249d6d3d7ff15681e0d57c16539",
+    "status": "PASS_NATIVE",
+    "nativePassed": 80,
+    "contractPassed": 26,
+    "attempts": 2
+  },
+  {
+    "run": "native-04",
+    "binarySHA256": "6af85394d6e5883a689adc0542d40547c2dbccde6f1fb883afbfe244bc0fe342",
+    "sourceSHA256": "4ab2151e68d343ec391141e17990bfe1abb4d8df886e26df4994e6381eca274b",
+    "status": "PASS_NATIVE",
+    "nativePassed": 84,
+    "contractPassed": 26,
+    "attempts": 2
+  }
+]

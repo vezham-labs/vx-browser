@@ -1,0 +1,108 @@
+{
+  "recordedUTC": "2026-11-09T19:22:20.585307+00:00",
+  "observation": {
+    "observation": {
+      "busy": false,
+      "chromeReady": true,
+      "closing": false,
+      "minis": [],
+      "state": {
+        "activeSpace": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+        "appearance": "system",
+        "groups": [],
+        "mini": false,
+        "profile": "unavailable",
+        "revision": 11,
+        "selected": "88eba41b-efcb-4fda-8d13-9d1eac333805",
+        "session": "private",
+        "sessionID": "672c17ea-6404-492d-a1c8-b463b611c4a8",
+        "spaces": [
+          {
+            "id": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "name": "Personal"
+          }
+        ],
+        "split": [],
+        "splitCompact": false,
+        "tabs": [
+          {
+            "back": true,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "eb198898-68bd-4ecc-b133-d68b9cb87671",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "title": "Beta",
+            "url": "http://127.0.0.1:63981/beta"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "0dbb2653-7161-4cd9-9bed-db4127ac67e0",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:63981/alpha"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "632a90ff-bc32-4dd6-abb3-b4e5783ecd3b",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "title": "Gamma",
+            "url": "http://127.0.0.1:63981/gamma"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "8c570174-341d-4485-9cb1-22c23c6cd760",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:63981/alpha?wsf5-default=1"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "forward": false,
+            "id": "88eba41b-efcb-4fda-8d13-9d1eac333805",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "title": "Example Domain",
+            "url": "https://example.com/"
+          }
+        ]
+      },
+      "visible": true,
+      "window": 9109
+    },
+    "uptime": 162642.06577766666
+  },
+  "binarySHA256": "ac5610e937514644b3b5d55215b8beeb119d872c46e7cc3ca39ef34bfe7abd7c",
+  "screenshot": {
+    "command": [
+      "screencapture",
+      "-x",
+      "-o",
+      "-l",
+      "9109",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/observations/default-http-https.png"
+    ],
+    "exit": 0,
+    "stderr": ""
+  }
+}

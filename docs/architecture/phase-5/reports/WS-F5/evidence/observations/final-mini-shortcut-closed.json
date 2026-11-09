@@ -1,0 +1,153 @@
+{
+  "recordedUTC": "2026-11-09T20:11:36.112494+00:00",
+  "observation": {
+    "chromeDiagnostic": {
+      "events": [
+        {
+          "buttons": 2,
+          "target": "",
+          "type": "mousedown",
+          "x": 52,
+          "y": 29
+        },
+        {
+          "buttons": 2,
+          "target": "",
+          "type": "mousedown",
+          "x": 84,
+          "y": 25
+        },
+        {
+          "buttons": 2,
+          "target": "side-footer",
+          "type": "mousedown",
+          "x": 190,
+          "y": 418
+        },
+        {
+          "buttons": 1,
+          "target": "input input--primary",
+          "type": "mousedown",
+          "x": 525,
+          "y": 20
+        }
+      ],
+      "focused": "Address and search"
+    },
+    "observation": {
+      "busy": false,
+      "chromeReady": true,
+      "closing": false,
+      "minis": [],
+      "state": {
+        "activeSpace": "1264d77f-f58e-4846-b431-1a1f9061b561",
+        "appearance": "system",
+        "groups": [],
+        "mini": false,
+        "profile": "unavailable",
+        "revision": 10,
+        "selected": "9aec897d-4cc5-453d-80fc-63a52ad05ba4",
+        "session": "private",
+        "sessionID": "0a59a080-6d29-4cad-b7bd-25cdfb5e3462",
+        "spaces": [
+          {
+            "id": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "name": "Personal"
+          }
+        ],
+        "split": [],
+        "splitCompact": true,
+        "tabs": [
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "b6b555aa-77df-4f6e-936c-716b096a88a9",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:49305/alpha"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "2ae43a43-6f24-4318-b990-51418b51d8b8",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Beta",
+            "url": "http://127.0.0.1:49305/beta"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "9e668315-14ec-4046-acd7-f75894b7813b",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Gamma",
+            "url": "http://127.0.0.1:49305/gamma"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "bc4817a1-89a3-4ccd-9630-484aca5ca750",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Alpha",
+            "url": "http://127.0.0.1:49305/alpha?wsf5-final-default=1"
+          },
+          {
+            "back": false,
+            "connection": "encrypted",
+            "forward": false,
+            "id": "5f1425dd-a6ad-4582-891e-a24b8e661b40",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Example Domain",
+            "url": "https://example.com/"
+          },
+          {
+            "back": false,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "9aec897d-4cc5-453d-80fc-63a52ad05ba4",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "1264d77f-f58e-4846-b431-1a1f9061b561",
+            "title": "Gamma",
+            "url": "http://127.0.0.1:49305/gamma?wsf5-edit=1"
+          }
+        ]
+      },
+      "visible": true,
+      "window": 9600
+    },
+    "uptime": 165597.445853125
+  },
+  "binarySHA256": "6af85394d6e5883a689adc0542d40547c2dbccde6f1fb883afbfe244bc0fe342",
+  "screenshot": {
+    "command": [
+      "screencapture",
+      "-x",
+      "-o",
+      "-l",
+      "9600",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/observations/final-mini-shortcut-closed.png"
+    ],
+    "exit": 0,
+    "stderr": ""
+  }
+}

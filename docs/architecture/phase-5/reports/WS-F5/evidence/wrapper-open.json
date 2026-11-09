@@ -1,0 +1,10 @@
+{
+  "command": [
+    "open",
+    "-a",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+    "vezham://open?url=http%3A%2F%2F127.0.0.1%3A64679%2Fbeta"
+  ],
+  "exit": 0,
+  "stderr": ""
+}

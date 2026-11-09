@@ -1,0 +1,17 @@
+{
+  "recordedUTC": "2026-11-09T18:53:33.382014+00:00",
+  "head": "0e6f6d2deee99052322062df0397ccdd146d2b64",
+  "branch": "timeline",
+  "status": "?? docs/architecture/phase-5/reports/WS-F5/\n",
+  "ownerApproval": "Approve sequence and temporary default-handler testing",
+  "historicalEvidenceHashesVerified": 423,
+  "historicalSourceHashesVerified": 42,
+  "runtime": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+  "architecture": "arm64",
+  "restrictions": [
+    "No protected persistence/SQLCipher/Keychain/profile architecture changes",
+    "Public pages and owned synthetic fixtures only",
+    "Preserve HTTP restriction and release gates",
+    "Local and uncommitted; no push"
+  ]
+}

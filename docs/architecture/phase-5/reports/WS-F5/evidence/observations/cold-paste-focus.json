@@ -1,0 +1,60 @@
+{
+  "recordedUTC": "2026-11-09T19:17:42.913097+00:00",
+  "observation": {
+    "observation": {
+      "busy": false,
+      "chromeReady": true,
+      "closing": false,
+      "minis": [],
+      "state": {
+        "activeSpace": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+        "appearance": "system",
+        "groups": [],
+        "mini": false,
+        "profile": "unavailable",
+        "revision": 4,
+        "selected": "eb198898-68bd-4ecc-b133-d68b9cb87671",
+        "session": "private",
+        "sessionID": "672c17ea-6404-492d-a1c8-b463b611c4a8",
+        "spaces": [
+          {
+            "id": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "name": "Personal"
+          }
+        ],
+        "split": [],
+        "splitCompact": false,
+        "tabs": [
+          {
+            "back": true,
+            "connection": "unencrypted",
+            "forward": false,
+            "id": "eb198898-68bd-4ecc-b133-d68b9cb87671",
+            "loading": false,
+            "pinned": false,
+            "progress": 1,
+            "space": "2ccbf42a-e04e-4233-a38f-762ad7999496",
+            "title": "Beta",
+            "url": "http://127.0.0.1:63981/beta"
+          }
+        ]
+      },
+      "visible": true,
+      "window": 9109
+    },
+    "uptime": 162364.3449326667
+  },
+  "binarySHA256": "ac5610e937514644b3b5d55215b8beeb119d872c46e7cc3ca39ef34bfe7abd7c",
+  "screenshot": {
+    "command": [
+      "screencapture",
+      "-x",
+      "-o",
+      "-l",
+      "9109",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/observations/cold-paste-focus.png"
+    ],
+    "exit": 0,
+    "stderr": ""
+  }
+}

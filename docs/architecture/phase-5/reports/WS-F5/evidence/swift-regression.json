@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "apps/browser-macos/Tools/wsf1.py",
+    "models",
+    "--evidence",
+    "docs/architecture/phase-5/reports/WS-F5/evidence"
+  ],
+  "exit": 0
+}

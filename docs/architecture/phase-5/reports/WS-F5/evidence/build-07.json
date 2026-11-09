@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node_modules/.bin/nx",
+    "run",
+    "browser-macos:build",
+    "--wsf5-qualification",
+    "--output-style=static"
+  ],
+  "exit": 0,
+  "reason": "Observed empty Mini after CmdW and stale address editing on external selection; regression cases added."
+}

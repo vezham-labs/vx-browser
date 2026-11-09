@@ -1,0 +1,26 @@
+{
+  "binarySHA256": "6af85394d6e5883a689adc0542d40547c2dbccde6f1fb883afbfe244bc0fe342",
+  "observationMethod": "Actual AppKit application accessibility tree and keyboard input through CUA",
+  "commandPalette": {
+    "input": "Command+K",
+    "observedRole": "container Browser commands",
+    "focused": "Find a command",
+    "dismissedWith": "Escape",
+    "focusAfter": "Address and search"
+  },
+  "miniShortcut": {
+    "input": "Command+W in last-tab Mini",
+    "observedBefore": "Vezham Mini \u00b7 Private",
+    "observedAfter": "Vezham Browser",
+    "miniCountAfter": 0
+  },
+  "shutdown": {
+    "input": "Command+Q",
+    "observed": "App quit"
+  },
+  "fixtureShutdown": {
+    "exit": 130,
+    "record": "interactive-03/summary.json",
+    "reason": "Explicit interrupt after observations"
+  }
+}

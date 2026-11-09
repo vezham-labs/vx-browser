@@ -261,11 +261,18 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     public func favicon(in view: ViewID) -> String? { views[view]?.favicon }
     public func requestedURL(in view: ViewID) -> URL? { views[view]?.requestedURL }
     public func navigationFailed(in view: ViewID) -> Bool { views[view]?.navigationFailed ?? false }
+    public nonisolated static func permitsInteractiveURL(_ url: URL) -> Bool {
+        guard url.absoluteString.utf8.count <= 8192, let scheme = url.scheme?.lowercased(),
+              let host = url.host?.lowercased(), !host.isEmpty,
+              url.user == nil, url.password == nil else { return false }
+        return scheme == "https" || (scheme == "http" && ["localhost", "127.0.0.1", "[::1]", "::1"].contains(host))
+    }
+
     private func permitted(_ url: URL, scope: Scope? = nil) -> Bool {
         guard let scheme = url.scheme, ["http", "https"].contains(scheme), let host = url.host, !host.isEmpty,
               url.user == nil, url.password == nil else { return false }
         if interactivePrivateBrowsing, let scope, case .privateSession = scope {
-            return scheme == "https" || ["localhost", "127.0.0.1", "[::1]", "::1"].contains(host)
+            return Self.permitsInteractiveURL(url)
         }
         let port = url.port.map { ":\($0)" } ?? ""
         return allowedOrigins.contains("\(scheme)://\(host)\(port)")

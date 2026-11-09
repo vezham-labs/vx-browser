@@ -1,0 +1,53 @@
+{
+  "startedUTC": "2026-11-09T19:46:39.100469+00:00",
+  "app": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/WSF5/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+  "bundleID": "internal.vezham.browser.wsf5.qualification",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "mode": "qualification",
+  "attemptsRequested": 2,
+  "timeoutSeconds": 240,
+  "serveLimitSeconds": 1800,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "PASS_NATIVE",
+      "reasons": [],
+      "nativeFinal": {
+        "detail": "",
+        "status": "PASS_NATIVE",
+        "testID": "qualification"
+      },
+      "nativePassed": 42,
+      "contractPassed": 13,
+      "caseStatusCounts": {
+        "PASS_CONTRACT": 13,
+        "PASS_NATIVE": 42
+      }
+    },
+    {
+      "attempt": 2,
+      "status": "PASS_NATIVE",
+      "reasons": [],
+      "nativeFinal": {
+        "detail": "",
+        "status": "PASS_NATIVE",
+        "testID": "qualification"
+      },
+      "nativePassed": 42,
+      "contractPassed": 13,
+      "caseStatusCounts": {
+        "PASS_CONTRACT": 13,
+        "PASS_NATIVE": 42
+      }
+    }
+  ],
+  "status": "PASS_NATIVE",
+  "nativePassed": 84,
+  "contractPassed": 26,
+  "caseStatusCounts": {
+    "PASS_CONTRACT": 26,
+    "PASS_NATIVE": 84
+  },
+  "countScope": "Non-qualification test-event observations across attempts",
+  "finishedUTC": "2026-11-09T19:47:32.320610+00:00"
+}

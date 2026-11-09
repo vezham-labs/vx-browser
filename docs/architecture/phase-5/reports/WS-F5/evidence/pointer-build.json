@@ -1,0 +1,12 @@
+{
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-parse-as-library",
+    "apps/browser-macos/Tools/wsf5_pointer.swift",
+    "-o",
+    "apps/browser-macos/build/WSF5/pointer"
+  ],
+  "exit": 1,
+  "authorization": "Owner explicitly approved isolated primary-button driver. No OS security settings changed."
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-parse-as-library",
+    "apps/browser-macos/Tools/wsf5_pointer.swift",
+    "-o",
+    "apps/browser-macos/build/WSF5/pointer"
+  ],
+  "exit": 0
+}
