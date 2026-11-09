@@ -1,0 +1,588 @@
+{
+  "classification": "NOT_FEASIBLE_WITH_CURRENT_SQLCIPHER_PATH",
+  "scope": "Source-derived negative result for cold existing-file open on the pinned public API, ordinary/private-cache path and truthful non-substituting VFS; not a statement about all possible future providers/APIs",
+  "runtime_provider_or_database_experiments": "NOT_EXECUTED",
+  "observed_runtime_read_sequence": null,
+  "method": "ZIP source bytes + Git blob/pin metadata checks and bounded textual order witnesses, manually reviewed for the actual control flow; no compiler/control-flow proof or runtime trace claimed",
+  "pin": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "tag_object": "52252487a5cada9b430e8d4b20025790c5a6ba20",
+  "tree": "b3aa6f0a71413a40df4c968d357bbbbee61b42cb",
+  "archive_path": "docs/architecture/phase-5/evidence/20261108T142421Z-m1-vendor-archive-verification/sources/sqlcipher-4.20.0.zip",
+  "archive_sha256": "a1417a5a672a2342de6ae44e08ccd68487fa3d0a43212331f4226a0d00b51b9c",
+  "vendor_signature": "Prior verification record reused; not newly cryptographically verified",
+  "git_tag_signature": "Not reclassified; prior unknown-key limitation remains",
+  "source_files": {
+    "src/main.c": {
+      "sha256": "ac017b65552c96ebc8410c34da8a1a774ae3dfe0e99b87a8624ec12fb5f32ccd",
+      "git_blob_sha1": "ecde40f05ad8a87a4b1d1ba78f14cde4901343d6",
+      "bytes": 174284
+    },
+    "src/btree.c": {
+      "sha256": "c96f2e39d62659d649441a7330d753079056fc5cd1b67ce9489bb1be88b13050",
+      "git_blob_sha1": "420ba409ce64aa75b5b658545c464f06f62b5555",
+      "bytes": 407767
+    },
+    "src/pager.c": {
+      "sha256": "62335ff37cbca33f326e94d450a74263ff4b7091a1d07734245cd9be5cfb4fb1",
+      "git_blob_sha1": "ac6bac9e69958c40b5efae0fba3777cbc372db80",
+      "bytes": 310553
+    },
+    "src/os.c": {
+      "sha256": "27ca8107a34b56ecba3be400af68842ce3e82b12b134c833785c0f04c2267722",
+      "git_blob_sha1": "b2c0871c27799947636ee1d4cd28f300b4ded9ad",
+      "bytes": 14033
+    },
+    "src/os_unix.c": {
+      "sha256": "7403557ac3e93f90096823fda0d554c680e2ee2739a80cc837a7c76b15d08ac5",
+      "git_blob_sha1": "0c82eee13b2bc2c4107e1365078f7bd422198f41",
+      "bytes": 296128
+    },
+    "src/attach.c": {
+      "sha256": "3a05bff921be82b786937463a05eec4d06c4a1b6cc59cabf3bea8e46f8df402a",
+      "git_blob_sha1": "674c81360cea61c32365aa550b2c5e2185a4efa9",
+      "bytes": 21317
+    },
+    "src/sqlcipher.c": {
+      "sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "git_blob_sha1": "2d474b5ef4c761a10c0afe4647ae4f98222149b7",
+      "bytes": 175056
+    },
+    "src/sqlcipher.h": {
+      "sha256": "e4dcab1a3c02f8c1a06f7daa27dbe85af6dc79fc6b0504a62dd4dabe711258c2",
+      "git_blob_sha1": "de25d0b1fecb63ab40bd142f91a3f5e87eee8c59",
+      "bytes": 6107
+    },
+    "src/crypto_cc.c": {
+      "sha256": "8cf8bc772cc7291db1ddfc5a56277bca877caca7f3a5487efd0ee88c50584328",
+      "git_blob_sha1": "4d5675b76417ffd2aa061c2143696b3e950a58da",
+      "bytes": 7580
+    },
+    "src/sqlite.h.in": {
+      "sha256": "a2a89adf2f875a6ab4ae96963fdd66e707b9980abac897714567e5349bc6d173",
+      "git_blob_sha1": "3aefc731e7f1db14802e5e8aa22c6fdee8707ff6",
+      "bytes": 561346
+    },
+    "src/pragma.c": {
+      "sha256": "3a9c16266af21d5cedc83fc65afdc7c6fd1d8e57084596b309b92169f07272c5",
+      "git_blob_sha1": "30a91ea1a4e1ed43f8b74a6c76c89cb372c759c1",
+      "bytes": 112890
+    },
+    "src/vdbe.c": {
+      "sha256": "385dffa63edbac9f07388b19f02c024f64465c9383c35dea5eb92b0bbe352436",
+      "git_blob_sha1": "8cdbe572c5aada751ed27f2df5db350fcb2d3a22",
+      "bytes": 325172
+    },
+    "src/prepare.c": {
+      "sha256": "0481c754223ea1f1b2e47e15bb60f7c7cfb8412c70d06d5247c462034ed93b05",
+      "git_blob_sha1": "19b5546076535c148b5bd4db81fbdaac10a45312",
+      "bytes": 38674
+    },
+    "src/loadext.c": {
+      "sha256": "5d63ca77edff980769a6ab7b8dd10687aa1491be29fc9c716c30585ff7b253cb",
+      "git_blob_sha1": "cf7ff56262b2c999970377dcebdd28fc52b45e1e",
+      "bytes": 25597
+    },
+    "src/memdb.c": {
+      "sha256": "dc655196df8c8b495f09d9061dd521930c03bdef50a69f28d4ca76dc8ce462b0",
+      "git_blob_sha1": "bfafba6f6806ede4215279ae7eed94e9ffaf9c18",
+      "bytes": 27270
+    },
+    "src/backup.c": {
+      "sha256": "37a4216f1e0fc9dc27cf9e1ce70f7a863d793dc9ddd8be7a64c8610404850a80",
+      "git_blob_sha1": "36da216350fdea33628d3f906d8b2fad4f0a5c00",
+      "bytes": 30281
+    },
+    "src/vdbesort.c": {
+      "sha256": "f7d6cc2cd7ea02d4eb15e119d1b29d8aac063ec8a57fe6ea7168d0899c9fef17",
+      "git_blob_sha1": "238c993d0870d32f85da4a51f6716bf29bd5c240",
+      "bytes": 103607
+    },
+    "manifest.uuid": {
+      "sha256": "7b5efb6e3d4519a2412aaf3607f463191fab7e9251c49fdb799713fac2d79aa4",
+      "git_blob_sha1": "aaa0b3ed6d0bae1e3f67c9a917c01c2c4d8848a6",
+      "bytes": 65
+    },
+    "VERSION": {
+      "sha256": "ac00bc246f381662294505074279244edd1d23f6e18455d7820852e6c5c37d8d",
+      "git_blob_sha1": "5bf0dc11f2314a3f5abc26e4b6dff455db6fb925",
+      "bytes": 7
+    }
+  },
+  "source_references": [
+    {
+      "id": "SRC-01",
+      "file": "src/main.c",
+      "symbol": "sqlite3_initialize / openDatabase / public open wrappers",
+      "lines": [
+        349,
+        377
+      ],
+      "span_sha256": "14d18ace9320fe3a89e23784dd27b735464fca7beffa99cee33618fc8df6f496",
+      "source_file_sha256": "ac017b65552c96ebc8410c34da8a1a774ae3dfe0e99b87a8624ec12fb5f32ccd",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/main.c#L349"
+    },
+    {
+      "id": "SRC-02",
+      "file": "src/main.c",
+      "symbol": "sqlite3CodecQueryParameters",
+      "lines": [
+        3381,
+        3417
+      ],
+      "span_sha256": "e1c12fe07f390042f91033099447d885acfa318b1936f7388d736a378c252bc7",
+      "source_file_sha256": "ac017b65552c96ebc8410c34da8a1a774ae3dfe0e99b87a8624ec12fb5f32ccd",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/main.c#L3381"
+    },
+    {
+      "id": "SRC-03",
+      "file": "src/main.c",
+      "symbol": "openDatabase Btree open; deferred schema comment",
+      "lines": [
+        3662,
+        3735
+      ],
+      "span_sha256": "dd128a05d03eeec22e927f3ee0dd0e4b9c999a780fa454c7c421984fda7968ab",
+      "source_file_sha256": "ac017b65552c96ebc8410c34da8a1a774ae3dfe0e99b87a8624ec12fb5f32ccd",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/main.c#L3662"
+    },
+    {
+      "id": "SRC-04",
+      "file": "src/main.c",
+      "symbol": "openDatabase handle publication / URI key / return; open_v2",
+      "lines": [
+        3762,
+        3816
+      ],
+      "span_sha256": "fe751ee6c13fda16ad1140ac6249e075b77ea0227fc1421f8f6a34b14211cb30",
+      "source_file_sha256": "ac017b65552c96ebc8410c34da8a1a774ae3dfe0e99b87a8624ec12fb5f32ccd",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/main.c#L3762"
+    },
+    {
+      "id": "SRC-05",
+      "file": "src/btree.c",
+      "symbol": "sqlite3BtreeOpen header buffer",
+      "lines": [
+        2562,
+        2589
+      ],
+      "span_sha256": "f0ea0ca3d0b99e21e92b62e51623ca749a8ec80fb4201653e143c91dd660ad82",
+      "source_file_sha256": "c96f2e39d62659d649441a7330d753079056fc5cd1b67ce9489bb1be88b13050",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/btree.c#L2562"
+    },
+    {
+      "id": "SRC-06",
+      "file": "src/btree.c",
+      "symbol": "sqlite3BtreeOpen pager/header/page-size order",
+      "lines": [
+        2692,
+        2740
+      ],
+      "span_sha256": "6236c49fd9a81870c507199f01683c36ff45c7f1ee15588af50757e8a51b3113",
+      "source_file_sha256": "c96f2e39d62659d649441a7330d753079056fc5cd1b67ce9489bb1be88b13050",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/btree.c#L2692"
+    },
+    {
+      "id": "SRC-07",
+      "file": "src/btree.c",
+      "symbol": "Btree publication, error cleanup, PDB hint",
+      "lines": [
+        2823,
+        2847
+      ],
+      "span_sha256": "e1d65360df43cb7caf508c0f77be3e70de62ab33881c5ca596c5fad9d5576031",
+      "source_file_sha256": "c96f2e39d62659d649441a7330d753079056fc5cd1b67ce9489bb1be88b13050",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/btree.c#L2823"
+    },
+    {
+      "id": "SRC-08",
+      "file": "src/pager.c",
+      "symbol": "sqlite3PagerReadFileheader",
+      "lines": [
+        4063,
+        4081
+      ],
+      "span_sha256": "1c4ab56005f409e984061568e5cc51bc6457cb6957a675975ee99413f5ff0818",
+      "source_file_sha256": "62335ff37cbca33f326e94d450a74263ff4b7091a1d07734245cd9be5cfb4fb1",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/pager.c#L4063"
+    },
+    {
+      "id": "SRC-09",
+      "file": "src/pager.c",
+      "symbol": "sqlite3PagerOpen main-file xOpen",
+      "lines": [
+        5126,
+        5155
+      ],
+      "span_sha256": "833a692314c14c5fb86c23de1ac4674780928d705efe3998d348d1fedd2eb0ca",
+      "source_file_sha256": "62335ff37cbca33f326e94d450a74263ff4b7091a1d07734245cd9be5cfb4fb1",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/pager.c#L5126"
+    },
+    {
+      "id": "SRC-10",
+      "file": "src/os.c",
+      "symbol": "sqlite3OsRead / xRead",
+      "lines": [
+        88,
+        91
+      ],
+      "span_sha256": "acc90429138a04c0fbc2eae1c79031b3bef2ba879acfe07f4748a62e5935dc66",
+      "source_file_sha256": "27ca8107a34b56ecba3be400af68842ce3e82b12b134c833785c0f04c2267722",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/os.c#L88"
+    },
+    {
+      "id": "SRC-11",
+      "file": "src/os.c",
+      "symbol": "sqlite3OsFetch / xFetch",
+      "lines": [
+        191,
+        207
+      ],
+      "span_sha256": "fbccd799928c85780cffc590c0969be6fcc2f11ad0373b8a32bc91b75c2611d6",
+      "source_file_sha256": "27ca8107a34b56ecba3be400af68842ce3e82b12b134c833785c0f04c2267722",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/os.c#L191"
+    },
+    {
+      "id": "SRC-12",
+      "file": "src/os_unix.c",
+      "symbol": "seekAndRead / unixRead",
+      "lines": [
+        3463,
+        3577
+      ],
+      "span_sha256": "0c39d32ac5f611d7c9eb7b1ac3cc3b44b09578d934083056ef5a7bb83da1844a",
+      "source_file_sha256": "7403557ac3e93f90096823fda0d554c680e2ee2739a80cc837a7c76b15d08ac5",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/os_unix.c#L3463"
+    },
+    {
+      "id": "SRC-13",
+      "file": "src/sqlcipher.c",
+      "symbol": "sqlcipherCodecAttach",
+      "lines": [
+        3657,
+        3784
+      ],
+      "span_sha256": "173da664dd36009b3515b064a3502e9e886acefa5f9f3596580609db887fcfd3",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L3657"
+    },
+    {
+      "id": "SRC-14",
+      "file": "src/sqlcipher.c",
+      "symbol": "sqlite3_key / sqlite3_key_v2",
+      "lines": [
+        3810,
+        3822
+      ],
+      "span_sha256": "03d449b9dbbd4eea766bc02b18a69ef752bf16794d1c5e82de8ffb0356df806f",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L3810"
+    },
+    {
+      "id": "SRC-15",
+      "file": "src/sqlcipher.c",
+      "symbol": "codec context construction",
+      "lines": [
+        1553,
+        1677
+      ],
+      "span_sha256": "2e3fb003112972039abd74f25e6576b1b6981e402d5b5486262697cccf3a0be6",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L1553"
+    },
+    {
+      "id": "SRC-16",
+      "file": "src/sqlcipher.c",
+      "symbol": "salt init / getter",
+      "lines": [
+        1487,
+        1528
+      ],
+      "span_sha256": "ef0fa235a8ca258debbc5bcb69eec61a7ac39c58b112617dd17ce88cb1b6733a",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L1487"
+    },
+    {
+      "id": "SRC-17",
+      "file": "src/sqlcipher.c",
+      "symbol": "key derivation / raw-key branches",
+      "lines": [
+        1856,
+        1918
+      ],
+      "span_sha256": "e0620a89c2e0525a7193f82098e183cc72a0285ebe5e132102b8a7f9972f9350",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L1856"
+    },
+    {
+      "id": "SRC-18",
+      "file": "src/sqlcipher.c",
+      "symbol": "codec use / salt offset / authenticated read result",
+      "lines": [
+        3496,
+        3575
+      ],
+      "span_sha256": "71a58ce2a1bd3509037026d27db35ccffd8ee72a7146ba1264d00d3a3631687b",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L3496"
+    },
+    {
+      "id": "SRC-19",
+      "file": "src/sqlcipher.c",
+      "symbol": "cipher compatibility4 suite",
+      "lines": [
+        3291,
+        3306
+      ],
+      "span_sha256": "4fcbf14ed59b9d4b571a3447bf7ab4f5feb7861856555809b1ddba0bfd589bf0",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L3291"
+    },
+    {
+      "id": "SRC-20",
+      "file": "src/pragma.c",
+      "symbol": "PRAGMA VFS / codec / schema dispatch",
+      "lines": [
+        480,
+        539
+      ],
+      "span_sha256": "4add622111c01cb37284681ce8be015f9f21502c9b5153ac8c33c8ab639e8c3e",
+      "source_file_sha256": "3a9c16266af21d5cedc83fc65afdc7c6fd1d8e57084596b309b92169f07272c5",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/pragma.c#L480"
+    },
+    {
+      "id": "SRC-21",
+      "file": "src/prepare.c",
+      "symbol": "schema init read transaction",
+      "lines": [
+        267,
+        285
+      ],
+      "span_sha256": "e4d440f1e450fe9dfea02ea9de7ea4a98035af4fe339a65fc86ba08c3cd7e91d",
+      "source_file_sha256": "0481c754223ea1f1b2e47e15bb60f7c7cfb8412c70d06d5247c462034ed93b05",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/prepare.c#L267"
+    },
+    {
+      "id": "SRC-22",
+      "file": "src/pager.c",
+      "symbol": "readDbPage",
+      "lines": [
+        3188,
+        3240
+      ],
+      "span_sha256": "1429a87addb4d40970a87aab4099d460a319482386d77fbf216ea7fbfeb1b984",
+      "source_file_sha256": "62335ff37cbca33f326e94d450a74263ff4b7091a1d07734245cd9be5cfb4fb1",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/pager.c#L3188"
+    },
+    {
+      "id": "SRC-23",
+      "file": "src/attach.c",
+      "symbol": "ATTACH Btree then codec",
+      "lines": [
+        211,
+        287
+      ],
+      "span_sha256": "c3a7cb5894bb0c7c31442334d4454630ab2b9698c2be7a069b55515bd39ddc46",
+      "source_file_sha256": "3a05bff921be82b786937463a05eec4d06c4a1b6cc59cabf3bea8e46f8df402a",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/attach.c#L211"
+    },
+    {
+      "id": "SRC-24",
+      "file": "src/sqlite.h.in",
+      "symbol": "VFS xOpen signature",
+      "lines": [
+        1509,
+        1533
+      ],
+      "span_sha256": "54d87e95c04a4855abe1eeb9e75416ca8ce82d65823c785beb383b268ada4fea",
+      "source_file_sha256": "a2a89adf2f875a6ab4ae96963fdd66e707b9980abac897714567e5349bc6d173",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlite.h.in#L1509"
+    },
+    {
+      "id": "SRC-25",
+      "file": "src/sqlcipher.c",
+      "symbol": "page-size coordination helper",
+      "lines": [
+        2782,
+        2804
+      ],
+      "span_sha256": "d68bc80f64319a47321e2f9f3a00bda49e780a12d13a916bf9538640052ce58b",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L2782"
+    },
+    {
+      "id": "SRC-26",
+      "file": "src/pager.c",
+      "symbol": "page-size reconfiguration",
+      "lines": [
+        3932,
+        3991
+      ],
+      "span_sha256": "2ac915fb8c523d09245855a2ef8e384c51bbe60a85b65984f7f46b217f535c84",
+      "source_file_sha256": "62335ff37cbca33f326e94d450a74263ff4b7091a1d07734245cd9be5cfb4fb1",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/pager.c#L3932"
+    },
+    {
+      "id": "SRC-27",
+      "file": "src/sqlcipher.c",
+      "symbol": "salt getter PRAGMA",
+      "lines": [
+        3142,
+        3152
+      ],
+      "span_sha256": "a04d3fc1ab3b29a6d8860717ca66d9b4d1fcdbdc1d2005620e66a2396886f320",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L3142"
+    },
+    {
+      "id": "SRC-28",
+      "file": "src/sqlcipher.c",
+      "symbol": "Apple / atexit finalization hooks",
+      "lines": [
+        412,
+        450
+      ],
+      "span_sha256": "71ba3687e958afc50f649c25b952fe87a18862e6088f92226b248e7e27a37c72",
+      "source_file_sha256": "4bde516f8642979405c154b162c1d4f0e54ea0197c9e60f8c4ac7144919e2006",
+      "upstream_url": "https://github.com/sqlcipher/sqlcipher/blob/355d4db92d3404e71faa8088d071a71d767807f4/src/sqlcipher.c#L412"
+    }
+  ],
+  "static_checks": [
+    {
+      "id": "STATIC-01",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Public open_v2 delegates to openDatabase"
+    },
+    {
+      "id": "STATIC-02",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Btree open precedes auto extensions, public handle publication and URI key handling"
+    },
+    {
+      "id": "STATIC-03",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Btree initial header buffer is 100 bytes"
+    },
+    {
+      "id": "STATIC-04",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Cold/new-Btree branch: header request precedes fully published Btree and PDB connection hint; an already shared Btree is a different path"
+    },
+    {
+      "id": "STATIC-05",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Open main-file pager issues offset-zero header read request"
+    },
+    {
+      "id": "STATIC-06",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Genuine short-read handling is special; fabricated short-read is not a compliant workaround"
+    },
+    {
+      "id": "STATIC-07",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "OS read wrapper dispatches the file xRead method"
+    },
+    {
+      "id": "STATIC-08",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Pager construction opens the named main file through VFS"
+    },
+    {
+      "id": "STATIC-09",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Public key APIs require db and delegate to codec attachment; negative lengths use strlen"
+    },
+    {
+      "id": "STATIC-10",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Codec attachment requires an already present target Btree"
+    },
+    {
+      "id": "STATIC-11",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Attachment initializes codec, installs it and coordinates page size; return alone is not authentication"
+    },
+    {
+      "id": "STATIC-12",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Inspected context initialization sets pass bytes; stale salt comment is not an executed salt-read call"
+    },
+    {
+      "id": "STATIC-13",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Codec use invokes deferred key derivation"
+    },
+    {
+      "id": "STATIC-14",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Deferred derivation can issue a separate header/salt read; key-applied and key-derived differ"
+    },
+    {
+      "id": "STATIC-15",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "PRAGMA analysis first reaches VFS, then codec processing, and generic schema-dependent paths"
+    },
+    {
+      "id": "STATIC-16",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "ATTACH opens target Btree before attaching its codec"
+    },
+    {
+      "id": "STATIC-17",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Schema preparation can start a read transaction; pager page reads need instrumentation before step"
+    },
+    {
+      "id": "STATIC-18",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Unix reads may use pread or existing mappings; syscall counts alone omit mapped reads"
+    },
+    {
+      "id": "STATIC-19",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Global initialization and VFS lookup/registration can invoke initialization before a connection exists"
+    },
+    {
+      "id": "STATIC-20",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Failed/denied Btree construction does not produce an attachable target by merely returning a sick public handle"
+    },
+    {
+      "id": "STATIC-21",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Current production catalog is unavailable, not a working SQLCipher adapter"
+    },
+    {
+      "id": "STATIC-22",
+      "status": "PASS_STATIC_SOURCE_CHECK",
+      "claim": "Phase1 wipes fake key frame before protocol ready; this is not target key application"
+    }
+  ],
+  "static_checks_passed": 22,
+  "integration_source_sha256": {
+    "qualification/webkit-storage-f0/Sources/BrowserPersistence/ProtectedCatalog.swift": "085696437ae7df51719aa2e77fff137d28fe9f5d5652c2dc5be1433c02ca95c2",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift": "16a705f6fcb51516f50b67dbeb55cc5ad29a865d7482376571d8d80e706a5220",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift": "871a0603c21aeab6c6c1ffdedcae03b1ea454c5696fb15bf562b567d7cb95d54",
+    "qualification/sqlcipher-phase1/worker.c": "3369d361d76302656e3b31a04b21e304d336b7af03d8f4f9050567f73f229465",
+    "qualification/sqlcipher-phase1/link_identity.c": "6d37208d545dc7185bd8d3029301d3bf0e25e989746d336b4d954ef482d7fe53",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open01-resolution.md": "0d904ed12ade1f104a28fa9a9d383ff97784519bc0b60e4f29b7794ac425f6b9",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open02-write-fence-specification.md": "9259c1a5dafb34c24d7dd90b3217eb0a22229279a2b3831c472bda85dc4ba19e",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open03-vfs-confinement-specification.md": "9a736e167b2a7ed55e9ab1f9812688e5641953d815d4c5efd4ffe0048a370660",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-provider-adapter-phase2-design.md": "861b0be887c8b4184d8d13dee7fb6a82b74ee1f2352b0b3d00f26772ebf6cd90",
+    "docs/architecture/phase-5/reports/M1/m1-sqlcipher-phase2a-readiness-matrix.md": "e1cb8fc49855a71186a2ece6daf681cd67f352e79ee9b122679bb9b35b6ba467"
+  },
+  "restrictions": {
+    "source_or_production_changes": false,
+    "DB_content_open_read_hash_copy": false,
+    "provider_loaded_or_initialized": false,
+    "keychain_or_webkit_runtime": false,
+    "exception_approved": false,
+    "D2A01": "Proposed / Not Decided"
+  },
+  "limits": [
+    "Source checks reproduce inspected witnesses, not native runtime encryption/IO/authentication",
+    "No physical-device zero-read or exact device-read-length inference",
+    "The current source establishes a violating request; it does not prove that only that one request would occur under any proposed future VFS",
+    "No documented supported early target-key binding API was established; future vendor-supported architectures remain unqualified"
+  ]
+}

@@ -1,0 +1,184 @@
+# WS-F2R — D2A-01 SQLCipher Initialization Feasibility Investigation
+
+## Objective
+
+Investigate whether the current pinned SQLCipher integration can initialize and open an existing encrypted Vezham-owned database while preserving the strict zero-read-before-key policy.
+
+This is an investigation and evidence-gathering task only.
+
+Do not implement WS-F2R. Do not modify production code. Do not select or approve either D2A-01 option.
+
+## 1. Architectural context
+
+Project: `vezham-labs/vx-browser`
+
+Relevant architecture:
+- BrowserDomain
+- BrowserPorts
+- BrowserCore
+- BrowserPersistence
+- Native macOS host
+- SQLCipher for Vezham-owned protected persistence
+- Apple Keychain for Vezham secrets and encryption-key lifecycle
+
+Storage ownership rules:
+- WebKit owns cookies, localStorage, IndexedDB, HTTP cache and service workers.
+- Vezham must not manipulate, encrypt, wrap or migrate WebKit's internal storage.
+- SQLCipher applies only to Vezham-owned database files.
+
+Pinned SQLCipher source:
+- Commit: `355d4db92d3404e71faa8088d071a71d767807f4`
+- Tag object: `52252487a5cada9b430e8d4b20025790c5a6ba20`
+
+Relevant decisions and evidence:
+- D2A-01 remains Proposed / Not Decided.
+- WS-F2 commit: `d90ef9b029568c650588ffbead99866ee1378710`
+- WS-F2R owner handoff: `701183003e967843dd77e8506f41cd9b80fedca9`
+
+Read the existing owner handoff and SQLCipher evidence before investigating.
+
+## 2. Owner policy — do not weaken
+
+The strict policy remains the baseline:
+
+**No database-content read before successful key application.**
+
+Until D2A-01 is explicitly decided:
+- No pre-key schema or row reads.
+- No plaintext SQLite fallback.
+- No pre-key database hashing or copying.
+- No pre-key recovery/checkpoint writes.
+- No key in SQL text, connection URI or logs.
+- No database-ready state or write permission before authentication.
+- No bypass of native scope, store, schema, suite or key-version identity checks.
+
+Do not interpret this task as approval for the proposed 100-byte encrypted-header request exception.
+
+## 3. Investigation questions
+
+### A. SQLCipher initialization sequence
+
+Inspect the pinned SQLCipher source and actual Vezham integration.
+
+Establish the exact sequence required to:
+1. Create a database connection.
+2. Configure the VFS and connection.
+3. Apply the encryption key using the supported API.
+4. Configure required SQLCipher settings.
+5. Perform the first database read.
+6. Authenticate the encrypted database and validate its identity.
+
+Identify any API that might trigger a database read implicitly.
+
+Distinguish connection construction, configuration, key application and database authentication.
+
+### B. Existing encrypted database opening
+
+Determine whether an existing encrypted database can be opened without any application/VFS database-content read request before key application.
+
+Investigate:
+- SQLCipher APIs.
+- SQLite connection initialization.
+- VFS open, read and file-control behavior.
+- Database-header access.
+- Page-size and cipher configuration.
+- Key application timing.
+- First-read behavior.
+- Error handling and authentication failures.
+
+Do not assume that a successful API call means no read occurred.
+
+### C. Instrumentation and evidence
+
+Determine how to instrument the actual Vezham SQLCipher/VFS path to record:
+
+- Connection construction.
+- File open requests.
+- File reads and offsets.
+- Read lengths.
+- Key-application invocation and completion.
+- First database-content read.
+- Schema authentication.
+- Database-ready transition.
+- Write authorization.
+
+The evidence must distinguish:
+- Application/VFS read requests.
+- Underlying OS/device reads, which may include caching and read-ahead.
+
+Do not claim physical zero-byte reads based solely on application/VFS instrumentation.
+
+### D. Feasibility alternatives
+
+Evaluate only supported, documented approaches.
+
+If strict zero-read initialization is feasible, describe the exact sequence and evidence needed.
+
+If it is not feasible, identify:
+- The exact API or initialization operation that causes the conflict.
+- Whether a supported SQLCipher API or VFS alternative exists.
+- Whether another supported database initialization architecture is required.
+- The security and operational trade-offs.
+
+Compare these findings against both existing D2A-01 alternatives without selecting one.
+
+## 4. Required deliverables
+
+Create an investigation report under the existing WS-F2R owner-handoff documentation structure.
+
+Include:
+
+1. Executive summary.
+2. Exact SQLCipher initialization sequence.
+3. Source references with file paths, symbols and line numbers.
+4. Vezham integration references.
+5. Read-before-key call-flow diagram.
+6. Instrumentation design.
+7. Feasibility determination.
+8. Supported alternatives and trade-offs.
+9. Security implications.
+10. Remaining unknowns.
+11. Evidence required for a future implementation qualification.
+12. Explicit owner decision required.
+
+Use these final classifications:
+
+- `FEASIBLE_WITH_EXISTING_INTEGRATION`
+- `FEASIBLE_WITH_SUPPORTED_CHANGES`
+- `NOT_FEASIBLE_WITH_CURRENT_SQLCIPHER_PATH`
+- `INCONCLUSIVE`
+
+Every conclusion must be supported by source inspection or reproducible evidence. Clearly distinguish source facts, observed behavior and engineering inference.
+
+## 5. Strict execution boundaries
+
+- Do not modify production implementation.
+- Do not change SQLCipher version or pinned source.
+- Do not alter D2A-01.
+- Do not approve the 100-byte exception.
+- Do not add a pre-key read exception.
+- Do not add plaintext SQLite fallback.
+- Do not implement protected catalog opening.
+- Do not modify WebKit storage behavior.
+- Do not start WS-F2R implementation.
+- Do not modify historical reports or qualification results.
+- Do not push anything.
+
+A disposable, isolated experiment may be created only if it cannot modify production data or weaken existing protections. Clearly label all experimental results.
+
+## 6. Final response
+
+Report:
+- Starting and final commit hashes.
+- Branch and working-tree status.
+- Files created or modified.
+- Commands and tests executed.
+- Exact source references examined.
+- Investigation classification.
+- Evidence supporting the classification.
+- Remaining uncertainties.
+- Whether the strict policy remains intact.
+
+Do not commit unless separately authorized.
+
+**This task is complete when the owner has enough reproducible technical evidence to make D2A-01 deliberately. It is not complete merely because a proposed initialization sequence appears theoretically possible.**

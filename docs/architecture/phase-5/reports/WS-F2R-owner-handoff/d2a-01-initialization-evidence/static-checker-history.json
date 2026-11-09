@@ -1,0 +1,8 @@
+{
+  "initial_static_checker": "FAIL at STATIC-04; no provider/DB operation executed",
+  "cause": "Text selector matched the earlier already-shared Btree assignment rather than the cold-open branch. This was a checker selection error, not a native or production test failure.",
+  "correction": "Anchor the order witness at the cold branch sqlite3PagerOpen, then compare its later header/assignment/publication/PDB positions. Existing shared-Btree reuse is separately discussed and is not cold-start feasibility.",
+  "initial_script": "verify_source_initial.py.txt",
+  "final_checker": "verify_source.py",
+  "native_tests_or_runtime_experiments": 0
+}
