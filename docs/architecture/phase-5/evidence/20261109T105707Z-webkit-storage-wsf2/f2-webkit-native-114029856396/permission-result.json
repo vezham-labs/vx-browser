@@ -1,0 +1,73 @@
+{
+  "label": "permission",
+  "pid": 53324,
+  "argv": [
+    "/private/tmp/vx-wsf1-v3co6uel/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "d933ae466707edcdd39936cdcdddeceddfc5b17ae2fd746296d6b64ded938c9a",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "FAIL",
+  "result": {
+    "checkpoint": {
+      "snapshot": {
+        "records": [
+          {
+            "operation": "00c7ad5c-958b-4b71-b8d1-0031c0ca6f0e",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "profile": "33438788-a828-4198-aba6-3456458a5e38",
+            "generation": 3,
+            "store": "9c8a95e9-bb3c-4826-9a99-ab2b413a74fb",
+            "namespace": "30545554-96f1-426b-b7d4-c5864f75702a"
+          }
+        ],
+        "previousRun": "d541447a-755c-4b69-a77d-d883f3fdf96b",
+        "version": 1
+      },
+      "rows": [
+        {
+          "resourceGeneration": 1,
+          "revision": 5,
+          "profile": "33438788-a828-4198-aba6-3456458a5e38",
+          "origin": "fresh",
+          "status": "retired",
+          "store": "9c8a95e9-bb3c-4826-9a99-ab2b413a74fb"
+        }
+      ]
+    },
+    "cases": [
+      {
+        "status": "FAIL",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-PERM-NATIVE-DENIAL"
+      },
+      {
+        "status": "INCONCLUSIVE",
+        "detail": "No qualified page denial result",
+        "id": "F2-PERM-GEOLOCATION-DENIAL"
+      },
+      {
+        "status": "BLOCKED",
+        "detail": "Positive native media/Ask path lacks purpose strings/entitlements; policy-only allow tests do not qualify native support",
+        "id": "F2-PERM-POSITIVE-ASK-ALLOW"
+      }
+    ],
+    "observations": {
+      "geolocationResult": "timeout",
+      "result": "script-error",
+      "delegateObserved": "no",
+      "geolocationDelegateObserved": "no"
+    },
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)"
+    }
+  }
+}

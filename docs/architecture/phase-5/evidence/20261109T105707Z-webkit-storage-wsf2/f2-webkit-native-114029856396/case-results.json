@@ -1,0 +1,254 @@
+[
+  {
+    "status": "PASS_NATIVE",
+    "id": "F2-CACHE-POPULATED",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-A-seed"
+  },
+  {
+    "id": "F2-CACHE-POPULATED",
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-B-seed"
+  },
+  {
+    "id": "F2-CACHE-POPULATED",
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-A-restart"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-RECONSTRUCTION-POSITIVE",
+    "attempt": "cache-A-reconstruct"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-reconstruct"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "id": "F2-CACHE-POPULATED",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-A-abrupt"
+  },
+  {
+    "id": "F2-CACHE-POPULATED",
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-A-after-abrupt"
+  },
+  {
+    "id": "F2-CACHE-CLEAR-CALLBACK",
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "attempt": "cache-A-selected-clear"
+  },
+  {
+    "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "attempt": "cache-A-selected-clear"
+  },
+  {
+    "id": "F2-CACHE-POPULATED",
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "attempt": "cache-A-selected-clear"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-CACHE-CLEAR-CALLBACK",
+    "attempt": "cache-A-full-clear"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+    "attempt": "cache-A-full-clear"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-full-clear"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "status": "PASS_NATIVE",
+    "attempt": "cache-A-remove"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-REMOVE",
+    "status": "PASS_NATIVE",
+    "attempt": "cache-A-remove"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-B-remove"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-CACHE-REMOVE",
+    "attempt": "cache-B-remove"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-MULTIWINDOW",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-REAL-RESOURCES",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-NO-VIEWS",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-NAVIGATION-DENIED",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-NO-KEY-LEASE",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-REPEATED",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-OTHER-PROFILE",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-OTHER-CLEANUP",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+    "id": "F2-UNLOCK-PRODUCTION",
+    "status": "BLOCKED",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-MULTIWINDOW",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-DURING-NAVIGATION",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-REAL-RESOURCES",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-NO-VIEWS",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-NAVIGATION-DENIED",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-NO-KEY-LEASE",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-REPEATED",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-OTHER-PROFILE",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-OTHER-CLEANUP",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+    "status": "BLOCKED",
+    "id": "F2-UNLOCK-PRODUCTION",
+    "attempt": "lock-navigation"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-RESTART-DEFAULT-FENCED",
+    "attempt": "lock-restart"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "id": "F2-LOCK-RESTART-NO-FACTORY",
+    "attempt": "lock-restart"
+  },
+  {
+    "detail": "Synthetic checkpoint plus conservative default lock, not persisted protected lock-state qualification",
+    "status": "BLOCKED",
+    "id": "F2-LOCK-DURABLE-RECEIPT",
+    "attempt": "lock-restart"
+  },
+  {
+    "status": "FAIL",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-PERM-NATIVE-DENIAL",
+    "attempt": "permission"
+  },
+  {
+    "status": "INCONCLUSIVE",
+    "detail": "No qualified page denial result",
+    "id": "F2-PERM-GEOLOCATION-DENIAL",
+    "attempt": "permission"
+  },
+  {
+    "status": "BLOCKED",
+    "detail": "Positive native media/Ask path lacks purpose strings/entitlements; policy-only allow tests do not qualify native support",
+    "id": "F2-PERM-POSITIVE-ASK-ALLOW",
+    "attempt": "permission"
+  }
+]

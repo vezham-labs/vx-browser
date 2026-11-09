@@ -7,9 +7,14 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
     private let logger = Logger(subsystem: "internal.vezham.browser.foundation", category: "lifecycle")
     private var mainWindow: MainWindowController?
     private var storageSession: NativeStorageSession?
+    private var securityLifecycle: NativeSecurityLifecycle?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         #if WSF1_QUALIFICATION
+        if ProcessInfo.processInfo.arguments.contains("--wsf2-qualification") {
+            Task { @MainActor in await SecurityQualificationHost.run();NSApp.terminate(nil) }
+            return
+        }
         if ProcessInfo.processInfo.arguments.contains("--wsf1-qualification") {
             Task { @MainActor in
                 await StorageQualificationHost.run()
@@ -19,7 +24,8 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         }
         #endif
         // Composition only: durable catalog/keys are not ready. No implicit persistent store.
-        storageSession = try? NativeStorageSession.privateOnly()
+        storageSession = try? NativeStorageSession.protectedFoundation()
+        if let storageSession { securityLifecycle = NativeSecurityLifecycle(session: storageSession) }
         configureMenu()
         showMainWindow()
         logger.info("native-host-ready")
@@ -32,14 +38,26 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         #if WSF1_QUALIFICATION
-        if ProcessInfo.processInfo.arguments.contains("--wsf1-qualification") { return false }
+        if ProcessInfo.processInfo.arguments.contains("--wsf1-qualification") || ProcessInfo.processInfo.arguments.contains("--wsf2-qualification") { return false }
         #endif
         return true
+    }
+    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+        #if WSF1_QUALIFICATION
+        if ProcessInfo.processInfo.arguments.contains("--wsf1-qualification") || ProcessInfo.processInfo.arguments.contains("--wsf2-qualification") { return .terminateNow }
+        #endif
+        guard let storageSession else { return .terminateNow }
+        Task { @MainActor in
+            await storageSession.security.lockAll(cause: .shutdown)
+            sender.reply(toApplicationShouldTerminate: true)
+        }
+        return .terminateLater
     }
 
     func applicationWillTerminate(_ notification: Notification) {
         logger.info("native-host-terminating")
         mainWindow = nil
+        securityLifecycle?.stop();securityLifecycle = nil
     }
 
     private func showMainWindow() {

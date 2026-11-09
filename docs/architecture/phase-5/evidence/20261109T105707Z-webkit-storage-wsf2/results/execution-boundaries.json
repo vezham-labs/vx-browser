@@ -1,0 +1,19 @@
+{
+  "actual_WebKit": true,
+  "actual_Security_Keychain_attempts": true,
+  "actual_SecRandom_CryptoKit_and_synthetic_backup_files": true,
+  "successful_DP_userPresence_Keychain_item_creation": false,
+  "Keychain_statuses": {
+    "create": -34018,
+    "acquire": -25300,
+    "delete": -34018
+  },
+  "SQLCipher_runtime_or_DB_open_create_migration": false,
+  "user_profile_or_personal_keys_used": false,
+  "private_API_or_default_store_workaround": false,
+  "security_ACL_or_signing_relaxation": false,
+  "production_backup_import_or_Key_envelope_recovery_custody": false,
+  "macOS26_runtime": "Deferred / NOT_EXECUTED by current owner task",
+  "signing_notarization_release_distribution": false,
+  "push": false
+}

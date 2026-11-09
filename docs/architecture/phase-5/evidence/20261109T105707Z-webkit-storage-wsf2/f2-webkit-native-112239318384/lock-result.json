@@ -1,0 +1,120 @@
+{
+  "label": "lock",
+  "pid": 50074,
+  "argv": [
+    "/private/tmp/vx-wsf1-y4ovzo4a/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "8eea7d81e27e5a1e3617df11de272c00527b6d7b9145f33d54468cffedb6f8d8",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "cases": [
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-MULTIWINDOW"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-REAL-RESOURCES"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-NO-VIEWS"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-NAVIGATION-DENIED"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-NO-KEY-LEASE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-REPEATED"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-OTHER-PROFILE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-LOCK-OTHER-CLEANUP"
+      },
+      {
+        "detail": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+        "status": "BLOCKED",
+        "id": "F2-UNLOCK-PRODUCTION"
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "observations": {
+      "lockState": "locked",
+      "otherProfile": "e228f178-f1c2-4331-85b7-218a73e16dde",
+      "otherStore": "8f9bff74-e0f0-4080-83c4-bb18f0f1e4f6"
+    },
+    "checkpoint": {
+      "rows": [
+        {
+          "origin": "fresh",
+          "status": "retired",
+          "revision": 6,
+          "resourceGeneration": 1,
+          "profile": "bf1cae60-b7f1-4872-b4fe-f63adcc18a88",
+          "store": "0fa6c6fa-e444-4174-b1ef-fb5b1b09f895"
+        },
+        {
+          "origin": "fresh",
+          "status": "deleted",
+          "revision": 7,
+          "resourceGeneration": 1,
+          "profile": "e228f178-f1c2-4331-85b7-218a73e16dde",
+          "store": "8f9bff74-e0f0-4080-83c4-bb18f0f1e4f6"
+        }
+      ],
+      "snapshot": {
+        "previousRun": "37355e4e-9535-48e0-a798-cd4fb11dd935",
+        "records": [
+          {
+            "namespace": "7637dd21-d6a7-4d0c-b298-6f88b9a01247",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "generation": 3,
+            "operation": "bdfaa409-2661-4d5b-8cdd-6a4c697c85b8",
+            "profile": "bf1cae60-b7f1-4872-b4fe-f63adcc18a88",
+            "store": "0fa6c6fa-e444-4174-b1ef-fb5b1b09f895"
+          },
+          {
+            "namespace": "7637dd21-d6a7-4d0c-b298-6f88b9a01247",
+            "phase": {
+              "removed": {}
+            },
+            "generation": 4,
+            "operation": "c2dce1d1-f21e-407c-8745-aef3439f4750",
+            "profile": "e228f178-f1c2-4331-85b7-218a73e16dde",
+            "store": "8f9bff74-e0f0-4080-83c4-bb18f0f1e4f6"
+          }
+        ],
+        "version": 1
+      }
+    }
+  }
+}

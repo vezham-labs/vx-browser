@@ -1,0 +1,40 @@
+{
+  "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+  "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+  "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+  "keyID": "c767dccb-e4d6-4cfa-aad4-86e4f2f1f94b",
+  "origin": "http://127.0.0.1:56856",
+  "cacheID": "823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+  "checkpoint": {
+    "snapshot": {
+      "records": [
+        {
+          "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+          "phase": {
+            "stable": {
+              "_0": "retired"
+            }
+          },
+          "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+          "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+          "operation": "90df0a43-088f-4c5a-b82a-f1f81c0d09cd",
+          "generation": 6
+        }
+      ],
+      "previousRun": "6430a59c-1c0d-4621-a02c-b4d229f2b9ec",
+      "version": 1
+    },
+    "rows": [
+      {
+        "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+        "status": "retired",
+        "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+        "revision": 8,
+        "origin": "fresh",
+        "resourceGeneration": 1
+      }
+    ]
+  },
+  "cutpoint": "cache-active",
+  "action": "cache-read"
+}

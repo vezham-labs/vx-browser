@@ -1,0 +1,61 @@
+{
+  "label": "cache-A-seed",
+  "pid": 47308,
+  "argv": [
+    "/private/tmp/vx-wsf1-vdupemux/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "7599f2910adba94cece47087cd4b19feb27d14ab5552e228993a5eb4e680e227",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "observations": {
+      "first": "cache-1",
+      "second": "cache-1"
+    },
+    "checkpoint": {
+      "rows": [
+        {
+          "origin": "fresh",
+          "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+          "revision": 5,
+          "resourceGeneration": 1,
+          "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+          "status": "retired"
+        }
+      ],
+      "snapshot": {
+        "version": 1,
+        "previousRun": "13675d94-f3ee-4fc3-8036-9b4ddfb038ad",
+        "records": [
+          {
+            "operation": "cbc88ce5-b4b2-4e87-a771-a361b9d4919b",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+            "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+            "generation": 3,
+            "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab"
+          }
+        ]
+      }
+    },
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-POPULATED"
+      }
+    ]
+  }
+}

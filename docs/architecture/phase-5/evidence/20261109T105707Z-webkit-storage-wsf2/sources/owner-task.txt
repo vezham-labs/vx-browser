@@ -1,0 +1,1357 @@
+# WS-F2 — Complete Storage Runtime & Security Integration
+## Comprehensive Codex Implementation Authorization
+
+**Repository:** `vezham-labs/vx-browser`  
+**Milestone:** WS-F2  
+**Starting baseline:** WS-F1 commit `21ad0b0ca91ed0777e873fd8233290e4f12f2e96`  
+**Branch:** `timeline`  
+**Primary qualification platform:** macOS 27.2, arm64  
+**Language:** Swift 6  
+**Native application:** Swift / AppKit / WebKit  
+**Execution model:** One coordinated implementation milestone with internal stages and acceptance gates  
+**Authorization:** Product Owner approved
+
+---
+
+# 1. Mission
+
+Complete the Vezham Browser storage foundation by integrating and qualifying the actual native implementations of:
+
+1. WebKit website-storage lifecycle.
+2. Vezham-owned protected profile catalog.
+3. macOS Keychain integration.
+4. Profile locking and lifecycle fencing.
+5. Browser permission policy.
+6. Backup, restore and deletion behavior.
+7. Crash recovery and reconciliation.
+8. Native integration and regression qualification.
+9. Complete architecture, security and qualification evidence.
+
+WS-F1 established the native WebKit integration and produced substantial runtime evidence on macOS 27.2.
+
+WS-F2 must build on that implementation and complete the broader storage architecture.
+
+**Do not stop at interfaces, proposed designs, mock integrations or fake-only implementations.**
+
+The intended result is a connected, implemented and tested storage foundation that the actual Vezham Browser application can use.
+
+Execute all WS-F2 stages in one coordinated Codex run. Use internal stages and acceptance gates to maintain correctness. Do not ask the product owner to approve routine implementation decisions between stages.
+
+---
+
+# 2. Authoritative starting baseline
+
+Begin by inspecting the actual repository.
+
+Expected starting commit:
+
+`21ad0b0ca91ed0777e873fd8233290e4f12f2e96`
+
+Before modifying files:
+
+1. Confirm the actual HEAD and branch.
+2. Confirm whether the working tree is clean.
+3. Record any differences from the expected baseline.
+4. Inspect the complete WS-F1 implementation.
+5. Inspect the native runtime and AppKit integration.
+6. Inspect the WS-F1 closeout and evidence.
+7. Inspect all existing owner decisions, ADRs, security records and WKS definitions.
+8. Inspect the existing SQLCipher integration, pinned source and verification records.
+9. Inspect existing Keychain abstractions and implementations, if present.
+10. Inspect the actual application launch, profile, window and web-view lifecycle.
+
+Important WS-F1 references:
+
+- `apps/browser-macos/StorageRuntime/README.md`
+- `docs/architecture/phase-5/reports/M1/m1-wsf1-closeout.md`
+- `docs/architecture/phase-5/evidence/20261108T234332Z-webkit-storage-wsf1/README.md`
+- `qualification/webkit-storage-f0/`
+
+The actual file locations and names must be confirmed from the repository. Do not assume this list is exhaustive.
+
+Preserve all existing accepted implementation and historical evidence.
+
+Do not recreate WS-F1 or replace its implementation unnecessarily.
+
+---
+
+# 3. Product and architecture boundaries
+
+These boundaries are mandatory throughout WS-F2.
+
+## 3.1 WebKit owns website storage
+
+WebKit remains authoritative for:
+
+- Cookies.
+- localStorage.
+- IndexedDB.
+- HTTP cache.
+- Service workers.
+- Website-data formats and internal paths.
+
+Continue using public WebKit APIs.
+
+Never:
+
+- Parse or manipulate WebKit internal storage databases.
+- Put WebKit-owned files inside the Vezham SQLCipher database.
+- Wrap WebKit-owned files in SQLCipher.
+- Invent a WebKit storage path or schema.
+- Claim secure physical erasure.
+- Depend on undocumented/private WebKit APIs.
+
+## 3.2 BrowserCore owns browser policy and lifecycle
+
+BrowserCore owns:
+
+- Profile identity and state.
+- Persistent and private session intent.
+- Session lifecycle.
+- Profile locking policy.
+- Permission policy.
+- Storage operation intent.
+- Resource lifecycle coordination.
+- Recovery and reconciliation.
+- Browser-owned metadata lifecycle.
+
+BrowserCore must remain engine-independent.
+
+## 3.3 BrowserPorts owns contracts
+
+BrowserPorts defines typed, engine-independent contracts for BrowserCore.
+
+Do not expose:
+
+- `WKWebView`
+- `WKWebsiteDataStore`
+- Keychain implementation objects
+- SQLCipher connections
+- Native AppKit types
+
+through BrowserDomain or BrowserCore.
+
+## 3.4 BrowserPersistence owns Vezham data
+
+Vezham-owned persistence includes:
+
+- Profile catalog.
+- Stable profile identity.
+- WebKit store UUID mappings.
+- Descriptor versions.
+- Lifecycle journals.
+- Tombstones.
+- History.
+- Bookmarks.
+- Preferences.
+- Session descriptors.
+- Permission grants.
+- Download metadata.
+- Approved user-created archives.
+- Backup manifests and restore metadata.
+
+Do not place website content or WebKit-owned internal storage in this database.
+
+## 3.5 Native host owns native objects
+
+The AppKit application and native adapters own:
+
+- WebKit objects.
+- Native lifecycle registries.
+- Keychain operations.
+- SQLCipher connection construction.
+- Native resource references.
+- Main-thread and actor-isolation requirements.
+
+Keep implementation-specific types behind appropriate adapters.
+
+## 3.6 No mandatory cloud dependency
+
+Local browser operation must not require:
+
+- A Vezham account.
+- Cloud synchronization.
+- A remote server.
+- A local browser service process.
+- Tamizhi autonomous actions.
+
+Do not introduce these as part of WS-F2.
+
+---
+
+# 4. Mandatory security decisions and restrictions
+
+## 4.1 D2A-01 remains unresolved
+
+D2A-01 is still Proposed/Not Decided.
+
+The existing SQLCipher pre-key safety issue must not be bypassed.
+
+In particular, do not silently introduce a pre-key database-header read, application/VFS read exception, hashing/copy exception or other workaround.
+
+Do not:
+
+- Weaken the existing pre-key data-read restriction.
+- Change the approved SQLCipher source pin.
+- Change the vendor-signature verification record.
+- Claim runtime encryption qualification based only on source authenticity or build success.
+- Treat a successful database open as authorization to alter the unresolved decision.
+
+### Required handling
+
+Investigate whether the actual protected catalog can be implemented using an already approved, compliant database-initialization path.
+
+If the unresolved D2A-01 decision prevents opening an existing encrypted database safely:
+
+1. Preserve the safe behavior.
+2. Do not implement an unauthorized workaround.
+3. Implement and test independent catalog contracts and non-conflicting integration components.
+4. Document the exact blocked operation.
+5. Record the specific technical and security trade-off.
+6. Prepare a separate owner-decision proposal if needed.
+7. Continue all independent WS-F2 work.
+
+Do not mark the protected catalog fully integrated or runtime-qualified if its real database initialization remains blocked.
+
+A new ADR or decision proposal must not automatically change an existing owner decision.
+
+## 4.2 Keychain security
+
+Use macOS Keychain for Vezham-owned secrets and keys.
+
+Do not store keys in:
+
+- Source code.
+- Configuration files.
+- Environment variables as a persistent substitute.
+- Logs.
+- Browser preferences.
+- Profile descriptors.
+- SQLite metadata.
+- Backup manifests.
+
+Define explicit Keychain access, accessibility, lifecycle and recovery behavior.
+
+Do not claim stronger protection than the actual Keychain configuration and tested behavior establish.
+
+## 4.3 Private-session privacy
+
+Private sessions must remain memory-only at the Vezham browser-metadata level and use WebKit nonpersistent stores.
+
+Never persist private:
+
+- History.
+- Session restoration state.
+- Snapshots.
+- Website-data-store mappings.
+- Private page contents.
+
+Do not promise protection against OS swap, crash reports, process memory inspection or forensic artifacts.
+
+## 4.4 Fail-closed behavior
+
+If a profile's identity, key, catalog state, permission or storage association is uncertain:
+
+- Do not silently fall back.
+- Do not publish an incompletely initialized profile.
+- Do not expose another profile's resources.
+- Do not silently create a replacement profile.
+- Do not claim a destructive operation succeeded without evidence.
+
+---
+
+# 5. Stage A — WebKit runtime hardening
+
+Start with the actual WS-F1 native implementation.
+
+Do not reimplement it from scratch.
+
+## A1. Resolve WS-F1 HTTP-cache inconclusive results
+
+WS-F1 recorded HTTP-cache persistence as inconclusive for both tested profiles.
+
+Investigate the actual behavior using controlled synthetic test origins.
+
+Test:
+
+- Cache population.
+- Cache reuse within one profile.
+- Cache isolation between profiles.
+- Cache behavior after web-view reconstruction.
+- Cache behavior after normal application restart.
+- Cache behavior after abrupt termination.
+- Cache behavior after selected website-data clearing.
+- Cache behavior after full clearing.
+- Cache behavior after store removal.
+
+Distinguish:
+
+- Browser-visible HTTP caching behavior.
+- WebKit-managed disk persistence.
+- HTTP response semantics.
+- Cache revalidation.
+- Network retrieval.
+- Other WebKit optimizations.
+
+Do not infer disk persistence merely from a page rendering without an observed network request.
+
+Use controlled responses, explicit cache headers, unique fixture identifiers and server-side request observations.
+
+Report the exact behavior observed.
+
+If WebKit does not expose sufficient observability to prove a particular property, retain an INCONCLUSIVE disposition and explain why.
+
+Do not modify WebKit internals to obtain evidence.
+
+## A2. Resource lifecycle
+
+Expand native qualification for:
+
+- Multiple web views per profile.
+- Multiple windows.
+- Profile switching.
+- Web-view close.
+- Window close.
+- Profile close.
+- Application termination.
+- Outstanding navigation.
+- In-flight clear operations.
+- In-flight store-removal operations.
+- Resource release and re-registration.
+
+Preserve WS-F1's observed 15-second private-retirement deadline as an evidence-backed qualification parameter, not an unconditional platform guarantee.
+
+Retain the earlier two-second failures.
+
+If you change the deadline or implementation, document why and preserve the original evidence.
+
+## A3. Store assignment and publication fencing
+
+Verify again:
+
+- Persistent profile UUID resolution.
+- Private nonpersistent store resolution.
+- Explicit store assignment before web-view construction.
+- No default-store fallback.
+- No navigation before storage assignment.
+- No publication of uncertain resources.
+- Correct profile identity association.
+
+Ensure new catalog and locking integration does not weaken these rules.
+
+## A4. Clear and remove behavior
+
+Continue to distinguish selected website-data clearing from entire store removal.
+
+Qualify:
+
+- Selected data categories.
+- Selected origins where supported.
+- Full selected-profile clearing.
+- Interrupted clearing.
+- Partial clearing.
+- Store removal with outstanding resources.
+- Store removal callback failure or uncertainty.
+- Restart reconciliation after incomplete operations.
+
+Never promise physical or forensic erasure.
+
+### Stage A gate
+
+- HTTP-cache result resolved or explicitly inconclusive with evidence.
+- Existing WS-F1 behavior preserved.
+- No default-store fallback.
+- Native lifecycle tests expanded.
+- Clear/remove semantics preserved.
+- Fake and native outcomes reported separately.
+
+---
+
+# 6. Stage B — Actual protected Vezham profile catalog
+
+Implement the real Vezham-owned profile catalog using the repository's established BrowserPersistence architecture.
+
+Do not create a second competing catalog.
+
+## B1. Catalog responsibilities
+
+The catalog should represent:
+
+- Stable Vezham profile identity.
+- Human-readable profile metadata.
+- Profile type.
+- Persistent profile state.
+- WebKit store UUID mapping.
+- Descriptor version.
+- Creation state.
+- Publication state.
+- Lock state.
+- Retirement state.
+- Tombstone state.
+- Migration state.
+- Relevant lifecycle timestamps.
+- Operation identifiers needed for idempotency and reconciliation.
+
+Keep private-session identities out of persistent profile-store mappings.
+
+## B2. Persistence implementation
+
+Inspect the existing SQLCipher and persistence infrastructure.
+
+Use the approved pinned SQLCipher source and existing build configuration.
+
+Implement:
+
+- Schema and migrations.
+- Typed repository operations.
+- Transaction boundaries.
+- Catalog creation and lookup.
+- Descriptor serialization.
+- Catalog update and deletion.
+- Tombstone persistence.
+- Recovery journal.
+- Idempotent lifecycle operations.
+- Corrupt or unsupported descriptor handling.
+- Safe error propagation.
+
+Do not introduce a new database engine or replace SQLCipher without an explicit owner decision.
+
+Do not mix native WebKit website data with Vezham catalog records.
+
+## B3. Catalog lifecycle consistency
+
+The catalog must be consistent with the native lifecycle.
+
+Consider:
+
+- Catalog creation before native store creation.
+- Native store creation before catalog finalization.
+- Catalog publication.
+- Failed web-view construction.
+- Profile deletion.
+- Interrupted store removal.
+- Restart reconciliation.
+- Missing native stores.
+- Missing catalog records.
+- Duplicate operation requests.
+
+Use explicit operation states and idempotency.
+
+Do not claim a cross-system atomic transaction between SQLite and WebKit.
+
+Model the lifecycle as a recoverable operation with observable state and compensation/reconciliation.
+
+## B4. Schema migration
+
+Provide:
+
+- Explicit schema version.
+- Ordered migrations.
+- Migration transaction rules.
+- Migration failure behavior.
+- Corrupt catalog behavior.
+- Unsupported future schema behavior.
+- Restart during migration behavior.
+- Recovery and verification.
+
+Do not silently downgrade or discard catalog information.
+
+### Stage B gate
+
+The actual catalog integration is complete only if:
+
+- The native application uses it.
+- Persistent profile records survive process restart.
+- Migrations run safely.
+- Lifecycle operations update it correctly.
+- Recovery reads actual persisted state.
+- Failure behavior is tested.
+- Key and SQLCipher boundaries remain intact.
+
+If D2A-01 blocks actual database initialization, mark the affected integration as BLOCKED and continue other work. Do not substitute an unprotected database and call it protected.
+
+---
+
+# 7. Stage C — Actual macOS Keychain integration
+
+Implement the real Keychain adapter and connect it through the approved architecture.
+
+## C1. Key lifecycle
+
+Define and implement the actual lifecycle for:
+
+- Initial key creation.
+- Key storage.
+- Key lookup.
+- Key use.
+- Key versioning.
+- Key rotation where supported by the approved architecture.
+- Key replacement.
+- Key deletion.
+- Key recovery.
+- Missing key.
+- Invalid key.
+- Access denied.
+- Keychain locked or unavailable.
+- Application restart.
+- Application upgrade.
+
+Do not invent a universal recovery mechanism if no approved recovery design exists.
+
+## C2. Key identity and binding
+
+Ensure the key identity and catalog identity are correctly associated.
+
+A profile identifier must not be sufficient to retrieve or use a secret unless the authorization and access policy also permits it.
+
+Do not expose key bytes to BrowserCore, BrowserDomain or UI code.
+
+Keep key material inside the narrowest native persistence/cryptographic boundary possible.
+
+## C3. Keychain configuration
+
+Document and implement:
+
+- Keychain item class.
+- Service and account identity.
+- Accessibility class.
+- Access-control requirements.
+- Synchronization policy.
+- Entitlement requirements.
+- Application identity constraints.
+- Expected behavior under app upgrade.
+- Expected behavior under app reinstall.
+- Expected behavior when access is denied.
+
+Use the least permissive configuration compatible with the approved product requirements.
+
+Do not assume a Keychain item is available simply because it was created successfully.
+
+## C4. Recovery and failure tests
+
+Test using synthetic qualification keys:
+
+- Key creation and lookup.
+- Wrong profile association.
+- Missing item.
+- Duplicate item.
+- Access denial.
+- Keychain unavailable.
+- Restart.
+- Repeated requests.
+- Rotation where implemented.
+- Recovery where approved.
+
+Never log key contents.
+
+Never put test secrets into committed evidence.
+
+### Stage C gate
+
+- Real Keychain adapter connected.
+- Key lifecycle behavior implemented.
+- Error cases tested.
+- No secret leakage.
+- No unsupported recovery claims.
+- Actual database encryption remains separately qualified.
+
+---
+
+# 8. Stage D — Profile locking and lifecycle security
+
+Implement profile locking as a real browser lifecycle policy, not merely a UI state.
+
+## D1. Define lock semantics
+
+Establish explicit states such as:
+
+- Unlocked.
+- Lock requested.
+- Quiescing.
+- Locked.
+- Unlock requested.
+- Unlocking.
+- Recovery required.
+- Failed/uncertain.
+
+Use the existing state-machine conventions where possible.
+
+## D2. Lock behavior
+
+When locking a profile:
+
+1. Fence new navigation and web-view construction.
+2. Prevent new operations from acquiring the profile.
+3. Apply the defined behavior to existing windows and web views.
+4. Quiesce or retire active resources according to the approved policy.
+5. Handle in-flight downloads and operations explicitly.
+6. Ensure profile-owned persistence operations cannot bypass the lock.
+7. Establish a clear final locked state.
+
+Do not claim that a profile is locked while active resources can continue using it contrary to the defined policy.
+
+Do not assume hiding a window or showing a lock screen is sufficient.
+
+## D3. Unlock behavior
+
+Unlock must:
+
+- Validate the required authorization.
+- Resolve the profile's actual identity.
+- Validate key availability where required.
+- Reconcile pending lifecycle operations.
+- Reconstruct resources safely.
+- Avoid automatic navigation replay of unsafe requests.
+- Publish only after required checks succeed.
+
+Do not silently unlock on an ambiguous or failed authorization result.
+
+## D4. Multi-window and concurrency
+
+Test:
+
+- One profile across multiple windows.
+- Multiple profiles open simultaneously.
+- Lock during navigation.
+- Lock during clear.
+- Lock during download.
+- Concurrent lock requests.
+- Unlock while recovery is pending.
+- Application termination during locking.
+- Restart while a profile is locked.
+
+Ensure the lock state is profile-specific.
+
+One profile's lock must not accidentally unlock, close or expose another profile.
+
+### Stage D gate
+
+- Real lock/unlock implementation.
+- Lifecycle fencing enforced by the native application.
+- Concurrent operations safely handled.
+- Recovery behavior defined and tested.
+- No false locked-state claims.
+
+---
+
+# 9. Stage E — Permission policy and native authorization boundaries
+
+Integrate the existing permission policy with actual WebKit and macOS behavior.
+
+Do not assume every WebKit permission type is supported.
+
+## E1. Permission inventory
+
+Inventory the actual WebKit APIs and permission kinds supported by the deployment/runtime.
+
+For each kind, record:
+
+- WebKit support.
+- Native authorization dependency.
+- Browser policy behavior.
+- Default behavior.
+- User decision behavior.
+- Persistence behavior.
+- Revocation behavior.
+- Unsupported behavior.
+
+Only positively verified kinds may be supported.
+
+Unsupported or ambiguous kinds must fail closed.
+
+## E2. Default policy
+
+Preserve the owner-approved policy:
+
+- Default: Ask where the permission type is supported and the request can be safely mediated.
+- Deny or fail closed for unsupported, ambiguous or unsafe cases.
+- Browser grants remain distinct from macOS native authorization.
+
+Do not treat a browser-level grant as proof of OS-level authorization.
+
+Do not treat OS authorization as automatic browser permission.
+
+## E3. Permission storage
+
+Persist only approved Vezham-owned permission metadata.
+
+Include:
+
+- Profile identity.
+- Origin identity.
+- Permission type.
+- Decision.
+- Grant scope.
+- Creation/update timestamps.
+- Expiration/revocation metadata if supported.
+
+Do not store website content or native authorization secrets.
+
+Ensure private-session permissions follow the private-session privacy policy and are not silently persisted.
+
+## E4. Revocation and profile lifecycle
+
+Test:
+
+- Grant.
+- Deny.
+- Ask.
+- Repeated request.
+- Revocation.
+- Profile lock.
+- Profile deletion.
+- Private-session termination.
+- Application restart.
+- Unsupported permission kind.
+- Native authorization denied.
+- Native authorization unavailable.
+
+### Stage E gate
+
+- Real permission delegate integration.
+- Explicit support matrix.
+- Default behavior preserved.
+- Revocation and lifecycle behavior tested.
+- Unsupported kinds fail closed.
+
+---
+
+# 10. Stage F — Backup, restore and deletion
+
+Establish accurate backup and restore behavior for Vezham-owned browser data.
+
+Do not promise complete portable backups of WebKit-managed website storage.
+
+## F1. Define backup scope
+
+Classify every data category:
+
+1. Vezham-owned profile metadata.
+2. Vezham-owned history.
+3. Bookmarks.
+4. Preferences.
+5. Session descriptors.
+6. Permission grants.
+7. Download metadata.
+8. User-created archives/snapshots.
+9. WebKit-owned website data.
+10. Actual downloaded files.
+11. Private-session data.
+12. Internal recovery journals.
+
+For each category, document:
+
+- Backup included/excluded.
+- Encryption.
+- Profile scope.
+- Retention.
+- Deletion semantics.
+- Restore behavior.
+- Portability limitations.
+
+Preserve OP-01 through OP-04 and OD-R01–OD-R20.
+
+Do not silently change their meaning.
+
+## F2. Backup implementation
+
+Implement backup for approved Vezham-owned categories.
+
+Requirements:
+
+- Explicit backup manifest.
+- Versioned format.
+- Profile identity.
+- Schema version.
+- Integrity validation.
+- Encryption where required.
+- Safe output handling.
+- Atomic finalization where supported.
+- Incomplete backup detection.
+- Recovery after interrupted backup.
+
+Do not include Keychain secrets or raw encryption keys in a backup archive.
+
+If a supported recovery design requires a recovery mechanism, implement only an approved one. Otherwise document the limitation.
+
+## F3. Restore implementation
+
+Restore must validate:
+
+- Manifest version.
+- Data integrity.
+- Profile identity.
+- Schema compatibility.
+- Key availability.
+- Data-category compatibility.
+- Conflicting profile state.
+- Existing catalog records.
+- Tombstones and deletion state.
+
+Restore must not:
+
+- Recreate private sessions.
+- Restore private browsing history.
+- Replay forms or POST requests.
+- Silently overwrite a different profile.
+- Reintroduce previously deleted data.
+- Restore unsupported WebKit internal files.
+
+## F4. Deletion semantics
+
+Preserve the established owner policies.
+
+In particular:
+
+- History deletion must be respected by backup and restore.
+- Download metadata deletion does not automatically delete the actual file.
+- User-created snapshots remain separate from internal recovery snapshots.
+- Private data must not enter persistent backup.
+- Deletion must not silently reintroduce records during recovery.
+
+Qualify individual deletion, bulk deletion and deletion followed by restore.
+
+## F5. WebKit data and backup boundary
+
+WebKit-managed website storage remains outside the Vezham catalog backup.
+
+Do not invent a portable WebKit backup implementation.
+
+If WebKit public APIs support an approved export capability, evaluate it separately and document exactly what it covers.
+
+Do not infer complete website-data backup from localStorage-only or other partial export behavior.
+
+### Stage F gate
+
+- Backup and restore of approved Vezham-owned data implemented.
+- Manifest versioned and validated.
+- Deletion semantics preserved.
+- Private data excluded.
+- WebKit storage limitations explicit.
+- Interrupted backup/restore tested.
+
+---
+
+# 11. Stage G — Unified recovery and reconciliation
+
+Integrate the WS-F1 WebKit recovery model with the actual protected catalog, Keychain, profile lock, permissions and backup.
+
+## G1. Recovery inventory
+
+Cover:
+
+- Missing catalog.
+- Corrupt catalog.
+- Unsupported schema version.
+- Missing Keychain item.
+- Keychain access denied.
+- Catalog/key identity mismatch.
+- Missing WebKit store.
+- Uncertain WebKit store removal.
+- Interrupted profile creation.
+- Interrupted profile publication.
+- Interrupted lock.
+- Interrupted unlock.
+- Interrupted clear.
+- Interrupted backup.
+- Interrupted restore.
+- Interrupted deletion.
+- Duplicate operation.
+- Concurrent lifecycle operation.
+
+## G2. Reconciliation principles
+
+Recovery must:
+
+- Be idempotent.
+- Preserve operation identity.
+- Distinguish desired, recorded and observed state.
+- Avoid treating uncertainty as success.
+- Preserve tombstones.
+- Preserve profile fencing.
+- Avoid publishing incomplete resources.
+- Avoid reintroducing deleted data.
+- Require explicit user action when safe automatic recovery is not possible.
+
+## G3. Recovery tests
+
+Use both:
+
+- Deterministic fake failure injection.
+- Actual native integration and process-restart tests.
+
+For destructive or crash tests, use synthetic profiles and isolated qualification data only.
+
+A same-process object reconstruction is not a process-restart test.
+
+### Stage G gate
+
+- Unified recovery model implemented.
+- Cross-component failure cases tested.
+- Actual persisted catalog and Keychain behavior exercised where permitted.
+- Unknown outcomes preserved safely.
+- No data resurrection or cross-profile exposure.
+
+---
+
+# 12. Stage H — Native qualification and test matrix
+
+Primary environment:
+
+- macOS 27.2.
+- arm64.
+- Swift 6.
+- Existing supported SDK/runtime configuration.
+
+Record the actual environment for every native test run.
+
+Do not claim that a macOS 27.2 test establishes macOS 26 compatibility.
+
+## H1. Required native test groups
+
+Run actual native tests for:
+
+### WebKit
+- Persistent profiles.
+- Profile isolation.
+- Profile switching.
+- Multiple web views.
+- Private sessions.
+- Website-data clearing.
+- Store removal.
+- Resource retirement.
+- HTTP cache.
+- Restart and recovery.
+
+### Protected catalog
+- Creation.
+- Read/write.
+- Migration.
+- Corruption handling.
+- Interrupted transaction.
+- Recovery.
+- Profile deletion.
+- Tombstones.
+
+### Keychain
+- Creation.
+- Lookup.
+- Access denial.
+- Missing key.
+- Duplicate identity.
+- Restart.
+- Rotation/recovery where implemented.
+
+### Locking
+- Lock/unlock.
+- Multiple windows.
+- Concurrent operations.
+- Lock during navigation.
+- Lock during deletion.
+- Restart while locked.
+
+### Permissions
+- Ask.
+- Allow.
+- Deny.
+- Revocation.
+- Unsupported permission.
+- Native authorization failure.
+- Private-session lifecycle.
+
+### Backup and restore
+- Backup creation.
+- Manifest validation.
+- Restore.
+- Corrupt backup.
+- Interrupted backup.
+- Interrupted restore.
+- Deleted-data non-resurrection.
+- Private-data exclusion.
+
+### Recovery
+- Clean restart.
+- Abrupt termination.
+- Interrupted operations.
+- Repeated reconciliation.
+- Uncertain outcomes.
+
+## H2. Test fixtures
+
+Use:
+
+- Synthetic profiles.
+- Synthetic Keychain identities.
+- Synthetic test keys.
+- Controlled local test origins.
+- Isolated test catalog databases.
+- Isolated WebKit stores.
+- Controlled termination harnesses.
+
+Never use real user browser data or production profiles.
+
+Never commit test secrets.
+
+## H3. Test result labels
+
+Use these labels consistently:
+
+- `PASS_NATIVE`
+- `PASS_FAKE_ONLY`
+- `PASS_CONTRACT`
+- `BLOCKED`
+- `NOT_EXECUTED`
+- `FAIL`
+- `INCONCLUSIVE`
+
+Do not merge fake and native results into a single unqualified pass count.
+
+## H4. Environment limitations
+
+macOS 26.0 and latest 26.x qualification are deliberately deferred until public release.
+
+Do not treat their absence as a WS-F2 implementation failure.
+
+Record the required future compatibility tests in a dedicated public-release qualification backlog.
+
+Do not claim macOS 26 compatibility before those tests are executed.
+
+If an essential macOS 27.2 test cannot run, report it as BLOCKED or NOT_EXECUTED.
+
+---
+
+# 13. Preserve fake providers and historical evidence
+
+WS-F0 and WS-F1 remain valid historical milestones within their documented scopes.
+
+Retain:
+
+- Existing fake providers.
+- Existing deterministic tests.
+- Existing fault-injection coverage.
+- WS-F0 reports.
+- WS-F1 reports.
+- Historical evidence.
+- Original checksums and manifests.
+- Existing owner decisions.
+
+Do not rewrite earlier reports to make WS-F2 appear more complete.
+
+Do not delete earlier failures or inconclusive outcomes.
+
+Add new evidence in the WS-F2 directory.
+
+Where practical, exercise shared contracts against both fake and native providers.
+
+Keep the two result categories distinct.
+
+---
+
+# 14. Architecture, security and qualification documentation
+
+Create a WS-F2 report set under:
+
+`docs/architecture/phase-5/reports/M1/`
+
+At minimum:
+
+1. `m1-wsf2-closeout.md`
+   - Scope.
+   - Implementation summary.
+   - Starting and final commit.
+   - Test summary.
+   - Acceptance gate results.
+   - Blockers.
+   - Remaining risks.
+   - Explicit non-claims.
+
+2. `m1-wsf2-webkit-runtime-hardening.md`
+   - Runtime changes.
+   - Cache investigation.
+   - Lifecycle changes.
+   - Resource retirement.
+   - Clear/remove behavior.
+
+3. `m1-wsf2-protected-catalog.md`
+   - Catalog architecture.
+   - Schema.
+   - Migrations.
+   - Transactions.
+   - Lifecycle integration.
+   - D2A-01 limitations.
+
+4. `m1-wsf2-keychain-integration.md`
+   - Key lifecycle.
+   - Access control.
+   - Key identity.
+   - Recovery.
+   - Native integration.
+   - Test results.
+
+5. `m1-wsf2-profile-locking.md`
+   - Lock state machine.
+   - Resource fencing.
+   - Multi-window behavior.
+   - Recovery.
+   - Authorization boundaries.
+
+6. `m1-wsf2-permission-policy.md`
+   - Supported permission matrix.
+   - Default policy.
+   - Native authorization.
+   - Grant storage.
+   - Revocation.
+
+7. `m1-wsf2-backup-and-restore.md`
+   - Backup scope.
+   - Manifest.
+   - Encryption.
+   - Restore.
+   - Deletion.
+   - Limitations.
+
+8. `m1-wsf2-recovery-and-reconciliation.md`
+   - Cross-component recovery.
+   - Failure states.
+   - Reconciliation.
+   - Tombstones.
+   - Idempotency.
+
+9. `m1-wsf2-qualification-plan.md`
+   - Native test harness.
+   - Environment.
+   - Fixtures.
+   - Test matrix.
+   - Execution instructions.
+
+10. `m1-wsf2-qualification-results.md`
+    - Actual results.
+    - Native/fake separation.
+    - Per-case outcomes.
+    - Blockers.
+    - Evidence references.
+
+11. `m1-wsf2-wks-traceability.md`
+    - Original WKS cases.
+    - WS-F0 and WS-F1 history.
+    - WS-F2 implementation mapping.
+    - Case-level evidence.
+    - Remaining blocked cases.
+
+12. `m1-wsf2-risks-and-limitations.md`
+    - WebKit limitations.
+    - SQLCipher limitations.
+    - Keychain limitations.
+    - Profile locking guarantees.
+    - Permission limitations.
+    - Backup/restore limitations.
+    - macOS compatibility backlog.
+
+Update the M1 index and relevant architecture references.
+
+Use actual repository conventions if the naming or structure needs adjustment.
+
+Do not create unnecessary duplicate documentation.
+
+---
+
+# 15. WKS traceability and acceptance gates
+
+Every original WKS case must retain its identity.
+
+For each case, record:
+
+- Original requirement.
+- Existing historical disposition.
+- WS-F2 implementation path.
+- Test type.
+- Test identifier.
+- Evidence reference.
+- Actual result.
+- Remaining limitation.
+
+Do not upgrade a blocked case simply because a related feature was implemented.
+
+A case passes only when its defined acceptance condition has been demonstrated.
+
+## Gate A — WebKit runtime
+- Cache behavior resolved or honestly inconclusive.
+- Lifecycle hardening complete.
+- Store assignment and fencing preserved.
+- Clear/remove behavior verified.
+
+## Gate B — Protected persistence
+- Actual protected catalog connected where authorized.
+- Schema and migrations implemented.
+- Recovery works against actual persisted state.
+- D2A-01 remains respected.
+
+## Gate C — Keychain
+- Real Keychain integration.
+- Key lifecycle tested.
+- Access failures handled.
+- No key leakage.
+
+## Gate D — Profile security
+- Lock/unlock lifecycle implemented.
+- Native resources fenced.
+- Multi-window behavior tested.
+- Recovery behavior verified.
+
+## Gate E — Permissions
+- Real permission integration.
+- Support matrix documented.
+- Default Ask/fail-closed policy preserved.
+- Revocation and lifecycle tested.
+
+## Gate F — Backup and restore
+- Approved Vezham-owned data backed up.
+- Restore validation implemented.
+- Deletion semantics preserved.
+- Private data excluded.
+- WebKit website-data portability not overstated.
+
+## Gate G — Regression and recovery
+- WS-F0 fake suite retained and passing.
+- WS-F1 native regression passing where applicable.
+- WS-F2 native tests executed.
+- Fault injection expanded.
+- Cross-component recovery tested.
+
+## Gate H — Closeout
+- Reports complete.
+- Evidence checksums verified.
+- WKS traceability updated.
+- Risks documented.
+- Final commit recorded.
+- Working-tree status recorded.
+
+A blocked requirement must not be relabeled as passed merely to satisfy a milestone.
+
+---
+
+# 16. Execution and change-management rules
+
+Execute the complete WS-F2 milestone in one coordinated Codex run.
+
+Do not pause for routine owner decisions.
+
+You may make normal implementation decisions that are consistent with the established architecture and approved owner decisions.
+
+If a new security or product decision is genuinely required:
+
+1. Preserve the safest behavior.
+2. Continue independent implementation work.
+3. Document the unresolved question.
+4. Explain the available alternatives and consequences.
+5. Prepare a separate decision proposal.
+6. Do not silently choose a security policy on behalf of the owner.
+
+Do not:
+
+- Add another browser engine.
+- Add cloud synchronization.
+- Add mandatory Vezham account dependencies.
+- Add autonomous Tamizhi browser actions.
+- Introduce extensions or dynamic plugins.
+- Change WebKit storage ownership.
+- SQLCipher-wrap WebKit data.
+- Bypass D2A-01.
+- Rewrite historical evidence.
+- Modify unrelated repositories or applications.
+- Claim macOS 26 qualification.
+- Claim release readiness.
+- Introduce unrelated browser features.
+
+Keep changes scoped to the storage foundation.
+
+## Commit workflow
+
+Before committing:
+
+1. Run all available relevant tests.
+2. Inspect the complete diff.
+3. Check for accidental generated or unrelated files.
+4. Verify test results against the evidence.
+5. Verify reports against the implementation.
+6. Verify evidence manifests and checksums.
+7. Verify no historical evidence was modified.
+8. Verify no owner decision was silently changed.
+9. Record the final commit SHA.
+
+Commit the completed WS-F2 work on the current `timeline` branch using repository conventions.
+
+**Commit locally only. Do not push.**
+
+If an essential implementation gate is blocked, still provide the best possible scoped closeout and report the blocker honestly. Do not label the milestone fully complete.
+
+---
+
+# 17. Required final engineering handoff
+
+When complete, provide:
+
+1. Actual starting commit SHA.
+2. Final commit SHA.
+3. Branch and working-tree state.
+4. Complete implementation summary.
+5. Actual repository paths for all major components.
+6. WebKit runtime hardening results.
+7. HTTP-cache investigation result.
+8. Protected catalog implementation status.
+9. SQLCipher/D2A-01 status.
+10. Keychain implementation and qualification status.
+11. Profile lock/unlock implementation and test results.
+12. Permission integration and support matrix.
+13. Backup and restore results.
+14. Crash recovery and reconciliation results.
+15. Fake regression results.
+16. Native test results.
+17. Contract test results.
+18. WKS case-level dispositions.
+19. Evidence manifest and checksum verification.
+20. Blocked or unexecuted requirements.
+21. Remaining risks and owner decisions.
+22. Public-release macOS 26 qualification backlog.
+
+Use explicit test labels:
+
+- `PASS_NATIVE`
+- `PASS_FAKE_ONLY`
+- `PASS_CONTRACT`
+- `BLOCKED`
+- `NOT_EXECUTED`
+- `FAIL`
+- `INCONCLUSIVE`
+
+Use one of these final milestone dispositions:
+
+**WS-F2 COMPLETE — Storage integration and qualification passed within documented scope.**
+
+**WS-F2 IMPLEMENTED — Storage integration substantially complete; specific qualification or security gates remain blocked.**
+
+**WS-F2 INCOMPLETE — Required implementation or safety gates remain unmet.**
+
+A successful WS-F2 closeout is not release approval.
+
+Product-owner review remains required.
+
+---
+
+# Final instruction
+
+Prioritize completing the actual Vezham Browser storage foundation over expanding browser features.
+
+Integrate real WebKit, real protected Vezham-owned persistence where authorized, real Keychain operations, real profile locking, real permission handling and real backup/recovery.
+
+Keep the ownership boundaries intact.
+
+Keep D2A-01 unresolved unless separately authorized.
+
+Execute on macOS 27.2. Defer macOS 26 qualification to the public-release stage.
+
+Retain fake providers as deterministic test doubles.
+
+Preserve historical evidence.
+
+Complete all achievable stages in one coordinated milestone, produce reproducible evidence and report exactly what has and has not been proven.

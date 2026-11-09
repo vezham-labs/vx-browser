@@ -1,0 +1,40 @@
+{
+  "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+  "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+  "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+  "keyID": "9530ca66-73c9-4f0d-955e-11e41a4470d0",
+  "origin": "http://127.0.0.1:59519",
+  "cacheID": "b50a9304-05d8-445a-893f-1cb1127acfb6",
+  "checkpoint": {
+    "rows": [
+      {
+        "resourceGeneration": 1,
+        "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+        "origin": "fresh",
+        "revision": 9,
+        "status": "active",
+        "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47"
+      }
+    ],
+    "snapshot": {
+      "version": 1,
+      "previousRun": "fcb4b85e-a184-479a-81a3-03a68ab8ce6b",
+      "records": [
+        {
+          "phase": {
+            "stable": {
+              "_0": "active"
+            }
+          },
+          "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+          "operation": "8b2cd495-fd11-443d-8826-caba86b0d0eb",
+          "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+          "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+          "generation": 7
+        }
+      ]
+    }
+  },
+  "cutpoint": null,
+  "action": "cache-read"
+}

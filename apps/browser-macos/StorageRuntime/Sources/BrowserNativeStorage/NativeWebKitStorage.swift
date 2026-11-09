@@ -51,6 +51,17 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     private var views: [ViewID: View] = [:]
     private var fenced: Set<Scope> = []
     private var poisoned: Set<Scope> = []
+    private var securityLocked: Set<Scope> = []
+    public var permissionMediator: NativePermissionMediator?
+    public func ownedViews(_ scope: Scope) -> [ViewID] { views.filter { $0.value.identity.scope == scope }.map(\.key) }
+    public func securityFence(_ profile: ProfileID) {
+        let scope = Scope.persistent(profile); securityLocked.insert(scope); fenced.insert(scope)
+        for v in views.values where v.identity.scope == scope {
+            v.object.stopLoading(); navigations.removeValue(forKey: ObjectIdentifier(v.object))?(false)
+        }
+        record("security-fence", "installed")
+    }
+    func restoreSecurityAdmission(_ profile: ProfileID) { securityLocked.remove(.persistent(profile)) }
     private var pending: [Scope: Set<ResourceReference>] = [:]
     private var released: [Scope: [WeakObject]] = [:]
     private var navigations: [ObjectIdentifier: (@MainActor @Sendable (Bool) -> Void)] = [:]
@@ -207,6 +218,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         let r: Reply<Bool> = await wait { done in
             navigations[key] = done
             v.object.load(URLRequest(url: url))
+            record("navigation-request", "issued")
         }
         guard !fenced.contains(v.identity.scope), views[view]?.generation == v.generation else { return .unknown }
         if case .value(true) = r { record("navigation", "finished"); return .completed }
@@ -229,7 +241,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     }
     public func preventAcquisition(in scope: Scope) async { fenced.insert(scope); record("fence", "installed") }
     public func allowAcquisition(in scope: Scope) async {
-        if !overflowed && !poisoned.contains(scope) { fenced.remove(scope) }
+        if !overflowed && !poisoned.contains(scope) && !securityLocked.contains(scope) { fenced.remove(scope) }
     }
     private func dispose(_ view: ViewID, scope: Scope) -> Bool {
         guard let v = views[view], v.identity.scope == scope else { return false }
@@ -359,6 +371,26 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping @MainActor @Sendable () -> Void) { completionHandler() }
     public func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping @MainActor @Sendable (Bool) -> Void) { completionHandler(false) }
     public func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping @MainActor @Sendable (String?) -> Void) { completionHandler(nil) }
-    public func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor @Sendable (WKPermissionDecision) -> Void) { decisionHandler(.deny) }
+    public func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor @Sendable (WKPermissionDecision) -> Void) {
+        guard let pair = views.first(where: { $0.value.object === webView }), pair.value.published,
+              !fenced.contains(pair.value.identity.scope), frame.isMainFrame,
+              let url = webView.url, url.host == origin.host, url.scheme == origin.protocol,
+              let verified = try? VerifiedOrigin(scheme: origin.protocol, host: origin.host, port: origin.port == 0 ? (origin.protocol == "https" ? 443 : 80) : origin.port),
+              verified.port == UInt16(url.port ?? (url.scheme == "https" ? 443 : 80)), let mediator = permissionMediator else { decisionHandler(.deny); return }
+        let kind: PermissionKind
+        switch type { case .camera: kind = .camera; case .microphone: kind = .microphone; case .cameraAndMicrophone: kind = .cameraAndMicrophone; @unknown default: decisionHandler(.deny); return }
+        let id = pair.key, generation = pair.value.generation, scope = pair.value.identity.scope
+        Task { @MainActor [weak self, weak webView] in
+            guard let self, let webView else { decisionHandler(.deny); return }
+            let decision = await mediator.request(scope: scope, view: id, generation: generation, origin: verified, kind: kind, surface: webView) { [weak self] in
+                self?.views[id]?.generation == generation && self?.views[id]?.published == true && self?.fenced.contains(scope) == false
+            }
+            self.record("permission", decision == .grant ? "granted-scoped" : "denied-closed"); decisionHandler(decision)
+        }
+    }
+    @available(macOS 27.0, *)
+    public func webView(_ webView: WKWebView, requestGeolocationPermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, decisionHandler: @escaping @MainActor @Sendable (WKPermissionDecision) -> Void) {
+        record("geolocation-permission", "denied-unsupported");decisionHandler(.deny)
+    }
     public func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @MainActor @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) { completionHandler(.cancelAuthenticationChallenge, nil) }
 }

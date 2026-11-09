@@ -1,0 +1,40 @@
+{
+  "namespace": "962c68bf-24b5-402c-98ea-25cb272087e3",
+  "profile": "7fd57db9-52c1-430c-9b39-7b6df309c0ae",
+  "store": "3b536cd6-da7e-4af3-a476-ffc1ec26320d",
+  "keyID": "c767dccb-e4d6-4cfa-aad4-86e4f2f1f94b",
+  "origin": "http://127.0.0.1:56856",
+  "cacheID": "823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+  "checkpoint": {
+    "rows": [
+      {
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "store": "3b536cd6-da7e-4af3-a476-ffc1ec26320d",
+        "revision": 5,
+        "profile": "7fd57db9-52c1-430c-9b39-7b6df309c0ae",
+        "status": "retired"
+      }
+    ],
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "operation": "2620c458-6dd8-41cd-9445-56cdd4771b16",
+          "namespace": "962c68bf-24b5-402c-98ea-25cb272087e3",
+          "phase": {
+            "stable": {
+              "_0": "retired"
+            }
+          },
+          "profile": "7fd57db9-52c1-430c-9b39-7b6df309c0ae",
+          "store": "3b536cd6-da7e-4af3-a476-ffc1ec26320d",
+          "generation": 3
+        }
+      ],
+      "previousRun": "12701be5-3846-4155-8401-ab183b9856ce"
+    }
+  },
+  "cutpoint": null,
+  "action": "cache-remove"
+}

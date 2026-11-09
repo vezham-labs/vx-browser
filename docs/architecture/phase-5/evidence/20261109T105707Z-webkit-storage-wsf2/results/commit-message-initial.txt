@@ -1,0 +1,9 @@
+feat(browser): integrate guarded storage security foundation
+
+Connect bounded Core/native key, lock, permission, backup and recovery
+components while retaining the protected-catalog D2A-01 refusal path.
+
+Record separate fake, contract and native qualification evidence,
+including Keychain entitlement blockers and native permission failure.
+WS-F2 remains incomplete. Preserve historical evidence and decisions;
+keep macOS 26 qualification in the deferred release backlog.

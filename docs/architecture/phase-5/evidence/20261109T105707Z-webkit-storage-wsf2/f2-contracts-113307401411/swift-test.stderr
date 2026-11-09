@@ -1,0 +1,107 @@
+Building for debugging...
+[Computing dependencies]
+[Constructing description]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[Starting]
+[18 / 122] WSF0Fakes
+[58 / 122]
+[58 / 123] BrowserDomain
+[59 / 123] BrowserDomain
+[61 / 162]
+[63 / 162]
+[67 / 162]
+[69 / 162]
+[71 / 162]
+[74 / 162]
+[76 / 162]
+[77 / 162]
+[78 / 162]
+[80 / 162]
+[82 / 162]
+[83 / 162]
+[85 / 162]
+[87 / 162]
+[89 / 162]
+[90 / 162]
+[91 / 162]
+[92 / 162]
+[93 / 162]
+[96 / 162] BrowserDomain
+[98 / 162] BrowserDomain
+[105 / 163] BrowserPorts
+[107 / 166] BrowserPorts
+[108 / 166] BrowserPorts
+[111 / 166] BrowserPorts
+[118 / 167] BrowserDomain
+[119 / 168] BrowserPersistence
+[121 / 176] WSF0Fakes
+[122 / 176] BrowserPersistence
+[136 / 176] WSF0Fakes
+[137 / 176] BrowserPersistence
+[138 / 176] BrowserPersistence
+[140 / 176] BrowserPersistence-product
+[141 / 177]
+[143 / 177] BrowserPorts
+[144 / 177] BrowserPorts-product
+[145 / 177] BrowserCore
+[147 / 183] BrowserCore
+[148 / 183] BrowserCore
+[150 / 183] BrowserCore
+[156 / 183] BrowserCore
+[157 / 183] BrowserCore
+[158 / 184] BrowserNativeStorage
+[160 / 236]
+[161 / 236] BrowserCore
+[162 / 236]
+[165 / 236]
+[166 / 236]
+[167 / 236]
+[168 / 236]
+[169 / 236]
+[170 / 236]
+[171 / 236]
+[172 / 236]
+[175 / 236]
+[177 / 236]
+[179 / 236]
+[180 / 236]
+[181 / 236]
+[183 / 236]
+[184 / 236]
+[186 / 236]
+[188 / 236]
+[189 / 236]
+[190 / 236]
+[191 / 236]
+[193 / 236]
+[194 / 236]
+[196 / 236]
+[197 / 236]
+[198 / 236]
+[199 / 236]
+[200 / 236]
+[203 / 236]
+[206 / 236] BrowserNativeStorage
+[208 / 236] BrowserNativeStorage
+[214 / 236] BrowserNativeStorage
+[216 / 236] BrowserNativeStorage
+[218 / 236] BrowserNativeStorage
+[218 / 236] BrowserCore
+[219 / 236]
+[222 / 236] StorageModelTests-product
+[222 / 236] BrowserNativeStorage
+[225 / 237] BrowserNativeStorage-product
+[226 / 237] BrowserNativeStorage-product
+[226 / 237] StorageModelTests-product
+[227 / 246]
+[228 / 246]
+[230 / 246] StorageModelTests-product
+[231 / 246] StorageModelTests-product
+[238 / 246] StorageModelTests-product
+[239 / 246] StorageModelTests-product
+[240 / 246] StorageModelTests-product
+[242 / 246] StorageModelTests-product
+[243 / 246] StorageModelTests-product
+[245 / 246] StorageModelTests-product
+Build complete! (102.07 secs)

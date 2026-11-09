@@ -1,0 +1,40 @@
+{
+  "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+  "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+  "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+  "keyID": "c767dccb-e4d6-4cfa-aad4-86e4f2f1f94b",
+  "origin": "http://127.0.0.1:56856",
+  "cacheID": "823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "previousRun": "98a3cbf3-5912-43cf-b497-2147b6d6da26",
+      "records": [
+        {
+          "operation": "ae2d8630-3386-4bba-a21f-059ba456b572",
+          "generation": 15,
+          "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+          "phase": {
+            "stable": {
+              "_0": "retired"
+            }
+          },
+          "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+          "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+        "origin": "fresh",
+        "revision": 17,
+        "status": "retired",
+        "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+        "resourceGeneration": 1
+      }
+    ]
+  },
+  "cutpoint": null,
+  "action": "cache-full-clear"
+}

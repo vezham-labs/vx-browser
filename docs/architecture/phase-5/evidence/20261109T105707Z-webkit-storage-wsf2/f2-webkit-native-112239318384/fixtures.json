@@ -1,0 +1,14 @@
+{
+  "base": {
+    "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+    "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+    "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+    "keyID": "9530ca66-73c9-4f0d-955e-11e41a4470d0",
+    "origin": null,
+    "cacheID": null,
+    "checkpoint": null,
+    "cutpoint": null
+  },
+  "secretMaterialInEvidence": false,
+  "scope": "Synthetic keys only; public identifiers are not secrets"
+}

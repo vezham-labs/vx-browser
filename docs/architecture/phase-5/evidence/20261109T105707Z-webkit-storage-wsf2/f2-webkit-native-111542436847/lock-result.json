@@ -1,0 +1,83 @@
+{
+  "label": "lock",
+  "pid": 48177,
+  "argv": [
+    "/private/tmp/vx-wsf1-mulxoz02/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "b050ce00f37eda0f340f4b927fc136c390546fb3b8427f463e673fc05424aac4",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "observations": {},
+    "checkpoint": {
+      "rows": [
+        {
+          "revision": 6,
+          "store": "816df068-8709-4099-8289-55f6f55d6073",
+          "profile": "2dc6144a-0b2c-4996-b092-5c41e33dba0c",
+          "resourceGeneration": 1,
+          "status": "retired",
+          "origin": "fresh"
+        }
+      ],
+      "snapshot": {
+        "previousRun": "c4e46d8c-7fd3-470d-ae82-a2fd4361bf49",
+        "version": 1,
+        "records": [
+          {
+            "store": "816df068-8709-4099-8289-55f6f55d6073",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "profile": "2dc6144a-0b2c-4996-b092-5c41e33dba0c",
+            "operation": "da0b8014-6f2f-4146-b9b1-a5c3e05da3d4",
+            "namespace": "13c37e30-411f-4d31-a236-01b34bfdd847",
+            "generation": 3
+          }
+        ]
+      }
+    },
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-REAL-RESOURCES"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-NO-VIEWS"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-NAVIGATION-DENIED"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-NO-KEY-LEASE"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-REPEATED"
+      },
+      {
+        "status": "BLOCKED",
+        "detail": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+        "id": "F2-UNLOCK-PRODUCTION"
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    }
+  }
+}

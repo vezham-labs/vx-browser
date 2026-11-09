@@ -3,7 +3,7 @@
 **Status:** Proposed security design; requires implementation review and test evidence  
 **Scope:** Internal macOS 26 Tahoe+ browser; React/TypeScript + HeroUI v3; Swift/AppKit; conditionally accepted WKWebView direction; no production Tamizhi integration now; optional Vezham ID/cloud with no local-browsing dependency.
 
-The [owner decision](../architecture/phase-3/owner-approval-decision.md) and [ADR 0001 Stage A/B/C policy](../decisions/0001-browser-engine-strategy.md) permit staged implementation, currently M0 only. ADR 0001 remains Proposed; ADR 0002 remains Accepted. Architecture approval and conditional engine acceptance are not security certification or release passes.
+The [owner decision](../architecture/phase-3/owner-approval-decision.md) and [ADR 0001 Stage A/B/C policy](../decisions/0001-browser-engine-strategy.md) permit staged implementation. The separately authorized [WS-F2 storage/security milestone](../architecture/phase-5/reports/M1/m1-wsf2-closeout.md) adds bounded native integration; protected catalog, successful Keychain lifecycle, full unlock/grants and production backup remain blocked or incomplete. ADR 0001 remains Proposed; ADR 0002 remains Accepted. Architecture approval and conditional engine acceptance are not security certification or release passes.
 
 ## Trust boundaries
 
@@ -67,3 +67,7 @@ Engine zero-days, same-user malware, browser UI XSS, WebKit storage edge cases, 
 ## Current M1 policy authority
 
 [Owner register](../architecture/phase-5/reports/M1/m1-owner-decision-register.md) records full encrypted credential-stripped URL retention without query filtering and no raw URL diagnostics, manual download metadata/user-created snapshot retention, situation-specific restoration and Ask for supported new permissions. Unsupported/ambiguous kinds deny; native OS authorization remains independent. WebKit data and catalog protection are separate from SQLite encryption. No current source/evidence claims whole product qualification.
+
+## WS-F2 qualification scope — 2026-11-09
+
+Primary WS-F2 execution is macOS27.2/arm64. The owner deliberately defers actual26.0/latest26.x qualification to the [release backlog](../architecture/phase-5/reports/M1/m1-wsf2-public-release-qualification-backlog.md). This does not pass or waive any checklist, authorize public distribution or change ADR/owner/security status. See [actual results and limits](../architecture/phase-5/reports/M1/m1-wsf2-qualification-results.md); native media denial failed its oracle, geolocation is inconclusive, Keychain creation is entitlement-blocked and D2A-01 remains unresolved.

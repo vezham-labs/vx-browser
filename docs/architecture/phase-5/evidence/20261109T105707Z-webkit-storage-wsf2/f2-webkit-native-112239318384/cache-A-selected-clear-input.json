@@ -1,0 +1,40 @@
+{
+  "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+  "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+  "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+  "keyID": "9530ca66-73c9-4f0d-955e-11e41a4470d0",
+  "origin": "http://127.0.0.1:59519",
+  "cacheID": "b50a9304-05d8-445a-893f-1cb1127acfb6",
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "phase": {
+            "stable": {
+              "_0": "retired"
+            }
+          },
+          "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+          "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+          "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+          "operation": "88ad38a3-7135-4c5d-a4ee-d531dec3a67c",
+          "generation": 10
+        }
+      ],
+      "previousRun": "eb163357-dcfd-463c-8b7b-f84146bba150"
+    },
+    "rows": [
+      {
+        "status": "retired",
+        "origin": "fresh",
+        "revision": 12,
+        "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+        "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+        "resourceGeneration": 1
+      }
+    ]
+  },
+  "cutpoint": null,
+  "action": "cache-selected-clear"
+}

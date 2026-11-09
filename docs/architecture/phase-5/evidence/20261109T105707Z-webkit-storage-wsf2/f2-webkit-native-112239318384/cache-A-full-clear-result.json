@@ -1,0 +1,72 @@
+{
+  "label": "cache-A-full-clear",
+  "pid": 50051,
+  "argv": [
+    "/private/tmp/vx-wsf1-y4ovzo4a/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "8eea7d81e27e5a1e3617df11de272c00527b6d7b9145f33d54468cffedb6f8d8",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "rows": [
+        {
+          "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+          "status": "retired",
+          "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+          "revision": 22,
+          "origin": "fresh",
+          "resourceGeneration": 1
+        }
+      ],
+      "snapshot": {
+        "version": 1,
+        "records": [
+          {
+            "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+            "operation": "4f8af6b3-299d-4476-8644-56a706a49b2e",
+            "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+            "generation": 20,
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da"
+          }
+        ],
+        "previousRun": "2eaca201-b961-4e25-8f4e-d3301aa576ee"
+      }
+    },
+    "cases": [
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-CLEAR-CALLBACK",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-POPULATED",
+        "status": "PASS_NATIVE"
+      }
+    ],
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "observations": {
+      "beforeClear": "cache-8",
+      "first": "cache-9",
+      "second": "cache-9"
+    }
+  }
+}

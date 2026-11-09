@@ -1,0 +1,121 @@
+{
+  "label": "lock",
+  "pid": 53302,
+  "argv": [
+    "/private/tmp/vx-wsf1-v3co6uel/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "d933ae466707edcdd39936cdcdddeceddfc5b17ae2fd746296d6b64ded938c9a",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "observations": {
+      "lockState": "locked",
+      "otherProfile": "5afc6051-0352-4ca9-9ca4-fef1496bd120",
+      "repeatedLockState": "locked",
+      "otherStore": "880902cb-8dcb-44d7-9519-5e5b47d107a2"
+    },
+    "cases": [
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-MULTIWINDOW",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-REAL-RESOURCES",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-NO-VIEWS",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-NAVIGATION-DENIED",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-NO-KEY-LEASE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-REPEATED",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-OTHER-PROFILE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-LOCK-OTHER-CLEANUP",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+        "id": "F2-UNLOCK-PRODUCTION",
+        "status": "BLOCKED"
+      }
+    ],
+    "checkpoint": {
+      "rows": [
+        {
+          "profile": "5afc6051-0352-4ca9-9ca4-fef1496bd120",
+          "resourceGeneration": 1,
+          "origin": "fresh",
+          "store": "880902cb-8dcb-44d7-9519-5e5b47d107a2",
+          "status": "deleted",
+          "revision": 7
+        },
+        {
+          "profile": "e2db4610-462f-4b24-855b-2824a43d5c5c",
+          "resourceGeneration": 1,
+          "origin": "fresh",
+          "store": "458486d2-3ee7-4186-9502-8457d714c231",
+          "status": "retired",
+          "revision": 6
+        }
+      ],
+      "snapshot": {
+        "previousRun": "d7b17d80-3360-4cf7-9408-3ae6d2b94117",
+        "records": [
+          {
+            "store": "880902cb-8dcb-44d7-9519-5e5b47d107a2",
+            "phase": {
+              "removed": {}
+            },
+            "profile": "5afc6051-0352-4ca9-9ca4-fef1496bd120",
+            "namespace": "30545554-96f1-426b-b7d4-c5864f75702a",
+            "operation": "f32702f5-ef09-41d6-a448-faaf43409659",
+            "generation": 4
+          },
+          {
+            "store": "458486d2-3ee7-4186-9502-8457d714c231",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "profile": "e2db4610-462f-4b24-855b-2824a43d5c5c",
+            "namespace": "30545554-96f1-426b-b7d4-c5864f75702a",
+            "operation": "9778c05e-5e56-4ba9-a458-7b491e9946fd",
+            "generation": 3
+          }
+        ],
+        "version": 1
+      }
+    }
+  }
+}

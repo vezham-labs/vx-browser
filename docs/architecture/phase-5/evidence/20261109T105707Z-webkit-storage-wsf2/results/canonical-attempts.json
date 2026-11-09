@@ -1,0 +1,10 @@
+{
+  "final_test_host_build": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-build-113900589907",
+  "production_regression_build": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-build-113022470426",
+  "wsf2_webkit": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396",
+  "wsf2_keychain_backup": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-113238831637",
+  "contract_fake": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-contracts-113307401411",
+  "retained_f0": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/attempt-112058889226",
+  "retained_f1_native": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483",
+  "scope": "Each suite retains its own source/build identity. Never aggregate earlier attempts or transfer test-host results across binaries."
+}

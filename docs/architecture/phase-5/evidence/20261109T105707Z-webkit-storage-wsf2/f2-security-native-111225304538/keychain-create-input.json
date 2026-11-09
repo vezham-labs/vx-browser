@@ -1,0 +1,11 @@
+{
+  "namespace": "0ca9a1c6-4c63-4d2c-abe5-4f2c93a6d0b1",
+  "profile": "e820b743-32a5-4062-9573-da542c21f054",
+  "store": "7a2f919e-6d0a-46ba-8460-68b11e5c4093",
+  "keyID": "f4bd2d54-6f68-4284-bdaa-1249ee90cd6d",
+  "origin": null,
+  "cacheID": null,
+  "checkpoint": null,
+  "cutpoint": null,
+  "action": "keychain-create"
+}

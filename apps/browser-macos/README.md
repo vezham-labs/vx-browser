@@ -1,10 +1,11 @@
 # Browser macOS Host
 
-The Swift/AppKit foundation now consumes the WS-F1 native storage runtime through
-the existing Domain/Ports/Core boundaries. Normal startup creates a memory-backed
-private-only composition without creating a website store/view; the native window
-remains the foundation surface. Persistent product operations await the protected
-catalog. No React chrome, privileged website bridge, CEF or optional service is wired.
+The Swift/AppKit foundation consumes the native storage runtime through the existing
+Domain/Ports/Core boundaries. WS-F2 connects the protected-catalog gate, native
+Keychain adapter, permission policy and lifecycle security without automatically
+creating a website store/view/key. The foundation window reports protected storage
+unavailable while D2A-01/signing/key gates are unresolved. No React chrome, privileged
+website bridge, CEF or optional service is wired.
 
 ## Local Commands
 
@@ -49,3 +50,19 @@ records a separate independent subset without waiving private failures;
 Native discovery on27.2 is not mandatory26.0/latest26.x qualification or release
 approval. Preserve the Phase3 prototype and all historical evidence; do not use a
 normal user profile as a fixture. No further product milestone starts implicitly.
+
+## WS-F2 storage and security
+
+[WS-F2 closeout](../../docs/architecture/phase-5/reports/M1/m1-wsf2-closeout.md)
+links the current architecture, gate ledger, qualification evidence and remaining
+decisions. Use `storage-f2-build`, `storage-f2-contracts`, `storage-f2-native` and
+`storage-f2-webkit` with a new registered `--evidence` directory. Native F2 targets
+require the exact `--build-record` from that build. The Debug-only
+`--wsf2-qualification` host uses synthetic data, actual WebKit/Security/CryptoKit,
+bounded child processes and a controlled loopback origin. No SQLCipher open or
+runtime provider test is permitted through these targets while D2A-01 is unresolved.
+
+Primary WS-F2 qualification is27.2/arm64. The requested release backlog retains
+actual26.0/latest26.x and all signing/notarization/security requirements; public
+distribution remains unauthorized. A successful bounded test process does not
+override blocked Keychain, catalog, unlock, native grants or production-backup gates.

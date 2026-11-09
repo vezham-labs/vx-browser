@@ -3,28 +3,44 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/browser-macos/Sources",
   "projectType": "application",
-  "tags": ["scope:browser", "type:native-host"],
+  "tags": [
+    "scope:browser",
+    "type:native-host"
+  ],
   "targets": {
     "storage-native": {
-      "executor": "nx:run-commands", "cache": false,
-      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py native" }
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf1.py native"
+      }
     },
     "storage-build": {
-      "executor": "nx:run-commands", "cache": false,
-      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py build" }
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf1.py build"
+      }
     },
     "storage-diagnostic-build": {
-      "executor": "nx:run-commands", "cache": false,
-      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py diagnostic-build" }
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf1.py diagnostic-build"
+      }
     },
     "storage-models": {
       "executor": "nx:run-commands",
       "cache": false,
-      "options": { "command": "python3 apps/browser-macos/Tools/wsf1.py models" }
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf1.py models"
+      }
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/apps/browser-macos/build"],
+      "outputs": [
+        "{workspaceRoot}/apps/browser-macos/build"
+      ],
       "options": {
         "command": "python3 apps/browser-macos/Tools/native_host.py build"
       },
@@ -42,6 +58,34 @@
       "cache": false,
       "options": {
         "command": "python3 apps/browser-macos/Tools/native_host.py launch"
+      }
+    },
+    "storage-f2-build": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf2.py build"
+      }
+    },
+    "storage-f2-contracts": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf2.py contracts"
+      }
+    },
+    "storage-f2-native": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf2.py security-native"
+      }
+    },
+    "storage-f2-webkit": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/wsf2.py webkit-native"
       }
     }
   }

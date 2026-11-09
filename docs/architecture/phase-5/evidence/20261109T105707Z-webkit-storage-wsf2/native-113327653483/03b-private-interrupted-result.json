@@ -1,0 +1,89 @@
+{
+  "label": "03b-private-interrupted",
+  "pid": 51935,
+  "action": "private",
+  "cutpoint": "private-active",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "rows": [
+      {
+        "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+        "revision": 12,
+        "status": "active",
+        "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d",
+        "resourceGeneration": 1,
+        "origin": "fresh"
+      },
+      {
+        "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+        "revision": 13,
+        "status": "active",
+        "store": "88595edb-6dd3-4412-b55d-a3419e2d4957",
+        "resourceGeneration": 1,
+        "origin": "fresh"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "ada27a5f-a114-419c-8868-383a309ea0e0",
+      "version": 1,
+      "records": [
+        {
+          "phase": {
+            "stable": {
+              "_0": "active"
+            }
+          },
+          "operation": "78630041-2f95-4fec-b354-d891bf2cf5ab",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d",
+          "generation": 9
+        },
+        {
+          "phase": {
+            "stable": {
+              "_0": "active"
+            }
+          },
+          "operation": "ef4b75a5-17a0-45dc-930b-e94b470f08de",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957",
+          "generation": 9
+        }
+      ]
+    }
+  },
+  "binarySHA256": "17897e1450048796e69b4225ffeda47b2fd6e997dba2bb58ea3948034bf64d47",
+  "observations": [
+    {
+      "environment": {
+        "session": "",
+        "http": "response-44",
+        "cache": "A",
+        "local": "A",
+        "idb": "A",
+        "cookie": "A",
+        "worker": "A"
+      },
+      "event": "restart-values-A"
+    },
+    {
+      "environment": {
+        "cookie": "B",
+        "http": "response-47",
+        "cache": "B",
+        "idb": "B",
+        "local": "B",
+        "session": "",
+        "worker": "B"
+      },
+      "event": "restart-values-B"
+    }
+  ]
+}

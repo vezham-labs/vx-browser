@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "scope": "browser",
+  "reason": "Not a configured Nx project scope; plugin socket EPERM also observed in default sandbox",
+  "correction": "Use actual existing project scope browser-macos and already-established NX_ISOLATE_PLUGINS=false/NX_DAEMON=false with owned scratch paths. No repository config or dependency change."
+}

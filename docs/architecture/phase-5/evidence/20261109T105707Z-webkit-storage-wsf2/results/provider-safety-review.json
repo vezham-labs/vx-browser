@@ -1,0 +1,13 @@
+{
+  "pin": "355d4db92d3404e71faa8088d071a71d767807f4",
+  "candidate": "SQLCipher4.20.0 Community/CommonCrypto; all previous verification records preserved",
+  "D2A01": "Proposed/Not Decided",
+  "blocked_operation": "Existing-file open reaches100-byte encrypted-header request before target connection key binding; no approved compliant public path established",
+  "alternatives_record": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open01-resolution.md",
+  "provider_initialization_or_database_open": false,
+  "ciphertext_prekey_hash_copy_read": false,
+  "new_database_creation": false,
+  "provider_pin_vendor_PQR_changed": false,
+  "direct_provider_symbols_in_final_app": false,
+  "new_plaintext_database_or_key_store": false
+}

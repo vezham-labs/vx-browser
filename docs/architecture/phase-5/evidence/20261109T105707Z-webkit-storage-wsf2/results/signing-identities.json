@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "security",
+    "find-identity",
+    "-v",
+    "-p",
+    "codesigning"
+  ],
+  "returncode": 0,
+  "stdout": "     0 valid identities found\n",
+  "stderr": ""
+}

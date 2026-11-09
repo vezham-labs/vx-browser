@@ -1,0 +1,55 @@
+{
+  "milestone": "WS-F2 INCOMPLETE \u2014 Required implementation or safety gates remain unmet.",
+  "gates": [
+    {
+      "gate": "A",
+      "name": "WebKit runtime",
+      "status": "BLOCKED",
+      "basis": "Cache behavior, original full regression, selected/full clear, normal removal and bounded lock resources tested. Full native origin-record/date/in-flight/error matrix incomplete."
+    },
+    {
+      "gate": "B",
+      "name": "Protected persistence",
+      "status": "BLOCKED",
+      "basis": "D2A-01 blocks actual protected catalog open/transactions/migrations/recovery; schema/gates tested only."
+    },
+    {
+      "gate": "C",
+      "name": "Keychain",
+      "status": "BLOCKED",
+      "basis": "Real adapter attempts return-34018;0 valid signing identities. No successful item/ACL read/restart/rotation/recovery qualification."
+    },
+    {
+      "gate": "D",
+      "name": "Profile security",
+      "status": "BLOCKED",
+      "basis": "Native views fenced/retired; protected key/unlock/durable receipts and full OS trigger/transfer/concurrency guarantees incomplete."
+    },
+    {
+      "gate": "E",
+      "name": "Permissions",
+      "status": "BLOCKED",
+      "basis": "Core policy tests pass; native media denial oracle FAIL/script-error, geolocation INCONCLUSIVE/timeout; positives and persistent grants blocked."
+    },
+    {
+      "gate": "F",
+      "name": "Backup/restore",
+      "status": "BLOCKED",
+      "basis": "Actual CryptoKit/synthetic-file slice passes; real protected source/import, full categories/custody/migrations/process recovery incomplete."
+    },
+    {
+      "gate": "G",
+      "name": "Regression/unified recovery",
+      "status": "BLOCKED",
+      "basis": "82 retained fake tests and full WSF1 native regression pass their scopes; cross-component actual persisted/key/backup recovery remains blocked."
+    },
+    {
+      "gate": "H",
+      "name": "Closeout",
+      "status": "PASS_CONTRACT",
+      "basis": "Required reports, evidence, traceability and preservation prepared; final commit/worktree receipt supplied by handoff after local commit. Not a runtime/security PASS."
+    }
+  ],
+  "macos26": "Deliberately deferred; not a WS-F2 implementation failure",
+  "public_distribution_authorized": false
+}

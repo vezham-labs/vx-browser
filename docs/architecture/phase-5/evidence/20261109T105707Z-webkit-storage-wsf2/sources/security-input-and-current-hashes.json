@@ -1,0 +1,20 @@
+[
+  {
+    "path": "docs/security/browser-security-architecture.md",
+    "baselineSHA256": "6ae810522a2b936b711ced4f041c78d8d119d4270e110079df14015732c14ba9",
+    "currentSHA256": "72e9eaf5145f6d793f4123f1df64c9625c84f878e52836ddc9f3f8e6c28bff44",
+    "change": "Maintained current-scope/reference correction only; no gate/status waiver"
+  },
+  {
+    "path": "docs/security/browser-security-acceptance-criteria.md",
+    "baselineSHA256": "c602e0c5ce944657c6bfcd7dfdd1f5e0c7043df89fe20c70ceb59720cbf5e078",
+    "currentSHA256": "38b157a998a8432d2a76eff900e12e56ccd04d2fb37206ac3f71dd11e1fdff69",
+    "change": "Maintained current-scope/reference correction only; no gate/status waiver"
+  },
+  {
+    "path": "docs/security/browser-threat-model.md",
+    "baselineSHA256": "aaa190ef8192db214ff2ed20f6a1339406609faa7f43abb6137e44ac5518366e",
+    "currentSHA256": "70c9bbe5fbd7aa53984834003ad6a9e3f8acd68347eca0cff5cc70145f2cb796",
+    "change": "Maintained current-scope/reference correction only; no gate/status waiver"
+  }
+]

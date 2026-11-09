@@ -1,0 +1,12 @@
+[
+  {
+    "id": "F1-NAT-RESTART-A-http",
+    "status": "INCONCLUSIVE",
+    "detail": "HTTP cache response identity across actual process restart; eviction/persistence may differ"
+  },
+  {
+    "id": "F1-NAT-RESTART-B-http",
+    "status": "INCONCLUSIVE",
+    "detail": "HTTP cache response identity across actual process restart; eviction/persistence may differ"
+  }
+]

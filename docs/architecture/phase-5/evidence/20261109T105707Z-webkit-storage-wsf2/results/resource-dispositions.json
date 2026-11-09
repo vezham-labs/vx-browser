@@ -1,0 +1,2196 @@
+{
+  "fixture_inputs": [
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-111225304538/keychain-create-input.json",
+      "action": "keychain-create",
+      "profile": "e820b743-32a5-4062-9573-da542c21f054",
+      "store": "7a2f919e-6d0a-46ba-8460-68b11e5c4093",
+      "namespace": "0ca9a1c6-4c63-4d2c-abe5-4f2c93a6d0b1",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-111225304538/keychain-restart-input.json",
+      "action": "keychain-restart",
+      "profile": "e820b743-32a5-4062-9573-da542c21f054",
+      "store": "7a2f919e-6d0a-46ba-8460-68b11e5c4093",
+      "namespace": "0ca9a1c6-4c63-4d2c-abe5-4f2c93a6d0b1",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-111536716155/backup-input.json",
+      "action": "backup",
+      "profile": "85c517f8-b6d5-4870-aaf0-69fb55a8de23",
+      "store": "49f9b0d5-6301-4ceb-8f53-c073e7beda14",
+      "namespace": "9dae633a-4baa-499f-8f6e-382506fa99b5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-111536716155/keychain-create-input.json",
+      "action": "keychain-create",
+      "profile": "85c517f8-b6d5-4870-aaf0-69fb55a8de23",
+      "store": "49f9b0d5-6301-4ceb-8f53-c073e7beda14",
+      "namespace": "9dae633a-4baa-499f-8f6e-382506fa99b5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-111536716155/keychain-restart-input.json",
+      "action": "keychain-restart",
+      "profile": "85c517f8-b6d5-4870-aaf0-69fb55a8de23",
+      "store": "49f9b0d5-6301-4ceb-8f53-c073e7beda14",
+      "namespace": "9dae633a-4baa-499f-8f6e-382506fa99b5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-112233430866/backup-input.json",
+      "action": "backup",
+      "profile": "329fe720-2882-4075-917c-c1d142a07447",
+      "store": "b8fa555b-2c44-497c-9a53-0e9e2cdd2844",
+      "namespace": "9c71cccd-d407-4e05-8172-49fca1e6e0ae",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-112233430866/keychain-create-input.json",
+      "action": "keychain-create",
+      "profile": "329fe720-2882-4075-917c-c1d142a07447",
+      "store": "b8fa555b-2c44-497c-9a53-0e9e2cdd2844",
+      "namespace": "9c71cccd-d407-4e05-8172-49fca1e6e0ae",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-112233430866/keychain-restart-input.json",
+      "action": "keychain-restart",
+      "profile": "329fe720-2882-4075-917c-c1d142a07447",
+      "store": "b8fa555b-2c44-497c-9a53-0e9e2cdd2844",
+      "namespace": "9c71cccd-d407-4e05-8172-49fca1e6e0ae",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-113238831637/backup-input.json",
+      "action": "backup",
+      "profile": "85b8a551-b271-4c89-b77a-3f2b7438b232",
+      "store": "93e60509-5079-4a3d-9e92-850646201aa5",
+      "namespace": "0651bebc-dae1-4413-934b-6f4301fb297a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-113238831637/keychain-create-input.json",
+      "action": "keychain-create",
+      "profile": "85b8a551-b271-4c89-b77a-3f2b7438b232",
+      "store": "93e60509-5079-4a3d-9e92-850646201aa5",
+      "namespace": "0651bebc-dae1-4413-934b-6f4301fb297a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-security-native-113238831637/keychain-restart-input.json",
+      "action": "keychain-restart",
+      "profile": "85b8a551-b271-4c89-b77a-3f2b7438b232",
+      "store": "93e60509-5079-4a3d-9e92-850646201aa5",
+      "namespace": "0651bebc-dae1-4413-934b-6f4301fb297a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-A-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+      "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+      "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-A-after-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+      "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+      "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-A-full-clear-input.json",
+      "action": "cache-full-clear",
+      "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+      "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+      "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-A-remove-input.json",
+      "action": "cache-remove",
+      "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+      "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+      "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-A-restart-input.json",
+      "action": "cache-read",
+      "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+      "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+      "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-A-seed-input.json",
+      "action": "cache-seed",
+      "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+      "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+      "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-A-selected-clear-input.json",
+      "action": "cache-selected-clear",
+      "profile": "40b7507d-57d2-4a87-bea5-dce4a3f433d6",
+      "store": "a05c47ff-857e-4d93-90ea-63c803fe6aab",
+      "namespace": "9d3f2bd2-68cf-4ff5-9c15-ddee723606b0",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-B-remove-input.json",
+      "action": "cache-remove",
+      "profile": "7fd57db9-52c1-430c-9b39-7b6df309c0ae",
+      "store": "3b536cd6-da7e-4af3-a476-ffc1ec26320d",
+      "namespace": "962c68bf-24b5-402c-98ea-25cb272087e3",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/cache-B-seed-input.json",
+      "action": "cache-seed",
+      "profile": "7fd57db9-52c1-430c-9b39-7b6df309c0ae",
+      "store": "3b536cd6-da7e-4af3-a476-ffc1ec26320d",
+      "namespace": "962c68bf-24b5-402c-98ea-25cb272087e3",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111231880085/lock-input.json",
+      "action": "lock",
+      "profile": "0e8914d1-b3bd-407b-9598-dd78c343b27a",
+      "store": "c52b6ebd-3402-4228-afdb-18a3251a6582",
+      "namespace": "b8d1d91b-1c28-4695-a0d3-9bcd011f26b4",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-A-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "f1d192bc-8ebc-492f-8c04-b760f44bc57c",
+      "store": "9a6399f3-f042-4917-92ca-ebddce52b3c1",
+      "namespace": "23a9c134-5c00-4dc5-92c9-3a18dd3afab5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-A-after-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "f1d192bc-8ebc-492f-8c04-b760f44bc57c",
+      "store": "9a6399f3-f042-4917-92ca-ebddce52b3c1",
+      "namespace": "23a9c134-5c00-4dc5-92c9-3a18dd3afab5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-A-full-clear-input.json",
+      "action": "cache-full-clear",
+      "profile": "f1d192bc-8ebc-492f-8c04-b760f44bc57c",
+      "store": "9a6399f3-f042-4917-92ca-ebddce52b3c1",
+      "namespace": "23a9c134-5c00-4dc5-92c9-3a18dd3afab5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-A-remove-input.json",
+      "action": "cache-remove",
+      "profile": "f1d192bc-8ebc-492f-8c04-b760f44bc57c",
+      "store": "9a6399f3-f042-4917-92ca-ebddce52b3c1",
+      "namespace": "23a9c134-5c00-4dc5-92c9-3a18dd3afab5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-A-restart-input.json",
+      "action": "cache-read",
+      "profile": "f1d192bc-8ebc-492f-8c04-b760f44bc57c",
+      "store": "9a6399f3-f042-4917-92ca-ebddce52b3c1",
+      "namespace": "23a9c134-5c00-4dc5-92c9-3a18dd3afab5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-A-seed-input.json",
+      "action": "cache-seed",
+      "profile": "f1d192bc-8ebc-492f-8c04-b760f44bc57c",
+      "store": "9a6399f3-f042-4917-92ca-ebddce52b3c1",
+      "namespace": "23a9c134-5c00-4dc5-92c9-3a18dd3afab5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-A-selected-clear-input.json",
+      "action": "cache-selected-clear",
+      "profile": "f1d192bc-8ebc-492f-8c04-b760f44bc57c",
+      "store": "9a6399f3-f042-4917-92ca-ebddce52b3c1",
+      "namespace": "23a9c134-5c00-4dc5-92c9-3a18dd3afab5",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-B-remove-input.json",
+      "action": "cache-remove",
+      "profile": "a237ab44-7ca2-405b-9695-6a9a03130fa9",
+      "store": "c0600d9a-08b1-44c8-a35a-a9e99cf3861e",
+      "namespace": "1db82f98-eb64-4789-9ce0-e82db7140968",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/cache-B-seed-input.json",
+      "action": "cache-seed",
+      "profile": "a237ab44-7ca2-405b-9695-6a9a03130fa9",
+      "store": "c0600d9a-08b1-44c8-a35a-a9e99cf3861e",
+      "namespace": "1db82f98-eb64-4789-9ce0-e82db7140968",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-111542436847/lock-input.json",
+      "action": "lock",
+      "profile": "2dc6144a-0b2c-4996-b092-5c41e33dba0c",
+      "store": "816df068-8709-4099-8289-55f6f55d6073",
+      "namespace": "13c37e30-411f-4d31-a236-01b34bfdd847",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-A-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+      "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+      "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-A-after-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+      "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+      "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-A-full-clear-input.json",
+      "action": "cache-full-clear",
+      "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+      "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+      "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-A-remove-input.json",
+      "action": "cache-remove",
+      "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+      "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+      "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-A-restart-input.json",
+      "action": "cache-read",
+      "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+      "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+      "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-A-seed-input.json",
+      "action": "cache-seed",
+      "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+      "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+      "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-A-selected-clear-input.json",
+      "action": "cache-selected-clear",
+      "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+      "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+      "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-B-remove-input.json",
+      "action": "cache-remove",
+      "profile": "8c8eba17-857f-4ce8-8b65-786cedf66036",
+      "store": "5ae5d525-5e60-4516-b6b5-7e6df98ba2e1",
+      "namespace": "ed7f0213-fc92-483c-b62b-53f41d6546d1",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/cache-B-seed-input.json",
+      "action": "cache-seed",
+      "profile": "8c8eba17-857f-4ce8-8b65-786cedf66036",
+      "store": "5ae5d525-5e60-4516-b6b5-7e6df98ba2e1",
+      "namespace": "ed7f0213-fc92-483c-b62b-53f41d6546d1",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/lock-input.json",
+      "action": "lock",
+      "profile": "bf1cae60-b7f1-4872-b4fe-f63adcc18a88",
+      "store": "0fa6c6fa-e444-4174-b1ef-fb5b1b09f895",
+      "namespace": "7637dd21-d6a7-4d0c-b298-6f88b9a01247",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-112239318384/lock-navigation-input.json",
+      "action": "lock-navigation",
+      "profile": "2a3da272-68af-4f27-90fc-34bbe45cfaf1",
+      "store": "cf4471eb-8fd9-4daf-bc9f-69192b600376",
+      "namespace": "7637dd21-d6a7-4d0c-b298-6f88b9a01247",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-A-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+      "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+      "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-A-after-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+      "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+      "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-A-full-clear-input.json",
+      "action": "cache-full-clear",
+      "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+      "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+      "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-A-remove-input.json",
+      "action": "cache-remove",
+      "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+      "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+      "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-A-restart-input.json",
+      "action": "cache-read",
+      "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+      "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+      "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-A-seed-input.json",
+      "action": "cache-seed",
+      "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+      "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+      "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-A-selected-clear-input.json",
+      "action": "cache-selected-clear",
+      "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+      "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+      "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-B-remove-input.json",
+      "action": "cache-remove",
+      "profile": "ca90f86d-6eb5-4a45-97ee-d0c9ae968540",
+      "store": "8141c95a-4e1a-4e77-acbb-82b56bedb95b",
+      "namespace": "ac59f529-1cc2-4300-a7ce-c5cf36ff1b65",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/cache-B-seed-input.json",
+      "action": "cache-seed",
+      "profile": "ca90f86d-6eb5-4a45-97ee-d0c9ae968540",
+      "store": "8141c95a-4e1a-4e77-acbb-82b56bedb95b",
+      "namespace": "ac59f529-1cc2-4300-a7ce-c5cf36ff1b65",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/lock-input.json",
+      "action": "lock",
+      "profile": "73a33e40-2b02-4764-9c52-a95b5aeec2a6",
+      "store": "0565d6f3-b755-441c-89a3-0c2eceb8b059",
+      "namespace": "c3da4559-0896-4873-ba34-fdf6a7046a9c",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/lock-navigation-input.json",
+      "action": "lock-navigation",
+      "profile": "6cdfe3b8-82a4-4ba8-8d17-406956b7e83d",
+      "store": "d1122401-bb21-46a5-a6f1-2667b7e6da46",
+      "namespace": "c3da4559-0896-4873-ba34-fdf6a7046a9c",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-113245864607/permission-input.json",
+      "action": "permission",
+      "profile": "79f52a5d-245d-485a-922e-13a78c6ddc93",
+      "store": "1f4e405c-62a7-4b39-a270-00dadf1b48f3",
+      "namespace": "c3da4559-0896-4873-ba34-fdf6a7046a9c",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-after-abrupt-input.json",
+      "action": "cache-read",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-full-clear-input.json",
+      "action": "cache-full-clear",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-reconstruct-input.json",
+      "action": "cache-reconstruct",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-remove-input.json",
+      "action": "cache-remove",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-restart-input.json",
+      "action": "cache-read",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-seed-input.json",
+      "action": "cache-seed",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-selected-clear-input.json",
+      "action": "cache-selected-clear",
+      "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+      "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+      "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-B-remove-input.json",
+      "action": "cache-remove",
+      "profile": "45eab399-b1f2-4aa2-a96b-0ec5789a3961",
+      "store": "e74fea01-c011-4ece-9720-b7abb7c07e5d",
+      "namespace": "ba95fc28-f38a-4c0d-9ac6-6ea246125cbd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-B-seed-input.json",
+      "action": "cache-seed",
+      "profile": "45eab399-b1f2-4aa2-a96b-0ec5789a3961",
+      "store": "e74fea01-c011-4ece-9720-b7abb7c07e5d",
+      "namespace": "ba95fc28-f38a-4c0d-9ac6-6ea246125cbd",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/lock-input.json",
+      "action": "lock",
+      "profile": "e2db4610-462f-4b24-855b-2824a43d5c5c",
+      "store": "458486d2-3ee7-4186-9502-8457d714c231",
+      "namespace": "30545554-96f1-426b-b7d4-c5864f75702a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/lock-interrupted-input.json",
+      "action": "lock",
+      "profile": "938864d1-27a3-430b-a4d7-666a3e13eb94",
+      "store": "a5efbb53-97b8-413b-a228-81178277ea11",
+      "namespace": "30545554-96f1-426b-b7d4-c5864f75702a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/lock-navigation-input.json",
+      "action": "lock-navigation",
+      "profile": "f31dabb2-5735-4233-bbbe-64b28d98d3f9",
+      "store": "6faa91bb-831a-4ea5-b921-0da4cb7066d2",
+      "namespace": "30545554-96f1-426b-b7d4-c5864f75702a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/lock-restart-input.json",
+      "action": "lock-restart",
+      "profile": "938864d1-27a3-430b-a4d7-666a3e13eb94",
+      "store": "a5efbb53-97b8-413b-a228-81178277ea11",
+      "namespace": "30545554-96f1-426b-b7d4-c5864f75702a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/permission-input.json",
+      "action": "permission",
+      "profile": "33438788-a828-4198-aba6-3456458a5e38",
+      "store": "9c8a95e9-bb3c-4826-9a99-ab2b413a74fb",
+      "namespace": "30545554-96f1-426b-b7d4-c5864f75702a",
+      "profiles": null,
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/01-seed-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/02-restart-input.json",
+      "action": "verify",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/02b-switch-input.json",
+      "action": "switch",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/03-private-input.json",
+      "action": "private",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/03b-private-interrupted-input.json",
+      "action": "private",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/03c-private-restart-input.json",
+      "action": "private",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/04-clear-input.json",
+      "action": "clear",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/05-remove-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+        },
+        {
+          "name": "B",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-00-creation-intent-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "690af310-14d1-447c-8202-33587deba9b4",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9bc28de0-7eed-4ec7-8974-d0c00073aebd",
+          "store": "fe971fbe-d0d8-42f7-aaa0-52b2c0f9b9a4"
+        },
+        {
+          "name": "B",
+          "profile": "af7293f8-77a4-4110-959e-d609666df9e9",
+          "store": "ad63609c-04e4-4fb4-a793-0f1c82fa70a7"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-00-creation-intent-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "690af310-14d1-447c-8202-33587deba9b4",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "9bc28de0-7eed-4ec7-8974-d0c00073aebd",
+          "store": "fe971fbe-d0d8-42f7-aaa0-52b2c0f9b9a4"
+        },
+        {
+          "name": "B",
+          "profile": "af7293f8-77a4-4110-959e-d609666df9e9",
+          "store": "ad63609c-04e4-4fb4-a793-0f1c82fa70a7"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-01-persistent-factory-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "1c0b17f8-42d3-4a71-9ee1-af91f61d7b65",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "36723b43-59a7-403f-a335-07a30dd07b70",
+          "store": "8b5e5f10-2270-482c-a2ba-909f53f0feba"
+        },
+        {
+          "name": "B",
+          "profile": "a1cd10ba-d515-44c7-a9f4-f1e3afd34147",
+          "store": "77584e8b-a2d8-4233-ae74-df0d38a484f0"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-01-persistent-factory-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "1c0b17f8-42d3-4a71-9ee1-af91f61d7b65",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "36723b43-59a7-403f-a335-07a30dd07b70",
+          "store": "8b5e5f10-2270-482c-a2ba-909f53f0feba"
+        },
+        {
+          "name": "B",
+          "profile": "a1cd10ba-d515-44c7-a9f4-f1e3afd34147",
+          "store": "77584e8b-a2d8-4233-ae74-df0d38a484f0"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-02-assignment-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "83d7eb34-1e5c-423c-82de-9a311b9d6723",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "fc39e987-1938-4538-abdb-cb3650af0101",
+          "store": "050a1818-4048-40cd-aab0-953bda85fd8f"
+        },
+        {
+          "name": "B",
+          "profile": "562b2b8b-18e1-48ba-9248-e8101edc5574",
+          "store": "2bd1516a-a0cf-4833-8ac8-1b5769b832fb"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-02-assignment-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "83d7eb34-1e5c-423c-82de-9a311b9d6723",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "fc39e987-1938-4538-abdb-cb3650af0101",
+          "store": "050a1818-4048-40cd-aab0-953bda85fd8f"
+        },
+        {
+          "name": "B",
+          "profile": "562b2b8b-18e1-48ba-9248-e8101edc5574",
+          "store": "2bd1516a-a0cf-4833-8ac8-1b5769b832fb"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-03-construction-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "c816aaca-3622-4624-88c5-d17824f327da",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "bac580f8-c5f8-4050-bc23-66ef289f8221",
+          "store": "0baea61a-eeb2-409c-90ae-9ee557f3ae5e"
+        },
+        {
+          "name": "B",
+          "profile": "df4f3628-7fda-487b-8472-9bfebc622547",
+          "store": "aaca9982-782b-4d31-b6ee-de881cdb0f4c"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-03-construction-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "c816aaca-3622-4624-88c5-d17824f327da",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "bac580f8-c5f8-4050-bc23-66ef289f8221",
+          "store": "0baea61a-eeb2-409c-90ae-9ee557f3ae5e"
+        },
+        {
+          "name": "B",
+          "profile": "df4f3628-7fda-487b-8472-9bfebc622547",
+          "store": "aaca9982-782b-4d31-b6ee-de881cdb0f4c"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-04-publication-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "0f6deb63-4d65-4667-a24b-8458613b8fae",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "42ba1b8c-ea7d-42d5-a67c-24ed1297a0c9",
+          "store": "f540a6d4-95b9-44d1-b8ff-22489f7a1aba"
+        },
+        {
+          "name": "B",
+          "profile": "3d74abc7-81ec-422c-b09f-c89790b99fed",
+          "store": "0cefb290-2356-4704-b8c9-1a1baa12ddbe"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-04-publication-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "0f6deb63-4d65-4667-a24b-8458613b8fae",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "42ba1b8c-ea7d-42d5-a67c-24ed1297a0c9",
+          "store": "f540a6d4-95b9-44d1-b8ff-22489f7a1aba"
+        },
+        {
+          "name": "B",
+          "profile": "3d74abc7-81ec-422c-b09f-c89790b99fed",
+          "store": "0cefb290-2356-4704-b8c9-1a1baa12ddbe"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-05-clear-request-input.json",
+      "action": "clear",
+      "profile": null,
+      "store": null,
+      "namespace": "6b01cfb8-0625-4008-b960-17af0b08b76e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "1094dc80-5169-4338-856b-00285bb77a76",
+          "store": "906feca8-e32d-4f87-be19-4f7924b5caa7"
+        },
+        {
+          "name": "B",
+          "profile": "731a8720-8a9f-419c-81a2-b902380af703",
+          "store": "28eecf4c-a65e-4dd8-a1b1-4443da5e309f"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-05-clear-request-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "6b01cfb8-0625-4008-b960-17af0b08b76e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "1094dc80-5169-4338-856b-00285bb77a76",
+          "store": "906feca8-e32d-4f87-be19-4f7924b5caa7"
+        },
+        {
+          "name": "B",
+          "profile": "731a8720-8a9f-419c-81a2-b902380af703",
+          "store": "28eecf4c-a65e-4dd8-a1b1-4443da5e309f"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-05-clear-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "6b01cfb8-0625-4008-b960-17af0b08b76e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "1094dc80-5169-4338-856b-00285bb77a76",
+          "store": "906feca8-e32d-4f87-be19-4f7924b5caa7"
+        },
+        {
+          "name": "B",
+          "profile": "731a8720-8a9f-419c-81a2-b902380af703",
+          "store": "28eecf4c-a65e-4dd8-a1b1-4443da5e309f"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-06-clear-callback-input.json",
+      "action": "clear",
+      "profile": null,
+      "store": null,
+      "namespace": "93b8b2a4-3c88-4c9d-9a9d-c665d0417571",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "55a27ee2-665c-47b2-85bb-a5ba731cb208",
+          "store": "c401568d-aad1-4dde-9ceb-1b5c98512241"
+        },
+        {
+          "name": "B",
+          "profile": "4378293c-73af-4d5c-b0db-ea591b39ba70",
+          "store": "479abfe5-38c3-4568-8fec-2b4e582f514f"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-06-clear-callback-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "93b8b2a4-3c88-4c9d-9a9d-c665d0417571",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "55a27ee2-665c-47b2-85bb-a5ba731cb208",
+          "store": "c401568d-aad1-4dde-9ceb-1b5c98512241"
+        },
+        {
+          "name": "B",
+          "profile": "4378293c-73af-4d5c-b0db-ea591b39ba70",
+          "store": "479abfe5-38c3-4568-8fec-2b4e582f514f"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-06-clear-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "93b8b2a4-3c88-4c9d-9a9d-c665d0417571",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "55a27ee2-665c-47b2-85bb-a5ba731cb208",
+          "store": "c401568d-aad1-4dde-9ceb-1b5c98512241"
+        },
+        {
+          "name": "B",
+          "profile": "4378293c-73af-4d5c-b0db-ea591b39ba70",
+          "store": "479abfe5-38c3-4568-8fec-2b4e582f514f"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-07-retire-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "d5f1f7ec-e582-4f4e-8dd0-1edcfdc7c3ce",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a22a903a-367a-4360-9675-296afeb59420",
+          "store": "6d51961e-c25c-4ebe-8c38-f944d9fd691f"
+        },
+        {
+          "name": "B",
+          "profile": "5d9414ac-53b5-4f64-944a-9ae064848d1e",
+          "store": "6f2f98a7-ba82-45f3-b27f-3bcd2c4ceed0"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-07-retire-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "d5f1f7ec-e582-4f4e-8dd0-1edcfdc7c3ce",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a22a903a-367a-4360-9675-296afeb59420",
+          "store": "6d51961e-c25c-4ebe-8c38-f944d9fd691f"
+        },
+        {
+          "name": "B",
+          "profile": "5d9414ac-53b5-4f64-944a-9ae064848d1e",
+          "store": "6f2f98a7-ba82-45f3-b27f-3bcd2c4ceed0"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-07-retire-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "d5f1f7ec-e582-4f4e-8dd0-1edcfdc7c3ce",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "a22a903a-367a-4360-9675-296afeb59420",
+          "store": "6d51961e-c25c-4ebe-8c38-f944d9fd691f"
+        },
+        {
+          "name": "B",
+          "profile": "5d9414ac-53b5-4f64-944a-9ae064848d1e",
+          "store": "6f2f98a7-ba82-45f3-b27f-3bcd2c4ceed0"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-08-remove-request-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "bd894515-8531-42a5-958f-02b8d97329b3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "fb5bf9d0-d98d-48eb-a176-8f1e7cb864c2",
+          "store": "1158f29e-155f-456b-8075-962864fb0773"
+        },
+        {
+          "name": "B",
+          "profile": "296ac460-802b-466a-aa7d-2b0897165a42",
+          "store": "48aa3e63-5b7e-4c27-8420-2a8d63e3d654"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-08-remove-request-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "bd894515-8531-42a5-958f-02b8d97329b3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "fb5bf9d0-d98d-48eb-a176-8f1e7cb864c2",
+          "store": "1158f29e-155f-456b-8075-962864fb0773"
+        },
+        {
+          "name": "B",
+          "profile": "296ac460-802b-466a-aa7d-2b0897165a42",
+          "store": "48aa3e63-5b7e-4c27-8420-2a8d63e3d654"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-08-remove-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "bd894515-8531-42a5-958f-02b8d97329b3",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "fb5bf9d0-d98d-48eb-a176-8f1e7cb864c2",
+          "store": "1158f29e-155f-456b-8075-962864fb0773"
+        },
+        {
+          "name": "B",
+          "profile": "296ac460-802b-466a-aa7d-2b0897165a42",
+          "store": "48aa3e63-5b7e-4c27-8420-2a8d63e3d654"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-09-remove-callback-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "50b08eda-9cf8-46bd-9f80-abdef50a6abf",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "cac471eb-60e6-49ff-8f79-3a01536e02cb",
+          "store": "45d1b74d-f700-49c9-8856-2ba4db2f2812"
+        },
+        {
+          "name": "B",
+          "profile": "3edc508b-3865-4974-9cbf-c6067ebf8fbb",
+          "store": "241518b6-fd5d-4d75-ae0b-c3c4d2802eaf"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-09-remove-callback-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "50b08eda-9cf8-46bd-9f80-abdef50a6abf",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "cac471eb-60e6-49ff-8f79-3a01536e02cb",
+          "store": "45d1b74d-f700-49c9-8856-2ba4db2f2812"
+        },
+        {
+          "name": "B",
+          "profile": "3edc508b-3865-4974-9cbf-c6067ebf8fbb",
+          "store": "241518b6-fd5d-4d75-ae0b-c3c4d2802eaf"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-09-remove-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "50b08eda-9cf8-46bd-9f80-abdef50a6abf",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "cac471eb-60e6-49ff-8f79-3a01536e02cb",
+          "store": "45d1b74d-f700-49c9-8856-2ba4db2f2812"
+        },
+        {
+          "name": "B",
+          "profile": "3edc508b-3865-4974-9cbf-c6067ebf8fbb",
+          "store": "241518b6-fd5d-4d75-ae0b-c3c4d2802eaf"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-10-enumeration-input.json",
+      "action": "verify",
+      "profile": null,
+      "store": null,
+      "namespace": "163c7607-e59a-469f-81d8-de1c006a810a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "0cdf4c6a-32ff-413f-b290-02fff4c8d125",
+          "store": "6f06d54f-c621-405b-a2be-7d12e6261061"
+        },
+        {
+          "name": "B",
+          "profile": "2420d93e-2984-46cb-94d2-4feb024cd177",
+          "store": "a09eb004-ae27-4274-b621-dfb4edbf65b8"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-10-enumeration-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "163c7607-e59a-469f-81d8-de1c006a810a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "0cdf4c6a-32ff-413f-b290-02fff4c8d125",
+          "store": "6f06d54f-c621-405b-a2be-7d12e6261061"
+        },
+        {
+          "name": "B",
+          "profile": "2420d93e-2984-46cb-94d2-4feb024cd177",
+          "store": "a09eb004-ae27-4274-b621-dfb4edbf65b8"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/cut-10-enumeration-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "163c7607-e59a-469f-81d8-de1c006a810a",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "0cdf4c6a-32ff-413f-b290-02fff4c8d125",
+          "store": "6f06d54f-c621-405b-a2be-7d12e6261061"
+        },
+        {
+          "name": "B",
+          "profile": "2420d93e-2984-46cb-94d2-4feb024cd177",
+          "store": "a09eb004-ae27-4274-b621-dfb4edbf65b8"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/publication-failure-input.json",
+      "action": "publication-failure",
+      "profile": null,
+      "store": null,
+      "namespace": "a1d7090f-1da7-48a0-98ce-485054ce7d69",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "7995ef72-400a-45e5-af4d-098dc9d7e435",
+          "store": "f02750e5-3e4a-496c-9722-9eb5b17b55fb"
+        },
+        {
+          "name": "B",
+          "profile": "06e1361d-c47d-460c-a871-0368eab118fb",
+          "store": "15c44cff-e14e-4138-8b48-dc64a6f95a78"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-112249758061/publication-failure-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "a1d7090f-1da7-48a0-98ce-485054ce7d69",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "7995ef72-400a-45e5-af4d-098dc9d7e435",
+          "store": "f02750e5-3e4a-496c-9722-9eb5b17b55fb"
+        },
+        {
+          "name": "B",
+          "profile": "06e1361d-c47d-460c-a871-0368eab118fb",
+          "store": "15c44cff-e14e-4138-8b48-dc64a6f95a78"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/00-original-observation-input.json",
+      "action": "enumerate-original",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/01-seed-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/02-restart-input.json",
+      "action": "verify",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/02b-switch-input.json",
+      "action": "switch",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/03-private-input.json",
+      "action": "private",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/03b-private-interrupted-input.json",
+      "action": "private",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/03c-private-restart-input.json",
+      "action": "private",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/04-clear-input.json",
+      "action": "clear",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/05-remove-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "9b48d248-3f3a-4c25-b142-07373c69835c",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c7b1f506-4bb1-425e-98e6-d70751c45e05",
+          "store": "88595edb-6dd3-4412-b55d-a3419e2d4957"
+        },
+        {
+          "name": "B",
+          "profile": "9453c227-e4cd-4607-bee3-34d816572426",
+          "store": "03e43ada-6eb4-4037-a139-6ccaaf3c603d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-00-creation-intent-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "ac55a70a-ab8d-4b02-bb31-4554fe38d42f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "59df7ef0-5e58-4990-bd62-f9b9cf73d7c7",
+          "store": "5ea282eb-78af-4afd-a0ce-d59dfda3084d"
+        },
+        {
+          "name": "B",
+          "profile": "436938ad-c730-48d4-976e-798ab75aad9f",
+          "store": "0212d650-8f07-4ec2-9052-7b3d8563783d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-00-creation-intent-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "ac55a70a-ab8d-4b02-bb31-4554fe38d42f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "59df7ef0-5e58-4990-bd62-f9b9cf73d7c7",
+          "store": "5ea282eb-78af-4afd-a0ce-d59dfda3084d"
+        },
+        {
+          "name": "B",
+          "profile": "436938ad-c730-48d4-976e-798ab75aad9f",
+          "store": "0212d650-8f07-4ec2-9052-7b3d8563783d"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-01-persistent-factory-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "7f9c0294-6d8d-4c45-a550-9487e07657df",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "0dddf2c6-9e7b-4f05-be16-a66fae2b4e1d",
+          "store": "ee1f7d05-9d08-43d0-8ba8-72be00dbda68"
+        },
+        {
+          "name": "B",
+          "profile": "e8a9372a-ecaa-46fa-a30b-080c581f9806",
+          "store": "5a9221c2-2b36-49ec-a8a8-9a6e6e3f380e"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-01-persistent-factory-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "7f9c0294-6d8d-4c45-a550-9487e07657df",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "0dddf2c6-9e7b-4f05-be16-a66fae2b4e1d",
+          "store": "ee1f7d05-9d08-43d0-8ba8-72be00dbda68"
+        },
+        {
+          "name": "B",
+          "profile": "e8a9372a-ecaa-46fa-a30b-080c581f9806",
+          "store": "5a9221c2-2b36-49ec-a8a8-9a6e6e3f380e"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-02-assignment-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "49e2292c-862d-4b41-906a-cbf9793b46db",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "1b649a5c-bb6d-439a-a984-a6cc22f6f3ed",
+          "store": "8538bb26-811e-465a-95d8-5d8052b535ae"
+        },
+        {
+          "name": "B",
+          "profile": "476cf038-4c13-483b-9ae5-cdfbf5afdc1d",
+          "store": "bd2763b4-cc2e-4b47-8feb-d9571005cfea"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-02-assignment-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "49e2292c-862d-4b41-906a-cbf9793b46db",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "1b649a5c-bb6d-439a-a984-a6cc22f6f3ed",
+          "store": "8538bb26-811e-465a-95d8-5d8052b535ae"
+        },
+        {
+          "name": "B",
+          "profile": "476cf038-4c13-483b-9ae5-cdfbf5afdc1d",
+          "store": "bd2763b4-cc2e-4b47-8feb-d9571005cfea"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-03-construction-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "a67912db-c6e8-4e11-a233-677a6a9625ac",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "8550c7c8-8147-48ee-8a69-b2ed27740bd4",
+          "store": "07a0b3a6-8902-4f21-8438-d16c9b073898"
+        },
+        {
+          "name": "B",
+          "profile": "2e4906b0-19b1-41b5-b089-19eda1baa0a4",
+          "store": "c8d1e2bc-74c4-4d6c-91d9-3383a047f005"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-03-construction-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "a67912db-c6e8-4e11-a233-677a6a9625ac",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "8550c7c8-8147-48ee-8a69-b2ed27740bd4",
+          "store": "07a0b3a6-8902-4f21-8438-d16c9b073898"
+        },
+        {
+          "name": "B",
+          "profile": "2e4906b0-19b1-41b5-b089-19eda1baa0a4",
+          "store": "c8d1e2bc-74c4-4d6c-91d9-3383a047f005"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-04-publication-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "a1e4b2c3-5f61-4b82-ae3f-46511fbdf313",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c48b0e59-259b-486e-bdad-5710f38e9d1f",
+          "store": "9ee868fe-7b4a-432a-a993-ccd6ef7bcb56"
+        },
+        {
+          "name": "B",
+          "profile": "c7660550-c907-46c8-ba12-1241b8075141",
+          "store": "a4ce1798-4d37-4eb5-a512-96efb0a5d52b"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-04-publication-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "a1e4b2c3-5f61-4b82-ae3f-46511fbdf313",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "c48b0e59-259b-486e-bdad-5710f38e9d1f",
+          "store": "9ee868fe-7b4a-432a-a993-ccd6ef7bcb56"
+        },
+        {
+          "name": "B",
+          "profile": "c7660550-c907-46c8-ba12-1241b8075141",
+          "store": "a4ce1798-4d37-4eb5-a512-96efb0a5d52b"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-05-clear-request-input.json",
+      "action": "clear",
+      "profile": null,
+      "store": null,
+      "namespace": "f20269e5-4194-4e81-8cc9-bd3194aa73d5",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "e0c44ca9-b77c-47b6-bf04-4922d3f52077",
+          "store": "20e3df52-8b4a-45e0-bded-cee52c734434"
+        },
+        {
+          "name": "B",
+          "profile": "27914a9e-26c3-4556-99e9-b7fd4a544da8",
+          "store": "f0fdca07-51c7-4460-8816-753e5bf518fc"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-05-clear-request-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "f20269e5-4194-4e81-8cc9-bd3194aa73d5",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "e0c44ca9-b77c-47b6-bf04-4922d3f52077",
+          "store": "20e3df52-8b4a-45e0-bded-cee52c734434"
+        },
+        {
+          "name": "B",
+          "profile": "27914a9e-26c3-4556-99e9-b7fd4a544da8",
+          "store": "f0fdca07-51c7-4460-8816-753e5bf518fc"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-05-clear-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "f20269e5-4194-4e81-8cc9-bd3194aa73d5",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "e0c44ca9-b77c-47b6-bf04-4922d3f52077",
+          "store": "20e3df52-8b4a-45e0-bded-cee52c734434"
+        },
+        {
+          "name": "B",
+          "profile": "27914a9e-26c3-4556-99e9-b7fd4a544da8",
+          "store": "f0fdca07-51c7-4460-8816-753e5bf518fc"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-06-clear-callback-input.json",
+      "action": "clear",
+      "profile": null,
+      "store": null,
+      "namespace": "9e495510-66b7-46c5-99a2-2d2bdca413b2",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "cb0d930b-7864-461f-a979-a2c425038541",
+          "store": "8ca009fa-ebe3-44a6-9a7f-4febfafb1cc9"
+        },
+        {
+          "name": "B",
+          "profile": "0b680a0e-ca84-4661-aaca-175caf2705b4",
+          "store": "5a5b96d4-b27b-4f88-8bd7-6e7417f03d48"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-06-clear-callback-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "9e495510-66b7-46c5-99a2-2d2bdca413b2",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "cb0d930b-7864-461f-a979-a2c425038541",
+          "store": "8ca009fa-ebe3-44a6-9a7f-4febfafb1cc9"
+        },
+        {
+          "name": "B",
+          "profile": "0b680a0e-ca84-4661-aaca-175caf2705b4",
+          "store": "5a5b96d4-b27b-4f88-8bd7-6e7417f03d48"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-06-clear-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "9e495510-66b7-46c5-99a2-2d2bdca413b2",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "cb0d930b-7864-461f-a979-a2c425038541",
+          "store": "8ca009fa-ebe3-44a6-9a7f-4febfafb1cc9"
+        },
+        {
+          "name": "B",
+          "profile": "0b680a0e-ca84-4661-aaca-175caf2705b4",
+          "store": "5a5b96d4-b27b-4f88-8bd7-6e7417f03d48"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-07-retire-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "94f7c8f2-6a2b-405c-9511-12ab63f5850e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b55d39c4-d0a5-4998-8142-333eaae040b1",
+          "store": "c39b077d-c9c7-4cb2-969b-80f4a850e12b"
+        },
+        {
+          "name": "B",
+          "profile": "2f38cdcc-792f-4dca-9e30-b05180701a61",
+          "store": "9c7fd1cc-3a84-4106-a0e7-d0049fac5c59"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-07-retire-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "94f7c8f2-6a2b-405c-9511-12ab63f5850e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b55d39c4-d0a5-4998-8142-333eaae040b1",
+          "store": "c39b077d-c9c7-4cb2-969b-80f4a850e12b"
+        },
+        {
+          "name": "B",
+          "profile": "2f38cdcc-792f-4dca-9e30-b05180701a61",
+          "store": "9c7fd1cc-3a84-4106-a0e7-d0049fac5c59"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-07-retire-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "94f7c8f2-6a2b-405c-9511-12ab63f5850e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "b55d39c4-d0a5-4998-8142-333eaae040b1",
+          "store": "c39b077d-c9c7-4cb2-969b-80f4a850e12b"
+        },
+        {
+          "name": "B",
+          "profile": "2f38cdcc-792f-4dca-9e30-b05180701a61",
+          "store": "9c7fd1cc-3a84-4106-a0e7-d0049fac5c59"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-08-remove-request-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "a16cd07a-8e77-4673-aab8-55f5180d967f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f85adfdd-f0f3-43b5-9d18-a4eb8dde90c0",
+          "store": "5cad7aa1-a981-4ec1-98ed-e1fbcf4dbf63"
+        },
+        {
+          "name": "B",
+          "profile": "0b17042f-c964-42e9-8f7c-704858c31341",
+          "store": "81aa4460-af89-4c06-ada1-1fbcef611c69"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-08-remove-request-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "a16cd07a-8e77-4673-aab8-55f5180d967f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f85adfdd-f0f3-43b5-9d18-a4eb8dde90c0",
+          "store": "5cad7aa1-a981-4ec1-98ed-e1fbcf4dbf63"
+        },
+        {
+          "name": "B",
+          "profile": "0b17042f-c964-42e9-8f7c-704858c31341",
+          "store": "81aa4460-af89-4c06-ada1-1fbcef611c69"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-08-remove-request-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "a16cd07a-8e77-4673-aab8-55f5180d967f",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "f85adfdd-f0f3-43b5-9d18-a4eb8dde90c0",
+          "store": "5cad7aa1-a981-4ec1-98ed-e1fbcf4dbf63"
+        },
+        {
+          "name": "B",
+          "profile": "0b17042f-c964-42e9-8f7c-704858c31341",
+          "store": "81aa4460-af89-4c06-ada1-1fbcef611c69"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-09-remove-callback-input.json",
+      "action": "remove",
+      "profile": null,
+      "store": null,
+      "namespace": "581e8592-7dac-48ca-97be-f94bb47ca20e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "889b7f29-200b-4c4a-ad3f-e2617d8b489a",
+          "store": "b07ad0fd-a4ef-40c0-9b56-d448a0cb80e8"
+        },
+        {
+          "name": "B",
+          "profile": "48f0957b-5071-4893-bc16-07c507feef0d",
+          "store": "a5b747e6-311c-4e73-b345-65265337d4ea"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-09-remove-callback-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "581e8592-7dac-48ca-97be-f94bb47ca20e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "889b7f29-200b-4c4a-ad3f-e2617d8b489a",
+          "store": "b07ad0fd-a4ef-40c0-9b56-d448a0cb80e8"
+        },
+        {
+          "name": "B",
+          "profile": "48f0957b-5071-4893-bc16-07c507feef0d",
+          "store": "a5b747e6-311c-4e73-b345-65265337d4ea"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-09-remove-callback-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "581e8592-7dac-48ca-97be-f94bb47ca20e",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "889b7f29-200b-4c4a-ad3f-e2617d8b489a",
+          "store": "b07ad0fd-a4ef-40c0-9b56-d448a0cb80e8"
+        },
+        {
+          "name": "B",
+          "profile": "48f0957b-5071-4893-bc16-07c507feef0d",
+          "store": "a5b747e6-311c-4e73-b345-65265337d4ea"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-10-enumeration-input.json",
+      "action": "verify",
+      "profile": null,
+      "store": null,
+      "namespace": "e3cd4d9f-8b43-4998-9416-761adbd59947",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4f8caa9b-c4d6-471f-bb3c-9486fca87925",
+          "store": "11526e1d-a9d6-471b-a2e9-1e34bb8523ef"
+        },
+        {
+          "name": "B",
+          "profile": "f2692c4c-71dc-46ef-bb65-963943e1de67",
+          "store": "5506111d-b269-490b-af30-e6396917045b"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-10-enumeration-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "e3cd4d9f-8b43-4998-9416-761adbd59947",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4f8caa9b-c4d6-471f-bb3c-9486fca87925",
+          "store": "11526e1d-a9d6-471b-a2e9-1e34bb8523ef"
+        },
+        {
+          "name": "B",
+          "profile": "f2692c4c-71dc-46ef-bb65-963943e1de67",
+          "store": "5506111d-b269-490b-af30-e6396917045b"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/cut-10-enumeration-reconcile-input.json",
+      "action": "reconcile-uncertain",
+      "profile": null,
+      "store": null,
+      "namespace": "e3cd4d9f-8b43-4998-9416-761adbd59947",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "4f8caa9b-c4d6-471f-bb3c-9486fca87925",
+          "store": "11526e1d-a9d6-471b-a2e9-1e34bb8523ef"
+        },
+        {
+          "name": "B",
+          "profile": "f2692c4c-71dc-46ef-bb65-963943e1de67",
+          "store": "5506111d-b269-490b-af30-e6396917045b"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/publication-failure-input.json",
+      "action": "publication-failure",
+      "profile": null,
+      "store": null,
+      "namespace": "dbcf2c52-e592-42be-bf54-89409e89d698",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "7467f3c5-1175-4430-91d7-3080475c8d6e",
+          "store": "35d51388-7fe6-4c55-9527-ee16167ce096"
+        },
+        {
+          "name": "B",
+          "profile": "949b63ca-2cc5-45ea-a821-0c2987f6100b",
+          "store": "233f58e9-9677-4017-a33f-e82b6d93d429"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    },
+    {
+      "input": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/publication-failure-prepare-input.json",
+      "action": "seed",
+      "profile": null,
+      "store": null,
+      "namespace": "dbcf2c52-e592-42be-bf54-89409e89d698",
+      "profiles": [
+        {
+          "name": "A",
+          "profile": "7467f3c5-1175-4430-91d7-3080475c8d6e",
+          "store": "35d51388-7fe6-4c55-9527-ee16167ce096"
+        },
+        {
+          "name": "B",
+          "profile": "949b63ca-2cc5-45ea-a821-0c2987f6100b",
+          "store": "233f58e9-9677-4017-a33f-e82b6d93d429"
+        }
+      ],
+      "disposition": "See exact matching result/checkpoints. Failed/interrupted/locked resources preserved; no creating existence probe or broad cleanup."
+    }
+  ],
+  "canonical_normal_removals": [
+    "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-A-remove-result.json",
+    "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-webkit-native-114029856396/cache-B-remove-result.json",
+    "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/native-113327653483/05-remove-result.json"
+  ],
+  "lock_other_profiles": "Other-profile removal outcomes and UUIDs recorded in each lock result",
+  "permission_cleanup": "NOT_EXECUTED after native denial criterion failed; retired synthetic mapping/checkpoint retained",
+  "failed_and_interrupted_stages": "Preserved, not silently reset/reused/swept",
+  "Keychain": "Create never succeeded; synthetic namespaces retained for exact audit, no personal item touched",
+  "backup_files": "Exact owned temporary encrypted-fixture directory removed after native checks; no real download or user file deleted",
+  "original_historical_stores": "Only preserved noncreating diagnostic; original logical cleanup states unchanged"
+}

@@ -1,0 +1,89 @@
+{
+  "label": "cut-06-clear-callback",
+  "pid": 50228,
+  "action": "clear",
+  "cutpoint": "clear-callback",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "store": "479abfe5-38c3-4568-8fec-2b4e582f514f",
+          "phase": {
+            "stable": {
+              "_0": "active"
+            }
+          },
+          "operation": "4d80976d-cf06-4c22-8740-b49ae64a2eeb",
+          "namespace": "93b8b2a4-3c88-4c9d-9a9d-c665d0417571",
+          "generation": 3,
+          "profile": "4378293c-73af-4d5c-b0db-ea591b39ba70"
+        },
+        {
+          "store": "c401568d-aad1-4dde-9ceb-1b5c98512241",
+          "phase": {
+            "pending": {
+              "_0": "clear"
+            }
+          },
+          "operation": "e7c60845-cefa-412d-b3f0-6afb6452728b",
+          "namespace": "93b8b2a4-3c88-4c9d-9a9d-c665d0417571",
+          "generation": 5,
+          "profile": "55a27ee2-665c-47b2-85bb-a5ba731cb208"
+        }
+      ],
+      "previousRun": "3ff380b4-3292-4811-83ff-9a49ac2317b1"
+    },
+    "rows": [
+      {
+        "revision": 5,
+        "store": "479abfe5-38c3-4568-8fec-2b4e582f514f",
+        "profile": "4378293c-73af-4d5c-b0db-ea591b39ba70",
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "status": "active"
+      },
+      {
+        "revision": 6,
+        "store": "c401568d-aad1-4dde-9ceb-1b5c98512241",
+        "profile": "55a27ee2-665c-47b2-85bb-a5ba731cb208",
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "status": "quiescent"
+      }
+    ]
+  },
+  "binarySHA256": "8eea7d81e27e5a1e3617df11de272c00527b6d7b9145f33d54468cffedb6f8d8",
+  "observations": [
+    {
+      "event": "restart-values-A",
+      "environment": {
+        "cookie": "A",
+        "cache": "A",
+        "http": "response-109",
+        "idb": "A",
+        "local": "A",
+        "session": "",
+        "worker": "A"
+      }
+    },
+    {
+      "event": "restart-values-B",
+      "environment": {
+        "cookie": "B",
+        "http": "response-111",
+        "idb": "B",
+        "worker": "B",
+        "cache": "B",
+        "session": "",
+        "local": "B"
+      }
+    }
+  ]
+}

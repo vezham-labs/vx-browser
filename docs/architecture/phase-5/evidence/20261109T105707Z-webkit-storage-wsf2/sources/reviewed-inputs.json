@@ -1,0 +1,42 @@
+[
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-sqlcipher-open01-resolution.md",
+    "sha256": "0d904ed12ade1f104a28fa9a9d383ff97784519bc0b60e4f29b7794ac425f6b9"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-keychain-and-independent-recovery-specification.md",
+    "sha256": "724e3bc7fe41e2d3a348211ffbe1fc5570410c3600344bcc177282b1b7ed6a5c"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-persistent-profile-encryption-specification.md",
+    "sha256": "40ed9a9e2ffa11cd3ff4de1ee00d00cda1381b961cfaf0135fc4217986a3f9af"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/m1-owner-decision-register.md",
+    "sha256": "db3b84a90e51e527e0ecb834a4e028d6543b20820527cefdeeef6b28c8683a22"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/M1/core-boundary-contracts.md",
+    "sha256": "21d101f7d3fda53ebe9f89e720dddb7fa47de636d333013f246fa27893382d6a"
+  },
+  {
+    "path": "docs/decisions/0001-browser-engine-strategy.md",
+    "sha256": "e51917928b8e4321830b0b276c10dcb3758414c65a5c036f6b833618ad770ef5"
+  },
+  {
+    "path": "docs/decisions/0002-browser-distribution-and-platform.md",
+    "sha256": "dff3c57fa41374e70112774d8258e7f7321990e5f6a1775a07bd824657224af2"
+  },
+  {
+    "path": "docs/decisions/0003-browser-core-runtime-and-language.md",
+    "sha256": "b8e5703122163a05990d1c669b0a92058bb1fad680772cb1d524a8d78158b41e"
+  },
+  {
+    "path": "docs/decisions/0004-browser-local-persistence.md",
+    "sha256": "589f43395ad79fe391641dba1d53c9f590962b971297394b98347a4238b641d3"
+  },
+  {
+    "path": "docs/decisions/0005-browser-capability-boundaries-and-lifecycle.md",
+    "sha256": "3c158cd88bfb2c3eb7acfc64a2d1db05b74ed289d43d6c61e7034b940df6fc17"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "status": "PASS_CONTRACT",
+  "registered_process_ids_checked": 147,
+  "ps_exit": 1,
+  "active_registered_app_processes": [],
+  "other_reused_PIDs_observed": [],
+  "scope": "Only exact registered synthetic child PIDs; no global WebKit absence or unrelated process ownership claim. No signal/app launch/provider/test executed."
+}

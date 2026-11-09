@@ -13,6 +13,7 @@ public actor NativeHostAuthority: HostAuthorityPort {
         grants[scope] = context; return context
     }
     public func revoke(_ scope: Scope) { grants.removeValue(forKey: scope) }
+    public func current(_ scope: Scope) -> CallerContext? { grants[scope] }
     public func permits(_ context: CallerContext, scope: Scope, run: RunID) -> Bool { grants[scope] == context && context.run == run }
 }
 
@@ -24,14 +25,27 @@ public actor NativeHostAuthority: HostAuthorityPort {
     public let adapter: NativeWebKitStorage
     public let authority: NativeHostAuthority
     public let run: RunID
+    public let permissions: PermissionCoordinator
+    public let keys: NativeKeyBroker
+    public let security: ProfileSecurityCoordinator
     private let journal: any RecoveryJournalPort
     public init(namespace: NamespaceID, run: RunID, catalog: any ProfileCatalogPort,
-                journal: any RecoveryJournalPort, bindings: [ProfileBinding] = [], allowedOrigins: Set<String> = []) throws {
+                journal: any RecoveryJournalPort, bindings: [ProfileBinding] = [], allowedOrigins: Set<String> = [],
+                qualificationKeyNamespace: UUID? = nil) throws {
         self.run = run; self.journal = journal
         authority = NativeHostAuthority()
+        permissions = PermissionCoordinator(run: run, authority: authority)
+        keys = NativeKeyBroker(authority: authority, run: run, qualificationNamespace: qualificationKeyNamespace)
         adapter = try NativeWebKitStorage(namespace: namespace, knownBindings: bindings, allowedOrigins: allowedOrigins)
         core = try LifecycleCoordinator(run: run, namespace: namespace, authority: authority, catalog: catalog,
                                         journal: journal, engine: adapter, constructor: adapter, resources: adapter)
+        let barrier = NativeProfileBarrier(adapter: adapter, core: core, authority: authority, catalog: catalog)
+        security = ProfileSecurityCoordinator(barrier: barrier, keys: keys, authentication: NativeProfileAuthentication(), permissions: permissions)
+        adapter.permissionMediator = NativePermissionMediator(policy: permissions, authority: authority, run: run)
+    }
+    public static func protectedFoundation() throws -> NativeStorageSession {
+        let ns = try NamespaceID(UUID().uuidString), catalog = ProtectedCatalog()
+        return try NativeStorageSession(namespace: ns, run: RunID(UUID().uuidString), catalog: catalog, journal: catalog)
     }
     public static func privateOnly() throws -> NativeStorageSession {
         let ns = try NamespaceID(UUID().uuidString)
@@ -70,6 +84,8 @@ public actor NativeHostAuthority: HostAuthorityPort {
         do {
             try adapter.publish(view, scope: scope, generation: summary.generation, operation: operation)
             if let r = publicationRecord, await journal.write(r) != .committed { throw FailureCode.journalUnavailable }
+            guard await authority.permits(context, scope: scope, run: run),
+                  adapter.publicationMatches(view, scope: scope, generation: summary.generation, operation: operation) else { throw FailureCode.staleCompletion }
         }
         catch {
             return await publicationFailure(scope, context: context, reason: error as? FailureCode ?? .staleCompletion)

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "F2-KEY-WRONG-SCOPE",
+    "status": "PASS_CONTRACT",
+    "detail": "Adapter denied foreign profile before OS call",
+    "attempt": "keychain-create"
+  },
+  {
+    "id": "F2-KEY-MISSING",
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "keychain-create"
+  },
+  {
+    "id": "F2-KEY-CREATE",
+    "status": "BLOCKED",
+    "detail": "unavailable",
+    "attempt": "keychain-create"
+  },
+  {
+    "id": "F2-KEY-ACQUIRE",
+    "status": "BLOCKED",
+    "detail": "missing",
+    "attempt": "keychain-create"
+  },
+  {
+    "id": "F2-KEY-WRONG-SCOPE",
+    "status": "PASS_CONTRACT",
+    "detail": "Adapter denied foreign profile before OS call",
+    "attempt": "keychain-restart"
+  },
+  {
+    "id": "F2-KEY-RESTART-EXISTS",
+    "status": "FAIL",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "keychain-restart"
+  },
+  {
+    "id": "F2-KEY-ACQUIRE",
+    "status": "BLOCKED",
+    "detail": "missing",
+    "attempt": "keychain-restart"
+  },
+  {
+    "id": "F2-KEY-DELETE",
+    "status": "BLOCKED",
+    "detail": "unavailable",
+    "attempt": "keychain-restart"
+  }
+]

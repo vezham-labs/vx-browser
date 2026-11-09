@@ -1,0 +1,72 @@
+{
+  "label": "cache-A-selected-clear",
+  "pid": 53273,
+  "argv": [
+    "/private/tmp/vx-wsf1-v3co6uel/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "d933ae466707edcdd39936cdcdddeceddfc5b17ae2fd746296d6b64ded938c9a",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "macOS": "Version 27.2 (Build 26B123)"
+    },
+    "checkpoint": {
+      "rows": [
+        {
+          "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+          "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+          "resourceGeneration": 1,
+          "status": "retired",
+          "origin": "fresh",
+          "revision": 21
+        }
+      ],
+      "snapshot": {
+        "previousRun": "db824d3c-af26-4e76-bb3b-a20d87ca6f33",
+        "version": 1,
+        "records": [
+          {
+            "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+            "generation": 18,
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "operation": "89fcf48b-6ff1-4d83-bb8c-44f239b0f339",
+            "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+            "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd"
+          }
+        ]
+      }
+    },
+    "observations": {
+      "beforeClear": "cache-7",
+      "second": "cache-8",
+      "first": "cache-8"
+    },
+    "cases": [
+      {
+        "id": "F2-CACHE-CLEAR-CALLBACK",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F2-CACHE-POPULATED",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      }
+    ]
+  }
+}

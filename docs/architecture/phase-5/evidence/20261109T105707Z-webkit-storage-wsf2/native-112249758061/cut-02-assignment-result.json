@@ -1,0 +1,44 @@
+{
+  "label": "cut-02-assignment",
+  "pid": 50194,
+  "action": "seed",
+  "cutpoint": "assignment",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "rows": [
+      {
+        "store": "050a1818-4048-40cd-aab0-953bda85fd8f",
+        "resourceGeneration": 1,
+        "profile": "fc39e987-1938-4538-abdb-cb3650af0101",
+        "revision": 2,
+        "status": "accessStarted",
+        "origin": "fresh"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "bb1ab405-2a63-4269-bb95-0284233cb7ee",
+      "version": 1,
+      "records": [
+        {
+          "store": "050a1818-4048-40cd-aab0-953bda85fd8f",
+          "phase": {
+            "pending": {
+              "_0": "activate"
+            }
+          },
+          "profile": "fc39e987-1938-4538-abdb-cb3650af0101",
+          "generation": 1,
+          "operation": "9fa019e9-9f31-4b39-acf5-afd03d9b58dc",
+          "namespace": "83d7eb34-1e5c-423c-82de-9a311b9d6723"
+        }
+      ]
+    }
+  },
+  "binarySHA256": "8eea7d81e27e5a1e3617df11de272c00527b6d7b9145f33d54468cffedb6f8d8",
+  "observations": []
+}

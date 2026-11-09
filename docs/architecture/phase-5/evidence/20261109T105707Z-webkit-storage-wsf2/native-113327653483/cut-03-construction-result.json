@@ -1,0 +1,44 @@
+{
+  "label": "cut-03-construction",
+  "pid": 52092,
+  "action": "seed",
+  "cutpoint": "construction",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "snapshot": {
+      "previousRun": "7a95155e-3159-4ac2-8c94-9951981b1564",
+      "records": [
+        {
+          "generation": 1,
+          "operation": "ede1a0fc-34e9-4907-a8ad-02e540c7db2b",
+          "profile": "8550c7c8-8147-48ee-8a69-b2ed27740bd4",
+          "namespace": "a67912db-c6e8-4e11-a233-677a6a9625ac",
+          "store": "07a0b3a6-8902-4f21-8438-d16c9b073898",
+          "phase": {
+            "pending": {
+              "_0": "activate"
+            }
+          }
+        }
+      ],
+      "version": 1
+    },
+    "rows": [
+      {
+        "profile": "8550c7c8-8147-48ee-8a69-b2ed27740bd4",
+        "revision": 2,
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "store": "07a0b3a6-8902-4f21-8438-d16c9b073898",
+        "status": "accessStarted"
+      }
+    ]
+  },
+  "binarySHA256": "17897e1450048796e69b4225ffeda47b2fd6e997dba2bb58ea3948034bf64d47",
+  "observations": []
+}

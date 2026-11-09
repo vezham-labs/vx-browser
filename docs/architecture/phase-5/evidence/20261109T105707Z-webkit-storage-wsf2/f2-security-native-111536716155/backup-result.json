@@ -1,0 +1,98 @@
+{
+  "label": "backup",
+  "pid": 48057,
+  "argv": [
+    "/private/tmp/vx-wsf1-mulxoz02/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "b050ce00f37eda0f340f4b927fc136c390546fb3b8427f463e673fc05424aac4",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "observations": {},
+    "cases": [
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-AEAD-ROUNDTRIP",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-NONCE-FRESH",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-TAMPER",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-TRUNCATE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-TRAILING",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-WRONG-RECOVERY",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-WRONG-PROFILE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-DELETION-FILTER",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-UNKNOWN-LINEAGE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-NO-OVERWRITE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-NO-PRIVATE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-FILE-ROUNDTRIP",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-FILE-NO-OVERWRITE",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-BACKUP-INTERRUPTED",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "detail": "Actual source snapshot/import and independent recovery custody blocked by protected catalog/key prerequisites; synthetic records only",
+        "id": "F2-BACKUP-PRODUCTION-CATALOG",
+        "status": "BLOCKED"
+      }
+    ]
+  }
+}

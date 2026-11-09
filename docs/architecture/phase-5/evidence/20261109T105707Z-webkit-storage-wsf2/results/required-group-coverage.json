@@ -1,0 +1,40 @@
+{
+  "WebKit": {
+    "executed": "Persistent/private/isolation/switch/multiview/window; cache response/reconstruct/restart/abrupt/clear/remove; resource retirement and native regression cutpoints",
+    "remaining": "Record/date deletion, native in-use/I/O/partial/missing-callback scenarios and full lock process barrier"
+  },
+  "Protected catalog": {
+    "executed": "Refusal/schema/migration planning/publication contracts only",
+    "status": "BLOCKED",
+    "remaining": "Actual create/read/write/migration/corruption/interrupted transaction/recovery/delete/tombstone persistence under qualified provider"
+  },
+  "Keychain": {
+    "executed": "Real missing/create/acquire/delete attempts, exact reference, separate-process missing control; foreign scope contract",
+    "status": "BLOCKED",
+    "remaining": "Successful userPresence create/duplicate/read/restart/denial/rotation/independent recovery under valid identity"
+  },
+  "Locking": {
+    "executed": "Core/fake ordering/auth/error policy; native multiwindow/other profile/nav/repeated lock; actual fence death/restart conservative default",
+    "remaining": "Actual loaded-key revoke/unlock, persistent receipt, OS screen-lock/sleep/session/inactivity events, download and clear/remove races"
+  },
+  "Permissions": {
+    "executed": "Core Ask/Allow/Deny/OS/revoke/private/fence contracts; actual native media script error and geolocation timeout",
+    "status": "BLOCKED",
+    "remaining": "Verified native denial/Ask/Allow, active streams, persistent grants and per-kind mappings"
+  },
+  "Backup/restore": {
+    "executed": "Actual native crypto/synthetic file authenticated roundtrip/tamper/conflict/deletion/private/incomplete-stage checks",
+    "status": "BLOCKED",
+    "remaining": "Actual catalog source/import, complete category schemas, custody, independent process/Mac recovery and migrations"
+  },
+  "Unified recovery": {
+    "executed": "Cross-component pure policy plus actual WebKit/Keychain-attempt/lock restart tests",
+    "status": "BLOCKED",
+    "remaining": "Real persisted catalog/key/backup state and all cross-component commit cutpoints"
+  },
+  "macOS26": {
+    "executed": false,
+    "status": "NOT_EXECUTED",
+    "remaining": "Owner-deferred release backlog; not current WS-F2 implementation failure"
+  }
+}

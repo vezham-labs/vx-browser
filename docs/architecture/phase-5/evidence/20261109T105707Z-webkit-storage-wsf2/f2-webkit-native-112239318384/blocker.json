@@ -1,0 +1,4 @@
+{
+  "reason": "Stopped at lock-navigation; no unchanged retry or unsafe cleanup",
+  "unsafeCleanup": false
+}

@@ -1,0 +1,44 @@
+{
+  "label": "cut-02-assignment",
+  "pid": 52087,
+  "action": "seed",
+  "cutpoint": "assignment",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "snapshot": {
+      "records": [
+        {
+          "generation": 1,
+          "phase": {
+            "pending": {
+              "_0": "activate"
+            }
+          },
+          "store": "8538bb26-811e-465a-95d8-5d8052b535ae",
+          "operation": "33981949-55fd-4cdc-81dc-8cc173af1787",
+          "namespace": "49e2292c-862d-4b41-906a-cbf9793b46db",
+          "profile": "1b649a5c-bb6d-439a-a984-a6cc22f6f3ed"
+        }
+      ],
+      "previousRun": "2b7ee0ed-18f7-4f52-b10f-48ff97d5ddff",
+      "version": 1
+    },
+    "rows": [
+      {
+        "store": "8538bb26-811e-465a-95d8-5d8052b535ae",
+        "revision": 2,
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "status": "accessStarted",
+        "profile": "1b649a5c-bb6d-439a-a984-a6cc22f6f3ed"
+      }
+    ]
+  },
+  "binarySHA256": "17897e1450048796e69b4225ffeda47b2fd6e997dba2bb58ea3948034bf64d47",
+  "observations": []
+}

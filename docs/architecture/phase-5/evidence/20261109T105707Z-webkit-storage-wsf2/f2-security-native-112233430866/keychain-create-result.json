@@ -1,0 +1,46 @@
+{
+  "label": "keychain-create",
+  "pid": 49985,
+  "argv": [
+    "/private/tmp/vx-wsf1-y4ovzo4a/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "8eea7d81e27e5a1e3617df11de272c00527b6d7b9145f33d54468cffedb6f8d8",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "cases": [
+      {
+        "status": "PASS_CONTRACT",
+        "id": "F2-KEY-WRONG-SCOPE",
+        "detail": "Adapter denied foreign profile before OS call"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "id": "F2-KEY-MISSING",
+        "detail": "Bounded synthetic native observation"
+      },
+      {
+        "status": "BLOCKED",
+        "id": "F2-KEY-CREATE",
+        "detail": "unavailable"
+      },
+      {
+        "status": "BLOCKED",
+        "id": "F2-KEY-ACQUIRE",
+        "detail": "missing"
+      }
+    ],
+    "observations": {
+      "acquireOSStatus": "-25300",
+      "createOSStatus": "-34018"
+    },
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    }
+  }
+}

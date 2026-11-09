@@ -1,0 +1,72 @@
+{
+  "label": "cache-A-full-clear",
+  "pid": 51624,
+  "argv": [
+    "/private/tmp/vx-wsf1-7akhomgo/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "17897e1450048796e69b4225ffeda47b2fd6e997dba2bb58ea3948034bf64d47",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "observations": {
+      "second": "cache-9",
+      "first": "cache-9",
+      "beforeClear": "cache-8"
+    },
+    "checkpoint": {
+      "snapshot": {
+        "version": 1,
+        "previousRun": "1e5976e2-f77e-4107-88ac-69b335188617",
+        "records": [
+          {
+            "operation": "a0fca5d1-403a-48e9-8137-7dc273ec9c10",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "namespace": "1c9f2eda-7ff9-4098-9c13-b97e4f264ec6",
+            "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+            "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+            "generation": 20
+          }
+        ]
+      },
+      "rows": [
+        {
+          "resourceGeneration": 1,
+          "status": "retired",
+          "origin": "fresh",
+          "profile": "90759ed3-0583-498f-b29b-0b20f418226d",
+          "store": "c347ebbd-e3c4-4a42-8592-8de7f256b849",
+          "revision": 22
+        }
+      ]
+    },
+    "cases": [
+      {
+        "id": "F2-CACHE-CLEAR-CALLBACK",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      },
+      {
+        "id": "F2-CACHE-POPULATED",
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE"
+      }
+    ]
+  }
+}

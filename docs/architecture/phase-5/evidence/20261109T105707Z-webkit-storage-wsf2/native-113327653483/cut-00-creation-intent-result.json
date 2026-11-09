@@ -1,0 +1,44 @@
+{
+  "label": "cut-00-creation-intent",
+  "pid": 52079,
+  "action": "seed",
+  "cutpoint": "creation-intent",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "rows": [
+      {
+        "revision": 1,
+        "resourceGeneration": 1,
+        "status": "registered",
+        "store": "5ea282eb-78af-4afd-a0ce-d59dfda3084d",
+        "profile": "59df7ef0-5e58-4990-bd62-f9b9cf73d7c7",
+        "origin": "fresh"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "eac67be5-53e6-4635-bccd-d420305d26c7",
+      "version": 1,
+      "records": [
+        {
+          "profile": "59df7ef0-5e58-4990-bd62-f9b9cf73d7c7",
+          "generation": 1,
+          "store": "5ea282eb-78af-4afd-a0ce-d59dfda3084d",
+          "phase": {
+            "stable": {
+              "_0": "registered"
+            }
+          },
+          "operation": "18012144-ae8d-4169-a29c-70bf11117e2f",
+          "namespace": "ac55a70a-ab8d-4b02-bb31-4554fe38d42f"
+        }
+      ]
+    }
+  },
+  "binarySHA256": "17897e1450048796e69b4225ffeda47b2fd6e997dba2bb58ea3948034bf64d47",
+  "observations": []
+}

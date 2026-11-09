@@ -1,0 +1,68 @@
+{
+  "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+      "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+    },
+    {
+      "name": "B",
+      "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+      "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+    }
+  ],
+  "origin": "http://127.0.0.1:59594",
+  "checkpoint": {
+    "snapshot": {
+      "records": [
+        {
+          "phase": {
+            "stable": {
+              "_0": "active"
+            }
+          },
+          "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef",
+          "operation": "367c486b-c75e-4c5b-b753-40601baebe96",
+          "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+          "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+          "generation": 9
+        },
+        {
+          "phase": {
+            "stable": {
+              "_0": "active"
+            }
+          },
+          "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f",
+          "operation": "0cd70af5-7275-4b3e-9f27-7a01b614d088",
+          "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+          "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+          "generation": 9
+        }
+      ],
+      "version": 1,
+      "previousRun": "44441367-7720-487e-8a92-a1ff5658c435"
+    },
+    "rows": [
+      {
+        "origin": "fresh",
+        "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+        "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef",
+        "resourceGeneration": 1,
+        "revision": 12,
+        "status": "active"
+      },
+      {
+        "origin": "fresh",
+        "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+        "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f",
+        "resourceGeneration": 1,
+        "revision": 13,
+        "status": "active"
+      }
+    ]
+  },
+  "cutpoint": null,
+  "action": "private"
+}

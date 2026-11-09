@@ -1,0 +1,240 @@
+{
+  "modified_existing": [
+    "apps/browser-macos/README.md",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "apps/browser-macos/Sources/Host/MainWindowController.swift",
+    "apps/browser-macos/StorageRuntime/README.md",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+    "apps/browser-macos/Tools/wsf1.py",
+    "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj",
+    "apps/browser-macos/project.json",
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "docs/security/browser-security-acceptance-criteria.md",
+    "docs/security/browser-security-architecture.md",
+    "docs/security/browser-threat-model.md"
+  ],
+  "new_authored": [
+    "apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/CanonicalCBOR.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/EncryptedOwnedBackup.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeKeychain.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativePermissionMediator.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeProfileBarrier.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeSecurityLifecycle.swift",
+    "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/BackupContractTests.swift",
+    "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/SecurityContractTests.swift",
+    "apps/browser-macos/Tools/wsf2.py",
+    "apps/browser-macos/Tools/wsf2_native.py",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-backup-and-restore.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-closeout.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-keychain-integration.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-permission-policy.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-profile-locking.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-protected-catalog.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-public-release-qualification-backlog.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-qualification-plan.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-qualification-results.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-recovery-and-reconciliation.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-risks-and-limitations.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-security-decision-proposal.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-webkit-runtime-hardening.md",
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-wks-traceability.md",
+    "qualification/webkit-storage-f0/Sources/BrowserCore/PermissionCoordinator.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserCore/ProfileSecurityCoordinator.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserCore/StorageRecoveryPolicy.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserDomain/SecurityModels.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserPersistence/OwnedBackupPolicy.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserPersistence/ProtectedCatalog.swift",
+    "qualification/webkit-storage-f0/Sources/BrowserPorts/SecurityPorts.swift"
+  ],
+  "authored_count": 46,
+  "new_evidence_root": "docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2",
+  "files": {
+    "apps/browser-macos/README.md": {
+      "sha256": "2153e59397ae494ae73bb8c3ff1614572bc635c94b150b11cdf296e5fc1153e3",
+      "bytes": 3793
+    },
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift": {
+      "sha256": "871a0603c21aeab6c6c1ffdedcae03b1ea454c5696fb15bf562b567d7cb95d54",
+      "bytes": 3299
+    },
+    "apps/browser-macos/Sources/Host/MainWindowController.swift": {
+      "sha256": "ad8d94153fd8ec5d25b085485e4693e44db6a65720f5a28e40bb05ec5678d94f",
+      "bytes": 1758
+    },
+    "apps/browser-macos/Sources/Qualification/SecurityQualificationHost.swift": {
+      "sha256": "ee65a03ba9ed71d7a0653f1bbed7712c85cda6d4ba1aad56e336f96e26c70271",
+      "bytes": 24496
+    },
+    "apps/browser-macos/StorageRuntime/README.md": {
+      "sha256": "242b7e3528b9e21d5feaa533cc282a2c694fb984e9090072190c0ba635c71ebe",
+      "bytes": 1990
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/CanonicalCBOR.swift": {
+      "sha256": "fc8d9d6b652fa3bd9bf751c18ca3cc6d3b1b09e851ee5f0670a2be96390f70c4",
+      "bytes": 3485
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/EncryptedOwnedBackup.swift": {
+      "sha256": "67bd2ddbcdaeb7784edfce8c06323317c98493b8571872a9d30d5df301d1837f",
+      "bytes": 8562
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeKeychain.swift": {
+      "sha256": "0a519f23bcb2ca82dc9fc7fe8e2aef10a112937b49458345df35da28d778a83f",
+      "bytes": 8053
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativePermissionMediator.swift": {
+      "sha256": "e9a134a6995ab6a21e5cbf74fc6ab0038f2ccf7401b2b1c06da38e10dd49f661",
+      "bytes": 3068
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeProfileBarrier.swift": {
+      "sha256": "a7cab2658e39c55f5a1493d3b5d4eda8e471dc243048519c59e83cf1d647ab3d",
+      "bytes": 2061
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeSecurityLifecycle.swift": {
+      "sha256": "1edb80c36888289175f11a1a8ac541d5f21d07911474e5e4f0b9cd83a937470e",
+      "bytes": 2093
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift": {
+      "sha256": "16a705f6fcb51516f50b67dbeb55cc5ad29a865d7482376571d8d80e706a5220",
+      "bytes": 6618
+    },
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift": {
+      "sha256": "a8c2ac1613c25ecab9699d242237d978efc7155b861b73b80c17fe99529fd45a",
+      "bytes": 26610
+    },
+    "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/BackupContractTests.swift": {
+      "sha256": "6db86ff5e16c7d778657391c34134de71d92f697dd629e0a86bc24b47ca7c688",
+      "bytes": 3330
+    },
+    "apps/browser-macos/StorageRuntime/Tests/StorageModelTests/SecurityContractTests.swift": {
+      "sha256": "29ad8da58c8ab5cb7e9a56c0f3a128d8b80e0b7a96978d32929a01089b2c2403",
+      "bytes": 8421
+    },
+    "apps/browser-macos/Tools/wsf1.py": {
+      "sha256": "7f33c3b338492bea530b82a71be2a0ab19b97f12a2236ad4b5ec4db928ec5f76",
+      "bytes": 6397
+    },
+    "apps/browser-macos/Tools/wsf2.py": {
+      "sha256": "a127f52097834f12f8c6982f8c6d91955cecab4c96f8d718d8ae7579be462ac8",
+      "bytes": 2129
+    },
+    "apps/browser-macos/Tools/wsf2_native.py": {
+      "sha256": "10491e5da57e0fed1024c87328d3a33a54fd7ca16cbe9592db13a614b27a5685",
+      "bytes": 9079
+    },
+    "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj": {
+      "sha256": "71e062c0574158e06b8b4b57d103118f22a177fadaef4416bbc1d0a19e3292fc",
+      "bytes": 5803
+    },
+    "apps/browser-macos/project.json": {
+      "sha256": "d159b14c45b0b3430afd314f480bb78eb18b4d267c26de227acb9334e1ec5283",
+      "bytes": 2422
+    },
+    "docs/architecture/phase-5/reports/M1/README.md": {
+      "sha256": "db3104300e20ef5ce2c52dab99adacdfca06c5fd98be7f851432ee531946c1dd",
+      "bytes": 13333
+    },
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md": {
+      "sha256": "8534ae2cad5d375e84a8e9bf7473e98830e20db014d330767b176d303380cdc5",
+      "bytes": 15009
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-backup-and-restore.md": {
+      "sha256": "131c11cdc67a3f6da7f9d5eeb7c8e2f5af70fc27ca1109f581d7fe9e29ca001d",
+      "bytes": 5585
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-closeout.md": {
+      "sha256": "5029394248ea7ce138f4c2a7607f79181004c78c6e4278f7a7d9ecdc6b485581",
+      "bytes": 9691
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-keychain-integration.md": {
+      "sha256": "6116346f5eaafbb608f1460d30d39f3c91881d9ec3f4a80d8f61052b69a6da41",
+      "bytes": 4013
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-permission-policy.md": {
+      "sha256": "13623f7a0c3a8135cd34ebd9f087ac6d351c1b6e80adc3d6b1cefe5f50838676",
+      "bytes": 4612
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-profile-locking.md": {
+      "sha256": "8173ad846e14668f5b88894bb85bf6712885b53a50b4338c81a0c2cf8a762d1a",
+      "bytes": 3844
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-protected-catalog.md": {
+      "sha256": "e7c01a7d97efbbe1c4408ba861c39c585606d24185d6e5aac2260553e963b087",
+      "bytes": 4302
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-public-release-qualification-backlog.md": {
+      "sha256": "3a975bc8f391dc5adf726f2e8c91e208c364665d560e6f461856affeeb9e6312",
+      "bytes": 2548
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-qualification-plan.md": {
+      "sha256": "8d0985451e3013e49e2051f34da5dd0a8f836b6be2891d74a02a9c72befca1c9",
+      "bytes": 5214
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-qualification-results.md": {
+      "sha256": "3ab41e49355672c39eb6edafe7c57cbd4309bdd21316bb3c457476792519f2b8",
+      "bytes": 6178
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-recovery-and-reconciliation.md": {
+      "sha256": "1b2c3e5e5e72480fa76d96c7641d69beb73519c5c56c6733e30a87a741ce90fe",
+      "bytes": 3322
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-risks-and-limitations.md": {
+      "sha256": "1a7aaf3f12d0cdac00bc2de8617ebeb6aea7b8332f6fd31e3a66ef17ec41cc4b",
+      "bytes": 3701
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-security-decision-proposal.md": {
+      "sha256": "ca67b20ddce6d82afc6e15e7e6d4d2e7db11f08844b0a3e7d1ea2648bb64d8ef",
+      "bytes": 2436
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-webkit-runtime-hardening.md": {
+      "sha256": "7bc7c03c9bced845f574b9cd8cc7dc44f0a670100ea3390113db5e77d0f02574",
+      "bytes": 3935
+    },
+    "docs/architecture/phase-5/reports/M1/m1-wsf2-wks-traceability.md": {
+      "sha256": "b2c1796d4f02fa5f64b7c63dcfa67dbf90a85039f216ed993dce80c3ecda3c58",
+      "bytes": 11459
+    },
+    "docs/security/browser-security-acceptance-criteria.md": {
+      "sha256": "38b157a998a8432d2a76eff900e12e56ccd04d2fb37206ac3f71dd11e1fdff69",
+      "bytes": 6884
+    },
+    "docs/security/browser-security-architecture.md": {
+      "sha256": "72e9eaf5145f6d793f4123f1df64c9625c84f878e52836ddc9f3f8e6c28bff44",
+      "bytes": 12084
+    },
+    "docs/security/browser-threat-model.md": {
+      "sha256": "70c9bbe5fbd7aa53984834003ad6a9e3f8acd68347eca0cff5cc70145f2cb796",
+      "bytes": 20720
+    },
+    "qualification/webkit-storage-f0/Sources/BrowserCore/PermissionCoordinator.swift": {
+      "sha256": "55e049ee401330fa97bae1f5c6d00b25eec7759ca936f0a528424423eae46246",
+      "bytes": 3465
+    },
+    "qualification/webkit-storage-f0/Sources/BrowserCore/ProfileSecurityCoordinator.swift": {
+      "sha256": "2f8e653c9849c520db4857d8333911d7970dba08e7df6be863b7b28d051e8696",
+      "bytes": 3592
+    },
+    "qualification/webkit-storage-f0/Sources/BrowserCore/StorageRecoveryPolicy.swift": {
+      "sha256": "5b9c342436cc1cf88378b1bf30e711360f6f3ef80b4598ed130eb511161db3d4",
+      "bytes": 1021
+    },
+    "qualification/webkit-storage-f0/Sources/BrowserDomain/SecurityModels.swift": {
+      "sha256": "b3763194f8878f16e60884294d577f1b335a5e1b6a5c0fbf5a69f27898c62c5a",
+      "bytes": 4124
+    },
+    "qualification/webkit-storage-f0/Sources/BrowserPersistence/OwnedBackupPolicy.swift": {
+      "sha256": "80bf325d9c3321b1f3f2d45992653b223e854d8d3c2890204b5fa58dc57097eb",
+      "bytes": 1878
+    },
+    "qualification/webkit-storage-f0/Sources/BrowserPersistence/ProtectedCatalog.swift": {
+      "sha256": "085696437ae7df51719aa2e77fff137d28fe9f5d5652c2dc5be1433c02ca95c2",
+      "bytes": 4180
+    },
+    "qualification/webkit-storage-f0/Sources/BrowserPorts/SecurityPorts.swift": {
+      "sha256": "c59522b53671036c0a546598925e31fa85451a817e400b5a6b03a7bcaa019d31",
+      "bytes": 567
+    }
+  }
+}

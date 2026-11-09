@@ -1,0 +1,72 @@
+{
+  "label": "cache-A-full-clear",
+  "pid": 53281,
+  "argv": [
+    "/private/tmp/vx-wsf1-v3co6uel/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "d933ae466707edcdd39936cdcdddeceddfc5b17ae2fd746296d6b64ded938c9a",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "snapshot": {
+        "records": [
+          {
+            "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+            "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e",
+            "generation": 23,
+            "namespace": "4e0a87db-ad06-4964-a7a3-56d18b4413dd",
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "operation": "5a3b66fe-5573-417a-bd55-0188285d0932"
+          }
+        ],
+        "version": 1,
+        "previousRun": "04cef547-5afd-458f-823c-a63287356561"
+      },
+      "rows": [
+        {
+          "resourceGeneration": 1,
+          "store": "45ecf479-26a7-4550-8826-894b188b2d74",
+          "revision": 26,
+          "status": "retired",
+          "origin": "fresh",
+          "profile": "f9b4f47d-b507-486f-8071-c0ed3da4dd6e"
+        }
+      ]
+    },
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    },
+    "observations": {
+      "first": "cache-10",
+      "second": "cache-10",
+      "beforeClear": "cache-9"
+    },
+    "cases": [
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-CACHE-CLEAR-CALLBACK"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL"
+      },
+      {
+        "detail": "Bounded synthetic native observation",
+        "status": "PASS_NATIVE",
+        "id": "F2-CACHE-POPULATED"
+      }
+    ]
+  }
+}

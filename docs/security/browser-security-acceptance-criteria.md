@@ -6,7 +6,7 @@
 
 ## Decision authority and sequencing
 
-The [owner record](../architecture/phase-3/owner-approval-decision.md) approves bounded Phase 3 closure and architecture, with WKWebView conditionally accepted for MVP planning/implementation. ADR 0001 remains Proposed and ADR 0002 Accepted. [Stage A/B/C](../decisions/0001-browser-engine-strategy.md) sequences these unchanged criteria: bounded evidence/risk decisions before selection, production validation during implementation, candidate qualification before final release. Only M0 native foundation is currently authorized; no whole checklist or engine security certification follows from a local host build. Account/media restrictions persist. No hard leak/unauthorized-action criterion is waived.
+The [owner record](../architecture/phase-3/owner-approval-decision.md) approves bounded Phase 3 closure and architecture, with WKWebView conditionally accepted for MVP planning/implementation. ADR 0001 remains Proposed and ADR 0002 Accepted. [Stage A/B/C](../decisions/0001-browser-engine-strategy.md) sequences these unchanged criteria: bounded evidence/risk decisions before selection, production validation during implementation, candidate qualification before final release. The separately authorized [WS-F2 storage/security milestone](../architecture/phase-5/reports/M1/m1-wsf2-closeout.md) implements bounded native components and records remaining catalog/key/permission/backup failures and blocks; no whole checklist or engine security certification follows from these tests. Account/media restrictions persist. No hard leak/unauthorized-action criterion is waived.
 
 ## Platform and release
 
@@ -63,3 +63,7 @@ The [owner record](../architecture/phase-3/owner-approval-decision.md) approves 
 ## Evidence record
 
 For each criterion attach test run ID, app/build hash, OS build, engine version, test data setup, result, artifacts (redacted screenshots/logs where useful), and issue links. Acceptance requires review by engineering and security owners. No criteria are considered passed until evidence is entered and reviewed.
+
+## WS-F2 qualification scope — 2026-11-09
+
+Primary WS-F2 execution is macOS27.2/arm64. The owner deliberately defers actual26.0/latest26.x qualification to the [release backlog](../architecture/phase-5/reports/M1/m1-wsf2-public-release-qualification-backlog.md). This does not pass or waive any checklist, authorize public distribution or change ADR/owner/security status. See [actual results and limits](../architecture/phase-5/reports/M1/m1-wsf2-qualification-results.md); native media denial failed its oracle, geolocation is inconclusive, Keychain creation is entitlement-blocked and D2A-01 remains unresolved.

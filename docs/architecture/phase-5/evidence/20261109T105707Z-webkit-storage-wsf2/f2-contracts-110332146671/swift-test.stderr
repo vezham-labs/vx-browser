@@ -1,0 +1,99 @@
+Building for debugging...
+[Computing dependencies]
+[Constructing description]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[58 / 122]
+[59 / 123] BrowserDomain
+[62 / 162]
+[65 / 162]
+[69 / 162]
+[71 / 162]
+[74 / 162]
+[76 / 162]
+[78 / 162]
+[81 / 162]
+[82 / 162]
+[84 / 162]
+[85 / 162]
+[87 / 162]
+[90 / 162]
+[92 / 162]
+[93 / 162]
+[96 / 162] BrowserDomain
+[98 / 162] BrowserDomain
+[104 / 162] BrowserDomain
+[105 / 163] BrowserDomain
+[107 / 163] BrowserPorts
+[109 / 166] BrowserPorts
+[110 / 166] BrowserPorts
+[117 / 167] BrowserPorts
+[119 / 168]
+[121 / 172] WSF0Fakes
+[122 / 175] BrowserPersistence
+[135 / 175] WSF0Fakes
+[137 / 175] BrowserPersistence
+[138 / 175] BrowserPersistence
+[140 / 176]
+[143 / 176] BrowserPorts-product
+[147 / 181] BrowserCore
+[149 / 181] BrowserCore
+[155 / 181] BrowserCore
+[156 / 182] BrowserNativeStorage
+[157 / 231]
+[160 / 231]
+[160 / 231] BrowserCore
+[162 / 231]
+[163 / 231]
+[166 / 231]
+[168 / 231]
+[170 / 231]
+[174 / 231]
+[175 / 231]
+[178 / 231]
+[180 / 231]
+[182 / 231]
+[183 / 231]
+[184 / 231]
+[185 / 231]
+[186 / 231]
+[188 / 231]
+[190 / 231]
+[192 / 231]
+[194 / 231]
+[195 / 231]
+[197 / 231]
+[199 / 231]
+[201 / 231]
+[201 / 231] BrowserCore
+[201 / 231]
+[204 / 231] BrowserNativeStorage
+error: SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeProfileBarrier.swift failed with a nonzero exit code. Command line:     cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos
+    builtin-SwiftPerFileCompile NativeProfileBarrier.swift
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeProfileBarrier.swift:21:88: error: call can throw, but it is not marked with 'try' and the error is not handled
+19 |         }
+20 |         for view in adapter.ownedViews(scope) {
+21 |             guard await core.closeView(scope, view: view, context: context, operation: OperationID(UUID().uuidString)) == .success(.viewClosed) else { return .unknown }
+   |                                                                                        `- error: call can throw, but it is not marked with 'try' and the error is not handled
+22 |         }
+23 |         if await core.summary(scope) == nil { return .completed }
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeProfileBarrier.swift:24:70: error: call can throw, but it is not marked with 'try' and the error is not handled
+22 |         }
+23 |         if await core.summary(scope) == nil { return .completed }
+24 |         guard await core.quiesce(scope, context: context, operation: OperationID(UUID().uuidString)) == .success(.quiesced),
+   |                                                                      `- error: call can throw, but it is not marked with 'try' and the error is not handled
+25 |               await core.retire(scope, context: context, operation: OperationID(UUID().uuidString)) == .success(.retired) else { return .unknown }
+26 |         await authority.revoke(scope)
+
+/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeProfileBarrier.swift:25:69: error: call can throw, but it is not marked with 'try' and the error is not handled
+23 |         if await core.summary(scope) == nil { return .completed }
+24 |         guard await core.quiesce(scope, context: context, operation: OperationID(UUID().uuidString)) == .success(.quiesced),
+25 |               await core.retire(scope, context: context, operation: OperationID(UUID().uuidString)) == .success(.retired) else { return .unknown }
+   |                                                                     `- error: call can throw, but it is not marked with 'try' and the error is not handled
+26 |         await authority.revoke(scope)
+27 |         return .completed
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeKeychain.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativePermissionMediator.swift -primary-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeProfileBarrier.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift -emit-dependencies-path /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/NativeProfileBarrier.d -emit-const-values-path /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/NativeProfileBarrier.swiftconstvalues -emit-reference-dependencies-path /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/NativeProfileBarrier.swiftdeps -serialize-diagnostics-path /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/NativeProfileBarrier.dia -target arm64-apple-macos26.0 -disable-cross-import-overlay-search -swift-module-cross-import LocalAuthentication /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/LocalAuthentication.framework/Modules/LocalAuthentication.swiftcrossimport/SwiftUI.swiftoverlay -swift-module-cross-import LocalAuthentication /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk/System/Library/Frameworks/LocalAuthentication.framework/Modules/LocalAuthentication.swiftcrossimport/SwiftUI.swiftoverlay -swift-module-cross-import WebKit /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Modules/WebKit.swiftcrossimport/SwiftUI.swiftoverlay -swift-module-cross-import WebKit /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk/System/Library/Frameworks/WebKit.framework/Modules/WebKit.swiftcrossimport/SwiftUI.swiftoverlay -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libPreviewsMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#PreviewsMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftUIMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftUIMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage-dependencies-1.json -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -I /private/tmp/vx-wsf1-gfms2l__/build/out/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /private/tmp/vx-wsf1-gfms2l__/build/out/Products/Debug/PackageFrameworks -F /private/tmp/vx-wsf1-gfms2l__/build/out/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -module-cache-path /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/SwiftExplicitPrecompiledModules -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=5 -swift-version 6 -Onone -D SWIFT_PACKAGE -D DEBUG -D SWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -D Xcode -serialize-debugging-options -enable-experimental-feature DebugDescriptionMacro -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /private/tmp/vx-wsf1-gfms2l__/build/out/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -enable-anonymous-context-mangled-names -file-compilation-dir /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /private/tmp/vx-wsf1-gfms2l__/build/out/SDKStatCaches.noindex/macosx27.2-26B118-a0facfad118c1a7a18f0aad9463f6549a7ff82d74745d5ef33555b35c4238456.sdkstatcache -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -Xcc -I/private/tmp/vx-wsf1-gfms2l__/build/out/Products/Debug/include -Xcc -I/private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources-normal/arm64 -Xcc -I/private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources/arm64 -Xcc -I/private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name BrowserNativeStorage -package-name storageruntime -const-gather-protocols-file /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage_const_extract_protocols.json -disable-clang-spi -clang-target arm64-apple-macos27.2 -target-sdk-version 27.2 -target-sdk-name macosx27.2 -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -parse-as-library -o /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/NativeProfileBarrier.o -debug-module-path /private/tmp/vx-wsf1-gfms2l__/build/out/Intermediates.noindex/BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/BrowserNativeStorage.swiftmodule -index-unit-output-path /BrowserStorageRuntime.build/Debug/BrowserNativeStorage-t.build/Objects-normal/arm64/NativeProfileBarrier.o -index-store-path /private/tmp/vx-wsf1-gfms2l__/build/out -index-system-modules
+error: Build failed
+error: fatalError

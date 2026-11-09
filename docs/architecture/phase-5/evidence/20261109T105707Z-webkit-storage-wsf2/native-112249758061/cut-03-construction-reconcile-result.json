@@ -1,0 +1,128 @@
+{
+  "label": "cut-03-construction-reconcile",
+  "pid": 50198,
+  "action": "reconcile-uncertain",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "snapshot": {
+        "previousRun": "d41dcef7-761f-4ac3-8daa-962d8668521b",
+        "records": [
+          {
+            "namespace": "c816aaca-3622-4624-88c5-d17824f327da",
+            "phase": {
+              "quarantined": {
+                "_0": "interruptedOperation"
+              }
+            },
+            "interruptedAction": "activate",
+            "generation": 2,
+            "operation": "8a3d78e6-ecc4-4b9f-8cad-3a338dc6bc89",
+            "profile": "bac580f8-c5f8-4050-bc23-66ef289f8221",
+            "store": "0baea61a-eeb2-409c-90ae-9ee557f3ae5e"
+          }
+        ],
+        "version": 1
+      },
+      "rows": [
+        {
+          "status": "accessStarted",
+          "origin": "fresh",
+          "store": "0baea61a-eeb2-409c-90ae-9ee557f3ae5e",
+          "revision": 2,
+          "profile": "bac580f8-c5f8-4050-bc23-66ef289f8221",
+          "resourceGeneration": 1
+        }
+      ]
+    },
+    "event": "result",
+    "trace": [
+      {
+        "kind": "fence",
+        "sequence": 1,
+        "outcome": "installed"
+      },
+      {
+        "kind": "fence",
+        "sequence": 2,
+        "outcome": "installed"
+      },
+      {
+        "kind": "fence",
+        "sequence": 3,
+        "outcome": "installed"
+      }
+    ],
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+        "id": "F1-NAT-RECOVERY-A"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Repeated reconciliation grants no factory/publication",
+        "id": "F1-NAT-RECOVERY-REPEATED-A"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced",
+        "id": "F1-NAT-RECOVERY-B"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Repeated reconciliation grants no factory/publication",
+        "id": "F1-NAT-RECOVERY-REPEATED-B"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Noncreating reconciliation",
+        "id": "F1-NAT-RECOVERY-NOCREATE"
+      }
+    ],
+    "environment": {
+      "WebKit": "22625.2.8.11.9",
+      "qualification": "discovery-only",
+      "bundle": "internal.vezham.browser.wsf1.qualification",
+      "macOS": "Version 27.2 (Build 26B123)"
+    }
+  },
+  "checkpoint": {
+    "snapshot": {
+      "previousRun": "d41dcef7-761f-4ac3-8daa-962d8668521b",
+      "records": [
+        {
+          "namespace": "c816aaca-3622-4624-88c5-d17824f327da",
+          "phase": {
+            "quarantined": {
+              "_0": "interruptedOperation"
+            }
+          },
+          "interruptedAction": "activate",
+          "generation": 2,
+          "operation": "8a3d78e6-ecc4-4b9f-8cad-3a338dc6bc89",
+          "profile": "bac580f8-c5f8-4050-bc23-66ef289f8221",
+          "store": "0baea61a-eeb2-409c-90ae-9ee557f3ae5e"
+        }
+      ],
+      "version": 1
+    },
+    "rows": [
+      {
+        "status": "accessStarted",
+        "origin": "fresh",
+        "store": "0baea61a-eeb2-409c-90ae-9ee557f3ae5e",
+        "revision": 2,
+        "profile": "bac580f8-c5f8-4050-bc23-66ef289f8221",
+        "resourceGeneration": 1
+      }
+    ]
+  },
+  "binarySHA256": "8eea7d81e27e5a1e3617df11de272c00527b6d7b9145f33d54468cffedb6f8d8",
+  "observations": []
+}

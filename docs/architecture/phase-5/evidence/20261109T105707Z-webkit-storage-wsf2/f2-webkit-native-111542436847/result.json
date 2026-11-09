@@ -1,0 +1,12 @@
+{
+  "status": "PASS_NATIVE",
+  "host": "27.2",
+  "mode": "webkit-native",
+  "nativePassed": 20,
+  "contractPassed": 0,
+  "blocked": 1,
+  "failed": 0,
+  "appProcesses": 10,
+  "buildRecord": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/evidence/20261109T105707Z-webkit-storage-wsf2/f2-build-111354521111/result.json",
+  "qualification": "Bounded cases only; essential catalog/unlock/Keychain/backup gates may remain blocked"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS_CONTRACT",
+  "baseline": "21ad0b0ca91ed0777e873fd8233290e4f12f2e96",
+  "tracked_baseline_files": 2042,
+  "unchanged_tracked_files": 2028,
+  "reviewed_modified_files": [
+    "apps/browser-macos/README.md",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "apps/browser-macos/Sources/Host/MainWindowController.swift",
+    "apps/browser-macos/StorageRuntime/README.md",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+    "apps/browser-macos/Tools/wsf1.py",
+    "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj",
+    "apps/browser-macos/project.json",
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md",
+    "docs/security/browser-security-acceptance-criteria.md",
+    "docs/security/browser-security-architecture.md",
+    "docs/security/browser-threat-model.md"
+  ],
+  "unexpected_changes": [],
+  "missing_or_deleted": [],
+  "append_only_indexes": [
+    "docs/architecture/phase-5/reports/M1/README.md",
+    "docs/architecture/phase-5/reports/M1/m1-source-catalog.md"
+  ],
+  "original_WKS_definitions_preserved": 40,
+  "ADRs_owner_OP_PQR_SQLCipher_worker_vendor_Phase3_prior_evidence": "All baseline paths byte-identical; only fourteen explicitly reviewed existing paths differ",
+  "no_history_or_owner_disposition_rewrite": true,
+  "no_runtime_activity_in_this_review": true
+}

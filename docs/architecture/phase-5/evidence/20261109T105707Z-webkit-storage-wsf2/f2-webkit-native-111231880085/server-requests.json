@@ -1,0 +1,149 @@
+[
+  {
+    "path": "/fixture",
+    "requestOrdinal": 1,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 2,
+    "cacheCount": 1,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 3,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 4,
+    "cacheCount": 2,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 5,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 6,
+    "cacheCount": 3,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 7,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 8,
+    "cacheCount": 4,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 9,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 10,
+    "cacheCount": 5,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 11,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 12,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 13,
+    "cacheCount": 6,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 14,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 15,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 16,
+    "cacheCount": 7,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 17,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 18,
+    "cacheCount": 8,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 19,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/cache-probe/823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+    "requestOrdinal": 20,
+    "cacheCount": 9,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  },
+  {
+    "path": "/fixture",
+    "requestOrdinal": 21,
+    "cacheCount": null,
+    "ifNoneMatch": null,
+    "cacheControl": null
+  }
+]

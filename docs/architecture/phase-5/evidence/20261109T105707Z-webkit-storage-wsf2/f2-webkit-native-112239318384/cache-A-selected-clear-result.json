@@ -1,0 +1,72 @@
+{
+  "label": "cache-A-selected-clear",
+  "pid": 50042,
+  "argv": [
+    "/private/tmp/vx-wsf1-y4ovzo4a/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf2-qualification"
+  ],
+  "binarySHA256": "8eea7d81e27e5a1e3617df11de272c00527b6d7b9145f33d54468cffedb6f8d8",
+  "returncode": 0,
+  "intentionalKill": false,
+  "cutpointObserved": false,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "observations": {
+      "beforeClear": "cache-6",
+      "first": "cache-7",
+      "second": "cache-7"
+    },
+    "checkpoint": {
+      "rows": [
+        {
+          "revision": 17,
+          "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+          "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e",
+          "status": "retired",
+          "resourceGeneration": 1,
+          "origin": "fresh"
+        }
+      ],
+      "snapshot": {
+        "previousRun": "38091801-2d14-4bad-8711-613bf13431df",
+        "version": 1,
+        "records": [
+          {
+            "phase": {
+              "stable": {
+                "_0": "retired"
+              }
+            },
+            "profile": "e5267a2a-fae5-4d8a-8c3c-be4f463cca47",
+            "operation": "520484e9-fd44-4847-911b-33a84c4e88df",
+            "namespace": "d14f44ca-e75f-4e50-a8de-59f04b2633da",
+            "generation": 15,
+            "store": "f899996d-b2e5-49b3-a503-8ca82fa9b35e"
+          }
+        ]
+      }
+    },
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-CLEAR-CALLBACK"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-CLEAR-POSITIVE-CONTROL"
+      },
+      {
+        "status": "PASS_NATIVE",
+        "detail": "Bounded synthetic native observation",
+        "id": "F2-CACHE-POPULATED"
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "WebKit": "22625.2.8.11.9"
+    }
+  }
+}

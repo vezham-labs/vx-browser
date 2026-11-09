@@ -1,0 +1,11 @@
+{
+  "namespace": "962c68bf-24b5-402c-98ea-25cb272087e3",
+  "profile": "7fd57db9-52c1-430c-9b39-7b6df309c0ae",
+  "store": "3b536cd6-da7e-4af3-a476-ffc1ec26320d",
+  "keyID": "c767dccb-e4d6-4cfa-aad4-86e4f2f1f94b",
+  "origin": "http://127.0.0.1:56856",
+  "cacheID": "823a71ea-1cdb-4ee4-8ebd-bbcbbfd0e0af",
+  "checkpoint": null,
+  "cutpoint": null,
+  "action": "cache-seed"
+}

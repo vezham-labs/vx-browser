@@ -1,0 +1,56 @@
+{
+  "id": "WSF2-STATIC-API-001",
+  "status": "PASS_CONTRACT",
+  "minimumOS": "26.0",
+  "geolocation": "Public27-only selector, availability-guarded; not positive support or26 runtime proof",
+  "headers": [
+    {
+      "source": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecBase.h",
+      "sha256": "02982c827dd8045f652350d48411e5f1ce98f17c4cacc3502e6bf4cbdd27006d",
+      "selected": [
+        {
+          "line": 278,
+          "text": "@constant errSecItemNotFound The item cannot be found."
+        },
+        {
+          "line": 341,
+          "text": "    errSecMissingEntitlement                 = -34018,    /* A required entitlement is not present. */"
+        },
+        {
+          "line": 353,
+          "text": "    errSecItemNotFound                       = -25300,    /* The specified item could not be found in the keychain. */"
+        }
+      ]
+    },
+    {
+      "source": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers/WKUIDelegate.h",
+      "sha256": "738ce572c46d1967a2d7f2f639c87405e526ac7f8d47fc47bf3e32776996452f",
+      "selected": [
+        {
+          "line": 165,
+          "text": "- (void)webView:(WKWebView *)webView requestMediaCapturePermissionForOrigin:(WKSecurityOrigin *)origin initiatedByFrame:(WKFrameInfo *)frame type:(WKMediaCaptureType)type decisionHandler:(WK_SWIFT_UI_ACTOR void (^)(WKPermissionDecision decision))decisionHandler WK_SWIFT_ASYNC_NAME(webView(_:decideMediaCapturePermissionsFor:initiatedBy:type:)) WK_SWIFT_ASYNC(5) API_AVAILABLE(macos(12.0), ios(15.0));"
+        },
+        {
+          "line": 302,
+          "text": "- (void)webView:(WKWebView *)webView requestGeolocationPermissionForOrigin:(WKSecurityOrigin*)origin initiatedByFrame:(WKFrameInfo *)frame decisionHandler:(WK_SWIFT_UI_ACTOR void (^)(WKPermissionDecision decision))decisionHandler WK_SWIFT_ASYNC_NAME(webView(_:requestGeolocationPermissionFor:initiatedBy:)) API_AVAILABLE(macos(27.0), ios(27.0), visionos(27.0));"
+        }
+      ]
+    },
+    {
+      "source": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers/WKWebsiteDataStore.h",
+      "sha256": "416940fc49e703de57c6da8ef372f98493503fb9d6cffe9d2b3479c6c62f4b9a",
+      "selected": [
+        {
+          "line": 117,
+          "text": "+ (void)removeDataStoreForIdentifier:(NSUUID *)identifier completionHandler:(WK_SWIFT_UI_ACTOR void(^)(NSError * _Nullable))completionHandler API_AVAILABLE(macos(14.0), ios(17.0));"
+        },
+        {
+          "line": 123,
+          "text": "+ (void)fetchAllDataStoreIdentifiers:(WK_SWIFT_UI_ACTOR void(^)(NSArray<NSUUID *> *))completionHandler WK_SWIFT_ASYNC_NAME(getter:allDataStoreIdentifiers()) API_AVAILABLE(macos(14.0), ios(17.0));"
+        }
+      ]
+    }
+  ],
+  "no_default_store_or_private_API_workaround": true,
+  "native_sourceSHA256": "a8c2ac1613c25ecab9699d242237d978efc7155b861b73b80c17fe99529fd45a"
+}

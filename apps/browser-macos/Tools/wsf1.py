@@ -48,12 +48,12 @@ class Run:
     def models(self):
         p = self.run("swift-test", ["swift", "test", "--package-path", str(PACKAGE), "--scratch-path", str(self.work / "build"), "--cache-path", str(self.work / "cache"), "--config-path", str(self.work / "config"), "--security-path", str(self.work / "security"), "--disable-keychain", "--disable-netrc", "--manifest-cache", "local", "--jobs", "2", "--disable-xctest", "--enable-swift-testing", "--no-parallel"])
         output = (p.stdout + p.stderr).decode("utf8", "replace")
-        passed = re.findall(r'Test "(F1-[^"]+)"(?: with \d+ test cases)? passed', output)
+        passed = re.findall(r'Test "((?:F1|F2)-[^"]+)"(?: with \d+ test cases)? passed', output)
         summary = re.search(r'Test run with (\d+) tests.*?passed', output)
         unchanged = all(digest(ROOT / k) == v for k, v in self.sources.items())
         ok = p.returncode == 0 and summary is not None and int(summary[1]) == len(passed) and unchanged
         result = {"status": "PASS_CONTRACT" if ok else "FAIL", "passed": passed, "count": len(passed),
-                  "contractCount": sum(not x.startswith("F1-FAKE-") for x in passed), "additionalFakeCount": sum(x.startswith("F1-FAKE-") for x in passed),
+                  "contractCount": sum("-FAKE-" not in x for x in passed), "additionalFakeCount": sum("-FAKE-" in x for x in passed),
                   "sourceUnchanged": unchanged, "macOS": platform.mac_ver()[0], "nativeExecution": False, "returncode": p.returncode}
         self.save("result.json", result)
         print(json.dumps({"attempt": str(self.out), **result}))

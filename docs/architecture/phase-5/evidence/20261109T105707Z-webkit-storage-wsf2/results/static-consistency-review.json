@@ -1,0 +1,14 @@
+{
+  "status": "PASS_CONTRACT",
+  "json_files_parsed": 467,
+  "python_sources_AST_parsed": 6,
+  "relative_markdown_links_checked": 248,
+  "errors": [],
+  "authored_diff_whitespace": "PASS",
+  "final_build_input_hashes_match_current": 48,
+  "current_shared_production_hashes_match": 30,
+  "original_WKS_definitions": 40,
+  "security_checkboxes_unchanged": true,
+  "no_native_provider_or_test_execution": true,
+  "limitation": "Static checks do not pass any blocked native or release criterion"
+}

@@ -1,0 +1,44 @@
+{
+  "label": "cut-01-persistent-factory",
+  "pid": 52084,
+  "action": "seed",
+  "cutpoint": "persistent-factory",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "snapshot": {
+      "previousRun": "fae4ab67-921c-42ac-a987-559f5008f9f0",
+      "records": [
+        {
+          "generation": 1,
+          "store": "ee1f7d05-9d08-43d0-8ba8-72be00dbda68",
+          "operation": "1e04dc52-a40b-4d99-90c8-ae37bb946466",
+          "namespace": "7f9c0294-6d8d-4c45-a550-9487e07657df",
+          "profile": "0dddf2c6-9e7b-4f05-be16-a66fae2b4e1d",
+          "phase": {
+            "pending": {
+              "_0": "resolve"
+            }
+          }
+        }
+      ],
+      "version": 1
+    },
+    "rows": [
+      {
+        "store": "ee1f7d05-9d08-43d0-8ba8-72be00dbda68",
+        "resourceGeneration": 1,
+        "origin": "fresh",
+        "profile": "0dddf2c6-9e7b-4f05-be16-a66fae2b4e1d",
+        "revision": 2,
+        "status": "accessStarted"
+      }
+    ]
+  },
+  "binarySHA256": "17897e1450048796e69b4225ffeda47b2fd6e997dba2bb58ea3948034bf64d47",
+  "observations": []
+}

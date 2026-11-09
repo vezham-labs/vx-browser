@@ -1,0 +1,23 @@
+{
+  "namespace": "847094af-8d96-4a1f-9170-f493d61af979",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "c846c739-82c9-40b2-a959-176e63d00387",
+      "store": "82025e1e-3011-48ce-8af7-cb2dd58f0c1f"
+    },
+    {
+      "name": "B",
+      "profile": "73a144cb-01a7-49ca-a6ea-32f9507d0be6",
+      "store": "3d3b4bf5-7f62-45ac-8b97-b50718228cef"
+    }
+  ],
+  "origin": "http://127.0.0.1:59594",
+  "checkpoint": null,
+  "cutpoint": null,
+  "fixtureSHA256": {
+    "storage.html": "5fdd5925ad0f56c2d78475a09cfbee26ec25a773ffe09b0e741f1e059d030e8f",
+    "sw.js": "df74c4e25a5a9c5c3ecf945e00e92c5120c21e865b84c9e1e368716b3767c6f9"
+  },
+  "originalsModified": false
+}

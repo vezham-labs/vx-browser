@@ -21,7 +21,7 @@ final class MainWindowController: NSWindowController {
     private func configureContent(_ window: NSWindow) {
         let title = NSTextField(labelWithString: "Vezham Browser")
         title.font = .systemFont(ofSize: 28, weight: .semibold)
-        let status = NSTextField(labelWithString: "Ready")
+        let status = NSTextField(labelWithString: "Protected profile storage unavailable")
         status.textColor = .secondaryLabelColor
         status.setAccessibilityIdentifier("browser-host-status")
 

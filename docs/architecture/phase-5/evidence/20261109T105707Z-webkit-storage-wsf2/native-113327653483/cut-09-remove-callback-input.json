@@ -1,0 +1,68 @@
+{
+  "namespace": "581e8592-7dac-48ca-97be-f94bb47ca20e",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "889b7f29-200b-4c4a-ad3f-e2617d8b489a",
+      "store": "b07ad0fd-a4ef-40c0-9b56-d448a0cb80e8"
+    },
+    {
+      "name": "B",
+      "profile": "48f0957b-5071-4893-bc16-07c507feef0d",
+      "store": "a5b747e6-311c-4e73-b345-65265337d4ea"
+    }
+  ],
+  "origin": "http://127.0.0.1:61920",
+  "checkpoint": {
+    "rows": [
+      {
+        "store": "a5b747e6-311c-4e73-b345-65265337d4ea",
+        "status": "quiescent",
+        "revision": 4,
+        "resourceGeneration": 1,
+        "profile": "48f0957b-5071-4893-bc16-07c507feef0d",
+        "origin": "fresh"
+      },
+      {
+        "store": "b07ad0fd-a4ef-40c0-9b56-d448a0cb80e8",
+        "status": "quiescent",
+        "revision": 4,
+        "resourceGeneration": 1,
+        "profile": "889b7f29-200b-4c4a-ad3f-e2617d8b489a",
+        "origin": "fresh"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "a2d8833a-68ce-4bd7-b415-23e69010f803",
+      "records": [
+        {
+          "operation": "d33754f4-f9c5-40f9-9e8e-da3be8d034b9",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "profile": "48f0957b-5071-4893-bc16-07c507feef0d",
+          "store": "a5b747e6-311c-4e73-b345-65265337d4ea",
+          "generation": 2,
+          "namespace": "581e8592-7dac-48ca-97be-f94bb47ca20e"
+        },
+        {
+          "operation": "cc6f6e23-336d-4df5-8c5b-8960bf0a9f9b",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "profile": "889b7f29-200b-4c4a-ad3f-e2617d8b489a",
+          "store": "b07ad0fd-a4ef-40c0-9b56-d448a0cb80e8",
+          "generation": 2,
+          "namespace": "581e8592-7dac-48ca-97be-f94bb47ca20e"
+        }
+      ],
+      "version": 1
+    }
+  },
+  "cutpoint": "remove-callback",
+  "action": "remove"
+}

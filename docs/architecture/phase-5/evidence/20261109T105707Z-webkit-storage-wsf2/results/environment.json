@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "sw_vers"
+  ],
+  "returncode": 0,
+  "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+  "stderr": ""
+}

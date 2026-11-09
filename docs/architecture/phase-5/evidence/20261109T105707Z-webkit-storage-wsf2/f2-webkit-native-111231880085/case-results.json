@@ -1,0 +1,116 @@
+[
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-seed"
+  },
+  {
+    "id": "F2-CACHE-POPULATED",
+    "detail": "Bounded synthetic native observation",
+    "status": "PASS_NATIVE",
+    "attempt": "cache-B-seed"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-restart"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "status": "PASS_NATIVE",
+    "attempt": "cache-A-abrupt"
+  },
+  {
+    "id": "F2-CACHE-POPULATED",
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-A-after-abrupt"
+  },
+  {
+    "id": "F2-CACHE-CLEAR-CALLBACK",
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-A-selected-clear"
+  },
+  {
+    "id": "F2-CACHE-POPULATED",
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "attempt": "cache-A-selected-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-CLEAR-CALLBACK",
+    "attempt": "cache-A-full-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-full-clear"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-A-remove"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-REMOVE",
+    "attempt": "cache-A-remove"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-POPULATED",
+    "attempt": "cache-B-remove"
+  },
+  {
+    "status": "PASS_NATIVE",
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-CACHE-REMOVE",
+    "attempt": "cache-B-remove"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-REAL-RESOURCES",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-NO-VIEWS",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-NAVIGATION-DENIED",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-NO-KEY-LEASE",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Bounded synthetic native observation",
+    "id": "F2-LOCK-REPEATED",
+    "status": "PASS_NATIVE",
+    "attempt": "lock"
+  },
+  {
+    "detail": "Real key reacquisition/protected catalog reopen blocked; no automatic OS authentication prompt in qualification",
+    "id": "F2-UNLOCK-PRODUCTION",
+    "status": "BLOCKED",
+    "attempt": "lock"
+  }
+]

@@ -74,7 +74,7 @@ Chromium’s model separates the browser from renderer processes and uses OS san
 
 ## Staged security requirements
 
-The [owner decision](../architecture/phase-3/owner-approval-decision.md) conditionally accepts WKWebView for MVP planning/implementation and approves bounded closure/architecture. ADR 0001 remains Proposed. Current M0 scope implements a native lifecycle/window only; no website engine/bridge or production optional-service integration.
+The [owner decision](../architecture/phase-3/owner-approval-decision.md) conditionally accepts WKWebView for MVP planning/implementation and approves bounded closure/architecture. ADR 0001 remains Proposed. The separately authorized [WS-F2 storage/security milestone](../architecture/phase-5/reports/M1/m1-wsf2-closeout.md) extends the native host with bounded storage/security components; protected catalog/key/permission/backup gates remain incomplete. No privileged website bridge or production optional-service integration is added.
 
 Stage A reviews bounded evidence, unresolved risks and critical workflows. Stage B validates the affected production boundaries and behavior before reliance. Stage C validates the actual signed/notarized candidate on macOS 26.0/latest supported 26.x, including release protections/performance/compatibility/updater security. Retain the following obligations at their applicable stage:
 
@@ -89,3 +89,7 @@ Stage A reviews bounded evidence, unresolved risks and critical workflows. Stage
 9. Engine update SLAs and security response owner. If CEF is selected later, include helper signing, sandbox verification, license notices, and urgent Chromium patching.
 
 This threat model is a design baseline, not a security certification. Independent review and adversarial testing are required before an internal release; no public distribution is authorized. Cross-profile/private leakage or unauthorized native access remains a hard failure, not an accepted exception.
+
+## WS-F2 qualification scope — 2026-11-09
+
+Primary WS-F2 execution is macOS27.2/arm64. The owner deliberately defers actual26.0/latest26.x qualification to the [release backlog](../architecture/phase-5/reports/M1/m1-wsf2-public-release-qualification-backlog.md). This does not pass or waive any checklist, authorize public distribution or change ADR/owner/security status. See [actual results and limits](../architecture/phase-5/reports/M1/m1-wsf2-qualification-results.md); native media denial failed its oracle, geolocation is inconclusive, Keychain creation is entitlement-blocked and D2A-01 remains unresolved.

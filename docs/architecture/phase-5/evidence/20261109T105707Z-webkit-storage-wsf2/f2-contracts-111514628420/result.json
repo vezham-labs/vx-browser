@@ -1,0 +1,32 @@
+{
+  "status": "PASS_CONTRACT",
+  "tests": [
+    "F2-CON-007 canonical CBOR rejects duplicate noncanonical indefinite and trailing input",
+    "F2-CON-008 backup rejects private duplicate oversized future or conflicting records",
+    "F2-CON-009 restore omits native grants respects deletion and requires explicit unknown lineage",
+    "F2-CON-010 catalog descriptor scope label and publication gates",
+    "F1-FAKE-001 concurrent close and clear exclude one another without effects",
+    "F1-MOD-001 persistent descriptor roundtrip",
+    "F1-MOD-002 missing corrupt old future adapter and platform versions reject",
+    "F1-MOD-003 private encoding forbidden",
+    "F1-MOD-004 all creation publication retirement transitions and replay",
+    "F1-MOD-005 every interrupted transition quarantines without publication",
+    "F1-MOD-006 no premature publish navigation or foreign replay",
+    "F1-MOD-007 stable present is reusable absent conflicting and unknown fence",
+    "F1-MOD-008 invalid bounds and mixed private persistent reject",
+    "F1-GUARD-001 host grants are scoped current and revocable",
+    "F1-GUARD-002 unresolved and wrong scope construction have no native effect",
+    "F1-GUARD-003 catalog namespace duplicate profile and store rejected before WebKit",
+    "F1-GUARD-004 normal composition cannot publish or navigate unresolved views",
+    "F2-CON-001 protected catalog refuses every operation without provider IO",
+    "F2-CON-002 catalog migration plans reject unauthenticated interrupted and future schema",
+    "F2-CON-003 verified origins reject ambiguous identity",
+    "F2-CON-004 permission Ask allow deny revoke and OS independence",
+    "F2-CON-005 private permission no persistence and lock fences stale prompt",
+    "F2-FAKE-001 lock retires keys and resources before Locked; unlock needs auth and recovery",
+    "F2-CON-006 key errors remain distinct and contain no native secret objects"
+  ],
+  "count": 24,
+  "nativeKeychainWebKitExecution": false,
+  "host": "27.2"
+}
