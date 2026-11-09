@@ -1,0 +1,58 @@
+{
+  "branch": "timeline",
+  "head": "a359ebc5f3ef3656568daa02b51ba0b116ea8538",
+  "historical": {
+    "WS-F4R": {
+      "manifest": "docs/architecture/phase-5/reports/WS-F4R/evidence/SHA256SUMS",
+      "manifestSHA256": "e149866e36a35cc236282ef46f0b59d92b4f288c9b28aef62b202f0b76a5f452",
+      "verified": 423
+    },
+    "WS-F5": {
+      "manifest": "docs/architecture/phase-5/reports/WS-F5/evidence/SHA256SUMS",
+      "manifestSHA256": "8c75350fabc19e13d56822ef5e1281f0bc88dfe96d396bfc45a6b168ecf4a3e7",
+      "verified": 223
+    },
+    "WS-F5R": {
+      "manifest": "docs/architecture/phase-5/reports/WS-F5R/SHA256SUMS",
+      "manifestSHA256": "56386d15e57ee6d3312e61534f31606313627bc226c3c90ff721e723198335b2",
+      "verified": 12
+    }
+  },
+  "trackedChanged": [
+    "apps/browser-macos/Chrome/src/Browser.tsx",
+    "apps/browser-macos/Chrome/src/bridge.ts",
+    "apps/browser-macos/Chrome/tests/shell.spec.ts",
+    "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+    "apps/browser-macos/Sources/Host/BrowserChromeContract.swift",
+    "apps/browser-macos/Sources/Host/MainWindowController.swift",
+    "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+    "apps/browser-macos/Tools/wsf5.py"
+  ],
+  "newTools": [
+    "apps/browser-macos/Tools/wsf5r.py"
+  ],
+  "stagedFiles": [],
+  "newDesignReports": [
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/architecture-review.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/concurrency-and-failure-analysis.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/decision-record.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/implementation-plan.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/mini-session-recovery.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/recovery-state-machine.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/security-review.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/session-ownership.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/storage-isolation-analysis.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/test-strategy.md",
+    "docs/architecture/phase-5/reports/WS-F5R/recovery-design/workspace-restoration-policy.md"
+  ],
+  "exactCandidateSourceHashesVerified": 63,
+  "pnpmLockSHA256": "da3062ac9e3e337c3d7e00892d8fcd65faf4b0a9f13cd3b9a3e227301278574f",
+  "candidateBinarySHA256": "c0a80adda8d209d487fe2cab0154466ecb30c3e4c182360a9220ab2eca4849a3",
+  "originalTemporaryCopy": "/private/tmp/vx-wsf5r.aWxqL0",
+  "generatedFilesExcludedFromIntegration": 76,
+  "standInUI": {
+    "status": "PASS_FAKE_ONLY",
+    "passed": 14,
+    "exit": 0
+  }
+}

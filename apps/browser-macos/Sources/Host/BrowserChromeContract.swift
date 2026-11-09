@@ -24,7 +24,7 @@ enum ExternalBrowserRoute {
 
 struct ChromeCommand: Decodable {
     enum Kind: String, Decodable {
-        case snapshot, startPrivate, endPrivate, newTab, activate, close, duplicate, move
+        case snapshot, recoverPrivate, startPrivate, endPrivate, newTab, activate, close, duplicate, move
         case navigate, back, forward, reload, stop, copy, paste, appearance, presentation
         case spaceCreate, spaceRename, spaceSwitch, spaceDelete, tabSpace, pin
         case groupCreate, groupRename, groupToggle, groupMove, groupDelete, tabGroup
@@ -76,10 +76,15 @@ struct ChromeGroup: Encodable, Equatable {
     var collapsed = false
 }
 
+enum ChromeRecovery: String, Encodable {
+    case retiring, ready, rebuilding, failed
+}
+
 struct ChromeState: Encodable, Equatable {
     let revision: Int
     let session: String
     let sessionID: String?
+    let recovery: ChromeRecovery?
     let profile = "unavailable"
     let tabs: [ChromeTab]
     let selected: String?

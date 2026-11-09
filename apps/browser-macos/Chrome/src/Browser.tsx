@@ -56,7 +56,7 @@ export function Browser() {
   const dragged = useRef<string>(undefined);
   const active = browser.tabs.find((tab) => tab.id === browser.selected);
   const inPrivate = browser.session === 'private';
-  const isWeb = section === 'Tabs' && Boolean(active?.url && !active.failure) && !palette && !menu && !editing && !editor;
+  const isWeb = !browser.recovery && section === 'Tabs' && Boolean(active?.url && !active.failure) && !palette && !menu && !editing && !editor;
   const theme = browser.appearance;
   const spaceTabs = browser.tabs.filter((tab) => tab.space === browser.activeSpace);
   const spaceGroups = browser.groups.filter((group) => group.space === browser.activeSpace);
@@ -102,6 +102,11 @@ export function Browser() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
+
+  useEffect(() => {
+    if (!browser.recovery) return;
+    setPalette(false); setMenu(undefined); setEditor(undefined); setEditing(false); setDraft('');
+  }, [browser.recovery]);
 
   useLayoutEffect(() => {
     setBookmarks([]); setBookmarkForm(undefined); setBookmarkQuery('');
@@ -347,6 +352,22 @@ export function Browser() {
       </main>
       <footer className="status"><span>{notice || (active?.loading ? 'Loading…' : active?.title || 'Vezham Mini')}</span><span>Private</span></footer>
     </div>;
+  }
+
+  if (browser.recovery) {
+    const ready = browser.recovery === 'ready';
+    const failed = browser.recovery === 'failed';
+    const title = failed ? 'Private workspace unavailable' : 'Web content stopped';
+    const description = ready
+      ? 'Restore your workspace layout in a fresh private session. Pages will start blank.'
+      : failed ? 'The browser could not safely finish recovery. Close this window to continue.'
+        : browser.recovery === 'rebuilding' ? 'Opening a fresh private session…' : 'Closing the stopped private session…';
+    return <main className="content" aria-label="Private workspace recovery">
+      <div className="panel">
+        <div role="status"><Empty icon="globe" title={title}>{description}</Empty></div>
+        {ready && <Button variant="primary" onPress={() => void send({ type: 'recoverPrivate' })}>Restore private workspace</Button>}
+      </div>
+    </main>;
   }
 
   if (browser.mini) return miniView();

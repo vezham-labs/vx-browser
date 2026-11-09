@@ -57,6 +57,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     private var fenced: Set<Scope> = []
     private var poisoned: Set<Scope> = []
     private var securityLocked: Set<Scope> = []
+    public var privateContentProcessDidTerminate: (@MainActor (PrivateSessionID) -> Void)?
     public var openExternalLink: (@MainActor (URL) -> Void)?
     public var permissionMediator: NativePermissionMediator?
     public func ownedViews(_ scope: Scope) -> [ViewID] { views.filter { $0.value.identity.scope == scope }.map(\.key) }
@@ -401,11 +402,13 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     }
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         navigations.removeValue(forKey: ObjectIdentifier(webView))?(true)
-        guard interactivePrivateBrowsing, let id = views.first(where: { $0.value.object === webView })?.key,
+        guard interactivePrivateBrowsing, let entry = views.first(where: { $0.value.object === webView }),
+              !fenced.contains(entry.value.identity.scope),
               let url = webView.url else { return }
-        let document = views[id]?.permissionDocument
+        let id = entry.key, scope = entry.value.identity.scope
+        let document = entry.value.permissionDocument
         Task { @MainActor [weak self, weak webView] in
-            guard let self, let webView else { return }
+            guard let self, let webView, !self.fenced.contains(scope) else { return }
             let script = """
             const icon = document.querySelector('link[rel~="icon"]');
             if (!icon) return null;
@@ -423,6 +426,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
             });
             """
             guard let value = try? await webView.callAsyncJavaScript(script, arguments: [:], in: nil, contentWorld: .page) as? String,
+                  !self.fenced.contains(scope), self.views[id]?.object === webView,
                   self.views[id]?.permissionDocument == document, webView.url == url,
                   value.utf8.count < 45000, let separator = value.firstIndex(of: ","),
                   let data = Data(base64Encoded: String(value[value.index(after: separator)...])),
@@ -442,10 +446,27 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: any Error) { navigationFailure(webView, error: error) }
     public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: any Error) { navigationFailure(webView, error: error) }
     public func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
-        if let v = views.values.first(where: { $0.object === webView }) {
-            fenced.insert(v.identity.scope); poisoned.insert(v.identity.scope)
+        guard let view = views.values.first(where: { $0.object === webView }) else {
+            record("content-process", "foreign-view-ignored")
+            return
         }
-        navigations.removeValue(forKey: ObjectIdentifier(webView))?(false); record("content-process", "terminated-fenced")
+        let scope = view.identity.scope
+        fenced.insert(scope)
+        let first = poisoned.insert(scope).inserted
+        guard interactivePrivateBrowsing, case .privateSession(let session) = scope else {
+            navigations.removeValue(forKey: ObjectIdentifier(webView))?(false)
+            record("content-process", "terminated-fenced")
+            return
+        }
+        guard first else { return }
+        for id in ownedViews(scope) {
+            guard let object = views[id]?.object else { continue }
+            views[id]?.permissionDocument = UUID()
+            navigations.removeValue(forKey: ObjectIdentifier(object))?(false)
+            object.stopLoading()
+        }
+        record("content-process", "terminated-fenced")
+        privateContentProcessDidTerminate?(session)
     }
     public func webView(_ webView: WKWebView, decidePolicyFor action: WKNavigationAction, decisionHandler: @escaping @MainActor @Sendable (WKNavigationActionPolicy) -> Void) {
         guard let pair = views.first(where: { $0.value.object === webView }), pair.value.published,

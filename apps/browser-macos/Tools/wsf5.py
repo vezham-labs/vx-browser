@@ -112,9 +112,9 @@ class FixtureServer(ThreadingHTTPServer):
     block_on_close = False
     allow_reuse_address = False
 
-    def __init__(self):
+    def __init__(self, handler=Fixture):
         self.stopping = threading.Event()
-        super().__init__(("127.0.0.1", 0), Fixture)
+        super().__init__(("127.0.0.1", 0), handler)
 
     def handle_error(self, request, client_address):
         # Base implementation prints request-related traceback information.
@@ -204,7 +204,7 @@ def capture(event, target, sequence, deadline):
     return result
 
 
-def attempt(app, target, origin, baseline):
+def attempt(app, target, origin, baseline, flag="--wsf5-qualification"):
     target.mkdir()
     result = {"startedUTC": utc_now(), "status": "FAIL", "reasons": [],
               "timeout": False, "events": [], "screenshots": []}
@@ -216,7 +216,7 @@ def attempt(app, target, origin, baseline):
         save(target / "hashes-before.json", before)
         if before != baseline:
             raise ValueError("Candidate/source identity changed before attempt")
-        argv = [str(candidate(app)), "--wsf5-qualification", origin]
+        argv = [str(candidate(app)), flag, origin]
         result["argv"] = argv
         deadline = time.monotonic() + TIMEOUT
         with (target / "stdout.log").open("xb", buffering=0) as stdout, \
@@ -334,7 +334,7 @@ def attempt(app, target, origin, baseline):
     return result, interrupted
 
 
-def main():
+def main(*, evidence_root=EVIDENCE, flag="--wsf5-qualification", server_factory=FixtureServer):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--app", type=Path, help="Exact existing qualification .app bundle")
     parser.add_argument("--evidence", type=Path, required=True)
@@ -344,8 +344,8 @@ def main():
     args = parser.parse_args()
     if not SAFE_NAME.fullmatch(args.run_name):
         parser.error("Run name must be 1-80 ASCII letters/digits/underscores/hyphens, starting alphanumeric")
-    if args.evidence.resolve() != EVIDENCE or not EVIDENCE.is_dir():
-        parser.error(f"Existing WS-F5 evidence directory required: {EVIDENCE}")
+    if args.evidence.resolve() != evidence_root or not evidence_root.is_dir():
+        parser.error(f"Existing qualification evidence directory required: {evidence_root}")
     if not args.serve_only and args.app is None:
         parser.error("--app is required unless --serve-only is selected")
     app = args.app.absolute() if args.app is not None else None
@@ -355,7 +355,7 @@ def main():
         baseline = snapshot(app)
     except (OSError, ValueError, plistlib.InvalidFileException) as error:
         parser.error(str(error))
-    target = EVIDENCE / args.run_name
+    target = evidence_root / args.run_name
     try:
         target.mkdir()  # Atomic refusal of any existing directory, file, or symlink.
     except FileExistsError:
@@ -372,7 +372,7 @@ def main():
     server = None
     thread = None
     try:
-        server = FixtureServer()
+        server = server_factory()
         thread = threading.Thread(target=server.serve_forever, kwargs={"poll_interval": 0.1}, daemon=True)
         thread.start()
         origin = f"http://127.0.0.1:{server.server_port}"
@@ -383,7 +383,7 @@ def main():
             record["status"] = "SERVED_ONLY"
         else:
             for number in range(1, args.attempts + 1):
-                result, interrupted = attempt(app, target / f"attempt-{number}", origin, baseline)
+                result, interrupted = attempt(app, target / f"attempt-{number}", origin, baseline, flag)
                 record["attempts"].append({"attempt": number, "status": result["status"],
                                            "reasons": result["reasons"], "nativeFinal": result["nativeFinal"],
                                            "nativePassed": result["nativePassed"],

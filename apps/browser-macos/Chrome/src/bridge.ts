@@ -18,6 +18,7 @@ export type BrowserState = {
   revision: number;
   session: 'inactive' | 'private';
   sessionID?: string;
+  recovery?: "retiring" | "ready" | "rebuilding" | "failed";
   profile: 'unavailable';
   tabs: Tab[];
   selected?: string;
@@ -30,7 +31,7 @@ export type BrowserState = {
   mini: boolean;
 };
 export type Command =
-  | { type: 'snapshot' | 'startPrivate' | 'endPrivate' | 'newTab' }
+  | { type: 'snapshot' | 'recoverPrivate' | 'startPrivate' | 'endPrivate' | 'newTab' }
   | { type: 'activate' | 'close' | 'duplicate' | 'back' | 'forward' | 'reload' | 'stop' | 'copy' | 'paste'; tab: string }
   | { type: 'move'; tab: string; offset: number }
   | { type: 'navigate'; tab: string; url: string }

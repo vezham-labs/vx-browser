@@ -2,9 +2,9 @@ import { test, expect } from '@playwright/test';
 import type { Page } from '@playwright/test';
 import type { Appearance, BrowserState, Command, Tab } from '../src/bridge';
 
-async function hostStandIn(page: Page) {
-  await page.addInitScript(() => {
-    const state: BrowserState = { revision: 0, session: 'inactive', profile: 'unavailable', tabs: [], appearance: 'system', spaces: [{ id:'personal', name:'Personal' }], activeSpace:'personal', groups: [], split: [], splitCompact:false, mini:false };
+async function hostStandIn(page: Page, recovery?: BrowserState['recovery']) {
+  await page.addInitScript((initialRecovery) => {
+    const state: BrowserState = { revision: 0, session: 'inactive', recovery: initialRecovery, profile: 'unavailable', tabs: [], appearance: 'system', spaces: [{ id:'personal', name:'Personal' }], activeSpace:'personal', groups: [], split: [], splitCompact:false, mini:false };
     let sequence = 0;
     const addTab = () => {
       const next: Tab = { id: 'test-' + ++sequence, title: 'New tab', space:state.activeSpace, pinned:false, loading: false, progress: 0, back: false, forward: false, connection: 'unknown' };
@@ -15,6 +15,7 @@ async function hostStandIn(page: Page) {
     Object.defineProperty(window, 'webkit', { value: { messageHandlers: { browserChrome: { postMessage(command: Command & { id: string }) {
       const target = 'tab' in command ? state.tabs.find((item) => item.id === command.tab) : undefined;
       switch (command.type) {
+        case 'recoverPrivate': if (state.recovery === 'ready') { state.recovery = undefined; state.session = 'private'; state.sessionID = 'fresh'; addTab(); } break;
         case 'startPrivate': state.session = 'private'; state.sessionID = 'private-' + sequence; addTab(); break;
         case 'newTab': addTab(); break;
         case 'endPrivate': state.session = 'inactive'; state.sessionID = undefined; state.tabs = []; state.selected = undefined; break;
@@ -53,7 +54,7 @@ async function hostStandIn(page: Page) {
       state.revision++;
       return Promise.resolve({ id: command.id, state: structuredClone(state) });
     } } } } });
-  });
+  }, recovery);
   await page.goto('/');
 }
 
@@ -232,4 +233,20 @@ test('native-selected tab changes dismiss an unfinished address draft', async ({
     await host.webkit.messageHandlers.browserChrome.postMessage({ id: 'external-selection-fixture', version: 1, type: 'newTab' });
   });
   await expect(page.getByRole('textbox', { name: 'Address and search' })).toHaveValue('');
+});
+
+
+test('recovery action appears only after the host confirms retirement', async ({ page }) => {
+  await hostStandIn(page, 'ready');
+  await expect(page.getByRole('status')).toContainText('Pages will start blank');
+  await page.getByRole('button', { name: 'Restore private workspace' }).click();
+  await expect(page.getByRole('tab', { name: 'New tab' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Restore private workspace' })).toHaveCount(0);
+});
+
+test('unconfirmed retirement keeps the workspace unavailable', async ({ page }) => {
+  await hostStandIn(page, 'failed');
+  await expect(page.getByRole('heading', { name: 'Private workspace unavailable' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Restore private workspace' })).toHaveCount(0);
+  await expect(page.getByRole('textbox', { name: 'Address and search' })).toHaveCount(0);
 });

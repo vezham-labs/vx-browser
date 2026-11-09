@@ -62,6 +62,8 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     private var busy = false
     private var closing = false
     private var cleanupTask: Task<Void, Never>?
+    private var recovery: ChromeRecovery?
+    private var retirementTask: Task<Void, Never>?
     var acceptsExternalNavigation: Bool { !closing }
     var isPerformingBrowserAction: Bool { busy }
     private var lastState: ChromeState?
@@ -86,7 +88,13 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         window.delegate = self
         configureContent(window)
         window.shortcut = { [weak self] key in
-            guard let self, ["l", "t", "w", "r", "k", ",", "[", "]"].contains(key),
+            guard let self else { return false }
+            if self.recovery != nil {
+                guard key == "w" else { return false }
+                self.window?.performClose(nil)
+                return true
+            }
+            guard ["l", "t", "w", "r", "k", ",", "[", "]"].contains(key),
                   let chrome = self.chrome, chrome.url == self.chromeURL,
                   key != "w" || !self.tabs.isEmpty else { return false }
             self.window?.makeFirstResponder(chrome)
@@ -173,12 +181,12 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         let sessionID = browsing?.id.rawValue
         let active = selected?.rawValue.lowercased()
         let items = tabs.map(tabState)
-        let observed = ChromeState(revision: revision, session: session, sessionID: sessionID,
+        let observed = ChromeState(revision: revision, session: session, sessionID: sessionID, recovery: recovery,
                                    tabs: items, selected: active, appearance: appearance, spaces: spaces, activeSpace: activeSpace,
                                    groups: groups, split: splitTabs.map { $0.rawValue.lowercased() },
                                    splitCompact: page.bounds.width < 600, mini: mini)
         let state = observed == lastState ? observed : ChromeState(revision: revision + 1,
-            session: session, sessionID: sessionID, tabs: items, selected: active, appearance: appearance, spaces: spaces, activeSpace: activeSpace,
+            session: session, sessionID: sessionID, recovery: recovery, tabs: items, selected: active, appearance: appearance, spaces: spaces, activeSpace: activeSpace,
                                    groups: groups, split: splitTabs.map { $0.rawValue.lowercased() },
                                    splitCompact: page.bounds.width < 600, mini: mini)
         lastState = state
@@ -211,6 +219,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
 
     private func run(_ command: ChromeCommand) async -> ChromeResult {
         if command.type == .snapshot { return result(command) }
+        guard !closing else { return result(command, error: .unavailable) }
         if command.type == .presentation {
             guard let left = command.left, let top = command.top, let visible = command.visible,
                   left.isFinite, top.isFinite, (0...340).contains(left), (40...128).contains(top) else {
@@ -220,15 +229,16 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
             updateSurface()
             return result(command)
         }
-        guard !busy, !closing else { return result(command, error: .busy) }
-        busy = true
-        defer {
-            busy = false
-            if closing { scheduleCleanup() }
-            else { updateSurface() }
+        guard !busy else { return result(command, error: .busy) }
+        guard recovery == nil || command.type == .recoverPrivate else {
+            return result(command, error: .unavailable)
         }
+        busy = true
+        defer { browserActionFinished() }
         do {
             switch command.type {
+            case .recoverPrivate:
+                try await recoverPrivate()
             case .spaceCreate, .spaceRename, .spaceSwitch, .spaceDelete, .groupCreate,
                  .groupRename, .groupToggle, .groupMove, .groupDelete:
                 try organize(command)
@@ -269,27 +279,153 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         }
     }
 
-    private func startPrivate() async throws {
+    private func makePrivateSession() async throws -> PrivateSession {
         let storage = try NativeStorageSession.privateOnly(interactiveBrowsing: true)
         let id = try PrivateSessionID(UUID().uuidString)
         let scope = Scope.privateSession(id)
         let context = await storage.authority.grant(scope, run: storage.run)
-        guard case .success = await storage.core.registerPrivate(id, context: context, operation: try operation()),
-              case .success = await storage.core.resolve(scope, context: context, operation: try operation()) else {
-            await storage.authority.revoke(scope)
+        return PrivateSession(id: id, storage: storage, scope: scope, context: context)
+    }
+
+    private func preparePrivateSession(_ session: PrivateSession) async throws {
+        let core = session.storage.core
+        guard case .success(.registered) = await core.registerPrivate(session.id, context: session.context, operation: try operation()),
+              case .success(.resolved) = await core.resolve(session.scope, context: session.context, operation: try operation()) else {
             throw ChromeResult.Failure.failed
         }
-        browsing = PrivateSession(id: id, storage: storage, scope: scope, context: context)
-        storage.adapter.openExternalLink = { [weak self] url in
-            guard let self else { return }
-            Task { @MainActor in
+    }
+
+    private func observe(_ session: PrivateSession) {
+        let id = session.id
+        session.storage.adapter.privateContentProcessDidTerminate = { [weak self] failedID in
+            self?.privateContentTerminated(failedID)
+        }
+        session.storage.adapter.openExternalLink = { [weak self] url in
+            Task { @MainActor [weak self] in
+                guard let self, self.browsing?.id == id, self.recovery == nil else { return }
                 do { try await self.openMini(url) }
                 catch { NSSound.beep() }
             }
         }
-        do { _ = try await addTab() }
-        catch {
-            await discard()
+    }
+
+    private func startPrivate() async throws {
+        let session = try await makePrivateSession()
+        browsing = session
+        observe(session)
+        do {
+            try await preparePrivateSession(session)
+            guard !closing else { throw ChromeResult.Failure.unavailable }
+            _ = try await addTab()
+        } catch {
+            if await retirePrivateSession(session) { await discard() }
+            else { recovery = .failed }
+            throw error
+        }
+    }
+
+    private func browserActionFinished() {
+        busy = false
+        startRecoveryRetirement()
+        if closing { scheduleCleanup() }
+        else { updateSurface() }
+    }
+
+    private func privateContentTerminated(_ id: PrivateSessionID) {
+        // If close already owns teardown, the adapter's fence still applies.
+        // A callback must not start another Core retirement from this window.
+        guard !closing, browsing?.id == id, recovery == nil else { return }
+        recovery = .retiring
+        presentation.visible = false
+        focusContent = false
+        if let chrome { window?.makeFirstResponder(chrome) }
+        detachContent()
+        page.isHidden = true
+        startRecoveryRetirement()
+    }
+
+    private func startRecoveryRetirement() {
+        guard !busy, recovery == .retiring, retirementTask == nil, let session = browsing else { return }
+        retirementTask = Task { @MainActor in
+            let confirmed = await retirePrivateSession(session)
+            retirementTask = nil
+            guard browsing?.id == session.id else { return }
+            if confirmed {
+                browsing = nil
+                recovery = .ready
+            } else {
+                recovery = .failed
+            }
+        }
+    }
+
+    /// Core owns the close/retire receipts. The adapter inventory includes weak
+    /// references and pending resources, so an empty pane never suffices.
+    private func retirePrivateSession(_ session: PrivateSession) async -> Bool {
+        let storage = session.storage
+        let scope = session.scope
+        let adapter = storage.adapter
+        adapter.openExternalLink = nil
+        adapter.privateContentProcessDidTerminate = nil
+        await adapter.preventAcquisition(in: scope)
+        let confirmed = await confirmRetirement(session)
+        await storage.authority.revoke(scope)
+        let authorityRevoked = await storage.authority.current(scope) == nil
+        return confirmed && authorityRevoked
+    }
+
+    private func confirmRetirement(_ session: PrivateSession) async -> Bool {
+        let storage = session.storage, scope = session.scope
+        let core = storage.core, context = session.context
+        let ids = storage.adapter.ownedViews(scope)
+        guard let initial = await core.summary(scope), initial.pending == nil, initial.viewCount == ids.count else { return false }
+        do {
+            for id in ids {
+                guard await core.closeView(scope, view: id, context: context, operation: try operation()) == .success(.viewClosed) else { return false }
+            }
+            if ids.isEmpty, initial.state != .retired {
+                guard await core.quiesce(scope, context: context, operation: try operation()) == .success(.quiesced),
+                      await core.retire(scope, context: context, operation: try operation()) == .success(.retired) else { return false }
+            }
+        } catch { return false }
+        guard let final = await core.summary(scope), final.state == .retired, final.viewCount == 0, final.pending == nil else { return false }
+        return await storage.adapter.inventory(scope).isEmpty
+    }
+
+    private func recoverPrivate() async throws {
+        guard recovery == .ready, browsing == nil, !closing else { throw ChromeResult.Failure.unavailable }
+        recovery = .rebuilding
+        var staged: PrivateSession?
+        do {
+            let fresh = try await makePrivateSession()
+            staged = fresh
+            try await preparePrivateSession(fresh)
+            var replacements: [ViewID: ViewID] = [:]
+            for old in tabs {
+                guard !closing else { throw ChromeResult.Failure.unavailable }
+                let id = try ViewID(UUID().uuidString)
+                guard await fresh.storage.open(fresh.scope, context: fresh.context, view: id, operation: try operation()) == .success(.activated(id)) else {
+                    throw ChromeResult.Failure.failed
+                }
+                replacements[old] = id
+            }
+            guard !closing, !replacements.isEmpty,
+                  replacements.values.allSatisfy({ fresh.storage.adapter.surface($0) != nil }) else {
+                throw ChromeResult.Failure.unavailable
+            }
+            let newOrganization = organization.compactMap { old, metadata in
+                replacements[old].map { ($0, metadata) }
+            }
+            organization = Dictionary(uniqueKeysWithValues: newOrganization)
+            selected = selected.flatMap { replacements[$0] }
+            splitTabs = splitTabs.compactMap { replacements[$0] }
+            tabs = tabs.compactMap { replacements[$0] }
+            browsing = fresh
+            observe(fresh)
+            recovery = nil
+        } catch {
+            if let staged, !(await retirePrivateSession(staged)) { browsing = staged }
+            recovery = .failed
             throw error
         }
     }
@@ -315,14 +451,17 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         if selected == id || splitTabs.contains(id) { detachContent() }
         let closed = await browsing.storage.core.closeView(browsing.scope, view: id, context: browsing.context, operation: try operation())
         guard case .success(.viewClosed) = closed else {
-            await discard()
+            await browsing.storage.adapter.preventAcquisition(in: browsing.scope)
+            await browsing.storage.authority.revoke(browsing.scope)
+            detachContent()
+            recovery = .failed
             throw ChromeResult.Failure.failed
         }
         tabs.remove(at: index)
         organization.removeValue(forKey: id)
         if splitTabs.contains(id) { splitTabs = [] }
         if selected == id { selected = tabs.last(where: { organization[$0]?.space == activeSpace }) }
-        if tabs.isEmpty { await discard() }
+        if tabs.isEmpty { await discard(); recovery = nil }
     }
 
     private func discard() async {
@@ -435,7 +574,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         let bounds = root.bounds
         let left = CGFloat(presentation.left), top = CGFloat(presentation.top)
         page.frame = NSRect(x: left, y: 29, width: max(0, bounds.width - left), height: max(0, bounds.height - top - 29))
-        guard presentation.visible, let selected else { page.isHidden = true; return }
+        guard !closing, recovery == nil, presentation.visible, let selected else { page.isHidden = true; return }
         let visible = splitTabs.count == 2 && page.bounds.width >= 600 ? splitTabs : [selected]
         let surfaces = visible.compactMap { browsing?.storage.adapter.surface($0) }
         guard surfaces.count == visible.count else { page.isHidden = true; return }
@@ -524,14 +663,11 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     }
 
     func openMini(_ url: URL) async throws {
-        guard !closing, validWebURL(url), minis.count < 6 else { throw ChromeResult.Failure.unavailable }
+        guard !closing, recovery == nil, validWebURL(url), minis.count < 6 else { throw ChromeResult.Failure.unavailable }
         let id = UUID()
         let child = MainWindowController(mini: true)
         child.busy = true
-        defer {
-            child.busy = false
-            if child.closing { child.scheduleCleanup() }
-        }
+        defer { child.browserActionFinished() }
         minis[id] = child
         child.transferToMain = { [weak self] url in
             guard let self else { return false }
@@ -561,12 +697,9 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     }
 
     private func receive(_ url: URL) async -> Bool {
-        guard !closing, !busy, validWebURL(url) else { return false }
+        guard !closing, !busy, recovery == nil, validWebURL(url) else { return false }
         busy = true
-        defer {
-            busy = false
-            if closing { scheduleCleanup() } else { updateSurface() }
-        }
+        defer { browserActionFinished() }
         do {
             if browsing == nil { try await startPrivate() }
             else { _ = try await addTab() }
@@ -587,6 +720,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
 
     func windowWillClose(_ notification: Notification) {
         closing = true
+        page.isHidden = true
         chrome?.configuration.userContentController.removeScriptMessageHandler(forName: "browserChrome", contentWorld: .page)
         detachContent()
         for child in Array(minis.values) { child.window?.close() }
@@ -598,8 +732,11 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         let children = Array(minis.values)
         cleanupTask = Task { @MainActor in
             for child in children { await child.shutdown() }
-            do { try await endPrivate() }
-            catch { await discard() }
+            await retirementTask?.value
+            if recovery == nil {
+                do { try await endPrivate() }
+                catch { page.isHidden = true }
+            }
             chrome?.stopLoading()
             chrome?.navigationDelegate = nil
             chrome?.removeFromSuperview()
@@ -983,6 +1120,185 @@ extension MainWindowController {
                 "closing": closing, "busy": busy, "chromeReady": chrome?.isLoading == false,
                 "state": try! JSONSerialization.jsonObject(with: encoded),
                 "minis": minis.values.map { $0.reliabilityObservation() }]
+    }
+
+    // Tests the production delegate path with a deliberate callback injection.
+    // This harness cannot establish an actual WebKit content-process exit.
+    func qualifyPrivateRecovery(_ origin: URL) async {
+        func check(_ id: String, _ condition: Bool, contract: Bool = false) throws {
+            Self.emit(id, status: condition ? (contract ? "PASS_CONTRACT" : "PASS_NATIVE") : "FAIL")
+            guard condition else { throw ChromeResult.Failure.failed }
+        }
+        func command(_ type: String, tab: ViewID? = nil) throws -> ChromeCommand {
+            var body = ["type": type, "id": UUID().uuidString]
+            if let tab { body["tab"] = tab.rawValue }
+            var payload: [String: Any] = body
+            payload["version"] = 1
+            return try JSONDecoder().decode(ChromeCommand.self, from: JSONSerialization.data(withJSONObject: payload))
+        }
+        func inject(_ session: PrivateSession, _ id: ViewID) -> Bool {
+            guard let view = session.storage.adapter.surface(id) else { return false }
+            session.storage.adapter.webViewWebContentProcessDidTerminate(view)
+            session.storage.adapter.webViewWebContentProcessDidTerminate(view)
+            return true
+        }
+        func loaded(_ controller: MainWindowController, _ title: String, url: URL? = nil) async -> Bool {
+            let deadline = ContinuousClock.now.advanced(by: .seconds(8))
+            while ContinuousClock.now < deadline {
+                if let id = controller.selected,
+                   let view = controller.browsing?.storage.adapter.surface(id),
+                   view.title == title, !view.isLoading, url == nil || view.url == url { return true }
+                try? await Task.sleep(for: .milliseconds(30))
+            }
+            return false
+        }
+        func js(_ controller: MainWindowController, _ source: String) async -> Bool {
+            guard let id = controller.selected, let surface = controller.browsing?.storage.adapter.surface(id) else { return false }
+            return (try? await surface.callAsyncJavaScript(source, arguments: [:], in: nil, contentWorld: .page)) as? Bool == true
+        }
+        do {
+            try await startPrivate()
+            let first = tabs[0]
+            _ = try await addTab()
+            let second = tabs[1]
+            let old = browsing!
+            organization[first]?.pinned = true
+            let group = ChromeGroup(id: UUID().uuidString, space: activeSpace, name: "Fixture group")
+            groups = [group]
+            organization[second]?.group = group.id
+            spaces.append(ChromeSpace(id: UUID().uuidString, name: "Fixture Space"))
+            splitTabs = [first, second]
+            selected = first
+            let address = origin.appendingPathComponent("alpha")
+            try check("R-SETUP-MAIN-LOAD", old.storage.adapter.perform(.load(address), in: first))
+            try check("R-SETUP-MAIN-COMMIT", await loaded(self, "Alpha"))
+            try check("R-SETUP-MAIN-MARKERS", await js(self, "localStorage.setItem('old-main','1'); document.cookie='old_main=1; Path=/'; return document.cookie.includes('old_main=1');"))
+            try await openMini(address)
+            guard let child = minis.values.first, let oldMini = child.browsing, let miniID = child.selected else {
+                throw ChromeResult.Failure.failed
+            }
+            try check("R-SETUP-MINI-COMMIT", await loaded(child, "Alpha"))
+            try check("R-SETUP-MINI-MARKERS", await js(child, "localStorage.setItem('old-mini','1'); return localStorage.getItem('old-main') === null && !document.cookie.includes('old_main=');"))
+            let oldIDs = tabs
+            weak var oldView = old.storage.adapter.surface(first)
+            weak var oldStore = oldView?.configuration.websiteDataStore
+            try check("R-INJECTED-FENCE", inject(old, first) && recovery == .retiring, contract: true)
+            try check("R-OLD-SCOPE-REJECTS", old.storage.adapter.surface(first) == nil
+                && old.storage.adapter.surface(second) == nil
+                && !old.storage.adapter.perform(.reload, in: first)
+                && !old.storage.adapter.perform(.load(address), in: first), contract: true)
+            let early = await run(try command("recoverPrivate"))
+            try check("R-RETIRING-REJECTS-RECOVER", early.error != nil, contract: true)
+            await retirementTask?.value
+            let oldSummary = await old.storage.core.summary(old.scope)
+            let oldInventory = await old.storage.adapter.inventory(old.scope)
+            let oldAuthority = await old.storage.authority.current(old.scope)
+            try check("R-OLD-RETIREMENT", recovery == .ready && oldSummary?.state == .retired
+                && oldInventory.isEmpty && oldAuthority == nil && oldView == nil && oldStore == nil)
+            try check("R-MINI-UNAFFECTED", child.browsing?.id == oldMini.id && child.recovery == nil)
+            try check("R-MINI-MARKER-RETAINED", await js(child, "return localStorage.getItem('old-mini') === '1';"))
+            let restored = await run(try command("recoverPrivate"))
+            guard let fresh = browsing else {
+                Self.emit("R-FRESH-IDENTITIES", status: "FAIL")
+                throw ChromeResult.Failure.failed
+            }
+            try check("R-FRESH-IDENTITIES", restored.error == nil && fresh.id != old.id && fresh.storage.run != old.storage.run
+                && Set(tabs).isDisjoint(with: oldIDs) && recovery == nil)
+            try check("R-WORKSPACE-STRUCTURE", tabs.count == 2 && spaces.count == 2 && groups == [group]
+                && organization[tabs[0]]?.pinned == true && organization[tabs[1]]?.group == group.id
+                && selected == tabs[0] && splitTabs == tabs)
+            try check("R-FRESH-BLANK-STORES", tabs.allSatisfy { id in
+                guard let view = fresh.storage.adapter.surface(id) else { return false }
+                return view.url == nil && !view.configuration.websiteDataStore.isPersistent
+                    && view.configuration.websiteDataStore.identifier == nil
+            })
+            let retry = await run(try command("recoverPrivate"))
+            try check("R-REPEAT-RECOVER-REJECTED", retry.error == .unavailable && browsing?.id == fresh.id, contract: true)
+            privateContentTerminated(old.id)
+            try check("R-STALE-SESSION-CALLBACK", recovery == nil && browsing?.id == fresh.id, contract: true)
+            try check("R-FRESH-NAVIGATION", fresh.storage.adapter.perform(.load(address), in: tabs[0]))
+            try check("R-FRESH-COMMIT", await loaded(self, "Alpha"))
+            try check("R-NO-TRANSFERRED-WEB-DATA", await js(self, "return localStorage.getItem('old-main') === null && localStorage.getItem('old-mini') === null && !document.cookie.includes('old_main=');"))
+            presentation = (true, 236, 126)
+            updateSurface()
+            try check("R-SPLIT-REATTACHED", page.arrangedSubviews.count == 2)
+
+            let signin = origin.appendingPathComponent("fixture-signin")
+            let account = origin.appendingPathComponent("fixture-account")
+            try check("R-AUTH-OPEN", fresh.storage.adapter.perform(.load(signin), in: tabs[0]))
+            try check("R-AUTH-FORM", await loaded(self, "Fixture sign in"))
+            try check("R-AUTH-POST", await js(self, "const form = document.forms[0]; form.elements.account.value = 'fixture'; form.elements.password.value = 'disposable'; setTimeout(() => form.requestSubmit(), 0); return true;"))
+            try check("R-AUTH-REDIRECT", await loaded(self, "Fixture signed in", url: account))
+            var continuity = URLComponents(url: account, resolvingAgainstBaseURL: false)!
+            continuity.queryItems = [URLQueryItem(name: "probe", value: "continuity")]
+            guard let continuityURL = continuity.url else { throw ChromeResult.Failure.failed }
+            try check("R-AUTH-CONTINUITY-LOAD", fresh.storage.adapter.perform(.load(continuityURL), in: tabs[0]))
+            try check("R-AUTH-CONTINUITY", await loaded(self, "Fixture signed in", url: continuityURL))
+            try check("R-AUTH-MINI-LOAD", oldMini.storage.adapter.perform(.load(account), in: miniID))
+            try check("R-AUTH-MINI-ISOLATION", await loaded(child, "Fixture signed out"))
+            try check("R-AUTH-LOGOUT-POST", await js(self, "const form = document.forms[0]; setTimeout(() => form.requestSubmit(), 0); return true;"))
+            try check("R-AUTH-LOGOUT", await loaded(self, "Fixture signed out"))
+
+            try check("R-INJECTED-SIMULTANEOUS", inject(fresh, tabs[0]) && inject(oldMini, miniID)
+                && recovery == .retiring && child.recovery == .retiring, contract: true)
+            await retirementTask?.value
+            await child.retirementTask?.value
+            try check("R-TWO-RETIRED-SCOPES", recovery == .ready && child.recovery == .ready
+                && browsing == nil && child.browsing == nil)
+            let miniRestored = await child.run(try command("recoverPrivate"))
+            try check("R-MINI-INDEPENDENT-REBUILD", miniRestored.error == nil && child.browsing?.id != oldMini.id
+                && child.browsing?.id != fresh.id && browsing == nil)
+            if let newMini = child.browsing, let view = child.selected {
+                try check("R-MINI-FRESH-NAVIGATION", newMini.storage.adapter.perform(.load(address), in: view))
+                try check("R-MINI-FRESH-COMMIT", await loaded(child, "Alpha"))
+                try check("R-MINI-NO-TRANSFERRED-WEB-DATA", await js(child, "return localStorage.getItem('old-mini') === null && !document.cookie.includes('old_main=');"))
+            } else { throw ChromeResult.Failure.failed }
+
+            let held = MainWindowController()
+            try await held.startPrivate()
+            guard let heldSession = held.browsing, let heldID = held.selected,
+                  let retainedView = heldSession.storage.adapter.surface(heldID) else { throw ChromeResult.Failure.failed }
+            try check("R-INJECTED-RETAINED-VIEW", inject(heldSession, heldID), contract: true)
+            await held.retirementTask?.value
+            let failure = await held.run(try command("recoverPrivate"))
+            try check("R-RETIREMENT-UNCONFIRMED", recovery == .ready && held.recovery == .failed
+                && held.browsing?.id == heldSession.id && failure.error == .unavailable
+                && retainedView.superview == nil && heldSession.storage.adapter.surface(heldID) == nil)
+            await held.shutdown()
+
+            let invalid = MainWindowController()
+            invalid.recovery = .ready
+            let invalidResult = await invalid.run(try command("recoverPrivate"))
+            try check("R-FAILED-STAGED-PUBLICATION", invalidResult.error != nil && invalid.recovery == .failed
+                && invalid.browsing == nil && invalid.tabs.isEmpty)
+            await invalid.shutdown()
+
+            if let newMini = child.browsing, let view = child.selected {
+                try check("R-INJECTED-CLOSE-BOUNDARY", inject(newMini, view), contract: true)
+                await child.shutdown()
+                try check("R-CLOSE-JOINS-RETIREMENT", child.closing && child.retirementTask == nil
+                    && child.browsing == nil && minis.isEmpty)
+            } else { throw ChromeResult.Failure.failed }
+            let closingWindow = MainWindowController()
+            try await closingWindow.startPrivate()
+            guard let closingSession = closingWindow.browsing, let closingView = closingWindow.selected else {
+                throw ChromeResult.Failure.failed
+            }
+            // Model a callback after close has started but before Core teardown finishes.
+            closingWindow.closing = true
+            try check("R-CLOSING-CALLBACK-DOES-NOT-START-RECOVERY",
+                inject(closingSession, closingView) && closingWindow.retirementTask == nil
+                    && closingWindow.recovery == nil && closingSession.storage.adapter.surface(closingView) == nil,
+                contract: true)
+            await closingWindow.shutdown()
+            try check("R-CLOSING-SINGLE-TEARDOWN", closingWindow.browsing == nil && closingWindow.chrome == nil)
+
+            await shutdown()
+            try check("R-SHUTDOWN-JOINS", closing && retirementTask == nil && chrome == nil)
+            Self.emit("qualification", status: "PASS_NATIVE")
+        } catch {
+            Self.emit("qualification", status: "FAIL")
+        }
     }
 
     func qualifyReliability(_ origin: URL) async {

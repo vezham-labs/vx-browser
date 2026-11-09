@@ -65,6 +65,17 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
                 NSApp.terminate(nil)
             }
         }
+        if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf5.qualification",
+           let flag = arguments.firstIndex(of: "--wsf5r-qualification"),
+           arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
+           origin.scheme == "http", origin.host == "127.0.0.1", origin.port != nil,
+           origin.user == nil, origin.password == nil, origin.query == nil, origin.fragment == nil,
+           origin.path.isEmpty, let mainWindow {
+            Task { @MainActor in
+                await mainWindow.qualifyPrivateRecovery(origin)
+                NSApp.terminate(nil)
+            }
+        }
         if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf4.qualification",
            let flag = arguments.firstIndex(of: "--wsf4-qualification"),
            arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
