@@ -65,7 +65,8 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
                 NSApp.terminate(nil)
             }
         }
-        if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf5.qualification",
+        if ["internal.vezham.browser.wsf5.qualification", "internal.vezham.browser.wsf6.qualification"]
+            .contains(Bundle.main.bundleIdentifier ?? ""),
            let flag = arguments.firstIndex(of: "--wsf5r-qualification"),
            arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
            origin.scheme == "http", origin.host == "127.0.0.1", origin.port != nil,
@@ -73,6 +74,17 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
            origin.path.isEmpty, let mainWindow {
             Task { @MainActor in
                 await mainWindow.qualifyPrivateRecovery(origin)
+                NSApp.terminate(nil)
+            }
+        }
+        if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf6.qualification",
+           let flag = arguments.firstIndex(of: "--wsf6-qualification"),
+           arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
+           origin.scheme == "http", origin.host == "127.0.0.1", origin.port != nil,
+           origin.user == nil, origin.password == nil, origin.query == nil, origin.fragment == nil,
+           origin.path.isEmpty, let mainWindow {
+            Task { @MainActor in
+                await mainWindow.qualifyWorkspace(origin)
                 NSApp.terminate(nil)
             }
         }
@@ -137,11 +149,20 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         #if WSF1_QUALIFICATION
-        if ProcessInfo.processInfo.arguments.contains(where: { ["--wsf1-qualification", "--wsf2-qualification", "--wsf4-qualification"].contains($0) }) { return false }
+        if ProcessInfo.processInfo.arguments.contains(where: { ["--wsf1-qualification", "--wsf2-qualification", "--wsf4-qualification", "--wsf6-qualification", "--wsf5r-qualification"].contains($0) }) { return false }
         #endif
         return true
     }
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+        #if DEBUG
+        // The isolated suites await shutdown and record its postconditions before
+        // requesting termination. Avoid a second asynchronous teardown with no window.
+        let arguments = ProcessInfo.processInfo.arguments
+        if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf6.qualification",
+           arguments.contains("--wsf6-qualification") || arguments.contains("--wsf5r-qualification") {
+            return .terminateNow
+        }
+        #endif
         #if WSF1_QUALIFICATION
         if ProcessInfo.processInfo.arguments.contains(where: { ["--wsf1-qualification", "--wsf2-qualification", "--wsf4-qualification"].contains($0) }) { return .terminateNow }
         #endif

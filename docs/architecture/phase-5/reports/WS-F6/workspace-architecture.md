@@ -1,5 +1,7 @@
 # Workspace architecture
 
+**Implementation update · 10 November 2026.** The existing MainActor host is the mutation owner over a staged value model. It retains a private logical graph and a separate native binding map. A new repository/coordinator runtime is unnecessary for this in-memory scope. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Classification: PROPOSED.** This is a target architecture for a separately authorized fixture-first implementation. [Baseline](current-state-assessment.md)
 
 ## Ownership

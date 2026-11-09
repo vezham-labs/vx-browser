@@ -1,0 +1,13 @@
+{
+  "apps/browser-macos/Chrome/src/Browser.tsx": "dc38615c813791ed065522c218f334b13937c64e146e926f03128248a1355bc5",
+  "apps/browser-macos/Chrome/src/bridge.ts": "4fb729a69e2a2d741f477496a763b8502f7c8219b2cfe4b44f6985d3feb4df4e",
+  "apps/browser-macos/Chrome/tests/shell.spec.ts": "4f976a2e5d7c96a932d0d31cad7d4635e4a3cc4ccb8ecf56061d7d438d1d657e",
+  "apps/browser-macos/Sources/Host/ApplicationDelegate.swift": "a3b66498b928a794007646ea85aa837f378340f8dd813fd1e861f7e4b3ceb799",
+  "apps/browser-macos/Sources/Host/BrowserChromeContract.swift": "40b94345802ba122c78f9b72ddce6e1512090e499575f7a40493396ddaadd6da",
+  "apps/browser-macos/Sources/Host/MainWindowController.swift": "f8b55c2b8f1a51a7e512ab64778b52a05f6c048130078ad5e3aa57efcba04377",
+  "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift": "b94059f2fd13dc4b0d554116466ceb39a84538614896129e97532290fe048172",
+  "apps/browser-macos/Tools/wsf6.py": "52fea2672986425f68f98fa27769a3642d95b8cc7850a5bce5e03e5459acd73e",
+  "qualification/webkit-storage-f0/Sources/BrowserDomain/Identity.swift": "37614ff67f33a54f28b903915c4605e6a023fe850c09ac0c328f281275511e5b",
+  "qualification/webkit-storage-f0/Sources/BrowserDomain/WorkspaceLayout.swift": "8d1a5a67d065337b1eadf1988cc9422e75a4ec09c49d2ae83b250283a164afe6",
+  "qualification/webkit-storage-f0/Tests/WSF0Tests/WorkspaceLayoutTests.swift": "192fb4ef3726b83d0aad86ee08f4d67872aee36b6e2c309d0fa364344385ea87"
+}

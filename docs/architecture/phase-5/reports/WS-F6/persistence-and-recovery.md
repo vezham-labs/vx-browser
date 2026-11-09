@@ -1,5 +1,7 @@
 # Persistence and recovery
 
+**Implementation update · 10 November 2026.** Versioned layout round trips and staged in-memory revisions are implemented. No durable fixture transaction or product metadata writer was added. Private recovery retains logical IDs and drops all old WebKit bindings. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Classification: PROPOSED.** Option D is the approved boundary. WS-F6 exercises synthetic layouts. WS-F7 owns production writes, key custody, authorization and actual backup and restore. [WS-F3 approved decisions](../WS-F3/approved-decisions.md) · [ADR 0004](../../../../decisions/0004-browser-local-persistence.md)
 
 | Record class        | F6 fixture                                                                                   | Eventual normal product                                                                                                                                          | Private boundary                                                                                                                                         |

@@ -1,0 +1,12 @@
+
+ NX   1 task: 1 succeeded
+
+
+Re-run with --output-style=static to inline logs.
+
+View logs and investigate cache misses at https://cloud.nx.app/runs/jTUZrRpM5c
+
+  Run duration:      3.1s
+  Cache:             0/1 hit (0%)
+  Critical path:     3.1s (1 task)
+  Recoverable time:  <1ms

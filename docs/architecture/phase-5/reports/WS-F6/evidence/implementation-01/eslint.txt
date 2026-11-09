@@ -1,0 +1,46 @@
+warning No cached ProjectGraph is available. The rule will be skipped.
+          If you encounter this error as part of running standard `nx` commands then please open an issue on https://github.com/nrwl/nx
+          @nx/enforce-module-boundaries
+warning No cached ProjectGraph is available. The rule will be skipped.
+          If you encounter this error as part of running standard `nx` commands then please open an issue on https://github.com/nrwl/nx
+          @nx/enforce-module-boundaries
+warning No cached ProjectGraph is available. The rule will be skipped.
+          If you encounter this error as part of running standard `nx` commands then please open an issue on https://github.com/nrwl/nx
+          @nx/enforce-module-boundaries
+
+/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/wsf6-implementation/apps/browser-macos/Chrome/src/Browser.tsx
+   23:1    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+   27:1    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+   31:8    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  153:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  157:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  165:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  166:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  173:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  176:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  179:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  187:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  194:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  209:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  210:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  274:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  287:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  298:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  309:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  326:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  358:3    error  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           @vx-lint/arrow-functions
+  406:10   error  Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element  jsx-a11y/no-static-element-interactions
+  479:9    error  Non-interactive elements should not be assigned mouse or keyboard event listeners                                                                                                                  jsx-a11y/no-noninteractive-element-interactions
+  480:11   error  `tabIndex` should only be declared on interactive elements                                                                                                                                         jsx-a11y/no-noninteractive-tabindex
+  558:188  error  The autoFocus prop should not be used, as it can reduce usability and accessibility for users                                                                                                      jsx-a11y/no-autofocus
+
+/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/wsf6-implementation/apps/browser-macos/Chrome/src/bridge.ts
+  68:8  error  Prefer a named arrow function. Review initialization order and callers before converting                            @vx-lint/arrow-functions
+  76:5  error  Use <author>/INFO|NOTE|TODO|FIXME|HACK|REF: followed by an explanation. Use vx-bot for new agent-authored comments  @vx-lint/comment-style
+
+/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/wsf6-implementation/apps/browser-macos/Chrome/tests/shell.spec.ts
+  5:1  error  Prefer a named arrow function. Run with --fix to convert  @vx-lint/arrow-functions
+
+✖ 27 problems (27 errors, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

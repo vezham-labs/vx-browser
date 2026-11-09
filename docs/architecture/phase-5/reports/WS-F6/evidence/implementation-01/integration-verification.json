@@ -1,0 +1,20 @@
+{
+  "branch": "cross-browser-research",
+  "HEAD": "fef74f0b451e084bd33e13b4867c91694bf5bc90",
+  "aheadBehind": "0\t0",
+  "trackedModified": 24,
+  "stagedFiles": 0,
+  "historicalChecksums": [
+    423,
+    223,
+    12,
+    36
+  ],
+  "historicalEvidenceUnchanged": true,
+  "deliveredSourceMatchesCandidate": true,
+  "diffCheck": "passed",
+  "internalLinks": 248,
+  "newSourceAndDocumentWhitespace": "passed",
+  "untrackedFiles": 104,
+  "totalChangedFiles": 128
+}

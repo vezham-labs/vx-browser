@@ -1,5 +1,7 @@
 # Implementation plan
 
+**Implementation update · 10 November 2026.** W1–W5 have delivered development implementations and the recorded scoped tests. The original sequence below is retained as its design record. WS-F7/WS-F8 and full-case qualification prerequisites retain their independent dispositions. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Status: PROPOSED.** Design review and implementation authorization are separate. The existing native work remains in WS-F5R. Future file locations below identify responsibilities and review surfaces. Exact filenames and any target changes require implementation review.
 
 | Workstream                            | Scope and likely modules                                                                                                                                                                                                                              | Dependencies                                                                                           | Acceptance and rollback                                                                                                                                                                                     |

@@ -1,0 +1,82 @@
+[plugin-worker] "@vx-cli/react" (pid: 7730) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-b-56982ac1.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-b-56982ac1.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "@nx/vitest" (pid: 7727) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-8-a79d4051.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-8-a79d4051.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "@nx/react/router-plugin" (pid: 7723) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-4-9321e46d.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-4-9321e46d.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "@nx/eslint/plugin" (pid: 7724) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-5-414301bf.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-5-414301bf.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/node_modules/.pnpm/nx@24.0.2_@swc-node+register@1.11.1_@swc+core@1.15.41_@swc+helpers@0.5.23__@swc+types@0_4a3b22bae876d7c13de6743709a89a6b/node_modules/nx/dist/src/plugins/package-json" (pid: 7719) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-1-cf355647.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-1-cf355647.sock
+[plugin-worker] "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/node_modules/.pnpm/nx@24.0.2_@swc-node+register@1.11.1_@swc+core@1.15.41_@swc+helpers@0.5.23__@swc+types@0_4a3b22bae876d7c13de6743709a89a6b/node_modules/nx/dist/src/plugins/js" (pid: 7718) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-0-5710a1de.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-0-5710a1de.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/node_modules/.pnpm/nx@24.0.2_@swc-node+register@1.11.1_@swc+core@1.15.41_@swc+helpers@0.5.23__@swc+types@0_4a3b22bae876d7c13de6743709a89a6b/node_modules/nx/dist/src/plugins/project-json/build-nodes/project-json" (pid: 7720) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-2-df700b6a.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-2-df700b6a.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "@nx/vite/plugin" (pid: 7725) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-6-fbcac811.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-6-fbcac811.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "@nx/oxlint" (pid: 7729) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-a-8c80d053.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-a-8c80d053.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "@nx/next/plugin" (pid: 7728) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-9-7b92a0ee.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-9-7b92a0ee.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+
+ NX   Nx was denied permission to create a plugin worker socket. Running plugins in the main process instead.
+
+Plugins that expect isolation may misbehave, and this is slower than a worker.
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+
+[plugin-worker] "@nx/js/typescript" (pid: 7722) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-3-b8cf2225.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-3-b8cf2225.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.
+[plugin-worker] "@nx/playwright/plugin" (pid: 7726) failed to listen on /tmp/.nx/501/sockets/1937aff7/p7701-7-9e172c81.sock: listen EPERM: operation not permitted /tmp/.nx/501/sockets/1937aff7/p7701-7-9e172c81.sock
+Nx was denied permission to use its unix socket under /tmp/.nx or ~/.nx.
+To fix this, do one of the following:
+  - In `~/.codex/config.toml`, set `sandbox_workspace_write.network_access` to true and add /tmp/.nx or ~/.nx to `sandbox_workspace_write.writable_roots`. Codex has no setting that scopes sockets to a path, and `network_access` also grants general network access, so this is a broader grant than the other agents need.
+  - Get permission to create sockets under /tmp/.nx or ~/.nx, or set NX_SOCKET_DIR to a directory you do have permission for.
+See https://nx.dev/docs/kb/nx-sandbox-unix-sockets for details.

@@ -1,0 +1,45 @@
+{
+  "startedUTC": "2026-11-09T22:58:11.236374+00:00",
+  "app": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/wsf6-implementation/build/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+  "bundleID": "internal.vezham.browser.wsf6.qualification",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "mode": "qualification",
+  "attemptsRequested": 1,
+  "timeoutSeconds": 240,
+  "serveLimitSeconds": 1800,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "FAIL",
+      "reasons": [
+        "240-second timeout",
+        "Nonzero/crashed process exit",
+        "Candidate/source identity changed",
+        "Missing, duplicate, nonpassing, or nonfinal qualification event",
+        "Nonpassing test event; original status retained"
+      ],
+      "nativeFinal": {
+        "testID": "qualification",
+        "status": "FAIL"
+      },
+      "nativePassed": 32,
+      "contractPassed": 6,
+      "caseStatusCounts": {
+        "PASS_NATIVE": 32,
+        "PASS_CONTRACT": 6,
+        "FAIL": 1
+      }
+    }
+  ],
+  "status": "FAIL",
+  "nativePassed": 32,
+  "contractPassed": 6,
+  "caseStatusCounts": {
+    "PASS_NATIVE": 32,
+    "PASS_CONTRACT": 6,
+    "FAIL": 1
+  },
+  "countScope": "Non-qualification test-event observations across attempts",
+  "reason": "Candidate/source identity changed",
+  "finishedUTC": "2026-11-09T23:02:11.681602+00:00"
+}

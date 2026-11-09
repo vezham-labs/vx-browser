@@ -1,5 +1,7 @@
 # Product direction
 
+**Implementation update · 10 November 2026.** Workspace organization, logical tabs, two-pane intent and Mini destination confirmation now run in the current private browser. Normal protected workspace persistence remains WS-F7 work. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Classification: PROPOSED.** The assessment separates source observations and historical tests from planned launch behavior.
 
 ## Product identity

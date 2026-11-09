@@ -1,5 +1,7 @@
 # Split Screen and Vezham Mini
 
+**Implementation update · 10 November 2026.** The native split, layout divider preference and committed-GET Mini handoff are implemented. Actual physical divider gestures and VoiceOver have separate open qualification cases. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Classification: PROPOSED.** Split represents an ongoing two-page task. Mini is a temporary private window for a link. Each uses the host's native window/layout controls and the existing engine authority.
 
 ## Split Screen

@@ -1,0 +1,117 @@
+{
+  "startedUTC": "2026-11-09T22:53:57.125396+00:00",
+  "status": "FAIL",
+  "reasons": [
+    "Interrupted",
+    "Nonzero/crashed process exit",
+    "Missing, duplicate, nonpassing, or nonfinal qualification event",
+    "Nonpassing test event; original status retained"
+  ],
+  "timeout": false,
+  "events": [
+    {
+      "testID": "F6-EMPTY-NATIVE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-LAZY-24-SLOTS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-FIRST-LOAD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-ONE-ADMISSION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-DUPLICATE-ADMISSION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-MAIN-MARKERS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-BACKGROUND-IS-BLANK",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-SECOND-LOAD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-SPLIT-VIEWS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-DIVIDER-PREFERENCE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-PANE-FOCUS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-COMPACT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-WIDE-RESTORED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-SPACE-PAIR-RESTORED",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "F6-SPLIT-SURVIVOR",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-MINI-ISOLATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-TWO-MINI-ISOLATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-NONPERSISTENT-STORES",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-MINI-DESTINATION-PREVIEW",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "F6-MINI-COMMIT-CLEANUP",
+      "status": "FAIL"
+    },
+    {
+      "testID": "qualification",
+      "status": "FAIL"
+    }
+  ],
+  "screenshots": [],
+  "argv": [
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/wsf6-implementation/build/DerivedData/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf6-qualification",
+    "http://127.0.0.1:53240"
+  ],
+  "pid": 9302,
+  "exit": -9,
+  "nativeFinal": {
+    "testID": "qualification",
+    "status": "FAIL"
+  },
+  "caseStatusCounts": {
+    "PASS_NATIVE": 17,
+    "PASS_CONTRACT": 2,
+    "FAIL": 1
+  },
+  "nativePassed": 17,
+  "contractPassed": 2,
+  "finishedUTC": "2026-11-09T22:56:33.709627+00:00"
+}

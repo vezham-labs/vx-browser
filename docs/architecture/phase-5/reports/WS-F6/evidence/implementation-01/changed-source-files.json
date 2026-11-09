@@ -1,0 +1,13 @@
+[
+  "apps/browser-macos/Chrome/src/Browser.tsx",
+  "apps/browser-macos/Chrome/src/bridge.ts",
+  "apps/browser-macos/Chrome/tests/shell.spec.ts",
+  "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+  "apps/browser-macos/Sources/Host/BrowserChromeContract.swift",
+  "apps/browser-macos/Sources/Host/MainWindowController.swift",
+  "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift",
+  "apps/browser-macos/Tools/wsf6.py",
+  "qualification/webkit-storage-f0/Sources/BrowserDomain/Identity.swift",
+  "qualification/webkit-storage-f0/Sources/BrowserDomain/WorkspaceLayout.swift",
+  "qualification/webkit-storage-f0/Tests/WSF0Tests/WorkspaceLayoutTests.swift"
+]

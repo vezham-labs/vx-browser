@@ -1,0 +1,190 @@
+warning: /Users/vigneshwaranbhoj/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/vigneshwaranbhoj/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+warning: /Users/vigneshwaranbhoj/Library/Caches/org.swift.swiftpm is not accessible or not writable, disabling user-level cache features.
+warning: 'storageruntime': failed storing manifest for 'storageruntime' in cache: attempt to write a readonly database
+warning: 'webkit-storage-f0': failed storing manifest for 'webkit-storage-f0' in cache: attempt to write a readonly database
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[58 / 122]
+[59 / 123] BrowserDomain
+[59 / 152]
+[67 / 163]
+[69 / 163]
+[71 / 163]
+[74 / 163]
+[76 / 163]
+[77 / 163]
+[78 / 163]
+[81 / 163]
+[82 / 163]
+[83 / 163]
+[84 / 163]
+[85 / 163]
+[87 / 163]
+[90 / 163]
+[91 / 163]
+[92 / 163]
+[93 / 163]
+[99 / 163] BrowserDomain
+[104 / 163] BrowserDomain
+[105 / 163]
+[106 / 164] BrowserDomain
+[106 / 164] BrowserPorts
+[106 / 165] BrowserPorts
+[108 / 167] BrowserPorts
+[109 / 167] BrowserPorts
+[110 / 167] BrowserPorts
+[111 / 167] BrowserPorts
+[112 / 167] BrowserPorts
+[116 / 167] BrowserPorts
+[116 / 167] WSF0Fakes
+[116 / 167] BrowserPorts-product
+[116 / 167]
+[116 / 168] WSF0Fakes
+[118 / 169]
+[119 / 170] WSF0Fakes
+[119 / 171] BrowserPersistence
+[124 / 184] WSF0Fakes
+[125 / 184] BrowserDomain
+[126 / 184] WSF0Fakes
+[130 / 184] BrowserPersistence
+[130 / 184] WSF0Fakes
+[135 / 184] WSF0Fakes
+[136 / 184] BrowserDomain
+[136 / 184] WSF0Fakes
+[138 / 184] WSF0Fakes
+[146 / 184] BrowserPersistence
+[150 / 184] BrowserCore
+[151 / 184] BrowserCore
+[152 / 184] BrowserCore
+[154 / 184] BrowserCore
+[154 / 185] BrowserNativeStorage
+[155 / 185] BrowserDomain
+[157 / 185] BrowserPersistence
+[159 / 185] BrowserCore
+[160 / 185] BrowserCore
+[161 / 185] BrowserCore
+[161 / 185] BrowserNativeStorage
+[161 / 186] BrowserNativeStorage
+[161 / 187] BrowserNativeStorage
+[161 / 207]
+[169 / 238]
+[175 / 238]
+[178 / 238]
+[184 / 238]
+[185 / 238]
+[189 / 238]
+[191 / 238]
+[192 / 238]
+[195 / 238]
+[196 / 238]
+[197 / 238]
+[199 / 238]
+[200 / 238]
+[201 / 238]
+[203 / 238]
+[204 / 238]
+[205 / 238]
+[213 / 238] BrowserNativeStorage
+[214 / 238] BrowserNativeStorage
+[215 / 238] BrowserNativeStorage
+[216 / 238] BrowserNativeStorage
+[217 / 238] BrowserNativeStorage
+[219 / 238] BrowserNativeStorage
+[220 / 238] StorageModelTests-product
+[221 / 238]
+[221 / 238] StorageModelTests-product
+[222 / 238] StorageModelTests-product
+[222 / 238] BrowserNativeStorage
+[224 / 238] BrowserNativeStorage
+[226 / 238] BrowserNativeStorage-product
+[228 / 239] StorageModelTests-product
+[229 / 248]
+[230 / 248]
+[237 / 248] StorageModelTests-product
+[240 / 248] StorageModelTests-product
+[242 / 248] StorageModelTests-product
+[244 / 248] StorageModelTests-product
+[245 / 248] StorageModelTests-product
+[246 / 248] StorageModelTests-product
+Build complete! (262.83 secs)
+Test Suite 'All tests' started at 2026-11-10 04:23:34.456.
+Test Suite 'All tests' passed at 2026-11-10 04:23:34.492.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.036) seconds
+◇ Test run started.
+↳ Testing Library Version: 2403
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test "F1-GUARD-003 catalog namespace duplicate profile and store rejected before WebKit" started.
+◇ Test "F1-MOD-008 invalid bounds and mixed private persistent reject" started.
+◇ Test "F2-CON-009 restore omits native grants respects deletion and requires explicit unknown lineage" started.
+◇ Test "F2-CON-008 backup rejects private duplicate oversized future or conflicting records" started.
+◇ Test "F1-MOD-004 all creation publication retirement transitions and replay" started.
+◇ Test "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test "F2-FAKE-001 lock retires keys and resources before Locked; unlock needs auth and recovery" started.
+◇ Test "F1-MOD-007 stable present is reusable absent conflicting and unknown fence" started.
+◇ Test "F1-MOD-003 private encoding forbidden" started.
+◇ Test "F2-CON-004 permission Ask allow deny revoke and OS independence" started.
+◇ Test "F2-CON-011 cross-component missing corrupt denied mismatch and interrupted recovery fence" started.
+◇ Test "F1-GUARD-004 normal composition cannot publish or navigate unresolved views" started.
+◇ Test "F1-GUARD-002 unresolved and wrong scope construction have no native effect" started.
+◇ Test "F2-CON-003 verified origins reject ambiguous identity" started.
+◇ Test "F2-CON-007 canonical CBOR rejects duplicate noncanonical indefinite and trailing input" started.
+◇ Test "F2-CON-005 private permission no persistence and lock fences stale prompt" started.
+◇ Test "F1-MOD-001 persistent descriptor roundtrip" started.
+◇ Test "F2-CON-002 catalog migration plans reject unauthenticated interrupted and future schema" started.
+◇ Test "F2-CON-010 catalog descriptor scope label and publication gates" started.
+◇ Test "F1-FAKE-001 concurrent close and clear exclude one another without effects" started.
+◇ Test case passing 1 argument vector → "corrupt" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test "F2-CON-001 protected catalog refuses every operation without provider IO" started.
+◇ Test "F1-GUARD-001 host grants are scoped current and revocable" started.
+◇ Test case passing 1 argument vector → "old" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test "F2-CON-006 key errors remain distinct and contain no native secret objects" started.
+◇ Test case passing 1 argument vector → "missing" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "future" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test "F1-MOD-006 no premature publish navigation or foreign replay" started.
+◇ Test case passing 1 argument vector → "adapter" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "platform" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "equal" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "zero" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "generation" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument vector → "time" to "F1-MOD-002 missing corrupt old future adapter and platform versions reject" started.
+◇ Test case passing 1 argument stop → .intent to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .resolved to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .registered to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .configured to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .published to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .constructed to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .navigationAuthorized to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .retiring to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .retired to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .removalPending to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+◇ Test case passing 1 argument stop → .removed to "F1-MOD-005 every interrupted transition quarantines without publication" started.
+✔ Test "F1-MOD-004 all creation publication retirement transitions and replay" passed after 0.010 seconds.
+✔ Test "F2-CON-009 restore omits native grants respects deletion and requires explicit unknown lineage" passed after 0.010 seconds.
+✔ Test "F1-MOD-008 invalid bounds and mixed private persistent reject" passed after 0.010 seconds.
+✔ Test "F1-MOD-007 stable present is reusable absent conflicting and unknown fence" passed after 0.010 seconds.
+✔ Test "F2-CON-011 cross-component missing corrupt denied mismatch and interrupted recovery fence" passed after 0.010 seconds.
+✔ Test "F1-MOD-003 private encoding forbidden" passed after 0.011 seconds.
+✔ Test "F1-MOD-001 persistent descriptor roundtrip" passed after 0.010 seconds.
+✔ Test "F2-CON-005 private permission no persistence and lock fences stale prompt" passed after 0.010 seconds.
+✔ Test "F2-CON-002 catalog migration plans reject unauthenticated interrupted and future schema" passed after 0.010 seconds.
+✔ Test "F2-CON-010 catalog descriptor scope label and publication gates" passed after 0.010 seconds.
+✔ Test "F2-FAKE-001 lock retires keys and resources before Locked; unlock needs auth and recovery" passed after 0.010 seconds.
+✔ Test "F2-CON-004 permission Ask allow deny revoke and OS independence" passed after 0.010 seconds.
+✔ Test "F2-CON-001 protected catalog refuses every operation without provider IO" passed after 0.011 seconds.
+✔ Test "F1-GUARD-001 host grants are scoped current and revocable" passed after 0.011 seconds.
+✔ Test "F2-CON-003 verified origins reject ambiguous identity" passed after 0.010 seconds.
+✔ Test "F2-CON-008 backup rejects private duplicate oversized future or conflicting records" passed after 0.009 seconds.
+✔ Test "F1-GUARD-003 catalog namespace duplicate profile and store rejected before WebKit" passed after 0.011 seconds.
+✔ Test "F2-CON-007 canonical CBOR rejects duplicate noncanonical indefinite and trailing input" passed after 0.010 seconds.
+✔ Test "F1-MOD-006 no premature publish navigation or foreign replay" passed after 0.010 seconds.
+✔ Test "F1-MOD-005 every interrupted transition quarantines without publication" with 11 test cases passed after 0.010 seconds.
+✔ Test "F1-GUARD-004 normal composition cannot publish or navigate unresolved views" passed after 0.013 seconds.
+✔ Test "F1-GUARD-002 unresolved and wrong scope construction have no native effect" passed after 0.013 seconds.
+✔ Test "F2-CON-006 key errors remain distinct and contain no native secret objects" passed after 0.014 seconds.
+✔ Test "F1-MOD-002 missing corrupt old future adapter and platform versions reject" with 10 test cases passed after 0.014 seconds.
+✔ Test "F1-FAKE-001 concurrent close and clear exclude one another without effects" passed after 0.016 seconds.
+✔ Test run with 25 tests in 0 suites passed after 0.018 seconds.

@@ -1,5 +1,7 @@
 # Current-state assessment
 
+**Implementation update · 10 November 2026.** The assessment below records the design baseline. The implementation report describes the delivered logical layout, native binding and commit-aware handoff, with current source references and candidate evidence. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 Baseline `19337b01c62a7527d4288b149dd742853ad92b5f`, branch `cross-browser-research`. **VERIFIED** denotes inspected source or executed evidence in its stated scope. **PARTIALLY VERIFIED** denotes an implemented path with incomplete runtime coverage. **PROPOSED** denotes future design. **UNKNOWN** denotes an open fact or unexecuted test.
 
 | Classification                                  | Finding                                                                                                                                                                                                                                                                                                                                                            | Trace                                                                                                                                                                                                                                                                                                                                                  |

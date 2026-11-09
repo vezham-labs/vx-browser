@@ -1,5 +1,7 @@
 # Qualification matrix
 
+**Implementation update · 10 November 2026.** This file retains the original 40 planned scenarios. Consult the implementation qualification ledger for actual results and missing permutations. Original NOT_EXECUTED planning entries are historical. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Planning status:** Every proposed case is **NOT_EXECUTED** unless explicitly **BLOCKED**. All data and destinations are synthetic or owned fixtures. **C** means contract with deterministic fakes. **N** means real AppKit/WebKit is required, even with synthetic inputs. **N/C** means independently report the contract trigger and native effects. Follow the existing WS-F5R authority and case dispositions. No fault injection into real WebKit helpers without positive attribution and an authorized disposable candidate.
 
 ## Status and evidence

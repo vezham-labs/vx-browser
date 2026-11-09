@@ -31,6 +31,7 @@ public struct ID<Tag: Sendable>: Hashable, Sendable, Comparable {
               uuid.uuidString != "00000000-0000-0000-0000-000000000000" else { throw FailureCode.invalidIdentity }
         rawValue = uuid.uuidString.lowercased()
     }
+    public static func fresh() -> Self { try! Self(UUID().uuidString) }
     public static func < (lhs: Self, rhs: Self) -> Bool { lhs.rawValue < rhs.rawValue }
 }
 public typealias ProfileID = ID<ProfileTag>

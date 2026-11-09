@@ -1,5 +1,7 @@
 # Risk register
 
+**Implementation update · 10 November 2026.** Native reference retirement, Mini correlation, source isolation and layout tests now provide scoped evidence. Unexecuted cases and the existing Core quarantine rule remain in the actual ledger. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 All ratings and mitigations are **PROPOSED**. Likelihood is qualitative before implementation and describes the failure opportunity in the planned scope.
 
 | Risk                                                             | Impact                                            | Likelihood | Mitigation                                                                                                      | Decision owner or dependency        | Qualification gate        |

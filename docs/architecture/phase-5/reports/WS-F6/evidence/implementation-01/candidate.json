@@ -1,0 +1,6 @@
+{
+  "baseline": "fef74f0b451e084bd33e13b4867c91694bf5bc90",
+  "branch": "cross-browser-research",
+  "binarySHA256": "315c810a52372dc0eaddf6e8b8cedb70e96e25dd0a332bdd61a5df8006e5510d",
+  "method": "Isolated scratch candidate with exact source hashes in native run records. No release qualification."
+}

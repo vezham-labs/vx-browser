@@ -1,0 +1,43 @@
+{
+  "startedUTC": "2026-11-09T22:53:57.083000+00:00",
+  "app": "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/wsf6-implementation/build/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+  "bundleID": "internal.vezham.browser.wsf6.qualification",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "mode": "qualification",
+  "attemptsRequested": 1,
+  "timeoutSeconds": 240,
+  "serveLimitSeconds": 1800,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "FAIL",
+      "reasons": [
+        "Interrupted",
+        "Nonzero/crashed process exit",
+        "Missing, duplicate, nonpassing, or nonfinal qualification event",
+        "Nonpassing test event; original status retained"
+      ],
+      "nativeFinal": {
+        "testID": "qualification",
+        "status": "FAIL"
+      },
+      "nativePassed": 17,
+      "contractPassed": 2,
+      "caseStatusCounts": {
+        "PASS_NATIVE": 17,
+        "PASS_CONTRACT": 2,
+        "FAIL": 1
+      }
+    }
+  ],
+  "status": "FAIL",
+  "nativePassed": 17,
+  "contractPassed": 2,
+  "caseStatusCounts": {
+    "PASS_NATIVE": 17,
+    "PASS_CONTRACT": 2,
+    "FAIL": 1
+  },
+  "countScope": "Non-qualification test-event observations across attempts",
+  "finishedUTC": "2026-11-09T22:56:33.815519+00:00"
+}

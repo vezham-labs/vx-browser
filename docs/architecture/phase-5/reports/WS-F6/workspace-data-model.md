@@ -1,5 +1,7 @@
 # Workspace data model
 
+**Implementation update · 10 November 2026.** WorkspaceLayout implements this schema, validation, bounded normalization and V0 migration. The default Space is named Personal to preserve current UI behavior. Product snapshots contain no URLs or native state and have no disk writer. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Classification: PROPOSED.** The JSON below is a contract illustration for synthetic fixtures. It does not select a product file or database format.
 
 ## Entities and ordering

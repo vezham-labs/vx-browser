@@ -28,7 +28,8 @@ struct ChromeCommand: Decodable {
         case navigate, back, forward, reload, stop, copy, paste, appearance, presentation
         case spaceCreate, spaceRename, spaceSwitch, spaceDelete, tabSpace, pin
         case groupCreate, groupRename, groupToggle, groupMove, groupDelete, tabGroup
-        case split, unsplit, miniOpen, miniTransfer
+        case split, unsplit, miniOpen, miniTransferPreview, miniTransfer
+        case workspaceCreate, workspaceRename, workspaceMove, workspaceDelete, workspaceSwitch
     }
 
     let version: Int
@@ -65,6 +66,19 @@ struct ChromeTab: Encodable, Equatable {
     let group: String?
 }
 
+struct ChromeWorkspace: Encodable, Equatable {
+    let id: String
+    let name: String
+    let empty: Bool
+}
+
+struct ChromeMiniPreview: Encodable {
+    let token: UUID
+    let url: String
+    let workspace: String
+    let space: String
+}
+
 struct ChromeSpace: Encodable, Equatable {
     let id: String
     var name: String
@@ -95,6 +109,9 @@ struct ChromeState: Encodable, Equatable {
     let split: [String]
     let splitCompact: Bool
     let mini: Bool
+    let workspaces: [ChromeWorkspace]
+    let activeWorkspace: String
+    let miniEligible: Bool
 }
 
 struct ChromeResult: Encodable {
@@ -102,8 +119,9 @@ struct ChromeResult: Encodable {
     let state: ChromeState
     let error: Failure?
     let text: String?
+    var miniPreview: ChromeMiniPreview? = nil
 
     enum Failure: String, Encodable, Error {
-        case busy, unavailable, invalid, failed
+        case busy, unavailable, invalid, failed, transferUnconfirmed
     }
 }

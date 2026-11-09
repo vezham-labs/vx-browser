@@ -1,5 +1,7 @@
 # WebKit admission and lifecycle
 
+**Implementation update · 10 November 2026.** Blank slots remain view-free until explicit foreground navigation. New and reused bindings require current authority. Core construction failure remains scope-quarantining, so the proposed pane-local retry is gated on a reviewed clean failure result. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 **Classification: PROPOSED.** The existing authority, store assignment, publication and poison fences remain mandatory. The new layer plans visible demand and binds logical tabs to native view IDs. [Current implementation](current-state-assessment.md) · [ADR 0007](../../../../decisions/0007-logical-tabs-and-webkit-admission.md)
 
 ## Admission preconditions

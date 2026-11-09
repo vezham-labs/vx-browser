@@ -30,6 +30,16 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         var object: WKWebsiteDataStore?
         var retired = false
     }
+    public enum DirectLoadState: Equatable { case pending, committed, failed }
+
+    private struct DirectLoad {
+        let token: UUID
+        let navigation: WKNavigation
+        let url: URL
+        var successfulResponse = false
+        var state = DirectLoadState.pending
+    }
+
     private struct View {
         let identity: StoreIdentity
         let generation: UInt64
@@ -42,6 +52,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         var navigationFailed = false
         var favicon: String?
         var requestedURL: URL?
+        var directLoad: DirectLoad?
     }
     public struct Event: Codable, Sendable {
         public let sequence: Int
@@ -236,29 +247,79 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         case load(URL), back, forward, reload, stop
     }
     public func perform(_ command: InteractiveNavigation, in view: ViewID) -> Bool {
-        guard interactivePrivateBrowsing, var entry = views[view], entry.identity.scope.profile == nil,
-              entry.published, !fenced.contains(entry.identity.scope) else { return false }
+        guard let entry = interactiveView(view) else { return false }
         let surface = entry.object
+        if case .load(let url) = command { return beginDirectLoad(url, in: view) != nil }
+        views[view]?.directLoad = nil
         switch command {
-        case .load(let url):
-            guard permitted(url, scope: entry.identity.scope) else { return false }
-            if entry.descriptor.phase == .published {
-                do { try entry.descriptor.advance(to: .navigationAuthorized, operation: entry.operation, timestamp: now()) }
-                catch { return false }
-            }
-            guard entry.descriptor.phase == .navigationAuthorized else { return false }
-            entry.navigationFailed = false
-            entry.requestedURL = url
-            views[view] = entry
-            return surface.load(URLRequest(url: url)) != nil
         case .back: return surface.canGoBack && surface.goBack() != nil
         case .forward: return surface.canGoForward && surface.goForward() != nil
         case .reload:
-            if entry.navigationFailed, let url = entry.requestedURL { return perform(.load(url), in: view) }
+            if entry.navigationFailed, let url = entry.requestedURL { return beginDirectLoad(url, in: view) != nil }
             return surface.reload() != nil
         case .stop: surface.stopLoading(); return true
+        case .load: return false
         }
     }
+
+    private func interactiveView(_ id: ViewID) -> View? {
+        guard interactivePrivateBrowsing, let view = views[id], view.identity.scope.profile == nil,
+              view.published, !fenced.contains(view.identity.scope) else { return nil }
+        return view
+    }
+
+    /// Tracks only a fresh host-issued GET. Website-initiated navigations never gain
+    /// transferable provenance by matching a title or the currently displayed URL.
+    public func beginDirectLoad(_ url: URL, in id: ViewID) -> UUID? {
+        guard var view = interactiveView(id), permitted(url, scope: view.identity.scope) else { return nil }
+        if view.descriptor.phase == .published {
+            do { try view.descriptor.advance(to: .navigationAuthorized, operation: view.operation, timestamp: now()) }
+            catch { return nil }
+        }
+        guard view.descriptor.phase == .navigationAuthorized else { return nil }
+        view.navigationFailed = false
+        view.requestedURL = url
+        view.directLoad = nil
+        views[id] = view
+        guard let navigation = view.object.load(URLRequest(url: url)) else { return nil }
+        let token = UUID()
+        views[id]?.directLoad = DirectLoad(token: token, navigation: navigation, url: url)
+        record("navigation-request", "issued")
+        return token
+    }
+
+    public nonisolated static func permitsMiniTransferURL(_ url: URL) -> Bool {
+        permitsInteractiveURL(url) && url.query == nil && url.fragment == nil
+    }
+
+    public func committedTransferSource(in id: ViewID) -> (url: URL, token: UUID)? {
+        guard let view = interactiveView(id), let load = view.directLoad,
+              load.state == .committed, let url = view.object.url,
+              Self.permitsMiniTransferURL(url), Self.matchesDestination(url, load.url) else { return nil }
+        return (url, load.token)
+    }
+
+    public func directLoadState(_ token: UUID, in id: ViewID) -> DirectLoadState {
+        guard let view = interactiveView(id), let load = view.directLoad, load.token == token else { return .failed }
+        if load.state == .committed {
+            guard let url = view.object.url, Self.matchesDestination(url, load.url) else { return .failed }
+        }
+        return load.state
+    }
+
+    private nonisolated static func matchesDestination(_ lhs: URL, _ rhs: URL) -> Bool {
+        func normalized(_ url: URL) -> URLComponents? {
+            guard var parts = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil }
+            parts.scheme = parts.scheme?.lowercased()
+            parts.host = parts.host?.lowercased()
+            if (parts.scheme == "https" && parts.port == 443) || (parts.scheme == "http" && parts.port == 80) { parts.port = nil }
+            if parts.percentEncodedPath.isEmpty { parts.percentEncodedPath = "/" }
+            return parts
+        }
+        guard let a = normalized(lhs), let b = normalized(rhs) else { return false }
+        return a == b
+    }
+
     public func favicon(in view: ViewID) -> String? { views[view]?.favicon }
     public func requestedURL(in view: ViewID) -> URL? { views[view]?.requestedURL }
     public func navigationFailed(in view: ViewID) -> Bool { views[view]?.navigationFailed ?? false }
@@ -303,7 +364,21 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     }
     public func close(_ view: ViewID, scope: Scope) async -> ProviderOutcome {
         guard dispose(view, scope: scope) else { return .failed(.invalidIdentity) }
-        record("close", "released-owned-references"); return .completed
+        // WebKit callbacks can retain a disposed view through the current run-loop
+        // turn. Observe only this view/configuration pair before Core retires the
+        // final private scope. A held external reference still fails closed.
+        let observations = Array((released[scope] ?? []).suffix(2))
+        let deadline = ContinuousClock.now.advanced(by: .seconds(15))
+        while observations.contains(where: { $0.value != nil }) {
+            guard ContinuousClock.now < deadline, !Task.isCancelled else {
+                record("close", "observed-reference-deadline")
+                return .failed(.outstandingReferences)
+            }
+            do { try await Task.sleep(for: .milliseconds(20)) }
+            catch { return .unknown }
+        }
+        record("close", "released-owned-references")
+        return .completed
     }
     public func quiesce(_ scope: Scope) async -> ProviderOutcome {
         fenced.insert(scope)
@@ -398,7 +473,28 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         record("remove", "callback-and-absence"); return .completed
     }
     public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        if let id = views.first(where: { $0.value.object === webView })?.key { views[id]?.navigationFailed = false; views[id]?.favicon = nil }
+        guard let id = views.first(where: { $0.value.object === webView })?.key else { return }
+        views[id]?.navigationFailed = false
+        views[id]?.favicon = nil
+        if views[id]?.directLoad?.navigation !== navigation { views[id]?.directLoad = nil }
+    }
+
+    public func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+        failDirectLoad(webView, navigation: navigation)
+    }
+
+    public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        guard let (id, view) = views.first(where: { $0.value.object === webView }),
+              !fenced.contains(view.identity.scope), let load = view.directLoad,
+              load.navigation === navigation, load.state == .pending else { return }
+        let matched = webView.url.map { Self.matchesDestination($0, load.url) } ?? false
+        views[id]?.directLoad?.state = load.successfulResponse && matched ? .committed : .failed
+    }
+
+    private func failDirectLoad(_ webView: WKWebView, navigation: WKNavigation?) {
+        guard let (id, view) = views.first(where: { $0.value.object === webView }),
+              let load = view.directLoad, load.navigation === navigation else { return }
+        views[id]?.directLoad?.state = .failed
     }
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         navigations.removeValue(forKey: ObjectIdentifier(webView))?(true)
@@ -443,8 +539,14 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         }
         navigations.removeValue(forKey: ObjectIdentifier(webView))?(false)
     }
-    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: any Error) { navigationFailure(webView, error: error) }
-    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: any Error) { navigationFailure(webView, error: error) }
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: any Error) {
+        failDirectLoad(webView, navigation: navigation)
+        navigationFailure(webView, error: error)
+    }
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: any Error) {
+        failDirectLoad(webView, navigation: navigation)
+        navigationFailure(webView, error: error)
+    }
     public func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         guard let view = views.values.first(where: { $0.object === webView }) else {
             record("content-process", "foreign-view-ignored")
@@ -462,6 +564,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         for id in ownedViews(scope) {
             guard let object = views[id]?.object else { continue }
             views[id]?.permissionDocument = UUID()
+            views[id]?.directLoad = nil
             navigations.removeValue(forKey: ObjectIdentifier(object))?(false)
             object.stopLoading()
         }
@@ -478,6 +581,12 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
             views[pair.key]?.permissionDocument = UUID()
             if interactivePrivateBrowsing, pair.value.identity.scope.profile == nil {
                 views[pair.key]?.requestedURL = action.request.httpMethod == "GET" ? action.request.url : nil
+                if let load = pair.value.directLoad {
+                    let matches = action.request.url.map { Self.matchesDestination($0, load.url) } ?? false
+                    if load.state != .pending || action.request.httpMethod != "GET" || !matches {
+                        views[pair.key]?.directLoad = nil
+                    }
+                }
             }
         }
         decisionHandler(.allow)
@@ -491,8 +600,17 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         return nil
     }
     public func webView(_ webView: WKWebView, decidePolicyFor response: WKNavigationResponse, decisionHandler: @escaping @MainActor @Sendable (WKNavigationResponsePolicy) -> Void) {
-        let owned = views.values.contains { $0.object === webView && $0.published && !fenced.contains($0.identity.scope) }
-        decisionHandler(owned && response.canShowMIMEType ? .allow : .cancel)
+        guard let (id, view) = views.first(where: { $0.value.object === webView }),
+              view.published, !fenced.contains(view.identity.scope) else {
+            decisionHandler(.cancel)
+            return
+        }
+        if response.isForMainFrame, let load = view.directLoad, load.state == .pending {
+            let matches = response.response.url.map { Self.matchesDestination($0, load.url) } ?? false
+            let successful = (response.response as? HTTPURLResponse).map { (200..<300).contains($0.statusCode) } ?? false
+            views[id]?.directLoad?.successfulResponse = matches && successful && response.canShowMIMEType
+        }
+        decisionHandler(response.canShowMIMEType ? .allow : .cancel)
     }
     public func webView(_ webView: WKWebView, runOpenPanelWith parameters: WKOpenPanelParameters, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping @MainActor @Sendable ([URL]?) -> Void) { completionHandler(nil) }
     public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping @MainActor @Sendable () -> Void) { completionHandler() }

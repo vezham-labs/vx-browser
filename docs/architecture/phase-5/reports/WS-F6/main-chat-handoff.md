@@ -1,5 +1,7 @@
 # Main-chat handoff
 
+**Implementation update · 10 November 2026.** Implementation is delivered as uncommitted source and evidence on cross-browser-research at baseline fef74f0. Start review with the implementation report and actual qualification ledger. The design-stage copy-ready handoff below is historical. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 ## Baseline and deliverables
 
 `vezham-labs/vx-browser`, `cross-browser-research`, baseline `19337b01c62a7527d4288b149dd742853ad92b5f`. The branch was clean and matched its fetched upstream. The documentation package is under `docs/architecture/phase-5/reports/WS-F6/`, with ADRs 0006–0008 proposed under `docs/decisions/`. [Package index](README.md) · [Source assessment](current-state-assessment.md) · [Traceability](traceability-matrix.md)
@@ -20,6 +22,10 @@ The package proposes typed workspace/Space/group/tab IDs and one versioned layou
 3. Review W2 ownership and final-view retirement, then add W3 Split/command/focus and W4 Mini using the qualified fixture binding. Use a new output directory and preserve historical evidence.
 4. Close out F6 with the matrix and a pinned candidate. Keep real-user persistence and release dependent on WS-F7 and WS-F8. [Implementation plan](implementation-plan.md) · [Qualification matrix](qualification-matrix.md)
 
-## Copy-ready handoff
+## Historical planning handoff
 
 > WS-F6 design is ready for review on `cross-browser-research` at baseline `19337b0`. Start with the WS-F6 report index, ADRs 0006–0008, and the qualification matrix. Review stable layout IDs, lazy WebKit admission, remembered two-pane intent and Mini's explicit URL-only handoff. Preserve the WS-F5R real-termination, attribution, drag, VoiceOver, download, external auth and macOS 26 dispositions. After separate implementation authorization and G0 review, start W1 with synthetic model/revision/migration tests. Keep real workspace writes behind WS-F7 and signed release behind WS-F8. This branch contains planning documentation only.
+
+## Current implementation handoff
+
+> Review the uncommitted WS-F6 implementation on cross-browser-research at HEAD fef74f0. Begin with implementation-report.md and implementation-qualification.md. Stable logical layouts, lazy native admission, remembered split intent and commit-aware Mini handoff are implemented in the current volatile private path. Core/model, storage, navigation, chrome and both native suites pass their recorded scopes. ESLint has the same 27 baseline errors. Preserve WS-F5R evidence and the outstanding real helper, drag, VoiceOver, downloads, external auth and macOS 26 gates. Normal protected writes and signed release remain WS-F7 and WS-F8 work.

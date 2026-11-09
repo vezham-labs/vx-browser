@@ -1,12 +1,14 @@
 # WS-F6 · Workspace Foundation
 
-**Status: PROPOSED design package, 2026-11-10.** The checked-out branch `cross-browser-research` started clean at `19337b01c62a7527d4288b149dd742853ad92b5f`. A fresh fetch of its upstream showed zero commits ahead and zero behind. The package uses that exact source and evidence baseline.
+**Implementation update · 10 November 2026.** The in-memory Workspace Foundation and private-path integration are implemented. Actual native and automated results, unresolved scenarios and decision refinements are recorded in the implementation report. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
+**Design baseline prepared 2026-11-10.** The checked-out branch `cross-browser-research` started clean at `19337b01c62a7527d4288b149dd742853ad92b5f`. A fresh fetch of its upstream showed zero commits ahead and zero behind. The package uses that exact source and evidence baseline.
 
 ## Executive summary
 
 Vezham should make it easy to resume a project, work with two sites together, and triage a link in a temporary Mini. WS-F6 proposes stable workspace and tab identities, a versioned layout, demand-driven WebKit admission, two-pane restoration, and a destination-aware Mini handoff. It uses synthetic fixtures to qualify these contracts while WS-F7 owns the prerequisites for real-user writes and protected profiles. The product remains a native macOS AppKit host with system WebKit and the existing bundled React/TypeScript/HeroUI chrome.
 
-## Proposed decisions and scope
+## Design decisions and scope
 
 | ID  | Decision                                                                                                                                                                                  |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,3 +49,9 @@ The existing WS-F5R callback evidence remains bounded to an injected trigger. Re
 - [Main-chat handoff](main-chat-handoff.md)
 
 Proposed decisions are recorded in [ADR 0006](../../../../decisions/0006-workspace-identity-and-versioned-layout.md), [ADR 0007](../../../../decisions/0007-logical-tabs-and-webkit-admission.md) and [ADR 0008](../../../../decisions/0008-mini-isolation-and-url-handoff.md). [ADR 0004](../../../../decisions/0004-browser-local-persistence.md) and the [WS-F3 owner decision](../WS-F3/approved-decisions.md) continue to govern persistence.
+
+## Implementation review
+
+- [Implementation report](implementation-report.md)
+- [Actual qualification ledger](implementation-qualification.md)
+- [Changed files and validation receipt](implementation-files.md)

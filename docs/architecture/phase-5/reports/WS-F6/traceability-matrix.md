@@ -1,5 +1,7 @@
 # Traceability matrix
 
+**Implementation update · 10 November 2026.** The original research-to-design mapping is retained. The implementation report maps the delivered code and test artifacts. Planned case IDs keep their full expectations in the original matrix. [Implementation report](implementation-report.md) · [Actual qualification](implementation-qualification.md)
+
 Research observations are bounded to the earlier source inventory and its access date. Product and architecture decisions, workstreams and F6 cases below are **PROPOSED**. Existing WS-F5R evidence remains in its own ledger.
 
 | Research or current finding                                                                                                                                                | Product decision                                                                          | Architecture decision                                                                                       | Workstream          | Qualification case                   |
