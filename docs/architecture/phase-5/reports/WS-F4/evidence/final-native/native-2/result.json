@@ -1,0 +1,126 @@
+{
+  "startedUTC": "2026-11-09T16:24:28.344207+00:00",
+  "binarySHA256": "b5e69461c4c45b17e0c4d834f0952ad0247b700bbb1a41de01bba0f9e4e0bf18",
+  "attempt": 2,
+  "exit": 0,
+  "screenshots": {},
+  "events": [
+    {
+      "testID": "F4-SHELL",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-START-BUTTON",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-PRIVATE-ASSIGNMENT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-PRIVATE-UI",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-NAVIGATE-ACCEPTED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-WEBKIT-RENDER",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-NAVIGATION-UI",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-COOKIE-SEED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-CHROME-ISOLATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-INVALID-SCHEME",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-PAGE-LINK",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-BACK",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-BACK-RECONCILED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-DUPLICATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-TAB-IDENTITIES",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-MOVE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-MOVE-RECONCILED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-CLOSE-DUPLICATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-END-PRIVATE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-SESSION-UI-CLEARED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-FRESH-SESSION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-FRESH-NAVIGATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-COOKIE-NONREUSE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-BROKEN-NAVIGATION-START",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-NATIVE-FAILURE-UI",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-FINAL-END",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-SETTINGS-UI",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F4-LIGHT-APPEARANCE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "qualification",
+      "status": "PASS_NATIVE"
+    }
+  ],
+  "passed": true
+}

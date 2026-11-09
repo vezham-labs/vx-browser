@@ -31,12 +31,12 @@ public actor NativeHostAuthority: HostAuthorityPort {
     private let journal: any RecoveryJournalPort
     public init(namespace: NamespaceID, run: RunID, catalog: any ProfileCatalogPort,
                 journal: any RecoveryJournalPort, bindings: [ProfileBinding] = [], allowedOrigins: Set<String> = [],
-                qualificationKeyNamespace: UUID? = nil) throws {
+                qualificationKeyNamespace: UUID? = nil, interactivePrivateBrowsing: Bool = false) throws {
         self.run = run; self.journal = journal
         authority = NativeHostAuthority()
         permissions = PermissionCoordinator(run: run, authority: authority)
         keys = NativeKeyBroker(authority: authority, run: run, qualificationNamespace: qualificationKeyNamespace)
-        adapter = try NativeWebKitStorage(namespace: namespace, knownBindings: bindings, allowedOrigins: allowedOrigins)
+        adapter = try NativeWebKitStorage(namespace: namespace, knownBindings: bindings, allowedOrigins: allowedOrigins, interactivePrivateBrowsing: interactivePrivateBrowsing)
         core = try LifecycleCoordinator(run: run, namespace: namespace, authority: authority, catalog: catalog,
                                         journal: journal, engine: adapter, constructor: adapter, resources: adapter)
         let barrier = NativeProfileBarrier(adapter: adapter, core: core, authority: authority, catalog: catalog)
@@ -47,10 +47,11 @@ public actor NativeHostAuthority: HostAuthorityPort {
         let ns = try NamespaceID(UUID().uuidString), catalog = ProtectedCatalog()
         return try NativeStorageSession(namespace: ns, run: RunID(UUID().uuidString), catalog: catalog, journal: catalog)
     }
-    public static func privateOnly() throws -> NativeStorageSession {
+    public static func privateOnly(interactiveBrowsing: Bool = false) throws -> NativeStorageSession {
         let ns = try NamespaceID(UUID().uuidString)
         return try NativeStorageSession(namespace: ns, run: RunID(UUID().uuidString),
-             catalog: InMemoryProfileCatalog(namespace: ns), journal: InMemoryRecoveryJournal(namespace: ns))
+             catalog: InMemoryProfileCatalog(namespace: ns), journal: InMemoryRecoveryJournal(namespace: ns),
+             interactivePrivateBrowsing: interactiveBrowsing)
     }
     public func open(_ scope: Scope, context: CallerContext, view: ViewID, operation: OperationID) async -> OperationResult {
         let result = await core.activate(scope, view: view, context: context, operation: operation)

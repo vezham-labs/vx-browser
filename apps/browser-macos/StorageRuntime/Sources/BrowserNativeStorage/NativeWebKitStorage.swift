@@ -39,6 +39,8 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         var descriptor: StorageDescriptor
         var published = false
         var permissionDocument = UUID()
+        var navigationFailed = false
+        var requestedURL: URL?
     }
     public struct Event: Codable, Sendable {
         public let sequence: Int
@@ -47,6 +49,7 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     }
     private let namespace: NamespaceID
     private let allowedOrigins: Set<String>
+    private let interactivePrivateBrowsing: Bool
     private var bindings: [StoreID: ProfileBinding] = [:]
     private var stores: [Scope: Store] = [:]
     private var views: [ViewID: View] = [:]
@@ -70,8 +73,9 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     private var overflowed = false
     private var frameworkReady = false
     public var eventSink: (@MainActor @Sendable (Event) -> Void)?
-    public init(namespace: NamespaceID, knownBindings: [ProfileBinding] = [], allowedOrigins: Set<String> = []) throws {
+    public init(namespace: NamespaceID, knownBindings: [ProfileBinding] = [], allowedOrigins: Set<String> = [], interactivePrivateBrowsing: Bool = false) throws {
         self.namespace = namespace; self.allowedOrigins = allowedOrigins
+        self.interactivePrivateBrowsing = interactivePrivateBrowsing
         for b in knownBindings {
             guard b.namespace == namespace, bindings[b.store] == nil,
                   !bindings.values.contains(where: { $0.profile == b.profile }) else { throw FailureCode.conflictingMapping }
@@ -225,9 +229,41 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         if case .value(true) = r { record("navigation", "finished"); return .completed }
         record("navigation", "unknown-or-failed"); return .unknown
     }
-    private func permitted(_ url: URL) -> Bool {
-        guard let scheme = url.scheme, ["http", "https"].contains(scheme), let host = url.host,
+    public enum InteractiveNavigation {
+        case load(URL), back, forward, reload, stop
+    }
+    public func perform(_ command: InteractiveNavigation, in view: ViewID) -> Bool {
+        guard interactivePrivateBrowsing, var entry = views[view], entry.identity.scope.profile == nil,
+              entry.published, !fenced.contains(entry.identity.scope) else { return false }
+        let surface = entry.object
+        switch command {
+        case .load(let url):
+            guard permitted(url, scope: entry.identity.scope) else { return false }
+            if entry.descriptor.phase == .published {
+                do { try entry.descriptor.advance(to: .navigationAuthorized, operation: entry.operation, timestamp: now()) }
+                catch { return false }
+            }
+            guard entry.descriptor.phase == .navigationAuthorized else { return false }
+            entry.navigationFailed = false
+            entry.requestedURL = url
+            views[view] = entry
+            return surface.load(URLRequest(url: url)) != nil
+        case .back: return surface.canGoBack && surface.goBack() != nil
+        case .forward: return surface.canGoForward && surface.goForward() != nil
+        case .reload:
+            if entry.navigationFailed, let url = entry.requestedURL { return perform(.load(url), in: view) }
+            return surface.reload() != nil
+        case .stop: surface.stopLoading(); return true
+        }
+    }
+    public func requestedURL(in view: ViewID) -> URL? { views[view]?.requestedURL }
+    public func navigationFailed(in view: ViewID) -> Bool { views[view]?.navigationFailed ?? false }
+    private func permitted(_ url: URL, scope: Scope? = nil) -> Bool {
+        guard let scheme = url.scheme, ["http", "https"].contains(scheme), let host = url.host, !host.isEmpty,
               url.user == nil, url.password == nil else { return false }
+        if interactivePrivateBrowsing, let scope, case .privateSession = scope {
+            return scheme == "https" || ["localhost", "127.0.0.1", "[::1]", "::1"].contains(host)
+        }
         let port = url.port.map { ":\($0)" } ?? ""
         return allowedOrigins.contains("\(scheme)://\(host)\(port)")
     }
@@ -350,9 +386,19 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
         guard !ids.contains(UUID(uuidString: id.rawValue)!) else { return .partial }
         record("remove", "callback-and-absence"); return .completed
     }
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        if let id = views.first(where: { $0.value.object === webView })?.key { views[id]?.navigationFailed = false }
+    }
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) { navigations.removeValue(forKey: ObjectIdentifier(webView))?(true) }
-    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: any Error) { navigations.removeValue(forKey: ObjectIdentifier(webView))?(false) }
-    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: any Error) { navigations.removeValue(forKey: ObjectIdentifier(webView))?(false) }
+    private func navigationFailure(_ webView: WKWebView, error: any Error) {
+        if (error as? URLError)?.code != .cancelled,
+           let id = views.first(where: { $0.value.object === webView })?.key {
+            views[id]?.navigationFailed = true
+        }
+        navigations.removeValue(forKey: ObjectIdentifier(webView))?(false)
+    }
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: any Error) { navigationFailure(webView, error: error) }
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: any Error) { navigationFailure(webView, error: error) }
     public func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         if let v = views.values.first(where: { $0.object === webView }) {
             fenced.insert(v.identity.scope); poisoned.insert(v.identity.scope)
@@ -361,12 +407,15 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     }
     public func webView(_ webView: WKWebView, decidePolicyFor action: WKNavigationAction, decisionHandler: @escaping @MainActor @Sendable (WKNavigationActionPolicy) -> Void) {
         guard let pair = views.first(where: { $0.value.object === webView }), pair.value.published,
-              !fenced.contains(pair.value.identity.scope), action.request.url.map(permitted) == true else {
+              !fenced.contains(pair.value.identity.scope), action.request.url.map({ permitted($0, scope: pair.value.identity.scope) }) == true else {
             decisionHandler(.cancel)
             return
         }
         if action.targetFrame?.isMainFrame == true {
             views[pair.key]?.permissionDocument = UUID()
+            if interactivePrivateBrowsing, pair.value.identity.scope.profile == nil {
+                views[pair.key]?.requestedURL = action.request.httpMethod == "GET" ? action.request.url : nil
+            }
         }
         decisionHandler(.allow)
     }
@@ -418,5 +467,11 @@ private enum Reply<T: Sendable>: Sendable { case value(T), timedOut }
     public func webView(_ webView: WKWebView, requestGeolocationPermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, decisionHandler: @escaping @MainActor @Sendable (WKPermissionDecision) -> Void) {
         record("geolocation-permission", "denied-unsupported");decisionHandler(.deny)
     }
-    public func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @MainActor @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) { completionHandler(.cancelAuthenticationChallenge, nil) }
+    public func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @MainActor @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        let livePrivate = interactivePrivateBrowsing && views.values.contains {
+            $0.object === webView && $0.identity.scope.profile == nil && $0.published && !fenced.contains($0.identity.scope)
+        }
+        let normalTrust = livePrivate && challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust
+        completionHandler(normalTrust ? .performDefaultHandling : .cancelAuthenticationChallenge, nil)
+    }
 }

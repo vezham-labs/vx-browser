@@ -23,7 +23,9 @@ class Run:
     def __init__(self, evidence, action):
         self.evidence = evidence.resolve()
         phase = ROOT / "docs/architecture/phase-5"
-        registered = phase / "evidence" in self.evidence.parents or self.evidence == phase / "reports/WS-F3/evidence"
+        registered = phase / "evidence" in self.evidence.parents or self.evidence in {
+            phase / "reports/WS-F3/evidence", phase / "reports/WS-F4/evidence",
+        }
         if not registered or not (self.evidence / "baseline.json").is_file():
             raise SystemExit("Registered evidence directory required")
         self.out = self.evidence / (action + "-" + datetime.datetime.now(datetime.timezone.utc).strftime("%H%M%S%f"))

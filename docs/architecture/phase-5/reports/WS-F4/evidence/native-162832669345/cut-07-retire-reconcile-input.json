@@ -1,0 +1,68 @@
+{
+  "namespace": "0ffce122-ab81-4022-a306-67401ec6977a",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "29962308-6e77-4627-919a-03d898d66547",
+      "store": "6e9e17e8-705c-421d-a21e-886d52f15cdc"
+    },
+    {
+      "name": "B",
+      "profile": "5563fd9a-1e1a-48b7-a2ab-e96d847d89b8",
+      "store": "013acd89-5c8e-4472-828a-963bf733135c"
+    }
+  ],
+  "origin": "http://127.0.0.1:60168",
+  "checkpoint": {
+    "rows": [
+      {
+        "revision": 5,
+        "origin": "fresh",
+        "resourceGeneration": 1,
+        "profile": "29962308-6e77-4627-919a-03d898d66547",
+        "store": "6e9e17e8-705c-421d-a21e-886d52f15cdc",
+        "status": "quiescent"
+      },
+      {
+        "revision": 4,
+        "origin": "fresh",
+        "resourceGeneration": 1,
+        "profile": "5563fd9a-1e1a-48b7-a2ab-e96d847d89b8",
+        "store": "013acd89-5c8e-4472-828a-963bf733135c",
+        "status": "quiescent"
+      }
+    ],
+    "snapshot": {
+      "previousRun": "0508d64e-7abd-4a43-bde8-344244591e7b",
+      "version": 1,
+      "records": [
+        {
+          "operation": "3e661b03-5222-4f9d-878a-be9c8f64345e",
+          "store": "6e9e17e8-705c-421d-a21e-886d52f15cdc",
+          "phase": {
+            "pending": {
+              "_0": "retire"
+            }
+          },
+          "profile": "29962308-6e77-4627-919a-03d898d66547",
+          "namespace": "0ffce122-ab81-4022-a306-67401ec6977a",
+          "generation": 5
+        },
+        {
+          "operation": "2b6f7281-9ca2-4076-999d-95944726eda6",
+          "store": "013acd89-5c8e-4472-828a-963bf733135c",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "profile": "5563fd9a-1e1a-48b7-a2ab-e96d847d89b8",
+          "namespace": "0ffce122-ab81-4022-a306-67401ec6977a",
+          "generation": 3
+        }
+      ]
+    }
+  },
+  "cutpoint": null,
+  "action": "reconcile-uncertain"
+}

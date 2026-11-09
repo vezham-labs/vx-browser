@@ -105,7 +105,10 @@ import BrowserPersistence
             let bytes = FileHandle.standardInput.readDataToEndOfFile()
             guard bytes.count <= 65536 else { throw FailureCode.capacityExceeded }
             let input = try JSONDecoder().decode(Input.self, from: bytes)
-            guard Bundle.main.bundleIdentifier?.contains("wsf1") == true || input.action == "enumerate-original" else { throw FailureCode.unauthorized }
+            let fixtureBundleIDs = ["internal.vezham.browser.wsf1.qualification", "internal.vezham.browser.wsf4.qualification"]
+            guard Bundle.main.bundleIdentifier.map(fixtureBundleIDs.contains) == true || input.action == "enumerate-original" else {
+                throw FailureCode.unauthorized
+            }
             let run: RunID = fresh()
             if input.action == "enumerate-original" {
                 guard Bundle.main.bundleIdentifier == "internal.vx.M1Validation.run20261108T094414Z" else { throw FailureCode.unauthorized }

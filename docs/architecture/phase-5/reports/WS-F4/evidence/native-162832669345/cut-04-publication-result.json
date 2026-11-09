@@ -1,0 +1,44 @@
+{
+  "label": "cut-04-publication",
+  "pid": 77581,
+  "action": "seed",
+  "cutpoint": "publication",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "rows": [
+      {
+        "revision": 3,
+        "status": "active",
+        "origin": "fresh",
+        "store": "bb21758c-6234-4109-9211-c005d71baf69",
+        "profile": "d804babf-f853-4acc-a8be-c83f222cf03b",
+        "resourceGeneration": 1
+      }
+    ],
+    "snapshot": {
+      "records": [
+        {
+          "phase": {
+            "pending": {
+              "_0": "activate"
+            }
+          },
+          "operation": "58e01ae9-64bd-478d-9792-036fec841a3b",
+          "store": "bb21758c-6234-4109-9211-c005d71baf69",
+          "namespace": "326433ae-fc15-44ca-b750-0d13539d7fe6",
+          "generation": 1,
+          "profile": "d804babf-f853-4acc-a8be-c83f222cf03b"
+        }
+      ],
+      "previousRun": "cd9d1ec4-99a6-439e-934c-565177e8484b",
+      "version": 1
+    }
+  },
+  "binarySHA256": "26833197c7d5f2109493b0e4fa50a17f6955bb42846b8baa3eaa7c4864375a67",
+  "observations": []
+}

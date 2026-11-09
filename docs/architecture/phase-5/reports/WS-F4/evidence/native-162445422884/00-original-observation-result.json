@@ -1,0 +1,28 @@
+{
+  "label": "00-original-observation",
+  "pid": 76696,
+  "action": "enumerate-original",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "originalPresence": {
+      "abb4ca2d-33dc-4d25-9c16-d135202c03e3": false,
+      "9ec735a8-b9eb-416c-994b-4b299c5ee5f5": true
+    },
+    "event": "result",
+    "cases": [
+      {
+        "status": "PASS_NATIVE",
+        "id": "F1-DIAG-001",
+        "detail": "Noncreating public enumeration only; logical prior removal remains unknown"
+      }
+    ]
+  },
+  "checkpoint": null,
+  "binarySHA256": "94747744d0bc9ab7ba34a34b7a1b027e2370ae964bad77742f25b631b31b7960",
+  "observations": []
+}

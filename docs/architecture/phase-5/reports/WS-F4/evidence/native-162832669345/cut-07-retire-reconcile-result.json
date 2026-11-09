@@ -1,0 +1,173 @@
+{
+  "label": "cut-07-retire-reconcile",
+  "pid": 77682,
+  "action": "reconcile-uncertain",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {
+    "checkpoint": {
+      "rows": [
+        {
+          "status": "quiescent",
+          "profile": "29962308-6e77-4627-919a-03d898d66547",
+          "origin": "fresh",
+          "revision": 5,
+          "resourceGeneration": 1,
+          "store": "6e9e17e8-705c-421d-a21e-886d52f15cdc"
+        },
+        {
+          "status": "quiescent",
+          "profile": "5563fd9a-1e1a-48b7-a2ab-e96d847d89b8",
+          "origin": "fresh",
+          "revision": 4,
+          "resourceGeneration": 1,
+          "store": "013acd89-5c8e-4472-828a-963bf733135c"
+        }
+      ],
+      "snapshot": {
+        "version": 1,
+        "records": [
+          {
+            "operation": "3e661b03-5222-4f9d-878a-be9c8f64345e",
+            "phase": {
+              "quarantined": {
+                "_0": "interruptedOperation"
+              }
+            },
+            "interruptedAction": "retire",
+            "generation": 6,
+            "store": "6e9e17e8-705c-421d-a21e-886d52f15cdc",
+            "profile": "29962308-6e77-4627-919a-03d898d66547",
+            "namespace": "0ffce122-ab81-4022-a306-67401ec6977a"
+          },
+          {
+            "store": "013acd89-5c8e-4472-828a-963bf733135c",
+            "generation": 5,
+            "profile": "5563fd9a-1e1a-48b7-a2ab-e96d847d89b8",
+            "namespace": "0ffce122-ab81-4022-a306-67401ec6977a",
+            "operation": "d141bb79-b89c-4539-9c77-79f9e1355fee",
+            "phase": {
+              "stable": {
+                "_0": "quiescent"
+              }
+            }
+          }
+        ],
+        "previousRun": "ed042402-5c4f-43bb-b681-24af70ec109f"
+      }
+    },
+    "cases": [
+      {
+        "id": "F1-NAT-RECOVERY-A",
+        "status": "PASS_NATIVE",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-REPEATED-A",
+        "status": "PASS_NATIVE",
+        "detail": "Repeated reconciliation grants no factory/publication"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-B",
+        "status": "PASS_NATIVE",
+        "detail": "Stable unaffected mapping resolves; interrupted/missing mapping stays fenced"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-REPEATED-B",
+        "status": "PASS_NATIVE",
+        "detail": "Repeated reconciliation grants no factory/publication"
+      },
+      {
+        "id": "F1-NAT-RECOVERY-NOCREATE",
+        "status": "PASS_NATIVE",
+        "detail": "Noncreating reconciliation"
+      }
+    ],
+    "event": "result",
+    "trace": [
+      {
+        "kind": "fence",
+        "outcome": "installed",
+        "sequence": 1
+      },
+      {
+        "kind": "framework-configuration",
+        "outcome": "public-init-no-store-getter",
+        "sequence": 2
+      },
+      {
+        "kind": "enumeration",
+        "outcome": "observed",
+        "sequence": 3
+      },
+      {
+        "kind": "enumeration",
+        "outcome": "observed",
+        "sequence": 4
+      }
+    ],
+    "environment": {
+      "macOS": "Version 27.2 (Build 26B123)",
+      "bundle": "internal.vezham.browser.wsf4.qualification",
+      "qualification": "discovery-only",
+      "WebKit": "22625.2.8.11.9"
+    }
+  },
+  "checkpoint": {
+    "rows": [
+      {
+        "status": "quiescent",
+        "profile": "29962308-6e77-4627-919a-03d898d66547",
+        "origin": "fresh",
+        "revision": 5,
+        "resourceGeneration": 1,
+        "store": "6e9e17e8-705c-421d-a21e-886d52f15cdc"
+      },
+      {
+        "status": "quiescent",
+        "profile": "5563fd9a-1e1a-48b7-a2ab-e96d847d89b8",
+        "origin": "fresh",
+        "revision": 4,
+        "resourceGeneration": 1,
+        "store": "013acd89-5c8e-4472-828a-963bf733135c"
+      }
+    ],
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "operation": "3e661b03-5222-4f9d-878a-be9c8f64345e",
+          "phase": {
+            "quarantined": {
+              "_0": "interruptedOperation"
+            }
+          },
+          "interruptedAction": "retire",
+          "generation": 6,
+          "store": "6e9e17e8-705c-421d-a21e-886d52f15cdc",
+          "profile": "29962308-6e77-4627-919a-03d898d66547",
+          "namespace": "0ffce122-ab81-4022-a306-67401ec6977a"
+        },
+        {
+          "store": "013acd89-5c8e-4472-828a-963bf733135c",
+          "generation": 5,
+          "profile": "5563fd9a-1e1a-48b7-a2ab-e96d847d89b8",
+          "namespace": "0ffce122-ab81-4022-a306-67401ec6977a",
+          "operation": "d141bb79-b89c-4539-9c77-79f9e1355fee",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          }
+        }
+      ],
+      "previousRun": "ed042402-5c4f-43bb-b681-24af70ec109f"
+    }
+  },
+  "binarySHA256": "26833197c7d5f2109493b0e4fa50a17f6955bb42846b8baa3eaa7c4864375a67",
+  "observations": []
+}

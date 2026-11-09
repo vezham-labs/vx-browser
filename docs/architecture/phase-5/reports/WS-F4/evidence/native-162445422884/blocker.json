@@ -1,0 +1,4 @@
+{
+  "reason": "Native run stopped at 01-seed; no unchanged retry or unsafe cleanup",
+  "automaticCleanup": false
+}

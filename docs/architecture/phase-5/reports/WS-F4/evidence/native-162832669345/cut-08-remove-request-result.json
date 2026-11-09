@@ -1,0 +1,64 @@
+{
+  "label": "cut-08-remove-request",
+  "pid": 77691,
+  "action": "remove",
+  "cutpoint": "remove-request",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "snapshot": {
+      "previousRun": "9f3e8fba-cf38-4afd-b0c4-39e1f3308920",
+      "version": 1,
+      "records": [
+        {
+          "profile": "b12e88a3-eab4-4ae2-90ad-3be45fa6260b",
+          "namespace": "0af2b73e-9fe0-4417-9683-469bc907d603",
+          "operation": "524a7f0d-3e55-4595-9136-4b9ae03a7bc1",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "generation": 3,
+          "store": "5d4ec977-d711-4fb2-b528-13667881b4a3"
+        },
+        {
+          "profile": "f93317a2-1831-4260-8a3f-bc9630cedd4c",
+          "namespace": "0af2b73e-9fe0-4417-9683-469bc907d603",
+          "operation": "1a5f2a8b-55dc-4a5e-b917-bd716ccbe223",
+          "phase": {
+            "pending": {
+              "_0": "remove"
+            }
+          },
+          "generation": 6,
+          "store": "0e793e08-7cd2-4c25-8076-da189fd9556d"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "origin": "fresh",
+        "profile": "b12e88a3-eab4-4ae2-90ad-3be45fa6260b",
+        "revision": 4,
+        "store": "5d4ec977-d711-4fb2-b528-13667881b4a3",
+        "status": "quiescent",
+        "resourceGeneration": 1
+      },
+      {
+        "origin": "fresh",
+        "profile": "f93317a2-1831-4260-8a3f-bc9630cedd4c",
+        "revision": 7,
+        "store": "0e793e08-7cd2-4c25-8076-da189fd9556d",
+        "status": "deleting",
+        "resourceGeneration": 1
+      }
+    ]
+  },
+  "binarySHA256": "26833197c7d5f2109493b0e4fa50a17f6955bb42846b8baa3eaa7c4864375a67",
+  "observations": []
+}

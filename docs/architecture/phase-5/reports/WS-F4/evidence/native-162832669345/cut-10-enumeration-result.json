@@ -1,0 +1,64 @@
+{
+  "label": "cut-10-enumeration",
+  "pid": 77725,
+  "action": "verify",
+  "cutpoint": "enumeration",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "rows": [
+      {
+        "resourceGeneration": 1,
+        "store": "de05b0fc-b421-44e8-9f48-9cecaf28e04e",
+        "revision": 4,
+        "profile": "6b6d1591-92f8-47e1-8dce-fec6649e1fd0",
+        "origin": "fresh",
+        "status": "quiescent"
+      },
+      {
+        "resourceGeneration": 1,
+        "store": "9ff5daa8-b8d3-49f7-a880-9538634b8b53",
+        "revision": 4,
+        "profile": "9f8a8384-f4e8-44bf-a856-0cba8680fcbe",
+        "origin": "fresh",
+        "status": "quiescent"
+      }
+    ],
+    "snapshot": {
+      "version": 1,
+      "records": [
+        {
+          "profile": "6b6d1591-92f8-47e1-8dce-fec6649e1fd0",
+          "generation": 2,
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "namespace": "7c9d8330-3e81-42f1-8145-51dc76ba0305",
+          "operation": "5c6a20b7-72a5-4124-9d99-11f73c7c88ba",
+          "store": "de05b0fc-b421-44e8-9f48-9cecaf28e04e"
+        },
+        {
+          "profile": "9f8a8384-f4e8-44bf-a856-0cba8680fcbe",
+          "generation": 3,
+          "phase": {
+            "pending": {
+              "_0": "reconcile"
+            }
+          },
+          "namespace": "7c9d8330-3e81-42f1-8145-51dc76ba0305",
+          "operation": "80ac04b8-1bd1-4310-8e05-3dfbd109f1bf",
+          "store": "9ff5daa8-b8d3-49f7-a880-9538634b8b53"
+        }
+      ],
+      "previousRun": "29b1e949-c913-4f97-9b0a-e4872493d3e3"
+    }
+  },
+  "binarySHA256": "26833197c7d5f2109493b0e4fa50a17f6955bb42846b8baa3eaa7c4864375a67",
+  "observations": []
+}

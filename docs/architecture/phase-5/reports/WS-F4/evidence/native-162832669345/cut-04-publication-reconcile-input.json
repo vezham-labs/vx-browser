@@ -1,0 +1,48 @@
+{
+  "namespace": "326433ae-fc15-44ca-b750-0d13539d7fe6",
+  "profiles": [
+    {
+      "name": "A",
+      "profile": "d804babf-f853-4acc-a8be-c83f222cf03b",
+      "store": "bb21758c-6234-4109-9211-c005d71baf69"
+    },
+    {
+      "name": "B",
+      "profile": "3bf29b47-1a9b-4ca2-9b5b-d83951fe42dc",
+      "store": "0cb75346-7e9d-4565-ac52-8f40b9c2adb5"
+    }
+  ],
+  "origin": "http://127.0.0.1:60168",
+  "checkpoint": {
+    "rows": [
+      {
+        "revision": 3,
+        "status": "active",
+        "origin": "fresh",
+        "store": "bb21758c-6234-4109-9211-c005d71baf69",
+        "profile": "d804babf-f853-4acc-a8be-c83f222cf03b",
+        "resourceGeneration": 1
+      }
+    ],
+    "snapshot": {
+      "records": [
+        {
+          "phase": {
+            "pending": {
+              "_0": "activate"
+            }
+          },
+          "operation": "58e01ae9-64bd-478d-9792-036fec841a3b",
+          "store": "bb21758c-6234-4109-9211-c005d71baf69",
+          "namespace": "326433ae-fc15-44ca-b750-0d13539d7fe6",
+          "generation": 1,
+          "profile": "d804babf-f853-4acc-a8be-c83f222cf03b"
+        }
+      ],
+      "previousRun": "cd9d1ec4-99a6-439e-934c-565177e8484b",
+      "version": 1
+    }
+  },
+  "cutpoint": null,
+  "action": "reconcile-uncertain"
+}

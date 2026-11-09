@@ -1,0 +1,14 @@
+[
+  {
+    "status": "PASS_NATIVE",
+    "id": "F1-DIAG-001",
+    "detail": "Noncreating public enumeration only; logical prior removal remains unknown",
+    "attempt": "00-original-observation"
+  },
+  {
+    "detail": "unauthorized",
+    "status": "FAIL",
+    "id": "F1-HOST-ERROR",
+    "attempt": "01-seed"
+  }
+]

@@ -34,6 +34,15 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         configureMenu()
         showMainWindow()
         logger.info("native-host-ready")
+        #if DEBUG
+        let arguments = ProcessInfo.processInfo.arguments
+        if Bundle.main.bundleIdentifier == "internal.vezham.browser.wsf4.qualification",
+           let flag = arguments.firstIndex(of: "--wsf4-qualification"),
+           arguments.indices.contains(flag + 1), let origin = URL(string: arguments[flag + 1]),
+           let mainWindow {
+            Task { @MainActor in await mainWindow.qualifyLoopback(origin) }
+        }
+        #endif
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
@@ -43,13 +52,13 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         #if WSF1_QUALIFICATION
-        if ProcessInfo.processInfo.arguments.contains("--wsf1-qualification") || ProcessInfo.processInfo.arguments.contains("--wsf2-qualification") { return false }
+        if ProcessInfo.processInfo.arguments.contains(where: { ["--wsf1-qualification", "--wsf2-qualification", "--wsf4-qualification"].contains($0) }) { return false }
         #endif
         return true
     }
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         #if WSF1_QUALIFICATION
-        if ProcessInfo.processInfo.arguments.contains("--wsf1-qualification") || ProcessInfo.processInfo.arguments.contains("--wsf2-qualification") { return .terminateNow }
+        if ProcessInfo.processInfo.arguments.contains(where: { ["--wsf1-qualification", "--wsf2-qualification", "--wsf4-qualification"].contains($0) }) { return .terminateNow }
         #endif
         guard let storageSession else { return .terminateNow }
         Task { @MainActor in

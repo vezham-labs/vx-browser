@@ -1,0 +1,64 @@
+{
+  "label": "cut-09-remove-callback",
+  "pid": 77701,
+  "action": "remove",
+  "cutpoint": "remove-callback",
+  "expectedKill": true,
+  "cutpointObserved": true,
+  "returncode": -9,
+  "timeout": false,
+  "status": "PASS_NATIVE",
+  "result": {},
+  "checkpoint": {
+    "rows": [
+      {
+        "status": "quiescent",
+        "store": "85c3510b-b644-4d61-aff4-1940ae785b47",
+        "revision": 4,
+        "origin": "fresh",
+        "profile": "7761ef1b-db2c-4c87-8446-2fbd8019eb76",
+        "resourceGeneration": 1
+      },
+      {
+        "status": "deleting",
+        "store": "b37d2b43-616f-4ca8-9cde-eb2a10aa0360",
+        "revision": 7,
+        "origin": "fresh",
+        "profile": "e8dcff76-1287-4d8f-9505-cb68d069dc6a",
+        "resourceGeneration": 1
+      }
+    ],
+    "snapshot": {
+      "records": [
+        {
+          "generation": 3,
+          "profile": "7761ef1b-db2c-4c87-8446-2fbd8019eb76",
+          "store": "85c3510b-b644-4d61-aff4-1940ae785b47",
+          "namespace": "99212b9e-ca87-498b-9542-ede53bbf2138",
+          "phase": {
+            "stable": {
+              "_0": "quiescent"
+            }
+          },
+          "operation": "b335661c-a181-4754-93c2-29cd8943335c"
+        },
+        {
+          "generation": 6,
+          "profile": "e8dcff76-1287-4d8f-9505-cb68d069dc6a",
+          "store": "b37d2b43-616f-4ca8-9cde-eb2a10aa0360",
+          "namespace": "99212b9e-ca87-498b-9542-ede53bbf2138",
+          "phase": {
+            "pending": {
+              "_0": "remove"
+            }
+          },
+          "operation": "afc24314-9a8c-4c36-90de-eb63c6e92cb2"
+        }
+      ],
+      "version": 1,
+      "previousRun": "07551f32-52c5-4a49-8ef7-8b22de42edef"
+    }
+  },
+  "binarySHA256": "26833197c7d5f2109493b0e4fa50a17f6955bb42846b8baa3eaa7c4864375a67",
+  "observations": []
+}

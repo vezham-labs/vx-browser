@@ -1,0 +1,61 @@
+{
+  "host": "macOS 27.2 (26B123) arm64",
+  "binarySHA256": "26833197c7d5f2109493b0e4fa50a17f6955bb42846b8baa3eaa7c4864375a67",
+  "nativeBrowserSmoke": {
+    "attempts": 2,
+    "observations": {
+      "PASS_NATIVE": 56
+    },
+    "suiteMarkersExcluded": 2
+  },
+  "nativeStorageRegression": {
+    "attemptsIncludingDiagnostic": 39,
+    "currentCandidate": {
+      "PASS_NATIVE": 474,
+      "INCONCLUSIVE": 2
+    },
+    "historicalDiagnosticSeparate": 1,
+    "supportedOSGate": "BLOCKED",
+    "evidence": "native-162832669345/case-results.json"
+  },
+  "swiftContract": {
+    "PASS_CONTRACT": 23,
+    "PASS_FAKE_ONLY": 2,
+    "evidence": "f2-contracts-162758467400/result.json"
+  },
+  "typescriptNavigation": {
+    "PASS_CONTRACT": 3
+  },
+  "frontend": {
+    "PASS_FAKE_ONLY": 4
+  },
+  "blocked": [
+    "Authenticated protected profile create/switch and lock/unlock",
+    "Protected history and durable bookmarks",
+    "Native download transfers and file actions",
+    "Signed Keychain and permission grants",
+    "Protected session recovery and production backup",
+    "macOS 26 runtime and release signing/distribution"
+  ],
+  "notExecuted": [
+    "Independent ordinary interactive quit",
+    "Real public-site compatibility and TLS qualification",
+    "Full accessibility with assistive technology",
+    "Release performance"
+  ],
+  "earlierAttemptsExcluded": true,
+  "assets": {
+    "index.html": {
+      "bytes": 552,
+      "gzipBytes": 328
+    },
+    "chrome.js": {
+      "bytes": 297384,
+      "gzipBytes": 92518
+    },
+    "chrome.css": {
+      "bytes": 440345,
+      "gzipBytes": 41921
+    }
+  }
+}

@@ -15,8 +15,11 @@ FIXTURES = Path(__file__).resolve().parent / "fixtures"
 def execute(run, build_record, diagnostic_record, resume_record=None, phase="all"):
     build = json.loads(build_record.read_text())
     diagnostic = json.loads(diagnostic_record.read_text())
-    for record, bundle_id in [(build, "internal.vezham.browser.wsf1.qualification"), (diagnostic, "internal.vx.M1Validation.run20261108T094414Z")]:
-        if record["status"] != "PASS_CONTRACT" or record["bundleID"] != bundle_id:
+    accepted = {"internal.vezham.browser.wsf1.qualification"}
+    if run.evidence == run.evidence.parents[2] / "reports/WS-F4/evidence":
+        accepted.add("internal.vezham.browser.wsf4.qualification")
+    for record, bundle_ids in [(build, accepted), (diagnostic, {"internal.vx.M1Validation.run20261108T094414Z"})]:
+        if record["status"] != "PASS_CONTRACT" or record["bundleID"] not in bundle_ids:
             raise SystemExit("Verified exact qualification bundles required")
         from wsf1 import digest
         if digest(Path(record["bundle"]) / "Contents/MacOS/VezhamBrowser") != record["binarySHA256"]:

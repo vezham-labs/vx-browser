@@ -1,0 +1,11 @@
+{
+  "status": "PASS_CONTRACT",
+  "bundleID": "internal.vezham.browser.wsf4.qualification",
+  "bundle": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+  "binarySHA256": "26833197c7d5f2109493b0e4fa50a17f6955bb42846b8baa3eaa7c4864375a67",
+  "resources": {
+    "index.html": "5368dbb17c7fa3063ad36c66f52703ce5a87ba334484cf627e223072d62a5a1f",
+    "chrome.js": "17c17414e0bcdc2f7a82fc3fe693aceb94a51bdc2b65c2b3a54f283918521948",
+    "chrome.css": "eb7719120f09a56a4475a2ddc89ba5e6f988631643fa0f763cba81b5f3354662"
+  }
+}

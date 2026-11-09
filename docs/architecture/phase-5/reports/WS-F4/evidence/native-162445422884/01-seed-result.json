@@ -1,0 +1,24 @@
+{
+  "label": "01-seed",
+  "pid": 76698,
+  "action": "seed",
+  "cutpoint": null,
+  "expectedKill": false,
+  "cutpointObserved": false,
+  "returncode": 0,
+  "timeout": false,
+  "status": "FAIL",
+  "result": {
+    "cases": [
+      {
+        "detail": "unauthorized",
+        "status": "FAIL",
+        "id": "F1-HOST-ERROR"
+      }
+    ],
+    "event": "result"
+  },
+  "checkpoint": null,
+  "binarySHA256": "b5e69461c4c45b17e0c4d834f0952ad0247b700bbb1a41de01bba0f9e4e0bf18",
+  "observations": []
+}
