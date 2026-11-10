@@ -9,3 +9,7 @@
 | VoiceOver and physical input | Not executed | QA to use the native manual checklist on a physical or isolated supported macOS environment. |
 | Signed Release and notarization | Blocked | Release owner to supply Developer ID identity and approved notary Keychain profile. Qualify package installation, signing, privacy behavior and runtime on macOS 26. |
 | Legacy DOM-only host suites | Not applicable to active native shell | Browser QA to port remaining relevant DOM interactions to native witnesses. The legacy fixture suite runs independently. |
+
+## Arc parity follow-up
+
+Arc 1.172.1 build metadata and documented behavior are available. Exact visual parity, first-run reference comparison, full native accessibility and feature coverage remain open. Persistent profiles, bookmarks, Favorites, history and workspace restore need admitted storage. Downloads, extensions, import/export and multi-window parity require additional implementation. [Full feature matrix](arc-parity-matrix.md) · [External actions](external-authorization-checklist.md)

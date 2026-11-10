@@ -1,0 +1,11 @@
+{
+  "name": "signing",
+  "argv": [
+    "security",
+    "find-identity",
+    "-v",
+    "-p",
+    "codesigning"
+  ],
+  "returncode": 0
+}

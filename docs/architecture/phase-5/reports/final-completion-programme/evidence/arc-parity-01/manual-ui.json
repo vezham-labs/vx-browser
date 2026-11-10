@@ -1,0 +1,25 @@
+{
+  "reference": {"bundle": "Arc 1.172.1 build 90370", "inspection": "bundle metadata and public documentation", "matched_visual_evidence": "unavailable"},
+  "method": "Codex computer use, native accessibility tree and owned loopback fixture",
+  "candidate": "/private/tmp/vezham-parity-ui/Build/Products/Debug/VezhamBrowser.app",
+  "first_candidate": [
+    "First launch presented the native welcome with appearance controls and Skip setup.",
+    "Skip setup dismissed welcome and Command-T focused the palette search.",
+    "Submitting a local URL from an inactive workspace created a private tab and preserved its query and fragment.",
+    "Down selected New blank tab and Enter executed it, returning focus to the address field.",
+    "Accessibility Increment changed sidebar width from 236 to 248 points.",
+    "File menu disabled Open Current Page in Mini for a blank tab and New Blank Tab created a tab.",
+    "Typing into a reopened palette showed stale result labels."
+  ],
+  "intermediate_retest": [
+    "Relaunch retained completed onboarding and showed no private session contents.",
+    "Created Reading Space and queried Personal. Enter selected Personal. The row list still showed stale labels before the result-identity fix."
+  ],
+  "final_retest": [
+    "Relaunch opened the browser without repeating welcome.",
+    "Typing settings updated the displayed result list to the web choice and Settings, with no stale tab or sidebar rows.",
+    "Down and Enter selected Settings and opened the native Settings sheet.",
+    "Show welcome reopened the welcome sheet, and Done returned to Main."
+  ],
+  "unqualified": ["Exact Arc geometry and appearance comparisons", "Physical drag and divider interaction", "VoiceOver speech", "Actual WebKit process exit", "Production restore"]
+}

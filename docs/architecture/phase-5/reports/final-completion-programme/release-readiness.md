@@ -15,3 +15,7 @@ The local codesigning identity inventory reports zero valid identities. Develope
 For an authorized release, build the Release scheme without the unsigned override. Verify nested signatures and inspect the signed entitlements. Package the sealed app with ditto -c -k --keepParent. Submit the package with xcrun notarytool submit using the team's Keychain profile and --wait. After acceptance, staple and validate the application, repackage the stapled bundle, and assess it with spctl --assess --type execute. Record the signature, entitlements, exact app and package hashes, notary acceptance, and clean-install results. Run signed browser and Keychain behavior on macOS 26.0 and the latest supported 26.x. [Apple Developer ID signing](https://developer.apple.com/developer-id/) · [Apple notarization workflow](https://developer.apple.com/documentation/security/customizing-the-notarization-workflow)
 
 No Developer ID signing, notarization submission, installation or distribution ran in this programme.
+
+## Arc parity follow-up
+
+The final native unsigned Release artifact passes the arm64 structure gate and remains rejected by production preflight. The signing inventory remains empty. The existing Developer ID, notarization and signed-runtime acceptance steps remain required. [Structure output](evidence/arc-parity-01/release-structure.stdout.txt) · [Production preflight](evidence/arc-parity-01/release-preflight.stdout.txt) · [Candidate hashes](evidence/arc-parity-01/candidate-hashes.json)

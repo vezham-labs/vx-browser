@@ -1,0 +1,10 @@
+{
+  "name": "arc-version",
+  "argv": [
+    "/usr/libexec/PlistBuddy",
+    "-c",
+    "Print CFBundleShortVersionString",
+    "/Applications/Arc.app/Contents/Info.plist"
+  ],
+  "returncode": 0
+}

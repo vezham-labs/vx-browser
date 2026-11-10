@@ -1,0 +1,7 @@
+{
+  "name": "os",
+  "argv": [
+    "sw_vers"
+  ],
+  "returncode": 0
+}

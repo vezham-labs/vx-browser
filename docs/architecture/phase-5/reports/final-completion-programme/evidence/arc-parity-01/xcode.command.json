@@ -1,0 +1,8 @@
+{
+  "name": "xcode",
+  "argv": [
+    "xcodebuild",
+    "-version"
+  ],
+  "returncode": 0
+}

@@ -1,0 +1,10 @@
+{
+  "name": "arc-build",
+  "argv": [
+    "/usr/libexec/PlistBuddy",
+    "-c",
+    "Print CFBundleVersion",
+    "/Applications/Arc.app/Contents/Info.plist"
+  ],
+  "returncode": 0
+}

@@ -1,0 +1,110 @@
+{
+  "command": "verify-workspace-matrix",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "F7-01",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-02",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-03",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-04",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-05",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-06",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-07",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-08",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-09",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-10",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-11",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-12",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-13",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-14",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-15",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-16",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-17",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-18",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-19",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "F7-20",
+      "status": "passed",
+      "reason": "case record valid (blocked)"
+    },
+    {
+      "name": "evidence-manifest",
+      "status": "passed"
+    }
+  ]
+}

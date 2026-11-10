@@ -2,6 +2,22 @@ import SwiftUI
 import AppKit
 import BrowserDomain
 
+enum BrowserChromeMetrics {
+    static let toolbarHeight: CGFloat = 70
+    static let footerHeight: CGFloat = 28
+    static let separator: CGFloat = 1
+    static let sidebarDefault: CGFloat = 236
+    static let sidebarRange: ClosedRange<CGFloat> = 180...320
+    static let sidebarHandle: CGFloat = 8
+    static let dialogWidth: CGFloat = 520
+    static let horizontalPadding: CGFloat = 14
+    static let controlRadius: CGFloat = 9
+}
+
+enum NativeBrowserMenuAction: Int {
+    case newTab, commandBar, focusAddress, sidebar, back, forward, reload, stop, copyAddress, openMini, bookmarks, settings, welcome
+}
+
 /// Native presentation state only. All commands still execute under the controller's
 /// serialized lifecycle and Core/WebKit authority. Nothing here is persisted.
 @MainActor final class NativeChromeModel: ObservableObject {
@@ -11,7 +27,44 @@ import BrowserDomain
     @Published var focusAddress = 0
     @Published var commands = false
     @Published var settings = false
-    @Published var sidebarVisible = true
+    @Published var sidebarVisible = true {
+        didSet { geometryChanged?() }
+    }
+    @Published private(set) var sidebarWidth = BrowserChromeMetrics.sidebarDefault {
+        didSet { geometryChanged?() }
+    }
+    @Published var onboarding = false
+    var geometryChanged: (() -> Void)?
+    private static let onboardingKey = "VezhamWelcomeCompletedV1"
+
+    func setSidebarWidth(_ width: CGFloat) {
+        guard width.isFinite else { return }
+        let bounds = BrowserChromeMetrics.sidebarRange
+        let clamped = min(bounds.upperBound, max(bounds.lowerBound, width))
+        if sidebarWidth != clamped { sidebarWidth = clamped }
+    }
+
+    private var usesWelcomePreference: Bool {
+        if Bundle.main.bundleIdentifier == "internal.vezham.browser.foundation" { return true }
+        #if DEBUG
+        return Bundle.main.bundleIdentifier == "internal.vezham.browser.parity.qualification"
+        #else
+        return false
+        #endif
+    }
+
+    func showWelcomeIfNeeded() {
+        guard usesWelcomePreference,
+              !UserDefaults.standard.bool(forKey: Self.onboardingKey) else { return }
+        onboarding = true
+    }
+
+    func completeWelcome() {
+        if usesWelcomePreference {
+            UserDefaults.standard.set(true, forKey: Self.onboardingKey)
+        }
+        onboarding = false
+    }
     @Published var showsWebContent = false
     @Published var managesBookmarks = false
     @Published var bookmarks: [Bookmark] = []
@@ -46,11 +99,15 @@ import BrowserDomain
             if let preview = result.miniPreview { self.preview = preview }
         }
     }
-    func navigate(_ input: String) {
-        guard let url = NativeNavigationInput.destination(input), let selected = state?.selected else {
+    func navigate(_ input: String, inNewTab: Bool = false) {
+        guard let url = NativeNavigationInput.destination(input) else {
             message = "Enter a supported address or search query."; return
         }
-        send(.navigate, tab: selected, url: url.absoluteString)
+        if inNewTab || state?.selected == nil {
+            send(.navigateInNewTab, url: url.absoluteString)
+        } else {
+            send(.navigate, tab: state?.selected, url: url.absoluteString)
+        }
     }
     func bookmarkCurrent() {
         guard let tab = selectedTab, let url = tab.url, bookmarks.count < 100,
@@ -62,7 +119,9 @@ import BrowserDomain
 @MainActor struct NativeBrowserChrome: View {
     @ObservedObject var model: NativeChromeModel
     @State private var address = ""
-    @State private var query = ""
+    @State private var sidebarDragOrigin: CGFloat?
+    @State private var showWelcomeAfterSettings = false
+    @State private var showSettingsAfterCommands = false
     @State private var bookmarkFilter = ""
     @State private var bookmarkDraft: NativeChromeModel.Bookmark?
     @State private var editor: EditRequest?
@@ -82,7 +141,12 @@ import BrowserDomain
                     toolbar(state)
                     Divider()
                     HStack(spacing: 0) {
-                        if !state.mini && model.sidebarVisible { sidebar(state).frame(width: 236); Divider() }
+                        if !state.mini && model.sidebarVisible {
+                            sidebar(state)
+                                .frame(width: model.sidebarWidth)
+                                .overlay(alignment: .trailing) { sidebarResizeHandle }
+                            Divider()
+                        }
                         content(state).frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     Divider()
@@ -91,11 +155,24 @@ import BrowserDomain
                         Spacer()
                         if state.splitCompact && !state.split.isEmpty { Text("Split · focused pane") }
                         Text("Protected profiles unavailable").foregroundStyle(.secondary)
-                    }.font(.caption).padding(.horizontal, 12).frame(height: 28)
+                    }.font(.caption).padding(.horizontal, 12).frame(height: BrowserChromeMetrics.footerHeight)
                 }
                 .background(.background)
-                .sheet(isPresented: $model.commands) { commandSheet(state) }
-                .sheet(isPresented: $model.settings) { settingsSheet(state) }
+                .sheet(isPresented: $model.commands, onDismiss: {
+                    if showSettingsAfterCommands {
+                        showSettingsAfterCommands = false
+                        model.settings = true
+                    }
+                }) {
+                    NativeCommandPalette(model: model, openSettings: { showSettingsAfterCommands = true })
+                }
+                .sheet(isPresented: $model.onboarding) { welcomeSheet(state) }
+                .sheet(isPresented: $model.settings, onDismiss: {
+                    if showWelcomeAfterSettings {
+                        showWelcomeAfterSettings = false
+                        model.onboarding = true
+                    }
+                }) { settingsSheet(state) }
                 .sheet(isPresented: $model.managesBookmarks) { bookmarkSheet(state) }
                 .sheet(item: $editor) { request in nameEditor(request) }
                 .sheet(item: $deletion) { request in deleteEditor(request) }
@@ -148,7 +225,7 @@ import BrowserDomain
                     .focused($addressFocused).onSubmit { model.navigate(address); addressFocused = false }
                     .accessibilityIdentifier("native-address").accessibilityLabel("Address and search")
                 if model.selectedTab?.loading == true { ProgressView().controlSize(.small) }
-            }.padding(9).background(.quaternary, in: RoundedRectangle(cornerRadius: 9))
+            }.padding(9).background(.quaternary, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
             .disabled(state.session == "inactive" || state.recovery != nil)
             if state.mini {
                 tool("Preview destination in main workspace", "arrow.up.forward.app", enabled: state.miniEligible) { model.send(.miniTransferPreview) }
@@ -163,7 +240,7 @@ import BrowserDomain
                 } label: { Image(systemName: "bookmark") }.menuStyle(.borderlessButton).fixedSize().help("Temporary bookmarks")
                 tool("Settings", "gearshape") { model.settings = true }
             }
-        }.padding(.horizontal, 14).frame(height: 70)
+        }.padding(.horizontal, BrowserChromeMetrics.horizontalPadding).frame(height: BrowserChromeMetrics.toolbarHeight)
     }
     private func sidebar(_ state: ChromeState) -> some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -294,20 +371,53 @@ import BrowserDomain
             HStack { Button("Cancel", role: .cancel) { deletion = nil }; Spacer(); Button("Confirm", role: .destructive) { model.send(request.kind, target: request.target); deletion = nil } }
         }.padding(24).frame(width: 430)
     }
-    private func commandSheet(_ state: ChromeState) -> some View {
-        VStack(alignment: .leading, spacing: 14) {
-            Text("Command bar").font(.title2.bold())
-            TextField("Search tabs or enter an address", text: $query).textFieldStyle(.roundedBorder).onSubmit { model.navigate(query); model.commands = false }
-            List {
-                ForEach(state.tabs.filter { query.isEmpty || $0.title.localizedCaseInsensitiveContains(query) || ($0.url?.localizedCaseInsensitiveContains(query) == true) }, id: \.id) { tab in
-                    Button(tab.title) { model.send(.activate, tab: tab.id); model.commands = false }
+    private var sidebarResizeHandle: some View {
+        Rectangle()
+            .fill(.clear)
+            .frame(width: BrowserChromeMetrics.sidebarHandle)
+            .contentShape(Rectangle())
+            .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .global)
+                .onChanged { value in
+                    if sidebarDragOrigin == nil { sidebarDragOrigin = model.sidebarWidth }
+                    model.setSidebarWidth((sidebarDragOrigin ?? model.sidebarWidth) + value.translation.width)
                 }
-                if !query.isEmpty { Button("Go or search: \(query)") { model.navigate(query); model.commands = false } }
-                Button("New tab") { model.send(.newTab); model.commands = false }.disabled(state.session == "inactive")
-                Button("Settings") { model.commands = false; model.settings = true }
-            }.frame(height: 260)
-            Button("Done", role: .cancel) { model.commands = false }
-        }.padding(22).frame(width: 500)
+                .onEnded { _ in sidebarDragOrigin = nil })
+            .accessibilityLabel("Sidebar width")
+            .accessibilityValue("\(Int(model.sidebarWidth)) points")
+            .accessibilityAdjustableAction { direction in
+                switch direction {
+                case .increment: model.setSidebarWidth(model.sidebarWidth + 12)
+                case .decrement: model.setSidebarWidth(model.sidebarWidth - 12)
+                @unknown default: break
+                }
+            }
+            .help("Drag to resize the sidebar")
+    }
+
+    private func welcomeSheet(_ state: ChromeState) -> some View {
+        VStack(alignment: .leading, spacing: 18) {
+            Label("Welcome to Vezham", systemImage: "sparkles").font(.largeTitle.bold())
+            Text("A native browser with Spaces for organizing your tabs.").foregroundStyle(.secondary)
+            Label("Use the sidebar to pin, group and move tabs between Spaces.", systemImage: "sidebar.left")
+            Label("Press ⌘T to search tabs, Spaces and actions, or open a new address.", systemImage: "command")
+            Label("Private tabs and bookmarks clear when you end the session.", systemImage: "hand.raised")
+            Text("Searches use DuckDuckGo. Protected profiles and workspace restoration are unavailable.")
+                .foregroundStyle(.secondary)
+            appearancePicker(state)
+            HStack {
+                Button("Skip setup") { model.completeWelcome() }
+                Spacer()
+                Button("Done") { model.completeWelcome() }.keyboardShortcut(.defaultAction)
+            }
+        }.padding(28).frame(width: BrowserChromeMetrics.dialogWidth)
+    }
+
+    private func appearancePicker(_ state: ChromeState) -> some View {
+        Picker("Appearance", selection: Binding(get: { state.appearance }, set: { model.send(.appearance, appearance: $0) })) {
+            Text("System").tag(ChromeAppearance.system)
+            Text("Light").tag(ChromeAppearance.light)
+            Text("Dark").tag(ChromeAppearance.dark)
+        }.pickerStyle(.segmented)
     }
     private func bookmarkSheet(_ state: ChromeState) -> some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -359,13 +469,131 @@ import BrowserDomain
     private func settingsSheet(_ state: ChromeState) -> some View {
         VStack(alignment: .leading, spacing: 22) {
             Text("Settings").font(.title2.bold())
-            Picker("Appearance", selection: Binding(get: { state.appearance }, set: { model.send(.appearance, appearance: $0) })) {
-                Text("System").tag(ChromeAppearance.system); Text("Light").tag(ChromeAppearance.light); Text("Dark").tag(ChromeAppearance.dark)
-            }.pickerStyle(.segmented)
+            appearancePicker(state)
+            Text("Search provider: DuckDuckGo").foregroundStyle(.secondary)
+            Button("Show welcome") { showWelcomeAfterSettings = true; model.settings = false }
             Text("Private workspaces and temporary bookmarks clear when the session ends. Protected persistent profiles, history and downloads remain unavailable.").foregroundStyle(.secondary)
             Button("Done", role: .cancel) { model.settings = false }
         }.padding(24).frame(width: 470)
     }
+}
+
+@MainActor private struct NativeCommandPalette: View {
+    @ObservedObject var model: NativeChromeModel
+    let openSettings: () -> Void
+    @State private var query = ""
+    @State private var commandSelection = 0
+    @FocusState private var commandFocused: Bool
+
+    private struct PaletteItem: Identifiable {
+        let id: String
+        let label: String
+        let symbol: String
+        let perform: () -> Void
+    }
+
+    private func paletteItems(_ state: ChromeState) -> [PaletteItem] {
+        let needle = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        func matches(_ label: String) -> Bool { needle.isEmpty || label.localizedCaseInsensitiveContains(needle) }
+        var items: [PaletteItem] = []
+        if state.recovery == nil && !state.mini {
+            for tab in state.tabs where matches(tab.title) || tab.url.map(matches) == true {
+                items.append(PaletteItem(id: "tab-" + tab.id, label: "Switch to \(tab.title)", symbol: "rectangle.on.rectangle") {
+                    model.send(.activate, tab: tab.id)
+                })
+            }
+            if state.session != "inactive" {
+                for space in state.spaces where space.id != state.activeSpace && matches(space.name) {
+                    items.append(PaletteItem(id: "space-" + space.id, label: "Switch to Space \(space.name)", symbol: "square.stack") {
+                        model.send(.spaceSwitch, target: space.id)
+                    })
+                }
+            }
+        }
+        let actions = [
+            PaletteItem(id: "new-tab", label: state.session == "inactive" ? "Start private session" : "New blank tab", symbol: "plus") {
+                model.send(state.session == "inactive" ? .startPrivate : .newTab)
+            },
+            PaletteItem(id: "sidebar", label: model.sidebarVisible ? "Hide sidebar" : "Show sidebar", symbol: "sidebar.left") {
+                model.sidebarVisible.toggle()
+            }
+        ]
+        if state.recovery == nil && !state.mini {
+            items += actions.filter { matches($0.label) }
+            if let tab = model.selectedTab, tab.url != nil {
+                let actions = [
+                    PaletteItem(id: "copy", label: "Copy address", symbol: "doc.on.doc") { model.send(.copy, tab: tab.id) },
+                    PaletteItem(id: "mini", label: "Open in Mini", symbol: "macwindow") { model.send(.miniOpen, tab: tab.id) }
+                ]
+                items += actions.filter { matches($0.label) }
+            }
+            if !needle.isEmpty, NativeNavigationInput.destination(needle) != nil {
+                items.append(PaletteItem(id: "navigate", label: "Open or search in new tab", symbol: "magnifyingglass") {
+                    model.navigate(needle, inNewTab: true)
+                })
+            }
+        }
+        if !state.mini && matches("Settings") {
+            items.append(PaletteItem(id: "settings", label: "Settings", symbol: "gearshape", perform: openSettings))
+        }
+        return items
+    }
+
+    var body: some View {
+        let items = model.state.map(paletteItems) ?? []
+        return VStack(alignment: .leading, spacing: 12) {
+            Text("Command bar").font(.title2.bold())
+            TextField("Search tabs, Spaces, actions or the web", text: $query)
+                .textFieldStyle(.roundedBorder)
+                .focused($commandFocused)
+                .onKeyPress(.upArrow) {
+                    commandSelection = max(0, commandSelection - 1)
+                    return .handled
+                }
+                .onKeyPress(.downArrow) {
+                    commandSelection = min(max(0, items.count - 1), commandSelection + 1)
+                    return .handled
+                }
+                .onSubmit {
+                    if items.indices.contains(commandSelection) { runPaletteItem(items[commandSelection]) }
+                }
+            ScrollViewReader { scroll in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 2) {
+                        ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
+                            Button { runPaletteItem(item) } label: {
+                                Label(item.label, systemImage: item.symbol)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(8)
+                                    .background(index == commandSelection ? Color.accentColor.opacity(0.16) : .clear,
+                                                in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityAddTraits(index == commandSelection ? [.isSelected] : [])
+                            .id(item.id)
+                        }
+                    }
+                }
+                .onChange(of: commandSelection) { _, index in
+                    if items.indices.contains(index) { scroll.scrollTo(items[index].id) }
+                }
+            }.frame(height: 240)
+            if items.isEmpty { Text("No matching commands").foregroundStyle(.secondary) }
+            Button("Cancel", role: .cancel) { model.commands = false }
+        }.padding(22)
+            .frame(width: BrowserChromeMetrics.dialogWidth)
+            .onAppear { query = ""; commandSelection = 0; commandFocused = true }
+            .onChange(of: query) { _, _ in commandSelection = 0 }
+            .onChange(of: items.count) { _, count in commandSelection = min(commandSelection, max(0, count - 1)) }
+    }
+
+    private func runPaletteItem(_ item: PaletteItem) {
+        model.commands = false
+        query = ""
+        item.perform()
+    }
+
 }
 
 @MainActor private struct NativeNameEditor: View {

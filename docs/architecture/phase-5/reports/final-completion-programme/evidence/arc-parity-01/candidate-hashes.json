@@ -1,0 +1,37 @@
+{
+  "debug": {
+    "path": "/private/tmp/vezham-final-debug/Build/Products/Debug/VezhamBrowser.app",
+    "files": {
+      "Contents/Info.plist": "050c1cb37aa178fdd9bf09274e1d00cedf21c85551d9771e13c18a50682f0e9c",
+      "Contents/MacOS/VezhamBrowser": "9d20bbe54d020c21b96675335c4fa3efb532e6e6b7ab1241f27cf68ddda1cc52",
+      "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "Contents/_CodeSignature/CodeResources": "6686de10a28a2fe11b36cbb86dcbacc827cfc4ea116b4dabf1845e5aee629e9b"
+    }
+  },
+  "ui": {
+    "path": "/private/tmp/vezham-parity-ui/Build/Products/Debug/VezhamBrowser.app",
+    "files": {
+      "Contents/Info.plist": "32893293e0e08cc332c6aa46c7a964e7e87c81ef415ae7ae795b68ab54c60504",
+      "Contents/MacOS/VezhamBrowser": "a61e715c23b09ceadbd43b892ec2becd9fdc41b81772d8787b512301adfb91f8",
+      "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "Contents/_CodeSignature/CodeResources": "6686de10a28a2fe11b36cbb86dcbacc827cfc4ea116b4dabf1845e5aee629e9b"
+    }
+  },
+  "qualification": {
+    "path": "/private/tmp/vezham-final-qual/Build/Products/Debug/VezhamBrowser.app",
+    "files": {
+      "Contents/Info.plist": "8cf95af0526908c2e81856cd573efcf5735ab526618e190cdfd54f88895fe889",
+      "Contents/MacOS/VezhamBrowser": "5dc19099f16707d3cad3fabae7f6302a6ac976c5660597277f9dbdbf928d7842",
+      "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "Contents/_CodeSignature/CodeResources": "6686de10a28a2fe11b36cbb86dcbacc827cfc4ea116b4dabf1845e5aee629e9b"
+    }
+  },
+  "release": {
+    "path": "/private/tmp/vezham-final-release/Build/Products/Release/VezhamBrowser.app",
+    "files": {
+      "Contents/Info.plist": "050c1cb37aa178fdd9bf09274e1d00cedf21c85551d9771e13c18a50682f0e9c",
+      "Contents/MacOS/VezhamBrowser": "36c434e0dec715458d9c677bc25c7afd851a0844b608051ebf7970c351ff9265",
+      "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+    }
+  }
+}

@@ -15,3 +15,16 @@ Production workspace persistence remains unavailable. The pinned provider is qua
 - [Native qualification](native-qualification.md)
 - [Release readiness](release-readiness.md)
 - [Remaining blockers](remaining-blockers.md)
+
+## Arc alternative programme follow-up
+
+**Partially complete.** Started and ended on cross-browser-research at beb1a6fab0b378aaf83875e6294ca82b1bb58446. The new native command palette, sidebar resizing, menu actions and welcome flow are implemented. The workspace graph decoder now enforces validation for all Codable entry points. The confirmed reference is Arc 1.172.1 build 90370. Exact visual parity is unverified. The browser remains private-only and production persistence is blocked by authorization and unfinished integration. Signed release is blocked by credentials.
+
+- [Arc feature matrix](arc-parity-matrix.md)
+- [Native design tokens](design-system.md)
+- [Screen comparison and qualification](ui-ux-qualification.md)
+- [Implemented scope and gaps](feature-implementation.md)
+- [Welcome, menus and settings](onboarding-and-settings.md)
+- [External authorization checklist](external-authorization-checklist.md)
+
+Current results are in the follow-up section of [verification](verification.md). Earlier sections remain evidence from their own revision.

@@ -1,0 +1,103 @@
+{
+  "command": "production-preflight",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "CFBundleExecutable",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleExecutable",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleIdentifier",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleIdentifier",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundlePackageType",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundlePackageType",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleShortVersionString",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleShortVersionString",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleVersion",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleVersion",
+      "status": "passed"
+    },
+    {
+      "name": "LSMinimumSystemVersion",
+      "status": "passed"
+    },
+    {
+      "name": "LSMinimumSystemVersion",
+      "status": "passed"
+    },
+    {
+      "name": "arm64",
+      "status": "passed"
+    },
+    {
+      "name": "binary-minimum-os",
+      "status": "passed"
+    },
+    {
+      "name": "developer-id",
+      "status": "blocked",
+      "reason": "Developer ID Application signature required"
+    },
+    {
+      "name": "development-runtime-libraries",
+      "status": "passed"
+    },
+    {
+      "name": "entitlements",
+      "status": "failed",
+      "reason": "no XML entitlement payload"
+    },
+    {
+      "name": "hardened-runtime",
+      "status": "failed"
+    },
+    {
+      "name": "native-frameworks",
+      "status": "passed"
+    },
+    {
+      "name": "no-legacy-chrome-or-tool-sources",
+      "status": "passed"
+    },
+    {
+      "name": "notarization-ticket",
+      "status": "blocked",
+      "reason": "valid stapled ticket unavailable"
+    },
+    {
+      "name": "signature-integrity",
+      "status": "failed",
+      "reason": "codesign verification failed"
+    },
+    {
+      "name": "signed-runtime-qualification",
+      "status": "not_executed",
+      "reason": "requires a separate real signed application run"
+    }
+  ]
+}

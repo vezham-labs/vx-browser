@@ -1,0 +1,652 @@
+{
+  "branch": "cross-browser-research",
+  "head": "beb1a6fab0b378aaf83875e6294ca82b1bb58446",
+  "initial_status": "clean",
+  "final_counts": {
+    "staged": 0,
+    "unstaged": 14,
+    "untracked": 146
+  },
+  "files": [
+    {
+      "status": " M",
+      "path": "apps/browser-macos/Sources/Host/ApplicationDelegate.swift"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/Sources/Host/BrowserChromeContract.swift"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/Sources/Host/MainWindowController.swift"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/Sources/Host/NativeBrowserChrome.swift"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/README.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/implementation-report.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/native-qualification.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/release-readiness.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/remaining-blockers.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/security-and-recovery.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/verification.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/workspace-matrix.md"
+    },
+    {
+      "status": " M",
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/WorkspaceLayout.swift"
+    },
+    {
+      "status": " M",
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/WorkspaceLayoutTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/arc-parity-matrix.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/design-system.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/SHA256SUMS"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/SOURCE-SHA256SUMS"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/arc-build.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/arc-build.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/arc-version.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/arc-version.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit-stable.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit-stable.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit-stable.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit-verified.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit-verified.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit-verified.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/audit.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/candidate-hashes.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/core.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/core.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/core.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-stable.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-stable.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-stable.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-verified.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-verified.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug-verified.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/debug.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/delivery.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/diff.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/diff.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/diff.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/final-diff.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/final-diff.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/final-diff.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-0.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-1.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-2.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-3.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-4.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-5.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-6.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-7.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/historical-verification.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/manual-ui.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/matrix.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/matrix.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/matrix.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/attempt-1/events.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/attempt-1/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/attempt-1/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/attempt-1/result.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/attempt-1/stderr.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/attempt-1/stdout.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/fixture.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/recovery/summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/attempt-1/events.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/attempt-1/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/attempt-1/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/attempt-1/result.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/attempt-1/stderr.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/attempt-1/stdout.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/fixture.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/native/workspace/summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/os.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/os.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/provider-vet.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/provider-vet.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/provider-vet.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/provider.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/provider.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/provider.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qual-stable.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qual-stable.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qual-stable.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qual-verified.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qual-verified.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qual-verified.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qualification.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qualification.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/qualification.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/quality.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/quality.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/quality.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery-stable.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery-stable.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery-stable.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery-verified.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery-verified.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery-verified.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/recovery.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-preflight.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-preflight.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-preflight.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-stable.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-stable.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-stable.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-structure.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-structure.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-structure.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-verified.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-verified.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/release-verified.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/signing.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/signing.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/storage.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/storage.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/storage.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-build.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-build.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-build.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-stable.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-stable.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/ui-stable.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/unsigned.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/unsigned.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/unsigned.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace-stable.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace-stable.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace-stable.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace-verified.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace-verified.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace-verified.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/workspace.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/xcode.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/xcode.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/external-authorization-checklist.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/feature-implementation.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/onboarding-and-settings.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/final-completion-programme/ui-ux-qualification.md"
+    }
+  ]
+}

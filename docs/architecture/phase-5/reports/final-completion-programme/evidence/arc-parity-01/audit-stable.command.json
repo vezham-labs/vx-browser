@@ -1,0 +1,19 @@
+{
+  "name": "audit-stable",
+  "argv": [
+    "env",
+    "VEZHAM_DERIVED_DATA=/private/tmp/vezham-final-debug",
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:audit",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 2.89,
+  "started_epoch": 1794277423.365398
+}

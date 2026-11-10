@@ -17,6 +17,22 @@ struct WorkspaceLayoutTests {
         #expect(try WorkspaceLayout.decode(layout.encoded()) == layout)
     }
 
+    @Test func directDecodingRejectsInvalidGraphAndUnknownVersion() throws {
+        let bytes = try WorkspaceLayout().encoded()
+        var object = try #require(JSONSerialization.jsonObject(with: bytes) as? [String: Any])
+        object["schemaVersion"] = 3
+        let future = try JSONSerialization.data(withJSONObject: object)
+        #expect(throws: WorkspaceLayout.Error.unsupportedVersion) {
+            try JSONDecoder().decode(WorkspaceLayout.self, from: future)
+        }
+        object["schemaVersion"] = 1
+        object["catalog"] = ["workspaces": []]
+        let invalid = try JSONSerialization.data(withJSONObject: object)
+        #expect(throws: WorkspaceLayout.Error.invalid) {
+            try JSONDecoder().decode(WorkspaceLayout.self, from: invalid)
+        }
+    }
+
     @Test func boundedGraphRejectsOverflowWithoutChangingRevision() throws {
         var layout = WorkspaceLayout()
         for _ in 0..<24 { try layout.apply(.addTab(.fresh())) }

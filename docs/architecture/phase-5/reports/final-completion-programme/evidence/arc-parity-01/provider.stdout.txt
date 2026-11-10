@@ -1,0 +1,32 @@
+=== RUN   TestProtectedStore
+=== RUN   TestProtectedStore/encrypted-reopen-and-CAS
+=== RUN   TestProtectedStore/wrong-key-and-owner-preserve-source
+=== RUN   TestProtectedStore/missing-key-no-files
+=== RUN   TestProtectedStore/fail-before-publish
+=== RUN   TestProtectedStore/crash-before-publish
+=== RUN   TestProtectedStore/crash-after-publish
+=== RUN   TestProtectedStore/unknown-after-publish
+=== RUN   TestProtectedStore/truncation-and-explicit-prior
+=== RUN   TestProtectedStore/corrupt-page
+=== RUN   TestProtectedStore/future-schema-preserved
+=== RUN   TestProtectedStore/large-bounded-payload
+=== RUN   TestProtectedStore/sidecar-refusal
+=== RUN   TestProtectedStore/concurrent-writers
+=== RUN   TestProtectedStore/profile-isolation
+--- PASS: TestProtectedStore (27.08s)
+    --- PASS: TestProtectedStore/encrypted-reopen-and-CAS (2.35s)
+    --- PASS: TestProtectedStore/wrong-key-and-owner-preserve-source (0.89s)
+    --- PASS: TestProtectedStore/missing-key-no-files (0.02s)
+    --- PASS: TestProtectedStore/fail-before-publish (3.45s)
+    --- PASS: TestProtectedStore/crash-before-publish (2.23s)
+    --- PASS: TestProtectedStore/crash-after-publish (3.18s)
+    --- PASS: TestProtectedStore/unknown-after-publish (2.83s)
+    --- PASS: TestProtectedStore/truncation-and-explicit-prior (3.37s)
+    --- PASS: TestProtectedStore/corrupt-page (0.90s)
+    --- PASS: TestProtectedStore/future-schema-preserved (0.66s)
+    --- PASS: TestProtectedStore/large-bounded-payload (1.79s)
+    --- PASS: TestProtectedStore/sidecar-refusal (0.38s)
+    --- PASS: TestProtectedStore/concurrent-writers (1.47s)
+    --- PASS: TestProtectedStore/profile-isolation (1.98s)
+PASS
+ok  	internal.vezham/qualify	27.600s

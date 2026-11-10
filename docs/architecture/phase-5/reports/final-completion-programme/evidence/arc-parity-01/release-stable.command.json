@@ -1,0 +1,19 @@
+{
+  "name": "release-stable",
+  "argv": [
+    "env",
+    "VEZHAM_DERIVED_DATA=/private/tmp/vezham-final-release",
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:build-unsigned-release",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 65.181,
+  "started_epoch": 1794277358.00678
+}

@@ -15,3 +15,7 @@ Actual WebKit content process termination remains unexecuted. The runner injects
 5. Exercise Back, Forward, Reload, Stop, tab closure and Command-T on the signed and Debug candidates. Confirm app activation and reopening behavior. Record source revision, macOS build, display scale, exact action and observed result for every case.
 
 Physical drag/drop, display transitions, and VoiceOver speech remain unqualified unless observed and recorded for the candidate.
+
+## Arc parity follow-up
+
+The disposable UI candidate was exercised through the native accessibility tree and keyboard/pointer interaction. Initial findings and final retests are recorded separately. Native workspace and injected recovery used the stable source candidate. Physical drag and divider gestures, VoiceOver speech, exact Arc comparisons and actual WebKit helper exits remain unqualified. [Native observations](evidence/arc-parity-01/manual-ui.json) · [Screen comparison](ui-ux-qualification.md)

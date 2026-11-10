@@ -18,3 +18,7 @@ Lint compared the same target before and after changes. The inherited set compri
 Go production-preflight runs the native bundle gate together with signature, entitlement, notarization and runtime-readiness checks. A missing runtime witness remains non-passing. The WS-F7 matrix validator requires IDs F7-01 to F7-20 and rejects duplicates, missing rows, unowned blockers and executed results without an artifact in the checksum manifest. It verifies artifact integrity. A valid ledger can contain blocked cases, and the validator does not establish the semantic accuracy of a case claim.
 
 The full file inventory and source hashes are recorded in the evidence directory.
+
+## Arc reference implementation
+
+The current follow-up adds keyboard and Space-aware command search, bounded native sidebar resizing, state-aware AppKit menus, and a low-sensitivity welcome completion preference. It closes a direct Codable validation bypass in the logical layout. [Implemented workflow and ownership](feature-implementation.md) · [Design system](design-system.md)

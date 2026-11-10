@@ -1,0 +1,22 @@
+{
+  "name": "core",
+  "argv": [
+    "swift",
+    "test",
+    "--package-path",
+    "qualification/webkit-storage-f0",
+    "--scratch-path",
+    "/private/tmp/vezham-final-core",
+    "--disable-keychain",
+    "--disable-netrc",
+    "--jobs",
+    "2",
+    "--disable-xctest",
+    "--enable-swift-testing",
+    "--no-parallel"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 11.125,
+  "started_epoch": 1794276881.099679
+}

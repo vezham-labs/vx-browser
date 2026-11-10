@@ -3,7 +3,7 @@ import OSLog
 import BrowserNativeStorage
 
 @MainActor
-final class ApplicationDelegate: NSObject, NSApplicationDelegate {
+final class ApplicationDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation {
     private let logger = Logger(subsystem: "internal.vezham.browser.foundation", category: "lifecycle")
     private var mainWindow: MainWindowController?
     private var storageSession: NativeStorageSession?
@@ -37,6 +37,7 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         if let storageSession { securityLifecycle = NativeSecurityLifecycle(session: storageSession) }
         configureMenu()
         showMainWindow()
+        mainWindow?.showWelcomeIfNeeded()
         routingReady = true
         drainRoutes()
         logger.info("native-host-ready")
@@ -213,13 +214,49 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate(ignoringOtherApps: true)
     }
 
+    private var menuController: MainWindowController? {
+        NSApp.keyWindow?.windowController as? MainWindowController
+    }
+
+    func validateMenuItem(_ item: NSMenuItem) -> Bool {
+        guard let action = NativeBrowserMenuAction(rawValue: item.tag) else { return false }
+        return menuController?.allowsMenuAction(action) == true
+    }
+
+    @objc private func browserMenuCommand(_ sender: NSMenuItem) {
+        if let action = NativeBrowserMenuAction(rawValue: sender.tag) {
+            menuController?.performMenuAction(action)
+        }
+    }
+
     private func configureMenu() {
         let menu = NSMenu()
+        func browserItem(_ title: String, _ action: NativeBrowserMenuAction, key: String = "") -> NSMenuItem {
+            let item = NSMenuItem(title: title, action: #selector(browserMenuCommand(_:)), keyEquivalent: key)
+            item.target = self
+            item.tag = action.rawValue
+            return item
+        }
+        func submenu(_ name: String, _ entries: [NSMenuItem]) -> NSMenu {
+            let item = NSMenuItem()
+            let group = NSMenu(title: name)
+            for entry in entries { group.addItem(entry) }
+            item.submenu = group
+            menu.addItem(item)
+            return group
+        }
         let applicationItem = NSMenuItem()
         let applicationMenu = NSMenu(title: "Vezham Browser")
+        applicationMenu.addItem(browserItem("Settings…", .settings, key: ","))
+        applicationMenu.addItem(.separator())
         applicationMenu.addItem(withTitle: "Quit Vezham Browser", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         applicationItem.submenu = applicationMenu
         menu.addItem(applicationItem)
+        _ = submenu("File", [
+            browserItem("New Tab…", .commandBar, key: "t"),
+            browserItem("New Blank Tab", .newTab),
+            browserItem("Open Current Page in Mini", .openMini)
+        ])
         let editItem = NSMenuItem()
         let edit = NSMenu(title: "Edit")
         edit.addItem(withTitle: "Cut", action: #selector(NSText.cut(_:)), keyEquivalent: "x")
@@ -228,6 +265,25 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate {
         edit.addItem(withTitle: "Select All", action: #selector(NSText.selectAll(_:)), keyEquivalent: "a")
         editItem.submenu = edit
         menu.addItem(editItem)
+        _ = submenu("View", [
+            browserItem("Toggle Sidebar", .sidebar),
+            browserItem("Focus Address", .focusAddress, key: "l"),
+            browserItem("Command Bar…", .commandBar, key: "k")
+        ])
+        _ = submenu("Navigation", [
+            browserItem("Back", .back, key: "["),
+            browserItem("Forward", .forward, key: "]"),
+            browserItem("Reload", .reload, key: "r"),
+            browserItem("Stop", .stop),
+            browserItem("Copy Address", .copyAddress)
+        ])
+        _ = submenu("Bookmarks", [browserItem("Temporary Bookmarks…", .bookmarks)])
+        let windows = submenu("Window", [
+            NSMenuItem(title: "Minimize", action: #selector(NSWindow.performMiniaturize(_:)), keyEquivalent: "m"),
+            NSMenuItem(title: "Close Window", action: #selector(NSWindow.performClose(_:)), keyEquivalent: "")
+        ])
+        _ = submenu("Help", [browserItem("Welcome to Vezham", .welcome)])
         NSApp.mainMenu = menu
+        NSApp.windowsMenu = windows
     }
 }

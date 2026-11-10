@@ -1,0 +1,22 @@
+Building for debugging...
+[Computing dependencies]
+[Provisioning 7 / 14]
+[Using on-disk description]
+[1 / 5]
+[2 / 6] BrowserDomain
+[3 / 7] BrowserDomain
+[5 / 7] BrowserDomain
+[8 / 12] BrowserPorts
+[10 / 14] BrowserCore
+[12 / 16] BrowserPersistence
+[14 / 18] BrowserNativeStorage
+[16 / 20] WSF0Fakes
+[18 / 22] BrowserDomain
+[20 / 23] BrowserDomain
+[24 / 28] WSF0Fakes
+[26 / 28] StorageModelTests-product
+[29 / 30] StorageModelTests-product
+[30 / 31] StorageModelTests-product
+[31 / 31] StorageModelTests-product
+[32 / 32] BrowserNativeStorage-product
+Build complete! (28.98 secs)

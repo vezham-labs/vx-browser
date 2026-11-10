@@ -167,11 +167,13 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             }
             switch key {
             case "l": self.nativeModel.focusAddress += 1
-            case "k": self.nativeModel.commands = true
+            case "k":
+                if self.mini { self.nativeModel.focusAddress += 1 }
+                else { self.nativeModel.commands = true }
             case ",": self.nativeModel.settings = true
             case "t":
                 if self.mini { self.nativeModel.focusAddress += 1 }
-                else { self.nativeModel.send(self.mountedSession == nil ? .startPrivate : .newTab) }
+                else { self.nativeModel.commands = true }
             case "w":
                 if let selected = self.selected { self.nativeModel.send(.close, tab: selected.rawValue) }
                 else { self.window?.performClose(nil) }
@@ -181,6 +183,44 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             default: return false
             }
             return true
+        }
+    }
+
+    func showWelcomeIfNeeded() { nativeModel.showWelcomeIfNeeded() }
+
+    func allowsMenuAction(_ action: NativeBrowserMenuAction) -> Bool {
+        guard !closing, !busy else { return false }
+        let tab = nativeModel.selectedTab
+        switch action {
+        case .settings, .welcome: return !mini && recovery == nil
+        case .sidebar, .newTab, .commandBar: return !mini && recovery == nil
+        case .focusAddress: return selected != nil && recovery == nil
+        case .bookmarks: return !mini && mountedSession != nil && recovery == nil
+        case .back: return tab?.back == true && recovery == nil
+        case .forward: return tab?.forward == true && recovery == nil
+        case .reload, .copyAddress: return tab?.url != nil && recovery == nil
+        case .stop: return tab?.loading == true && recovery == nil
+        case .openMini: return !mini && tab?.url != nil && recovery == nil
+        }
+    }
+
+    func performMenuAction(_ action: NativeBrowserMenuAction) {
+        guard allowsMenuAction(action) else { return }
+        let tab = selected?.rawValue
+        switch action {
+        case .newTab: nativeModel.send(mountedSession == nil ? .startPrivate : .newTab)
+        case .commandBar: nativeModel.commands = true
+        case .focusAddress: nativeModel.focusAddress += 1
+        case .sidebar: nativeModel.sidebarVisible.toggle()
+        case .back: nativeModel.send(.back, tab: tab)
+        case .forward: nativeModel.send(.forward, tab: tab)
+        case .reload: nativeModel.send(.reload, tab: tab)
+        case .stop: nativeModel.send(.stop, tab: tab)
+        case .copyAddress: nativeModel.send(.copy, tab: tab)
+        case .openMini: nativeModel.send(.miniOpen, tab: tab)
+        case .bookmarks: nativeModel.managesBookmarks = true
+        case .settings: nativeModel.settings = true
+        case .welcome: nativeModel.onboarding = true
         }
     }
 
@@ -199,7 +239,8 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         page.dividerFinished = { [weak self] in self?.rememberDivider() }
         root.addSubview(page)
         page.isHidden = true
-        presentation = (true, mini ? 0 : 236, 71)
+        presentation = (true, 0, Double(BrowserChromeMetrics.toolbarHeight + BrowserChromeMetrics.separator))
+        nativeModel.geometryChanged = { [weak self] in self?.refreshNative() }
         nativeModel.execute = { [weak self] command in
             guard let self else { return nil }
             let response = await self.run(command)
@@ -342,6 +383,19 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
                 try await endPrivate()
             case .newTab:
                 _ = try addTab()
+            case .navigateInNewTab:
+                guard !mini, let value = command.url, value.utf8.count <= 8192,
+                      let url = URL(string: value), validWebURL(url) else { throw ChromeResult.Failure.invalid }
+                let target: WorkspaceTabID
+                if mountedSession == nil {
+                    try startPrivate()
+                    guard let selected else { throw ChromeResult.Failure.failed }
+                    target = selected
+                } else {
+                    target = try addTab()
+                }
+                try await load(url, in: target)
+                focusContent = true
             case .appearance:
                 guard let value = command.value else { throw ChromeResult.Failure.invalid }
                 try Self.settings().set(value == .system ? .system : value == .light ? .light : .dark)
@@ -685,7 +739,10 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
     }
 
     private func updateSurface() {
-        if presentation.top == 71 { presentation.left = mini || !nativeModel.sidebarVisible ? 0 : 236 }
+        if presentation.top == Double(BrowserChromeMetrics.toolbarHeight + BrowserChromeMetrics.separator) {
+            presentation.left = mini || !nativeModel.sidebarVisible ? 0 :
+                Double(nativeModel.sidebarWidth + BrowserChromeMetrics.separator)
+        }
         defer {
             let showing = !page.isHidden
             if nativeModel.showsWebContent != showing { nativeModel.showsWebContent = showing }
@@ -694,7 +751,8 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         let left = CGFloat(presentation.left), top = CGFloat(presentation.top)
         let width = max(0, bounds.width - left)
         let resized = page.frame.width != width
-        page.frame = NSRect(x: left, y: 29, width: width, height: max(0, bounds.height - top - 29))
+        let footer = BrowserChromeMetrics.footerHeight + BrowserChromeMetrics.separator
+        page.frame = NSRect(x: left, y: footer, width: width, height: max(0, bounds.height - top - footer))
         guard !closing, !withdrawing, recovery == nil, presentation.visible, let selected else {
             page.isHidden = true
             return

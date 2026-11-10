@@ -1,0 +1,24 @@
+{
+  "name": "ui-build",
+  "argv": [
+    "xcodebuild",
+    "-project",
+    "apps/browser-macos/VezhamBrowser.xcodeproj",
+    "-scheme",
+    "VezhamBrowser",
+    "-configuration",
+    "Debug",
+    "-destination",
+    "platform=macOS,arch=arm64",
+    "-derivedDataPath",
+    "/private/tmp/vezham-parity-ui",
+    "build",
+    "ARCHS=arm64",
+    "ONLY_ACTIVE_ARCH=YES",
+    "PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.parity.qualification"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 138.144,
+  "started_epoch": 1794276919.025837
+}

@@ -108,21 +108,26 @@ public struct WorkspaceLayout: Codable, Equatable, Sendable {
         return Layout(workspaceId: id, activeSpaceId: space.id, spaces: [space])
     }
 
+    private enum CodingKeys: String, CodingKey { case schemaVersion, revision, catalog, session }
+
+    public init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let version = try container.decode(Int.self, forKey: .schemaVersion)
+        guard version == 0 || version == 1 else { throw Error.unsupportedVersion }
+        revision = try container.decode(UInt64.self, forKey: .revision)
+        catalog = try container.decode(Catalog.self, forKey: .catalog)
+        session = try container.decode(Session.self, forKey: .session)
+        if version == 0 {
+            guard session.layouts.allSatisfy({ $0.windowFrame == nil && $0.spaces.allSatisfy { $0.split == nil } }),
+                  revision < Self.maxRevision else { throw Error.invalid }
+            revision += 1
+        }
+        try validateAndNormalize()
+    }
+
     public static func decode(_ data: Data) throws -> Self {
         guard data.count <= maxBytes else { throw Error.capacity }
-        struct Header: Decodable { let schemaVersion: Int }
-        let decoder = JSONDecoder()
-        let version = try decoder.decode(Header.self, from: data).schemaVersion
-        guard version == 0 || version == 1 else { throw Error.unsupportedVersion }
-        var layout = try decoder.decode(Self.self, from: data)
-        if version == 0 {
-            guard layout.session.layouts.allSatisfy({ $0.windowFrame == nil && $0.spaces.allSatisfy { $0.split == nil } }),
-                  layout.revision < maxRevision else { throw Error.invalid }
-            layout.schemaVersion = 1
-            layout.revision += 1
-        }
-        try layout.validateAndNormalize()
-        return layout
+        return try JSONDecoder().decode(Self.self, from: data)
     }
 
     public func encoded() throws -> Data {

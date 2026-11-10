@@ -1,0 +1,225 @@
+
+ NX   Running targets qualification-tool-tests, qualification-tool-vet, reliability-contracts, reliability-typecheck, reliability-ui, lint for project browser-macos and 1 task it depends on:
+
+- browser-macos
+
+
+
+> nx run browser-macos:build-legacy-chrome-fixture
+
+> python3 apps/browser-macos/Tools/native_host.py chrome
+
+(node:32529) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+vite v8.1.6 building client environment for production...
+[2Ktransforming...[32m✓[0m 1756 modules transformed.
+rendering chunks...
+computing gzip size...
+[2m../build/chrome/[0m[35mchrome.css  [0m[1;2m447.88 kB[0m[2m │ gzip: 43.97 kB[0m
+[2m../build/chrome/[0m[36mchrome.js   [0m[1;2m311.04 kB[0m[2m │ gzip: 96.76 kB[0m
+
+✓ built in 1.62s
+
+> nx run browser-macos:qualification-tool-vet
+
+> go vet ./...
+
+
+> nx run browser-macos:reliability-contracts
+
+> node_modules/.bin/tsx --test apps/browser-macos/Chrome/tests/navigation.test.ts
+
+(node:32641) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32661) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ normalizes hostnames, local fixtures and explicit HTTPS [90m(2.863667ms)[39m[39m
+[32m✔ blocks credentials, unsupported schemes and control characters [90m(0.494083ms)[39m[39m
+[32m✔ generates a local suggestion and submits search through the provider [90m(0.522166ms)[39m[39m
+[32m✔ preserves HTTPS and loopback-only HTTP policy [90m(0.9605ms)[39m[39m
+[34mℹ tests 4[39m
+[34mℹ suites 0[39m
+[34mℹ pass 4[39m
+[34mℹ fail 0[39m
+[34mℹ cancelled 0[39m
+[34mℹ skipped 0[39m
+[34mℹ todo 0[39m
+[34mℹ duration_ms 493.784208[39m
+
+> nx run browser-macos:qualification-tool-tests
+
+> go test -count=1 -v ./...
+
+=== RUN   TestEvidence
+=== RUN   TestEvidence/valid
+=== RUN   TestEvidence/changed
+=== RUN   TestEvidence/missing
+=== RUN   TestEvidence/traversal
+=== RUN   TestEvidence/absolute
+=== RUN   TestEvidence/symlink
+=== RUN   TestEvidence/duplicate
+=== RUN   TestEvidence/invalid
+=== RUN   TestEvidence/empty
+=== RUN   TestEvidence/directory
+--- PASS: TestEvidence (0.06s)
+    --- PASS: TestEvidence/valid (0.01s)
+    --- PASS: TestEvidence/changed (0.00s)
+    --- PASS: TestEvidence/missing (0.01s)
+    --- PASS: TestEvidence/traversal (0.00s)
+    --- PASS: TestEvidence/absolute (0.01s)
+    --- PASS: TestEvidence/symlink (0.01s)
+    --- PASS: TestEvidence/duplicate (0.00s)
+    --- PASS: TestEvidence/invalid (0.00s)
+    --- PASS: TestEvidence/empty (0.00s)
+    --- PASS: TestEvidence/directory (0.00s)
+=== RUN   TestEvidenceRootAndMalformedDigest
+--- PASS: TestEvidenceRootAndMalformedDigest (0.01s)
+=== RUN   TestAggregate
+=== RUN   TestAggregate/pass
+=== RUN   TestAggregate/failure
+=== RUN   TestAggregate/block
+=== RUN   TestAggregate/notrun
+=== RUN   TestAggregate/skip
+=== RUN   TestAggregate/na
+=== RUN   TestAggregate/unknown
+=== RUN   TestAggregate/duplicate
+=== RUN   TestAggregate/emptyid
+=== RUN   TestAggregate/extra
+=== RUN   TestAggregate/trailing
+=== RUN   TestAggregate/empty
+--- PASS: TestAggregate (0.06s)
+    --- PASS: TestAggregate/pass (0.01s)
+    --- PASS: TestAggregate/failure (0.01s)
+    --- PASS: TestAggregate/block (0.01s)
+    --- PASS: TestAggregate/notrun (0.01s)
+    --- PASS: TestAggregate/skip (0.01s)
+    --- PASS: TestAggregate/na (0.00s)
+    --- PASS: TestAggregate/unknown (0.00s)
+    --- PASS: TestAggregate/duplicate (0.00s)
+    --- PASS: TestAggregate/emptyid (0.00s)
+    --- PASS: TestAggregate/extra (0.00s)
+    --- PASS: TestAggregate/trailing (0.01s)
+    --- PASS: TestAggregate/empty (0.01s)
+=== RUN   TestCLI
+--- PASS: TestCLI (0.00s)
+=== RUN   TestSubprocessCLI
+--- PASS: TestSubprocessCLI (1.99s)
+=== RUN   TestPreflightMissingBundle
+--- PASS: TestPreflightMissingBundle (0.24s)
+=== RUN   TestPlistDottedKeys
+--- PASS: TestPlistDottedKeys (0.03s)
+=== RUN   TestAdHocBundleCannotPassRelease
+--- PASS: TestAdHocBundleCannotPassRelease (0.52s)
+=== RUN   TestRuntimeFlagIgnoresOtherFields
+--- PASS: TestRuntimeFlagIgnoresOtherFields (0.00s)
+=== RUN   TestNativeBundleRejectsMissingArtifact
+--- PASS: TestNativeBundleRejectsMissingArtifact (0.00s)
+=== RUN   TestWorkspaceMatrixRequiresCoverageAndVerifiedEvidence
+--- PASS: TestWorkspaceMatrixRequiresCoverageAndVerifiedEvidence (0.01s)
+PASS
+ok  	internal.vezham/qualify	3.501s
+
+> nx run browser-macos:reliability-typecheck
+
+> node_modules/.bin/tsc --noEmit -p apps/browser-macos/Chrome/tsconfig.json
+
+
+> nx run browser-macos:lint
+
+> eslint .
+
+(node:32692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> nx run browser-macos:reliability-ui
+
+> ../../../node_modules/.bin/playwright test
+
+(node:32769) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:43] "GET / HTTP/1.1" 200 -
+
+Running 16 tests using 1 worker
+
+(node:32805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:46] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:47] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:47] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   1 tests/shell.spec.ts:212:5 › missing bridge leaves actions unavailable (882ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:47] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:47] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:47] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   2 tests/shell.spec.ts:222:5 › starts private browsing, submits address, duplicates and closes tabs (962ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:48] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:48] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:48] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   3 tests/shell.spec.ts:248:5 › sidebar, command palette focus, appearance and narrow layout (1.1s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:49] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:49] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:49] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   4 tests/shell.spec.ts:274:5 › temporary bookmarks clear at session end; profiles and history stay unavailable (1.6s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:51] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:51] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:51] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   5 tests/shell.spec.ts:306:5 › vertical tab pinning, group creation, collapse and contextual assignment (1.8s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:57] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:57] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:57] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   6 tests/shell.spec.ts:338:5 › Spaces keep tab organization distinct and empty Spaces can be deleted (5.5s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:59] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:59] "GET /chrome.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:45:59] "GET /chrome.css HTTP/1.1" 200 -
+  ✓   7 tests/shell.spec.ts:362:5 › Split commands expose pane controls and command bar searches open tabs (2.0s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:00] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:00] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:00] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   8 tests/shell.spec.ts:392:5 › tab arrows advance real focus through the rendered tab order (928ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:01] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:01] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:01] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   9 tests/shell.spec.ts:415:5 › workspace editor and action dialog contain focus and cancel with Escape (1.2s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:03] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:03] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:03] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  10 tests/shell.spec.ts:455:5 › navigation actions stay inside the active dialog (874ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:03] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:03] "GET /chrome.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:03] "GET /chrome.css HTTP/1.1" 200 -
+  ✓  11 tests/shell.spec.ts:477:5 › command focus-address intent survives dialog dismissal (1.1s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:05] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:05] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:05] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  12 tests/shell.spec.ts:500:5 › native-selected tab changes dismiss an unfinished address draft (1.6s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:06] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:06] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:06] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  13 tests/shell.spec.ts:530:5 › recovery action appears only after the host confirms retirement (656ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:07] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:07] "GET /chrome.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:07] "GET /chrome.css HTTP/1.1" 200 -
+  ✓  14 tests/shell.spec.ts:542:5 › unconfirmed retirement keeps the workspace unavailable (364ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:07] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:07] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:07] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  15 tests/shell.spec.ts:557:5 › workspace commands create and select a named workspace (1.1s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:08] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:08] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:46:08] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  16 tests/shell.spec.ts:580:5 › Mini requires preview confirmation and exposes a cancelled handoff (669ms)
+
+  16 passed (26.4s)
+
+
+
+ NX   Successfully ran targets qualification-tool-tests, qualification-tool-vet, reliability-contracts, reliability-typecheck, reliability-ui, lint for project browser-macos and 1 task it depends on
+
+
+  Run duration:      43.5s
+  Cache:             0/7 hit (0%)
+  Critical path:     32.2s (2 tasks)
+  Recoverable time:  11.3s (26% of the run)
+
+  Recommendation: Increase parallelism to recover up to 11.3s → https://nx.dev/docs/concepts/ci-concepts/parallelization-distribution?utm_source=nx-cli&utm_medium=cli&utm_campaign=performance-report&utm_content=parallelization.

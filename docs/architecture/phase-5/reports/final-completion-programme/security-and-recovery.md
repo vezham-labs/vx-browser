@@ -9,3 +9,7 @@ The native broker already uses SecRandomCopyBytes and the macOS data protection 
 Missing, denied or invalid custody must fence access while preserving encrypted state. A fresh key must be created only for an independently confirmed fresh profile. A missing key for an existing catalog needs an explicit recovery path through the original authorized key or an approved backup. Production restore must authenticate scope and schema before publishing state, validate the logical layout, retain dormant tab slots, and avoid replaying unapproved URLs. These product policies have no end-to-end evidence yet.
 
 The workspace matrix distinguishes malformed ciphertext, interrupted staging, previous-revision recovery, CAS conflicts and Core layout version coverage from production browser recovery. Production catalog lifecycle and durable restore still require engineering in addition to credentials. [Workspace matrix](workspace-matrix.md)
+
+## Arc parity follow-up
+
+The graph decoder rejects unsupported schema and empty catalogs through direct JSONDecoder use. The production protected admission fence and native key custody remain as recorded above. A new welcome completion Boolean is isolated in app preferences and contains no workspace or website data. [External authorization and threat decisions](external-authorization-checklist.md)
