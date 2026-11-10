@@ -1,0 +1,13 @@
+{
+  "name": "development-preflight",
+  "argv": [
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+    "release-preflight",
+    "--bundle",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 3,
+  "elapsed_seconds": 0.728,
+  "started_epoch": 1794268576.174911
+}

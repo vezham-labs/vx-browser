@@ -1,0 +1,2 @@
+> node_modules/.bin/tsc --noEmit -p apps/browser-macos/Chrome/tsconfig.json
+

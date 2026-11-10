@@ -1,0 +1,12 @@
+
+ NX   6 tasks: 4 succeeded, 2 failed
+
+
+✖ nx run browser-macos:lint
+  full log: /private/tmp/vezham-f7-nx-cache/terminalOutputs/18079492936892741318
+
+✖ nx run browser-macos:reliability-ui
+  full log: /private/tmp/vezham-f7-nx-cache/terminalOutputs/17453144152558867830
+
+Re-run with --output-style=static to inline logs.
+

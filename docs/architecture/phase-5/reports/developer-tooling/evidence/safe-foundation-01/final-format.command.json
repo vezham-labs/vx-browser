@@ -1,0 +1,13 @@
+{
+  "name": "final-format",
+  "argv": [
+    "node_modules/.bin/prettier",
+    "--check",
+    "apps/browser-macos/project.json",
+    "apps/browser-macos/Chrome/vite.config.ts"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 1,
+  "elapsed_seconds": 8.17,
+  "started_epoch": 1794268789.130199
+}

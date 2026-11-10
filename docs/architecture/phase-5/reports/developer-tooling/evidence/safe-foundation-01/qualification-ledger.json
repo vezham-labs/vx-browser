@@ -1,0 +1,170 @@
+[
+  {
+    "id": "core-93",
+    "status": "passed"
+  },
+  {
+    "id": "storage-25",
+    "status": "passed"
+  },
+  {
+    "id": "navigation-4",
+    "status": "passed"
+  },
+  {
+    "id": "typecheck",
+    "status": "passed"
+  },
+  {
+    "id": "go-eight-tests",
+    "status": "passed"
+  },
+  {
+    "id": "go-vet",
+    "status": "passed"
+  },
+  {
+    "id": "ui-final-16",
+    "status": "passed"
+  },
+  {
+    "id": "native-private-workspace",
+    "status": "passed"
+  },
+  {
+    "id": "native-injected-recovery",
+    "status": "passed"
+  },
+  {
+    "id": "debug-build",
+    "status": "passed"
+  },
+  {
+    "id": "development-bundle-audit",
+    "status": "passed"
+  },
+  {
+    "id": "unsigned-release-build",
+    "status": "passed"
+  },
+  {
+    "id": "historical-checksums-791",
+    "status": "passed"
+  },
+  {
+    "id": "format-configs",
+    "status": "passed"
+  },
+  {
+    "id": "unsigned-candidate-rejected-as-expected",
+    "status": "passed"
+  },
+  {
+    "id": "source-lint-baseline-30",
+    "status": "failed"
+  },
+  {
+    "id": "F7-01",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-02",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-03",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-04",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-05",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-06",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-07",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-08",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-09",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-10",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-11",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-12",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-13",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-14",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-15",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-16",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-17",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-18",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-19",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-20",
+    "status": "blocked"
+  },
+  {
+    "id": "native-primary-ui-migration",
+    "status": "not_executed"
+  },
+  {
+    "id": "native-voiceover-physical-interaction",
+    "status": "not_executed"
+  },
+  {
+    "id": "real-webkit-helper-termination",
+    "status": "not_executed"
+  },
+  {
+    "id": "signed-keychain-positive",
+    "status": "blocked"
+  },
+  {
+    "id": "developer-id-notarized-release",
+    "status": "blocked"
+  },
+  {
+    "id": "supported-macos26-matrix",
+    "status": "blocked"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "native-workspace",
+  "argv": [
+    "python3",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Tools/wsf6.py",
+    "--suite",
+    "workspace",
+    "--app",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf7-qualification/VezhamBrowser.app",
+    "--evidence",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf6-evidence",
+    "--run-name",
+    "f7-regression-workspace-01"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 13.203,
+  "started_epoch": 1794268932.9363031
+}

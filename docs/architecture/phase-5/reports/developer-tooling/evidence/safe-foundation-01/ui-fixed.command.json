@@ -1,0 +1,17 @@
+{
+  "name": "ui-fixed",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:reliability-ui",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 24.716,
+  "started_epoch": 1794268892.1510952
+}

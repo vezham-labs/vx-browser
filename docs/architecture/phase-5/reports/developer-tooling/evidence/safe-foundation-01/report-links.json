@@ -1,0 +1,6 @@
+{
+  "files": 25,
+  "file_links_checked": 164,
+  "missing": [],
+  "scope": "file existence, not anchors or semantic ADR validation"
+}

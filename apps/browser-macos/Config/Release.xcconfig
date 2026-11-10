@@ -1,4 +1,7 @@
 #include "Base.xcconfig"
-// vx-bot/NOTE: Release signing is intentionally unconfigured until final release engineering.
+// Release signing requires an externally supplied authorized team and identity.
+// Unsigned structural builds must explicitly set CODE_SIGNING_ALLOWED=NO.
+CODE_SIGN_IDENTITY = Developer ID Application
+CODE_SIGNING_REQUIRED = YES
 SWIFT_OPTIMIZATION_LEVEL = -O
 DEBUG_INFORMATION_FORMAT = dwarf-with-dsym

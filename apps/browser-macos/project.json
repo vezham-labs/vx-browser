@@ -3,10 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/browser-macos/Sources",
   "projectType": "application",
-  "tags": [
-    "scope:browser",
-    "type:native-host"
-  ],
+  "tags": ["scope:browser", "type:native-host"],
   "targets": {
     "storage-native": {
       "executor": "nx:run-commands",
@@ -38,9 +35,7 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": [
-        "{workspaceRoot}/apps/browser-macos/build"
-      ],
+      "outputs": ["{workspaceRoot}/apps/browser-macos/build"],
       "options": {
         "command": "python3 apps/browser-macos/Tools/native_host.py build"
       },
@@ -108,6 +103,22 @@
       "options": {
         "command": "../../../node_modules/.bin/playwright test",
         "cwd": "apps/browser-macos/Chrome"
+      }
+    },
+    "qualification-tool-tests": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "go test -count=1 -v ./...",
+        "cwd": "tools/vezham-qualify"
+      }
+    },
+    "qualification-tool-vet": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "go vet ./...",
+        "cwd": "tools/vezham-qualify"
       }
     }
   }

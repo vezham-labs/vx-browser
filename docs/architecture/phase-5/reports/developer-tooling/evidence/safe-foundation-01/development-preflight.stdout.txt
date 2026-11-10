@@ -1,0 +1,74 @@
+{
+  "command": "release-preflight",
+  "status": "blocked",
+  "checks": [
+    {
+      "name": "CFBundleExecutable",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleIdentifier",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundlePackageType",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleShortVersionString",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleVersion",
+      "status": "passed"
+    },
+    {
+      "name": "LSMinimumSystemVersion",
+      "status": "passed"
+    },
+    {
+      "name": "com.apple.security.app-sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "com.apple.security.cs.allow-unsigned-executable-memory",
+      "status": "passed"
+    },
+    {
+      "name": "com.apple.security.cs.disable-library-validation",
+      "status": "passed"
+    },
+    {
+      "name": "com.apple.security.get-task-allow",
+      "status": "passed"
+    },
+    {
+      "name": "com.apple.security.network.client",
+      "status": "passed"
+    },
+    {
+      "name": "developer-id",
+      "status": "blocked",
+      "reason": "Developer ID Application signature required"
+    },
+    {
+      "name": "hardened-runtime",
+      "status": "passed"
+    },
+    {
+      "name": "notarization-ticket",
+      "status": "blocked",
+      "reason": "valid stapled ticket unavailable"
+    },
+    {
+      "name": "signature-integrity",
+      "status": "passed",
+      "reason": "includes nested code verification"
+    },
+    {
+      "name": "signed-runtime-qualification",
+      "status": "not_executed",
+      "reason": "requires a separate real signed application run"
+    }
+  ]
+}

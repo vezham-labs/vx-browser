@@ -1,0 +1,30 @@
+{
+  "name": "core-tests",
+  "argv": [
+    "swift",
+    "test",
+    "--package-path",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0",
+    "--scratch-path",
+    "/private/tmp/vezham-f7-core/build",
+    "--cache-path",
+    "/private/tmp/vezham-f7-core/cache",
+    "--config-path",
+    "/private/tmp/vezham-f7-core/config",
+    "--security-path",
+    "/private/tmp/vezham-f7-core/security",
+    "--disable-keychain",
+    "--disable-netrc",
+    "--manifest-cache",
+    "local",
+    "--jobs",
+    "2",
+    "--disable-xctest",
+    "--enable-swift-testing",
+    "--no-parallel"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 153.021,
+  "started_epoch": 1794268412.9554272
+}

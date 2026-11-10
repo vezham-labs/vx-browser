@@ -1,0 +1,7 @@
+{
+  "method": "Repackaged real Debug build into isolated exact F6 qualification bundle; same compiled source, namespace-only Info.plist change and ad-hoc reseal. No Developer ID claim.",
+  "source_app": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+  "test_app": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf7-qualification/VezhamBrowser.app",
+  "source_executable_sha256": "be991aee7f3f43978feea32610a51b7a1c33dea963d1c27e23f6e8b43eedc3eb",
+  "test_executable_sha256": "9907a547ce7d3d81b10743be4557efe96ba511f517120083bc4e28d99b983edc"
+}

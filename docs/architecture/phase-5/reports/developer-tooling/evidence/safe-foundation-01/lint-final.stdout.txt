@@ -1,0 +1,56 @@
+
+> nx run browser-macos:lint
+
+> eslint .
+
+(node:22689) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[0m[0m
+[0m[4m/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/src/Browser.tsx[24m[0m
+[0m    [2m56:1[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m    [2m81:1[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m101:8[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m319:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m326:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m339:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m343:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m353:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m358:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m361:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m380:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m387:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m414:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m418:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m627:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m653:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m672:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m683:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m800:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m   [2m907:3[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                                                                                                           [2m@vx-lint/arrow-functions[22m[0m
+[0m  [2m1050:5[22m   [31merror[39m  Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element  [2mjsx-a11y/no-static-element-interactions[22m[0m
+[0m  [2m1400:13[22m  [31merror[39m  Non-interactive elements should not be assigned mouse or keyboard event listeners                                                                                                                  [2mjsx-a11y/no-noninteractive-element-interactions[22m[0m
+[0m  [2m1407:15[22m  [31merror[39m  `tabIndex` should only be declared on interactive elements                                                                                                                                         [2mjsx-a11y/no-noninteractive-tabindex[22m[0m
+[0m  [2m2040:17[22m  [31merror[39m  The autoFocus prop should not be used, as it can reduce usability and accessibility for users                                                                                                      [2mjsx-a11y/no-autofocus[22m[0m
+[0m[0m
+[0m[4m/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/src/bridge.ts[24m[0m
+[0m  [2m127:8[22m  [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting                            [2m@vx-lint/arrow-functions[22m[0m
+[0m  [2m135:5[22m  [31merror[39m  Use <author>/INFO|NOTE|TODO|FIXME|HACK|REF: followed by an explanation. Use vx-bot for new agent-authored comments  [2m@vx-lint/comment-style[22m[0m
+[0m[0m
+[0m[4m/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/src/icons.tsx[24m[0m
+[0m  [2m32:8[22m  [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting  [2m@vx-lint/arrow-functions[22m[0m
+[0m[0m
+[0m[4m/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/src/navigation.ts[24m[0m
+[0m  [2m14:8[22m   [31merror[39m  Prefer a named arrow function. Review initialization order and callers before converting  [2m@vx-lint/arrow-functions[22m[0m
+[0m  [2m16:40[22m  [31merror[39m  Unexpected control character(s) in regular expression: \x00, \x1f                         [2mno-control-regex[22m[0m
+[0m[0m
+[0m[4m/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts[24m[0m
+[0m  [2m6:1[22m  [31merror[39m  Prefer a named arrow function. Run with --fix to convert  [2m@vx-lint/arrow-functions[22m[0m
+[0m[0m
+[0m[31m[1m✖ 30 problems (30 errors, 0 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[31m[1m  1 error and 0 warnings potentially fixable with the `--fix` option.[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
+Warning: command "eslint ." exited with non-zero status code
+
+  Run duration:      9.9s
+  Critical path:     9.9s (1 task)
+  Recoverable time:  <1ms

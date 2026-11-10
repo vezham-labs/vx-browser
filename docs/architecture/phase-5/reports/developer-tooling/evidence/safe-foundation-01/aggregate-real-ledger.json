@@ -1,0 +1,174 @@
+{
+  "command": "aggregate-tests",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "F7-01",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-02",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-03",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-04",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-05",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-06",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-07",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-08",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-09",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-10",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-11",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-12",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-13",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-14",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-15",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-16",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-17",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-18",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-19",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-20",
+      "status": "blocked"
+    },
+    {
+      "name": "core-93",
+      "status": "passed"
+    },
+    {
+      "name": "debug-build",
+      "status": "passed"
+    },
+    {
+      "name": "developer-id-notarized-release",
+      "status": "blocked"
+    },
+    {
+      "name": "development-bundle-audit",
+      "status": "passed"
+    },
+    {
+      "name": "format-configs",
+      "status": "passed"
+    },
+    {
+      "name": "go-eight-tests",
+      "status": "passed"
+    },
+    {
+      "name": "go-vet",
+      "status": "passed"
+    },
+    {
+      "name": "historical-checksums-791",
+      "status": "passed"
+    },
+    {
+      "name": "native-injected-recovery",
+      "status": "passed"
+    },
+    {
+      "name": "native-primary-ui-migration",
+      "status": "not_executed"
+    },
+    {
+      "name": "native-private-workspace",
+      "status": "passed"
+    },
+    {
+      "name": "native-voiceover-physical-interaction",
+      "status": "not_executed"
+    },
+    {
+      "name": "navigation-4",
+      "status": "passed"
+    },
+    {
+      "name": "real-webkit-helper-termination",
+      "status": "not_executed"
+    },
+    {
+      "name": "signed-keychain-positive",
+      "status": "blocked"
+    },
+    {
+      "name": "source-lint-baseline-30",
+      "status": "failed"
+    },
+    {
+      "name": "storage-25",
+      "status": "passed"
+    },
+    {
+      "name": "supported-macos26-matrix",
+      "status": "blocked"
+    },
+    {
+      "name": "typecheck",
+      "status": "passed"
+    },
+    {
+      "name": "ui-final-16",
+      "status": "passed"
+    },
+    {
+      "name": "unsigned-candidate-rejected-as-expected",
+      "status": "passed"
+    },
+    {
+      "name": "unsigned-release-build",
+      "status": "passed"
+    }
+  ]
+}

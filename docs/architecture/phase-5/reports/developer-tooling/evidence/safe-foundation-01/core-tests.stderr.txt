@@ -1,0 +1,76 @@
+Building for debugging...
+[Computing dependencies]
+[Provisioning 1 / 12]
+[Constructing description]
+[Pre-planning 1 / 327]
+[Planning 1 / 327]
+[Planning 231 / 327]
+[Planning 315 / 327]
+[Planning deferred tasks]
+[Starting]
+[30 / 116] BrowserPorts-product
+[56 / 116]
+[56 / 117] BrowserDomain
+[57 / 117] BrowserDomain
+[60 / 157]
+[62 / 157]
+[64 / 157]
+[65 / 157]
+[67 / 157]
+[69 / 157]
+[72 / 157]
+[74 / 157]
+[75 / 157]
+[76 / 157]
+[79 / 157]
+[80 / 157]
+[81 / 157]
+[82 / 157]
+[83 / 157]
+[85 / 157]
+[88 / 157]
+[89 / 157]
+[90 / 157]
+[91 / 157]
+[93 / 157] BrowserDomain
+[94 / 157] BrowserDomain
+[96 / 157] BrowserDomain
+[102 / 157] BrowserDomain
+[103 / 157] BrowserDomain
+[104 / 158] BrowserDomain
+[106 / 158] BrowserDomain
+[107 / 158] BrowserPorts
+[110 / 161] BrowserPorts
+[117 / 162]
+[119 / 162]
+[120 / 163]
+[122 / 167] WSF0Fakes
+[123 / 171] BrowserPersistence
+[138 / 171] BrowserPersistence
+[140 / 171] WSF0Fakes
+[141 / 171] BrowserPersistence-product
+[146 / 172] BrowserPorts-product
+[147 / 172] BrowserCore
+[150 / 178] BrowserCore
+[152 / 178] BrowserCore
+[158 / 178] BrowserCore
+[159 / 178] BrowserCore
+[160 / 178] WSF0Qualification-product
+[161 / 178] BrowserCore
+[163 / 178] BrowserCore
+[165 / 178] BrowserCore-product
+[166 / 178] WSF0Tests-product
+[168 / 179] WSF0Tests-product
+[169 / 190]
+[170 / 190]
+[172 / 190] WSF0Tests-product
+[173 / 190] WSF0Tests-product
+[175 / 190] WSF0Tests-product
+[180 / 190] WSF0Tests-product
+[183 / 190] WSF0Tests-product
+[184 / 190] WSF0Tests-product
+[186 / 190] WSF0Tests-product
+[187 / 190] WSF0Tests-product
+[188 / 190] WSF0Tests-product
+[189 / 190] WSF0Tests-product
+Build complete! (125.03 secs)

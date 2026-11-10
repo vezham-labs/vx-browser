@@ -1,0 +1,150 @@
+{
+  "command": "verify-evidence",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "../../recovery-design/architecture-review.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/concurrency-and-failure-analysis.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/decision-record.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/implementation-plan.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/mini-session-recovery.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/recovery-state-machine.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/security-review.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/session-ownership.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/storage-isolation-analysis.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/test-strategy.md",
+      "status": "passed"
+    },
+    {
+      "name": "../../recovery-design/workspace-restoration-policy.md",
+      "status": "passed"
+    },
+    {
+      "name": "README.md",
+      "status": "passed"
+    },
+    {
+      "name": "build-success.log",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/attempt-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/attempt-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "callback-run-01/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "candidate-build-version.txt",
+      "status": "passed"
+    },
+    {
+      "name": "candidate-entitlements.plist",
+      "status": "passed"
+    },
+    {
+      "name": "candidate-signature.log",
+      "status": "passed"
+    },
+    {
+      "name": "codesign-display.log",
+      "status": "passed"
+    },
+    {
+      "name": "codesign-verification.log",
+      "status": "passed"
+    },
+    {
+      "name": "interrupted-build-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "interrupted-copy-inventory.json",
+      "status": "passed"
+    },
+    {
+      "name": "interrupted-copy.patch",
+      "status": "passed"
+    },
+    {
+      "name": "playwright.log",
+      "status": "passed"
+    },
+    {
+      "name": "preservation.json",
+      "status": "passed"
+    },
+    {
+      "name": "qualify-build.sh",
+      "status": "passed"
+    },
+    {
+      "name": "reviewed.patch",
+      "status": "passed"
+    },
+    {
+      "name": "test-matrix.md",
+      "status": "passed"
+    }
+  ]
+}

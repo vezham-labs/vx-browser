@@ -15,3 +15,7 @@ alone is not acceptance. Link run-specific raw artifacts from the
 The [Phase 5 plan](../README.md) and [Browser handbook](../../../../vx/handbooks/browser/README.md)
 provide navigation and continuing requirements. Report status is scoped to the
 milestone and measured revision, not the whole product or release.
+
+## 2026-11-10 coordinated WS-F7/native/tooling/WS-F8 execution
+
+[Actual partial implementation](developer-tooling/implementation-report.md) delivers Go qualification tooling, a shell build fix and safe release preparation. [WS-F7](WS-F7/README.md) remains blocked on protected production writer/positive signed key custody; [native-primary UI](native-ui-alignment/README.md) is not implemented; [WS-F8](WS-F8/README.md) has unsigned structural evidence only. Existing historical approvals and release gates remain in force. No whole-milestone completion or distribution acceptance is claimed.

@@ -1,0 +1,22 @@
+{
+  "name": "tooling-final",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run-many",
+    "-t",
+    "qualification-tool-tests",
+    "qualification-tool-vet",
+    "--projects",
+    "browser-macos",
+    "--parallel=1",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 24.399,
+  "started_epoch": 1794268618.580291
+}

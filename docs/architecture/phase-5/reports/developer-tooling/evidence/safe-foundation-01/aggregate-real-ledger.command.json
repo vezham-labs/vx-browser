@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+    "aggregate-tests",
+    "--ledger",
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/wsf7-evidence/qualification-ledger.json"
+  ],
+  "returncode": 1,
+  "expected": "exit 1 because retained source lint fails; blocked/unexecuted rows preserved"
+}

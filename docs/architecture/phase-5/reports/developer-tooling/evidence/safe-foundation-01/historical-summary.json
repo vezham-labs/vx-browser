@@ -1,0 +1,72 @@
+[
+  {
+    "manifest": "WS-F4R/evidence/SHA256SUMS",
+    "returncode": 0,
+    "status": "passed",
+    "entries": 423,
+    "argv": [
+      "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+      "verify-evidence",
+      "--root",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+      "--manifest",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F4R/evidence/SHA256SUMS"
+    ]
+  },
+  {
+    "manifest": "WS-F5/evidence/SHA256SUMS",
+    "returncode": 0,
+    "status": "passed",
+    "entries": 223,
+    "argv": [
+      "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+      "verify-evidence",
+      "--root",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+      "--manifest",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5/evidence/SHA256SUMS"
+    ]
+  },
+  {
+    "manifest": "WS-F5R/SHA256SUMS",
+    "returncode": 0,
+    "status": "passed",
+    "entries": 12,
+    "argv": [
+      "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+      "verify-evidence",
+      "--root",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+      "--manifest",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5R/SHA256SUMS"
+    ]
+  },
+  {
+    "manifest": "WS-F5R/evidence/execution-01/SHA256SUMS",
+    "returncode": 0,
+    "status": "passed",
+    "entries": 36,
+    "argv": [
+      "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+      "verify-evidence",
+      "--root",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+      "--manifest",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F5R/evidence/execution-01/SHA256SUMS"
+    ]
+  },
+  {
+    "manifest": "WS-F6/evidence/implementation-01/SHA256SUMS",
+    "returncode": 0,
+    "status": "passed",
+    "entries": 97,
+    "argv": [
+      "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+      "verify-evidence",
+      "--root",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+      "--manifest",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/WS-F6/evidence/implementation-01/SHA256SUMS"
+    ]
+  }
+]

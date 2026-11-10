@@ -1,0 +1,17 @@
+{
+  "name": "bundle-audit",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:audit",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 13.965,
+  "started_epoch": 1794268574.839117
+}

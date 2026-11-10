@@ -19,6 +19,7 @@ import wildcardBarrel from './vx/tools/eslint/wildcard-barrel.mjs'
 // import reactHooks from 'eslint-plugin-react-hooks'
 const ignores = [
   '**/dist',
+  'apps/browser-macos/build/**',
   '**/.output',
   '**/out-tsc',
   '**/test-output',

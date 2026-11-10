@@ -83,3 +83,7 @@ Phase 5 overall exit means an implemented, internally release-eligible MVP with 
 ## Current M1 consolidation — 2026-11-08
 
 The maintained [M1 baseline](reports/M1/README.md) supersedes historical pending-policy and blanket Spaces-deferral statements for current owner scope. OP-01–04 are decided; current OD17 selects26 capabilities including basic Spaces, while advanced automation remains deferred and historical OD18 is preserved. Documentation/isolated validation/planning are authorized; product implementation/release remain unauthorized. Actual outcomes and blockers are in the M1 closeout; no milestone/product qualification follows from this documentation update.
+
+## 2026-11-10 coordinated WS-F7/native/tooling/WS-F8 execution
+
+[Actual partial implementation](reports/developer-tooling/implementation-report.md) delivers Go qualification tooling, a shell build fix and safe release preparation. [WS-F7](reports/WS-F7/README.md) remains blocked on protected production writer/positive signed key custody; [native-primary UI](reports/native-ui-alignment/README.md) is not implemented; [WS-F8](reports/WS-F8/README.md) has unsigned structural evidence only. Existing historical approvals and release gates remain in force. No whole-milestone completion or distribution acceptance is claimed.

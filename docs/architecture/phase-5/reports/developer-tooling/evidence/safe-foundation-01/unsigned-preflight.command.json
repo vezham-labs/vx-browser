@@ -1,0 +1,13 @@
+{
+  "name": "unsigned-preflight",
+  "argv": [
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/vezham-qualify",
+    "release-preflight",
+    "--bundle",
+    "/private/tmp/vezham-f7-release/Build/Products/Release/VezhamBrowser.app"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 1,
+  "elapsed_seconds": 2.544,
+  "started_epoch": 1794268994.4736269
+}

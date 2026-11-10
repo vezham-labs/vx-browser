@@ -1,0 +1,17 @@
+{
+  "name": "debug-build-fixed",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:build",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 85.112,
+  "started_epoch": 1794268757.7403588
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "path": "apps/browser-macos/Chrome/vite.config.ts",
+    "sha256": "da7719548ddb361f96cd542ea07373eeffdfc51cac39e26fd49a743497189f48"
+  },
+  {
+    "path": "apps/browser-macos/Config/Release.xcconfig",
+    "sha256": "f7ac08e122720c04ad554e3f43f6f2c0c921815a7c9fbbad6102a571baae11b2"
+  },
+  {
+    "path": "apps/browser-macos/project.json",
+    "sha256": "70de83dac3420c43e3c11908a59bb5a7257cfcff450d387a5ed85d18a862b947"
+  },
+  {
+    "path": "docs/architecture/phase-5/README.md",
+    "sha256": "757804ac6e6f27a925cd7bb56af899745cda2317a192d3a78d6221fc698798ac"
+  },
+  {
+    "path": "docs/architecture/phase-5/phase-5-scope-and-milestones.md",
+    "sha256": "a677c7d0cc7034a15d679c41c7c3bb852267117ac7a1e2c1ef3165529eb3eee1"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/README.md",
+    "sha256": "be4aa758e3cfcfbe6a2fdfb5817183f075763b280b0948aed0c3612a63c8e7ac"
+  },
+  {
+    "path": "eslint.config.mjs",
+    "sha256": "07174b5ed09204520f34088529ff4551802466bdb70503d9982fbedeb69e4786"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F7/README.md",
+    "sha256": "81a897b62fb157600586ed25bd5c5ec3b6022976cf5d05181648646113f2acbc"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F7/implementation-files.md",
+    "sha256": "ecbf4341217fc454c509a338428d1225455a26cb94d23423239fefe2cf2920fc"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F7/implementation-qualification.md",
+    "sha256": "34dc001bf7a76d24c9d3fb710607a32224c6c0541e276979ccd09cb57cf6543f"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F7/implementation-report.md",
+    "sha256": "ae7db62b0e9ed78e64bf4b51777233e2d8e205e0157fe89885ae23cf58fb8645"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F7/test-matrix.md",
+    "sha256": "90356ee3d2ab54aa22db308217442cb3d0b4bef55d4a8f4212b283e084b0dcf2"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F8/README.md",
+    "sha256": "ce9ccf2d477350784299941b94d7dcb487f1ba3e10fd32ebb590eef53083e435"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F8/implementation-files.md",
+    "sha256": "d5960eaa4a68eed0bb2b4e8a3e4f39c9dff8e7afb0eb7183584d2ae904453b4a"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F8/implementation-qualification.md",
+    "sha256": "6901bbeb584bdd0599a7ecfb2bb38321509ae29c627aab4adc36902b353a4d20"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F8/implementation-report.md",
+    "sha256": "552f7b45797cc81449bf0c06a1777714b8c719a869a1432a619da8df0d4764cc"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/WS-F8/test-matrix.md",
+    "sha256": "e3bcd06321822979a9ff0e5cf598b79eabe5e0b8eba29e4d21631957897a1729"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/developer-tooling/README.md",
+    "sha256": "a9b855db8ecb66cae7611b23b5f3b9ec8283bad48a9b476c820206795eb27947"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/developer-tooling/commands-and-results.md",
+    "sha256": "b71d9973ce87e3d4225853191c89b8d595899ff454b3d7dda6397163fc36e37f"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/developer-tooling/implementation-files.md",
+    "sha256": "2ef861cb8dd605ecf3cb5f3ca72a9a3759d66cfea84cb5f1debeebe2731475d1"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/developer-tooling/implementation-qualification.md",
+    "sha256": "ee4ba165b97eb123bf2365e6fadb6c82c44a5c9732d8c3535131a6c44296854b"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/developer-tooling/implementation-report.md",
+    "sha256": "6a6ab51c9a2a58cdead54ae785918f2d0d52e2d22f36c4fda1af0401beec4fff"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/developer-tooling/test-matrix.md",
+    "sha256": "4c1fd49640cfb23c92e1a52b903e1495595a85384705d1893d55ed24a9ae04ac"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/native-ui-alignment/README.md",
+    "sha256": "90314b4db01f8ed74d91bced00c052f059e1d91a2e227ad3d4d4af929d6cb9ab"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/native-ui-alignment/implementation-files.md",
+    "sha256": "cb9ab4187e53c44dcd660d77603c9f7813995a13dfd1f18511cb9659b685dbee"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/native-ui-alignment/implementation-qualification.md",
+    "sha256": "16ec56d3270406a581efbdf53267d6d50da77279283b2e3d4dded52623aa8cfc"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/native-ui-alignment/implementation-report.md",
+    "sha256": "67bb9ce6734b296e549394c5af6c911aa8f114514d983f478d912bdc0fb4550b"
+  },
+  {
+    "path": "docs/architecture/phase-5/reports/native-ui-alignment/test-matrix.md",
+    "sha256": "e6651d38ea30b56a804527b8d9ba04053a5bbd18fd9384a6acc1addbb26d349a"
+  },
+  {
+    "path": "docs/decisions/0009-native-browser-ui-and-development-tooling.md",
+    "sha256": "f325aab2374cfda0371d6816260d33fa6a51fa3634f25802b64e7a115220778f"
+  },
+  {
+    "path": "tools/vezham-qualify/README.md",
+    "sha256": "3087a50f842ccb8b5db659e70ec13c40ab522f88a508af5e225cbd6e2178cf90"
+  },
+  {
+    "path": "tools/vezham-qualify/go.mod",
+    "sha256": "0a5e2e2431733fd05c9b4f1a217789df97748de8538212df14d994566aebcf41"
+  },
+  {
+    "path": "tools/vezham-qualify/main.go",
+    "sha256": "55f772fdc56a21b1879f5a1b1bcb889d9097505674395919297a4b5998d13053"
+  },
+  {
+    "path": "tools/vezham-qualify/main_test.go",
+    "sha256": "0be95f455fd0425fa252582bf61fe4ce9b91d363b212d9f299c5c84147263512"
+  }
+]

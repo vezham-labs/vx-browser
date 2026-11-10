@@ -1,0 +1,1698 @@
+{
+  "command": "verify-evidence",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "attempt-01/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-01/native-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-02/native-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/10-split-screen.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/11-split-second-focused.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/12-mini-browser.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/13-mini-navigation.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/14-mini-transfer-action.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/15-light.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/16-dark.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/17-private-session.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/18-narrow-window.png",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "attempt-03/native-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "audit-candidate.log",
+      "status": "passed"
+    },
+    {
+      "name": "audit-final-appearance.log",
+      "status": "passed"
+    },
+    {
+      "name": "audit-final.log",
+      "status": "passed"
+    },
+    {
+      "name": "audit-verified.log",
+      "status": "passed"
+    },
+    {
+      "name": "baseline.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-02.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-03.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-04.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-05.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-final-appearance.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-final.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-release-candidate.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-verified.log",
+      "status": "passed"
+    },
+    {
+      "name": "build.json",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/external-1.json",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/incomplete.json",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/10-split-screen.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/11-split-second-focused.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/12-mini-browser.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/13-mini-navigation.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/14-mini-transfer-action.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/18-narrow-window.png",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "candidate/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "complete/external-1.json",
+      "status": "passed"
+    },
+    {
+      "name": "complete/external-2.json",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/10-split-screen.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/11-split-second-focused.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/12-mini-browser.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/13-mini-navigation.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/14-mini-transfer-action.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/15-light.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/16-dark.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/17-private-session.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/18-narrow-window.png",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "complete/native-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed-build.json",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/external-1.json",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/external-2.json",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/10-split-screen.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/11-split-second-focused.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/12-mini-browser.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/13-mini-navigation.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/14-mini-transfer-action.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/15-light.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/16-dark.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/17-private-session.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/18-narrow-window.png",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "confirmed/native-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "contracts-180102869040/commands.json",
+      "status": "passed"
+    },
+    {
+      "name": "contracts-180102869040/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "contracts-180102869040/sources.json",
+      "status": "passed"
+    },
+    {
+      "name": "contracts-180102869040/swift-test.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "contracts-180102869040/swift-test.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "environment.txt",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/10-split-screen.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/11-split-second-focused.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/12-mini-browser.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/13-mini-navigation.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/14-mini-transfer-action.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/15-light.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/16-dark.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/17-private-session.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/18-narrow-window.png",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "final/native-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "frontend-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "frontend-final.log",
+      "status": "passed"
+    },
+    {
+      "name": "frontend-verified.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/00-original-observation-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/00-original-observation-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/00-original-observation.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/00-original-observation.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/01-seed-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/01-seed-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/01-seed.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/01-seed.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02-restart-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02-restart-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02-restart.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02-restart.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02b-switch-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02b-switch-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02b-switch.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/02b-switch.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03-private-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03-private-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03-private.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03-private.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03b-private-interrupted-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03b-private-interrupted-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03b-private-interrupted.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03b-private-interrupted.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03c-private-restart-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03c-private-restart-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03c-private-restart.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/03c-private-restart.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/04-clear-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/04-clear-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/04-clear.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/04-clear.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/05-remove-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/05-remove-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/05-remove.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/05-remove.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/attempts.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/case-results.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-00-creation-intent.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-01-persistent-factory.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-02-assignment.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-03-construction.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-04-publication.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-prepare-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-prepare-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-prepare.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-prepare.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-05-clear-request.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-prepare-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-prepare-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-prepare.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-prepare.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-06-clear-callback.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-prepare-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-prepare-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-prepare.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-prepare.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-07-retire.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-prepare-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-prepare-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-prepare.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-prepare.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-08-remove-request.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-prepare-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-prepare-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-prepare.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-prepare.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-09-remove-callback.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-prepare-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-prepare-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-prepare.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-prepare.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-reconcile-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-reconcile-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-reconcile.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-reconcile.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/cut-10-enumeration.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/fixtures.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/http-cache-results.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/http-requests.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure-prepare-input.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure-prepare-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure-prepare.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure-prepare.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure-result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/publication-failure.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-180410504514/sources.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-attempt-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-attempt-02.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-attempt-03.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-candidate.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-complete.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-confirmed.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-final.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-qualification.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-verified.log",
+      "status": "passed"
+    },
+    {
+      "name": "navigation-final.log",
+      "status": "passed"
+    },
+    {
+      "name": "preservation.json",
+      "status": "passed"
+    },
+    {
+      "name": "previous-bundle.txt",
+      "status": "passed"
+    },
+    {
+      "name": "qualification.json",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/10-split-screen.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/11-split-second-focused.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/12-mini-browser.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/13-mini-navigation.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/14-mini-transfer-action.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/15-light.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/16-dark.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/17-private-session.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/18-narrow-window.png",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "qualification/native-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "sources.json",
+      "status": "passed"
+    },
+    {
+      "name": "storage-regression.log",
+      "status": "passed"
+    },
+    {
+      "name": "typecheck-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "typecheck-final.log",
+      "status": "passed"
+    },
+    {
+      "name": "typecheck-verified.log",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/01-main-default.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/02-vertical-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/03-sidebar-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/04-spaces.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/05-pinned-tabs.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/06-group-collapsed.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/06-group-expanded.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/07-new-tab-private.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/08-command-bar.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/09-tab-context.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/10-split-screen.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/11-split-second-focused.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/12-mini-browser.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/13-mini-navigation.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/14-mini-transfer-action.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/15-light.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/16-dark.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/17-private-session.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/18-narrow-window.png",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "verified/native-2/stdout.log",
+      "status": "passed"
+    }
+  ]
+}

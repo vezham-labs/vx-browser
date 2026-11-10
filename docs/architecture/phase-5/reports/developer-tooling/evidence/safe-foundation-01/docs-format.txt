@@ -1,0 +1,23 @@
+docs/architecture/phase-5/reports/WS-F7/test-matrix.md 34ms
+docs/architecture/phase-5/reports/WS-F7/implementation-report.md 17ms (unchanged)
+docs/architecture/phase-5/reports/WS-F7/implementation-files.md 2ms (unchanged)
+docs/architecture/phase-5/reports/WS-F7/README.md 3ms (unchanged)
+docs/architecture/phase-5/reports/WS-F7/implementation-qualification.md 3ms (unchanged)
+docs/architecture/phase-5/reports/WS-F8/test-matrix.md 2ms (unchanged)
+docs/architecture/phase-5/reports/WS-F8/implementation-report.md 11ms (unchanged)
+docs/architecture/phase-5/reports/WS-F8/implementation-files.md 2ms (unchanged)
+docs/architecture/phase-5/reports/WS-F8/README.md 2ms (unchanged)
+docs/architecture/phase-5/reports/WS-F8/implementation-qualification.md 5ms
+docs/architecture/phase-5/reports/native-ui-alignment/test-matrix.md 3ms
+docs/architecture/phase-5/reports/native-ui-alignment/implementation-report.md 11ms
+docs/architecture/phase-5/reports/native-ui-alignment/implementation-files.md 2ms (unchanged)
+docs/architecture/phase-5/reports/native-ui-alignment/README.md 2ms (unchanged)
+docs/architecture/phase-5/reports/native-ui-alignment/implementation-qualification.md 3ms (unchanged)
+docs/architecture/phase-5/reports/developer-tooling/test-matrix.md 4ms
+docs/architecture/phase-5/reports/developer-tooling/commands-and-results.md 24ms (unchanged)
+docs/architecture/phase-5/reports/developer-tooling/implementation-report.md 13ms
+docs/architecture/phase-5/reports/developer-tooling/implementation-files.md 4ms (unchanged)
+docs/architecture/phase-5/reports/developer-tooling/README.md 3ms (unchanged)
+docs/architecture/phase-5/reports/developer-tooling/implementation-qualification.md 3ms (unchanged)
+docs/decisions/0009-native-browser-ui-and-development-tooling.md 6ms (unchanged)
+tools/vezham-qualify/README.md 23ms

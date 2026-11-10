@@ -1,0 +1,10 @@
+View structured, searchable error logs at https://cloud.nx.app/runs/LceRs3fg8z
+
+  Run duration:      5m 37s
+  Cache:             0/4 hit (0%)
+  Critical path:     5m 28s (1 task)
+  Recoverable time:  8.1s (2% of the run)
+
+  Recommendations:
+    - Speed up or split the longest tasks on the critical path:
+        browser-macos:reliability-ui    5m 28s

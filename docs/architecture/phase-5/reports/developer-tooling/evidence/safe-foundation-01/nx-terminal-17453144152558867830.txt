@@ -1,0 +1,480 @@
+> ../../../node_modules/.bin/playwright test
+
+(node:19751) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:08] "GET / HTTP/1.1" 200 -
+
+Running 16 tests using 1 worker
+
+(node:19769) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:14] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:14] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:14] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   1 tests/shell.spec.ts:212:5 › missing bridge leaves actions unavailable (5.9s)
+(node:19785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:25] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:25] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:25] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   2 tests/shell.spec.ts:222:5 › starts private browsing, submits address, duplicates and closes tabs (15.7s)
+(node:19826) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:58] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:58] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:23:58] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   3 tests/shell.spec.ts:248:5 › sidebar, command palette focus, appearance and narrow layout (7.8s)
+(node:19982) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:11] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:11] "GET /chrome.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:11] "GET /chrome.css HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   4 tests/shell.spec.ts:274:5 › temporary bookmarks clear at session end; profiles and history stay unavailable (15.3s)
+(node:20178) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:30] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:30] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:30] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   5 tests/shell.spec.ts:306:5 › vertical tab pinning, group creation, collapse and contextual assignment (17.9s)
+(node:20339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:57] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:57] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:24:57] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   6 tests/shell.spec.ts:338:5 › Spaces keep tab organization distinct and empty Spaces can be deleted (15.5s)
+(node:20474) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:25:23] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:25:23] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:25:23] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   7 tests/shell.spec.ts:362:5 › Split commands expose pane controls and command bar searches open tabs (15.6s)
+(node:20550) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:25:45] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:25:45] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:25:45] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   8 tests/shell.spec.ts:392:5 › tab arrows advance real focus through the rendered tab order (15.6s)
+(node:20597) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:05] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:05] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:05] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘   9 tests/shell.spec.ts:415:5 › workspace editor and action dialog contain focus and cancel with Escape (15.6s)
+(node:20720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:27] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:27] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:27] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘  10 tests/shell.spec.ts:455:5 › navigation actions stay inside the active dialog (15.2s)
+(node:20845) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:45] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:45] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:26:45] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘  11 tests/shell.spec.ts:477:5 › command focus-address intent survives dialog dismissal (15.5s)
+(node:20934) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:09] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:10] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:10] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘  12 tests/shell.spec.ts:500:5 › native-selected tab changes dismiss an unfinished address draft (15.3s)
+(node:21196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:30] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:30] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:30] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘  13 tests/shell.spec.ts:530:5 › recovery action appears only after the host confirms retirement (5.8s)
+(node:21239) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:42] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:42] "GET /chrome.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:42] "GET /chrome.css HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘  14 tests/shell.spec.ts:542:5 › unconfirmed retirement keeps the workspace unavailable (7.9s)
+(node:21347) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:58] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:58] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:27:58] "GET /chrome.js HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘  15 tests/shell.spec.ts:557:5 › workspace commands create and select a named workspace (15.7s)
+(node:21361) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:28:19] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:28:19] "GET /chrome.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 05:28:19] "GET /chrome.css HTTP/1.1" 200 -
+(0 , q.jsxDEV) is not a function
+  ✘  16 tests/shell.spec.ts:580:5 › Mini requires preview confirmation and exposes a cancelled handoff (15.3s)
+
+
+  1) tests/shell.spec.ts:212:5 › missing bridge leaves actions unavailable ─────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Your next idea.' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Your next idea.' }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Your next idea.' })
+
+
+      214 |   await expect(
+      215 |     page.getByRole('heading', { name: 'Your next idea.' })
+    > 216 |   ).toBeVisible()
+          |     ^
+      217 |   await expect(
+      218 |     page.getByRole('button', { name: 'Start private session' }).last()
+      219 |   ).toBeDisabled()
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:216:5
+
+    Error Context: ../build/playwright/shell-missing-bridge-leaves-actions-unavailable/error-context.md
+
+  2) tests/shell.spec.ts:222:5 › starts private browsing, submits address, duplicates and closes tabs 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      227 |     .getByRole('button', { name: 'Start private session' })
+      228 |     .last()
+    > 229 |     .click()
+          |      ^
+      230 |   await expect(page.getByRole('heading', { name: 'Where to?' })).toBeVisible()
+      231 |   await page
+      232 |     .getByRole('textbox', { name: 'New tab search' })
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:229:6
+
+    Error Context: ../build/playwright/shell-starts-private-brows-cbde7--duplicates-and-closes-tabs/error-context.md
+
+  3) tests/shell.spec.ts:248:5 › sidebar, command palette focus, appearance and narrow layout ──────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator: getByRole('dialog', { name: 'Browser commands' }).getByRole('textbox')
+    Expected: focused
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: 'Browser commands' }).getByRole('textbox') with timeout 5000ms
+      - waiting for getByRole('dialog', { name: 'Browser commands' }).getByRole('textbox')
+
+
+      252 |   await page.keyboard.press('Meta+k')
+      253 |   const palette = page.getByRole('dialog', { name: 'Browser commands' })
+    > 254 |   await expect(palette.getByRole('textbox')).toBeFocused()
+          |                                              ^
+      255 |   await palette.getByRole('textbox').fill('settings')
+      256 |   await palette.getByRole('button', { name: 'Open settings' }).click()
+      257 |   await expect(
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:254:46
+
+    Error Context: ../build/playwright/shell-sidebar-command-pale-77198-ppearance-and-narrow-layout/error-context.md
+
+  4) tests/shell.spec.ts:274:5 › temporary bookmarks clear at session end; profiles and history stay unavailable 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      279 |     .getByRole('button', { name: 'Start private session' })
+      280 |     .last()
+    > 281 |     .click()
+          |      ^
+      282 |   await page.getByRole('button', { name: 'Bookmarks', exact: true }).click()
+      283 |   await page.getByRole('button', { name: 'Add bookmark' }).click()
+      284 |   await page.getByRole('textbox', { name: 'Bookmark name' }).fill('Reference')
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:281:6
+
+    Error Context: ../build/playwright/shell-temporary-bookmarks--ac728-nd-history-stay-unavailable/error-context.md
+
+  5) tests/shell.spec.ts:306:5 › vertical tab pinning, group creation, collapse and contextual assignment 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      311 |     .getByRole('button', { name: 'Start private session' })
+      312 |     .last()
+    > 313 |     .click()
+          |      ^
+      314 |   await page
+      315 |     .getByRole('button', { name: 'Actions for New tab', exact: true })
+      316 |     .click()
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:313:6
+
+    Error Context: ../build/playwright/shell-vertical-tab-pinning-63521-e-and-contextual-assignment/error-context.md
+
+  6) tests/shell.spec.ts:338:5 › Spaces keep tab organization distinct and empty Spaces can be deleted 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      343 |     .getByRole('button', { name: 'Start private session' })
+      344 |     .last()
+    > 345 |     .click()
+          |      ^
+      346 |   await page.getByRole('button', { name: 'Create Space', exact: true }).click()
+      347 |   await page
+      348 |     .getByRole('textbox', { name: 'Name', exact: true })
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:345:6
+
+    Error Context: ../build/playwright/shell-Spaces-keep-tab-orga-b4a15-empty-Spaces-can-be-deleted/error-context.md
+
+  7) tests/shell.spec.ts:362:5 › Split commands expose pane controls and command bar searches open tabs 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      367 |     .getByRole('button', { name: 'Start private session' })
+      368 |     .last()
+    > 369 |     .click()
+          |      ^
+      370 |   await page.getByRole('button', { name: 'Open command palette' }).click()
+      371 |   await page
+      372 |     .getByRole('dialog')
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:369:6
+
+    Error Context: ../build/playwright/shell-Split-commands-expos-50a0b-mand-bar-searches-open-tabs/error-context.md
+
+  8) tests/shell.spec.ts:392:5 › tab arrows advance real focus through the rendered tab order ──────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      397 |     .getByRole('button', { name: 'Start private session' })
+      398 |     .last()
+    > 399 |     .click()
+          |      ^
+      400 |   for (let n = 0; n < 2; n++) {
+      401 |     await page.getByRole('button', { name: 'Open command palette' }).click()
+      402 |     await page
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:399:6
+
+    Error Context: ../build/playwright/shell-tab-arrows-advance-r-11064-ough-the-rendered-tab-order/error-context.md
+
+  9) tests/shell.spec.ts:415:5 › workspace editor and action dialog contain focus and cancel with Escape 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      420 |     .getByRole('button', { name: 'Start private session' })
+      421 |     .last()
+    > 422 |     .click()
+          |      ^
+      423 |   await page
+      424 |     .getByRole('button', { name: 'Workspace actions', exact: true })
+      425 |     .click()
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:422:6
+
+    Error Context: ../build/playwright/shell-workspace-editor-and-cfd23-ocus-and-cancel-with-Escape/error-context.md
+
+  10) tests/shell.spec.ts:455:5 › navigation actions stay inside the active dialog ─────────────────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      458 |     .getByRole('button', { name: 'Start private session' })
+      459 |     .last()
+    > 460 |     .click()
+          |      ^
+      461 |   await page
+      462 |     .getByRole('button', { name: 'Navigation actions', exact: true })
+      463 |     .click()
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:460:6
+
+    Error Context: ../build/playwright/shell-navigation-actions-stay-inside-the-active-dialog/error-context.md
+
+  11) tests/shell.spec.ts:477:5 › command focus-address intent survives dialog dismissal ───────────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      482 |     .getByRole('button', { name: 'Start private session' })
+      483 |     .last()
+    > 484 |     .click()
+          |      ^
+      485 |   await page
+      486 |     .getByRole('button', { name: 'Open command palette', exact: true })
+      487 |     .click()
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:484:6
+
+    Error Context: ../build/playwright/shell-command-focus-address-intent-survives-dialog-dismissal/error-context.md
+
+  12) tests/shell.spec.ts:500:5 › native-selected tab changes dismiss an unfinished address draft ──
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session' }).last()
+
+
+      505 |     .getByRole('button', { name: 'Start private session' })
+      506 |     .last()
+    > 507 |     .click()
+          |      ^
+      508 |   await page
+      509 |     .getByRole('textbox', { name: 'Address and search' })
+      510 |     .fill('unfinished.invalid')
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:507:6
+
+    Error Context: ../build/playwright/shell-native-selected-tab--c98a9-an-unfinished-address-draft/error-context.md
+
+  13) tests/shell.spec.ts:530:5 › recovery action appears only after the host confirms retirement ──
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('status')
+    Expected substring: "Pages will start blank"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+
+
+      532 | }) => {
+      533 |   await hostStandIn(page, 'ready')
+    > 534 |   await expect(page.getByRole('status')).toContainText('Pages will start blank')
+          |                                          ^
+      535 |   await page.getByRole('button', { name: 'Restore private workspace' }).click()
+      536 |   await expect(page.getByRole('tab', { name: 'New tab' })).toBeVisible()
+      537 |   await expect(
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:534:42
+
+    Error Context: ../build/playwright/shell-recovery-action-appe-c4d75-he-host-confirms-retirement/error-context.md
+
+  14) tests/shell.spec.ts:542:5 › unconfirmed retirement keeps the workspace unavailable ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Private workspace unavailable' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Private workspace unavailable' }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Private workspace unavailable' })
+
+
+      546 |   await expect(
+      547 |     page.getByRole('heading', { name: 'Private workspace unavailable' })
+    > 548 |   ).toBeVisible()
+          |     ^
+      549 |   await expect(
+      550 |     page.getByRole('button', { name: 'Restore private workspace' })
+      551 |   ).toHaveCount(0)
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:548:5
+
+    Error Context: ../build/playwright/shell-unconfirmed-retirement-keeps-the-workspace-unavailable/error-context.md
+
+  15) tests/shell.spec.ts:557:5 › workspace commands create and select a named workspace ───────────
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start private session ⌘T' })
+
+
+      559 | }) => {
+      560 |   await hostStandIn(page)
+    > 561 |   await page.getByRole('button', { name: 'Start private session ⌘T' }).click()
+          |                                                                        ^
+      562 |   await page.getByRole('button', { name: 'Open command palette' }).click()
+      563 |   let palette = page.getByRole('dialog', { name: 'Browser commands' })
+      564 |   await palette.getByRole('textbox').fill('Create workspace')
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:561:72
+
+    Error Context: ../build/playwright/shell-workspace-commands-create-and-select-a-named-workspace/error-context.md
+
+  16) tests/shell.spec.ts:580:5 › Mini requires preview confirmation and exposes a cancelled handoff 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Open in workspace' })
+
+
+      649 |   })
+      650 |   await page.goto('/')
+    > 651 |   await page.getByRole('button', { name: 'Open in workspace' }).click()
+          |                                                                 ^
+      652 |   const preview = page.getByRole('region', {
+      653 |     name: 'Confirm workspace destination'
+      654 |   })
+        at /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/Chrome/tests/shell.spec.ts:651:65
+
+    Error Context: ../build/playwright/shell-Mini-requires-previe-58669-exposes-a-cancelled-handoff/error-context.md
+
+  16 failed
+    tests/shell.spec.ts:212:5 › missing bridge leaves actions unavailable ──────────────────────────
+    tests/shell.spec.ts:222:5 › starts private browsing, submits address, duplicates and closes tabs 
+    tests/shell.spec.ts:248:5 › sidebar, command palette focus, appearance and narrow layout ───────
+    tests/shell.spec.ts:274:5 › temporary bookmarks clear at session end; profiles and history stay unavailable 
+    tests/shell.spec.ts:306:5 › vertical tab pinning, group creation, collapse and contextual assignment 
+    tests/shell.spec.ts:338:5 › Spaces keep tab organization distinct and empty Spaces can be deleted 
+    tests/shell.spec.ts:362:5 › Split commands expose pane controls and command bar searches open tabs 
+    tests/shell.spec.ts:392:5 › tab arrows advance real focus through the rendered tab order ───────
+    tests/shell.spec.ts:415:5 › workspace editor and action dialog contain focus and cancel with Escape 
+    tests/shell.spec.ts:455:5 › navigation actions stay inside the active dialog ───────────────────
+    tests/shell.spec.ts:477:5 › command focus-address intent survives dialog dismissal ─────────────
+    tests/shell.spec.ts:500:5 › native-selected tab changes dismiss an unfinished address draft ────
+    tests/shell.spec.ts:530:5 › recovery action appears only after the host confirms retirement ────
+    tests/shell.spec.ts:542:5 › unconfirmed retirement keeps the workspace unavailable ─────────────
+    tests/shell.spec.ts:557:5 › workspace commands create and select a named workspace ─────────────
+    tests/shell.spec.ts:580:5 › Mini requires preview confirmation and exposes a cancelled handoff ─
+Warning: command "../../../node_modules/.bin/playwright test" exited with non-zero status code

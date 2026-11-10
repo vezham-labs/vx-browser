@@ -1,0 +1,17 @@
+{
+  "name": "release-settings",
+  "argv": [
+    "xcodebuild",
+    "-project",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/VezhamBrowser.xcodeproj",
+    "-scheme",
+    "VezhamBrowser",
+    "-configuration",
+    "Release",
+    "-showBuildSettings"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 8.466,
+  "started_epoch": 1794269016.446136
+}

@@ -1,0 +1,90 @@
+
+ NX   Running targets qualification-tool-tests, qualification-tool-vet for project browser-macos:
+
+- browser-macos
+
+
+
+> nx run browser-macos:qualification-tool-tests
+
+> go test -count=1 -v ./...
+
+=== RUN   TestEvidence
+=== RUN   TestEvidence/valid
+=== RUN   TestEvidence/changed
+=== RUN   TestEvidence/missing
+=== RUN   TestEvidence/traversal
+=== RUN   TestEvidence/absolute
+=== RUN   TestEvidence/symlink
+=== RUN   TestEvidence/duplicate
+=== RUN   TestEvidence/invalid
+=== RUN   TestEvidence/empty
+=== RUN   TestEvidence/directory
+--- PASS: TestEvidence (0.01s)
+    --- PASS: TestEvidence/valid (0.00s)
+    --- PASS: TestEvidence/changed (0.00s)
+    --- PASS: TestEvidence/missing (0.00s)
+    --- PASS: TestEvidence/traversal (0.00s)
+    --- PASS: TestEvidence/absolute (0.00s)
+    --- PASS: TestEvidence/symlink (0.00s)
+    --- PASS: TestEvidence/duplicate (0.00s)
+    --- PASS: TestEvidence/invalid (0.00s)
+    --- PASS: TestEvidence/empty (0.00s)
+    --- PASS: TestEvidence/directory (0.00s)
+=== RUN   TestEvidenceRootAndMalformedDigest
+--- PASS: TestEvidenceRootAndMalformedDigest (0.00s)
+=== RUN   TestAggregate
+=== RUN   TestAggregate/pass
+=== RUN   TestAggregate/failure
+=== RUN   TestAggregate/block
+=== RUN   TestAggregate/notrun
+=== RUN   TestAggregate/skip
+=== RUN   TestAggregate/na
+=== RUN   TestAggregate/unknown
+=== RUN   TestAggregate/duplicate
+=== RUN   TestAggregate/emptyid
+=== RUN   TestAggregate/extra
+=== RUN   TestAggregate/trailing
+=== RUN   TestAggregate/empty
+--- PASS: TestAggregate (0.01s)
+    --- PASS: TestAggregate/pass (0.00s)
+    --- PASS: TestAggregate/failure (0.00s)
+    --- PASS: TestAggregate/block (0.00s)
+    --- PASS: TestAggregate/notrun (0.00s)
+    --- PASS: TestAggregate/skip (0.00s)
+    --- PASS: TestAggregate/na (0.00s)
+    --- PASS: TestAggregate/unknown (0.00s)
+    --- PASS: TestAggregate/duplicate (0.00s)
+    --- PASS: TestAggregate/emptyid (0.00s)
+    --- PASS: TestAggregate/extra (0.00s)
+    --- PASS: TestAggregate/trailing (0.00s)
+    --- PASS: TestAggregate/empty (0.00s)
+=== RUN   TestCLI
+--- PASS: TestCLI (0.00s)
+=== RUN   TestSubprocessCLI
+--- PASS: TestSubprocessCLI (0.89s)
+=== RUN   TestPreflightMissingBundle
+--- PASS: TestPreflightMissingBundle (0.52s)
+=== RUN   TestPlistDottedKeys
+--- PASS: TestPlistDottedKeys (0.02s)
+=== RUN   TestAdHocBundleCannotPassRelease
+--- PASS: TestAdHocBundleCannotPassRelease (0.59s)
+PASS
+ok  	internal.vezham/qualify	2.505s
+
+> nx run browser-macos:qualification-tool-vet
+
+> go vet ./...
+
+
+
+
+ NX   Successfully ran targets qualification-tool-tests, qualification-tool-vet for project browser-macos
+
+
+View logs and investigate cache misses at https://cloud.nx.app/runs/EYAvRBN6Tt
+
+  Run duration:      4.2s
+  Cache:             0/2 hit (0%)
+  Critical path:     3.7s (1 task)
+  Recoverable time:  513ms (12% of the run)

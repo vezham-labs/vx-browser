@@ -1,0 +1,100 @@
+{
+  "repository": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "branch": "cross-browser-research",
+  "initial_head": "9472b17",
+  "initial_state": "clean; zero staged, unstaged and untracked entries",
+  "go_runtime_policy": "developer tool only; no Xcode/Swift package wiring added",
+  "os": {
+    "command": [
+      "sw_vers"
+    ],
+    "returncode": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n",
+    "stderr": ""
+  },
+  "xcode": {
+    "command": [
+      "xcodebuild",
+      "-version"
+    ],
+    "returncode": 0,
+    "stdout": "Xcode 27.2\nBuild version 27B52\n",
+    "stderr": ""
+  },
+  "go": {
+    "command": [
+      "/usr/local/go/bin/go",
+      "version"
+    ],
+    "returncode": 0,
+    "stdout": "go version go1.19.6 darwin/arm64\n",
+    "stderr": ""
+  },
+  "identities": {
+    "command": [
+      "security",
+      "find-identity",
+      "-v",
+      "-p",
+      "codesigning"
+    ],
+    "returncode": 0,
+    "stdout": "     0 valid identities found\n",
+    "stderr": ""
+  },
+  "inspected_source_hashes": [
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserPersistence/ProtectedCatalog.swift",
+      "sha256": "085696437ae7df51719aa2e77fff137d28fe9f5d5652c2dc5be1433c02ca95c2"
+    },
+    {
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/WorkspaceLayout.swift",
+      "sha256": "8d1a5a67d065337b1eadf1988cc9422e75a4ec09c49d2ae83b250283a164afe6"
+    },
+    {
+      "path": "apps/browser-macos/Sources/Host/MainWindowController.swift",
+      "sha256": "f8b55c2b8f1a51a7e512ab64778b52a05f6c048130078ad5e3aa57efcba04377"
+    },
+    {
+      "path": "apps/browser-macos/Sources/Host/ApplicationDelegate.swift",
+      "sha256": "a3b66498b928a794007646ea85aa837f378340f8dd813fd1e861f7e4b3ceb799"
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeStorageSession.swift",
+      "sha256": "3d3d4603285b52b5d1cf88a2f514a26a236e296603565f19926dfb5e4f8f3e8f"
+    },
+    {
+      "path": "apps/browser-macos/StorageRuntime/Sources/BrowserNativeStorage/NativeKeychain.swift",
+      "sha256": "0a519f23bcb2ca82dc9fc7fe8e2aef10a112937b49458345df35da28d778a83f"
+    },
+    {
+      "path": "qualification/sqlcipher-wsf3/descriptor_vfs.c",
+      "sha256": "0c23180422dec0529992f6f6c6e361961ef1fd270c7e6a1c66827c02b5043aa9"
+    },
+    {
+      "path": "qualification/sqlcipher-wsf3/native_probe.c",
+      "sha256": "1ce7a3174d307fcb3b55e92261efd44faa3605daca4d943151db621542f7d719"
+    },
+    {
+      "path": "apps/browser-macos/Chrome/src/Browser.tsx",
+      "sha256": "dc38615c813791ed065522c218f334b13937c64e146e926f03128248a1355bc5"
+    },
+    {
+      "path": "apps/browser-macos/Chrome/src/styles.css",
+      "sha256": "38ef07412760add65f8fb2a1ef944a46959eb476e77b214c60c0da7d270265fa"
+    },
+    {
+      "path": "apps/browser-macos/Chrome/src/main.tsx",
+      "sha256": "573f4fd653f7efa7014165a969367ef05412e20008b2ed90c4b663fab16a4099"
+    },
+    {
+      "path": "apps/browser-macos/Chrome/src/icons.tsx",
+      "sha256": "195bca772f4122bed0537e2db4850ee33adf4c8845042f2f09e7ea59b1e308b6"
+    },
+    {
+      "path": "apps/browser-macos/Sources/Host/BrowserChromeContract.swift",
+      "sha256": "40b94345802ba122c78f9b72ddce6e1512090e499575f7a40493396ddaadd6da"
+    }
+  ],
+  "swiftui_imports_in_browser": ""
+}
