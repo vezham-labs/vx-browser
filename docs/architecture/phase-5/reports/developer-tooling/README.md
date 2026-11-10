@@ -7,3 +7,7 @@ Date: 2026-11-10. Branch: `cross-browser-research`. Initial HEAD: `9472b17`; ini
 [Combined implementation report](implementation-report.md) · [Qualification](implementation-qualification.md) · [Exact commands](commands-and-results.md) · [Files](implementation-files.md) · [Tests](test-matrix.md) · [Go usage](../../../../../tools/vezham-qualify/README.md)
 
 [WS-F7](../WS-F7/README.md) · [Native UI](../native-ui-alignment/README.md) · [WS-F8](../WS-F8/README.md)
+
+## Later implementation
+
+See the [completion programme](../completion-programme/README.md) for the current state. This report remains the record of its original run.

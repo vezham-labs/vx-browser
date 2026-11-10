@@ -1,6 +1,6 @@
 # ADR 0009: Native browser UI and development tooling
 
-- **Status:** Accepted target technology direction; native shell migration incomplete
+- **Status:** Accepted target technology direction. Native shell active, qualification partial.
 - **Date:** 2026-11-10
 - **Authority:** Current WS-F7/native-alignment/WS-F8 implementation brief explicitly establishes this policy.
 
@@ -23,3 +23,7 @@ Retaining React indefinitely conflicts with the new owner direction. A wholesale
 Inventory all browser surfaces and preserve behavior before removing dependencies. Replace each shell surface with native presentation and verify accessibility/focus plus integration. Retire bridge/resources and HeroUI only after no live browser usage remains; other repository web products remain independently scoped. Persistence may not bypass Option D or the existing protected profile authority. Credential and signed-custody blockers do not grant a plaintext fallback.
 
 This record accepts the user-directed target policy. It does not assert that native migration, protected persistence or signed release is implemented or qualified. [Actual work](../architecture/phase-5/reports/developer-tooling/implementation-report.md) · [UI inventory](../architecture/phase-5/reports/native-ui-alignment/implementation-report.md)
+
+## Implementation update
+
+The browser hosts its Main and Mini chrome in SwiftUI within AppKit. Website rendering remains in separately managed WebKit views. Xcode excludes the legacy web shell resources. The legacy source and Playwright fixture remain available for historical comparison. Native interaction and release qualification remain partial. [Implementation and evidence](../architecture/phase-5/reports/completion-programme/README.md).

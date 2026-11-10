@@ -1,0 +1,898 @@
+{
+  "command": "verify-evidence",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "audit-01.json",
+      "status": "passed"
+    },
+    {
+      "name": "audit-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "audit-02.json",
+      "status": "passed"
+    },
+    {
+      "name": "audit-02.log",
+      "status": "passed"
+    },
+    {
+      "name": "audit-03.json",
+      "status": "passed"
+    },
+    {
+      "name": "audit-03.log",
+      "status": "passed"
+    },
+    {
+      "name": "baseline-tracked.json",
+      "status": "passed"
+    },
+    {
+      "name": "baseline.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-01-inline.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-01.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-02.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-02.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-03.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-03.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-04.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-04.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-05.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-05.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-06.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-06.log",
+      "status": "passed"
+    },
+    {
+      "name": "build-07.json",
+      "status": "passed"
+    },
+    {
+      "name": "build-07.log",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit-final.json",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit.json",
+      "status": "passed"
+    },
+    {
+      "name": "cold-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "default-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "diagnostic-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "early-playwright-last-run.json",
+      "status": "passed"
+    },
+    {
+      "name": "external-during-edit.json",
+      "status": "passed"
+    },
+    {
+      "name": "final-default-routing.json",
+      "status": "passed"
+    },
+    {
+      "name": "final-interactive-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "final-mini-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "final-public-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "handler-build.log",
+      "status": "passed"
+    },
+    {
+      "name": "handler-http-command.json",
+      "status": "passed"
+    },
+    {
+      "name": "handler-http-set.json",
+      "status": "passed"
+    },
+    {
+      "name": "handler-http-set.log",
+      "status": "passed"
+    },
+    {
+      "name": "handlers-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "handlers-before.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "handlers-final-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "handlers-immediate-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "handlers-restoration.json",
+      "status": "passed"
+    },
+    {
+      "name": "handlers-selected.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-01/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-01/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-01/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-01/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-02.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-02.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-02/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-02/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-02/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-02/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-03.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-03.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-03/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-03/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-03/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-03/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-04.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-04.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-closeout.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-exit.json",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-native.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-native.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "interactive-process.json",
+      "status": "passed"
+    },
+    {
+      "name": "models-191457549643/commands.json",
+      "status": "passed"
+    },
+    {
+      "name": "models-191457549643/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "models-191457549643/sources.json",
+      "status": "passed"
+    },
+    {
+      "name": "models-191457549643/swift-test.stderr",
+      "status": "passed"
+    },
+    {
+      "name": "models-191457549643/swift-test.stdout",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/attempt-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/attempt-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-01/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-2/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-2/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-2/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/attempt-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-02/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-2/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-2/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-2/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/attempt-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-03/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-1/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-1/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-2/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-2/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-2/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-2/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-2/stderr.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/attempt-2/stdout.log",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-04/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/cold-paste-focus.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/cold-paste-focus.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/custom-mini.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/custom-mini.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/default-http-https.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/default-http-https.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-before.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-diagnostic-06.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-diagnostic-06.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-reorder-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-reorder-after.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-reorder-second.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/drag-reorder-second.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-drag-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-drag-before.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-external-edit.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-external-edit.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-mini-shortcut-closed.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-mini-shortcut-closed.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-public-pages.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/final-public-pages.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/mini-shortcut-empty-failure.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/mini-shortcut-empty-failure.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/mini-transfer.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/mini-transfer.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/native-keyboard.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/native-keyboard.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/primary-reorder-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/primary-reorder-after.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-apple.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-apple.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-example.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-example.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-github.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-github.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-mdn.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-mdn.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-notion.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-notion.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-wikipedia.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/public-wikipedia.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/target-blank-pointer.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/target-blank-pointer.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/unsupported-auth-download.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/unsupported-auth-download.png",
+      "status": "passed"
+    },
+    {
+      "name": "observations/voiceover-attempt.json",
+      "status": "passed"
+    },
+    {
+      "name": "observations/voiceover-attempt.png",
+      "status": "passed"
+    },
+    {
+      "name": "planned-cases.json",
+      "status": "passed"
+    },
+    {
+      "name": "pointer-build-02.json",
+      "status": "passed"
+    },
+    {
+      "name": "pointer-build-02.log",
+      "status": "passed"
+    },
+    {
+      "name": "pointer-build.json",
+      "status": "passed"
+    },
+    {
+      "name": "pointer-build.log",
+      "status": "passed"
+    },
+    {
+      "name": "popup-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "preservation.json",
+      "status": "passed"
+    },
+    {
+      "name": "primary-reorder-01.json",
+      "status": "passed"
+    },
+    {
+      "name": "public-pages-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-contracts-01.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-contracts-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-01.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-02.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-02.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-03.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-03.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-04.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-04.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-05.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-typecheck-05.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-01.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-01.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-02.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-02.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-03.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-03.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-04.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-04.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-05.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-05.log",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-06.json",
+      "status": "passed"
+    },
+    {
+      "name": "reliability-ui-06.log",
+      "status": "passed"
+    },
+    {
+      "name": "revision-ledger.json",
+      "status": "passed"
+    },
+    {
+      "name": "swift-regression.json",
+      "status": "passed"
+    },
+    {
+      "name": "swift-regression.log",
+      "status": "passed"
+    },
+    {
+      "name": "ui-03-artifacts/.last-run.json",
+      "status": "passed"
+    },
+    {
+      "name": "ui-03-artifacts/shell-command-focus-address-intent-survives-dialog-dismissal/error-context.md",
+      "status": "passed"
+    },
+    {
+      "name": "ui-04-artifacts/.last-run.json",
+      "status": "passed"
+    },
+    {
+      "name": "ui-05-artifacts/.last-run.json",
+      "status": "passed"
+    },
+    {
+      "name": "ui-05-artifacts/shell-sidebar-command-pale-77198-ppearance-and-narrow-layout/error-context.md",
+      "status": "passed"
+    },
+    {
+      "name": "ui-06-artifacts/.last-run.json",
+      "status": "passed"
+    },
+    {
+      "name": "unsupported-workflows.json",
+      "status": "passed"
+    },
+    {
+      "name": "warm-open.json",
+      "status": "passed"
+    },
+    {
+      "name": "wrapper-open.json",
+      "status": "passed"
+    }
+  ]
+}

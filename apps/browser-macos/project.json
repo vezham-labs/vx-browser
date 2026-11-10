@@ -41,6 +41,27 @@
       },
       "cache": false
     },
+    "build-workspace-qualification": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/native_host.py build --wsf6-qualification"
+      }
+    },
+    "build-unsigned-release": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/native_host.py build --unsigned-release"
+      }
+    },
+    "build-legacy-chrome-fixture": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/native_host.py chrome"
+      }
+    },
     "audit": {
       "executor": "nx:run-commands",
       "cache": false,
@@ -98,6 +119,7 @@
       }
     },
     "reliability-ui": {
+      "dependsOn": ["build-legacy-chrome-fixture"],
       "executor": "nx:run-commands",
       "cache": false,
       "options": {

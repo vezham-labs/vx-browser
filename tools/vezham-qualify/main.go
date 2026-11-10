@@ -219,6 +219,32 @@ func plist(path, key string) (string, error) {
 	}
 	return fmt.Sprint(value), nil
 }
+func hasHardenedRuntime(signature string) bool {
+	for _, line := range strings.Split(signature, "\n") {
+		if !strings.HasPrefix(line, "CodeDirectory ") {
+			continue
+		}
+		_, flags, found := strings.Cut(line, " flags=")
+		if !found {
+			continue
+		}
+		_, values, found := strings.Cut(flags, "(")
+		if !found {
+			continue
+		}
+		values, _, found = strings.Cut(values, ")")
+		if !found {
+			continue
+		}
+		for _, flag := range strings.Split(values, ",") {
+			if strings.TrimSpace(flag) == "runtime" {
+				return true
+			}
+		}
+	}
+	return false
+}
+
 func preflight(bundle string) []Check {
 	if runtime.GOOS != "darwin" {
 		return []Check{{"platform", "blocked", "macOS tools required"}}
@@ -272,7 +298,7 @@ func preflight(bundle string) []Check {
 		}
 		checks = append(checks, Check{"developer-id", status, reason})
 		status = "failed"
-		if strings.Contains(signature, "runtime") {
+		if hasHardenedRuntime(signature) {
 			status = "passed"
 		}
 		checks = append(checks, Check{"hardened-runtime", status, ""})
@@ -330,7 +356,7 @@ func preflight(bundle string) []Check {
 
 func execute(args []string, out io.Writer) int {
 	if len(args) == 0 {
-		fmt.Fprintln(out, "usage: vezham-qualify verify-evidence --root DIR --manifest FILE | aggregate-tests --ledger FILE | release-preflight --bundle APP")
+		fmt.Fprintln(out, "usage: vezham-qualify verify-evidence --root DIR --manifest FILE | aggregate-tests --ledger FILE | release-preflight --bundle APP | native-bundle --bundle APP")
 		return 2
 	}
 	flags := flag.NewFlagSet(args[0], flag.ContinueOnError)
@@ -356,6 +382,12 @@ func execute(args []string, out io.Writer) int {
 			return 2
 		}
 		checks = aggregate(*ledger)
+	case "native-bundle":
+		if *bundle == "" {
+			fmt.Fprintln(out, "--bundle required")
+			return 2
+		}
+		checks = nativeBundle(*bundle)
 	case "release-preflight":
 		if *bundle == "" {
 			fmt.Fprintln(out, "--bundle required")

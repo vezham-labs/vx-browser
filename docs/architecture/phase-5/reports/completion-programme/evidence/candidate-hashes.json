@@ -1,0 +1,28 @@
+{
+  "debug": {
+    "path": "/private/tmp/vezham-programme-dev/Build/Products/Debug/VezhamBrowser.app",
+    "files": {
+      "Contents/Info.plist": "050c1cb37aa178fdd9bf09274e1d00cedf21c85551d9771e13c18a50682f0e9c",
+      "Contents/MacOS/VezhamBrowser": "8625fcef4ab69a1bf17d52bd840834ce3a22e9b8136f4481b8f09b89dfeefe70",
+      "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "Contents/_CodeSignature/CodeResources": "6686de10a28a2fe11b36cbb86dcbacc827cfc4ea116b4dabf1845e5aee629e9b"
+    }
+  },
+  "qualification": {
+    "path": "/private/tmp/vezham-programme-qual/Build/Products/Debug/VezhamBrowser.app",
+    "files": {
+      "Contents/Info.plist": "8cf95af0526908c2e81856cd573efcf5735ab526618e190cdfd54f88895fe889",
+      "Contents/MacOS/VezhamBrowser": "6464653d08da88e4da0a8eb714885df0ec27e4d0ef7fb4540d15ead9121c6f2f",
+      "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+      "Contents/_CodeSignature/CodeResources": "6686de10a28a2fe11b36cbb86dcbacc827cfc4ea116b4dabf1845e5aee629e9b"
+    }
+  },
+  "unsigned-release": {
+    "path": "/private/tmp/vezham-programme-release/Build/Products/Release/VezhamBrowser.app",
+    "files": {
+      "Contents/Info.plist": "050c1cb37aa178fdd9bf09274e1d00cedf21c85551d9771e13c18a50682f0e9c",
+      "Contents/MacOS/VezhamBrowser": "610afec83d9a5b519fc71e717c7b7ef0b94ea408209714fcee4cdce756f700ba",
+      "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+    }
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "branch": "cross-browser-research",
+  "starting_head": "6c19e9c931d6634080c14b4a8ec0b566e2245ca2",
+  "ending_head": "6c19e9c931d6634080c14b4a8ec0b566e2245ca2",
+  "initial_state": "clean",
+  "counts": {
+    "staged": 0,
+    "unstaged": 17,
+    "untracked": 131
+  },
+  "changes": [
+    {
+      "status": " M",
+      "path": "apps/browser-macos/README.md"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/Sources/Host/BrowserChromeContract.swift"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/Sources/Host/MainWindowController.swift"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/Tools/native_host.py"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/VezhamBrowser.xcodeproj/project.pbxproj"
+    },
+    {
+      "status": " M",
+      "path": "apps/browser-macos/project.json"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/README.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/phase-5-scope-and-milestones.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/README.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/WS-F7/README.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/WS-F8/README.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/developer-tooling/README.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/architecture/phase-5/reports/native-ui-alignment/README.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/decisions/0009-native-browser-ui-and-development-tooling.md"
+    },
+    {
+      "status": " M",
+      "path": "tools/vezham-qualify/README.md"
+    },
+    {
+      "status": " M",
+      "path": "tools/vezham-qualify/main.go"
+    },
+    {
+      "status": " M",
+      "path": "tools/vezham-qualify/main_test.go"
+    },
+    {
+      "status": "??",
+      "path": "apps/browser-macos/ProtectedStoreWorker/descriptor_vfs.c"
+    },
+    {
+      "status": "??",
+      "path": "apps/browser-macos/ProtectedStoreWorker/descriptor_vfs.h"
+    },
+    {
+      "status": "??",
+      "path": "apps/browser-macos/ProtectedStoreWorker/workspace_store.c"
+    },
+    {
+      "status": "??",
+      "path": "apps/browser-macos/Sources/Host/NativeBrowserChrome.swift"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/README.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/SHA256SUMS"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/SOURCE-SHA256SUMS"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/aggregate.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/audit-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/audit-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/audit-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/candidate-hashes.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/core.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/core.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/core.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/delivery.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/dev-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/dev-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/dev-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/formatting.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/formatting.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/formatting.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/go-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/go-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/go-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/historical-0.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/historical-1.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/historical-2.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/historical-3.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/historical-4.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/historical-5.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/historical-checks.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/identities.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/identities.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/identities.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/manual-ui.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native-build-01.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native-build-01.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native-build-01.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native-build-02.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native-build-02.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native-build-02.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/attempt-1/events.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/attempt-1/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/attempt-1/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/attempt-1/result.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/attempt-1/stderr.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/attempt-1/stdout.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/fixture.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/recovery/summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/attempt-1/events.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/attempt-1/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/attempt-1/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/attempt-1/result.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/attempt-1/stderr.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/attempt-1/stdout.log.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/fixture.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/hashes-after.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/hashes-before.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/native/workspace/summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-audit.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-audit.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-audit.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-native.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-native.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-native.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-qualification.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-qualification.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-qualification.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-quality.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-quality.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-quality.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-release.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-release.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/nx-release.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/preflight-release.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/preflight-release.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/preflight-release.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider-verified.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider-verified.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider-verified.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/provider.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/qual-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/qual-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/qual-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/qualification-ledger.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/recovery-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/recovery-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/recovery-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/recovery.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/recovery.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/recovery.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-settings-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-settings-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-settings.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-settings.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/release-settings.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/report-validation.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/storage.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/storage.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/storage.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/structure-debug.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/structure-debug.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/structure-debug.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/structure-release.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/structure-release.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/structure-release.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/workspace-final.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/workspace-final.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/workspace-final.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/workspace.command.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/workspace.stderr.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/evidence/workspace.stdout.txt"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/implementation.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/release-and-risk.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/verification.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/architecture/phase-5/reports/completion-programme/workspace-matrix.md"
+    },
+    {
+      "status": "??",
+      "path": "qualification/webkit-storage-f0/Sources/BrowserDomain/NativeNavigationInput.swift"
+    },
+    {
+      "status": "??",
+      "path": "qualification/webkit-storage-f0/Tests/WSF0Tests/NativeNavigationInputTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "tools/vezham-qualify/native_bundle.go"
+    },
+    {
+      "status": "??",
+      "path": "tools/vezham-qualify/protectedstore_integration_test.go"
+    }
+  ],
+  "history_operations": false
+}

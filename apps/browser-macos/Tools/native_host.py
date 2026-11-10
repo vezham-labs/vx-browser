@@ -34,14 +34,17 @@ def build_chrome():
     shutil.copyfile(CHROME / "index.html", CHROME_OUTPUT / "index.html")
 
 
-def build(qualification=False, reliability=False):
-    build_chrome()
+def build(qualification=False, reliability=False, workspace=False, unsigned=False):
     settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf4.qualification"] if qualification else []
     if reliability:
         settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf5.qualification"]
+    if workspace:
+        settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf6.qualification"]
+    if unsigned:
+        settings = ["CODE_SIGNING_ALLOWED=NO"]
     run([
         "xcodebuild", "-project", str(APP_ROOT / "VezhamBrowser.xcodeproj"),
-        "-scheme", "VezhamBrowser", "-configuration", "Debug", "-destination",
+        "-scheme", "VezhamBrowser", "-configuration", "Release" if unsigned else "Debug", "-destination",
         "platform=macOS,arch=" + platform.machine(), "-derivedDataPath", str(DERIVED_DATA), "build",
         "ARCHS=" + platform.machine(), "ONLY_ACTIVE_ARCH=YES", "MACOSX_DEPLOYMENT_TARGET=26.0", *settings
     ])
@@ -57,7 +60,6 @@ def audit():
     entitlements = plistlib.loads(entitlement_output.encode())
     info = plistlib.loads((APP / "Contents/Info.plist").read_bytes())
     load_commands = capture(["otool", "-l", str(executable)]).stdout
-    section = re.search(r"cmd LC_BUILD_VERSION(?P<values>.*?)(?=Load command|$)", load_commands, re.S)
     minimums = re.findall(r"\bminos\s+(\S+)", load_commands)
     minimum = minimums[0] if minimums else None
     linked_libraries = capture(["otool", "-L", str(executable)]).stdout
@@ -68,8 +70,11 @@ def audit():
         "adHocDevelopmentSignature": "Signature=adhoc" in signature,
         "boundedSandboxEntitlements": entitlements == {"com.apple.security.app-sandbox": True, "com.apple.security.network.client": True},
         "nativeWebKitLinked": "WebKit.framework" in linked_libraries,
-        "chromeResourcesPresent": all((APP / "Contents/Resources/chrome" / name).is_file()
-                                      for name in ("index.html", "chrome.js", "chrome.css")),
+        "nativeSwiftUILinked": "SwiftUI.framework" in linked_libraries,
+        "noWebChromeResources": not any(
+            p.suffix in {".js", ".css", ".html"} or p.name == "chrome"
+            for p in (APP / "Contents/Resources").rglob("*")
+        ),
         "noWebsiteMessageHandlerRegistration": "addScriptMessageHandler" not in
             (APP_ROOT / "StorageRuntime/Sources/BrowserNativeStorage/NativeWebKitStorage.swift").read_text(),
         "engineIndependentCore": all("import WebKit" not in p.read_text() and "import AppKit" not in p.read_text()
@@ -84,6 +89,7 @@ def audit():
         "method": "WS-F4 development bundle/static boundary audit, not runtime/release security qualification. No macOS26 runtime or Developer ID/notarization claim."
     }
     output = APP_ROOT / "build/wsf1-bundle-audit.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps(result, indent=2, sort_keys=True))
     if not all(checks.values()):
@@ -95,10 +101,12 @@ def main():
     parser.add_argument("action", choices=["build", "chrome", "audit", "launch"])
     parser.add_argument("--qualification", action="store_true")
     parser.add_argument("--wsf5-qualification", action="store_true")
+    parser.add_argument("--wsf6-qualification", action="store_true")
+    parser.add_argument("--unsigned-release", action="store_true")
     args = parser.parse_args()
     action = args.action
     if action == "build":
-        build(args.qualification, args.wsf5_qualification)
+        build(args.qualification, args.wsf5_qualification, args.wsf6_qualification, args.unsigned_release)
     elif action == "chrome":
         build_chrome()
     elif action == "audit":

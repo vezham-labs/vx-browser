@@ -7,3 +7,7 @@ Date: 2026-11-10. Branch: `cross-browser-research`. Initial HEAD: `9472b17`; ini
 [Implementation assessment](implementation-report.md) · [Qualification](implementation-qualification.md) · [Required tests](test-matrix.md) · [Files](implementation-files.md)
 
 The coordinated task delivered tested developer tooling, a shell build correction and release preparation. Those changes do not satisfy WS-F7. Existing private workspace state remains volatile.
+
+## Later implementation
+
+See the [completion programme](../completion-programme/README.md) for the current state. This report remains the record of its original run.

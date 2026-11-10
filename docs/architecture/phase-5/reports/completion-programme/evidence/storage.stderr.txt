@@ -1,0 +1,123 @@
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[Finalizing plan]
+[18 / 122] WSF0Fakes
+[44 / 122] BrowserNativeStorage
+[58 / 122]
+[58 / 123] BrowserDomain
+[59 / 123] BrowserDomain
+[62 / 164]
+[64 / 164]
+[65 / 164]
+[67 / 164]
+[68 / 164]
+[69 / 164]
+[71 / 164]
+[74 / 164]
+[76 / 164]
+[77 / 164]
+[78 / 164]
+[80 / 164]
+[82 / 164]
+[83 / 164]
+[84 / 164]
+[85 / 164]
+[87 / 164]
+[89 / 164]
+[90 / 164]
+[91 / 164]
+[92 / 164]
+[93 / 164]
+[96 / 164] BrowserDomain
+[97 / 164] BrowserDomain
+[98 / 164] BrowserDomain
+[104 / 164] BrowserDomain
+[105 / 164] BrowserDomain
+[107 / 165] BrowserDomain
+[109 / 165]
+[111 / 168] BrowserPorts
+[113 / 168] BrowserPorts
+[119 / 170] BrowserPorts
+[121 / 170] BrowserPorts
+[124 / 178] WSF0Fakes
+[125 / 178] BrowserPersistence
+[127 / 178] BrowserPersistence
+[139 / 178] WSF0Fakes
+[140 / 178] BrowserPersistence
+[140 / 178] WSF0Fakes
+[142 / 178] WSF0Fakes
+[143 / 179]
+[145 / 179] BrowserDomain-product
+[146 / 179] BrowserPorts-product
+[147 / 179] BrowserCore
+[150 / 185] BrowserCore
+[151 / 185] BrowserCore
+[152 / 185] BrowserCore
+[159 / 185] BrowserCore
+[160 / 186] BrowserNativeStorage
+[160 / 195] BrowserNativeStorage
+[162 / 239]
+[163 / 239]
+[164 / 239]
+[166 / 239]
+[168 / 239]
+[169 / 239]
+[169 / 239] BrowserCore
+[171 / 239]
+[172 / 239]
+[173 / 239]
+[174 / 239]
+[176 / 239]
+[178 / 239]
+[180 / 239]
+[181 / 239]
+[182 / 239]
+[183 / 239]
+[184 / 239]
+[185 / 239]
+[186 / 239]
+[187 / 239]
+[188 / 239]
+[190 / 239]
+[191 / 239]
+[192 / 239]
+[194 / 239]
+[195 / 239]
+[196 / 239]
+[197 / 239]
+[199 / 239] BrowserCore
+[199 / 239]
+[201 / 239]
+[202 / 239]
+[204 / 239]
+[205 / 239]
+[206 / 239]
+[208 / 239] BrowserNativeStorage
+[210 / 239] BrowserNativeStorage
+[211 / 239] BrowserNativeStorage
+[212 / 239] BrowserNativeStorage
+[216 / 239] BrowserNativeStorage
+[217 / 239] BrowserNativeStorage
+[218 / 239] BrowserNativeStorage
+[219 / 239] StorageModelTests-product
+[221 / 239] BrowserNativeStorage
+[222 / 239]
+[223 / 239] BrowserNativeStorage
+[225 / 239] BrowserNativeStorage
+[229 / 240] StorageModelTests-product
+[229 / 241] StorageModelTests-product
+[230 / 249]
+[231 / 249]
+[233 / 249] StorageModelTests-product
+[234 / 249] StorageModelTests-product
+[236 / 249] StorageModelTests-product
+[241 / 249] StorageModelTests-product
+[242 / 249] StorageModelTests-product
+[243 / 249] StorageModelTests-product
+[245 / 249] StorageModelTests-product
+[246 / 249] StorageModelTests-product
+[247 / 249] StorageModelTests-product
+[248 / 249] StorageModelTests-product
+Build complete! (168.96 secs)

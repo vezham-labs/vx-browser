@@ -1,0 +1,13 @@
+{
+  "name": "structure-debug",
+  "argv": [
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/completion/vezham-qualify",
+    "native-bundle",
+    "--bundle",
+    "/private/tmp/vezham-programme-dev/Build/Products/Debug/VezhamBrowser.app"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 0.081,
+  "started_epoch": 1794273577.807723
+}

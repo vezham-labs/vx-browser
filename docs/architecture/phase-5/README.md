@@ -39,3 +39,7 @@ The maintained [M1 baseline](reports/M1/README.md) supersedes historical pending
 ## 2026-11-10 coordinated WS-F7/native/tooling/WS-F8 execution
 
 [Actual partial implementation](reports/developer-tooling/implementation-report.md) delivers Go qualification tooling, a shell build fix and safe release preparation. [WS-F7](reports/WS-F7/README.md) remains blocked on protected production writer/positive signed key custody; [native-primary UI](reports/native-ui-alignment/README.md) is not implemented; [WS-F8](reports/WS-F8/README.md) has unsigned structural evidence only. Existing historical approvals and release gates remain in force. No whole-milestone completion or distribution acceptance is claimed.
+
+## Native browser completion programme
+
+The current branch builds SwiftUI/AppKit browser chrome and qualifies a disposable encrypted transaction worker. Production storage and signed release remain incomplete. [Programme record](reports/completion-programme/README.md).

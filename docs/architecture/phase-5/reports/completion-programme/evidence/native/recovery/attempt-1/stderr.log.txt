@@ -1,0 +1,1 @@
+2026-11-10 06:48:47.137 VezhamBrowser[27551:3430264] WARNING: Application performed a reentrant operation in its NSTableView delegate. This warning will become an assert in the future.

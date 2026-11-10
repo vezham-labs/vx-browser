@@ -180,3 +180,18 @@ func TestAdHocBundleCannotPassRelease(t *testing.T) {
 		t.Fatalf("inflated release claim: %+v", r)
 	}
 }
+
+func TestRuntimeFlagIgnoresOtherFields(t *testing.T) {
+	if hasHardenedRuntime("Executable=/tmp/runtime/app\nCodeDirectory v=20500 flags=0x2(adhoc)") {
+		t.Fatal("executable path must not count as Hardened Runtime")
+	}
+	if !hasHardenedRuntime("CodeDirectory v=20500 flags=0x10002(adhoc,runtime) hashes=2") {
+		t.Fatal("actual runtime flag was not recognized")
+	}
+}
+
+func TestNativeBundleRejectsMissingArtifact(t *testing.T) {
+	if report("native-bundle", nativeBundle(filepath.Join(t.TempDir(), "missing.app"))).Status != "failed" {
+		t.Fatal("missing bundle passed")
+	}
+}

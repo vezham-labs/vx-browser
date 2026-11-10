@@ -1,4 +1,5 @@
 import AppKit
+import SwiftUI
 import WebKit
 import BrowserDomain
 import BrowserNativeStorage
@@ -38,7 +39,7 @@ private final class WorkspaceSplitView: NSSplitView {
 }
 
 @MainActor
-final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWindowDelegate, NSSplitViewDelegate, WKScriptMessageHandlerWithReply {
+final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitViewDelegate {
     private struct PrivateSession {
         let id: PrivateSessionID
         let storage: NativeStorageSession
@@ -47,7 +48,12 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     }
 
     private let root = NSView()
-    private var chrome: WKWebView?
+    // Historical DEBUG qualification helpers retain a nil compatibility reference.
+    // No browser chrome WKWebView is constructed or registered in any build.
+    private var chrome: WKWebView? { nil }
+    private let nativeModel = NativeChromeModel()
+    private var nativeChrome: NSHostingView<NativeBrowserChrome>?
+    private var nativePoll: Task<Void, Never>?
     private let page = WorkspaceSplitView()
     private let panes = [FocusPane(), FocusPane()]
     private let mini: Bool
@@ -95,7 +101,6 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         if let acceptedTransfer, acceptedTransfer.source == source.token, main.tabs.contains(acceptedTransfer.receipt.tab) { return false }
         return !main.closing && main.recovery == nil
     }
-    private var chromeURL: URL?
     private var browsing: PrivateSession?
     private var focusContent = false
     private var busy = false
@@ -154,22 +159,27 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         window.delegate = self
         configureContent(window)
         window.shortcut = { [weak self] key in
-            guard let self else { return false }
+            guard let self, !self.closing else { return false }
             if self.recovery != nil {
                 guard key == "w" else { return false }
                 self.window?.performClose(nil)
                 return true
             }
-            guard ["l", "t", "w", "r", "k", ",", "[", "]"].contains(key),
-                  let chrome = self.chrome, chrome.url == self.chromeURL,
-                  key != "w" || !self.tabs.isEmpty else { return false }
-            self.window?.makeFirstResponder(chrome)
-            if self.mini, ["l", "t", "k"].contains(key) {
-                chrome.evaluateJavaScript("document.querySelector('.mini-address input')?.focus();")
-                return true
+            switch key {
+            case "l": self.nativeModel.focusAddress += 1
+            case "k": self.nativeModel.commands = true
+            case ",": self.nativeModel.settings = true
+            case "t":
+                if self.mini { self.nativeModel.focusAddress += 1 }
+                else { self.nativeModel.send(self.mountedSession == nil ? .startPrivate : .newTab) }
+            case "w":
+                if let selected = self.selected { self.nativeModel.send(.close, tab: selected.rawValue) }
+                else { self.window?.performClose(nil) }
+            case "r": self.nativeModel.send(.reload, tab: self.selected?.rawValue)
+            case "[": self.nativeModel.send(.back, tab: self.selected?.rawValue)
+            case "]": self.nativeModel.send(.forward, tab: self.selected?.rawValue)
+            default: return false
             }
-            chrome.callAsyncJavaScript("window.dispatchEvent(new CustomEvent('vezham-shortcut', {detail:key}));",
-                arguments: ["key": key], in: nil, in: .page, completionHandler: nil)
             return true
         }
     }
@@ -178,28 +188,31 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
 
     private func configureContent(_ window: NSWindow) {
         window.contentView = root
-        guard let entry = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "chrome") else {
-            let message = NSTextField(labelWithString: "Browser chrome is unavailable. Build with the native host build target.")
-            message.frame = NSRect(x: 28, y: 40, width: 580, height: 28)
-            root.addSubview(message)
-            return
-        }
-        chromeURL = entry.standardizedFileURL
-        let configuration = WKWebViewConfiguration()
-        configuration.websiteDataStore = .nonPersistent()
-        configuration.userContentController.addScriptMessageHandler(self, contentWorld: .page, name: "browserChrome")
-        let web = WKWebView(frame: root.bounds, configuration: configuration)
-        web.navigationDelegate = self
-        web.autoresizingMask = [.width, .height]
-        root.addSubview(web)
+        let host = NSHostingView(rootView: NativeBrowserChrome(model: nativeModel))
+        host.frame = root.bounds
+        host.autoresizingMask = [.width, .height]
+        root.addSubview(host)
+        nativeChrome = host
         page.delegate = self
         page.isVertical = true
         page.dividerStyle = .thin
         page.dividerFinished = { [weak self] in self?.rememberDivider() }
         root.addSubview(page)
         page.isHidden = true
-        chrome = web
-        web.loadFileURL(entry, allowingReadAccessTo: entry.deletingLastPathComponent())
+        presentation = (true, mini ? 0 : 236, 71)
+        nativeModel.execute = { [weak self] command in
+            guard let self else { return nil }
+            let response = await self.run(command)
+            self.refreshNative()
+            return response
+        }
+        refreshNative()
+        nativePoll = Task { @MainActor [weak self] in
+            while !Task.isCancelled {
+                self?.refreshNative()
+                try? await Task.sleep(for: .milliseconds(200))
+            }
+        }
         if let value = try? Self.settings().read() {
             switch value {
             case .system: appearance = .system
@@ -215,31 +228,16 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         return GlobalAppearanceSettings(applicationSupport: support.appendingPathComponent("VezhamBrowser"))
     }
 
-    func webView(_ webView: WKWebView, decidePolicyFor action: WKNavigationAction,
-                 decisionHandler: @escaping @MainActor @Sendable (WKNavigationActionPolicy) -> Void) {
-        let allowed = webView === chrome && action.targetFrame?.isMainFrame == true &&
-            action.request.url?.standardizedFileURL == chromeURL
-        decisionHandler(allowed ? .allow : .cancel)
-    }
-
-    func userContentController(_ userContentController: WKUserContentController,
-                               didReceive message: WKScriptMessage) async -> (Any?, String?) {
-        guard let chrome, message.webView === chrome, message.frameInfo.isMainFrame,
-              message.frameInfo.request.url?.standardizedFileURL == chromeURL,
-              chrome.url?.standardizedFileURL == chromeURL,
-              let body = message.body as? [String: Any],
-              JSONSerialization.isValidJSONObject(body),
-              let bytes = try? JSONSerialization.data(withJSONObject: body), bytes.count <= 12_288,
-              let command = try? JSONDecoder().decode(ChromeCommand.self, from: bytes),
-              command.version == 1, command.id.count <= 100, !command.id.isEmpty else {
-            return (nil, "Invalid browser chrome request")
+    private func refreshNative() {
+        guard !closing else { return }
+        let command = ChromeCommand(version: 1, id: "native-snapshot", type: .snapshot, tab: nil, url: nil,
+            value: nil, offset: nil, target: nil, name: nil, visible: nil, left: nil, top: nil)
+        let state = result(command).state
+        if nativeModel.state != state {
+            if state.sessionID != nativeModel.state?.sessionID || state.recovery != nil { nativeModel.bookmarks.removeAll() }
+            nativeModel.state = state
         }
-        let result = await run(command)
-        guard let encoded = try? JSONEncoder().encode(result),
-              let response = try? JSONSerialization.jsonObject(with: encoded) else {
-            return (nil, "Could not encode browser state")
-        }
-        return (response, nil)
+        if !busy { updateSurface() }
     }
 
     private func result(_ command: ChromeCommand, error: ChromeResult.Failure? = nil, text: String? = nil) -> ChromeResult {
@@ -462,7 +460,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         busy = false
         startRecoveryRetirement()
         if closing { scheduleCleanup() }
-        else { updateSurface() }
+        else { presentation.visible = recovery == nil; refreshNative() }
     }
 
     private func privateContentTerminated(_ id: PrivateSessionID) {
@@ -472,7 +470,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         recovery = .retiring
         presentation.visible = false
         focusContent = false
-        if let chrome { window?.makeFirstResponder(chrome) }
+        window?.makeFirstResponder(nil)
         detachContent()
         page.isHidden = true
         startRecoveryRetirement()
@@ -615,7 +613,9 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
 
     private func tabCommand(_ command: ChromeCommand, id: WorkspaceTabID) async throws -> String? {
         switch command.type {
-        case .activate: try layout.apply(.selectTab(id)); focusContent = true
+        case .activate, .activateKeepingChromeFocus:
+            try layout.apply(.selectTab(id))
+            focusContent = command.type == .activate
         case .pin: try layout.apply(.pin(id))
         case .tabSpace:
             guard let target = command.target else { throw ChromeResult.Failure.invalid }
@@ -672,8 +672,9 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     private func detachContent() {
         // AppKit's responder can retain an otherwise detached website surface.
         // Move focus before asking Core to observe native reference retirement.
-        if let chrome, !closing { window?.makeFirstResponder(chrome) }
-        else { window?.makeFirstResponder(nil) }
+        if closing || (window?.firstResponder as? NSView).map({ $0 === page || $0.isDescendant(of: page) }) == true {
+            window?.makeFirstResponder(nil)
+        }
         for pane in panes {
             pane.focus = nil
             pane.subviews.forEach { $0.removeFromSuperview() }
@@ -684,6 +685,11 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     }
 
     private func updateSurface() {
+        if presentation.top == 71 { presentation.left = mini || !nativeModel.sidebarVisible ? 0 : 236 }
+        defer {
+            let showing = !page.isHidden
+            if nativeModel.showsWebContent != showing { nativeModel.showsWebContent = showing }
+        }
         let bounds = root.bounds
         let left = CGFloat(presentation.left), top = CGFloat(presentation.top)
         let width = max(0, bounds.width - left)
@@ -732,7 +738,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
         updateBorders()
         page.isHidden = false
         if focusContent {
-            _ = window?.makeFirstResponder(surface(selected) ?? chrome)
+            _ = window?.makeFirstResponder(surface(selected) ?? nativeChrome)
             focusContent = false
         }
     }
@@ -930,7 +936,7 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
     func windowWillClose(_ notification: Notification) {
         closing = true
         page.isHidden = true
-        chrome?.configuration.userContentController.removeScriptMessageHandler(forName: "browserChrome", contentWorld: .page)
+        nativePoll?.cancel(); nativePoll = nil; nativeModel.execute = nil
         detachContent()
         for child in Array(minis.values) { child.window?.close() }
         if !busy { scheduleCleanup() }
@@ -946,10 +952,8 @@ final class MainWindowController: NSWindowController, WKNavigationDelegate, NSWi
                 do { try await endPrivate() }
                 catch { page.isHidden = true }
             }
-            chrome?.stopLoading()
-            chrome?.navigationDelegate = nil
-            chrome?.removeFromSuperview()
-            chrome = nil
+            nativeChrome?.removeFromSuperview()
+            nativeChrome = nil
             didClose?()
         }
     }
@@ -1327,7 +1331,7 @@ extension MainWindowController {
         let command = try! JSONDecoder().decode(ChromeCommand.self, from: Data("{\"version\":1,\"id\":\"observation\",\"type\":\"snapshot\"}".utf8))
         let encoded = try! JSONEncoder().encode(result(command).state)
         return ["window": window?.windowNumber ?? -1, "visible": window?.isVisible ?? false,
-                "closing": closing, "busy": busy, "chromeReady": chrome?.isLoading == false,
+                "closing": closing, "busy": busy, "nativeChromeReady": nativeChrome != nil,
                 "state": try! JSONSerialization.jsonObject(with: encoded),
                 "minis": minis.values.map { $0.reliabilityObservation() }]
     }
@@ -1437,7 +1441,7 @@ extension MainWindowController {
             try check("F6-MINI-DESTINATION-PREVIEW", preview.workspace == layout.activeWorkspace.name && preview.space == layout.activeSpace.name && transferTarget == target, contract: true)
             try await child.transferMini(confirmation: preview.token)
             try check("F6-MINI-COMMIT-CLEANUP", await wait {
-                child.closing && child.browsing == nil && child.chrome == nil && minis.isEmpty && selected != first
+                child.closing && child.browsing == nil && child.nativeChrome == nil && minis.isEmpty && selected != first
             })
             try check("F6-HANDOFF-RECEIVER-ISOLATION", await wait { loaded(self, "/alpha") })
             try check("F6-HANDOFF-NO-SOURCE-DATA", await js(self, "return localStorage.getItem('f6-mini') === null && localStorage.getItem('f6-main') === '1';"))
@@ -1474,7 +1478,7 @@ extension MainWindowController {
             }
             await delayed.shutdown()
             _ = try? await transfer.value
-            try check("F6-CLOSE-AFTER-ACCEPTANCE", delayed.browsing == nil && tabs.count == acceptedCount && delayed.chrome == nil)
+            try check("F6-CLOSE-AFTER-ACCEPTANCE", delayed.browsing == nil && tabs.count == acceptedCount && delayed.nativeChrome == nil)
             try await closeTab(selected!)
 
             try check("F6-URL-QUERY-REJECTED", !NativeWebKitStorage.permitsMiniTransferURL(origin.appendingPathComponent("alpha").appending(queryItems: [URLQueryItem(name: "secret", value: "synthetic")])), contract: true)
@@ -1495,7 +1499,7 @@ extension MainWindowController {
                 try check("F6-CYCLE-LOAD-\(i)", await wait { loaded(cycle, "/alpha") })
                 weak var held = cycle.surface(cycle.selected!)
                 await cycle.shutdown()
-                let released = cycle.browsing == nil && held == nil && cycle.chrome == nil
+                let released = cycle.browsing == nil && held == nil && cycle.nativeChrome == nil
                 if !released, let active = cycle.browsing {
                     let detail = ["recovery": cycle.recovery?.rawValue ?? "none",
                                   "core": String(describing: await active.storage.core.summary(active.scope)),
@@ -1522,7 +1526,7 @@ extension MainWindowController {
             denied.browsing = PrivateSession(id: deniedSession.id, storage: deniedSession.storage, scope: deniedSession.scope, context: cleanupGrant)
             await denied.shutdown()
             await shutdown()
-            try check("F6-SHUTDOWN", browsing == nil && bindings.isEmpty && chrome == nil)
+            try check("F6-SHUTDOWN", browsing == nil && bindings.isEmpty && nativeChrome == nil)
             Self.emit("qualification", status: "PASS_NATIVE")
         } catch {
             await shutdown()
@@ -1707,10 +1711,10 @@ extension MainWindowController {
                     && closingWindow.recovery == nil && closingSession.storage.adapter.surface(closingView) == nil,
                 contract: true)
             await closingWindow.shutdown()
-            try check("R-CLOSING-SINGLE-TEARDOWN", closingWindow.browsing == nil && closingWindow.chrome == nil)
+            try check("R-CLOSING-SINGLE-TEARDOWN", closingWindow.browsing == nil && closingWindow.nativeChrome == nil)
 
             await shutdown()
-            try check("R-SHUTDOWN-JOINS", closing && retirementTask == nil && chrome == nil)
+            try check("R-SHUTDOWN-JOINS", closing && retirementTask == nil && nativeChrome == nil)
             Self.emit("qualification", status: "PASS_NATIVE")
         } catch {
             Self.emit("qualification", status: "FAIL")
@@ -1796,7 +1800,7 @@ extension MainWindowController {
             try check("URL-MINI-TRANSFER-DESTINATION", selected != first)
             await child.shutdown()
             miniController = nil
-            try check("LIFE-MINI-CLEANUP", await wait { minis.isEmpty && child.browsing == nil && child.chrome == nil })
+            try check("LIFE-MINI-CLEANUP", await wait { minis.isEmpty && child.browsing == nil && child.nativeChrome == nil })
             try check("COMP-TRANSFER-URL-ONLY", await wait { title("Alpha") })
             try check("COMP-TRANSFER-STORAGE-UNCHANGED", await js("return localStorage.getItem('mini-only')===null && localStorage.getItem('main-only')==='synthetic';"))
             // Real WebKit target-blank delegate path; DOM click is not a pointer qualification.
@@ -1838,7 +1842,7 @@ extension MainWindowController {
             await Task.yield()
             await racer.shutdown()
             _ = await receiveTask.value
-            try check("LIFE-CLOSE-DURING-RECEIVE", racer.browsing == nil && racer.tabs.isEmpty && racer.chrome == nil && racer.closing)
+            try check("LIFE-CLOSE-DURING-RECEIVE", racer.browsing == nil && racer.tabs.isEmpty && racer.nativeChrome == nil && racer.closing)
             try await endPrivate()
             try check("LIFE-END-SESSION", self.browsing == nil && tabs.isEmpty && minis.isEmpty && page.arrangedSubviews.isEmpty)
             try startPrivate()
@@ -1847,7 +1851,7 @@ extension MainWindowController {
             try check("COMP-NEW-PRIVATE-READY", await wait { title("Alpha") })
             try check("COMP-NEW-PRIVATE-CLEAN", await js("return localStorage.getItem('main-only')===null && localStorage.getItem('mini-only')===null && !document.cookie.includes('mainOnly=');"))
             await shutdown()
-            try check("LIFE-MAIN-SHUTDOWN", self.browsing == nil && chrome == nil && tabs.isEmpty)
+            try check("LIFE-MAIN-SHUTDOWN", self.browsing == nil && nativeChrome == nil && tabs.isEmpty)
             emit("qualification", "PASS_NATIVE")
         } catch { emit("qualification", "FAIL", "See preceding case and preserved native stderr") }
     }

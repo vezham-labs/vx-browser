@@ -1,0 +1,11 @@
+
+> nx run browser-macos:audit
+
+> python3 apps/browser-macos/Tools/native_host.py audit
+
+Build the browser before auditing or launching it.
+Warning: command "python3 apps/browser-macos/Tools/native_host.py audit" exited with non-zero status code
+
+  Run duration:      1.3s
+  Critical path:     1.2s (1 task)
+  Recoverable time:  <1ms

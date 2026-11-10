@@ -77,3 +77,9 @@ Architecture checks and Markdown/ADR validation are deliberately not implemented
 as speculative source-string tests. The current runtime architecture inventory
 is in `docs/architecture/phase-5/reports/native-ui-alignment/`. Full native UI
 migration and production protected storage remain outstanding.
+
+## Native product bundle and storage fixture
+
+Run `vezham-qualify native-bundle --bundle PATH` against the current arm64 Debug or unsigned Release product. Use `release-preflight` to check signature and notarization separately.
+
+From this Go module, set `VEZHAM_SQLCIPHER_PROVIDER` to the retained arm64 provider directory and run `go test -tags protectedstore -run TestProtectedStore -count=1 -v ./...`. The suite verifies both artifact hashes and creates disposable files with synthetic keys. [Programme record](../../docs/architecture/phase-5/reports/completion-programme/README.md).

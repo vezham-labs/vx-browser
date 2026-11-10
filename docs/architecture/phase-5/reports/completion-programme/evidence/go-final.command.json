@@ -1,0 +1,22 @@
+{
+  "name": "go-final",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run-many",
+    "-t",
+    "qualification-tool-tests",
+    "qualification-tool-vet",
+    "--projects",
+    "browser-macos",
+    "--parallel=2",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 20.784,
+  "started_epoch": 1794273350.426765
+}

@@ -1,0 +1,170 @@
+{
+  "command": "aggregate-tests",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "F7-01",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-02",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-03",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-04",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-05",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-06",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-07",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-08",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-09",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-10",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-11",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-12",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-13",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-14",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-15",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-16",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-17",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-18",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-19",
+      "status": "blocked"
+    },
+    {
+      "name": "F7-20",
+      "status": "blocked"
+    },
+    {
+      "name": "actual-webkit-process-exit",
+      "status": "not_executed"
+    },
+    {
+      "name": "audit-final",
+      "status": "passed"
+    },
+    {
+      "name": "core",
+      "status": "passed"
+    },
+    {
+      "name": "dev-final",
+      "status": "passed"
+    },
+    {
+      "name": "formatting",
+      "status": "passed"
+    },
+    {
+      "name": "go-final",
+      "status": "passed"
+    },
+    {
+      "name": "identities",
+      "status": "blocked"
+    },
+    {
+      "name": "nx-quality",
+      "status": "failed"
+    },
+    {
+      "name": "physical-input-matrix",
+      "status": "not_executed"
+    },
+    {
+      "name": "preflight-release",
+      "status": "blocked"
+    },
+    {
+      "name": "provider-verified",
+      "status": "passed"
+    },
+    {
+      "name": "qual-final",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final",
+      "status": "passed"
+    },
+    {
+      "name": "release-final",
+      "status": "passed"
+    },
+    {
+      "name": "release-settings-final",
+      "status": "passed"
+    },
+    {
+      "name": "storage",
+      "status": "passed"
+    },
+    {
+      "name": "structure-debug",
+      "status": "passed"
+    },
+    {
+      "name": "structure-release",
+      "status": "passed"
+    },
+    {
+      "name": "supported-os-signed-runtime",
+      "status": "not_executed"
+    },
+    {
+      "name": "voiceover-speech",
+      "status": "not_executed"
+    },
+    {
+      "name": "workspace-final",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nx-quality",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run-many",
+    "-t",
+    "qualification-tool-tests",
+    "qualification-tool-vet",
+    "reliability-contracts",
+    "reliability-typecheck",
+    "reliability-ui",
+    "lint",
+    "--projects",
+    "browser-macos",
+    "--parallel=2",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 1,
+  "elapsed_seconds": 45.742,
+  "started_epoch": 1794273235.804957
+}

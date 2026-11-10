@@ -1,0 +1,166 @@
+[
+  {
+    "id": "F7-01",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-02",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-03",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-04",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-05",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-06",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-07",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-08",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-09",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-10",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-11",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-12",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-13",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-14",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-15",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-16",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-17",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-18",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-19",
+    "status": "blocked"
+  },
+  {
+    "id": "F7-20",
+    "status": "blocked"
+  },
+  {
+    "id": "core",
+    "status": "passed"
+  },
+  {
+    "id": "storage",
+    "status": "passed"
+  },
+  {
+    "id": "provider-verified",
+    "status": "passed"
+  },
+  {
+    "id": "go-final",
+    "status": "passed"
+  },
+  {
+    "id": "nx-quality",
+    "status": "failed"
+  },
+  {
+    "id": "dev-final",
+    "status": "passed"
+  },
+  {
+    "id": "qual-final",
+    "status": "passed"
+  },
+  {
+    "id": "release-final",
+    "status": "passed"
+  },
+  {
+    "id": "audit-final",
+    "status": "passed"
+  },
+  {
+    "id": "workspace-final",
+    "status": "passed"
+  },
+  {
+    "id": "recovery-final",
+    "status": "passed"
+  },
+  {
+    "id": "structure-debug",
+    "status": "passed"
+  },
+  {
+    "id": "structure-release",
+    "status": "passed"
+  },
+  {
+    "id": "preflight-release",
+    "status": "blocked"
+  },
+  {
+    "id": "identities",
+    "status": "blocked"
+  },
+  {
+    "id": "release-settings-final",
+    "status": "passed"
+  },
+  {
+    "id": "formatting",
+    "status": "passed"
+  },
+  {
+    "id": "voiceover-speech",
+    "status": "not_executed"
+  },
+  {
+    "id": "physical-input-matrix",
+    "status": "not_executed"
+  },
+  {
+    "id": "actual-webkit-process-exit",
+    "status": "not_executed"
+  },
+  {
+    "id": "supported-os-signed-runtime",
+    "status": "not_executed"
+  }
+]

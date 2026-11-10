@@ -1,0 +1,9 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project apps/browser-macos/VezhamBrowser.xcodeproj -scheme VezhamBrowser -configuration Release -destination platform=macOS,arch=arm64 -showBuildSettings
+
+Resolve Package Graph
+
+Package: storageruntime
+
+Package: unknown
+

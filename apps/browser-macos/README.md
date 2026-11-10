@@ -26,9 +26,7 @@ Development output is ignored under `build/DerivedData`; audit writes
 `build/wsf1-bundle-audit.json`; the historical M0 audit is not overwritten.
 Capture run-specific review evidence separately.
 Debug is ad-hoc signed with App Sandbox/Hardened Runtime and outbound network-client
-entitlement. No media or user-selected-file entitlement is added. Release
-signing is deliberately unconfigured; no keys/provisioning or release artifact
-are prepared. A newer host build with minimum target 26.0 is not runtime evidence
+entitlement. No media or user-selected-file entitlement is added. Release requires a Developer ID Application identity and externally configured team. A newer host build with minimum target 26.0 is not runtime evidence
 for macOS 26 or notarization/distribution qualification.
 
 ## Ownership and Evidence
@@ -66,3 +64,7 @@ Primary WS-F2 qualification is27.2/arm64. The requested release backlog retains
 actual26.0/latest26.x and all signing/notarization/security requirements; public
 distribution remains unauthorized. A successful bounded test process does not
 override blocked Keychain, catalog, unlock, native grants or production-backup gates.
+
+## Active native shell
+
+The active product build uses SwiftUI/AppKit. Use `browser-macos:build-workspace-qualification` for the exact WS-F6 qualification bundle and `browser-macos:build-unsigned-release` for the unsigned Release candidate. The legacy web shell is built separately by `browser-macos:build-legacy-chrome-fixture` for Playwright. [Current programme record](../../docs/architecture/phase-5/reports/completion-programme/README.md).

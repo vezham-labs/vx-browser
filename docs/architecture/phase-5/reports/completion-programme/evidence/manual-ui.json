@@ -1,0 +1,20 @@
+{
+  "candidate": "isolated Debug build 02",
+  "procedure": "AppKit accessibility inspection and pointer/keyboard actions on owned loopback fixture via Codex computer use",
+  "observed": [
+    "Private session activation",
+    "Address focus after activation",
+    "Loopback navigation with query and fragment",
+    "Link navigation and Back",
+    "Command-T new tab",
+    "Two WebKit views in Split Screen",
+    "Workspace editor accepts name",
+    "Mini has its own native window and destination sheet",
+    "Accepted transfer selected a new tab in Main and closed Mini"
+  ],
+  "limits": [
+    "Final sidebar and bookmark changes not manually replayed",
+    "VoiceOver speech unexecuted",
+    "Physical drag/drop and divider tests unexecuted"
+  ]
+}

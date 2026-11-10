@@ -24,7 +24,7 @@ enum ExternalBrowserRoute {
 
 struct ChromeCommand: Decodable {
     enum Kind: String, Decodable {
-        case snapshot, recoverPrivate, startPrivate, endPrivate, newTab, activate, close, duplicate, move
+        case snapshot, recoverPrivate, startPrivate, endPrivate, newTab, activate, activateKeepingChromeFocus, close, duplicate, move
         case navigate, back, forward, reload, stop, copy, paste, appearance, presentation
         case spaceCreate, spaceRename, spaceSwitch, spaceDelete, tabSpace, pin
         case groupCreate, groupRename, groupToggle, groupMove, groupDelete, tabGroup

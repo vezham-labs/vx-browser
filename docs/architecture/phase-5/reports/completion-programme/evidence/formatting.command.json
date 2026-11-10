@@ -1,0 +1,12 @@
+{
+  "name": "formatting",
+  "argv": [
+    "node_modules/.bin/prettier",
+    "--check",
+    "apps/browser-macos/project.json"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 2.776,
+  "started_epoch": 1794273423.913642
+}

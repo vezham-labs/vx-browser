@@ -1,0 +1,23 @@
+{
+  "name": "native-build-02",
+  "argv": [
+    "xcodebuild",
+    "-project",
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/completion/checkout/apps/browser-macos/VezhamBrowser.xcodeproj",
+    "-scheme",
+    "VezhamBrowser",
+    "-configuration",
+    "Debug",
+    "-destination",
+    "platform=macOS,arch=arm64",
+    "-derivedDataPath",
+    "/private/tmp/vezham-completion-native",
+    "build",
+    "ARCHS=arm64",
+    "ONLY_ACTIVE_ARCH=YES"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 39.876,
+  "started_epoch": 1794270537.4882932
+}
