@@ -1,0 +1,36 @@
+{
+  "os": {
+    "argv": [
+      "sw_vers"
+    ],
+    "returncode": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B123\n"
+  },
+  "xcode": {
+    "argv": [
+      "xcodebuild",
+      "-version"
+    ],
+    "returncode": 0,
+    "stdout": "Xcode 27.2\nBuild version 27B52\n"
+  },
+  "go": {
+    "argv": [
+      "/usr/local/go/bin/go",
+      "version"
+    ],
+    "returncode": 0,
+    "stdout": "go version go1.19.6 darwin/arm64\n"
+  },
+  "identities": {
+    "argv": [
+      "security",
+      "find-identity",
+      "-v",
+      "-p",
+      "codesigning"
+    ],
+    "returncode": 0,
+    "stdout": "     0 valid identities found\n"
+  }
+}

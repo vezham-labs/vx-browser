@@ -1,0 +1,54 @@
+{
+  "command": "verify-evidence",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "README.md",
+      "status": "passed"
+    },
+    {
+      "name": "accessibility-report.md",
+      "status": "passed"
+    },
+    {
+      "name": "authenticated-workflows-report.md",
+      "status": "passed"
+    },
+    {
+      "name": "current-state-audit.md",
+      "status": "passed"
+    },
+    {
+      "name": "downloads-report.md",
+      "status": "passed"
+    },
+    {
+      "name": "drag-drop-report.md",
+      "status": "passed"
+    },
+    {
+      "name": "evidence/preservation.json",
+      "status": "passed"
+    },
+    {
+      "name": "evidence/recovery-source-review.json",
+      "status": "passed"
+    },
+    {
+      "name": "final-disposition.md",
+      "status": "passed"
+    },
+    {
+      "name": "macos-26-report.md",
+      "status": "passed"
+    },
+    {
+      "name": "process-recovery-report.md",
+      "status": "passed"
+    },
+    {
+      "name": "test-matrix.md",
+      "status": "passed"
+    }
+  ]
+}

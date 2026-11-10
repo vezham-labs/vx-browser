@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/Users/vigneshwaranbhoj/Documents/Codex/2026-11-10/files-pasted-by-the-user-vezham/work/final-programme/vezham-qualify",
+    "verify-workspace-matrix",
+    "--root",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+    "--manifest",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/final-completion-programme/evidence/workspace-artifacts.SHA256",
+    "--matrix",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/docs/architecture/phase-5/reports/final-completion-programme/evidence/workspace-ledger.json"
+  ],
+  "returncode": 0
+}

@@ -24,13 +24,18 @@ private final class SecretBuffer {
 }
 
 @MainActor public final class NativeKeyBroker: ProfileKeyPort {
-    private struct Entry { let lease: KeyLease; let reference: NativeKeyReference; let secret: SecretBuffer; let context: LAContext }
+    private struct Entry {
+        let lease: KeyLease
+        let reference: NativeKeyReference
+        let caller: CallerContext
+        let secret: SecretBuffer
+        let authentication: LAContext
+    }
     private let service: String
     private let authority: NativeHostAuthority
     private let run: RunID
     private var entries: [ResourceID: Entry] = [:]
     private var epochs: [ProfileID: UInt64] = [:]
-    private var contexts: [ProfileID: LAContext] = [:]
     public private(set) var lastOSStatus: Int32?
     public init(authority: NativeHostAuthority, run: RunID, qualificationNamespace: UUID? = nil) {
         self.authority = authority; self.run = run
@@ -70,7 +75,7 @@ private final class SecretBuffer {
         guard result == errSecSuccess else { throw Self.classify(result) }
     }
     public func acquire(_ ref: NativeKeyReference, context: CallerContext, interactive: Bool) async throws -> KeyLease {
-        guard entries.count < 128, await permitted(ref, context) else { throw KeyFailure.denied }
+        guard await permitted(ref, context), entries.count < 128 else { throw KeyFailure.denied }
         let epoch = epochs[ref.profile, default: 1]
         let authentication = LAContext(); authentication.interactionNotAllowed = !interactive
         authentication.localizedReason = "Unlock this Vezham profile"
@@ -80,18 +85,22 @@ private final class SecretBuffer {
         let result = SecItemCopyMatching(q as CFDictionary, &value)
         lastOSStatus = result
         guard result == errSecSuccess else { authentication.invalidate(); throw Self.classify(result) }
-        guard var bytes = value as? Data, bytes.count == 32 else { authentication.invalidate(); throw KeyFailure.invalid }
+        guard var bytes = value as? Data else { authentication.invalidate(); throw KeyFailure.invalid }
         defer { bytes.resetBytes(in: 0..<bytes.count) }
-        guard await permitted(ref, context), epochs[ref.profile, default: 1] == epoch else { authentication.invalidate(); throw KeyFailure.stale }
+        guard bytes.count == 32 else { authentication.invalidate(); throw KeyFailure.invalid }
+        guard await permitted(ref, context), epochs[ref.profile, default: 1] == epoch,
+              entries.count < 128 else {
+            authentication.invalidate()
+            throw KeyFailure.stale
+        }
         let lease = KeyLease(id: try ResourceID(UUID().uuidString), profile: ref.profile, run: run, epoch: epoch)
-        entries[lease.id] = Entry(lease: lease, reference: ref, secret: SecretBuffer(bytes), context: authentication)
-        contexts[ref.profile] = authentication
+        entries[lease.id] = Entry(lease: lease, reference: ref, caller: context,
+                                  secret: SecretBuffer(bytes), authentication: authentication)
         return lease
     }
     public func revoke(_ profile: ProfileID) {
         epochs[profile, default: 1] += 1
-        for key in Array(entries.keys) where entries[key]?.reference.profile == profile { entries[key]?.context.invalidate(); entries.removeValue(forKey: key) }
-        contexts.removeValue(forKey: profile)?.invalidate()
+        for key in Array(entries.keys) where entries[key]?.reference.profile == profile { entries[key]?.authentication.invalidate(); entries.removeValue(forKey: key) }
     }
     public func hasActiveLease(_ profile: ProfileID) -> Bool { entries.values.contains { $0.reference.profile == profile } }
     public func remove(_ ref: NativeKeyReference, context: CallerContext) async throws {
@@ -110,10 +119,19 @@ private final class SecretBuffer {
         if result == errSecItemNotFound { return false }
         guard result == errSecSuccess else { throw Self.classify(result) };return true
     }
-    // No public raw-key API. Crypto consumes an exact current native lease only.
-    func seal(_ plaintext: Data, lease: KeyLease, aad: Data) throws -> Data {
-        guard let e = entries[lease.id], e.lease == lease, epochs[lease.profile, default: 1] == lease.epoch else { throw KeyFailure.stale }
-        return try AES.GCM.seal(plaintext, using: e.secret.symmetricKey(), authenticating: aad).combined!
+    // Crypto remains inside the native broker. Check the exact caller grant
+    // before using a lease and recheck the local epoch after actor suspension.
+    func seal(_ plaintext: Data, lease: KeyLease, aad: Data) async throws -> Data {
+        guard let candidate = entries[lease.id], candidate.lease == lease else { throw KeyFailure.stale }
+        guard await permitted(candidate.reference, candidate.caller),
+              let current = entries[lease.id], current.lease == lease,
+              epochs[lease.profile, default: 1] == lease.epoch else {
+            entries.removeValue(forKey: lease.id)?.authentication.invalidate()
+            throw KeyFailure.stale
+        }
+        guard let bytes = try AES.GCM.seal(plaintext, using: current.secret.symmetricKey(),
+                                           authenticating: aad).combined else { throw KeyFailure.invalid }
+        return bytes
     }
 }
 

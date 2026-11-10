@@ -43,3 +43,7 @@ The maintained [M1 baseline](reports/M1/README.md) supersedes historical pending
 ## Native browser completion programme
 
 The current branch builds SwiftUI/AppKit browser chrome and qualifies a disposable encrypted transaction worker. Production storage and signed release remain incomplete. [Programme record](reports/completion-programme/README.md).
+
+## Final engineering completion programme
+
+[Current readiness and verified changes](reports/final-completion-programme/README.md) cover native controls, Keychain admission checks, fixture lint, and release tooling. Durable product restore and signed release remain open.

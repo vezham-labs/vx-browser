@@ -1,0 +1,12 @@
+{
+  "name": "diff-final",
+  "argv": [
+    "git",
+    "diff",
+    "--check"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 0.098,
+  "started_epoch": 1794274950.147424
+}

@@ -70,6 +70,9 @@ func evidence(root, manifest string) []Check {
 	if e != nil || !within(root, real) {
 		return []Check{{manifest, "failed", "manifest outside root"}}
 	}
+	if info, err := os.Stat(real); err != nil || !info.Mode().IsRegular() {
+		return []Check{{manifest, "failed", "manifest must be a regular file"}}
+	}
 	f, e := os.Open(real)
 	if e != nil {
 		return []Check{{manifest, "failed", "manifest unavailable"}}
@@ -118,6 +121,10 @@ func evidence(root, manifest string) []Check {
 		}
 		if !within(root, resolved) {
 			checks = append(checks, Check{name, "failed", "symlink outside root"})
+			continue
+		}
+		if info, err := os.Stat(resolved); err != nil || !info.Mode().IsRegular() {
+			checks = append(checks, Check{name, "failed", "not a regular file"})
 			continue
 		}
 		file, err := os.Open(resolved)
@@ -189,7 +196,7 @@ func aggregate(path string) []Check {
 			status = "failed"
 			reason = "missing or duplicate case ID"
 		}
-		if status != row.Status {
+		if status != row.Status && reason == "" {
 			reason = "unknown result classification"
 		}
 		seen[row.ID] = true
@@ -356,7 +363,7 @@ func preflight(bundle string) []Check {
 
 func execute(args []string, out io.Writer) int {
 	if len(args) == 0 {
-		fmt.Fprintln(out, "usage: vezham-qualify verify-evidence --root DIR --manifest FILE | aggregate-tests --ledger FILE | release-preflight --bundle APP | native-bundle --bundle APP")
+		fmt.Fprintln(out, "usage: vezham-qualify verify-evidence --root DIR --manifest FILE | aggregate-tests --ledger FILE | release-preflight --bundle APP | native-bundle --bundle APP | production-preflight --bundle APP | verify-workspace-matrix --root DIR --manifest FILE --matrix FILE")
 		return 2
 	}
 	flags := flag.NewFlagSet(args[0], flag.ContinueOnError)
@@ -364,6 +371,7 @@ func execute(args []string, out io.Writer) int {
 	root := flags.String("root", ".", "allowed evidence root")
 	manifest := flags.String("manifest", "", "SHA256SUMS path")
 	ledger := flags.String("ledger", "", "JSON array of id/status records")
+	matrix := flags.String("matrix", "", "WS-F7 case records")
 	bundle := flags.String("bundle", "", "application bundle")
 	if flags.Parse(args[1:]) != nil || flags.NArg() != 0 {
 		return 2
@@ -382,6 +390,18 @@ func execute(args []string, out io.Writer) int {
 			return 2
 		}
 		checks = aggregate(*ledger)
+	case "verify-workspace-matrix":
+		if *manifest == "" || *matrix == "" {
+			fmt.Fprintln(out, "--manifest and --matrix required")
+			return 2
+		}
+		checks = verifyWorkspaceMatrix(*root, *manifest, *matrix)
+	case "production-preflight":
+		if *bundle == "" {
+			fmt.Fprintln(out, "--bundle required")
+			return 2
+		}
+		checks = append(nativeBundle(*bundle), preflight(*bundle)...)
 	case "native-bundle":
 		if *bundle == "" {
 			fmt.Fprintln(out, "--bundle required")

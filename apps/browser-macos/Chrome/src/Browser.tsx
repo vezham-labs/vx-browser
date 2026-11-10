@@ -53,7 +53,7 @@ const errors = {
   disconnected: 'The native browser host is unavailable.'
 }
 
-function Tool({
+const Tool = ({
   icon,
   label,
   action,
@@ -63,7 +63,7 @@ function Tool({
   label: string
   action: () => void
   disabled?: boolean
-}) {
+}) => {
   return (
     <Button
       isIconOnly
@@ -78,7 +78,7 @@ function Tool({
   )
 }
 
-function Empty({
+const Empty = ({
   icon,
   title,
   children
@@ -86,7 +86,7 @@ function Empty({
   icon: string
   title: string
   children: ReactNode
-}) {
+}) => {
   return (
     <div className="empty">
       <span className="tile">
@@ -98,12 +98,13 @@ function Empty({
   )
 }
 
-export function Browser() {
+export const Browser = () => {
   const [browser, setBrowser] = useState(initialState)
   const [connected, setConnected] = useState(false)
   const [section, setSection] = useState<Section>('Tabs')
   const [settings, setSettings] =
     useState<(typeof settingSections)[number]>('Appearance')
+  const browserRoot = useRef<HTMLDivElement>(null)
   const [sidebar, setSidebar] = useState(true)
   const [sideWidth, setSideWidth] = useState(236)
   const [editor, setEditor] = useState<{
@@ -316,14 +317,26 @@ export function Browser() {
     }
   }, [palette, Boolean(editor), menu])
 
-  function openEditor(value: NonNullable<typeof editor>) {
+  useEffect(() => {
+    const root = browserRoot.current
+    if (!root) return
+    const handleEscape = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== 'Escape') return
+      if (editor) setEditor(undefined)
+      else if (menu) setMenu(undefined)
+    }
+    root.addEventListener('keydown', handleEscape)
+    return () => root.removeEventListener('keydown', handleEscape)
+  }, [browser.mini, browser.recovery, editor, menu])
+
+  const openEditor = (value: NonNullable<typeof editor>) => {
     editorTrigger.current =
       document.activeElement instanceof HTMLElement
         ? document.activeElement
         : null
     setEditor(value)
   }
-  function containModalFocus(event: KeyboardEvent<HTMLDialogElement>) {
+  const containModalFocus = (event: KeyboardEvent<HTMLDialogElement>) => {
     if (event.key !== 'Tab') return
     const items = Array.from(
       event.currentTarget.querySelectorAll<HTMLElement>(
@@ -336,11 +349,11 @@ export function Browser() {
       ;(event.shiftKey ? items.at(-1) : items[0])?.focus()
     }
   }
-  function choose(value: Section) {
+  const choose = (value: Section) => {
     setSection(value)
     setMenu(undefined)
   }
-  function focusAddress() {
+  const focusAddress = () => {
     if (palette || menu || editor) skipFocusRestore.current = true
     choose('Tabs')
     setDraft(active?.url ?? '')
@@ -350,15 +363,15 @@ export function Browser() {
       address.current?.select()
     })
   }
-  function openPalette() {
+  const openPalette = () => {
     setQuery('')
     setMenu(undefined)
     setPalette(true)
   }
-  function closePalette() {
+  const closePalette = () => {
     setPalette(false)
   }
-  function tabAction(
+  const tabAction = (
     type:
       | 'close'
       | 'duplicate'
@@ -369,7 +382,7 @@ export function Browser() {
       | 'copy'
       | 'paste',
     tab = active
-  ) {
+  ) => {
     if (!tab) return
     void send({ type, tab: tab.id }).then(response => {
       if (type === 'copy' && !response.error) setNotice('Address copied.')
@@ -377,19 +390,19 @@ export function Browser() {
     })
     setMenu(undefined)
   }
-  async function createTab() {
+  const createTab = async () => {
     const result = await send({ type: inPrivate ? 'newTab' : 'startPrivate' })
     if (!result.error) {
       choose('Tabs')
       setEditing(false)
     }
   }
-  function selectTab(tab: Tab) {
+  const selectTab = (tab: Tab) => {
     choose('Tabs')
     setEditing(false)
     void send({ type: 'activate', tab: tab.id })
   }
-  async function openAddress(value: string) {
+  const openAddress = async (value: string) => {
     const url = destination(value)
     if (!url) {
       setNotice('Enter a valid web address or search query.')
@@ -411,11 +424,11 @@ export function Browser() {
     address.current?.blur()
     await send({ type: 'navigate', url, tab: target.id })
   }
-  function handleAddress(event: FormEvent) {
+  const handleAddress = (event: FormEvent) => {
     event.preventDefault()
     void openAddress(draft)
   }
-  function keyAction(key: string) {
+  const keyAction = (key: string) => {
     switch (key) {
       case 'l':
         focusAddress()
@@ -624,7 +637,7 @@ export function Browser() {
     }))
   ].filter(item => item.name.toLowerCase().includes(query.toLowerCase()))
 
-  function paletteKey(event: KeyboardEvent<HTMLDialogElement>) {
+  const paletteKey = (event: KeyboardEvent<HTMLDialogElement>) => {
     if (event.key === 'Escape') {
       event.preventDefault()
       closePalette()
@@ -650,7 +663,7 @@ export function Browser() {
     }
   }
 
-  function addBookmark(event: FormEvent) {
+  const addBookmark = (event: FormEvent) => {
     event.preventDefault()
     if (!inPrivate || !bookmarkForm) return
     const url = destination(bookmarkForm.url)
@@ -669,7 +682,7 @@ export function Browser() {
     setNotice('')
   }
 
-  function moveBookmark(id: string, offset: number) {
+  const moveBookmark = (id: string, offset: number) => {
     setBookmarks(items => {
       const index = items.findIndex(item => item.id === id)
       const next = index + offset
@@ -680,7 +693,7 @@ export function Browser() {
     })
   }
 
-  function tabMenu(tab: Tab) {
+  const tabMenu = (tab: Tab) => {
     return (
       <div className="popover" aria-label="Tab actions">
         <Button
@@ -797,7 +810,7 @@ export function Browser() {
     )
   }
 
-  function verticalTab(tab: Tab) {
+  const verticalTab = (tab: Tab) => {
     if (tabFilter && !tab.title.toLowerCase().includes(tabFilter.toLowerCase()))
       return null
     return (
@@ -904,7 +917,7 @@ export function Browser() {
     )
   }
 
-  function miniView() {
+  const miniView = () => {
     return (
       <div className="mini-browser">
         <header className="mini-toolbar">
@@ -1048,18 +1061,13 @@ export function Browser() {
 
   return (
     <div
+      ref={browserRoot}
       className="browser arc-workspace"
       style={
         {
           '--sidebar-width': sidebar ? sideWidth + 'px' : '0px'
         } as React.CSSProperties
-      }
-      onKeyDown={event => {
-        if (event.key === 'Escape') {
-          if (editor) setEditor(undefined)
-          else if (menu) setMenu(undefined)
-        }
-      }}>
+      }>
       <header className="chrome">
         <div className="browser-toolbar">
           <Tool
@@ -1398,7 +1406,7 @@ export function Browser() {
               )}
             </div>
             <div
-              role="separator"
+              role="slider"
               aria-label="Resize sidebar"
               aria-orientation="vertical"
               aria-valuemin={166}
@@ -2037,7 +2045,6 @@ export function Browser() {
                     : 'tab group'}
               </h2>
               <Input
-                autoFocus
                 aria-label="Name"
                 value={editor.name}
                 maxLength={40}

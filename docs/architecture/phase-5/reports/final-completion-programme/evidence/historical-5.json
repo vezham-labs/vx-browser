@@ -1,0 +1,426 @@
+{
+  "command": "verify-evidence",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "aggregate-real-ledger.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "aggregate-real-ledger.json",
+      "status": "passed"
+    },
+    {
+      "name": "artifact-inventory.json",
+      "status": "passed"
+    },
+    {
+      "name": "baseline-and-inventory.json",
+      "status": "passed"
+    },
+    {
+      "name": "baseline-vite.config.ts.txt",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit-final.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit-final.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit-final.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "core-tests.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "core-tests.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "core-tests.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "debug-build-fixed.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "debug-build-fixed.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "debug-build-fixed.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "debug-build.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "debug-build.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "debug-build.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "delivered-source-hashes.json",
+      "status": "passed"
+    },
+    {
+      "name": "delivery-receipt.json",
+      "status": "passed"
+    },
+    {
+      "name": "development-preflight.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "development-preflight.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "development-preflight.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "docs-format.txt",
+      "status": "passed"
+    },
+    {
+      "name": "final-app-hashes.json",
+      "status": "passed"
+    },
+    {
+      "name": "final-format.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "final-format.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "final-format.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "format-final.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "format-final.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "format-final.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "historical-0.json",
+      "status": "passed"
+    },
+    {
+      "name": "historical-1.json",
+      "status": "passed"
+    },
+    {
+      "name": "historical-2.json",
+      "status": "passed"
+    },
+    {
+      "name": "historical-3.json",
+      "status": "passed"
+    },
+    {
+      "name": "historical-4.json",
+      "status": "passed"
+    },
+    {
+      "name": "historical-summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "lint-final.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "lint-final.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "lint-final.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native-candidate.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-log-name-map.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-recovery.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-recovery.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native-recovery.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native-workspace.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "native-workspace.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native-workspace.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/attempt-1/stderr.log.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/attempt-1/stdout.log.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-recovery-01/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/attempt-1/stderr.log.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/attempt-1/stdout.log.txt",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "native/f7-regression-workspace-01/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "nx-checks.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "nx-checks.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-checks.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-11615458982768686396.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-13436639160303740658.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-15455065629699292447.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-17453144152558867830.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-18079492936892741318.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-8702096996654041205.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-8965520717566441280.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-terminal-9731710361637941055.txt",
+      "status": "passed"
+    },
+    {
+      "name": "qualification-ledger.json",
+      "status": "passed"
+    },
+    {
+      "name": "release-settings.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "release-settings.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "release-settings.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "release-unsigned-build.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "release-unsigned-build.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "release-unsigned-build.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "release-unsigned-fixed.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "release-unsigned-fixed.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "release-unsigned-fixed.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "report-links.json",
+      "status": "passed"
+    },
+    {
+      "name": "shell-diagnostic.json",
+      "status": "passed"
+    },
+    {
+      "name": "storage-tests.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "storage-tests.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "storage-tests.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "tooling-final.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "tooling-final.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "tooling-final.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "ui-fixed.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "ui-fixed.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "ui-fixed.stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "unsigned-preflight.command.json",
+      "status": "passed"
+    },
+    {
+      "name": "unsigned-preflight.stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "unsigned-preflight.stdout.txt",
+      "status": "passed"
+    }
+  ]
+}

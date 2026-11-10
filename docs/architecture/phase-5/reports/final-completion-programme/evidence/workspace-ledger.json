@@ -1,0 +1,174 @@
+[
+  {
+    "id": "F7-01",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The app has no production reader or normal-profile workspace mount.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-02",
+    "status": "blocked",
+    "evidence": [
+      "core.stdout.txt"
+    ],
+    "reason": "The product catalog cannot store an ordered workspace library.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-03",
+    "status": "blocked",
+    "evidence": [
+      "core.stdout.txt"
+    ],
+    "reason": "There is no protected durable record to compare across app runs.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-04",
+    "status": "blocked",
+    "evidence": [],
+    "reason": "Startup cannot mount a signed persistent layout, so post-restore admission cannot be measured.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-05",
+    "status": "blocked",
+    "evidence": [
+      "core.stdout.txt"
+    ],
+    "reason": "The persistent layout cannot be restored into the active split controller.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-06",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The production mutation dispatcher has no protected publication path.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-07",
+    "status": "blocked",
+    "evidence": [],
+    "reason": "A positive normal-profile write control is unavailable for a durable negative test.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-08",
+    "status": "blocked",
+    "evidence": [],
+    "reason": "A positive durable receiver control is unavailable to compare against Mini.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-09",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The product cannot provision two authenticated normal profiles.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-10",
+    "status": "blocked",
+    "evidence": [
+      "storage.stdout.txt"
+    ],
+    "reason": "The admitted product provider has no runnable positive control.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-11",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The browser has no production commit boundary for safe fault injection.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-12",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "No previous committed production workspace revision exists to preserve.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-13",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The product cannot reopen authenticated disposable ciphertext through the catalog.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-14",
+    "status": "blocked",
+    "evidence": [
+      "core.stdout.txt"
+    ],
+    "reason": "There is no production schema admission or migration path.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-15",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The normal application cannot open the protected schema fixture.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-16",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "There is no integrated durable revision writer to exercise from two app instances.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-17",
+    "status": "blocked",
+    "evidence": [
+      "core.stdout.txt"
+    ],
+    "reason": "The app cannot create and reopen an authenticated prior durable schema.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-18",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The durable application recovery branch cannot run with a verified signed key.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-19",
+    "status": "blocked",
+    "evidence": [],
+    "reason": "There is no durable restore operation to race against a user edit.",
+    "owner": "Storage engineering and product QA"
+  },
+  {
+    "id": "F7-20",
+    "status": "blocked",
+    "evidence": [
+      "provider.stdout.txt"
+    ],
+    "reason": "The app cannot publish and reconcile an uncertain protected commit.",
+    "owner": "Storage engineering and product QA"
+  }
+]

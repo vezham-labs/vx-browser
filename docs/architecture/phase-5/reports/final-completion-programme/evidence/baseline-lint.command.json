@@ -1,0 +1,17 @@
+{
+  "name": "baseline-lint",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:lint",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 1,
+  "elapsed_seconds": 8.081,
+  "started_epoch": 1794274384.009187
+}

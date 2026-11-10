@@ -1,0 +1,24 @@
+{
+  "name": "quality-final",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run-many",
+    "-t",
+    "reliability-contracts",
+    "reliability-typecheck",
+    "reliability-ui",
+    "lint",
+    "--projects",
+    "browser-macos",
+    "--parallel=2",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 40.697,
+  "started_epoch": 1794274884.370508
+}

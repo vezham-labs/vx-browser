@@ -1,0 +1,145 @@
+
+ NX   Running targets reliability-contracts, reliability-typecheck, reliability-ui, lint for project browser-macos and 1 task it depends on:
+
+- browser-macos
+
+
+
+> nx run browser-macos:reliability-contracts
+
+> node_modules/.bin/tsx --test apps/browser-macos/Chrome/tests/navigation.test.ts
+
+(node:28478) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28563) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ normalizes hostnames, local fixtures and explicit HTTPS [90m(1.705208ms)[39m[39m
+[32m✔ blocks credentials, unsupported schemes and control characters [90m(0.194542ms)[39m[39m
+[32m✔ generates a local suggestion and submits search through the provider [90m(1.094708ms)[39m[39m
+[32m✔ preserves HTTPS and loopback-only HTTP policy [90m(0.347166ms)[39m[39m
+[34mℹ tests 4[39m
+[34mℹ suites 0[39m
+[34mℹ pass 4[39m
+[34mℹ fail 0[39m
+[34mℹ cancelled 0[39m
+[34mℹ skipped 0[39m
+[34mℹ todo 0[39m
+[34mℹ duration_ms 445.959667[39m
+
+> nx run browser-macos:build-legacy-chrome-fixture
+
+> python3 apps/browser-macos/Tools/native_host.py chrome
+
+(node:28529) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+vite v8.1.6 building client environment for production...
+[2Ktransforming...[32m✓[0m 1756 modules transformed.
+rendering chunks...
+computing gzip size...
+[2m../build/chrome/[0m[35mchrome.css  [0m[1;2m447.88 kB[0m[2m │ gzip: 43.97 kB[0m
+[2m../build/chrome/[0m[36mchrome.js   [0m[1;2m311.03 kB[0m[2m │ gzip: 96.76 kB[0m
+
+✓ built in 1.25s
+
+> nx run browser-macos:reliability-typecheck
+
+> node_modules/.bin/tsc --noEmit -p apps/browser-macos/Chrome/tsconfig.json
+
+
+> nx run browser-macos:lint
+
+> eslint .
+
+(node:28611) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> nx run browser-macos:reliability-ui
+
+> ../../../node_modules/.bin/playwright test
+
+(node:28632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:25] "GET / HTTP/1.1" 200 -
+
+Running 16 tests using 1 worker
+
+(node:28650) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:31] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:31] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:31] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   1 tests/shell.spec.ts:212:5 › missing bridge leaves actions unavailable (903ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:32] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:32] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:32] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   2 tests/shell.spec.ts:222:5 › starts private browsing, submits address, duplicates and closes tabs (784ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:33] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:33] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:33] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   3 tests/shell.spec.ts:248:5 › sidebar, command palette focus, appearance and narrow layout (835ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:33] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:34] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:34] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   4 tests/shell.spec.ts:274:5 › temporary bookmarks clear at session end; profiles and history stay unavailable (1.0s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:35] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:35] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:35] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   5 tests/shell.spec.ts:306:5 › vertical tab pinning, group creation, collapse and contextual assignment (1.3s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:36] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:36] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:36] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   6 tests/shell.spec.ts:338:5 › Spaces keep tab organization distinct and empty Spaces can be deleted (963ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:37] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:37] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:37] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   7 tests/shell.spec.ts:362:5 › Split commands expose pane controls and command bar searches open tabs (1.7s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:39] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:39] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:39] "GET /chrome.js HTTP/1.1" 200 -
+  ✓   8 tests/shell.spec.ts:392:5 › tab arrows advance real focus through the rendered tab order (1.0s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:40] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:40] "GET /chrome.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:40] "GET /chrome.css HTTP/1.1" 200 -
+  ✓   9 tests/shell.spec.ts:415:5 › workspace editor and action dialog contain focus and cancel with Escape (1.2s)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:41] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:41] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:41] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  10 tests/shell.spec.ts:455:5 › navigation actions stay inside the active dialog (739ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:42] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:42] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:42] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  11 tests/shell.spec.ts:477:5 › command focus-address intent survives dialog dismissal (582ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:42] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:42] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:42] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  12 tests/shell.spec.ts:500:5 › native-selected tab changes dismiss an unfinished address draft (550ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:43] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:43] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:43] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  13 tests/shell.spec.ts:530:5 › recovery action appears only after the host confirms retirement (452ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:43] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:43] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:43] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  14 tests/shell.spec.ts:542:5 › unconfirmed retirement keeps the workspace unavailable (333ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:44] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:44] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:44] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  15 tests/shell.spec.ts:557:5 › workspace commands create and select a named workspace (900ms)
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:45] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:45] "GET /chrome.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [10/Nov/2026 07:05:45] "GET /chrome.js HTTP/1.1" 200 -
+  ✓  16 tests/shell.spec.ts:580:5 › Mini requires preview confirmation and exposes a cancelled handoff (612ms)
+
+  16 passed (20.5s)
+
+
+
+ NX   Successfully ran targets reliability-contracts, reliability-typecheck, reliability-ui, lint for project browser-macos and 1 task it depends on
+
+
+  Run duration:      29.4s
+  Cache:             0/5 hit (0%)
+  Critical path:     24.4s (2 tasks)
+  Recoverable time:  5.0s (17% of the run)

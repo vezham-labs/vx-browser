@@ -34,7 +34,14 @@ import BrowserDomain
             if result.error == nil, (type == .startPrivate || type == .newTab) { focusAddress += 1 }
             if result.state.session == "inactive" { bookmarks.removeAll() }
             if let error = result.error {
-                message = error == .transferUnconfirmed ? "The destination did not confirm this handoff. Mini remains available." : "The action could not finish (\(error.rawValue)). Your current state was preserved."
+                switch error {
+                case .transferUnconfirmed:
+                    message = "The destination did not confirm this handoff. Mini remains available."
+                case .busy:
+                    message = "The browser is finishing another action. Try again in a moment."
+                default:
+                    message = "The browser could not finish this action."
+                }
             }
             if let preview = result.miniPreview { self.preview = preview }
         }
@@ -106,6 +113,7 @@ import BrowserDomain
             } else { ProgressView("Preparing browser…") }
         }
         .onChange(of: model.state?.sessionID) { _, _ in
+            model.managesBookmarks = false
             bookmarkDraft = nil
             bookmarkFilter = ""
         }
@@ -222,11 +230,13 @@ import BrowserDomain
     private func tabRow(_ tab: ChromeTab, _ state: ChromeState) -> some View {
         HStack {
             Image(systemName: tab.pinned ? "pin.fill" : state.split.contains(tab.id) ? "rectangle.split.2x1" : "globe")
-            Text(tab.title).lineLimit(1)
+                .accessibilityHidden(true)
+            Text(tab.title).lineLimit(1).accessibilityValue(tab.pinned ? "Pinned" : "")
             Spacer(minLength: 0)
             if tab.loading { ProgressView().controlSize(.mini) }
             Button { model.send(.close, tab: tab.id) } label: { Image(systemName: "xmark").font(.caption) }.buttonStyle(.borderless).accessibilityLabel("Close \(tab.title)")
-        }.tag(tab.id).accessibilityLabel(tab.title).accessibilityIdentifier("native-tab-\(tab.id)")
+        }.tag(tab.id)
+        .accessibilityIdentifier("native-tab-\(tab.id)")
         .contextMenu {
             Button("Select") { model.send(.activate, tab: tab.id) }
             Button(tab.pinned ? "Unpin" : "Pin") { model.send(.pin, tab: tab.id) }

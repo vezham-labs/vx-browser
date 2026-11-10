@@ -1,0 +1,394 @@
+{
+  "command": "verify-evidence",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "README.md",
+      "status": "passed"
+    },
+    {
+      "name": "artifact-inventory.json",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit.json",
+      "status": "passed"
+    },
+    {
+      "name": "bundle-audit.txt",
+      "status": "passed"
+    },
+    {
+      "name": "candidate.json",
+      "status": "passed"
+    },
+    {
+      "name": "changed-source-files.json",
+      "status": "passed"
+    },
+    {
+      "name": "chrome-final.txt",
+      "status": "passed"
+    },
+    {
+      "name": "core.txt",
+      "status": "passed"
+    },
+    {
+      "name": "delivered-source-hashes.json",
+      "status": "passed"
+    },
+    {
+      "name": "eslint-baseline.err",
+      "status": "passed"
+    },
+    {
+      "name": "eslint-baseline.json",
+      "status": "passed"
+    },
+    {
+      "name": "eslint-current.err",
+      "status": "passed"
+    },
+    {
+      "name": "eslint-current.json",
+      "status": "passed"
+    },
+    {
+      "name": "eslint-installed.err",
+      "status": "passed"
+    },
+    {
+      "name": "eslint-installed.json",
+      "status": "passed"
+    },
+    {
+      "name": "eslint.txt",
+      "status": "passed"
+    },
+    {
+      "name": "installed-nx-typecheck.txt",
+      "status": "passed"
+    },
+    {
+      "name": "integration-verification.json",
+      "status": "passed"
+    },
+    {
+      "name": "log-name-map.json",
+      "status": "passed"
+    },
+    {
+      "name": "navigation-final.txt",
+      "status": "passed"
+    },
+    {
+      "name": "nx-direct.err",
+      "status": "passed"
+    },
+    {
+      "name": "nx.err",
+      "status": "passed"
+    },
+    {
+      "name": "playwright-final.txt",
+      "status": "passed"
+    },
+    {
+      "name": "prettier-final.txt",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/attempt-1/stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/attempt-1/stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-01/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/attempt-1/stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/attempt-1/stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "recovery-final/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "storage.txt",
+      "status": "passed"
+    },
+    {
+      "name": "types-final.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/attempt-1/stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/attempt-1/stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-01/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/attempt-1/stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/attempt-1/stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-02/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/attempt-1/stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/attempt-1/stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-03/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/attempt-1/stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/attempt-1/stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-04/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/attempt-1/events.jsonl",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/attempt-1/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/attempt-1/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/attempt-1/result.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/attempt-1/stderr.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/attempt-1/stdout.txt",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/fixture.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/hashes-after.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/hashes-before.json",
+      "status": "passed"
+    },
+    {
+      "name": "workspace-final/summary.json",
+      "status": "passed"
+    },
+    {
+      "name": "xcode-07.txt",
+      "status": "passed"
+    }
+  ]
+}

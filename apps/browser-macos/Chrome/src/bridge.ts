@@ -124,7 +124,7 @@ export const initialState: BrowserState = {
 
 let requestNumber = 0
 
-export async function dispatch(command: Command): Promise<Result> {
+export const dispatch = async (command: Command): Promise<Result> => {
   const id = String(++requestNumber)
   const handler = (window as HostWindow).webkit?.messageHandlers?.browserChrome
   if (!handler) return { id, error: 'disconnected', state: initialState }
@@ -132,7 +132,7 @@ export async function dispatch(command: Command): Promise<Result> {
     const result = await handler.postMessage({ id, version: 1, ...command })
     if (result.id === id) return result
   } catch {
-    // Native failures are surfaced without exposing request content or OS diagnostics.
+    // vx-bot/NOTE: Native failures are surfaced without exposing request content or OS diagnostics.
   }
   return { id, error: 'disconnected', state: initialState }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "go-nx",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run-many",
+    "-t",
+    "qualification-tool-tests",
+    "qualification-tool-vet",
+    "--projects",
+    "browser-macos",
+    "--parallel=2",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 32.228,
+  "started_epoch": 1794274571.944834
+}

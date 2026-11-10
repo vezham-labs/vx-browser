@@ -1,0 +1,20 @@
+{
+  "name": "provider",
+  "argv": [
+    "env",
+    "VEZHAM_SQLCIPHER_PROVIDER=/private/tmp/vx-m1-provider-fixtures-20261108T113403Z/provider-build-1",
+    "go",
+    "test",
+    "-tags",
+    "protectedstore",
+    "-run",
+    "TestProtectedStore",
+    "-count=1",
+    "-v",
+    "./..."
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/tools/vezham-qualify",
+  "returncode": 0,
+  "elapsed_seconds": 64.326,
+  "started_epoch": 1794274572.10111
+}

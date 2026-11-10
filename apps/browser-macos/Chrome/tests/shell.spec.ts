@@ -3,7 +3,7 @@ import type { Page } from '@playwright/test'
 
 import type { Appearance, BrowserState, Command, Tab } from '../src/bridge'
 
-async function hostStandIn(page: Page, recovery?: BrowserState['recovery']) {
+const hostStandIn = async (page: Page, recovery?: BrowserState['recovery']) => {
   await page.addInitScript(initialRecovery => {
     const state: BrowserState = {
       revision: 0,

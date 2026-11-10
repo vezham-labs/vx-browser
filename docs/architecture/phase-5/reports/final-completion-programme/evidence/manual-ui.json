@@ -1,0 +1,17 @@
+{
+  "candidate": "/private/tmp/vezham-final-debug/Build/Products/Debug/VezhamBrowser.app",
+  "method": "Codex computer use with native accessibility tree and keyboard/pointer input",
+  "fixture": "Owned WS-F6 loopback fixture",
+  "observations": [
+    {"id":"NUI-01","result":"passed","description":"Final Debug app relaunched to an inactive private workspace."},
+    {"id":"NUI-02","result":"passed","description":"Starting private browsing selected one blank tab and focused the labeled native address field."},
+    {"id":"NUI-03","result":"passed","description":"Typing and submitting a local address loaded Alpha with query and fragment preserved."},
+    {"id":"NUI-04","result":"passed","description":"Clicking Beta, Back and Forward produced the expected active page and history control state."},
+    {"id":"NUI-05","result":"passed","description":"Native tab context menu pinned Beta. The selected row exposed a Pinned value, title and distinct close label."},
+    {"id":"NUI-06","result":"passed","description":"Command-T created and selected a blank tab and returned focus to the address field."},
+    {"id":"NUI-07","result":"observed","description":"Reload was invoked. No independent reload request counter was collected."},
+    {"id":"NUI-08","result":"passed on first build","description":"The native sidebar toggle hid sidebar controls and retained address focus."},
+    {"id":"NUI-09","result":"fixed and retested","description":"The first accessibility build duplicated row names. The final rebuild exposed the page title and distinct close label."}
+  ],
+  "unexecuted": ["VoiceOver speech", "Physical drag/drop", "Physical divider gestures", "Display matrix", "Real WebKit helper exit"]
+}

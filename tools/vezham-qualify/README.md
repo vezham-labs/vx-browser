@@ -83,3 +83,7 @@ migration and production protected storage remain outstanding.
 Run `vezham-qualify native-bundle --bundle PATH` against the current arm64 Debug or unsigned Release product. Use `release-preflight` to check signature and notarization separately.
 
 From this Go module, set `VEZHAM_SQLCIPHER_PROVIDER` to the retained arm64 provider directory and run `go test -tags protectedstore -run TestProtectedStore -count=1 -v ./...`. The suite verifies both artifact hashes and creates disposable files with synthetic keys. [Programme record](../../docs/architecture/phase-5/reports/completion-programme/README.md).
+
+## Final qualification gates
+
+Run `vezham-qualify production-preflight --bundle PATH` for the combined native bundle and signed release checks. The gate records the separate signed-runtime requirement. For a WS-F7 ledger, use `verify-workspace-matrix --root DIR --manifest FILE --matrix FILE`. It requires all 20 case IDs, explicit blocker ownership and checksum-verified evidence for recorded executions. [Final programme](../../docs/architecture/phase-5/reports/final-completion-programme/README.md).

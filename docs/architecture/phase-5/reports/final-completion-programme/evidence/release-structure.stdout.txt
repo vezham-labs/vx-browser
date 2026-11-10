@@ -1,0 +1,50 @@
+{
+  "command": "native-bundle",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "CFBundleExecutable",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleIdentifier",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundlePackageType",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleShortVersionString",
+      "status": "passed"
+    },
+    {
+      "name": "CFBundleVersion",
+      "status": "passed"
+    },
+    {
+      "name": "LSMinimumSystemVersion",
+      "status": "passed"
+    },
+    {
+      "name": "arm64",
+      "status": "passed"
+    },
+    {
+      "name": "binary-minimum-os",
+      "status": "passed"
+    },
+    {
+      "name": "development-runtime-libraries",
+      "status": "passed"
+    },
+    {
+      "name": "native-frameworks",
+      "status": "passed"
+    },
+    {
+      "name": "no-legacy-chrome-or-tool-sources",
+      "status": "passed"
+    }
+  ]
+}

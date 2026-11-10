@@ -1,0 +1,213 @@
+{
+  "startedUTC": "2026-11-10T01:41:24.207425+00:00",
+  "status": "FAIL",
+  "reasons": [
+    "Candidate/source identity changed"
+  ],
+  "timeout": false,
+  "events": [
+    {
+      "testID": "R-SETUP-MAIN-LOAD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SETUP-MAIN-COMMIT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SETUP-MAIN-MARKERS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SETUP-MINI-COMMIT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SETUP-MINI-MARKERS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-INJECTED-FENCE",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-OLD-SCOPE-REJECTS",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-RETIRING-REJECTS-RECOVER",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-OLD-RETIREMENT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-UNAFFECTED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-MARKER-RETAINED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-WORKSPACE-STRUCTURE",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "F6-RECOVERY-LAZY",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-REPEAT-RECOVER-REJECTED",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-STALE-SESSION-CALLBACK",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-FRESH-IDENTITIES",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-FRESH-BLANK-STORES",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-FRESH-NAVIGATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-FRESH-COMMIT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-NO-TRANSFERRED-WEB-DATA",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SPLIT-REATTACHED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-OPEN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-FORM",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-POST",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-REDIRECT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-CONTINUITY-LOAD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-CONTINUITY",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-MINI-LOAD",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-MINI-ISOLATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-LOGOUT-POST",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-AUTH-LOGOUT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-INJECTED-SIMULTANEOUS",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-TWO-RETIRED-SCOPES",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-INDEPENDENT-REBUILD",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-MINI-FRESH-NAVIGATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-FRESH-COMMIT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-MINI-NO-TRANSFERRED-WEB-DATA",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-INJECTED-RETAINED-VIEW",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-RETIREMENT-UNCONFIRMED",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-FAILED-STAGED-PUBLICATION",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-INJECTED-CLOSE-BOUNDARY",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-CLOSE-JOINS-RETIREMENT",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-CLOSING-CALLBACK-DOES-NOT-START-RECOVERY",
+      "status": "PASS_CONTRACT"
+    },
+    {
+      "testID": "R-CLOSING-SINGLE-TEARDOWN",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "R-SHUTDOWN-JOINS",
+      "status": "PASS_NATIVE"
+    },
+    {
+      "testID": "qualification",
+      "status": "PASS_NATIVE"
+    }
+  ],
+  "screenshots": [],
+  "argv": [
+    "/private/tmp/vezham-final-qual/Build/Products/Debug/VezhamBrowser.app/Contents/MacOS/VezhamBrowser",
+    "--wsf5r-qualification",
+    "http://127.0.0.1:64621"
+  ],
+  "pid": 30751,
+  "exit": 0,
+  "nativeFinal": {
+    "testID": "qualification",
+    "status": "PASS_NATIVE"
+  },
+  "caseStatusCounts": {
+    "PASS_NATIVE": 34,
+    "PASS_CONTRACT": 11
+  },
+  "nativePassed": 34,
+  "contractPassed": 11,
+  "finishedUTC": "2026-11-10T01:41:50.309653+00:00"
+}

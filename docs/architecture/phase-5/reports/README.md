@@ -23,3 +23,7 @@ milestone and measured revision, not the whole product or release.
 ## Browser completion programme
 
 [Current implementation and qualification](completion-programme/README.md) follows the preserved WS-F7 partial implementation record.
+
+## Final engineering completion programme
+
+[Current implementation, verification and readiness](final-completion-programme/README.md). The historical completion programme remains available as a separate run.

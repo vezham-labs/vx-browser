@@ -1,0 +1,9 @@
+
+ NX   Running target lint for project browser-macos failed
+
+Failed tasks:
+
+- browser-macos:lint
+
+Hint: run the command with --verbose for more details.
+

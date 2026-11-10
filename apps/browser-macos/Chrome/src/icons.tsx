@@ -29,6 +29,6 @@ const marks: Record<string, ReactNode> = {
   command: <path d="M8 8H6a2 2 0 1 1 2-2v12a2 2 0 1 1-2-2h12a2 2 0 1 1-2 2V6a2 2 0 1 1 2 2z"/>,
   folder: <path d="M3 7h7l2 2h9v10H3z"/>,
 };
-export function Icon({ name, size = 18 }: { name: string; size?: number }) {
+export const Icon = ({ name, size = 18 }: { name: string; size?: number }) => {
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">{marks[name]}</svg>;
 }

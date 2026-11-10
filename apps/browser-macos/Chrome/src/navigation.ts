@@ -11,9 +11,13 @@ export const search: SearchProvider = {
   suggestions: (query) => query.trim() ? [{ label: 'Search DuckDuckGo', value: query.trim() }] : [],
 };
 
-export function destination(value: string, provider: SearchProvider = search): string | undefined {
+export const destination = (value: string, provider: SearchProvider = search): string | undefined => {
   const input = value.trim();
-  if (!input || input.length > 2048 || /[\u0000-\u001f\u007f]/u.test(input)) return;
+  const containsControl = Array.from(input).some(character => {
+    const code = character.charCodeAt(0);
+    return code < 32 || code === 127;
+  });
+  if (!input || input.length > 2048 || containsControl) return;
   const hostLike = /^(?:localhost|\[[0-9a-f:]+\]|[^\s/@:]+\.[^\s/@:]+)(?=[:/?#]|$)/iu.test(input);
   const hasScheme = /^[a-z][a-z\d+.-]*:/iu.test(input) && !hostLike;
   if (!hasScheme && (!hostLike || /\s/u.test(input))) return provider.destination(input);
