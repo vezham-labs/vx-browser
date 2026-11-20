@@ -19,6 +19,40 @@ public struct PrivateBookmarks: Sendable {
     }
 
     public private(set) var links: [Link] = []
+    private var customFolderOrder: [String] = []
+    private var expandedFolders: Set<String> = []
+
+    private var liveFolders: Set<String> {
+        Set(links.lazy.filter { !$0.favorite && !$0.folder.isEmpty }.map(\.folder))
+    }
+
+    public var folders: [String] {
+        customFolderOrder + liveFolders.subtracting(customFolderOrder).sorted()
+    }
+
+    private mutating func reconcileFolders() {
+        let live = liveFolders
+        customFolderOrder.removeAll { !live.contains($0) }
+        expandedFolders.formIntersection(live)
+    }
+
+    public func isExpanded(_ folder: String) -> Bool { expandedFolders.contains(folder) }
+
+    public mutating func setExpanded(_ folder: String, _ expanded: Bool) {
+        guard liveFolders.contains(folder) else { return }
+        if expanded { expandedFolders.insert(folder) } else { expandedFolders.remove(folder) }
+    }
+
+    @discardableResult public mutating func moveFolder(_ source: String, onto target: String) -> Bool {
+        var ordered = folders
+        guard source != target, let from = ordered.firstIndex(of: source),
+              let to = ordered.firstIndex(of: target) else { return false }
+        ordered.remove(at: from)
+        ordered.insert(source, at: to)
+        customFolderOrder = ordered
+        return true
+    }
+
     public init() {}
 
     public static func destination(_ input: String) -> URL? {
@@ -47,11 +81,12 @@ public struct PrivateBookmarks: Sendable {
             guard links.count < 100 else { return false }
             links.append(clean)
         }
+        reconcileFolders()
         return true
     }
 
-    public mutating func remove(_ id: UUID) { links.removeAll { $0.id == id } }
-    public mutating func removeAll() { links.removeAll() }
+    public mutating func remove(_ id: UUID) { links.removeAll { $0.id == id }; reconcileFolders() }
+    public mutating func removeAll() { self = Self() }
 
     /// Reorder relative to a live target. A cross-folder drop adopts the target's
     /// membership and leaves identity, title and URL unchanged.
@@ -63,6 +98,7 @@ public struct PrivateBookmarks: Sendable {
         link.folder = destination.folder
         link.favorite = destination.favorite
         links.insert(link, at: to - (from < to ? 1 : 0) + (after ? 1 : 0))
+        reconcileFolders()
         return true
     }
 

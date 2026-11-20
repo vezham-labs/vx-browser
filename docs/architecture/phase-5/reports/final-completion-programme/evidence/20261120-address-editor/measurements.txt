@@ -1,0 +1,5 @@
+final3-after.jpg fixture rows 176
+final3-before.jpg fixture rows 155
+final3-reset.jpg fixture rows 155
+final3-returned.jpg fixture rows 176
+final3-second.jpg fixture rows 155

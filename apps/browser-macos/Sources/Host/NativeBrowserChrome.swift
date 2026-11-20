@@ -26,6 +26,7 @@ enum BrowserChromeMetrics {
 
 enum NativeBrowserMenuAction: Int {
     case newTab, commandBar, focusAddress, sidebar, back, forward, reload, stop, copyAddress, openMini, bookmarks, settings, welcome, nextSpace, previousSpace, nextTab, previousTab, duplicateTab, togglePin
+    case zoomIn, zoomOut, actualSize
 }
 
 /// Native presentation state only. All commands still execute under the controller's
@@ -208,7 +209,6 @@ final class NativeSidebarDrag {
             guard modifiers.isEmpty, let model, model.sidebarVisible,
                   let state = model.state, state.recovery == nil, let session = state.sessionID,
                   let hit = hit(at: event.locationInWindow, in: event.window) else { return false }
-            if case .folder = hit.item { return false }
             source = Source(item: hit.item, sessionID: session, spaceID: state.activeSpace,
                             origin: event.locationInWindow)
             return true
@@ -244,7 +244,7 @@ final class NativeSidebarDrag {
                 switch source.item {
                 case .tab(let id): model.send(.activateKeepingChromeFocus, tab: id)
                 case .link(let id): model.openBookmark(id)
-                case .folder: break
+                case .folder(let name): model.bookmarks.setExpanded(name, !model.bookmarks.isExpanded(name))
                 }
             }
         }
@@ -286,6 +286,10 @@ final class NativeSidebarDrag {
             guard links.contains(where: { $0.id == from }),
                   let link = links.first(where: { $0.id == to }) else { return nil }
             return SidebarDrop(item: target, placement: link.favorite ? .onto : (after ? .after : .before))
+        case (.folder(let from), .folder(let to)):
+            let folders = model.bookmarks.folders
+            guard let a = folders.firstIndex(of: from), let b = folders.firstIndex(of: to) else { return nil }
+            return SidebarDrop(item: target, placement: a < b ? .after : .before)
         case (.link(let from), .folder(let folder)):
             guard links.contains(where: { $0.id == from }),
                   links.contains(where: { !$0.favorite && $0.folder == folder }) else { return nil }
@@ -310,6 +314,8 @@ final class NativeSidebarDrag {
             }
         case (.link(let from), .folder(let folder)):
             model.bookmarks.move(from, toFolder: folder)
+        case (.folder(let from), .folder(let to)):
+            model.bookmarks.moveFolder(from, onto: to)
         default:
             break
         }
@@ -687,8 +693,11 @@ private struct ChromeIconButtonStyle: ButtonStyle {
         if !ordinary.isEmpty {
             Section("Bookmarks") {
                 ForEach(ordinary.filter { $0.folder.isEmpty }) { savedRow($0, state) }
-                ForEach(Array(Set(ordinary.map(\.folder).filter { !$0.isEmpty })).sorted(), id: \.self) { folder in
-                    DisclosureGroup {
+                ForEach(model.bookmarks.folders, id: \.self) { folder in
+                    DisclosureGroup(isExpanded: Binding(
+                        get: { model.bookmarks.isExpanded(folder) },
+                        set: { model.bookmarks.setExpanded(folder, $0) }
+                    )) {
                         ForEach(ordinary.filter { $0.folder == folder }) { savedRow($0, state) }
                     } label: {
                         Label(folder, systemImage: "folder")
@@ -961,6 +970,14 @@ private struct ChromeIconButtonStyle: ButtonStyle {
     @State private var query = ""
     @State private var commandSelection = 0
 
+    private let editingAddress: Bool
+
+    init(model: NativeChromeModel, currentAddress: String?) {
+        self.model = model
+        self.editingAddress = currentAddress != nil
+        _query = State(initialValue: currentAddress ?? "")
+    }
+
     private struct PaletteItem: Identifiable {
         let id: String
         let label: String
@@ -1019,9 +1036,11 @@ private struct ChromeIconButtonStyle: ButtonStyle {
             items.append(PaletteItem(id: "settings", label: "Settings", symbol: "gearshape", perform: { model.settings = true }))
         }
         if state.recovery == nil && !state.mini && !needle.isEmpty, NativeNavigationInput.destination(needle, provider: model.searchProvider) != nil {
-            items.append(PaletteItem(id: "navigate", label: "Open or search in new tab", symbol: "magnifyingglass") {
-                model.navigate(needle, inNewTab: true)
-            })
+            let destination = PaletteItem(id: "navigate", label: editingAddress ? "Open in current tab" : "Open or search in new tab", symbol: "magnifyingglass") {
+                model.navigate(needle, inNewTab: !editingAddress)
+            }
+            if editingAddress { items.insert(destination, at: 0) }
+            else { items.append(destination) }
         }
         return items
     }

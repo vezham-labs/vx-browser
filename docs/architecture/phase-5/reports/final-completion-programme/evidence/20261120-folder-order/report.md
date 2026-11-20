@@ -1,0 +1,7 @@
+# Private bookmark folder ordering
+
+On cross-browser-research at 965663a the native sidebar explicitly rejected folders as drag sources and sorted all folder labels on each render. The private bookmark model now tracks chosen order and expansion, removes obsolete folder state when membership changes, and clears all of it at session end. The window drag handler uses the existing threshold, session and Space checks, live anchor validation, and insertion indicator.
+
+On the installed build, clicking Beta expanded it. Dragging its label from screenshot pixel (160,525) to (160,455) moved it ahead of Alpha and kept Beta-child visible inside it. Dragging Loose from (150,388) to (160,455) moved it from the root into the reordered Beta folder. Original frames and accessibility readings are included. Verified process exit followed by ordinary relaunch and starting a new private session yielded an empty collection. Persistent protected folders remain unqualified.
+
+105 Core tests in 13 suites, 27 storage tests, 16 legacy UI tests and 4 navigation tests passed. Workspace passed 39 native and 7 contract cases. Recovery passed 34 native and 11 contract cases. Both native suites ran in the qualification bundle. Typecheck, Preview build, audit and diff check succeeded. This pass qualifies the tested Vezham gestures. It has no corresponding populated Arc 2 capture or held-pointer indicator frame.

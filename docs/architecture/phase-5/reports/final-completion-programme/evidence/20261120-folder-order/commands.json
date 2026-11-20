@@ -1,0 +1,149 @@
+{
+  "legacy-ui": {
+    "argv": [
+      "npm",
+      "exec",
+      "--offline",
+      "--",
+      "nx",
+      "run",
+      "browser-macos:reliability-ui",
+      "--output-style=static"
+    ],
+    "exit": 0
+  },
+  "pass-three-audit": {
+    "argv": [
+      "env",
+      "npm",
+      "exec",
+      "--offline",
+      "--",
+      "nx",
+      "run",
+      "browser-macos:audit",
+      "--output-style=static"
+    ],
+    "exit": 0
+  },
+  "pass-three-qualification-build": {
+    "argv": [
+      "env",
+      "VEZHAM_DERIVED_DATA=/private/tmp/vezham-arc-ui-qual",
+      "npm",
+      "exec",
+      "--offline",
+      "--",
+      "nx",
+      "run",
+      "browser-macos:build-workspace-qualification",
+      "--output-style=static"
+    ],
+    "exit": 0
+  },
+  "nav-contracts": {
+    "argv": [
+      "npm",
+      "exec",
+      "--offline",
+      "--",
+      "nx",
+      "run",
+      "browser-macos:reliability-contracts",
+      "--output-style=static"
+    ],
+    "exit": 0
+  },
+  "pass-three-recovery": {
+    "argv": [
+      "python3",
+      "apps/browser-macos/Tools/wsf6.py",
+      "--suite",
+      "recovery",
+      "--app",
+      "/private/tmp/vezham-arc-ui-qual/Build/Products/Debug/VezhamBrowser.app",
+      "--evidence",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf6-evidence",
+      "--run-name",
+      "folder-order-native-pass-three-recovery"
+    ],
+    "exit": 0
+  },
+  "nav-types": {
+    "argv": [
+      "npm",
+      "exec",
+      "--offline",
+      "--",
+      "nx",
+      "run",
+      "browser-macos:reliability-typecheck",
+      "--output-style=static"
+    ],
+    "exit": 0
+  },
+  "core": {
+    "argv": [
+      "swift",
+      "test",
+      "--package-path",
+      "qualification/webkit-storage-f0",
+      "--scratch-path",
+      "/private/tmp/vezham-final-core",
+      "--disable-keychain",
+      "--disable-netrc",
+      "--jobs",
+      "2",
+      "--disable-xctest",
+      "--enable-swift-testing",
+      "--no-parallel"
+    ],
+    "exit": 0
+  },
+  "pass-three-workspace": {
+    "argv": [
+      "python3",
+      "apps/browser-macos/Tools/wsf6.py",
+      "--suite",
+      "workspace",
+      "--app",
+      "/private/tmp/vezham-arc-ui-qual/Build/Products/Debug/VezhamBrowser.app",
+      "--evidence",
+      "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf6-evidence",
+      "--run-name",
+      "folder-order-native-pass-three-workspace"
+    ],
+    "exit": 0
+  },
+  "storage": {
+    "argv": [
+      "swift",
+      "test",
+      "--package-path",
+      "apps/browser-macos/StorageRuntime",
+      "--scratch-path",
+      "/private/tmp/vezham-final-storage",
+      "--disable-keychain",
+      "--disable-netrc",
+      "--jobs",
+      "2",
+      "--disable-xctest",
+      "--enable-swift-testing",
+      "--no-parallel"
+    ],
+    "exit": 0
+  },
+  "preview": {
+    "argv": [
+      "npm",
+      "exec",
+      "--offline",
+      "--",
+      "nx",
+      "run",
+      "browser-macos:build-ui-preview",
+      "--output-style=static"
+    ],
+    "exit": 0
+  }
+}

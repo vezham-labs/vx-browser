@@ -268,7 +268,11 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate, NSMenuItemVali
         _ = submenu("View", [
             browserItem("Toggle Sidebar", .sidebar),
             browserItem("Focus Address", .focusAddress, key: "l"),
-            browserItem("Command Bar…", .commandBar, key: "k")
+            browserItem("Command Bar…", .commandBar, key: "k"),
+            .separator(),
+            browserItem("Zoom to Actual Size", .actualSize, key: "0"),
+            browserItem("Zoom In", .zoomIn, key: "="),
+            browserItem("Zoom Out", .zoomOut, key: "-")
         ])
         let previousTab = browserItem("Previous Tab", .previousTab, key: "[")
         let nextTab = browserItem("Next Tab", .nextTab, key: "]")

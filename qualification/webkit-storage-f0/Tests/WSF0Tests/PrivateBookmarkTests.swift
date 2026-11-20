@@ -91,4 +91,24 @@ struct PrivateBookmarkTests {
         #expect(bookmarks.links.filter(\.favorite) == [first, last, middle])
     }
 
+    @Test func folderOrderPreservesMembershipAndEndsWithSession() {
+        var store = PrivateBookmarks()
+        let a = PrivateBookmarks.Link(title: "First", url: "https://example.test/a", folder: "Alpha")
+        let b = PrivateBookmarks.Link(title: "Second", url: "https://example.test/b", folder: "Beta")
+        let savedB = store.save(b)
+        let savedA = store.save(a)
+        #expect(savedA && savedB)
+        #expect(store.folders == ["Alpha", "Beta"])
+        store.setExpanded("Beta", true)
+        let moved = store.moveFolder("Beta", onto: "Alpha")
+        #expect(moved)
+        #expect(store.folders == ["Beta", "Alpha"] && store.links == [b, a])
+        #expect(store.isExpanded("Beta"))
+        let movedAbsent = store.moveFolder("Absent", onto: "Beta")
+        #expect(!movedAbsent)
+        store.remove(b.id)
+        #expect(!store.isExpanded("Beta") && store.folders == ["Alpha"])
+        store.removeAll()
+        #expect(store.folders.isEmpty)
+    }
 }

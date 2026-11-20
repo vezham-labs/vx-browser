@@ -15,7 +15,12 @@ private final class BrowserWindow: NSWindow {
     }
 
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
-        if event.modifierFlags.intersection([.command, .control, .option, .shift]) == .command,
+        let modifiers = event.modifierFlags.intersection([.command, .control, .option, .shift])
+        if modifiers == [.command, .shift], let character = event.characters,
+           ["+", "="].contains(character), shortcut?("+") == true {
+            return true
+        }
+        if modifiers == .command,
            let key = event.charactersIgnoringModifiers?.lowercased(), shortcut?(key) == true {
             return true
         }
@@ -59,6 +64,7 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
     private var chrome: WKWebView? { nil }
     private let nativeModel = NativeChromeModel()
     private var nativeChrome: NSHostingView<NativeBrowserChrome>?
+    private var currentAddressDraft: String?
     private var commandHost: NSHostingView<NativeCommandPalette>?
     private var commandWidth: NSLayoutConstraint?
     private weak var previousCommandResponder: NSResponder?
@@ -174,6 +180,8 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             guard let self, !self.closing else { return false }
             if self.nativeModel.commands {
                 if ["t", "k"].contains(key) { return true }
+                // Field-editor shortcuts must reach the responder while its host is mounted.
+                guard ["l", "s", ",", "w", "r", "[", "]"].contains(key) else { return false }
                 self.nativeModel.commands = false
             }
             if self.recovery != nil {
@@ -183,8 +191,7 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             }
             switch key {
             case "l":
-                if !self.mini { self.nativeModel.sidebarVisible = true }
-                self.nativeModel.focusAddress += 1
+                self.editCurrentAddress()
             case "s":
                 if !self.mini { self.nativeModel.sidebarVisible.toggle() }
             case "k":
@@ -197,6 +204,9 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             case "w":
                 if let selected = self.selected { self.nativeModel.send(.close, tab: selected.rawValue) }
                 else { self.window?.performClose(nil) }
+            case "=", "+": self.performMenuAction(.zoomIn)
+            case "-": self.performMenuAction(.zoomOut)
+            case "0": self.performMenuAction(.actualSize)
             case "r": self.nativeModel.send(.reload, tab: self.selected?.rawValue)
             case "[": self.nativeModel.send(.back, tab: self.selected?.rawValue)
             case "]": self.nativeModel.send(.forward, tab: self.selected?.rawValue)
@@ -208,10 +218,24 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
 
     func showWelcomeIfNeeded() { nativeModel.showWelcomeIfNeeded() }
 
+    private static let zoomSteps: [CGFloat] = [0.5, 0.67, 0.8, 0.9, 1, 1.1, 1.25, 1.5, 1.75, 2, 2.5, 3]
+
+    private func nextZoom(_ action: NativeBrowserMenuAction, current: CGFloat) -> CGFloat? {
+        switch action {
+        case .zoomIn: return Self.zoomSteps.first { $0 > current }
+        case .zoomOut: return Self.zoomSteps.last { $0 < current }
+        case .actualSize: return current == 1 ? nil : 1
+        default: return nil
+        }
+    }
+
     func allowsMenuAction(_ action: NativeBrowserMenuAction) -> Bool {
         guard !closing, !busy else { return false }
         let tab = nativeModel.selectedTab
         switch action {
+        case .zoomIn, .zoomOut, .actualSize:
+            guard recovery == nil, let selected, let view = surface(selected) else { return false }
+            return nextZoom(action, current: view.pageZoom) != nil
         case .duplicateTab, .togglePin:
             return !mini && recovery == nil && tab != nil
         case .nextTab, .previousTab:
@@ -241,6 +265,10 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             let next = (current + ordered.count + delta) % ordered.count
             nativeModel.commands = false
             nativeModel.send(.activate, tab: ordered[next].id.rawValue)
+        case .zoomIn, .zoomOut, .actualSize:
+            if let selected, let view = surface(selected), let target = nextZoom(action, current: view.pageZoom) {
+                view.pageZoom = target
+            }
         case .duplicateTab: nativeModel.send(.duplicate, tab: tab)
         case .togglePin: nativeModel.send(.pin, tab: tab)
         case .nextSpace, .previousSpace:
@@ -252,7 +280,7 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             nativeModel.send(.spaceSwitch, target: ordered[next].id)
         case .newTab: nativeModel.send(mountedSession == nil ? .startPrivate : .newTab)
         case .commandBar: nativeModel.commands = true
-        case .focusAddress: nativeModel.focusAddress += 1
+        case .focusAddress: editCurrentAddress()
         case .sidebar: nativeModel.sidebarVisible.toggle()
         case .back: nativeModel.send(.back, tab: tab)
         case .forward: nativeModel.send(.forward, tab: tab)
@@ -268,12 +296,23 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
 
     required init?(coder: NSCoder) { fatalError("Storyboard initialization is not supported") }
 
+    private func editCurrentAddress() {
+        guard !mini, let tab = nativeModel.selectedTab else {
+            nativeModel.focusAddress += 1
+            return
+        }
+        nativeModel.commands = false
+        currentAddressDraft = tab.url ?? ""
+        nativeModel.commands = true
+    }
+
     private func presentCommands(_ visible: Bool) {
         guard let window else { return }
         if visible {
             guard !closing, !mini, commandHost == nil else { return }
             previousCommandResponder = window.firstResponder
-            let host = NSHostingView(rootView: NativeCommandPalette(model: nativeModel))
+            let host = NSHostingView(rootView: NativeCommandPalette(model: nativeModel, currentAddress: currentAddressDraft))
+            currentAddressDraft = nil
             host.sizingOptions = [.intrinsicContentSize]
             commandHost = host
             root.addSubview(host, positioned: .above, relativeTo: nil)

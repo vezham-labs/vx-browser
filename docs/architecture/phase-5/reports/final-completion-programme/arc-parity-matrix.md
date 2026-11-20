@@ -120,3 +120,15 @@ Space ordering and cycling, private search choices, tab menu actions, visible Fa
 ## Arc 2 installed drag and navigation retry
 
 Four matched visual states, pointer acceptance, private reset, address-routing validation and the latest build identity are recorded in the [installed qualification](evidence/20261120-address-routing/report.md). Durable restoration and pixel parity remain open.
+
+## Native WebKit page zoom
+
+The installed Preview supports per-tab zoom, upper and lower bounds and actual-size reset. Zoom-in via keyboard remains unqualified. [Installed measurements and evidence](evidence/20261120-page-zoom/report.md)
+
+## Floating current-tab address editing and native shortcuts
+
+[Installed workflow results, measured zoom and Arc 2 comparison](evidence/20261120-address-editor/report.md). The prior zoom-in keyboard failure is superseded by the installed pixel measurement. The external protected-profile and signing gates remain open.
+
+## Private bookmark folder ordering
+
+Expanded folder reorder, child retention, bookmark transfer to the moved folder and reset after private relaunch passed. [Installed gestures and regression evidence](evidence/20261120-folder-order/report.md)
