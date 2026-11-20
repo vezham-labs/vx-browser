@@ -1,0 +1,31 @@
+{
+  "kind": "Agent observation summary of actual CUA tool results; not an automated assertion log",
+  "date": "2026-11-10",
+  "app": "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app",
+  "launchWitness": {
+    "pid": 38006,
+    "executable": "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app/Contents/MacOS/VezhamBrowser",
+    "method": "ps output observed in chat; path matched installed app"
+  },
+  "passedObservations": [
+    "Welcome Done dismissed onboarding",
+    "Start private session enabled address and New tab",
+    "https://example.com/ loaded HTML content Example Domain with encrypted address indicator",
+    "Add temporary favorite created Favorites row Example Domain",
+    "Selecting favorite added tab and loaded https://example.com/",
+    "Tab context Pin created Pinned row",
+    "Bookmark manager created Folder example, URL https://example.com/, folder Reading",
+    "Disclosure triangle expanded Reading and selecting Folder example loaded associated website",
+    "New Space Qualification selected empty enter page; picker returned to Personal and its tabs",
+    "Split with selected tab created two HTML content panes and Close Split Screen removed split controls",
+    "Open in Mini loaded https://example.com/ in Vezham Mini \u00b7 Private; native close returned to Main",
+    "Settings Dark selected; System restored",
+    "Command-T opened command bar with tab, Space and action entries"
+  ],
+  "unqualified": [
+    "Physical drag initially returned noWindowsAvailable; renewed calls returned unchanged AX state for favorite-to-folder and folder-bookmark-to-favorite attempts. No successful movement observed.",
+    "Command-Q followed by getAXState timed out. Subsequent process inspection found no installed executable; reconnect by app path timed out. Optional launch_app unavailable on host. Relaunch restoration not verified.",
+    "Arc app metadata verified; reference UI access previously reported explicitly stopped session. No paired screenshot exists."
+  ],
+  "screenshots": "Installed sidebar/webpage screenshot emitted in CUA chat (2360 x 1584). No local PNG export was returned; no screenshot file path asserted."
+}

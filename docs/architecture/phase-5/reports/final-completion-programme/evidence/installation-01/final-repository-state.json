@@ -1,0 +1,6 @@
+{
+  "branch": "cross-browser-research",
+  "head": "ce2a9fa6a013b2f70f990c50468f27ed22517914",
+  "status": "M apps/browser-macos/Sources/Host/NativeBrowserChrome.swift\n M docs/architecture/phase-5/reports/final-completion-programme/README.md\n M docs/architecture/phase-5/reports/final-completion-programme/arc-parity-matrix.md\n M docs/architecture/phase-5/reports/final-completion-programme/remaining-blockers.md\n M docs/architecture/phase-5/reports/final-completion-programme/verification.md\n?? docs/architecture/phase-5/reports/final-completion-programme/browser-workflow-qualification.md\n?? docs/architecture/phase-5/reports/final-completion-programme/drag-and-drop-qualification.md\n?? docs/architecture/phase-5/reports/final-completion-programme/evidence/installation-01/\n?? docs/architecture/phase-5/reports/final-completion-programme/installation-and-launch.md\n?? docs/architecture/phase-5/reports/final-completion-programme/visual-comparison.md\n?? qualification/webkit-storage-f0/Sources/BrowserDomain/PrivateBookmarks.swift\n?? qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift",
+  "diffCheckReturnCode": 0
+}

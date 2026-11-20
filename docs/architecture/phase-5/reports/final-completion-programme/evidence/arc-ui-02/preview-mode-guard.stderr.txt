@@ -1,0 +1,5 @@
+usage: native_host.py [-h] [--qualification] [--wsf5-qualification]
+                      [--wsf6-qualification] [--unsigned-release]
+                      [--ui-preview]
+                      {build,chrome,audit,launch}
+native_host.py: error: --ui-preview cannot be combined with qualification or release modes

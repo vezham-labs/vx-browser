@@ -38,3 +38,41 @@ Rows describe current scope and required verification. No row claims exact parit
 | 28 | Window management | Multi-window and mini workflows documented | Exact sizes unverified | One Main with independent Mini windows | Multiple normal windows and restoration | ApplicationDelegate and controller | Native Mini lifecycle | Compare activation, multiple displays and restore | Partial |
 | 29 | Responsive behavior | Sidebar hide and fullscreen behavior documented | Reference collapse breakpoints unverified | Minimum size, resize handle and compact Split View | Compare breakpoints and fullscreen | Native geometry and AppKit | Native compact fallback | Physical resize and display qualification | Partial |
 | 30 | Empty, loading and failure states | Current reference details vary by workflow | Matched captures absent | Welcome, blank private tab, loading and recovery states | Full error and recovery design comparisons | Native browser chrome | Native fixture error cases | Match blank/loading/error fixture screens | Partial |
+
+
+---
+
+# Installation follow-up — 2026-11-10
+
+Evidence for this follow-up is under [installation-01](evidence/installation-01/). Prior reports and artifacts remain historical. Statuses below describe this candidate, not a production authorization.
+
+| Feature | Status | Actual result / evidence | Remaining gap / next action |
+|---|---|---|---|
+| Tabs / pinned tabs | PARTIAL | Installed favorite created new tab; Pin context action produced Pinned row; native workspace suite covers ordering. | Arc naming/selection and all keyboard/hover details need reference capture. |
+| Favorites | PARTIAL | Saved associated HTTPS destination and opened Example Domain in new tab; stable UUID model. | Current labeled star row differs from documented Arc icon favorites; no direct reference observation. |
+| Bookmarks / folders | PARTIAL | Created named Reading folder and Folder example; expanded and opened correct URL. | One level of folders; session-only; no complete Arc collection parity. |
+| Space switching | PARTIAL | Created Qualification Space, observed empty enter page, returned to Personal tabs. | Restart and full reference comparison absent. |
+| Tab groups / collections | PARTIAL | Existing group context/model support retained. | No new physical group drag or installed group scenario qualified. |
+| Command bar / keyboard | PARTIAL | Command-T displayed matching tabs, Space and actions. | Full arrow/Return/VoiceOver and Arc ranking comparison not rerun. |
+| Website navigation | PASS | Installed https://example.com/ HTML and address agree for direct, favorite and folder link selection. | PASS is bounded to these observed navigations; complete browser equivalence unclaimed. |
+| Back / forward / stop / failures | PARTIAL | Existing navigation suite and native recovery checks passed. | Installed live history chain, loading cancellation and permission prompts not comprehensively exercised. |
+| Enter page | PASS | Empty active Space showed Where to? and Search or open a website; inactive welcome showed private-session entry. | No matched Arc visual claim. |
+| Split View | PASS | Two loaded website panes appeared; Close Split Screen returned to single pane. | Full resizing/focus matrix remains. |
+| Mini browser | PARTIAL | Open in Mini loaded associated URL; native close returned to Main. | Transfer preview/confirm not exercised in this installed smoke run. |
+| Onboarding / Settings | PARTIAL | Done closed welcome; Dark selected and System restored in Settings. | Relaunch preference persistence not verified. |
+| Context / application menus | PARTIAL | Observed native tab actions and bookmark manager; Pin, Split and Mini actions worked. | Complete menu and site-specific action comparison absent. |
+| Drag / section / Space movements | PARTIAL | Validated model moves, current-session native payloads and indicators implemented. | No successful pointer drop; cross-Space/group drag absent. See drag report. |
+| Appearance / sidebar geometry | PARTIAL | Native settings and 236-point resizable sidebar exist. | Matched geometry, hover and animation measurement absent. |
+| Profiles / isolation | PARTIAL | Private WebKit and recovery qualification passed; normal protected path remains unavailable. | Signed persistent profile isolation cases blocked. |
+| History / downloads | NOT IMPLEMENTED | Settings explicitly discloses unavailable persistent history and downloads. | Needs approved durable implementation and lifecycle integration. |
+| Website permissions | PARTIAL | Existing permission model guards retained and storage suites passed. | Real camera/microphone/OS grant matrix unqualified; no permission expansion performed. |
+| Workspace/bookmark restart restoration | NOT IMPLEMENTED | Private data remains volatile. | WS-F7 authorization, signed custody, production writer and restore integration required. |
+| Chromium extension host | NOT IMPLEMENTED | No Chromium extension-host implementation exists in WebKit architecture. | Cannot claim Arc extension compatibility. |
+| Pixel-level visual parity | NOT VERIFIED | No equal-dimension reference pair. | Capture matched states and compute overlays/diffs. |
+| Distribution readiness | FAIL | Unsigned Release correctly fails production preflight. | Developer ID, notarization, signed runtime qualification and production security integration. |
+
+For every row, direct Arc reference behavior remains NOT VERIFIED; existing vendor documentation is background, not a measured observation of this installation. Evidence and procedures: [installed workflow](browser-workflow-qualification.md), [drag](drag-and-drop-qualification.md), [visual](visual-comparison.md). Expected behavior is correct item/URL identity, native state transitions and preserved security fences.
+
+## Live Arc follow-up — 2026-11-10
+
+Live Arc inspection now informs the sidebar, Favorites, tab and command entry changes. Full workflow parity remains partial. [Comparison and evidence](arc-ui-alignment.md).

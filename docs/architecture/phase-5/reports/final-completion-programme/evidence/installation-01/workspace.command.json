@@ -1,0 +1,19 @@
+{
+  "name": "workspace",
+  "argv": [
+    "python3",
+    "apps/browser-macos/Tools/wsf6.py",
+    "--suite",
+    "workspace",
+    "--app",
+    "/private/tmp/vezham-final-qual/Build/Products/Debug/VezhamBrowser.app",
+    "--evidence",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf6-evidence",
+    "--run-name",
+    "install-workspace-01"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 17.587,
+  "started_epoch": 1794279003.614609
+}

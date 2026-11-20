@@ -1,0 +1,64 @@
+{
+  "file": {
+    "argv": [
+      "file",
+      "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app/Contents/MacOS/VezhamBrowser"
+    ],
+    "returncode": 0,
+    "stdout": "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app/Contents/MacOS/VezhamBrowser: Mach-O 64-bit executable arm64\n",
+    "stderr": ""
+  },
+  "signature": {
+    "argv": [
+      "codesign",
+      "-d",
+      "--verbose=4",
+      "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Executable=/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app/Contents/MacOS/VezhamBrowser\nIdentifier=internal.vezham.browser.foundation\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=17539 flags=0x10002(adhoc,runtime) hashes=537+7 location=embedded\nVersionPlatform=1\nVersionMin=1703936\nVersionSDK=1769984\nHash type=sha256 size=32\nCandidateCDHash sha256=a286874b8c37cb33250fc1b805290e32e225f5b0\nCandidateCDHashFull sha256=a286874b8c37cb33250fc1b805290e32e225f5b07a25392fb2095b87d8f3d668\nHash choices=sha256\nCMSDigest=a286874b8c37cb33250fc1b805290e32e225f5b07a25392fb2095b87d8f3d668\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=4620288\nExecutable Segment flags=0x1\nPage size=16384\nCDHash=a286874b8c37cb33250fc1b805290e32e225f5b0\nSignature=adhoc\nInfo.plist entries=22\nTeamIdentifier=not set\nRuntime Version=27.2.0\nSealed Resources version=2 rules=13 files=0\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n"
+  },
+  "signatureVerification": {
+    "argv": [
+      "codesign",
+      "--verify",
+      "--deep",
+      "--strict",
+      "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "entitlements": {
+    "argv": [
+      "codesign",
+      "-d",
+      "--entitlements",
+      ":-",
+      "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app"
+    ],
+    "returncode": 0,
+    "stdout": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"https://www.apple.com/DTDs/PropertyList-1.0.dtd\"><plist version=\"1.0\"><dict><key>com.apple.security.app-sandbox</key><true/><key>com.apple.security.network.client</key><true/></dict></plist>\n",
+    "stderr": "Executable=/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app/Contents/MacOS/VezhamBrowser\nwarning: Specifying ':' in the path is deprecated and will not work in a future release\n"
+  },
+  "identities": {
+    "argv": [
+      "security",
+      "find-identity",
+      "-v",
+      "-p",
+      "codesigning"
+    ],
+    "returncode": 0,
+    "stdout": "     0 valid identities found\n",
+    "stderr": ""
+  },
+  "installedExecutableSHA256": "fb3f7e308fb1c28d2674268298fb9c1120e8762ce967456da243b55e3e01e12a",
+  "reference": {
+    "CFBundleIdentifier": "company.thebrowser.Browser",
+    "CFBundleShortVersionString": "1.172.1",
+    "CFBundleVersion": "90370"
+  }
+}

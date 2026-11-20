@@ -1,0 +1,7 @@
+{
+  "source": "/private/tmp/vezham-arc-ui/Build/Products/Debug/VezhamBrowser.app",
+  "installed": "/Users/vigneshwaranbhoj/Applications/Vezham Browser Arc Preview.app",
+  "sha256": "dff35bb2af784578696d372122c1c40d9fa2f45e88b545fca363d663fedbf3ae",
+  "identifier": "internal.vezham.browser.foundation",
+  "method": "staged ditto, strict/deep signature check, non-overwriting move; earlier Development app retained"
+}

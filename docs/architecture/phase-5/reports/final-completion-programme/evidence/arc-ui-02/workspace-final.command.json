@@ -1,0 +1,19 @@
+{
+  "name": "workspace-final",
+  "argv": [
+    "python3",
+    "apps/browser-macos/Tools/wsf6.py",
+    "--suite",
+    "workspace",
+    "--app",
+    "/private/tmp/vezham-arc-ui-qual/Build/Products/Debug/VezhamBrowser.app",
+    "--evidence",
+    "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf6-evidence",
+    "--run-name",
+    "arc-ui-workspace-02"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 18.053,
+  "started_epoch": 1794285451.431699
+}

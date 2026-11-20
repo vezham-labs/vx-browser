@@ -1,0 +1,11 @@
+{
+  "source": "/private/tmp/vezham-final-debug/Build/Products/Debug/VezhamBrowser.app",
+  "installed": "/Users/vigneshwaranbhoj/Applications/Vezham Browser Development.app",
+  "identifier": "internal.vezham.browser.foundation",
+  "version": "0.1.0",
+  "build": "1",
+  "minimumOS": "26.0",
+  "sha256": "fb3f7e308fb1c28d2674268298fb9c1120e8762ce967456da243b55e3e01e12a",
+  "signature": "strict/deep verified, ad hoc Debug",
+  "method": "staged ditto plus non-overwriting mv"
+}

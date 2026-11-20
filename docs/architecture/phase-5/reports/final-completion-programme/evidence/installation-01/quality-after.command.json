@@ -1,0 +1,26 @@
+{
+  "name": "quality-after",
+  "argv": [
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run-many",
+    "-t",
+    "qualification-tool-tests",
+    "qualification-tool-vet",
+    "reliability-contracts",
+    "reliability-typecheck",
+    "reliability-ui",
+    "lint",
+    "--projects",
+    "browser-macos",
+    "--parallel=2",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 61.257,
+  "started_epoch": 1794278837.2345011
+}

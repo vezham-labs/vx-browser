@@ -9,7 +9,9 @@ enum BrowserChromeMetrics {
     static let sidebarDefault: CGFloat = 236
     static let sidebarRange: ClosedRange<CGFloat> = 180...320
     static let sidebarHandle: CGFloat = 8
-    static let dialogWidth: CGFloat = 520
+    static let dialogWidth: CGFloat = 640
+    static let contentInset: CGFloat = 8
+    static let compactToolbarHeight: CGFloat = 44
     static let horizontalPadding: CGFloat = 14
     static let controlRadius: CGFloat = 9
 }
@@ -67,14 +69,9 @@ enum NativeBrowserMenuAction: Int {
     }
     @Published var showsWebContent = false
     @Published var managesBookmarks = false
-    @Published var bookmarks: [Bookmark] = []
+    @Published var bookmarks = PrivateBookmarks()
     var execute: ((ChromeCommand) async -> ChromeResult?)?
-    struct Bookmark: Identifiable {
-        var id = UUID()
-        var title: String
-        var url: String
-        var folder = "Favorites"
-    }
+    typealias Bookmark = PrivateBookmarks.Link
     var selectedTab: ChromeTab? { state?.tabs.first { $0.id == state?.selected } }
     func send(_ type: ChromeCommand.Kind, tab: String? = nil, target: String? = nil,
               name: String? = nil, url: String? = nil, offset: Int? = nil, appearance: ChromeAppearance? = nil) {
@@ -109,10 +106,20 @@ enum NativeBrowserMenuAction: Int {
             send(.navigate, tab: state?.selected, url: url.absoluteString)
         }
     }
-    func bookmarkCurrent() {
-        guard let tab = selectedTab, let url = tab.url, bookmarks.count < 100,
-              !bookmarks.contains(where: { $0.url == url }) else { return }
-        bookmarks.append(Bookmark(title: tab.title, url: url))
+    func bookmarkCurrent(favorite: Bool = false) {
+        guard state?.sessionID != nil, state?.recovery == nil, let tab = selectedTab, let url = tab.url else { return }
+        if var link = bookmarks.links.first(where: { $0.url == url }) {
+            if favorite { link.favorite = true; bookmarks.save(link) }
+        } else {
+            bookmarks.save(Bookmark(title: tab.title, url: url, favorite: favorite))
+        }
+    }
+
+    func openBookmark(_ id: UUID) {
+        guard state?.sessionID != nil, state?.recovery == nil,
+              let link = bookmarks.links.first(where: { $0.id == id }),
+              let url = PrivateBookmarks.destination(link.url) else { return }
+        send(.navigateInNewTab, url: url.absoluteString)
     }
 }
 
@@ -126,7 +133,7 @@ enum NativeBrowserMenuAction: Int {
     @State private var bookmarkDraft: NativeChromeModel.Bookmark?
     @State private var editor: EditRequest?
     @State private var deletion: DeleteRequest?
-    @State private var dragToken = UUID()
+    @State private var dropTarget: String?
     @FocusState private var addressFocused: Bool
     private struct EditRequest: Identifiable {
         let id = UUID(); let title: String; let kind: ChromeCommand.Kind; let target: String?; var value: String
@@ -138,24 +145,25 @@ enum NativeBrowserMenuAction: Int {
         Group {
             if let state = model.state {
                 VStack(spacing: 0) {
-                    toolbar(state)
-                    Divider()
+                    if state.mini || !model.sidebarVisible {
+                        toolbar(state).frame(height: BrowserChromeMetrics.compactToolbarHeight)
+                    }
                     HStack(spacing: 0) {
                         if !state.mini && model.sidebarVisible {
                             sidebar(state)
                                 .frame(width: model.sidebarWidth)
                                 .overlay(alignment: .trailing) { sidebarResizeHandle }
-                            Divider()
                         }
-                        content(state).frame(maxWidth: .infinity, maxHeight: .infinity)
+                        content(state)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(.background, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
+                            .padding(BrowserChromeMetrics.contentInset)
                     }
-                    Divider()
-                    HStack {
-                        Label(state.session == "inactive" ? "Private browsing is inactive" : "Private · memory only", systemImage: "hand.raised")
-                        Spacer()
-                        if state.splitCompact && !state.split.isEmpty { Text("Split · focused pane") }
-                        Text("Protected profiles unavailable").foregroundStyle(.secondary)
-                    }.font(.caption).padding(.horizontal, 12).frame(height: BrowserChromeMetrics.footerHeight)
+                    if state.mini {
+                        Text("Private · memory only")
+                            .font(.caption).foregroundStyle(.secondary)
+                            .frame(height: BrowserChromeMetrics.footerHeight)
+                    }
                 }
                 .background(.background)
                 .sheet(isPresented: $model.commands, onDismiss: {
@@ -189,13 +197,21 @@ enum NativeBrowserMenuAction: Int {
                 }
             } else { ProgressView("Preparing browser…") }
         }
+        .ignoresSafeArea()
         .onChange(of: model.state?.sessionID) { _, _ in
             model.managesBookmarks = false
             bookmarkDraft = nil
             bookmarkFilter = ""
         }
         .onChange(of: model.focusAddress) { _, _ in
-            address = model.selectedTab?.url ?? ""; addressFocused = true
+            address = model.selectedTab?.url ?? ""
+            addressFocused = false
+            Task { @MainActor in
+                // The address field may have just moved from the collapsed toolbar
+                // into the sidebar. Give SwiftUI a turn to mount its new focus target.
+                await Task.yield()
+                addressFocused = true
+            }
         }
         .onChange(of: model.state?.selected) { _, _ in address = model.selectedTab?.url ?? "" }
         .onChange(of: model.selectedTab?.url) { _, value in if !addressFocused { address = value ?? "" } }
@@ -210,7 +226,7 @@ enum NativeBrowserMenuAction: Int {
     }
     private func toolbar(_ state: ChromeState) -> some View {
         HStack(spacing: 10) {
-            Text(state.mini ? "V" : "VEZHAM").font(.system(size: state.mini ? 24 : 15, weight: .heavy, design: .rounded)).foregroundStyle(.orange)
+            Spacer().frame(width: 64)
             if !state.mini {
                 tool(model.sidebarVisible ? "Hide sidebar" : "Show sidebar", "sidebar.left") { model.sidebarVisible.toggle() }
             }
@@ -234,18 +250,54 @@ enum NativeBrowserMenuAction: Int {
                 tool("Command bar", "command") { model.commands = true }
                 Menu {
                     Button("Add temporary bookmark") { model.bookmarkCurrent() }.disabled(model.selectedTab?.url == nil)
-                    ForEach(model.bookmarks) { bookmark in Button(bookmark.title) { model.navigate(bookmark.url) } }
+                    Button("Add temporary favorite") { model.bookmarkCurrent(favorite: true) }.disabled(model.selectedTab?.url == nil)
+                    ForEach(model.bookmarks.links) { bookmark in Button(bookmark.title) { model.openBookmark(bookmark.id) } }
                     Divider()
                     Button("Manage temporary bookmarks…") { model.managesBookmarks = true }.disabled(state.session == "inactive")
                 } label: { Image(systemName: "bookmark") }.menuStyle(.borderlessButton).fixedSize().help("Temporary bookmarks")
                 tool("Settings", "gearshape") { model.settings = true }
             }
-        }.padding(.horizontal, BrowserChromeMetrics.horizontalPadding).frame(height: BrowserChromeMetrics.toolbarHeight)
+        }.padding(.horizontal, BrowserChromeMetrics.horizontalPadding).frame(height: BrowserChromeMetrics.compactToolbarHeight)
     }
     private func sidebar(_ state: ChromeState) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 2) {
+                Spacer(minLength: 64)
+                tool("Hide sidebar", "sidebar.left") { model.sidebarVisible = false }
+                Spacer(minLength: 0)
+                tool("Back", "chevron.left", enabled: model.selectedTab?.back == true) { model.send(.back, tab: state.selected) }
+                tool("Forward", "chevron.right", enabled: model.selectedTab?.forward == true) { model.send(.forward, tab: state.selected) }
+                tool(model.selectedTab?.loading == true ? "Stop loading" : "Reload", model.selectedTab?.loading == true ? "xmark" : "arrow.clockwise", enabled: model.selectedTab?.url != nil) {
+                    model.send(model.selectedTab?.loading == true ? .stop : .reload, tab: state.selected)
+                }
+            }.frame(height: 34)
+            HStack(spacing: 6) {
+                Image(systemName: model.selectedTab?.connection == "encrypted" ? "lock" : "magnifyingglass")
+                    .font(.caption).foregroundStyle(.secondary)
+                    .accessibilityLabel("Connection: \(model.selectedTab?.connection ?? "unknown")")
+                TextField("Search or enter an address", text: $address)
+                    .textFieldStyle(.plain).font(.system(size: 12))
+                    .focused($addressFocused)
+                    .onSubmit { model.navigate(address); addressFocused = false }
+                    .accessibilityIdentifier("native-address").accessibilityLabel("Address and search")
+                if model.selectedTab?.loading == true { ProgressView().controlSize(.mini) }
+            }
+            .padding(.horizontal, 10).frame(height: 34)
+            .background(.quaternary, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
+            .disabled(state.session == "inactive" || state.recovery != nil)
+            if !model.bookmarks.links.filter(\.favorite).isEmpty {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 44), spacing: 6)], spacing: 6) {
+                    ForEach(model.bookmarks.links.filter(\.favorite)) { savedRow($0, state) }
+                }.padding(.vertical, 4)
+                .accessibilityLabel("Favorites")
+            }
+
             HStack {
+                Picker("Space", selection: Binding(get: { state.activeSpace }, set: { model.send(.spaceSwitch, target: $0) })) {
+                    ForEach(state.spaces, id: \.id) { Text($0.name).tag($0.id) }
+                }.labelsHidden().accessibilityLabel("Space")
                 Menu {
+                    Menu("Workspace") {
                     ForEach(state.workspaces, id: \.id) { workspace in
                         Button(workspace.name) { model.send(.workspaceSwitch, target: workspace.id) }
                     }
@@ -256,24 +308,23 @@ enum NativeBrowserMenuAction: Int {
                     Button("Move workspace later") { model.send(.workspaceMove, target: state.activeWorkspace, offset: 1) }
                     Button("Delete empty workspace…", role: .destructive) { deletion = DeleteRequest(title: "Delete this empty workspace?", kind: .workspaceDelete, target: state.activeWorkspace) }
                         .disabled(state.workspaces.count < 2 || state.workspaces.first { $0.id == state.activeWorkspace }?.empty != true)
-                } label: { Label(state.workspaces.first { $0.id == state.activeWorkspace }?.name ?? "Workspace", systemImage: "square.stack") }
-                .disabled(state.session == "inactive")
-                Spacer()
-            }
-            HStack {
-                Picker("Space", selection: Binding(get: { state.activeSpace }, set: { model.send(.spaceSwitch, target: $0) })) {
-                    ForEach(state.spaces, id: \.id) { Text($0.name).tag($0.id) }
-                }.labelsHidden().accessibilityLabel("Space")
-                Menu {
+                    }
+                    Divider()
                     Button("New Space…") { edit("New Space", .spaceCreate) }
                     Button("Rename Space…") { edit("Rename Space", .spaceRename, state.activeSpace, state.spaces.first { $0.id == state.activeSpace }?.name ?? "") }
                     Button("Delete empty Space…", role: .destructive) { deletion = DeleteRequest(title: "Delete this empty Space?", kind: .spaceDelete, target: state.activeSpace) }
                         .disabled(state.spaces.count < 2 || state.tabs.contains { $0.space == state.activeSpace })
                     Divider(); Button("New group…") { edit("New group", .groupCreate) }
+                    Divider()
+                    Button("Add temporary bookmark") { model.bookmarkCurrent() }.disabled(model.selectedTab?.url == nil)
+                    Button("Add temporary favorite") { model.bookmarkCurrent(favorite: true) }.disabled(model.selectedTab?.url == nil)
+                    Button("Manage temporary bookmarks…") { model.managesBookmarks = true }
                 } label: { Image(systemName: "ellipsis.circle") }.menuStyle(.borderlessButton).fixedSize()
             }.disabled(state.session == "inactive")
+            Button { model.send(state.session == "inactive" ? .startPrivate : .newTab) } label: { Label(state.session == "inactive" ? "Start private session" : "New tab", systemImage: "plus") }.buttonStyle(.plain)
             List(selection: Binding(get: { state.selected }, set: { if let id = $0 { model.send(.activateKeepingChromeFocus, tab: id) } })) {
                 let current = state.tabs.filter { $0.space == state.activeSpace }
+                savedLinks(state)
                 if current.contains(where: \.pinned) {
                     Section("Pinned") { ForEach(current.filter(\.pinned), id: \.id) { tabRow($0, state) } }
                 }
@@ -293,7 +344,6 @@ enum NativeBrowserMenuAction: Int {
                     }
                 }
             }.listStyle(.sidebar).scrollContentBackground(.hidden).accessibilityIdentifier("native-tabs")
-            Button { model.send(state.session == "inactive" ? .startPrivate : .newTab) } label: { Label(state.session == "inactive" ? "Start private session" : "New tab", systemImage: "plus") }.buttonStyle(.plain)
             if !state.split.isEmpty {
                 HStack { ForEach(state.split, id: \.self) { id in Button(state.tabs.first { $0.id == id }?.title ?? "Pane") { model.send(.activate, tab: id) }.lineLimit(1) } }
                 Button("Close Split Screen") { model.send(.unsplit) }
@@ -302,7 +352,17 @@ enum NativeBrowserMenuAction: Int {
             Button("End private session", role: .destructive) {
                 deletion = DeleteRequest(title: "End this private session and clear its workspace?", kind: .endPrivate, target: "")
             }.disabled(state.session == "inactive")
-        }.padding(14).background(.regularMaterial)
+            HStack(spacing: 12) {
+                tool("Command bar", "command") { model.commands = true }
+                tool("Bookmarks", "bookmark") { model.managesBookmarks = true }
+                    .disabled(state.session == "inactive")
+                Spacer()
+                tool("Settings", "gearshape") { model.settings = true }
+            }
+            Text(state.session == "inactive" ? "Private browsing is inactive" : "Private · memory only")
+                .font(.caption2).foregroundStyle(.secondary)
+            Text("Protected profiles unavailable").font(.caption2).foregroundStyle(.tertiary)
+        }.padding(.horizontal, 8).padding(.bottom, 10).background(.regularMaterial)
     }
     private func tabRow(_ tab: ChromeTab, _ state: ChromeState) -> some View {
         HStack {
@@ -330,18 +390,119 @@ enum NativeBrowserMenuAction: Int {
             Button("Copy address") { model.send(.copy, tab: tab.id) }.disabled(tab.url == nil)
             Divider(); Button("Close", role: .destructive) { model.send(.close, tab: tab.id) }
         }
-        .draggable("\(dragToken.uuidString)/\(tab.id)")
+        .draggable(dragPayload("tab", tab.id, state))
         .dropDestination(for: String.self) { items, _ in
-            guard items.count == 1, let value = items.first else { return false }
-            let pieces = value.split(separator: "/", omittingEmptySubsequences: false)
-            guard pieces.count == 2, pieces[0] == dragToken.uuidString,
-                  let from = state.tabs.firstIndex(where: { $0.id == pieces[1] }),
-                  let to = state.tabs.firstIndex(where: { $0.id == tab.id }),
-                  state.tabs[from].space == tab.space, from != to else { return false }
-            model.send(.move, tab: state.tabs[from].id, offset: to - from)
+            guard let source = dragID(items, "tab", state),
+                  let from = state.tabs.firstIndex(where: { $0.id == source }),
+                  let to = state.tabs.firstIndex(where: { $0.id == tab.id }), from != to,
+                  state.tabs[from].space == tab.space, state.tabs[from].pinned == tab.pinned,
+                  state.tabs[from].group == tab.group else { return false }
+            model.send(.move, tab: source, offset: to - from)
             return true
+        } isTargeted: { highlight(tab.id, $0) }
+        .overlay(alignment: .top) { dropIndicator(tab.id) }
+    }
+
+    private func dragPayload(_ kind: String, _ id: String, _ state: ChromeState) -> String {
+        "\(state.sessionID ?? "")/\(kind)/\(id)"
+    }
+
+    private func dragID(_ items: [String], _ kind: String, _ state: ChromeState) -> String? {
+        guard items.count == 1, let value = items.first, let session = state.sessionID,
+              model.state?.sessionID == session, model.state?.recovery == nil else { return nil }
+        let pieces = value.split(separator: "/", omittingEmptySubsequences: false)
+        guard pieces.count == 3, pieces[0] == session, pieces[1] == kind,
+              UUID(uuidString: String(pieces[2])) != nil else { return nil }
+        return String(pieces[2])
+    }
+
+    private func highlight(_ id: String, _ targeted: Bool) {
+        if targeted { dropTarget = id }
+        else if dropTarget == id { dropTarget = nil }
+    }
+
+    @ViewBuilder private func dropIndicator(_ id: String) -> some View {
+        if dropTarget == id { Rectangle().fill(Color.accentColor).frame(height: 2).allowsHitTesting(false) }
+    }
+
+    @ViewBuilder private func savedLinks(_ state: ChromeState) -> some View {
+        let links = model.bookmarks.links
+        let ordinary = links.filter { !$0.favorite }
+        if !ordinary.isEmpty {
+            Section("Bookmarks") {
+                ForEach(ordinary.filter { $0.folder.isEmpty }) { savedRow($0, state) }
+                ForEach(Array(Set(ordinary.map(\.folder).filter { !$0.isEmpty })).sorted(), id: \.self) { folder in
+                    DisclosureGroup {
+                        ForEach(ordinary.filter { $0.folder == folder }) { savedRow($0, state) }
+                    } label: {
+                        Label(folder, systemImage: "folder")
+                            .dropDestination(for: String.self) { items, _ in
+                                guard let raw = dragID(items, "link", state), let id = UUID(uuidString: raw) else { return false }
+                                return model.bookmarks.move(id, toFolder: folder)
+                            } isTargeted: { highlight("folder-" + folder, $0) }
+                            .overlay(alignment: .top) { dropIndicator("folder-" + folder) }
+                    }
+                }
+            }
         }
     }
+
+    private func savedRow(_ link: NativeChromeModel.Bookmark, _ state: ChromeState) -> some View {
+        let id = link.id.uuidString
+        return Button { model.openBookmark(link.id) } label: {
+            Group {
+                if link.favorite {
+                    Image(systemName: "globe")
+                        .font(.system(size: 18, weight: .medium))
+                        .frame(maxWidth: .infinity).frame(height: 44)
+                        .background(.quaternary, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
+                } else {
+                    Label(link.title, systemImage: "bookmark")
+                        .lineLimit(1)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }.contentShape(Rectangle())
+        }.buttonStyle(.plain)
+            .help(link.title + "\n" + link.url)
+            .accessibilityLabel((link.favorite ? "Favorite " : "Bookmark ") + link.title)
+            .accessibilityIdentifier("saved-link-" + id)
+            .contextMenu {
+                Button("Open in new tab") { model.openBookmark(link.id) }
+                Button("Edit…") { bookmarkDraft = link; model.managesBookmarks = true }
+                Button(link.favorite ? "Move to Bookmarks" : "Move to Favorites") {
+                    var updated = link
+                    updated.favorite.toggle()
+                    model.bookmarks.save(updated)
+                }
+                if !link.folder.isEmpty {
+                    Button("Move out of folder") { model.bookmarks.move(link.id, toFolder: "") }
+                }
+                Button("Copy address") {
+                    NSPasteboard.general.clearContents()
+                    NSPasteboard.general.setString(link.url, forType: .string)
+                }
+                Button("Remove", role: .destructive) { model.bookmarks.remove(link.id) }
+            }
+            .draggable(dragPayload("link", id, state))
+            .dropDestination(for: String.self) { items, point in
+                guard let raw = dragID(items, "link", state), let source = UUID(uuidString: raw) else { return false }
+                if link.favorite, model.bookmarks.links.contains(where: { $0.id == source && $0.favorite }) {
+                    return model.bookmarks.reorderFavorite(source, onto: link.id)
+                }
+                return model.bookmarks.move(source, beside: link.id, after: link.favorite || point.y >= 10)
+            } isTargeted: { highlight(id, $0) }
+            .overlay(alignment: .top) {
+                if link.favorite {
+                    RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius)
+                        .strokeBorder(Color.accentColor, lineWidth: 2)
+                        .opacity(dropTarget == id ? 1 : 0)
+                        .allowsHitTesting(false)
+                } else {
+                    dropIndicator(id)
+                }
+            }
+    }
+
     private func content(_ state: ChromeState) -> some View {
         VStack(spacing: 18) {
             if let recovery = state.recovery {
@@ -354,7 +515,11 @@ enum NativeBrowserMenuAction: Int {
             } else {
                 Text("V").font(.system(size: 64, weight: .heavy, design: .rounded)).foregroundStyle(.orange)
                 Text(state.session == "inactive" ? "Your next idea." : "Where to?").font(.largeTitle.bold())
-                Text(state.session == "inactive" ? "A fresh private workspace. Nothing to restore." : "Enter an address or search from the toolbar.").foregroundStyle(.secondary)
+                Text(state.session == "inactive" ? "A fresh private workspace. Nothing to restore." : "Search or enter an address to start browsing.").foregroundStyle(.secondary)
+                if !state.mini {
+                    Button("Search or open a website") { model.commands = true }
+                        .keyboardShortcut("k", modifiers: .command)
+                }
                 if state.session == "inactive" { Button("Start private session") { model.send(.startPrivate) }.buttonStyle(.borderedProminent) }
                 else if model.selectedTab?.failure != nil { Label("This page could not load. Edit the address or try Reload.", systemImage: "exclamationmark.triangle") }
             }
@@ -426,34 +591,33 @@ enum NativeBrowserMenuAction: Int {
             if let draft = bookmarkDraft {
                 NativeBookmarkEditor(bookmark: draft) { updated in
                     guard model.state?.sessionID == state.sessionID else { bookmarkDraft = nil; return }
-                    if let index = model.bookmarks.firstIndex(where: { $0.id == updated.id }) {
-                        model.bookmarks[index] = updated
-                    } else if model.bookmarks.count < 100 {
-                        model.bookmarks.append(updated)
+                    guard model.bookmarks.save(updated) else {
+                        model.message = "Enter a valid website address, name and folder."
+                        return
                     }
                     bookmarkDraft = nil
                 } cancel: { bookmarkDraft = nil }
                 .id(draft.id)
             } else {
                 TextField("Filter bookmarks", text: $bookmarkFilter)
-                List(model.bookmarks.filter {
+                List(model.bookmarks.links.filter {
                     bookmarkFilter.isEmpty || "\($0.title) \($0.url) \($0.folder)".localizedCaseInsensitiveContains(bookmarkFilter)
                 }) { bookmark in
                     HStack {
-                        Button(bookmark.title) { model.navigate(bookmark.url); model.managesBookmarks = false }
+                        Button(bookmark.title) { model.openBookmark(bookmark.id); model.managesBookmarks = false }
                         Text(bookmark.folder).foregroundStyle(.secondary)
                         Spacer()
                         Menu("Actions") {
                             Button("Edit") { bookmarkDraft = bookmark }
                             Button("Move earlier") { moveBookmark(bookmark.id, offset: -1) }
                             Button("Move later") { moveBookmark(bookmark.id, offset: 1) }
-                            Button("Remove", role: .destructive) { model.bookmarks.removeAll { $0.id == bookmark.id } }
+                            Button("Remove", role: .destructive) { model.bookmarks.remove(bookmark.id) }
                         }.fixedSize()
                     }
                 }.frame(height: 200)
                 Button("Add bookmark…") {
                     bookmarkDraft = NativeChromeModel.Bookmark(title: model.selectedTab?.title ?? "", url: model.selectedTab?.url ?? "")
-                }.disabled(model.bookmarks.count >= 100)
+                }.disabled(model.bookmarks.links.count >= 100)
             }
             Button("Done", role: .cancel) { model.managesBookmarks = false }
         }.padding(24).frame(width: 480)
@@ -461,9 +625,11 @@ enum NativeBrowserMenuAction: Int {
     }
 
     private func moveBookmark(_ id: UUID, offset: Int) {
-        guard let index = model.bookmarks.firstIndex(where: { $0.id == id }),
-              model.bookmarks.indices.contains(index + offset) else { return }
-        model.bookmarks.swapAt(index, index + offset)
+        let links = model.bookmarks.links
+        guard let link = links.first(where: { $0.id == id }) else { return }
+        let siblings = links.filter { $0.folder == link.folder && $0.favorite == link.favorite }
+        guard let index = siblings.firstIndex(where: { $0.id == id }), siblings.indices.contains(index + offset) else { return }
+        model.bookmarks.move(id, beside: siblings[index + offset].id, after: offset > 0)
     }
 
     private func settingsSheet(_ state: ChromeState) -> some View {
@@ -541,10 +707,12 @@ enum NativeBrowserMenuAction: Int {
 
     var body: some View {
         let items = model.state.map(paletteItems) ?? []
-        return VStack(alignment: .leading, spacing: 12) {
-            Text("Command bar").font(.title2.bold())
-            TextField("Search tabs, Spaces, actions or the web", text: $query)
-                .textFieldStyle(.roundedBorder)
+        return VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 10) {
+                Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
+                TextField("Search or enter an address", text: $query)
+                .accessibilityLabel("Search tabs, Spaces, actions or the web")
+                .textFieldStyle(.plain).font(.system(size: 16, weight: .medium))
                 .focused($commandFocused)
                 .onKeyPress(.upArrow) {
                     commandSelection = max(0, commandSelection - 1)
@@ -557,14 +725,23 @@ enum NativeBrowserMenuAction: Int {
                 .onSubmit {
                     if items.indices.contains(commandSelection) { runPaletteItem(items[commandSelection]) }
                 }
+            }.padding(.horizontal, 10).frame(height: 44)
+            Divider()
             ScrollViewReader { scroll in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 2) {
                         ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
                             Button { runPaletteItem(item) } label: {
-                                Label(item.label, systemImage: item.symbol)
+                                HStack(spacing: 10) {
+                                    Image(systemName: item.symbol).frame(width: 22)
+                                    Text(item.label).lineLimit(1)
+                                    Spacer(minLength: 8)
+                                    if index == commandSelection {
+                                        Image(systemName: "arrow.turn.down.left").foregroundStyle(.secondary)
+                                    }
+                                }
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(8)
+                                    .padding(.horizontal, 10).frame(height: 40)
                                     .background(index == commandSelection ? Color.accentColor.opacity(0.16) : .clear,
                                                 in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
                                     .contentShape(Rectangle())
@@ -581,8 +758,9 @@ enum NativeBrowserMenuAction: Int {
             }.frame(height: 240)
             if items.isEmpty { Text("No matching commands").foregroundStyle(.secondary) }
             Button("Cancel", role: .cancel) { model.commands = false }
-        }.padding(22)
+        }.padding(10)
             .frame(width: BrowserChromeMetrics.dialogWidth)
+            .onExitCommand { model.commands = false }
             .onAppear { query = ""; commandSelection = 0; commandFocused = true }
             .onChange(of: query) { _, _ in commandSelection = 0 }
             .onChange(of: items.count) { _, count in commandSelection = min(commandSelection, max(0, count - 1)) }
@@ -640,6 +818,6 @@ enum NativeBrowserMenuAction: Int {
     }
 
     private var destination: URL? {
-        NativeNavigationInput.destination(bookmark.url)
+        PrivateBookmarks.destination(bookmark.url)
     }
 }

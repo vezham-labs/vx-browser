@@ -1,0 +1,19 @@
+{
+  "name": "preview-audit",
+  "argv": [
+    "env",
+    "VEZHAM_DERIVED_DATA=/private/tmp/vezham-arc-ui",
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:audit",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 2.576,
+  "started_epoch": 1794285494.1116521
+}

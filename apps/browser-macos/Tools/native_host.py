@@ -34,7 +34,7 @@ def build_chrome():
     shutil.copyfile(CHROME / "index.html", CHROME_OUTPUT / "index.html")
 
 
-def build(qualification=False, reliability=False, workspace=False, unsigned=False):
+def build(qualification=False, reliability=False, workspace=False, unsigned=False, preview=False):
     settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf4.qualification"] if qualification else []
     if reliability:
         settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf5.qualification"]
@@ -42,6 +42,8 @@ def build(qualification=False, reliability=False, workspace=False, unsigned=Fals
         settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.wsf6.qualification"]
     if unsigned:
         settings = ["CODE_SIGNING_ALLOWED=NO"]
+    if preview:
+        settings = ["PRODUCT_BUNDLE_IDENTIFIER=internal.vezham.browser.ui-preview"]
     run([
         "xcodebuild", "-project", str(APP_ROOT / "VezhamBrowser.xcodeproj"),
         "-scheme", "VezhamBrowser", "-configuration", "Release" if unsigned else "Debug", "-destination",
@@ -103,10 +105,13 @@ def main():
     parser.add_argument("--wsf5-qualification", action="store_true")
     parser.add_argument("--wsf6-qualification", action="store_true")
     parser.add_argument("--unsigned-release", action="store_true")
+    parser.add_argument("--ui-preview", action="store_true", help="Isolated Debug app identity for native UI inspection")
     args = parser.parse_args()
+    if args.ui_preview and (args.qualification or args.wsf5_qualification or args.wsf6_qualification or args.unsigned_release):
+        parser.error("--ui-preview cannot be combined with qualification or release modes")
     action = args.action
     if action == "build":
-        build(args.qualification, args.wsf5_qualification, args.wsf6_qualification, args.unsigned_release)
+        build(args.qualification, args.wsf5_qualification, args.wsf6_qualification, args.unsigned_release, args.ui_preview)
     elif action == "chrome":
         build_chrome()
     elif action == "audit":

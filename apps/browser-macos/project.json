@@ -3,7 +3,10 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/browser-macos/Sources",
   "projectType": "application",
-  "tags": ["scope:browser", "type:native-host"],
+  "tags": [
+    "scope:browser",
+    "type:native-host"
+  ],
   "targets": {
     "storage-native": {
       "executor": "nx:run-commands",
@@ -35,7 +38,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/apps/browser-macos/build"],
+      "outputs": [
+        "{workspaceRoot}/apps/browser-macos/build"
+      ],
       "options": {
         "command": "python3 apps/browser-macos/Tools/native_host.py build"
       },
@@ -119,7 +124,9 @@
       }
     },
     "reliability-ui": {
-      "dependsOn": ["build-legacy-chrome-fixture"],
+      "dependsOn": [
+        "build-legacy-chrome-fixture"
+      ],
       "executor": "nx:run-commands",
       "cache": false,
       "options": {
@@ -141,6 +148,13 @@
       "options": {
         "command": "go vet ./...",
         "cwd": "tools/vezham-qualify"
+      }
+    },
+    "build-ui-preview": {
+      "executor": "nx:run-commands",
+      "cache": false,
+      "options": {
+        "command": "python3 apps/browser-macos/Tools/native_host.py build --ui-preview"
       }
     }
   }

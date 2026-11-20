@@ -152,6 +152,9 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             styleMask: [.titled, .closable, .miniaturizable, .resizable],
             backing: .buffered, defer: false
         )
+        window.styleMask.insert(.fullSizeContentView)
+        window.titleVisibility = .hidden
+        window.titlebarAppearsTransparent = true
         window.title = mini ? "Vezham Mini · Private" : "Vezham Browser"
         window.minSize = NSSize(width: mini ? 430 : 680, height: mini ? 340 : 470)
         window.center()
@@ -166,7 +169,11 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
                 return true
             }
             switch key {
-            case "l": self.nativeModel.focusAddress += 1
+            case "l":
+                if !self.mini { self.nativeModel.sidebarVisible = true }
+                self.nativeModel.focusAddress += 1
+            case "s":
+                if !self.mini { self.nativeModel.sidebarVisible.toggle() }
             case "k":
                 if self.mini { self.nativeModel.focusAddress += 1 }
                 else { self.nativeModel.commands = true }
@@ -739,20 +746,28 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
     }
 
     private func updateSurface() {
-        if presentation.top == Double(BrowserChromeMetrics.toolbarHeight + BrowserChromeMetrics.separator) {
-            presentation.left = mini || !nativeModel.sidebarVisible ? 0 :
-                Double(nativeModel.sidebarWidth + BrowserChromeMetrics.separator)
-        }
+        let nativeGeometry = presentation.top == Double(BrowserChromeMetrics.toolbarHeight + BrowserChromeMetrics.separator)
         defer {
             let showing = !page.isHidden
             if nativeModel.showsWebContent != showing { nativeModel.showsWebContent = showing }
         }
         let bounds = root.bounds
-        let left = CGFloat(presentation.left), top = CGFloat(presentation.top)
-        let width = max(0, bounds.width - left)
+        let inset = nativeGeometry ? BrowserChromeMetrics.contentInset : 0
+        let left = nativeGeometry
+            ? (mini || !nativeModel.sidebarVisible ? inset : nativeModel.sidebarWidth + inset)
+            : CGFloat(presentation.left)
+        let top = nativeGeometry
+            ? (mini || !nativeModel.sidebarVisible ? BrowserChromeMetrics.compactToolbarHeight + inset : inset)
+            : CGFloat(presentation.top)
+        let width = max(0, bounds.width - left - inset)
         let resized = page.frame.width != width
-        let footer = BrowserChromeMetrics.footerHeight + BrowserChromeMetrics.separator
+        let footer = nativeGeometry
+            ? (mini ? BrowserChromeMetrics.footerHeight + inset : inset)
+            : BrowserChromeMetrics.footerHeight + BrowserChromeMetrics.separator
         page.frame = NSRect(x: left, y: footer, width: width, height: max(0, bounds.height - top - footer))
+        page.wantsLayer = true
+        page.layer?.cornerRadius = nativeGeometry ? BrowserChromeMetrics.controlRadius : 0
+        page.layer?.masksToBounds = nativeGeometry
         guard !closing, !withdrawing, recovery == nil, presentation.visible, let selected else {
             page.isHidden = true
             return
@@ -1445,6 +1460,18 @@ extension MainWindowController {
             try check("F6-LAZY-24-SLOTS", tabs.count == 24 && browsing == nil && bindings.isEmpty && tabState(first).failure == nil)
             try await load(origin.appendingPathComponent("alpha"), in: first)
             try check("F6-FIRST-LOAD", await wait { loaded(self, "/alpha") })
+            updateSurface()
+            let expandedPage = page.frame
+            try check("F6-NATIVE-PAGE-BOUNDS", !page.isHidden && root.bounds.contains(expandedPage)
+                && expandedPage.minX >= nativeModel.sidebarWidth && expandedPage.minY > 0)
+            nativeModel.sidebarVisible = false
+            updateSurface()
+            let collapsedPage = page.frame
+            try check("F6-NATIVE-COLLAPSE-RECLAIMS-WIDTH", collapsedPage.width > expandedPage.width
+                && collapsedPage.maxY < root.bounds.maxY - BrowserChromeMetrics.compactToolbarHeight)
+            nativeModel.sidebarVisible = true
+            updateSurface()
+            try check("F6-NATIVE-EXPAND-RESTORES-BOUNDS", page.frame == expandedPage)
             guard let session = browsing else { throw ChromeResult.Failure.failed }
             let view = bindings[first]!
             try check("F6-ONE-ADMISSION", session.storage.adapter.ownedViews(session.scope) == [view])

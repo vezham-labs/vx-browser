@@ -1,0 +1,20 @@
+Building for debugging...
+[Computing dependencies]
+[Using on-disk description]
+[1 / 26]
+[1 / 11] WSF0Tests-product
+[2 / 11] WSF0Tests-product
+[4 / 20] WSF0Tests-product
+[6 / 20] WSF0Tests-product
+[7 / 20] WSF0Tests-product
+[9 / 18] WSF0Tests-product
+[10 / 18] WSF0Tests-product
+[12 / 18] WSF0Tests-product
+[14 / 18] WSF0Tests-product
+[16 / 18] WSF0Tests-product
+[17 / 18] WSF0Tests-product
+[18 / 18] WSF0Tests-product
+[19 / 20] WSF0Qualification-product
+[22 / 23] WSF0Qualification-product
+[23 / 23] BrowserDomain-product
+Build complete! (53.75 secs)

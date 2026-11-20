@@ -1,0 +1,11 @@
+{
+  "source": "/private/tmp/vezham-arc-ui/Build/Products/Debug/VezhamBrowser.app",
+  "installed": "/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app",
+  "identifier": "internal.vezham.browser.ui-preview",
+  "sha256": "37de38580637f242fec6b6551b59117e46188f5e52951f936a31364bedfb8d42",
+  "version": "0.1.0",
+  "build": "1",
+  "method": "verified owned preview update; prior hash matched receipt, process exited, staged copy verified, prior app retained, rollback on install failure",
+  "previousPreservedAt": "/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview previous-80e359ea.app",
+  "previousSHA256": "80e359ea1347de042bdf48c3f4eef46e2eb80cabf34669d9c0341c408e9c12ae"
+}

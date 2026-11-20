@@ -1,0 +1,6 @@
+Building for debugging...
+[Computing dependencies]
+[1 / 5]
+[1 / 3] BrowserDomain
+[1 / 2] BrowserCore-product
+Build complete! (2.38 secs)

@@ -1,0 +1,47 @@
+[
+  {
+    "manifest": "docs/architecture/phase-5/reports/WS-F4R/evidence/SHA256SUMS",
+    "entries": 423,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/WS-F5/evidence/SHA256SUMS",
+    "entries": 223,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/WS-F5R/SHA256SUMS",
+    "entries": 12,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/WS-F5R/evidence/execution-01/SHA256SUMS",
+    "entries": 36,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/WS-F6/evidence/implementation-01/SHA256SUMS",
+    "entries": 97,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/developer-tooling/evidence/safe-foundation-01/SHA256SUMS",
+    "entries": 105,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/completion-programme/evidence/SHA256SUMS",
+    "entries": 117,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/final-completion-programme/evidence/SHA256SUMS",
+    "entries": 140,
+    "failures": []
+  },
+  {
+    "manifest": "docs/architecture/phase-5/reports/final-completion-programme/evidence/arc-parity-01/SHA256SUMS",
+    "entries": 139,
+    "failures": []
+  }
+]

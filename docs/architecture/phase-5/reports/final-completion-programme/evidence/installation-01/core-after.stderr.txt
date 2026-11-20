@@ -1,0 +1,174 @@
+Building for debugging...
+[Computing dependencies]
+[Constructing description]
+[Pre-planning 1 / 327]
+[Planning deferred tasks]
+[Starting]
+[3 / 43] BrowserDomain
+[8 / 37] BrowserDomain
+[10 / 39] BrowserDomain
+[15 / 38] BrowserDomain
+[18 / 41] BrowserDomain
+[18 / 41] BrowserPorts
+[20 / 44] BrowserPorts
+[23 / 44] BrowserPorts
+[25 / 49] BrowserPersistence
+[26 / 49] BrowserCore
+[28 / 57] WSF0Fakes
+[29 / 62] BrowserCore
+[30 / 62] WSF0Fakes
+[30 / 62] BrowserCore
+[32 / 62] BrowserCore
+[34 / 62] BrowserCore
+[37 / 62] BrowserPersistence
+[41 / 63] BrowserPersistence
+[42 / 63] BrowserCore
+[45 / 65] BrowserPersistence
+[46 / 65] BrowserCore
+[48 / 61] BrowserCore
+[51 / 60] WSF0Tests-product
+[54 / 69] WSF0Tests-product
+[56 / 68] WSF0Tests-product
+[61 / 68] WSF0Tests-product
+error: SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/NativeNavigationInputTests.swift failed with a nonzero exit code. Command line:     cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification
+    builtin-SwiftPerFileCompile NativeNavigationInputTests.swift
+error: SwiftCompile normal arm64 /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift failed with a nonzero exit code. Command line:     cd /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification
+    builtin-SwiftPerFileCompile PrivateBookmarkTests.swift
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:9:36: note: expanded code originates here
+ 7 |         var library = PrivateBookmarks()
+ 8 |         var item = PrivateBookmarks.Link(title: "Alpha", url: "https://example.test/a?q=x#y")
+ 9 |         #expect(library.save(item))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.save($1)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },item,expression: .__fromFunctionCall(.__fromSyntaxNode("library"),"save",(nil,.__fromSyntaxNode("item"))),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+10 |         item.title = "Renamed"
+11 |         #expect(library.save(item))
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:11:36: note: expanded code originates here
+ 9 |         #expect(library.save(item))
+10 |         item.title = "Renamed"
+11 |         #expect(library.save(item))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.save($1)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },item,expression: .__fromFunctionCall(.__fromSyntaxNode("library"),"save",(nil,.__fromSyntaxNode("item"))),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+12 |         #expect(library.links == [item])
+13 |         for invalid in ["a search query", "file:///tmp/item", "http://example.test", "https://a:b@example.test"] {
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:15:41: note: expanded code originates here
+13 |         for invalid in ["a search query", "file:///tmp/item", "http://example.test", "https://a:b@example.test"] {
+14 |             item.url = invalid
+15 |             #expect(!library.save(item))
+   |             `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.save($1)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },item,expression: .__fromNegation(.__fromFunctionCall(.__fromSyntaxNode("library"),"save",(nil,.__fromSyntaxNode("item"))), false),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+16 |         }
+17 |         #expect(library.links.first?.url == "https://example.test/a?q=x#y")
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:26:33: note: expanded code originates here
+24 |         let a = PrivateBookmarks.Link(title: "A", url: "http://127.0.0.1:2345/a")
+25 |         let b = PrivateBookmarks.Link(title: "B", url: "https://example.test/b", folder: "Reading")
+26 |         #expect(library.save(a))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.save($1)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },a,expression: .__fromFunctionCall(.__fromSyntaxNode("library"),"save",(nil,.__fromSyntaxNode("a"))),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+27 |         #expect(library.save(b))
+28 |         #expect(!library.move(a.id, beside: a.id, after: false))
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:27:33: note: expanded code originates here
+25 |         let b = PrivateBookmarks.Link(title: "B", url: "https://example.test/b", folder: "Reading")
+26 |         #expect(library.save(a))
+27 |         #expect(library.save(b))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.save($1)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },b,expression: .__fromFunctionCall(.__fromSyntaxNode("library"),"save",(nil,.__fromSyntaxNode("b"))),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+28 |         #expect(!library.move(a.id, beside: a.id, after: false))
+29 |         #expect(!library.move(a.id, beside: UUID(), after: true))
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:28:65: note: expanded code originates here
+26 |         #expect(library.save(a))
+27 |         #expect(library.save(b))
+28 |         #expect(!library.move(a.id, beside: a.id, after: false))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.move($1,beside: $2,after: $3)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },a.id,a.id,false,expression: .__fromNegation(.__fromFunctionCall(.__fromSyntaxNode("library"),"move",(nil,.__fromSyntaxNode("a.id")),("beside",.__fromSyntaxNode("a.id")),("after",.__fromSyntaxNode("false"))), false),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+29 |         #expect(!library.move(a.id, beside: UUID(), after: true))
+30 |         #expect(library.links == [a, b])
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:29:66: note: expanded code originates here
+27 |         #expect(library.save(b))
+28 |         #expect(!library.move(a.id, beside: a.id, after: false))
+29 |         #expect(!library.move(a.id, beside: UUID(), after: true))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.move($1,beside: $2,after: $3)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },a.id,UUID(),true,expression: .__fromNegation(.__fromFunctionCall(.__fromSyntaxNode("library"),"move",(nil,.__fromSyntaxNode("a.id")),("beside",.__fromSyntaxNode("UUID()")),("after",.__fromSyntaxNode("true"))), false),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+30 |         #expect(library.links == [a, b])
+31 |         #expect(library.move(a.id, beside: b.id, after: true))
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:31:63: note: expanded code originates here
+29 |         #expect(!library.move(a.id, beside: UUID(), after: true))
+30 |         #expect(library.links == [a, b])
+31 |         #expect(library.move(a.id, beside: b.id, after: true))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.move($1,beside: $2,after: $3)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },a.id,b.id,true,expression: .__fromFunctionCall(.__fromSyntaxNode("library"),"move",(nil,.__fromSyntaxNode("a.id")),("beside",.__fromSyntaxNode("b.id")),("after",.__fromSyntaxNode("true"))),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+32 |         #expect(library.links.map(\.id) == [b.id, a.id])
+33 |         let moved = try #require(library.links.last)
+
+macro expansion #expect:2:6: error: cannot use mutating member on immutable value: '$0' is immutable
+`- /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift:35:50: note: expanded code originates here
+33 |         let moved = try #require(library.links.last)
+34 |         #expect(moved.url == a.url && moved.title == a.title && moved.folder == "Reading")
+35 |         #expect(library.move(a.id, toFolder: ""))
+   |         `- note: in expansion of macro 'expect' here
+   +--- macro expansion #expect ----------------------------------------
+   |1 | Testing.__checkFunctionCall(library.self,calling: {
+   |2 |   $0.move($1,toFolder: $2)
+   |  |      `- error: cannot use mutating member on immutable value: '$0' is immutable
+   |3 | },a.id,"",expression: .__fromFunctionCall(.__fromSyntaxNode("library"),"move",(nil,.__fromSyntaxNode("a.id")),("toFolder",.__fromStringLiteral(#""""#, ""))),comments: [],isRequired: false,sourceLocation: Testing.SourceLocation.__here()).__expected()
+   +--------------------------------------------------------------------
+36 |         #expect(library.links.last?.folder == "")
+37 |     }
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources/test_entry_point.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/CatalogTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/ConstructionTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/DeletionTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/DiagnosticsTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/Fixture.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/IdentityTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/IntegrationTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/LifecycleTests.swift -primary-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/NativeNavigationInputTests.swift -primary-file /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/PublicationTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/RecoveryTests.swift /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification/webkit-storage-f0/Tests/WSF0Tests/WorkspaceLayoutTests.swift -emit-dependencies-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/NativeNavigationInputTests.d -emit-const-values-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/NativeNavigationInputTests.swiftconstvalues -emit-reference-dependencies-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/NativeNavigationInputTests.swiftdeps -serialize-diagnostics-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/NativeNavigationInputTests.dia -emit-dependencies-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/PrivateBookmarkTests.d -emit-const-values-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/PrivateBookmarkTests.swiftconstvalues -emit-reference-dependencies-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/PrivateBookmarkTests.swiftdeps -serialize-diagnostics-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/PrivateBookmarkTests.dia -target arm64-apple-macos26.0 -module-can-import-version Testing 2403 0 -module-can-import-version XCTest 25435 0 -disable-cross-import-overlay-search -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/AppKit.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/CoreGraphics.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/CoreImage.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/CoreTransferable.swiftoverlay -swift-module-cross-import Testing /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework/Modules/Testing.swiftcrossimport/Foundation.swiftoverlay -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing/libTestingMacros.dylib\#\#TestingMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/WSF0Tests-dependencies-1.json -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk -I /private/tmp/vezham-final-core/out/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /private/tmp/vezham-final-core/out/Products/Debug/PackageFrameworks -F /private/tmp/vezham-final-core/out/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -module-cache-path /private/tmp/vezham-final-core/out/Intermediates.noindex/SwiftExplicitPrecompiledModules -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=5 -swift-version 6 -Onone -D SWIFT_PACKAGE -D DEBUG -D Xcode -serialize-debugging-options -enable-experimental-feature DebugDescriptionMacro -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /private/tmp/vezham-final-core/out/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification -enable-anonymous-context-mangled-names -file-compilation-dir /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/qualification -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /private/tmp/vezham-final-core/out/SDKStatCaches.noindex/macosx27.2-26B118-a0facfad118c1a7a18f0aad9463f6549a7ff82d74745d5ef33555b35c4238456.sdkstatcache -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -Xcc -I/private/tmp/vezham-final-core/out/Products/Debug/include -Xcc -I/private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources-normal/arm64 -Xcc -I/private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources/arm64 -Xcc -I/private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name WSF0Tests -package-name webkit_storage_f0 -const-gather-protocols-file /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/WSF0Tests_const_extract_protocols.json -disable-clang-spi -clang-target arm64-apple-macos27.2 -target-sdk-version 27.2 -target-sdk-name macosx27.2 -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -parse-as-library -o /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/NativeNavigationInputTests.o -o /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/PrivateBookmarkTests.o -debug-module-path /private/tmp/vezham-final-core/out/Intermediates.noindex/WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/WSF0Tests.swiftmodule -index-unit-output-path /WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/NativeNavigationInputTests.o -index-unit-output-path /WSF0Qualification.build/Debug/WSF0Tests-p.build/Objects-normal/arm64/PrivateBookmarkTests.o -index-store-path /private/tmp/vezham-final-core/out -index-system-modules
+error: Build failed
+error: fatalError

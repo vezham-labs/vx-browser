@@ -1,0 +1,44 @@
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[3 / 7]
+[4 / 8] BrowserDomain
+[5 / 9] BrowserDomain
+[7 / 9] BrowserDomain
+[11 / 15] BrowserPorts
+[12 / 16] BrowserPorts
+[14 / 16] BrowserPorts
+[15 / 19] BrowserCore
+[16 / 20] BrowserCore
+[18 / 21] BrowserPersistence
+[19 / 23] BrowserPersistence
+[20 / 24] BrowserPersistence
+[23 / 27] BrowserNativeStorage
+[24 / 28] BrowserNativeStorage
+[27 / 31] WSF0Fakes
+[28 / 32] WSF0Fakes
+[32 / 37] BrowserDomain
+[34 / 37] BrowserDomain
+[36 / 40] BrowserPorts
+[40 / 45] BrowserCore
+[41 / 45] BrowserCore
+[45 / 49] BrowserPersistence
+[49 / 58] BrowserNativeStorage
+[50 / 58] BrowserNativeStorage
+[52 / 58] BrowserNativeStorage
+[54 / 58] BrowserNativeStorage
+[58 / 62] WSF0Fakes
+[60 / 61] StorageModelTests-product
+[61 / 63] StorageModelTests-product
+[64 / 70] StorageModelTests-product
+[65 / 70] StorageModelTests-product
+[66 / 70] StorageModelTests-product
+[67 / 70] StorageModelTests-product
+[68 / 70] StorageModelTests-product
+[69 / 70] StorageModelTests-product
+[72 / 73] StorageModelTests-product
+[73 / 74] StorageModelTests-product
+[74 / 74] StorageModelTests-product
+[75 / 75] BrowserNativeStorage-product
+Build complete! (91.25 secs)

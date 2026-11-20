@@ -1,0 +1,14 @@
+{
+  "name": "preview-mode-guard",
+  "argv": [
+    "python3",
+    "apps/browser-macos/Tools/native_host.py",
+    "build",
+    "--ui-preview",
+    "--unsigned-release"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 2,
+  "elapsed_seconds": 0.197,
+  "started_epoch": 1794285499.170094
+}

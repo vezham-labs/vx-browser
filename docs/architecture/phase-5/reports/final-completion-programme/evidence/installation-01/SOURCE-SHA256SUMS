@@ -1,0 +1,3 @@
+791f5151c6852132489d9a15cda00c9d5809e0a88883916f832d2173756e5d62  apps/browser-macos/Sources/Host/NativeBrowserChrome.swift
+2a32a3dc517bdee942d070c55414c3e4b36df87bc608c55c4336dfa637c1fb1b  qualification/webkit-storage-f0/Sources/BrowserDomain/PrivateBookmarks.swift
+768b674cbdad1219b41cb8a01718f19f96482c02ef26a3a0d9f445e3a822be8d  qualification/webkit-storage-f0/Tests/WSF0Tests/PrivateBookmarkTests.swift

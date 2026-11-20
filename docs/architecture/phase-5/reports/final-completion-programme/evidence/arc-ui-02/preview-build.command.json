@@ -1,0 +1,19 @@
+{
+  "name": "preview-build",
+  "argv": [
+    "env",
+    "VEZHAM_DERIVED_DATA=/private/tmp/vezham-arc-ui",
+    "npm",
+    "exec",
+    "--offline",
+    "--",
+    "nx",
+    "run",
+    "browser-macos:build-ui-preview",
+    "--output-style=static"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 0,
+  "elapsed_seconds": 34.571,
+  "started_epoch": 1794285393.37485
+}

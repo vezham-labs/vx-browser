@@ -1,0 +1,8 @@
+Building for debugging...
+[Computing dependencies]
+[1 / 8] WSF0Fakes
+[2 / 5] WSF0Tests-product
+[4 / 7] WSF0Tests-product
+[10 / 12] WSF0Tests-product
+[12 / 12] WSF0Tests-product
+Build complete! (4.12 secs)

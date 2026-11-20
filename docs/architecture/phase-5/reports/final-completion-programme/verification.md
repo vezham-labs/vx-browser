@@ -369,3 +369,38 @@ git diff --check
 [Command record](evidence/arc-parity-01/final-diff.command.json) · [Output](evidence/arc-parity-01/final-diff.stdout.txt)
 
 [Reference metadata and manual witness](evidence/arc-parity-01/manual-ui.json) · [Historical checksums](evidence/arc-parity-01/historical-verification.json) · [Candidate hashes](evidence/arc-parity-01/candidate-hashes.json)
+
+
+---
+
+# Installation candidate verification — 2026-11-10
+
+Evidence for this follow-up is under [installation-01](evidence/installation-01/). Prior reports and artifacts remain historical. Statuses below describe this candidate, not a production authorization.
+
+| Check | Actual outcome | Evidence |
+|---|---|---|
+| Baseline Swift Core | 97 tests passed | core-before.stdout.txt |
+| Baseline mixed quality | Failed one legacy focus fixture (toBeFocused timeout) | quality-before.stdout.txt |
+| Debug / qualification / unsigned Release builds | All exit 0 | build, qual, unsigned.command.json |
+| Debug bundle audit | Exit 0, 12 static checks | audit.command.json; bundle-audit.json |
+| Post-change Swift Core first attempt | Failed compilation: mutating call inside Testing expect macro | core-after.stderr.txt |
+| Corrected Swift Core | 99 tests / 13 suites passed | core-fixed.stdout.txt |
+| Swift storage models | 27 tests passed | storage.stdout.txt |
+| Mixed quality rerun | 11 Go + 4 navigation + 16 legacy fixture cases passed; vet, lint, typecheck exit 0 | quality-after.stdout.txt |
+| Pinned SQLCipher provider fixture | 14 tests passed | provider.stdout.txt |
+| Native workspace | 36 native + 7 contract observations passed | workspace.stdout.txt; install-workspace-01/ |
+| Injected native recovery | 34 native + 11 contract observations passed | recovery.stdout.txt; install-recovery-01/ |
+| Release structure | Exit 0 | release-structure.stdout.txt |
+| Production preflight | Expected exit 1: unsigned, no Developer ID/ticket, no signed runtime qualification | release-preflight.stdout.txt |
+| Historical evidence integrity | 1,292 entries, nine manifests, zero mismatches | historical-verification.json |
+| Whitespace | git diff --check exit 0 | diff.command.json |
+
+Paths in the table resolve under `evidence/installation-01/`. Command records include exact argv, cwd, return code and duration. The first failed quality fixture was not weakened or removed; the later run passed unchanged. The new Swift test expressions now evaluate mutating operations before `#expect` rather than invoking mutation inside the macro expansion. These corrections affect test compilation only and do not change the installed binary.
+
+Automated tests are not substitutes for physical drag qualification, VoiceOver, Arc reference captures, signed Keychain custody or durable production restore. Native recovery uses injected process-termination callbacks, not proof of spontaneous OS process-kill behavior. Legacy Playwright fixtures are not the active SwiftUI chrome. Counts are reported by suite and should not be combined as equivalent end-user cases.
+
+Final additional regression: `core-membership` passed **100 tests in 13 suites**. The added case verifies bookmark-to-favorite membership preserves ID/title/URL, moving back into a folder clears favorite membership, invalid folder changes leave state unchanged, and session cleanup removes all links. [Output](evidence/installation-01/core-membership.stdout.txt). This supersedes the 99-case result for the final test sources.
+
+## Live Arc follow-up — 2026-11-10
+
+Final workspace qualification passed 39 native and 7 contract checks. Recovery passed 34 native and 11 contract checks. Preview audit and unsigned Release structure passed. [Comparison and evidence](arc-ui-alignment.md).
