@@ -1,5 +1,11 @@
 # Visual comparison — 2026-11-10
 
+## Current comparison — 2026-11-20
+
+The controlled single-tab dark-mode benchmark compares the original and updated Vezham preview against the same 2880 × 1648 Arc 1.172.1 reference. Exact mismatch improved from 26.57% to 26.34%, mean channel error from 5.60 to 3.29, and SSIM from 0.91048 to 0.94718. The results qualify one loaded state. [Report and capture methodology](evidence/20261120T114710Z-visual-remediation/report.md) · [Final side by side](evidence/20261120T114710Z-visual-remediation/final/side-by-side.png) · [Final pixel difference](evidence/20261120T114710Z-visual-remediation/final/pixel-difference.png)
+
+## Historical comparison — 2026-11-10
+
 **NOT VERIFIED: pixel parity for all 20 requested states.**
 
 Arc metadata confirms 1.172.1 build 90370. Reference UI access previously returned an explicitly stopped session; matched reference captures are absent. Installed Vezham screenshots were displayed by CUA in chat at 2360 × 1584, including loaded Example Domain, Favorites, expanded Reading folder, pinned and ordinary tabs. The API did not return a local image export. No PNG path, overlay or difference file is invented.

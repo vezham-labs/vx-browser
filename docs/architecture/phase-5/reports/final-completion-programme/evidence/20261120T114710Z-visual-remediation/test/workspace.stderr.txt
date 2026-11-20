@@ -1,0 +1,3 @@
+usage: wsf6.py [-h] [--app APP] --evidence EVIDENCE --run-name RUN_NAME
+               [--attempts {1,2}] [--serve-only]
+wsf6.py: error: Existing qualification evidence directory required: /Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/wsf6-evidence

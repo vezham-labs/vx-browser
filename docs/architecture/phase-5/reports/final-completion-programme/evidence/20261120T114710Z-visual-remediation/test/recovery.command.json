@@ -1,0 +1,19 @@
+{
+  "name": "recovery",
+  "argv": [
+    "python3",
+    "apps/browser-macos/Tools/wsf6.py",
+    "--suite",
+    "recovery",
+    "--app",
+    "/private/tmp/vezham-arc-ui-qual/Build/Products/Debug/VezhamBrowser.app",
+    "--evidence",
+    "/private/tmp/vezham-visual-20261120/native",
+    "--run-name",
+    "visual-recovery-01"
+  ],
+  "cwd": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser",
+  "returncode": 2,
+  "elapsed_seconds": 0.127,
+  "started_epoch": 1795173545.85639
+}

@@ -6,14 +6,21 @@ enum BrowserChromeMetrics {
     static let toolbarHeight: CGFloat = 70
     static let footerHeight: CGFloat = 28
     static let separator: CGFloat = 1
-    static let sidebarDefault: CGFloat = 236
-    static let sidebarRange: ClosedRange<CGFloat> = 180...320
+    static let sidebarDefault: CGFloat = 288
+    static let sidebarRange: ClosedRange<CGFloat> = 180...352
     static let sidebarHandle: CGFloat = 8
     static let dialogWidth: CGFloat = 640
     static let contentInset: CGFloat = 8
+    static let contentRadius: CGFloat = 12
     static let compactToolbarHeight: CGFloat = 44
     static let horizontalPadding: CGFloat = 14
     static let controlRadius: CGFloat = 9
+    static let iconButtonSize: CGFloat = 26
+    static let addressHeight: CGFloat = 32
+    static let sidebarRowHeight: CGFloat = 26
+    static let favoriteMinimumWidth: CGFloat = 54
+    static let favoriteHeight: CGFloat = 46
+    static let favoriteSpacing: CGFloat = 8
 }
 
 enum NativeBrowserMenuAction: Int {
@@ -304,8 +311,38 @@ final class NativeSidebarDrag {
     }
 }
 
+private struct ChromeIconButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
+
+    func makeBody(configuration: Configuration) -> some View {
+        ChromeIconButton(configuration: configuration, isEnabled: isEnabled)
+    }
+
+    private struct ChromeIconButton: View {
+        let configuration: Configuration
+        let isEnabled: Bool
+        @State private var hovering = false
+
+        var body: some View {
+            configuration.label
+                .font(.system(size: 13, weight: .medium))
+                .frame(width: BrowserChromeMetrics.iconButtonSize, height: BrowserChromeMetrics.iconButtonSize)
+                .contentShape(Rectangle())
+                .background {
+                    if isEnabled && (hovering || configuration.isPressed) {
+                        RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius)
+                            .fill(.primary.opacity(configuration.isPressed ? 0.16 : 0.08))
+                    }
+                }
+                .onHover { hovering = $0 }
+                .opacity(isEnabled ? 1 : 0.42)
+        }
+    }
+}
+
 @MainActor struct NativeBrowserChrome: View {
     @ObservedObject var model: NativeChromeModel
+    @Environment(\.colorScheme) private var colorScheme
     @State private var address = ""
     @State private var sidebarDragOrigin: CGFloat?
     @State private var showWelcomeAfterSettings = false
@@ -321,6 +358,12 @@ final class NativeSidebarDrag {
     private struct DeleteRequest: Identifiable {
         let id = UUID(); let title: String; let kind: ChromeCommand.Kind; let target: String
     }
+    private var shellBackground: Color {
+        colorScheme == .dark
+            ? Color(red: 0.075, green: 0.086, blue: 0.110)
+            : Color(red: 0.940, green: 0.950, blue: 0.975)
+    }
+
     var body: some View {
         Group {
             if let state = model.state {
@@ -336,7 +379,7 @@ final class NativeSidebarDrag {
                         }
                         content(state)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(.background, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
+                            .background(.background, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.contentRadius))
                             .padding(BrowserChromeMetrics.contentInset)
                     }
                     if state.mini {
@@ -345,7 +388,7 @@ final class NativeSidebarDrag {
                             .frame(height: BrowserChromeMetrics.footerHeight)
                     }
                 }
-                .background(.background)
+                .background(shellBackground)
                 .sheet(isPresented: $model.commands, onDismiss: {
                     if showSettingsAfterCommands {
                         showSettingsAfterCommands = false
@@ -402,28 +445,56 @@ final class NativeSidebarDrag {
     }
     private struct PreviewItem: Identifiable { let preview: ChromeMiniPreview; var id: UUID { preview.token }; init(_ preview: ChromeMiniPreview) { self.preview = preview } }
     private func tool(_ label: String, _ icon: String, enabled: Bool = true, action: @escaping () -> Void) -> some View {
-        Button(action: action) { Image(systemName: icon).frame(width: 22, height: 22) }
-            .buttonStyle(.borderless).help(label).accessibilityLabel(label).disabled(!enabled)
+        Button(action: action) { Image(systemName: icon) }
+            .buttonStyle(ChromeIconButtonStyle()).help(label).accessibilityLabel(label).disabled(!enabled)
     }
+
+    private func navigationControls(_ state: ChromeState) -> some View {
+        HStack(spacing: 2) {
+            tool("Back", "chevron.left", enabled: model.selectedTab?.back == true) { model.send(.back, tab: state.selected) }
+            tool("Forward", "chevron.right", enabled: model.selectedTab?.forward == true) { model.send(.forward, tab: state.selected) }
+            let loading = model.selectedTab?.loading == true
+            tool(loading ? "Stop loading" : "Reload", loading ? "xmark" : "arrow.clockwise", enabled: model.selectedTab?.url != nil) {
+                model.send(loading ? .stop : .reload, tab: state.selected)
+            }
+        }
+    }
+
+    private func addressField(_ state: ChromeState) -> some View {
+        HStack(spacing: 8) {
+            Image(systemName: model.selectedTab?.connection == "encrypted" ? "lock" : "magnifyingglass")
+                .frame(width: 14)
+                .foregroundStyle(.secondary)
+                .accessibilityLabel("Connection: \(model.selectedTab?.connection ?? "unknown")")
+            TextField("Search or enter an address", text: $address)
+                .textFieldStyle(.plain)
+                .focused($addressFocused)
+                .onSubmit { model.navigate(address); addressFocused = false }
+                .accessibilityIdentifier("native-address")
+                .accessibilityLabel("Address and search")
+            if model.selectedTab?.loading == true { ProgressView().controlSize(.mini) }
+        }
+        .font(.system(size: 12))
+        .padding(.horizontal, 10)
+        .frame(height: BrowserChromeMetrics.addressHeight)
+        .background(.primary.opacity(colorScheme == .dark ? 0.09 : 0.06),
+                    in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
+        .overlay {
+            RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius)
+                .strokeBorder(addressFocused ? Color.accentColor : .primary.opacity(0.07), lineWidth: 1)
+                .allowsHitTesting(false)
+        }
+        .disabled(state.session == "inactive" || state.recovery != nil)
+    }
+
     private func toolbar(_ state: ChromeState) -> some View {
-        HStack(spacing: 10) {
+        HStack(spacing: 8) {
             Spacer().frame(width: 64)
             if !state.mini {
                 tool(model.sidebarVisible ? "Hide sidebar" : "Show sidebar", "sidebar.left") { model.sidebarVisible.toggle() }
             }
-            tool("Back", "chevron.left", enabled: model.selectedTab?.back == true) { model.send(.back, tab: state.selected) }
-            tool("Forward", "chevron.right", enabled: model.selectedTab?.forward == true) { model.send(.forward, tab: state.selected) }
-            tool(model.selectedTab?.loading == true ? "Stop loading" : "Reload", model.selectedTab?.loading == true ? "xmark" : "arrow.clockwise", enabled: model.selectedTab?.url != nil) {
-                model.send(model.selectedTab?.loading == true ? .stop : .reload, tab: state.selected)
-            }
-            HStack(spacing: 8) {
-                Image(systemName: model.selectedTab?.connection == "encrypted" ? "lock" : "globe").foregroundStyle(.secondary).accessibilityLabel("Connection: \(model.selectedTab?.connection ?? "unknown")")
-                TextField("Search or enter an address", text: $address).textFieldStyle(.plain)
-                    .focused($addressFocused).onSubmit { model.navigate(address); addressFocused = false }
-                    .accessibilityIdentifier("native-address").accessibilityLabel("Address and search")
-                if model.selectedTab?.loading == true { ProgressView().controlSize(.small) }
-            }.padding(9).background(.quaternary, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
-            .disabled(state.session == "inactive" || state.recovery != nil)
+            navigationControls(state)
+            addressField(state)
             if state.mini {
                 tool("Preview destination in main workspace", "arrow.up.forward.app", enabled: state.miniEligible) { model.send(.miniTransferPreview) }
             } else {
@@ -446,28 +517,13 @@ final class NativeSidebarDrag {
                 Spacer(minLength: 64)
                 tool("Hide sidebar", "sidebar.left") { model.sidebarVisible = false }
                 Spacer(minLength: 0)
-                tool("Back", "chevron.left", enabled: model.selectedTab?.back == true) { model.send(.back, tab: state.selected) }
-                tool("Forward", "chevron.right", enabled: model.selectedTab?.forward == true) { model.send(.forward, tab: state.selected) }
-                tool(model.selectedTab?.loading == true ? "Stop loading" : "Reload", model.selectedTab?.loading == true ? "xmark" : "arrow.clockwise", enabled: model.selectedTab?.url != nil) {
-                    model.send(model.selectedTab?.loading == true ? .stop : .reload, tab: state.selected)
-                }
+                navigationControls(state)
             }.frame(height: 34)
-            HStack(spacing: 6) {
-                Image(systemName: model.selectedTab?.connection == "encrypted" ? "lock" : "magnifyingglass")
-                    .font(.caption).foregroundStyle(.secondary)
-                    .accessibilityLabel("Connection: \(model.selectedTab?.connection ?? "unknown")")
-                TextField("Search or enter an address", text: $address)
-                    .textFieldStyle(.plain).font(.system(size: 12))
-                    .focused($addressFocused)
-                    .onSubmit { model.navigate(address); addressFocused = false }
-                    .accessibilityIdentifier("native-address").accessibilityLabel("Address and search")
-                if model.selectedTab?.loading == true { ProgressView().controlSize(.mini) }
-            }
-            .padding(.horizontal, 10).frame(height: 34)
-            .background(.quaternary, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
-            .disabled(state.session == "inactive" || state.recovery != nil)
+            addressField(state)
             if !model.bookmarks.links.filter(\.favorite).isEmpty {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 44), spacing: 6)], spacing: 6) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: BrowserChromeMetrics.favoriteMinimumWidth),
+                                             spacing: BrowserChromeMetrics.favoriteSpacing)],
+                          spacing: BrowserChromeMetrics.favoriteSpacing) {
                     ForEach(model.bookmarks.links.filter(\.favorite)) { savedRow($0, state) }
                 }.padding(.vertical, 4)
                 .accessibilityLabel("Favorites")
@@ -502,7 +558,13 @@ final class NativeSidebarDrag {
                     Button("Manage temporary bookmarks…") { model.managesBookmarks = true }
                 } label: { Image(systemName: "ellipsis.circle") }.menuStyle(.borderlessButton).fixedSize()
             }.disabled(state.session == "inactive")
-            Button { model.send(state.session == "inactive" ? .startPrivate : .newTab) } label: { Label(state.session == "inactive" ? "Start private session" : "New tab", systemImage: "plus") }.buttonStyle(.plain)
+            Button { model.send(state.session == "inactive" ? .startPrivate : .newTab) } label: {
+                Label(state.session == "inactive" ? "Start private session" : "New tab", systemImage: "plus")
+                    .font(.system(size: 13, weight: .medium))
+                    .padding(.horizontal, 6)
+                    .frame(minHeight: BrowserChromeMetrics.sidebarRowHeight, alignment: .leading)
+                    .contentShape(Rectangle())
+            }.buttonStyle(.plain)
             List(selection: Binding(get: { state.selected }, set: { if let id = $0 { model.send(.activateKeepingChromeFocus, tab: id) } })) {
                 let current = state.tabs.filter { $0.space == state.activeSpace }
                 savedLinks(state)
@@ -540,20 +602,27 @@ final class NativeSidebarDrag {
                 Spacer()
                 tool("Settings", "gearshape") { model.settings = true }
             }
-            Text(state.session == "inactive" ? "Private browsing is inactive" : "Private · memory only")
-                .font(.caption2).foregroundStyle(.secondary)
-            Text("Protected profiles unavailable").font(.caption2).foregroundStyle(.tertiary)
-        }.padding(.horizontal, 8).padding(.bottom, 10).background(.regularMaterial)
+            VStack(alignment: .leading, spacing: 4) {
+                Label(state.session == "inactive" ? "Private browsing is inactive" : "Private · memory only",
+                      systemImage: "shield")
+                    .font(.caption.weight(.medium)).foregroundStyle(.secondary)
+                Text("Protected profiles unavailable").font(.caption2).foregroundStyle(.secondary)
+            }
+        }.padding(.horizontal, 10).padding(.bottom, 12)
     }
     private func tabRow(_ tab: ChromeTab, _ state: ChromeState) -> some View {
         HStack {
-            HStack {
-                Image(systemName: tab.pinned ? "pin.fill" : state.split.contains(tab.id) ? "rectangle.split.2x1" : "globe")
+            HStack(spacing: 8) {
+                tabIcon(tab, split: state.split.contains(tab.id))
+                    .frame(width: 16, height: 16)
                     .accessibilityHidden(true)
-                Text(tab.title).lineLimit(1).accessibilityValue(tab.pinned ? "Pinned" : "")
+                Text(tab.title)
+                    .font(.system(size: 13, weight: tab.id == state.selected ? .semibold : .regular))
+                    .lineLimit(1).accessibilityValue(tab.pinned ? "Pinned" : "")
                 Spacer(minLength: 0)
                 if tab.loading { ProgressView().controlSize(.mini) }
             }
+            .frame(minHeight: BrowserChromeMetrics.sidebarRowHeight)
             .background { dragRegion(.tab(tab.id)) }
             Button { model.send(.close, tab: tab.id) } label: { Image(systemName: "xmark").font(.caption) }.buttonStyle(.borderless).accessibilityLabel("Close \(tab.title)")
         }.tag(tab.id)
@@ -575,6 +644,18 @@ final class NativeSidebarDrag {
             Divider(); Button("Close", role: .destructive) { model.send(.close, tab: tab.id) }
         }
         .overlay { dropIndicator(.tab(tab.id)) }
+    }
+
+    @ViewBuilder private func tabIcon(_ tab: ChromeTab, split: Bool) -> some View {
+        let prefix = "data:image/png;base64,"
+        if !tab.pinned, !split, let favicon = tab.favicon, favicon.hasPrefix(prefix),
+           let data = Data(base64Encoded: String(favicon.dropFirst(prefix.count))),
+           let image = NSImage(data: data) {
+            Image(nsImage: image).resizable().aspectRatio(contentMode: .fit)
+        } else {
+            Image(systemName: tab.pinned ? "pin.fill" : split ? "rectangle.split.2x1" : "globe")
+                .font(.system(size: 12, weight: .medium)).foregroundStyle(.secondary)
+        }
     }
 
     private func dragRegion(_ item: SidebarDragItem) -> some View {
@@ -609,7 +690,9 @@ final class NativeSidebarDrag {
                         ForEach(ordinary.filter { $0.folder == folder }) { savedRow($0, state) }
                     } label: {
                         Label(folder, systemImage: "folder")
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.system(size: 13, weight: .medium))
+                            .lineLimit(1)
+                            .frame(maxWidth: .infinity, minHeight: BrowserChromeMetrics.sidebarRowHeight, alignment: .leading)
                             .background { dragRegion(.folder(folder)) }
                             .overlay { dropIndicator(.folder(folder)) }
                     }
@@ -624,13 +707,15 @@ final class NativeSidebarDrag {
             Group {
                 if link.favorite {
                     Text(link.title.prefix(2).uppercased())
-                        .font(.system(size: 18, weight: .medium))
-                        .frame(maxWidth: .infinity).frame(height: 44)
+                        .font(.system(size: 16, weight: .semibold, design: .rounded))
+                        .lineLimit(1).minimumScaleFactor(0.6)
+                        .frame(maxWidth: .infinity).frame(height: BrowserChromeMetrics.favoriteHeight)
                         .background(.quaternary, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
                 } else {
                     Label(link.title, systemImage: "bookmark")
+                        .font(.system(size: 13))
                         .lineLimit(1)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, minHeight: BrowserChromeMetrics.sidebarRowHeight, alignment: .leading)
                 }
             }.contentShape(Rectangle())
         }.buttonStyle(.plain)
@@ -668,9 +753,12 @@ final class NativeSidebarDrag {
             } else if model.showsWebContent {
                 Color.clear.accessibilityHidden(true)
             } else {
-                Text("V").font(.system(size: 64, weight: .heavy, design: .rounded)).foregroundStyle(.orange)
-                Text(state.session == "inactive" ? "Your next idea." : "Where to?").font(.largeTitle.bold())
-                Text(state.session == "inactive" ? "A fresh private workspace. Nothing to restore." : "Search or enter an address to start browsing.").foregroundStyle(.secondary)
+                Text("V").font(.system(size: 52, weight: .heavy, design: .rounded)).foregroundStyle(.orange)
+                    .accessibilityHidden(true)
+                Text(state.session == "inactive" ? "Your next idea." : "Where to?")
+                    .font(.system(.largeTitle, design: .rounded, weight: .semibold))
+                Text(state.session == "inactive" ? "A fresh private workspace. Nothing to restore." : "Search or enter an address to start browsing.")
+                    .foregroundStyle(.secondary).multilineTextAlignment(.center)
                 if !state.mini {
                     Button("Search or open a website") { model.commands = true }
                         .keyboardShortcut("k", modifiers: .command)

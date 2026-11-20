@@ -1,0 +1,104 @@
+{
+  "height" : 1648,
+  "method" : "Full native JPEG capture, decoded sRGB. Exact RGB mismatch, absolute difference and 50\/50 blend. No crop, resize or masks. SSIM is the mean of non-overlapping 8×8 Rec.709 luma block scores.",
+  "regions" : {
+    "mainBrowserArea" : {
+      "boundsXYWH" : [
+        656,
+        0,
+        2224,
+        1648
+      ],
+      "metrics" : {
+        "differentPixels" : 172136,
+        "meanAbsoluteChannelDifference" : 0.48971020392423925,
+        "mismatchAbove8Percent" : 1.0149101592512397,
+        "mismatchPercent" : 4.6965582873507019,
+        "pixels" : 3665152,
+        "pixelsWithChannelDifferenceAbove8" : 37198
+      }
+    },
+    "navigationAndAddress" : {
+      "boundsXYWH" : [
+        0,
+        0,
+        656,
+        175
+      ],
+      "metrics" : {
+        "differentPixels" : 114415,
+        "meanAbsoluteChannelDifference" : 18.660130662020904,
+        "mismatchAbove8Percent" : 55.477351916376307,
+        "mismatchPercent" : 99.66463414634147,
+        "pixels" : 114800,
+        "pixelsWithChannelDifferenceAbove8" : 63688
+      }
+    },
+    "sidebar" : {
+      "boundsXYWH" : [
+        0,
+        0,
+        656,
+        1648
+      ],
+      "metrics" : {
+        "differentPixels" : 1077921,
+        "meanAbsoluteChannelDifference" : 12.778126294991711,
+        "mismatchAbove8Percent" : 25.021274863840873,
+        "mismatchPercent" : 99.707054374852007,
+        "pixels" : 1081088,
+        "pixelsWithChannelDifferenceAbove8" : 270502
+      }
+    },
+    "sidebarFooter" : {
+      "boundsXYWH" : [
+        0,
+        1350,
+        656,
+        298
+      ],
+      "metrics" : {
+        "differentPixels" : 194873,
+        "meanAbsoluteChannelDifference" : 17.460867163201833,
+        "mismatchAbove8Percent" : 33.803609428711738,
+        "mismatchPercent" : 99.685402684563755,
+        "pixels" : 195488,
+        "pixelsWithChannelDifferenceAbove8" : 66082
+      }
+    },
+    "window" : {
+      "boundsXYWH" : [
+        0,
+        0,
+        2880,
+        1648
+      ],
+      "metrics" : {
+        "differentPixels" : 1250057,
+        "meanAbsoluteChannelDifference" : 3.2887383135562747,
+        "mismatchAbove8Percent" : 6.4830265641855451,
+        "mismatchPercent" : 26.337837951725998,
+        "pixels" : 4746240,
+        "pixelsWithChannelDifferenceAbove8" : 307700
+      }
+    },
+    "workspaceAndTabs" : {
+      "boundsXYWH" : [
+        0,
+        175,
+        656,
+        1175
+      ],
+      "metrics" : {
+        "differentPixels" : 768633,
+        "meanAbsoluteChannelDifference" : 10.714460300985989,
+        "mismatchAbove8Percent" : 18.257913855734301,
+        "mismatchPercent" : 99.718863518422424,
+        "pixels" : 770800,
+        "pixelsWithChannelDifferenceAbove8" : 140732
+      }
+    }
+  },
+  "structuralSimilarityLuma8x8" : 0.94717979119721163,
+  "width" : 2880
+}

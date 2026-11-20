@@ -1,0 +1,11 @@
+68358 /Applications/Arc 2.app/Contents/MacOS/Arc
+75736 /Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app/Contents/MacOS/VezhamBrowser
+0af08b5954436636a05166a18ee6c1018321807eb2423d15ec0318216f99e43c  /Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app/Contents/MacOS/VezhamBrowser
+/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app: valid on disk
+/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app: satisfies its Designated Requirement
+Identifier=internal.vezham.browser.ui-preview
+CDHash=cdf930fc0a15e62f629ae0fa650e9fc45ac29904
+Signature=adhoc
+TeamIdentifier=not set
+1.172.1
+90370

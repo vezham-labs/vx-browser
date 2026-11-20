@@ -777,7 +777,7 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             : BrowserChromeMetrics.footerHeight + BrowserChromeMetrics.separator
         page.frame = NSRect(x: left, y: footer, width: width, height: max(0, bounds.height - top - footer))
         page.wantsLayer = true
-        page.layer?.cornerRadius = nativeGeometry ? BrowserChromeMetrics.controlRadius : 0
+        page.layer?.cornerRadius = nativeGeometry ? BrowserChromeMetrics.contentRadius : 0
         page.layer?.masksToBounds = nativeGeometry
         guard !closing, !withdrawing, recovery == nil, presentation.visible, let selected else {
             page.isHidden = true

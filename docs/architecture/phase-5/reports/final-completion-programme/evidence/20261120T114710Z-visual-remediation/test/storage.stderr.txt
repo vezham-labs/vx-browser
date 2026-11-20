@@ -1,0 +1,107 @@
+Building for debugging...
+[Computing dependencies]
+[Constructing description]
+[Pre-planning 1 / 245]
+[Planning deferred tasks]
+[Starting]
+[18 / 122] WSF0Fakes
+[48 / 122] BrowserDomain
+[58 / 122]
+[58 / 123] BrowserDomain
+[59 / 123] BrowserDomain
+[62 / 165]
+[63 / 165]
+[65 / 165]
+[66 / 165]
+[68 / 165]
+[69 / 165]
+[71 / 165]
+[74 / 165]
+[76 / 165]
+[77 / 165]
+[78 / 165]
+[80 / 165]
+[81 / 165]
+[82 / 165]
+[83 / 165]
+[84 / 165]
+[85 / 165]
+[87 / 165]
+[89 / 165]
+[90 / 165]
+[91 / 165]
+[92 / 165]
+[93 / 165]
+[96 / 165] BrowserDomain
+[98 / 165] BrowserDomain
+[105 / 165] BrowserDomain
+[106 / 165] BrowserPorts
+[107 / 165] BrowserDomain
+[108 / 166]
+[110 / 166] BrowserDomain
+[110 / 166] BrowserPorts
+[113 / 169] BrowserPorts
+[120 / 170] BrowserPorts
+[122 / 171] WSF0Fakes
+[124 / 175] BrowserPersistence
+[126 / 179] BrowserPersistence
+[126 / 179] WSF0Fakes
+[135 / 179] WSF0Fakes
+[141 / 179] BrowserPersistence-product
+[143 / 179] WSF0Fakes
+[145 / 180]
+[148 / 180]
+[148 / 180] BrowserCore
+[151 / 186] BrowserCore
+[159 / 186] BrowserCore
+[160 / 186] WSF0Qualification-product
+[161 / 187] BrowserNativeStorage
+[163 / 240]
+[164 / 240]
+[165 / 240]
+[168 / 240]
+[169 / 240]
+[171 / 240]
+[172 / 240]
+[174 / 240]
+[175 / 240]
+[177 / 240]
+[178 / 240]
+[180 / 240]
+[183 / 240]
+[185 / 240]
+[186 / 240]
+[188 / 240]
+[189 / 240]
+[191 / 240]
+[193 / 240]
+[195 / 240]
+[196 / 240]
+[198 / 240]
+[200 / 240]
+[201 / 240]
+[203 / 240]
+[205 / 240]
+[205 / 240] BrowserCore
+[206 / 240] BrowserCore
+[206 / 240]
+[207 / 240]
+[210 / 240] BrowserNativeStorage
+[212 / 240] BrowserNativeStorage
+[218 / 240] BrowserNativeStorage
+[219 / 240] BrowserNativeStorage
+[220 / 240] StorageModelTests-product
+[222 / 240] BrowserNativeStorage
+[224 / 240] BrowserNativeStorage
+[229 / 241] BrowserNativeStorage-product
+[230 / 241] StorageModelTests-product
+[231 / 251]
+[232 / 251]
+[235 / 251] StorageModelTests-product
+[236 / 251] StorageModelTests-product
+[238 / 251] StorageModelTests-product
+[243 / 251] StorageModelTests-product
+[245 / 251] StorageModelTests-product
+[247 / 251] StorageModelTests-product
+[249 / 251] StorageModelTests-product
+Build complete! (114.11 secs)

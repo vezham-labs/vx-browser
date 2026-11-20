@@ -1,0 +1,33 @@
+
+> nx run browser-macos:reliability-contracts
+
+> node_modules/.bin/tsx --test apps/browser-macos/Chrome/tests/navigation.test.ts
+
+(node:73366) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:73377) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:73379) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ normalizes hostnames, local fixtures and explicit HTTPS [90m(1.531458ms)[39m[39m
+[32m✔ blocks credentials, unsupported schemes and control characters [90m(0.217084ms)[39m[39m
+[32m✔ generates a local suggestion and submits search through the provider [90m(0.289125ms)[39m[39m
+[32m✔ preserves HTTPS and loopback-only HTTP policy [90m(0.445958ms)[39m[39m
+[34mℹ tests 4[39m
+[34mℹ suites 0[39m
+[34mℹ pass 4[39m
+[34mℹ fail 0[39m
+[34mℹ cancelled 0[39m
+[34mℹ skipped 0[39m
+[34mℹ todo 0[39m
+[34mℹ duration_ms 644.2045[39m
+
+
+
+ NX   Successfully ran target reliability-contracts for project browser-macos
+
+
+  Run duration:      2.5s
+  Cache:             0/1 hit (0%)
+  Critical path:     2.5s (1 task)
+  Recoverable time:  <1ms

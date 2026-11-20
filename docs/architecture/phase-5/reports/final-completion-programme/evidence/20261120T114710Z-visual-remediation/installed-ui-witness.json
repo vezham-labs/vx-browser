@@ -1,0 +1,523 @@
+{
+  "retainedSnapshots": [
+    {
+      "tag": "Favorite second to first",
+      "from": [
+        220,
+        218
+      ],
+      "to": [
+        82,
+        218
+      ],
+      "before": [
+        {
+          "label": "9 button Description: Favorite Visual fixture, ID: saved-link-61162214-3EA0-433A-A8E0-5B72B045F786, Help: Visual fixture",
+          "url": "http://127.0.0.1:41927/"
+        },
+        {
+          "label": "10 button Description: Favorite Navigation Bravo, ID: saved-link-306907A7-E928-4B3A-BB20-E24EBEE8DE39, Help: Navigation Bravo",
+          "url": "http://127.0.0.1:41927/bravo.html"
+        }
+      ],
+      "after": [
+        {
+          "label": "9 button Description: Favorite Navigation Bravo, ID: saved-link-306907A7-E928-4B3A-BB20-E24EBEE8DE39, Help: Navigation Bravo",
+          "url": "http://127.0.0.1:41927/bravo.html"
+        },
+        {
+          "label": "10 button Description: Favorite Visual fixture, ID: saved-link-61162214-3EA0-433A-A8E0-5B72B045F786, Help: Visual fixture",
+          "url": "http://127.0.0.1:41927/"
+        }
+      ]
+    },
+    {
+      "tag": "Unpinned reorder",
+      "from": [
+        165,
+        780
+      ],
+      "to": [
+        165,
+        712
+      ],
+      "before": [
+        "16 row (selectable) Pinned",
+        "17 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "18 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "19 row (selectable) Tabs",
+        "20 row (selectable) Visual fixture",
+        "21 row (selected) Navigation Bravo"
+      ],
+      "after": [
+        "16 row (selectable) Pinned",
+        "17 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "18 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "19 row (selectable) Tabs",
+        "20 row (selected) Navigation Bravo",
+        "21 row (selectable) Visual fixture"
+      ]
+    },
+    {
+      "tag": "Same-group reorder",
+      "from": [
+        167,
+        846
+      ],
+      "to": [
+        167,
+        777
+      ],
+      "before": [
+        "16 row (selectable) Pinned",
+        "17 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "18 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "19 row (selectable) Tabs",
+        "20 row (selectable) Collapse group Visual study",
+        "21 row (selected) Navigation Bravo",
+        "22 row (selectable) Visual fixture"
+      ],
+      "after": [
+        "16 row (selectable) Pinned",
+        "17 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "18 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "19 row (selectable) Tabs",
+        "20 row (selectable) Collapse group Visual study",
+        "21 row (selectable) Visual fixture",
+        "22 row (selected) Navigation Bravo"
+      ]
+    },
+    {
+      "tag": "Reorder root bookmarks",
+      "from": [
+        165,
+        580
+      ],
+      "to": [
+        165,
+        504
+      ],
+      "before": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Alpha bookmark",
+        "18 row (selectable) Bookmark Bravo bookmark",
+        "19 row (selectable, collapsed) Description: Reading, Secondary Actions: Expand",
+        "21 row (selectable) Pinned",
+        "22 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "23 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "24 row (selectable) Tabs",
+        "25 row (selectable) Collapse group Visual study",
+        "26 row (selectable) Visual fixture",
+        "27 row (selected) Navigation Bravo"
+      ],
+      "after": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Bravo bookmark",
+        "18 row (selectable) Bookmark Alpha bookmark",
+        "19 row (selectable, collapsed) Description: Reading, Secondary Actions: Expand",
+        "21 row (selectable) Pinned",
+        "22 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "23 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "24 row (selectable) Tabs",
+        "25 row (selectable) Collapse group Visual study",
+        "26 row (selectable) Visual fixture",
+        "27 row (selected) Navigation Bravo"
+      ]
+    },
+    {
+      "tag": "Move bookmark onto collapsed folder",
+      "from": [
+        165,
+        580
+      ],
+      "to": [
+        165,
+        647
+      ],
+      "before": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Bravo bookmark",
+        "18 row (selectable) Bookmark Alpha bookmark",
+        "19 row (selectable, collapsed) Description: Reading, Secondary Actions: Expand",
+        "21 row (selectable) Pinned",
+        "22 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "23 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "24 row (selectable) Tabs",
+        "25 row (selectable) Collapse group Visual study",
+        "26 row (selectable) Visual fixture",
+        "27 row (selected) Navigation Bravo"
+      ],
+      "after": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Bravo bookmark",
+        "18 row (selectable, collapsed) Description: Reading, Secondary Actions: Expand",
+        "20 row (selectable) Pinned",
+        "21 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "22 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "23 row (selectable) Tabs",
+        "24 row (selectable) Collapse group Visual study",
+        "25 row (selectable) Visual fixture",
+        "26 row (selected) Navigation Bravo"
+      ],
+      "expanded": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Bravo bookmark",
+        "18 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+        "20 row (selectable) Bookmark Alpha bookmark",
+        "21 row (selectable) Bookmark Folder child",
+        "22 row (selectable) Pinned",
+        "23 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "24 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "25 row (selectable) Tabs",
+        "26 row (selectable) Collapse group Visual study",
+        "27 row (selectable) Visual fixture",
+        "28 row (selected) Navigation Bravo"
+      ]
+    },
+    {
+      "tag": "Combined bookmark promotion and Favorite-to-folder",
+      "afterFavorites": [
+        {
+          "label": "9 button Description: Favorite Visual fixture, ID: saved-link-61162214-3EA0-433A-A8E0-5B72B045F786, Help: Visual fixture",
+          "url": "http://127.0.0.1:41927/"
+        },
+        {
+          "label": "10 button Description: Favorite Navigation Bravo, ID: saved-link-306907A7-E928-4B3A-BB20-E24EBEE8DE39, Help: Navigation Bravo",
+          "url": "http://127.0.0.1:41927/bravo.html"
+        }
+      ],
+      "afterSidebar": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Bravo bookmark",
+        "18 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+        "20 row (selectable) Bookmark Alpha bookmark",
+        "21 row (selectable) Bookmark Folder child",
+        "22 row (selectable) Pinned",
+        "23 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "24 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "25 row (selectable) Tabs",
+        "26 row (selectable) Collapse group Visual study",
+        "27 row (selectable) Visual fixture",
+        "28 row (selected) Navigation Bravo"
+      ]
+    },
+    {
+      "tag": "Promote folder child onto Favorite",
+      "from": [
+        180,
+        647
+      ],
+      "to": [
+        220,
+        218
+      ],
+      "before": {
+        "favorites": [
+          {
+            "label": "9 button Description: Favorite Visual fixture, ID: saved-link-B7503AC4-3DF7-430B-86AB-D89A2C7A769C, Help: Visual fixture",
+            "url": "http://127.0.0.1:41927/"
+          },
+          {
+            "label": "10 button Description: Favorite Navigation Bravo, ID: saved-link-C8AE125E-B1B1-4AEB-8BE4-B6D1EDD4BEA0, Help: Navigation Bravo",
+            "url": "http://127.0.0.1:41927/bravo.html"
+          }
+        ],
+        "sidebar": [
+          "16 row (selectable) Bookmarks",
+          "17 row (selectable) Bookmark Root bookmark",
+          "18 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+          "20 row (selectable) Bookmark Folder child",
+          "21 row (selectable) Tabs",
+          "22 row (selected) Navigation Bravo"
+        ]
+      },
+      "after": {
+        "favorites": [
+          {
+            "label": "9 button Description: Favorite Visual fixture, ID: saved-link-B7503AC4-3DF7-430B-86AB-D89A2C7A769C, Help: Visual fixture",
+            "url": "http://127.0.0.1:41927/"
+          },
+          {
+            "label": "10 button Description: Favorite Navigation Bravo, ID: saved-link-C8AE125E-B1B1-4AEB-8BE4-B6D1EDD4BEA0, Help: Navigation Bravo",
+            "url": "http://127.0.0.1:41927/bravo.html"
+          },
+          {
+            "label": "11 button Description: Favorite Folder child, ID: saved-link-9C097D52-825B-4D43-832A-A668B3CEE605, Help: Folder child",
+            "url": "http://127.0.0.1:41927/#child"
+          }
+        ],
+        "sidebar": [
+          "17 row (selectable) Bookmarks",
+          "18 row (selectable) Bookmark Root bookmark",
+          "19 row (selectable) Tabs",
+          "20 row (selected) Navigation Bravo"
+        ]
+      }
+    },
+    {
+      "tag": "Move Favorite beside root bookmark",
+      "from": [
+        358,
+        218
+      ],
+      "to": [
+        170,
+        514
+      ],
+      "before": {
+        "favorites": [
+          {
+            "label": "9 button Description: Favorite Visual fixture, ID: saved-link-B7503AC4-3DF7-430B-86AB-D89A2C7A769C, Help: Visual fixture",
+            "url": "http://127.0.0.1:41927/"
+          },
+          {
+            "label": "10 button Description: Favorite Navigation Bravo, ID: saved-link-C8AE125E-B1B1-4AEB-8BE4-B6D1EDD4BEA0, Help: Navigation Bravo",
+            "url": "http://127.0.0.1:41927/bravo.html"
+          },
+          {
+            "label": "11 button Description: Favorite Folder child, ID: saved-link-9C097D52-825B-4D43-832A-A668B3CEE605, Help: Folder child",
+            "url": "http://127.0.0.1:41927/#child"
+          }
+        ],
+        "sidebar": [
+          "17 row (selectable) Bookmarks",
+          "18 row (selectable) Bookmark Root bookmark",
+          "19 row (selectable) Tabs",
+          "20 row (selected) Navigation Bravo"
+        ]
+      },
+      "after": {
+        "favorites": [
+          {
+            "label": "9 button Description: Favorite Visual fixture, ID: saved-link-B7503AC4-3DF7-430B-86AB-D89A2C7A769C, Help: Visual fixture",
+            "url": "http://127.0.0.1:41927/"
+          },
+          {
+            "label": "10 button Description: Favorite Navigation Bravo, ID: saved-link-C8AE125E-B1B1-4AEB-8BE4-B6D1EDD4BEA0, Help: Navigation Bravo",
+            "url": "http://127.0.0.1:41927/bravo.html"
+          }
+        ],
+        "sidebar": [
+          "16 row (selectable) Bookmarks",
+          "17 row (selectable) Bookmark Root bookmark",
+          "18 row (selectable) Bookmark Folder child",
+          "19 row (selectable) Tabs",
+          "20 row (selected) Navigation Bravo"
+        ]
+      }
+    },
+    {
+      "tag": "Reject grouped tab drop on pinned row",
+      "from": [
+        168,
+        584
+      ],
+      "to": [
+        168,
+        387
+      ],
+      "dimensions": [
+        2360,
+        1520
+      ],
+      "before": [
+        "13 row (selectable) Pinned",
+        "14 row (selectable) Value: Pinned, Description: Visual fixture",
+        "15 row (selectable) Tabs",
+        "16 row (selectable) Collapse group Drag boundary",
+        "17 row (selected) Navigation Bravo"
+      ],
+      "after": [
+        "13 row (selectable) Pinned",
+        "14 row (selectable) Value: Pinned, Description: Visual fixture",
+        "15 row (selectable) Tabs",
+        "16 row (selectable) Collapse group Drag boundary",
+        "17 row (selected) Navigation Bravo"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "tag": "Open moved Favorite by coordinate",
+      "point": [
+        82,
+        218
+      ],
+      "before": "\t\t\t26 HTML content Description: Navigation Charlie, URL: 127.0.0.1:41927/charlie.html",
+      "after": "\t\t\t27 HTML content Description: Navigation Bravo, URL: 127.0.0.1:41927/bravo.html"
+    },
+    {
+      "tag": "Pinned reorder",
+      "from": [
+        165,
+        580
+      ],
+      "to": [
+        165,
+        512
+      ],
+      "before": [
+        "16 row (selectable) Pinned",
+        "17 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "18 row (selected) Value: Pinned, Description: Navigation Bravo",
+        "19 row (selectable) Tabs"
+      ],
+      "after": [
+        "16 row (selectable) Pinned",
+        "17 row (selected) Value: Pinned, Description: Navigation Bravo",
+        "18 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "19 row (selectable) Tabs"
+      ]
+    },
+    {
+      "tag": "Reject crossing into pinned section",
+      "from": [
+        165,
+        712
+      ],
+      "to": [
+        165,
+        512
+      ],
+      "before": [
+        "16 row (selectable) Pinned",
+        "17 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "18 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "19 row (selectable) Tabs",
+        "20 row (selected) Visual fixture",
+        "20 row (selected)"
+      ],
+      "after": [
+        "16 row (selectable) Pinned",
+        "17 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "18 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "19 row (selectable) Tabs",
+        "20 row (selected) Visual fixture",
+        "20 row (selected)"
+      ],
+      "expanded": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Bravo bookmark",
+        "18 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+        "20 row (selectable) Bookmark Alpha bookmark",
+        "21 row (selectable) Bookmark Folder child",
+        "22 row (selectable) Pinned",
+        "23 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "24 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "25 row (selectable) Tabs",
+        "26 row (selectable) Collapse group Visual study",
+        "27 row (selectable) Visual fixture",
+        "28 row (selected) Navigation Bravo"
+      ],
+      "folderAfter": [
+        "16 row (selectable) Bookmarks",
+        "17 row (selectable) Bookmark Bravo bookmark",
+        "18 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+        "20 row (selectable) Bookmark Alpha bookmark",
+        "21 row (selectable) Bookmark Folder child",
+        "22 row (selectable) Pinned",
+        "23 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "24 row (selectable) Value: Pinned, Description: Navigation Charlie",
+        "25 row (selectable) Tabs"
+      ]
+    },
+    {
+      "tag": "Resize sidebar divider",
+      "from": [
+        574,
+        305
+      ],
+      "to": [
+        626,
+        305
+      ],
+      "before": "\t\t34 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 288 points, Secondary Actions: Increment, Decrement",
+      "after": "\t\t34 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 314 points, Secondary Actions: Increment, Decrement"
+    },
+    {
+      "tag": "Resize Split View",
+      "from": [
+        1727,
+        745
+      ],
+      "to": [
+        1827,
+        745
+      ],
+      "before": "\t\t42 splitter (disabled, settable, float) 567.5",
+      "after": "\t\t42 splitter (disabled, settable, float) 617.5"
+    },
+    {
+      "tag": "Command bar opens",
+      "state": [
+        "\t\t3 text field (settable) Description: Search tabs, Spaces, actions or the web, Placeholder: Search or enter an address",
+        "The focused UI element is 3 text field (settable) Description: Search tabs, Spaces, actions or the web, Placeholder: Search or enter an address"
+      ]
+    },
+    {
+      "tag": "Spaces switch and restore private tabs",
+      "empty": [
+        "\t\t11 pop up button Description: Space, Space, Value: Visual evidence",
+        "\t\t29 text Where to? Search or enter an address to start browsing."
+      ],
+      "restored": [
+        "\t\t11 pop up button Description: Space, Space, Value: Personal",
+        "\t\t\t\t23 row (selectable) Value: Pinned, Description: Navigation Bravo",
+        "\t\t\t\t24 row (selectable) Value: Pinned, Description: Navigation Charlie"
+      ]
+    },
+    {
+      "tag": "Mini opens independent private window",
+      "state": [
+        "Window: \"Vezham Mini \u00b7 Private\", App: Vezham Browser.",
+        "\t\t7 button Description: Preview destination in main workspace, ID: arrow.up.forward.app",
+        "\t\t8 text Private \u00b7 memory only",
+        "\t\t\t11 HTML content Description: Navigation Charlie, URL: 127.0.0.1:41927/charlie.html"
+      ]
+    },
+    {
+      "tag": "Shared toolbar navigation",
+      "before": "\t\t\t37 HTML content Description: Visual fixture, URL: 127.0.0.1:41927/",
+      "navigated": "\t\t\t37 HTML content Description: Navigation Delta, URL: 127.0.0.1:41927/delta.html",
+      "back": "\t\t\t37 HTML content Description: Visual fixture, URL: 127.0.0.1:41927/",
+      "forward": "\t\t\t37 HTML content Description: Navigation Delta, URL: 127.0.0.1:41927/delta.html"
+    },
+    {
+      "tag": "Narrow layout collapse and expand",
+      "dimensions": [
+        1446,
+        1648
+      ],
+      "expanded": "\t\t34 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 288 points, Secondary Actions: Increment, Decrement",
+      "collapsed": [
+        "\t\t2 button Description: Show sidebar, ID: sidebar.left",
+        "\t\t7 text field (settable) Description: Address and search, Value: http://127.0.0.1:41927/delta.html, Placeholder: Search or enter an address, ID: native-address",
+        "\t\t\t14 HTML content Description: Navigation Delta, URL: 127.0.0.1:41927/delta.html",
+        "The focused UI element is 14 HTML content Description: Navigation Delta, URL: 127.0.0.1:41927/delta.html"
+      ],
+      "restored": "\t\t32 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 288 points, Secondary Actions: Increment, Decrement"
+    },
+    {
+      "tag": "Normal quit and private relaunch",
+      "beforeQuit": [
+        {
+          "label": "9 button Description: Favorite Navigation Bravo, ID: saved-link-306907A7-E928-4B3A-BB20-E24EBEE8DE39, Help: Navigation Bravo",
+          "url": "http://127.0.0.1:41927/bravo.html"
+        },
+        {
+          "label": "10 button Description: Favorite Visual fixture, ID: saved-link-61162214-3EA0-433A-A8E0-5B72B045F786, Help: Visual fixture",
+          "url": "http://127.0.0.1:41927/"
+        }
+      ],
+      "afterRelaunch": [
+        "\t\t18 text Private browsing is inactive Protected profiles unavailable",
+        "\t\t20 text Your next idea. A fresh private workspace. Nothing to restore."
+      ],
+      "favoritesAfterNewSession": [],
+      "tabsAfterNewSession": [
+        "13 row (selectable) Tabs",
+        "14 row (selected) New tab"
+      ]
+    }
+  ]
+}

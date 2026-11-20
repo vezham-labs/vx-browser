@@ -1,0 +1,15 @@
+
+> nx run browser-macos:reliability-typecheck
+
+> node_modules/.bin/tsc --noEmit -p apps/browser-macos/Chrome/tsconfig.json
+
+
+
+
+ NX   Successfully ran target reliability-typecheck for project browser-macos
+
+
+  Run duration:      4.5s
+  Cache:             0/1 hit (0%)
+  Critical path:     4.5s (1 task)
+  Recoverable time:  <1ms
