@@ -7,6 +7,12 @@ import BrowserNativeStorage
 @MainActor
 private final class BrowserWindow: NSWindow {
     var shortcut: ((String) -> Bool)?
+    var sidebarPointer: ((NSEvent) -> Bool)?
+
+    override func sendEvent(_ event: NSEvent) {
+        if sidebarPointer?(event) == true { return }
+        super.sendEvent(event)
+    }
 
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
         if event.modifierFlags.intersection([.command, .control, .option, .shift]) == .command,
@@ -240,6 +246,11 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         host.autoresizingMask = [.width, .height]
         root.addSubview(host)
         nativeChrome = host
+        if !mini {
+            (window as? BrowserWindow)?.sidebarPointer = { [weak nativeModel] event in
+                nativeModel?.sidebarDrag.handle(event) ?? false
+            }
+        }
         page.delegate = self
         page.isVertical = true
         page.dividerStyle = .thin

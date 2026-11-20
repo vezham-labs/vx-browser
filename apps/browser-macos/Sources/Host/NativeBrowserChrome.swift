@@ -70,6 +70,8 @@ enum NativeBrowserMenuAction: Int {
     @Published var showsWebContent = false
     @Published var managesBookmarks = false
     @Published var bookmarks = PrivateBookmarks()
+    @Published var sidebarDrop: SidebarDrop?
+    lazy var sidebarDrag = NativeSidebarDrag(model: self)
     var execute: ((ChromeCommand) async -> ChromeResult?)?
     typealias Bookmark = PrivateBookmarks.Link
     var selectedTab: ChromeTab? { state?.tabs.first { $0.id == state?.selected } }
@@ -123,6 +125,185 @@ enum NativeBrowserMenuAction: Int {
     }
 }
 
+enum SidebarDragItem: Equatable {
+    case tab(String)
+    case link(UUID)
+    case folder(String)
+}
+
+struct SidebarDrop: Equatable {
+    enum Placement: Equatable { case before, after, onto }
+    let item: SidebarDragItem
+    let placement: Placement
+}
+
+@MainActor
+final class SidebarDragAnchor: NSView {
+    var item: SidebarDragItem?
+    override func hitTest(_ point: NSPoint) -> NSView? { nil }
+}
+
+@MainActor
+private struct SidebarDragRegion: NSViewRepresentable {
+    let interaction: NativeSidebarDrag
+    let item: SidebarDragItem
+
+    func makeNSView(context: Context) -> SidebarDragAnchor {
+        let anchor = SidebarDragAnchor()
+        interaction.register(anchor)
+        return anchor
+    }
+
+    func updateNSView(_ view: SidebarDragAnchor, context: Context) {
+        view.item = item
+    }
+}
+
+/// Tracks an in-window pointer drag using live row geometry and a session-scoped
+/// identity. No website address or sidebar item is published to the pasteboard.
+@MainActor
+final class NativeSidebarDrag {
+    private struct Source {
+        let item: SidebarDragItem
+        let sessionID: String
+        let spaceID: String
+        let origin: NSPoint
+    }
+
+    private weak var model: NativeChromeModel?
+    private let anchors = NSHashTable<SidebarDragAnchor>.weakObjects()
+    private var source: Source?
+    private var dragging = false
+
+    init(model: NativeChromeModel) {
+        self.model = model
+    }
+
+    fileprivate func register(_ anchor: SidebarDragAnchor) {
+        anchors.add(anchor)
+    }
+
+    func cancel() {
+        source = nil
+        dragging = false
+        if model?.sidebarDrop != nil { model?.sidebarDrop = nil }
+    }
+
+    func handle(_ event: NSEvent) -> Bool {
+        if event.type == .leftMouseDown {
+            cancel()
+            let modifiers = event.modifierFlags.intersection([.command, .control, .option, .shift])
+            guard modifiers.isEmpty, let model, model.sidebarVisible,
+                  let state = model.state, state.recovery == nil, let session = state.sessionID,
+                  let hit = hit(at: event.locationInWindow, in: event.window) else { return false }
+            if case .folder = hit.item { return false }
+            source = Source(item: hit.item, sessionID: session, spaceID: state.activeSpace,
+                            origin: event.locationInWindow)
+            return true
+        }
+
+        guard let source else { return false }
+        if event.type == .keyDown, event.keyCode == 53 {
+            cancel()
+            return true
+        }
+        guard event.type == .leftMouseDragged || event.type == .leftMouseUp else { return false }
+        guard let model, model.sidebarVisible, let state = model.state,
+              state.sessionID == source.sessionID, state.activeSpace == source.spaceID,
+              state.recovery == nil else {
+            cancel()
+            return true
+        }
+
+        let point = event.locationInWindow
+        if hypot(point.x - source.origin.x, point.y - source.origin.y) >= 4 { dragging = true }
+        let hit = hit(at: point, in: event.window)
+        if dragging {
+            let drop = hit.flatMap { proposedDrop(from: source.item, to: $0.item, after: $0.after, in: state) }
+            if event.type == .leftMouseUp {
+                cancel()
+                if let drop { perform(drop, from: source.item, in: state) }
+            } else if model.sidebarDrop != drop {
+                model.sidebarDrop = drop
+            }
+        } else if event.type == .leftMouseUp {
+            cancel()
+            if hit?.item == source.item {
+                switch source.item {
+                case .tab(let id): model.send(.activateKeepingChromeFocus, tab: id)
+                case .link(let id): model.openBookmark(id)
+                case .folder: break
+                }
+            }
+        }
+        return true
+    }
+
+    private func hit(at point: NSPoint, in window: NSWindow?) -> (item: SidebarDragItem, after: Bool)? {
+        guard let window else { return nil }
+        for anchor in anchors.allObjects where anchor.window === window && !anchor.isHiddenOrHasHiddenAncestor {
+            let local = anchor.convert(point, from: nil)
+            // SwiftUI can give a representable a clipping rectangle larger than
+            // its own layout. A point must be inside both rectangles.
+            let visibleBounds = anchor.bounds.intersection(anchor.visibleRect)
+            if let item = anchor.item, visibleBounds.contains(local) {
+                return (item, anchor.isFlipped ? local.y >= anchor.bounds.midY : local.y < anchor.bounds.midY)
+            }
+        }
+        return nil
+    }
+
+    private func tabOffset(from source: String, to target: String, in state: ChromeState) -> Int? {
+        guard let from = state.tabs.firstIndex(where: { $0.id == source }),
+              let to = state.tabs.firstIndex(where: { $0.id == target }), from != to else { return nil }
+        let a = state.tabs[from], b = state.tabs[to]
+        guard a.space == state.activeSpace, b.space == a.space,
+              a.pinned == b.pinned, a.group == b.group else { return nil }
+        return to - from
+    }
+
+    private func proposedDrop(from source: SidebarDragItem, to target: SidebarDragItem,
+                              after: Bool, in state: ChromeState) -> SidebarDrop? {
+        guard source != target, let model else { return nil }
+        let links = model.bookmarks.links
+        switch (source, target) {
+        case (.tab(let from), .tab(let to)):
+            guard let offset = tabOffset(from: from, to: to, in: state) else { return nil }
+            return SidebarDrop(item: target, placement: offset > 0 ? .after : .before)
+        case (.link(let from), .link(let to)):
+            guard links.contains(where: { $0.id == from }),
+                  let link = links.first(where: { $0.id == to }) else { return nil }
+            return SidebarDrop(item: target, placement: link.favorite ? .onto : (after ? .after : .before))
+        case (.link(let from), .folder(let folder)):
+            guard links.contains(where: { $0.id == from }),
+                  links.contains(where: { !$0.favorite && $0.folder == folder }) else { return nil }
+            return SidebarDrop(item: target, placement: .onto)
+        default:
+            return nil
+        }
+    }
+
+    private func perform(_ drop: SidebarDrop, from source: SidebarDragItem, in state: ChromeState) {
+        guard let model else { return }
+        switch (source, drop.item) {
+        case (.tab(let from), .tab(let to)):
+            if let offset = tabOffset(from: from, to: to, in: state) {
+                model.send(.move, tab: from, offset: offset)
+            }
+        case (.link(let from), .link(let to)):
+            if drop.placement == .onto, model.bookmarks.links.contains(where: { $0.id == from && $0.favorite }) {
+                model.bookmarks.reorderFavorite(from, onto: to)
+            } else {
+                model.bookmarks.move(from, beside: to, after: drop.placement != .before)
+            }
+        case (.link(let from), .folder(let folder)):
+            model.bookmarks.move(from, toFolder: folder)
+        default:
+            break
+        }
+    }
+}
+
 @MainActor struct NativeBrowserChrome: View {
     @ObservedObject var model: NativeChromeModel
     @State private var address = ""
@@ -133,7 +314,6 @@ enum NativeBrowserMenuAction: Int {
     @State private var bookmarkDraft: NativeChromeModel.Bookmark?
     @State private var editor: EditRequest?
     @State private var deletion: DeleteRequest?
-    @State private var dropTarget: String?
     @FocusState private var addressFocused: Bool
     private struct EditRequest: Identifiable {
         let id = UUID(); let title: String; let kind: ChromeCommand.Kind; let target: String?; var value: String
@@ -199,6 +379,7 @@ enum NativeBrowserMenuAction: Int {
         }
         .ignoresSafeArea()
         .onChange(of: model.state?.sessionID) { _, _ in
+            model.sidebarDrag.cancel()
             model.managesBookmarks = false
             bookmarkDraft = nil
             bookmarkFilter = ""
@@ -366,11 +547,14 @@ enum NativeBrowserMenuAction: Int {
     }
     private func tabRow(_ tab: ChromeTab, _ state: ChromeState) -> some View {
         HStack {
-            Image(systemName: tab.pinned ? "pin.fill" : state.split.contains(tab.id) ? "rectangle.split.2x1" : "globe")
-                .accessibilityHidden(true)
-            Text(tab.title).lineLimit(1).accessibilityValue(tab.pinned ? "Pinned" : "")
-            Spacer(minLength: 0)
-            if tab.loading { ProgressView().controlSize(.mini) }
+            HStack {
+                Image(systemName: tab.pinned ? "pin.fill" : state.split.contains(tab.id) ? "rectangle.split.2x1" : "globe")
+                    .accessibilityHidden(true)
+                Text(tab.title).lineLimit(1).accessibilityValue(tab.pinned ? "Pinned" : "")
+                Spacer(minLength: 0)
+                if tab.loading { ProgressView().controlSize(.mini) }
+            }
+            .background { dragRegion(.tab(tab.id)) }
             Button { model.send(.close, tab: tab.id) } label: { Image(systemName: "xmark").font(.caption) }.buttonStyle(.borderless).accessibilityLabel("Close \(tab.title)")
         }.tag(tab.id)
         .accessibilityIdentifier("native-tab-\(tab.id)")
@@ -390,39 +574,28 @@ enum NativeBrowserMenuAction: Int {
             Button("Copy address") { model.send(.copy, tab: tab.id) }.disabled(tab.url == nil)
             Divider(); Button("Close", role: .destructive) { model.send(.close, tab: tab.id) }
         }
-        .draggable(dragPayload("tab", tab.id, state))
-        .dropDestination(for: String.self) { items, _ in
-            guard let source = dragID(items, "tab", state),
-                  let from = state.tabs.firstIndex(where: { $0.id == source }),
-                  let to = state.tabs.firstIndex(where: { $0.id == tab.id }), from != to,
-                  state.tabs[from].space == tab.space, state.tabs[from].pinned == tab.pinned,
-                  state.tabs[from].group == tab.group else { return false }
-            model.send(.move, tab: source, offset: to - from)
-            return true
-        } isTargeted: { highlight(tab.id, $0) }
-        .overlay(alignment: .top) { dropIndicator(tab.id) }
+        .overlay { dropIndicator(.tab(tab.id)) }
     }
 
-    private func dragPayload(_ kind: String, _ id: String, _ state: ChromeState) -> String {
-        "\(state.sessionID ?? "")/\(kind)/\(id)"
+    private func dragRegion(_ item: SidebarDragItem) -> some View {
+        SidebarDragRegion(interaction: model.sidebarDrag, item: item)
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
     }
 
-    private func dragID(_ items: [String], _ kind: String, _ state: ChromeState) -> String? {
-        guard items.count == 1, let value = items.first, let session = state.sessionID,
-              model.state?.sessionID == session, model.state?.recovery == nil else { return nil }
-        let pieces = value.split(separator: "/", omittingEmptySubsequences: false)
-        guard pieces.count == 3, pieces[0] == session, pieces[1] == kind,
-              UUID(uuidString: String(pieces[2])) != nil else { return nil }
-        return String(pieces[2])
-    }
-
-    private func highlight(_ id: String, _ targeted: Bool) {
-        if targeted { dropTarget = id }
-        else if dropTarget == id { dropTarget = nil }
-    }
-
-    @ViewBuilder private func dropIndicator(_ id: String) -> some View {
-        if dropTarget == id { Rectangle().fill(Color.accentColor).frame(height: 2).allowsHitTesting(false) }
+    @ViewBuilder private func dropIndicator(_ item: SidebarDragItem) -> some View {
+        if let drop = model.sidebarDrop, drop.item == item {
+            switch drop.placement {
+            case .before, .after:
+                Rectangle().fill(Color.accentColor).frame(height: 2)
+                    .frame(maxHeight: .infinity, alignment: drop.placement == .after ? .bottom : .top)
+                    .allowsHitTesting(false)
+            case .onto:
+                RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius)
+                    .strokeBorder(Color.accentColor, lineWidth: 2)
+                    .allowsHitTesting(false)
+            }
+        }
     }
 
     @ViewBuilder private func savedLinks(_ state: ChromeState) -> some View {
@@ -436,11 +609,9 @@ enum NativeBrowserMenuAction: Int {
                         ForEach(ordinary.filter { $0.folder == folder }) { savedRow($0, state) }
                     } label: {
                         Label(folder, systemImage: "folder")
-                            .dropDestination(for: String.self) { items, _ in
-                                guard let raw = dragID(items, "link", state), let id = UUID(uuidString: raw) else { return false }
-                                return model.bookmarks.move(id, toFolder: folder)
-                            } isTargeted: { highlight("folder-" + folder, $0) }
-                            .overlay(alignment: .top) { dropIndicator("folder-" + folder) }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background { dragRegion(.folder(folder)) }
+                            .overlay { dropIndicator(.folder(folder)) }
                     }
                 }
             }
@@ -452,7 +623,7 @@ enum NativeBrowserMenuAction: Int {
         return Button { model.openBookmark(link.id) } label: {
             Group {
                 if link.favorite {
-                    Image(systemName: "globe")
+                    Text(link.title.prefix(2).uppercased())
                         .font(.system(size: 18, weight: .medium))
                         .frame(maxWidth: .infinity).frame(height: 44)
                         .background(.quaternary, in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
@@ -483,24 +654,8 @@ enum NativeBrowserMenuAction: Int {
                 }
                 Button("Remove", role: .destructive) { model.bookmarks.remove(link.id) }
             }
-            .draggable(dragPayload("link", id, state))
-            .dropDestination(for: String.self) { items, point in
-                guard let raw = dragID(items, "link", state), let source = UUID(uuidString: raw) else { return false }
-                if link.favorite, model.bookmarks.links.contains(where: { $0.id == source && $0.favorite }) {
-                    return model.bookmarks.reorderFavorite(source, onto: link.id)
-                }
-                return model.bookmarks.move(source, beside: link.id, after: link.favorite || point.y >= 10)
-            } isTargeted: { highlight(id, $0) }
-            .overlay(alignment: .top) {
-                if link.favorite {
-                    RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius)
-                        .strokeBorder(Color.accentColor, lineWidth: 2)
-                        .opacity(dropTarget == id ? 1 : 0)
-                        .allowsHitTesting(false)
-                } else {
-                    dropIndicator(id)
-                }
-            }
+            .background { dragRegion(.link(link.id)) }
+            .overlay { dropIndicator(.link(link.id)) }
     }
 
     private func content(_ state: ChromeState) -> some View {

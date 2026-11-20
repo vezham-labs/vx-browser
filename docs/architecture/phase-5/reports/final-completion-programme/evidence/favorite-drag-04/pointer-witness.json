@@ -1,0 +1,632 @@
+[
+  {
+    "tag": "Favorite second to first",
+    "from": [
+      179,
+      220
+    ],
+    "to": [
+      65,
+      220
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "10 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      }
+    ]
+  },
+  {
+    "tag": "Click new first tile",
+    "point": [
+      65,
+      220
+    ],
+    "firstNow": [
+      "\t\t\t\t18 row (selected) IANA-managed Reserved Domains",
+      "\t\t\t27 HTML content Description: IANA-managed Reserved Domains, URL: iana.org/domains/reserved"
+    ]
+  },
+  {
+    "tag": "Favorite first to second",
+    "from": [
+      65,
+      220
+    ],
+    "to": [
+      179,
+      220
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "10 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ]
+  },
+  {
+    "tag": "Reject drop into web content",
+    "from": [
+      179,
+      220
+    ],
+    "to": [
+      520,
+      220
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ]
+  },
+  {
+    "tag": "Pinned tab second to first",
+    "from": [
+      162,
+      554
+    ],
+    "to": [
+      162,
+      490
+    ],
+    "before": [
+      "\t\t\t\t17 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t18 row (selected) Value: Pinned, Description: Example Domain"
+    ],
+    "after": [
+      "\t\t\t\t17 row (selected) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t18 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains"
+    ]
+  },
+  {
+    "tag": "Ordinary bookmark second to before first",
+    "from": [
+      165,
+      554
+    ],
+    "to": [
+      165,
+      484
+    ],
+    "before": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t19 row (selectable) Bookmark Reading",
+      "\t\t\t\t20 row (selectable) Pinned",
+      "\t\t\t\t21 row (selected) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t22 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t23 row (selectable) Tabs"
+    ],
+    "after": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t19 row (selectable) Bookmark Reading",
+      "\t\t\t\t20 row (selectable) Pinned",
+      "\t\t\t\t21 row (selected) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t22 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t23 row (selectable) Tabs"
+    ]
+  },
+  {
+    "tag": "Bookmark to collapsed folder",
+    "from": [
+      165,
+      554
+    ],
+    "to": [
+      165,
+      617
+    ],
+    "before": [
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t19 row (selectable, collapsed) Description: Reading, Secondary Actions: Expand"
+    ],
+    "afterDrop": [
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable, collapsed) Description: Reading, Secondary Actions: Expand"
+    ],
+    "afterExpand": [
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+      "\t\t\t\t20 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie"
+    ]
+  },
+  {
+    "tag": "Reorder within Reading folder",
+    "from": [
+      180,
+      681
+    ],
+    "to": [
+      180,
+      611
+    ],
+    "before": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t20 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selected) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs"
+    ],
+    "after": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t20 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t21 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selected) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs"
+    ]
+  },
+  {
+    "tag": "Move folder child back after root bookmark",
+    "from": [
+      180,
+      681
+    ],
+    "to": [
+      180,
+      494
+    ],
+    "before": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t20 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t21 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selected) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs"
+    ],
+    "after": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selected) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs"
+    ]
+  },
+  {
+    "tag": "Promote ordinary bookmark onto Favorite tile",
+    "from": [
+      165,
+      554
+    ],
+    "to": [
+      179,
+      220
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "11 button Description: Favorite Bookmark Alpha, ID: saved-link-0B1D0055-0A7F-4804-A280-595D36EBF522, Help: Bookmark Alpha",
+        "url": "https://example.com/#alpha"
+      }
+    ]
+  },
+  {
+    "tag": "Move newly promoted Favorite into Reading folder",
+    "from": [
+      293,
+      220
+    ],
+    "to": [
+      165,
+      553
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "11 button Description: Favorite Bookmark Alpha, ID: saved-link-0B1D0055-0A7F-4804-A280-595D36EBF522, Help: Bookmark Alpha",
+        "url": "https://example.com/#alpha"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ],
+    "sidebarAfter": [
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+      "\t\t\t\t20 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie"
+    ]
+  },
+  {
+    "tag": "Promote Reading child onto Favorite tile",
+    "from": [
+      185,
+      618
+    ],
+    "to": [
+      179,
+      220
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "11 button Description: Favorite Bookmark Alpha, ID: saved-link-0B1D0055-0A7F-4804-A280-595D36EBF522, Help: Bookmark Alpha",
+        "url": "https://example.com/#alpha"
+      }
+    ]
+  },
+  {
+    "tag": "Demote Favorite onto ordinary bookmark row",
+    "from": [
+      293,
+      220
+    ],
+    "to": [
+      165,
+      494
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "11 button Description: Favorite Bookmark Alpha, ID: saved-link-0B1D0055-0A7F-4804-A280-595D36EBF522, Help: Bookmark Alpha",
+        "url": "https://example.com/#alpha"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ],
+    "sidebarAfter": [
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t19 row (selectable, expanded) Description: Reading, Secondary Actions: Collapse",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie"
+    ]
+  },
+  {
+    "tag": "Reorder two unpinned tabs",
+    "from": [
+      170,
+      1066
+    ],
+    "to": [
+      170,
+      1002
+    ],
+    "before": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t26 row (selectable) Example Domain",
+      "\t\t\t\t27 row (selected) IANA-managed Reserved Domains"
+    ],
+    "after": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t26 row (selected) IANA-managed Reserved Domains",
+      "\t\t\t\t27 row (selectable) Example Domain"
+    ]
+  },
+  {
+    "tag": "Reject unpinned tab drop onto pin",
+    "from": [
+      170,
+      1002
+    ],
+    "to": [
+      170,
+      809
+    ],
+    "before": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t26 row (selected) IANA-managed Reserved Domains",
+      "\t\t\t\t27 row (selectable) Example Domain"
+    ],
+    "after": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t26 row (selected) IANA-managed Reserved Domains",
+      "\t\t\t\t27 row (selectable) Example Domain"
+    ]
+  },
+  {
+    "tag": "Reorder within the same tab group",
+    "from": [
+      160,
+      1130
+    ],
+    "to": [
+      160,
+      1066
+    ],
+    "before": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t27 row (selected) IANA-managed Reserved Domains",
+      "\t\t\t\t28 row (selectable) Example Domain"
+    ],
+    "after": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t27 row (selectable) Example Domain",
+      "\t\t\t\t28 row (selected) IANA-managed Reserved Domains"
+    ]
+  },
+  {
+    "tag": "Reject grouped tab drop onto pinned section",
+    "from": [
+      160,
+      1066
+    ],
+    "to": [
+      160,
+      810
+    ],
+    "before": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t27 row (selectable) Example Domain",
+      "\t\t\t\t28 row (selected) IANA-managed Reserved Domains"
+    ],
+    "after": [
+      "\t\t\t\t16 row (selectable) Bookmarks",
+      "\t\t\t\t17 row (selectable) Bookmark Bookmark Bravo",
+      "\t\t\t\t18 row (selectable) Bookmark Bookmark Alpha",
+      "\t\t\t\t21 row (selectable) Bookmark Folder Charlie",
+      "\t\t\t\t22 row (selectable) Pinned",
+      "\t\t\t\t23 row (selectable) Value: Pinned, Description: Example Domain",
+      "\t\t\t\t24 row (selectable) Value: Pinned, Description: IANA-managed Reserved Domains",
+      "\t\t\t\t25 row (selectable) Tabs",
+      "\t\t\t\t27 row (selectable) Example Domain",
+      "\t\t\t\t28 row (selected) IANA-managed Reserved Domains"
+    ]
+  },
+  {
+    "tag": "Sidebar divider resize",
+    "from": [
+      469,
+      300
+    ],
+    "to": [
+      521,
+      300
+    ],
+    "before": "\t\t34 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 236 points, Secondary Actions: Increment, Decrement",
+    "after": "\t\t34 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 262 points, Secondary Actions: Increment, Decrement"
+  },
+  {
+    "tag": "Resize native split divider",
+    "from": [
+      1445,
+      740
+    ],
+    "to": [
+      1545,
+      740
+    ],
+    "before": "\t\t168 splitter (disabled, settable, float) 450.5",
+    "after": "\t\t168 splitter (disabled, settable, float) 500.5"
+  },
+  {
+    "tag": "Set nonoriginal Favorite order before relaunch",
+    "from": [
+      179,
+      220
+    ],
+    "to": [
+      65,
+      220
+    ],
+    "before": [
+      {
+        "control": "9 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      },
+      {
+        "control": "10 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      }
+    ],
+    "after": [
+      {
+        "control": "9 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "10 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      }
+    ]
+  },
+  {
+    "tag": "Ordinary quit and installed-app relaunch",
+    "beforeQuit": [
+      {
+        "control": "9 button Description: Favorite IANA-managed Reserved Domains, ID: saved-link-2844E610-C140-4C24-9B93-105327509A10, Help: IANA-managed Reserved Domains",
+        "url": "https://www.iana.org/domains/reserved"
+      },
+      {
+        "control": "10 button Description: Favorite Example Domain, ID: saved-link-8FD6F79A-25D4-4D3E-B79B-1F45BF9B5D16, Help: Example Domain",
+        "url": "https://example.com/"
+      }
+    ],
+    "inactive": [
+      "\t\t18 text Private browsing is inactive Protected profiles unavailable",
+      "\t\t20 text V Your next idea. A fresh private workspace. Nothing to restore."
+    ],
+    "favoritesAfterStart": [],
+    "sidebarAfterStart": [
+      "\t\t\t\t13 row (selectable) Tabs",
+      "\t\t\t\t14 row (selected) New tab",
+      "\t\t19 text Private · memory only Protected profiles unavailable"
+    ]
+  },
+  {
+    "tag": "Matched native captures",
+    "arcVersion": "1.172.1 (90370)",
+    "arc": [
+      2880,
+      1648
+    ],
+    "vezham": [
+      2880,
+      1648
+    ],
+    "operation": "Window > Fill",
+    "page": "https://example.com/",
+    "appearance": "dark",
+    "account": "incognito/private"
+  }
+]

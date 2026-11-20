@@ -1,0 +1,9 @@
+{
+  "height" : 1648,
+  "meanAbsoluteRGBChannelDifference" : 9.246696121561488,
+  "method" : "Native-size JPEG input, decoded as sRGB. 50\/50 channel average and absolute RGB difference. No crop or resize.",
+  "pixels" : 4746240,
+  "pixelsWithAnyChannelDifferenceAbove8" : 1338342,
+  "pixelsWithAnyRGBDifference" : 1577895,
+  "width" : 2880
+}

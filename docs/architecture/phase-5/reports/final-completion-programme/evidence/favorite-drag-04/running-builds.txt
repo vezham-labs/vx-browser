@@ -1,0 +1,5 @@
+68358 /Applications/Arc 2.app/Contents/MacOS/Arc
+70929 /Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app/Contents/MacOS/VezhamBrowser
+531a6565f60e7c25322a167141cd7256720c12a150937bcab3166b32137e7b19  /Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app/Contents/MacOS/VezhamBrowser
+/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app: valid on disk
+/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app: satisfies its Designated Requirement

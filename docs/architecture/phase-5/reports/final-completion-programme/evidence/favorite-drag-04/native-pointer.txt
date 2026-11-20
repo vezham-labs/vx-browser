@@ -1,0 +1,11 @@
+event=1 point=(30.0, 744.0) eventWindow=true anchors=1 source=false modifiers=0
+candidate=tab visibleRect=(-16.0, -8.0, 220.0, 32.0) frame=(0.0, 0.0, 178.0, 16.0) local=(6.0, 177.0)
+event=2 point=(30.0, 744.0) eventWindow=true anchors=1 source=false modifiers=0
+event=1 point=(89.5, 650.0) eventWindow=true anchors=3 source=false modifiers=0
+candidate=link visibleRect=(-64.5, -628.0, 1180.0, 760.0) frame=(0.0, 0.0, 50.5, 44.0) local=(25.0, 22.0)
+event=6 point=(32.5, 650.0) eventWindow=true anchors=3 source=true modifiers=0
+candidate=link visibleRect=(-64.5, -628.0, 1180.0, 760.0) frame=(0.0, 0.0, 50.5, 44.0) local=(-32.0, 22.0)
+validDrop=false dragging=true
+event=2 point=(32.5, 650.0) eventWindow=true anchors=3 source=true modifiers=0
+candidate=link visibleRect=(-64.5, -628.0, 1180.0, 760.0) frame=(0.0, 0.0, 50.5, 44.0) local=(-32.0, 22.0)
+validDrop=false dragging=true

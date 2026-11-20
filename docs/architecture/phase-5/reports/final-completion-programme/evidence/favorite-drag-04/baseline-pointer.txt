@@ -1,0 +1,18 @@
+pointer type=1 window=(30,744) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=2 window=(30,744) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=1 window=(127,701) frame=(130,94,1180,760) scale=2 hit=AppKitTextField
+pointer type=2 window=(127,701) frame=(130,94,1180,760) scale=2 hit=_SystemTextFieldFieldEditor
+pointer type=1 window=(148,385) frame=(130,94,1180,760) scale=2 hit=SwiftUIOutlineListView
+pointer type=2 window=(148,385) frame=(130,94,1180,760) scale=2 hit=SwiftUIOutlineListView
+pointer type=1 window=(30,744) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=2 window=(30,744) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=1 window=(44,705) frame=(130,94,1180,760) scale=2 hit=AppKitTextField
+pointer type=6 window=(16,705) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=2 window=(16,705) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=1 window=(90,650) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=6 window=(90,650) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+pointer type=6 window=(32,650) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+payload kind=link hasSession=1
+pointer type=2 window=(32,650) frame=(130,94,1180,760) scale=2 hit=NSHostingView<NativeBrowserChrome>
+target entered=1
+target entered=0
