@@ -270,6 +270,18 @@ final class ApplicationDelegate: NSObject, NSApplicationDelegate, NSMenuItemVali
             browserItem("Focus Address", .focusAddress, key: "l"),
             browserItem("Command Bar…", .commandBar, key: "k")
         ])
+        let previousTab = browserItem("Previous Tab", .previousTab, key: "[")
+        let nextTab = browserItem("Next Tab", .nextTab, key: "]")
+        previousTab.keyEquivalentModifierMask = [.command, .shift]
+        nextTab.keyEquivalentModifierMask = [.command, .shift]
+        _ = submenu("Tabs", [previousTab, nextTab, .separator(),
+                             browserItem("Duplicate Tab", .duplicateTab),
+                             browserItem("Toggle Pin", .togglePin)])
+        let previousSpace = browserItem("Previous Space", .previousSpace, key: "[")
+        let nextSpace = browserItem("Next Space", .nextSpace, key: "]")
+        previousSpace.keyEquivalentModifierMask = [.command, .option]
+        nextSpace.keyEquivalentModifierMask = [.command, .option]
+        _ = submenu("Spaces", [previousSpace, nextSpace])
         _ = submenu("Navigation", [
             browserItem("Back", .back, key: "["),
             browserItem("Forward", .forward, key: "]"),

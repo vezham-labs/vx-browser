@@ -1,0 +1,24 @@
+{
+  "first": "Window: \"\", App: Vezham Browser.\n0 sheet Secondary Actions: Raise\n\t1 container\n\t\t2 image Description: Search, ID: magnifyingglass\n\t\t3 text field (settable) Description: Search tabs, Spaces, actions or the web, Value: Bravo, Placeholder: Search or enter an address\n\t\t4 scroll area\n\t\t\t5 button (selected) Open Favorite Navigation Bravo\n\t\t\t6 button Open or search in new tab\n\t\t7 button Cancel\n8 menu bar\n\t9 Vezham Browser\n\t10 File\n\t11 Edit\n\t12 View\n\t13 Navigation\n\t14 Bookmarks\n\t15 Window\n\t16 Help\n\nThe focused UI element is 3 text field (settable) Description: Search tabs, Spaces, actions or the web, Value: Bravo, Placeholder: Search or enter an address",
+  "second": "Window: \"\", App: Vezham Browser.\n0 sheet Secondary Actions: Raise\n\t1 container\n\t\t2 image Description: Search, ID: magnifyingglass\n\t\t3 text field (settable) Description: Search tabs, Spaces, actions or the web, Value: charlie.html, Placeholder: Search or enter an address\n\t\t4 scroll area\n\t\t\t5 button (selected) Switch to Navigation Charlie\n\t\t\t6 button Open Bookmark Navigation Charlie\n\t\t\t7 button Open or search in new tab\n\t\t8 button Cancel\n9 menu bar\n\t10 Vezham Browser\n\t11 File\n\t12 Edit\n\t13 View\n\t14 Navigation\n\t15 Bookmarks\n\t16 Window\n\t17 Help\n\nThe focused UI element is 3 text field (settable) Description: Search tabs, Spaces, actions or the web, Value: charlie.html, Placeholder: Search or enter an address",
+  "ob": [
+    "\t\t\t9 button Description: Favorite Navigation Bravo, ID: saved-link-EDBC299D-2C24-4B85-B269-4EFFDB4BA8D7, Help: Navigation Bravo",
+    "\t\t\t10 button Description: Favorite Navigation Delta, ID: saved-link-CDC743E7-3D53-4FAD-8ABC-830B2B225F8A, Help: Navigation Delta",
+    "\t\t\t11 button Description: Favorite Visual fixture, ID: saved-link-6FA1A2EF-3F5E-4834-9393-C4417C55A5B2, Help: Visual fixture"
+  ],
+  "oa": [
+    "\t\t\t9 button Description: Favorite Visual fixture, ID: saved-link-6FA1A2EF-3F5E-4834-9393-C4417C55A5B2, Help: Visual fixture",
+    "\t\t\t10 button Description: Favorite Navigation Bravo, ID: saved-link-EDBC299D-2C24-4B85-B269-4EFFDB4BA8D7, Help: Navigation Bravo",
+    "\t\t\t11 button Description: Favorite Navigation Delta, ID: saved-link-CDC743E7-3D53-4FAD-8ABC-830B2B225F8A, Help: Navigation Delta"
+  ],
+  "rev": [
+    "\t\t\t9 button Description: Favorite Navigation Bravo, ID: saved-link-EDBC299D-2C24-4B85-B269-4EFFDB4BA8D7, Help: Navigation Bravo",
+    "\t\t\t10 button Description: Favorite Navigation Delta, ID: saved-link-CDC743E7-3D53-4FAD-8ABC-830B2B225F8A, Help: Navigation Delta",
+    "\t\t\t11 button Description: Favorite Visual fixture, ID: saved-link-6FA1A2EF-3F5E-4834-9393-C4417C55A5B2, Help: Visual fixture"
+  ],
+  "rep": [
+    "\t\t\t9 button Description: Favorite Visual fixture, ID: saved-link-6FA1A2EF-3F5E-4834-9393-C4417C55A5B2, Help: Visual fixture",
+    "\t\t\t10 button Description: Favorite Navigation Bravo, ID: saved-link-EDBC299D-2C24-4B85-B269-4EFFDB4BA8D7, Help: Navigation Bravo",
+    "\t\t\t11 button Description: Favorite Navigation Delta, ID: saved-link-CDC743E7-3D53-4FAD-8ABC-830B2B225F8A, Help: Navigation Delta"
+  ]
+}

@@ -1,0 +1,1 @@
+No process running at the installed executable path after Command-Q and before relaunch.

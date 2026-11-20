@@ -106,3 +106,17 @@ Audited UI Preview 0.1.0 (1) at base `35a8553` was installed and exercised again
 | Entry, command bar and split | PARTIALLY VERIFIED | Installed entry, command, Mini and split captures plus functional resize and Space switching. Arc used a floating command entry and Vezham used a native sheet. [Feature captures](evidence/20261120T114710Z-visual-remediation/feature-captures/) · [Installed witnesses](evidence/20261120T114710Z-visual-remediation/installed-ui-witness.json) |
 | Pixel parity | FAIL for exact match, measurable improvement | Same reference, no masking, exact RGB mismatch 26.57% → 26.34%, mean error 5.60 → 3.29, SSIM 0.91048 → 0.94718. [Overlay](evidence/20261120T114710Z-visual-remediation/final/overlay.png) · [Difference](evidence/20261120T114710Z-visual-remediation/final/pixel-difference.png) · [Metrics](evidence/20261120T114710Z-visual-remediation/final/metrics.json) |
 | Protected persistence and signing | BLOCKED for production | Ordinary preview relaunch cleared Favorites. Core, storage and both native suites passed in their development scope. WS-F7 durable qualification, Developer ID and notarization remain open. [Regression results](evidence/20261120T114710Z-visual-remediation/report.md#qualification) |
+
+## Installed floating command bar and pointer replay — 20 November 2026
+
+[Installed qualification and matched visual results](evidence/20261120-command-retry/report.md) · [Item-level coverage](observable-coverage.md)
+
+Private saved-link search, native keyboard focus, arrows, Return, Escape, outside dismissal and tested sidebar gestures passed on the installed Preview. Expanded sidebar, collapsed sidebar and floating command states now have matched Arc captures, overlays and differences. Durable workspace restoration and release signing remain blocked.
+
+## Spaces, session search and responsive command panel — 20 November 2026
+
+Space ordering and cycling, private search choices, tab menu actions, visible Favorite reorder and private reset have installed evidence. Five matched states now include the narrow window and typed narrow command bar. Full product parity remains incomplete. [Results and evidence](evidence/20261120-spaces-search/report.md)
+
+## Arc 2 installed drag and navigation retry
+
+Four matched visual states, pointer acceptance, private reset, address-routing validation and the latest build identity are recorded in the [installed qualification](evidence/20261120-address-routing/report.md). Durable restoration and pixel parity remain open.

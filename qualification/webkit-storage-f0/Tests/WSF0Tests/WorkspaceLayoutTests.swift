@@ -4,6 +4,29 @@ import Testing
 
 @Suite("WS-F6 workspace layout")
 struct WorkspaceLayoutTests {
+    @Test func reorderSpacePreservesSelectionAndContents() throws {
+        var layout = WorkspaceLayout()
+        let first = layout.activeSpace.id
+        try layout.apply(.createSpace("Reading"))
+        let reading = layout.activeSpace.id
+        let tab = WorkspaceTabID.fresh()
+        try layout.apply(.addTab(tab))
+        let revision = layout.revision
+        try layout.apply(.reorderSpace(reading, -1))
+        #expect(layout.activeLayout.spaces.map(\.id) == [reading, first])
+        #expect(layout.activeSpace.id == reading && layout.activeSpace.activeTabId == tab)
+        #expect(layout.revision == revision + 1)
+        let moved = layout
+        try layout.apply(.reorderSpace(reading, -1))
+        #expect(throws: WorkspaceLayout.Error.invalid) { try layout.apply(.reorderSpace(.fresh(), 1)) }
+        #expect(throws: WorkspaceLayout.Error.invalid) { try layout.apply(.reorderSpace(first, Int.max)) }
+        #expect(layout == moved)
+        #expect(try WorkspaceLayout.decode(layout.encoded()) == moved)
+        try layout.apply(.reorderSpace(first, -1))
+        #expect(layout.activeLayout.spaces.map(\.id) == [first, reading])
+        #expect(layout.activeSpace.activeTabId == tab)
+    }
+
     @Test func emptyAndSingleSlotRoundTrip() throws {
         var layout = WorkspaceLayout()
         let workspace = layout.activeWorkspace.id

@@ -1,0 +1,78 @@
+Window: "Vezham Browser", App: Vezham Browser.
+0 standard window Vezham Browser, Secondary Actions: Raise
+	1 container
+		2 button Description: Hide sidebar, ID: sidebar.left
+		3 button (disabled) Description: Back, ID: chevron.left
+		4 button (disabled) Description: Forward, ID: chevron.right
+		5 button (disabled) Description: Reload, ID: arrow.clockwise
+		6 image (disabled) Description: Connection: unknown, ID: magnifyingglass
+		7 text field (disabled) Description: Address and search, Placeholder: Search or enter an address, ID: native-address
+		8 pop up button (disabled) Description: Space, Space, Value: Personal
+		9 menu button (disabled) More
+		10 button Start private session
+		11 scroll area
+			12 list Description: Sidebar, ID: native-tabs
+				13 row (selectable) Tabs
+		14 button (disabled) End private session
+		15 button Description: Command bar, ID: command
+		16 button (disabled) Description: Bookmarks, ID: bookmark
+		17 button Description: Settings, ID: gearshape
+		18 text Private browsing is inactive Protected profiles unavailable
+		19 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 288 points, Secondary Actions: Increment, Decrement
+		20 text Your next idea. A fresh private workspace. Nothing to restore.
+		21 button Search or open a website
+		22 button Start private session
+	23 close button
+	24 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	25 minimize button
+26 menu bar
+	27 Vezham Browser
+	28 File
+	29 Edit
+	30 View
+	31 Navigation
+	32 Bookmarks
+	33 Window
+	34 Help
+
+The focused UI element is 0 standard window Vezham Browser, Secondary Actions: Raise
+
+Window: "Vezham Browser", App: Vezham Browser.
+0 standard window Vezham Browser, Secondary Actions: Raise
+	1 container
+		2 button Description: Hide sidebar, ID: sidebar.left
+		3 button (disabled) Description: Back, ID: chevron.left
+		4 button (disabled) Description: Forward, ID: chevron.right
+		5 button (disabled) Description: Reload, ID: arrow.clockwise
+		6 image Description: Connection: unknown, ID: magnifyingglass
+		7 text field (settable) Description: Address and search, Placeholder: Search or enter an address, ID: native-address
+		8 pop up button Description: Space, Space, Value: Personal
+		9 menu button More
+		10 button New tab
+		11 scroll area
+			12 list Description: Sidebar, ID: native-tabs
+				13 row (selectable) Tabs
+				14 row (selected) New tab
+Close New tab
+		15 button End private session
+		16 button Description: Command bar, ID: command
+		17 button Description: Bookmarks, ID: bookmark
+		18 button Description: Settings, ID: gearshape
+		19 text Private · memory only Protected profiles unavailable
+		20 unknown Description: Sidebar width, Help: Drag to resize the sidebar, Details: 288 points, Secondary Actions: Increment, Decrement
+		21 text Where to? Search or enter an address to start browsing.
+		22 button Search or open a website
+	23 close button
+	24 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	25 minimize button
+26 menu bar
+	27 Vezham Browser
+	28 File
+	29 Edit
+	30 View
+	31 Navigation
+	32 Bookmarks
+	33 Window
+	34 Help
+
+The focused UI element is 7 text field (settable) Description: Address and search, Placeholder: Search or enter an address, ID: native-address

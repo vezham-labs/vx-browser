@@ -9,6 +9,7 @@ enum BrowserChromeMetrics {
     static let sidebarDefault: CGFloat = 288
     static let sidebarRange: ClosedRange<CGFloat> = 180...352
     static let sidebarHandle: CGFloat = 8
+    static let paletteWidth: CGFloat = 760
     static let dialogWidth: CGFloat = 640
     static let contentInset: CGFloat = 8
     static let contentRadius: CGFloat = 12
@@ -24,7 +25,7 @@ enum BrowserChromeMetrics {
 }
 
 enum NativeBrowserMenuAction: Int {
-    case newTab, commandBar, focusAddress, sidebar, back, forward, reload, stop, copyAddress, openMini, bookmarks, settings, welcome
+    case newTab, commandBar, focusAddress, sidebar, back, forward, reload, stop, copyAddress, openMini, bookmarks, settings, welcome, nextSpace, previousSpace, nextTab, previousTab, duplicateTab, togglePin
 }
 
 /// Native presentation state only. All commands still execute under the controller's
@@ -34,7 +35,10 @@ enum NativeBrowserMenuAction: Int {
     @Published var message: String?
     @Published var preview: ChromeMiniPreview?
     @Published var focusAddress = 0
-    @Published var commands = false
+    @Published var commands = false {
+        didSet { if commands != oldValue { commandVisibilityChanged?(commands) } }
+    }
+    var commandVisibilityChanged: ((Bool) -> Void)?
     @Published var settings = false
     @Published var sidebarVisible = true {
         didSet { geometryChanged?() }
@@ -75,6 +79,7 @@ enum NativeBrowserMenuAction: Int {
         onboarding = false
     }
     @Published var showsWebContent = false
+    @Published var searchProvider = NativeNavigationInput.SearchProvider.duckDuckGo
     @Published var managesBookmarks = false
     @Published var bookmarks = PrivateBookmarks()
     @Published var sidebarDrop: SidebarDrop?
@@ -106,7 +111,7 @@ enum NativeBrowserMenuAction: Int {
         }
     }
     func navigate(_ input: String, inNewTab: Bool = false) {
-        guard let url = NativeNavigationInput.destination(input) else {
+        guard let url = NativeNavigationInput.destination(input, provider: searchProvider) else {
             message = "Enter a supported address or search query."; return
         }
         if inNewTab || state?.selected == nil {
@@ -346,7 +351,6 @@ private struct ChromeIconButtonStyle: ButtonStyle {
     @State private var address = ""
     @State private var sidebarDragOrigin: CGFloat?
     @State private var showWelcomeAfterSettings = false
-    @State private var showSettingsAfterCommands = false
     @State private var bookmarkFilter = ""
     @State private var bookmarkDraft: NativeChromeModel.Bookmark?
     @State private var editor: EditRequest?
@@ -389,14 +393,6 @@ private struct ChromeIconButtonStyle: ButtonStyle {
                     }
                 }
                 .background(shellBackground)
-                .sheet(isPresented: $model.commands, onDismiss: {
-                    if showSettingsAfterCommands {
-                        showSettingsAfterCommands = false
-                        model.settings = true
-                    }
-                }) {
-                    NativeCommandPalette(model: model, openSettings: { showSettingsAfterCommands = true })
-                }
                 .sheet(isPresented: $model.onboarding) { welcomeSheet(state) }
                 .sheet(isPresented: $model.settings, onDismiss: {
                     if showWelcomeAfterSettings {
@@ -542,13 +538,19 @@ private struct ChromeIconButtonStyle: ButtonStyle {
                     Button("New workspace…") { edit("New workspace", .workspaceCreate) }
                     Button("Rename workspace…") { edit("Rename workspace", .workspaceRename, state.activeWorkspace, state.workspaces.first { $0.id == state.activeWorkspace }?.name ?? "") }
                     Button("Move workspace earlier") { model.send(.workspaceMove, target: state.activeWorkspace, offset: -1) }
+                        .disabled(state.workspaces.first?.id == state.activeWorkspace)
                     Button("Move workspace later") { model.send(.workspaceMove, target: state.activeWorkspace, offset: 1) }
+                        .disabled(state.workspaces.last?.id == state.activeWorkspace)
                     Button("Delete empty workspace…", role: .destructive) { deletion = DeleteRequest(title: "Delete this empty workspace?", kind: .workspaceDelete, target: state.activeWorkspace) }
                         .disabled(state.workspaces.count < 2 || state.workspaces.first { $0.id == state.activeWorkspace }?.empty != true)
                     }
                     Divider()
                     Button("New Space…") { edit("New Space", .spaceCreate) }
                     Button("Rename Space…") { edit("Rename Space", .spaceRename, state.activeSpace, state.spaces.first { $0.id == state.activeSpace }?.name ?? "") }
+                    Button("Move Space earlier") { model.send(.spaceMove, target: state.activeSpace, offset: -1) }
+                        .disabled(state.spaces.first?.id == state.activeSpace)
+                    Button("Move Space later") { model.send(.spaceMove, target: state.activeSpace, offset: 1) }
+                        .disabled(state.spaces.last?.id == state.activeSpace)
                     Button("Delete empty Space…", role: .destructive) { deletion = DeleteRequest(title: "Delete this empty Space?", kind: .spaceDelete, target: state.activeSpace) }
                         .disabled(state.spaces.count < 2 || state.tabs.contains { $0.space == state.activeSpace })
                     Divider(); Button("New group…") { edit("New group", .groupCreate) }
@@ -809,7 +811,7 @@ private struct ChromeIconButtonStyle: ButtonStyle {
             Label("Use the sidebar to pin, group and move tabs between Spaces.", systemImage: "sidebar.left")
             Label("Press ⌘T to search tabs, Spaces and actions, or open a new address.", systemImage: "command")
             Label("Private tabs and bookmarks clear when you end the session.", systemImage: "hand.raised")
-            Text("Searches use DuckDuckGo. Protected profiles and workspace restoration are unavailable.")
+            Text("New private sessions use DuckDuckGo. Protected profiles and workspace restoration are unavailable.")
                 .foregroundStyle(.secondary)
             appearancePicker(state)
             HStack {
@@ -879,7 +881,12 @@ private struct ChromeIconButtonStyle: ButtonStyle {
         VStack(alignment: .leading, spacing: 22) {
             Text("Settings").font(.title2.bold())
             appearancePicker(state)
-            Text("Search provider: DuckDuckGo").foregroundStyle(.secondary)
+            Picker("Private session search", selection: $model.searchProvider) {
+                ForEach(NativeNavigationInput.SearchProvider.allCases, id: \.self) { provider in
+                    Text(provider.rawValue).tag(provider)
+                }
+            }.disabled(state.session == "inactive" || state.recovery != nil)
+            Text("The search choice resets to DuckDuckGo when this private session ends.").foregroundStyle(.secondary)
             Button("Show welcome") { showWelcomeAfterSettings = true; model.settings = false }
             Text("Private workspaces and temporary bookmarks clear when the session ends. Protected persistent profiles, history and downloads remain unavailable.").foregroundStyle(.secondary)
             Button("Done", role: .cancel) { model.settings = false }
@@ -887,12 +894,72 @@ private struct ChromeIconButtonStyle: ButtonStyle {
     }
 }
 
-@MainActor private struct NativeCommandPalette: View {
+/// The palette lives in its own hosting view above WebKit. AppKit owns the
+/// field editor so activation from a web page transfers keyboard focus directly.
+@MainActor private struct CommandSearchField: NSViewRepresentable {
+    @Binding var query: String
+    var move: (Int) -> Void
+    var submit: () -> Void
+    var cancel: () -> Void
+
+    final class Field: NSTextField {
+        override func viewDidMoveToWindow() {
+            super.viewDidMoveToWindow()
+            guard window != nil else { return }
+            Task { @MainActor [weak self] in
+                guard let self, let window = self.window else { return }
+                window.makeFirstResponder(self)
+            }
+        }
+    }
+
+    final class Coordinator: NSObject, NSTextFieldDelegate {
+        var parent: CommandSearchField
+        init(_ parent: CommandSearchField) { self.parent = parent }
+
+        func controlTextDidChange(_ notification: Notification) {
+            if let field = notification.object as? NSTextField { parent.query = field.stringValue }
+        }
+
+        func control(_ control: NSControl, textView: NSTextView, doCommandBy selector: Selector) -> Bool {
+            guard !textView.hasMarkedText() else { return false }
+            switch selector {
+            case #selector(NSResponder.moveUp(_:)): parent.move(-1)
+            case #selector(NSResponder.moveDown(_:)): parent.move(1)
+            case #selector(NSResponder.insertNewline(_:)): parent.submit()
+            case #selector(NSResponder.cancelOperation(_:)): parent.cancel()
+            default: return false
+            }
+            return true
+        }
+    }
+
+    func makeCoordinator() -> Coordinator { Coordinator(self) }
+
+    func makeNSView(context: Context) -> Field {
+        let field = Field()
+        field.placeholderString = "Search or enter an address"
+        field.setAccessibilityLabel("Search tabs, Spaces, Favorites, Bookmarks, actions or the web")
+        field.isBordered = false
+        field.drawsBackground = false
+        field.focusRingType = .none
+        field.font = .systemFont(ofSize: 16, weight: .medium)
+        field.usesSingleLineMode = true
+        field.delegate = context.coordinator
+        return field
+    }
+
+    func updateNSView(_ field: Field, context: Context) {
+        context.coordinator.parent = self
+        if field.stringValue != query { field.stringValue = query }
+    }
+}
+
+@MainActor struct NativeCommandPalette: View {
     @ObservedObject var model: NativeChromeModel
-    let openSettings: () -> Void
+    @Environment(\.colorScheme) private var colorScheme
     @State private var query = ""
     @State private var commandSelection = 0
-    @FocusState private var commandFocused: Bool
 
     private struct PaletteItem: Identifiable {
         let id: String
@@ -917,6 +984,17 @@ private struct ChromeIconButtonStyle: ButtonStyle {
                         model.send(.spaceSwitch, target: space.id)
                     })
                 }
+                for bookmark in model.bookmarks.links where
+                    matches(bookmark.title) || matches(bookmark.url) || matches(bookmark.folder) {
+                    let action = bookmark.favorite ? "Open Favorite" : "Open Bookmark"
+                    let label = bookmark.folder.isEmpty
+                        ? "\(action) \(bookmark.title)"
+                        : "\(action) \(bookmark.title) · \(bookmark.folder)"
+                    items.append(PaletteItem(id: "saved-link-\(bookmark.id.uuidString)", label: label,
+                                             symbol: bookmark.favorite ? "star.fill" : "bookmark.fill") {
+                        model.openBookmark(bookmark.id)
+                    })
+                }
             }
         }
         let actions = [
@@ -936,14 +1014,14 @@ private struct ChromeIconButtonStyle: ButtonStyle {
                 ]
                 items += actions.filter { matches($0.label) }
             }
-            if !needle.isEmpty, NativeNavigationInput.destination(needle) != nil {
-                items.append(PaletteItem(id: "navigate", label: "Open or search in new tab", symbol: "magnifyingglass") {
-                    model.navigate(needle, inNewTab: true)
-                })
-            }
         }
         if !state.mini && matches("Settings") {
-            items.append(PaletteItem(id: "settings", label: "Settings", symbol: "gearshape", perform: openSettings))
+            items.append(PaletteItem(id: "settings", label: "Settings", symbol: "gearshape", perform: { model.settings = true }))
+        }
+        if state.recovery == nil && !state.mini && !needle.isEmpty, NativeNavigationInput.destination(needle, provider: model.searchProvider) != nil {
+            items.append(PaletteItem(id: "navigate", label: "Open or search in new tab", symbol: "magnifyingglass") {
+                model.navigate(needle, inNewTab: true)
+            })
         }
         return items
     }
@@ -953,21 +1031,16 @@ private struct ChromeIconButtonStyle: ButtonStyle {
         return VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 10) {
                 Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
-                TextField("Search or enter an address", text: $query)
-                .accessibilityLabel("Search tabs, Spaces, actions or the web")
-                .textFieldStyle(.plain).font(.system(size: 16, weight: .medium))
-                .focused($commandFocused)
-                .onKeyPress(.upArrow) {
-                    commandSelection = max(0, commandSelection - 1)
-                    return .handled
-                }
-                .onKeyPress(.downArrow) {
-                    commandSelection = min(max(0, items.count - 1), commandSelection + 1)
-                    return .handled
-                }
-                .onSubmit {
+                CommandSearchField(query: $query, move: { step in
+                    commandSelection = min(max(0, items.count - 1), max(0, commandSelection + step))
+                }, submit: {
                     if items.indices.contains(commandSelection) { runPaletteItem(items[commandSelection]) }
-                }
+                }, cancel: { model.commands = false })
+                Button { model.commands = false } label: { Image(systemName: "xmark.circle") }
+                    .buttonStyle(.plain)
+                    .foregroundStyle(.secondary)
+                    .accessibilityLabel("Dismiss command bar")
+                    .help("Dismiss (Escape)")
             }.padding(.horizontal, 10).frame(height: 44)
             Divider()
             ScrollViewReader { scroll in
@@ -984,8 +1057,9 @@ private struct ChromeIconButtonStyle: ButtonStyle {
                                     }
                                 }
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.horizontal, 10).frame(height: 40)
-                                    .background(index == commandSelection ? Color.accentColor.opacity(0.16) : .clear,
+                                    .padding(.horizontal, 10).frame(height: 44)
+                                    .foregroundStyle(index == commandSelection ? Color.white : Color.primary)
+                                    .background(index == commandSelection ? Color.indigo : .clear,
                                                 in: RoundedRectangle(cornerRadius: BrowserChromeMetrics.controlRadius))
                                     .contentShape(Rectangle())
                             }
@@ -1000,11 +1074,14 @@ private struct ChromeIconButtonStyle: ButtonStyle {
                 }
             }.frame(height: 240)
             if items.isEmpty { Text("No matching commands").foregroundStyle(.secondary) }
-            Button("Cancel", role: .cancel) { model.commands = false }
         }.padding(10)
-            .frame(width: BrowserChromeMetrics.dialogWidth)
+            .frame(maxWidth: BrowserChromeMetrics.paletteWidth)
+            .background(colorScheme == .dark ? Color(red: 0.096, green: 0.097, blue: 0.11) : Color(nsColor: .windowBackgroundColor),
+                        in: RoundedRectangle(cornerRadius: 12))
+            .overlay { RoundedRectangle(cornerRadius: 12).strokeBorder(.primary.opacity(0.14)) }
+            .shadow(color: .black.opacity(0.36), radius: 20, y: 6)
+            .padding(20)
             .onExitCommand { model.commands = false }
-            .onAppear { query = ""; commandSelection = 0; commandFocused = true }
             .onChange(of: query) { _, _ in commandSelection = 0 }
             .onChange(of: items.count) { _, count in commandSelection = min(commandSelection, max(0, count - 1)) }
     }

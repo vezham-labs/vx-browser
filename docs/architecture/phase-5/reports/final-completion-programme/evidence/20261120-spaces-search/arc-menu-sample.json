@@ -1,0 +1,33 @@
+{
+  "Tabs": [
+    "New Tab…",
+    "Pin Tab"
+  ],
+  "View": [
+    "Show Sidebar",
+    "Zoom In",
+    "Zoom Out"
+  ],
+  "File": [
+    "New Tab…",
+    "New Window",
+    "New Incognito Window",
+    "Save Page As",
+    "Print"
+  ],
+  "Edit": [
+    "Undo",
+    "Redo",
+    "Copy URL",
+    "Paste",
+    "Select All"
+  ],
+  "Archive": [],
+  "Extensions": [],
+  "Help": [],
+  "Spaces": [
+    "New Space…",
+    "Next Space",
+    "Previous Space"
+  ]
+}

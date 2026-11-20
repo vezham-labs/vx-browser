@@ -59,6 +59,9 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
     private var chrome: WKWebView? { nil }
     private let nativeModel = NativeChromeModel()
     private var nativeChrome: NSHostingView<NativeBrowserChrome>?
+    private var commandHost: NSHostingView<NativeCommandPalette>?
+    private var commandWidth: NSLayoutConstraint?
+    private weak var previousCommandResponder: NSResponder?
     private var nativePoll: Task<Void, Never>?
     private let page = WorkspaceSplitView()
     private let panes = [FocusPane(), FocusPane()]
@@ -169,6 +172,10 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         configureContent(window)
         window.shortcut = { [weak self] key in
             guard let self, !self.closing else { return false }
+            if self.nativeModel.commands {
+                if ["t", "k"].contains(key) { return true }
+                self.nativeModel.commands = false
+            }
             if self.recovery != nil {
                 guard key == "w" else { return false }
                 self.window?.performClose(nil)
@@ -205,6 +212,12 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         guard !closing, !busy else { return false }
         let tab = nativeModel.selectedTab
         switch action {
+        case .duplicateTab, .togglePin:
+            return !mini && recovery == nil && tab != nil
+        case .nextTab, .previousTab:
+            return !mini && recovery == nil && layout.activeSpace.tabs.count > 1
+        case .nextSpace, .previousSpace:
+            return !mini && recovery == nil && mountedSession != nil && spaces.count > 1
         case .settings, .welcome: return !mini && recovery == nil
         case .sidebar, .newTab, .commandBar: return !mini && recovery == nil
         case .focusAddress: return selected != nil && recovery == nil
@@ -221,6 +234,22 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         guard allowsMenuAction(action) else { return }
         let tab = selected?.rawValue
         switch action {
+        case .nextTab, .previousTab:
+            let ordered = layout.activeSpace.tabs
+            guard let current = ordered.firstIndex(where: { $0.id == selected }) else { return }
+            let delta = action == .nextTab ? 1 : -1
+            let next = (current + ordered.count + delta) % ordered.count
+            nativeModel.commands = false
+            nativeModel.send(.activate, tab: ordered[next].id.rawValue)
+        case .duplicateTab: nativeModel.send(.duplicate, tab: tab)
+        case .togglePin: nativeModel.send(.pin, tab: tab)
+        case .nextSpace, .previousSpace:
+            let ordered = spaces
+            guard let current = ordered.firstIndex(where: { $0.id == activeSpace }) else { return }
+            let delta = action == .nextSpace ? 1 : -1
+            let next = (current + ordered.count + delta) % ordered.count
+            nativeModel.commands = false
+            nativeModel.send(.spaceSwitch, target: ordered[next].id)
         case .newTab: nativeModel.send(mountedSession == nil ? .startPrivate : .newTab)
         case .commandBar: nativeModel.commands = true
         case .focusAddress: nativeModel.focusAddress += 1
@@ -239,6 +268,32 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
 
     required init?(coder: NSCoder) { fatalError("Storyboard initialization is not supported") }
 
+    private func presentCommands(_ visible: Bool) {
+        guard let window else { return }
+        if visible {
+            guard !closing, !mini, commandHost == nil else { return }
+            previousCommandResponder = window.firstResponder
+            let host = NSHostingView(rootView: NativeCommandPalette(model: nativeModel))
+            host.sizingOptions = [.intrinsicContentSize]
+            commandHost = host
+            root.addSubview(host, positioned: .above, relativeTo: nil)
+            host.translatesAutoresizingMaskIntoConstraints = false
+            let width = host.widthAnchor.constraint(equalToConstant: min(root.bounds.width, BrowserChromeMetrics.paletteWidth + 40))
+            commandWidth = width
+            NSLayoutConstraint.activate([host.centerXAnchor.constraint(equalTo: root.centerXAnchor),
+                host.centerYAnchor.constraint(equalTo: root.centerYAnchor), width])
+        } else {
+            commandWidth?.isActive = false
+            commandWidth = nil
+            commandHost?.removeFromSuperview()
+            commandHost = nil
+            if let view = previousCommandResponder as? NSView, view.window === window {
+                window.makeFirstResponder(view)
+            }
+            previousCommandResponder = nil
+        }
+    }
+
     private func configureContent(_ window: NSWindow) {
         window.contentView = root
         let host = NSHostingView(rootView: NativeBrowserChrome(model: nativeModel))
@@ -246,9 +301,18 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         host.autoresizingMask = [.width, .height]
         root.addSubview(host)
         nativeChrome = host
+        nativeModel.commandVisibilityChanged = { [weak self] in self?.presentCommands($0) }
         if !mini {
-            (window as? BrowserWindow)?.sidebarPointer = { [weak nativeModel] event in
-                nativeModel?.sidebarDrag.handle(event) ?? false
+            (window as? BrowserWindow)?.sidebarPointer = { [weak self] event in
+                guard let self else { return false }
+                if let host = self.commandHost {
+                    if event.type == .leftMouseDown, !host.bounds.contains(host.convert(event.locationInWindow, from: nil)) {
+                        self.nativeModel.commands = false
+                        return true
+                    }
+                    return false
+                }
+                return self.nativeModel.sidebarDrag.handle(event)
             }
         }
         page.delegate = self
@@ -293,7 +357,11 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             value: nil, offset: nil, target: nil, name: nil, visible: nil, left: nil, top: nil)
         let state = result(command).state
         if nativeModel.state != state {
-            if state.sessionID != nativeModel.state?.sessionID || state.recovery != nil { nativeModel.bookmarks.removeAll() }
+            if state.sessionID != nativeModel.state?.sessionID || state.recovery != nil {
+                nativeModel.commands = false
+                nativeModel.bookmarks.removeAll()
+                nativeModel.searchProvider = .duckDuckGo
+            }
             nativeModel.state = state
         }
         if !busy { updateSurface() }
@@ -372,7 +440,7 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             switch command.type {
             case .recoverPrivate:
                 try await recoverPrivate()
-            case .spaceCreate, .spaceRename, .spaceSwitch, .spaceDelete, .groupCreate,
+            case .spaceCreate, .spaceMove, .spaceRename, .spaceSwitch, .spaceDelete, .groupCreate,
                  .groupRename, .groupToggle, .groupMove, .groupDelete:
                 try organize(command)
             case .workspaceCreate, .workspaceRename, .workspaceMove, .workspaceDelete:
@@ -862,11 +930,14 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
             default: action = .deleteWorkspace(id)
             }
         case .spaceCreate: action = .createSpace(command.name ?? "")
-        case .spaceRename, .spaceSwitch, .spaceDelete:
+        case .spaceRename, .spaceMove, .spaceSwitch, .spaceDelete:
             guard let target = command.target else { throw ChromeResult.Failure.invalid }
             let id = try WorkspaceSpaceID(target.uuidString)
             switch command.type {
             case .spaceRename: action = .renameSpace(id, command.name ?? "")
+            case .spaceMove:
+                guard let offset = command.offset else { throw ChromeResult.Failure.invalid }
+                action = .reorderSpace(id, offset)
             case .spaceSwitch: action = .selectSpace(id)
             default: action = .deleteSpace(id)
             }
@@ -1015,7 +1086,10 @@ final class MainWindowController: NSWindowController, NSWindowDelegate, NSSplitV
         min(splitView.bounds.width - 250, proposedMaximumPosition)
     }
 
-    func windowDidResize(_ notification: Notification) { updateSurface() }
+    func windowDidResize(_ notification: Notification) {
+        commandWidth?.constant = min(root.bounds.width, BrowserChromeMetrics.paletteWidth + 40)
+        updateSurface()
+    }
 
     func windowWillClose(_ notification: Notification) {
         closing = true

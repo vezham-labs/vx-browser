@@ -157,6 +157,7 @@ public struct WorkspaceLayout: Codable, Equatable, Sendable {
     public enum Action {
         case createWorkspace(String), renameWorkspace(WorkspaceID, String), reorderWorkspace(WorkspaceID, Int)
         case selectWorkspace(WorkspaceID), deleteWorkspace(WorkspaceID)
+        case reorderSpace(WorkspaceSpaceID, Int)
         case createSpace(String), renameSpace(WorkspaceSpaceID, String), selectSpace(WorkspaceSpaceID), deleteSpace(WorkspaceSpaceID)
         case createGroup(String), renameGroup(WorkspaceGroupID, String), toggleGroup(WorkspaceGroupID)
         case reorderGroup(WorkspaceGroupID, Int), deleteGroup(WorkspaceGroupID)
@@ -250,6 +251,9 @@ extension WorkspaceLayout.Layout {
             let space = WorkspaceLayout.emptySpace(name)
             spaces.append(space)
             activeSpaceId = space.id
+        case .reorderSpace(let id, let offset):
+            guard let i = spaces.firstIndex(where: { $0.id == id }), [-1, 1].contains(offset) else { throw Failure.invalid }
+            try WorkspaceLayout.move(&spaces, from: i, offset: offset)
         case .renameSpace(let id, let name):
             guard let i = spaces.firstIndex(where: { $0.id == id }) else { throw Failure.invalid }
             spaces[i].name = name

@@ -1,0 +1,11 @@
+{
+  "source": "/Users/vigneshwaranbhoj/Downloads/repo-labs/vx-browser/apps/browser-macos/build/DerivedData/Build/Products/Debug/VezhamBrowser.app",
+  "installed": "/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview.app",
+  "identifier": "internal.vezham.browser.ui-preview",
+  "sha256": "9d31979aab2e5aab0e02faff3af4154e968b29de31f5e1c72b6927dbd1ee9a88",
+  "version": "0.1.0",
+  "build": "1",
+  "method": "verified owned preview update; prior hash matched receipt, process exited, staged copy verified, prior app retained, rollback on install failure",
+  "previousPreservedAt": "/Users/vigneshwaranbhoj/Applications/Vezham Browser UI Preview previous-3b870064.app",
+  "previousSHA256": "3b870064f235f938ccb1ef5eff91cd8a4e9a1b40b3fedb7703379b747f138a9b"
+}
